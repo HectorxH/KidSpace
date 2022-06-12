@@ -1,0 +1,38 @@
+[
+  {
+    "names": "Cristian Juan",
+    "last_names": "Rojas Perez",
+    "mail": "example@mail.com",
+    "password": "clavesegura123",
+    "favorites": [
+      {
+        "id": "62a66321ac207546263658bc",
+        "favorite": true
+      },
+      {
+        "id": "62a66321ac207546263658be",
+        "favorite": true
+      }
+    ],
+    "class_ids": [],
+    "planned": []
+  },
+  {
+    "names": "Juan Cristian",
+    "last_names": "Perez Rojas",
+    "mail": "example2@email.com",
+    "password": "clavesegura1234",
+    "favorites": [
+      {
+        "id": "62a66321ac207546263658bc",
+        "favorite": true
+      },
+      {
+        "id": "62a66321ac207546263658bf",
+        "favorite": true
+      }
+    ],
+    "class_ids": [],
+    "planned": []
+  }
+]
