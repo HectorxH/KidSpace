@@ -1,16 +1,18 @@
 import express from 'express';
+import { FavoritePostReq } from '../../types/teacher.d';
 
 const router = express.Router();
 
-router.get('/favorires/{:id}', (req, res) => {
+router.get('/favorites/:id', (req, res) => {
   const favorites = {
     favorites: [27, 41, 42],
   };
   res.json(favorites);
 });
 
-router.post('/favorires/{:id}', (req, res) => {
-  console.log(req.body);
+router.post('/favorites/:id', (req:FavoritePostReq, res) => {
+  const { body } = req;
+  console.log(body.activity_id);
   res.sendStatus(200);
 });
 
