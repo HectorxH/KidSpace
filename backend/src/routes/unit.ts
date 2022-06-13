@@ -3,12 +3,13 @@ import Unit from '../models/Unit';
 
 const router = express.Router();
 
-router.get('/', async (req, resp) => {
+router.get('/', async (req, res) => {
   try {
     const units = await Unit.find().populate('activities');
-    resp.json(units);
+    res.json(units);
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
