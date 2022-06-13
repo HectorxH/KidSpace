@@ -1,6 +1,34 @@
-import { Schema, Model } from 'mongoose';
+import { Schema, Types, model } from 'mongoose';
 
-const classActivitySchema = new Schema({
+interface IQuiz {
+  question: String,
+  answers: Types.Array<String>,
+  correct_answer: Number,
+}
+
+interface IClassActivity {
+  title: String,
+  description: String,
+  intro_story: {
+    title: String,
+    description: String,
+  },
+  intro_challenge: {
+    title: String,
+    description: String,
+  },
+  interactive_story: {
+    title: String,
+    description: String,
+  },
+  creative_challenge: {
+    title: String,
+    description: String,
+  },
+  quiz: Types.Array<IQuiz>
+}
+
+const classActivitySchema = new Schema<IClassActivity>({
   title: String,
   description: String,
   intro_story: {
@@ -20,12 +48,12 @@ const classActivitySchema = new Schema({
     description: String,
   },
   quiz: [
-    {
+    new Schema({
       question: String,
       answers: [String],
       correct_answer: Number,
-    },
+    }),
   ],
 });
 
-export default new Model('ClassActivity', classActivitySchema);
+export default model<IClassActivity>('ClassActivity', classActivitySchema);

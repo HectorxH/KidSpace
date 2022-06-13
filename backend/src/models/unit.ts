@@ -1,8 +1,13 @@
-import { Schema, Model } from 'mongoose';
+import { Schema, Types, model } from 'mongoose';
 
-const unitSchema = new Schema({
+interface IUnit {
   title: String,
-  activities: [{ type: Schema.Types.ObjectId, ref: 'ClassActivity' }],
+  activities: Types.Array<Types.ObjectId>
+}
+
+const unitSchema = new Schema<IUnit>({
+  title: String,
+  activities: { type: [Schema.Types.ObjectId], ref: 'ClassActivity', default: [] },
 });
 
-export default new Model('Unit', unitSchema);
+export default model<IUnit>('Unit', unitSchema);

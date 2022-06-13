@@ -1,8 +1,13 @@
-import { Schema, Model } from 'mongoose';
+import { Schema, model } from 'mongoose';
 
-const soloActivitySchema = new Schema({
+interface ISoloActivity {
+  title: String,
+  description: String
+}
+
+const soloActivitySchema = new Schema<ISoloActivity>({
   title: String,
   description: String,
 });
 
-export default new Model('SoloActivity', soloActivitySchema);
+export default model<ISoloActivity>('SoloActivity', soloActivitySchema);
