@@ -5,7 +5,7 @@ interface ISoloActivity {
   description: String
 }
 
-const soloActivitySchema = new Schema<ISoloActivity>({
+export const soloActivitySchema = new Schema<ISoloActivity>({
   title: String,
   description: String,
 });

@@ -7,7 +7,7 @@ import unitRouter from './routes/unit';
 dotenv.config();
 
 const connString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}`
-  + '@kidspace.l3bfoxn.mongodb.net/?retryWrites=true&w=majority';
+  + '@kidspace.l3bfoxn.mongodb.net/KidSpace?retryWrites=true&w=majority';
 
 mongoose.connect(connString);
 

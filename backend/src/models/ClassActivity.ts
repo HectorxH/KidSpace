@@ -28,7 +28,7 @@ interface IClassActivity {
   quiz: Types.Array<IQuiz>
 }
 
-const classActivitySchema = new Schema<IClassActivity>({
+export const classActivitySchema = new Schema<IClassActivity>({
   title: String,
   description: String,
   intro_story: {
@@ -50,7 +50,7 @@ const classActivitySchema = new Schema<IClassActivity>({
   quiz: [
     new Schema({
       question: String,
-      answers: [String],
+      answers: { type: [String], default: [] },
       correct_answer: Number,
     }),
   ],

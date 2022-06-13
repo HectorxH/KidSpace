@@ -1,25 +1,15 @@
 import express from 'express';
+import Unit from '../models/Unit';
 
 const router = express.Router();
 
-router.get('/', (req, resp) => {
-  const unit = {
-    unit_id: 42,
-    unit_name: 'str',
-    activities: [
-      {
-        id: 28,
-        title: 'str',
-        description: 'str',
-        intro_story: {
-          title: 'str',
-          description: 'str',
-        },
-      },
-    ],
-  };
-
-  resp.json(unit);
+router.get('/', async (req, resp) => {
+  try {
+    const units = await Unit.find().populate('activities');
+    resp.json(units);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 export default router;

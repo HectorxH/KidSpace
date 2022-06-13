@@ -1,6 +1,6 @@
 import { Schema, Types, model } from 'mongoose';
 
-interface ITeacher {
+export interface ITeacher {
     names: String,
     last_names: String,
     mail: String,
@@ -10,7 +10,7 @@ interface ITeacher {
     planned: [],
 }
 
-const teacherSchema = new Schema<ITeacher>({
+export const teacherSchema = new Schema<ITeacher>({
   names: String,
   last_names: String,
   mail: String,

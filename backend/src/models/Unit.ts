@@ -5,7 +5,7 @@ interface IUnit {
   activities: Types.Array<Types.ObjectId>
 }
 
-const unitSchema = new Schema<IUnit>({
+export const unitSchema = new Schema<IUnit>({
   title: String,
   activities: { type: [Schema.Types.ObjectId], ref: 'ClassActivity', default: [] },
 });
