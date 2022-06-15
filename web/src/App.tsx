@@ -8,6 +8,7 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import { CssBaseline } from '@mui/material';
 import Layout from './layout/Layout';
+import KoroneTestView from './views/KoroneTestView';
 
 // const App = () => (
 //   <div className="App">
@@ -37,8 +38,10 @@ const App = () => (
     <Router>
       <Layout>
         <Routes>
-          <Route />
-          <Route />
+          <Route path="/" element={<KoroneTestView />} />
+          <Route path="/cursos" />
+          <Route path="/actividades" />
+          <Route path="/estadisticas" />
         </Routes>
       </Layout>
     </Router>

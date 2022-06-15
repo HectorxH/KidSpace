@@ -1,7 +1,6 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -17,6 +16,12 @@ import HomeIcon from '@mui/icons-material/Home';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import {
+  NavLink, Link, useMatch,
+} from 'react-router-dom';
+import { Theme } from '@mui/material/styles';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import { Menu, MenuItem } from '@mui/material';
 
 const logo = require('../assets/logo.png');
 
@@ -27,69 +32,105 @@ interface DrawerProps {
 
 const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
+  const items = [
+    {
+      text: 'Panel de control',
+      icon: <HomeIcon />,
+      path: '/',
+    },
+    {
+      text: 'Cursos que dicto',
+      icon: <HistoryEduIcon />,
+      path: '/cursos',
+    },
+    {
+      text: 'Actividades',
+      icon: <MenuBookIcon />,
+      path: '/actividades',
+    },
+    {
+      text: 'Estadisticas',
+      icon: <BarChartIcon />,
+      path: '/estadisticas',
+    },
+  ];
+
+  let seccionActual = '';
+
   const drawer = (
     <>
-      <img src={logo} alt="KidSpace logo" width={drawerWidth} />
+      <Link to="/">
+        <img
+          src={logo}
+          alt="KidSpace logo"
+          width={drawerWidth - 10}
+        />
+      </Link>
       <Divider />
-      <List>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <HomeIcon />
-            </ListItemIcon>
-            <ListItemText>
-              Panel de control
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <HistoryEduIcon />
-            </ListItemIcon>
-            <ListItemText>
-              Cursos que dicto
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <MenuBookIcon />
-            </ListItemIcon>
-            <ListItemText>
-              Actividades
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <BarChartIcon />
-            </ListItemIcon>
-            <ListItemText>
-              Estadisticas
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
+      <List sx={{
+        // selected and (selected + hover) states
+        '&& .Mui-selected, && .Mui-selected:hover': {
+          bgcolor: (theme: Theme) => theme.palette.secondary.main,
+        },
+        // hover states
+        '& .MuiListItemButton-root:hover': {
+          bgcolor: (theme: Theme) => theme.palette.secondary.light,
+        },
+      }}
+      >
+        {items.map(({ text, icon, path }) => {
+          const active = useMatch({ path, end: true }) !== null;
+          if (active) seccionActual = text;
+          return (
+            <ListItem
+              disablePadding
+              button
+              component={NavLink}
+              to={path}
+            >
+              <ListItemButton
+                selected={active}
+              >
+                <ListItemIcon sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
+                  {icon}
+                </ListItemIcon>
+                <ListItemText>
+                  <Typography>
+                    {text}
+                  </Typography>
+                </ListItemText>
+              </ListItemButton>
+            </ListItem>
+          );
+        })}
       </List>
     </>
   );
 
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
+        color="inherit"
+        elevation={3}
       >
         <Toolbar>
           <IconButton
@@ -101,17 +142,39 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            {seccionActual}
           </Typography>
+
+          <IconButton onClick={handleClick}>
+            <AccountCircle />
+          </IconButton>
+          <Menu
+            id="demo-positioned-menu"
+            aria-labelledby="demo-positioned-button"
+            anchorEl={anchorEl}
+            open={open}
+            onClose={handleClose}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+            }}
+          >
+            <MenuItem onClick={handleClose} component={Link} to="/perfil">Perfil</MenuItem>
+            <MenuItem onClick={handleClose} component={Link} to="/logout">Logout</MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
+        aria-label="nav bar"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -123,6 +186,12 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
+          PaperProps={{
+            sx: {
+              backgroundColor: (theme: Theme) => theme.palette.primary.main,
+              color: (theme: Theme) => theme.palette.primary.contrastText,
+            },
+          }}
         >
           {drawer}
         </Drawer>
@@ -133,6 +202,12 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
+          PaperProps={{
+            sx: {
+              backgroundColor: (theme: Theme) => theme.palette.primary.main,
+              color: (theme: Theme) => theme.palette.primary.contrastText,
+            },
+          }}
         >
           {drawer}
         </Drawer>

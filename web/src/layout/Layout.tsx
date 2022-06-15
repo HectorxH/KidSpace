@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider, ThemeOptions, createTheme } from '@mui/material/styles';
 import ResponsiveDrawer from '../components/ResponsiveDrawer';
 
 const drawerWidth = 240;
@@ -7,14 +8,26 @@ interface LayoutProps {
   children : React.ReactNode
 }
 
+const themeOptions: ThemeOptions = {
+  palette: {
+    primary: {
+      main: '#5c9dec',
+      contrastText: 'rgb(255, 255, 255)',
+    },
+    secondary: {
+      main: '#f57c00',
+    },
+  },
+};
+
+const theme = createTheme(themeOptions);
+
 const Layout : React.FC<LayoutProps> = ({ children }) => (
-  <ResponsiveDrawer drawerWidth={drawerWidth}>
-    <img
-      src="https://1.bp.blogspot.com/-9wb-YBgh0Z0/YNWgbkit_UI/AAAAAAAD0Vc/TLAwTtjerRsJXAzowCqOgtfn-P-NLxS8QCLcBGAsYHQ/s1104/mj20.jpg"
-      alt="korone"
-    />
-    {children}
-  </ResponsiveDrawer>
+  <ThemeProvider theme={theme}>
+    <ResponsiveDrawer drawerWidth={drawerWidth}>
+      {children}
+    </ResponsiveDrawer>
+  </ThemeProvider>
 );
 
 export default Layout;
