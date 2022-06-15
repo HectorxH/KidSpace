@@ -11,9 +11,10 @@
 import React from 'react';
 
 import AvailableActivities from './components/library/AvailableActivities';
+import NoAvailableActivities from './components/library/NoAvailableActivities';
 
 const App = () => {
-  return <AvailableActivities />;
+  return <NoAvailableActivities />;
 };
 
 export default App;
