@@ -1,4 +1,11 @@
 {
+    "settings": {
+        "import/resolver": {
+            "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -20,6 +27,15 @@
         "@typescript-eslint"
     ],
     "rules":  {
-        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-one-expression-per-line": "off",
+        "import/extensions": "off",
+        "react/function-component-definition": [ 
+            2, 
+            { 
+                "namedComponents": "arrow-function", 
+                "unnamedComponents": "arrow-function"
+            }
+        ]
       }
 }
