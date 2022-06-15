@@ -61,7 +61,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     },
   ];
 
-  let seccionActual = '';
+  let seccionActual = 'Pagina no encontrada';
 
   const drawer = (
     <>
@@ -165,7 +165,6 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
               horizontal: 'left',
             }}
           >
-            <MenuItem onClick={handleClose} component={Link} to="/perfil">Perfil</MenuItem>
             <MenuItem onClick={handleClose} component={Link} to="/logout">Logout</MenuItem>
           </Menu>
         </Toolbar>

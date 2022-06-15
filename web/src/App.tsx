@@ -9,6 +9,7 @@ import { Helmet } from 'react-helmet';
 import { CssBaseline } from '@mui/material';
 import Layout from './layout/Layout';
 import KoroneTestView from './views/KoroneTestView';
+import NotFound from './views/NotFound';
 
 // const App = () => (
 //   <div className="App">
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/cursos" />
           <Route path="/actividades" />
           <Route path="/estadisticas" />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>
