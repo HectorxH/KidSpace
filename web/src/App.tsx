@@ -13,25 +13,6 @@ import NotFoundView from './views/NotFoundView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
 import UnidadView from './views/UnidadView';
 
-// const App = () => (
-//   <div className="App">
-//     <header className="App-header">
-//       <img src={logo} className="App-logo" alt="logo" />
-//       <p>
-//         Edit <code>src/App.tsx</code> and save to reload.
-//       </p>
-//       <a
-//         className="App-link"
-//         href="https://reactjs.org"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       >
-//         Learn React
-//       </a>
-//     </header>
-//   </div>
-// );
-
 const App = () => (
   <>
     <CssBaseline />
@@ -44,7 +25,7 @@ const App = () => (
           <Route path="/" element={<KoroneTestView />} />
           <Route path="/cursos" />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
-          <Route path="/actividades/unidad/:numunidad" element={<UnidadView />} />
+          <Route path="/actividades/unidad/:nUnidad" element={<UnidadView />} />
           <Route path="/estadisticas" />
           <Route path="/*" element={<NotFoundView />} />
         </Routes>

@@ -101,7 +101,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
                   {icon}
                 </ListItemIcon>
                 <ListItemText>
-                  <Typography>
+                  <Typography sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
                     {text}
                   </Typography>
                 </ListItemText>

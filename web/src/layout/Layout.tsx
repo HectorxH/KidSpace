@@ -21,7 +21,16 @@ const theme = createTheme({
     },
     tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
     quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
-    textcol: palette.augmentColor({ color: { main: '#063d69' } }),
+    textcol: {
+      ...palette.augmentColor({ color: { main: '#063d69' } }),
+      light: '#5C9DEC',
+    },
+    extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
+  },
+  typography: {
+    allVariants: {
+      color: '#063d69',
+    },
   },
 });
 
