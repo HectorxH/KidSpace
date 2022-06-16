@@ -1,6 +1,7 @@
 import React from 'react';
-import { ThemeProvider, ThemeOptions, createTheme } from '@mui/material/styles';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ResponsiveDrawer from '../components/ResponsiveDrawer';
+import '../types/theming.d.ts';
 
 const drawerWidth = 240;
 
@@ -8,7 +9,8 @@ interface LayoutProps {
   children : React.ReactNode
 }
 
-const themeOptions: ThemeOptions = {
+const { palette } = createTheme();
+const theme = createTheme({
   palette: {
     primary: {
       main: '#5c9dec',
@@ -17,10 +19,11 @@ const themeOptions: ThemeOptions = {
     secondary: {
       main: '#f57c00',
     },
+    tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
+    quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
+    textcol: palette.augmentColor({ color: { main: '#063d69' } }),
   },
-};
-
-const theme = createTheme(themeOptions);
+});
 
 const Layout : React.FC<LayoutProps> = ({ children }) => (
   <ThemeProvider theme={theme}>

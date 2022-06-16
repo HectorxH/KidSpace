@@ -35,9 +35,9 @@ const unidades = [
 
 const ActividadesPorUnidadesView = () => (
   <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-    <Box sx={{ backgroundColor: 'rgba(236, 135, 192, 0.9);', px: 4, py: 2 }}>
-      <Typography variant="h4">
-        Visión por unidades
+    <Box sx={{ backgroundColor: (theme: Theme) => theme.palette.tertiary.main, px: 4, py: 2 }}>
+      <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
+        <b>Visión por unidades</b>
       </Typography>
     </Box>
     <Box sx={{ px: 4 }}>
@@ -72,7 +72,7 @@ const ActividadesPorUnidadesView = () => (
             <Button
               component={NavLink}
               to={`/actividades/${path}`}
-              color="secondary"
+              color="quaternary"
               variant="contained"
             >
               <Typography
