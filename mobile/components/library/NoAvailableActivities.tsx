@@ -1,15 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Card} from 'react-native-paper';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const NoAvailableActivities = () => {
+  const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+
   return (
     <View>
       <View style={styles.view}>
-        <Button icon="arrow-left-circle" color="#EC87C0" mode="contained" />
+        <Button color="#EC87C0" mode="contained">{back}</Button>
         <Text style={styles.title}>Tus Actividades:</Text>
       </View>
-      <View>
+      <View style={styles.content}>
         <Card style={styles.card}>
           <Card.Content>
             <Text style={styles.title}>
@@ -43,6 +46,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     margin: 10,
   },
+  content: {
+    justifyContent: 'center',
+  },
   title: {
     marginLeft: 10,
     fontFamily: 'Arial Black',
@@ -56,13 +62,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
   },
-  cards: {
-
-    margin: 10,
-    backgroundColor: '#5C9DEC',
-  },
   card: {
-    margin: 10,
+    marginLeft: 30,
+    marginRight: 30,
     backgroundColor: '#F1F3F8',
   },
   img: {
