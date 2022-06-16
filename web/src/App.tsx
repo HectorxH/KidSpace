@@ -11,6 +11,7 @@ import Layout from './layout/Layout';
 import KoroneTestView from './views/KoroneTestView';
 import NotFoundView from './views/NotFoundView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
+import UnidadView from './views/UnidadView';
 
 // const App = () => (
 //   <div className="App">
@@ -42,9 +43,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<KoroneTestView />} />
           <Route path="/cursos" />
-          <Route path="/actividades" element={<ActividadesPorUnidadesView />}>
-            {/* <Route path="/" element={<ActividadesPorUnidadesView />} /> */}
-          </Route>
+          <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
+          <Route path="/actividades/unidad/:numunidad" element={<UnidadView />} />
           <Route path="/estadisticas" />
           <Route path="/*" element={<NotFoundView />} />
         </Routes>

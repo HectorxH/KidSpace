@@ -7,31 +7,7 @@ import {
   CardActions, CardContent, CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
-
-const unidad1Img = require('../assets/unidad1.jpg');
-const unidad2Img = require('../assets/unidad2.jpg');
-const unidad3Img = require('../assets/unidad3.jpg');
-
-const unidades = [
-  {
-    img: unidad1Img,
-    path: '/unidad1',
-    title: 'Unidad 1: Registrar investigaciones y crear documentos digitales',
-    description: 'Uso de software para presentaciones y hojas de cálculo. Uso de procesadores de texto, para la creación y edición de sus propios documentos digitales.',
-  },
-  {
-    img: unidad2Img,
-    path: '/unidad2',
-    title: 'Unidad 2: Crear diseños innovadores de objetos tecnológicos',
-    description: 'Creación de diseños innovadores de objetos o sistemas tecnológicos para aprovechar oportunidades o entregar soluciones a diversos problemas.',
-  },
-  {
-    img: unidad3Img,
-    path: '/unidad3',
-    title: 'Unidad 3: Aplicación de técnicas para el diseño de productos',
-    description: 'Aplicación de diversas técnicas, materiales y herramientas para la elaboración de un producto, objeto o sistema tecnológico de calidad.',
-  },
-];
+import unidades from '../mock/unidades';
 
 const ActividadesPorUnidadesView = () => (
   <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
@@ -53,7 +29,10 @@ const ActividadesPorUnidadesView = () => (
         img, path, title, description,
       }) => (
         <Card>
-          <CardActionArea>
+          <CardActionArea
+            component={NavLink}
+            to={path}
+          >
             <CardMedia
               component="img"
               image={img}
@@ -71,7 +50,7 @@ const ActividadesPorUnidadesView = () => (
           <CardActions>
             <Button
               component={NavLink}
-              to={`/actividades/${path}`}
+              to={path}
               color="quaternary"
               variant="contained"
             >

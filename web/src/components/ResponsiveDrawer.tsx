@@ -85,7 +85,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({ text, icon, path }) => {
-          const active = useMatch({ path, end: true }) !== null;
+          const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
           return (
             <ListItem
