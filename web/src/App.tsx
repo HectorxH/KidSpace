@@ -18,6 +18,10 @@ const App = () => (
     <CssBaseline />
     <Helmet>
       <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins"
+      />
     </Helmet>
     <Router>
       <Layout>

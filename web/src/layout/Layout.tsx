@@ -28,6 +28,7 @@ const theme = createTheme({
     extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
   },
   typography: {
+    fontFamily: 'Poppins',
     allVariants: {
       color: '#063d69',
     },
