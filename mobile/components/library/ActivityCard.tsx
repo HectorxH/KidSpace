@@ -1,16 +1,23 @@
 import * as React from 'react';
 import {StyleSheet} from 'react-native';
 import {Card} from 'react-native-paper';
+import {Dimensions} from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
 
 type ActivityCardProps = {
-  act: {key: number; title: string; description: string};
+  act: {key: number; title: string; description: string; img: string};
+  quantity: number;
 };
 
-const ActivityCard: React.FunctionComponent<ActivityCardProps> = ({act}) => (
-  <Card style={styles.card}>
+const ActivityCard: React.FunctionComponent<ActivityCardProps> = ({
+  act,
+  quantity,
+}) => (
+  <Card style={[styles.card, {width: windowWidth / 3 - 10 * quantity}]}>
     <Card.Cover
       source={{
-        uri: 'https://previews.123rf.com/images/poenya200/poenya2001810/poenya200181000083/110398737-hoja-de-c%C3%A1lculo-en-el-icono-plano-de-la-pantalla-de-la-computadora-concepto-de-informe-de-contabilid.jpg',
+        uri: act.img,
       }}
     />
     <Card.Title title={act.title} titleStyle={styles.title} />
@@ -19,9 +26,11 @@ const ActivityCard: React.FunctionComponent<ActivityCardProps> = ({act}) => (
 
 const styles = StyleSheet.create({
   card: {
-    flex: 1,
     margin: 10,
+    flexDirection: 'row',
     backgroundColor: '#5C9DEC',
+    width: windowWidth / 3,
+    justifyContent: 'center',
   },
   title: {
     flex: 1,

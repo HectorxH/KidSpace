@@ -4,21 +4,24 @@ import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Activities: {key: number; title: string; description: string}[] = [
+const Activities: {key: number; title: string; description: string; img: string}[] = [
   {
     key: 1,
     title: 'Actividad: Diagramas',
     description: 'example description 1',
+    img: 'https://i.imgur.com/DNVoI8c.jpg',
   },
   {
     key: 2,
     title: 'Activida: Reciclaje',
     description: 'example description 2',
+    img: 'https://i.imgur.com/B5GxCOe.jpg',
   },
   {
     key: 3,
     title: 'Actividad: Materiales',
     description: 'example description 3',
+    img: 'https://i.imgur.com/kDNmFt7.png',
   },
 ];
 
@@ -36,7 +39,11 @@ const AvailableActivities = () => {
       <View style={styles.cards}>
         <>
           {Activities.map(activity => (
-            <ActivityCard key={activity.key} act={activity} />
+            <ActivityCard
+              key={activity.key}
+              act={activity}
+              quantity={Activities.length}
+            />
           ))}
         </>
       </View>
@@ -57,7 +64,10 @@ const styles = StyleSheet.create({
   },
   cards: {
     flexDirection: 'row',
-    margin: 5,
+    justifyContent: 'center',
+  },
+  card: {
+    flex: 0,
   },
 });
 
