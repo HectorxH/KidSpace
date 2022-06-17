@@ -14,10 +14,38 @@ import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
 import MainMap from './components/MainMap';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  return <MainMap />;
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="MainMap"
+          component={MainMap}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Activity"
+          component={Activity}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="NoAvailableActivities"
+          component={NoAvailableActivities}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="AvailableActivities"
+          component={AvailableActivities}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
 export default App;

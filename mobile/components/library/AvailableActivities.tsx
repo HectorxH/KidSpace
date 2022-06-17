@@ -9,26 +9,32 @@ const Activities: {key: number; title: string; description: string}[] = [
     key: 1,
     title: 'Actividad: Diagramas',
     description: 'example description 1',
+    img: 'https://i.imgur.com/DNVoI8c.jpg',
   },
   {
     key: 2,
     title: 'Activida: Reciclaje',
     description: 'example description 2',
+    img: 'https://i.imgur.com/B5GxCOe.jpg',
   },
   {
     key: 3,
     title: 'Actividad: Materiales',
     description: 'example description 3',
+    img: 'https://i.imgur.com/kDNmFt7.png',
   },
 ];
 
 const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
-const AvailableActivities = () => {
+const AvailableActivities = ({navigation}) => {
   return (
     <View>
       <View style={styles.view}>
-        <Button color="#EC87C0" mode="contained">
+        <Button
+          color="#EC87C0"
+          mode="contained"
+          onPress={() => navigation.push('MainMap')}>
           {back}
         </Button>
         <Text style={styles.title}>Tus Actividades:</Text>
@@ -36,7 +42,7 @@ const AvailableActivities = () => {
       <View style={styles.cards}>
         <>
           {Activities.map(activity => (
-            <ActivityCard key={activity.key} act={activity} />
+              <ActivityCard key={activity.key} act={activity} /> 
           ))}
         </>
       </View>

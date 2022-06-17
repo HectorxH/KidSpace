@@ -3,13 +3,18 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const NoAvailableActivities = () => {
+const NoAvailableActivities = ({navigation}) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   return (
     <View>
       <View style={styles.view}>
-        <Button color="#EC87C0" mode="contained">{back}</Button>
+        <Button
+          color="#EC87C0"
+          mode="contained"
+          onPress={() => navigation.push('MainMap')}>
+          {back}
+        </Button>
         <Text style={styles.title}>Tus Actividades:</Text>
       </View>
       <View style={styles.content}>

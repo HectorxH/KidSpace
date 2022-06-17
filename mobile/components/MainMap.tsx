@@ -18,7 +18,7 @@ const User = {
   activities: 3,
 };
 
-const MainMap = () => {
+const MainMap = ({navigation}) => {
   const act = <Icon name="target" size={40} color="#FFFFFF" />;
   const person = <Icon name="account" size={40} color="#FFFFFF" />;
   const store = <Icon name="store" size={40} color="#FFFFFF" />;
@@ -55,7 +55,7 @@ const MainMap = () => {
           compact={true}
           color="#F2C045"
           mode="contained"
-          onPress={() => console.log('Pressed')}>
+          onPress={() => navigation.push('AvailableActivities')}>
           <Badge visible={visible} style={styles.badge}>
             {User.activities} </Badge>
           <Text  style={styles.subtitle}> {act} Actividades </Text>
