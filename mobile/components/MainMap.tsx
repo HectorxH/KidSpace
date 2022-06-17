@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
-import {Button, Badge, Chip, useTheme} from 'react-native-paper';
+import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').height;
 
 const User = {
   key: 1,
@@ -11,15 +12,8 @@ const User = {
   activities: 3,
 };
 
-const MainMap = ({navigation}) => {
-  const act = <Icon name="target" size={40} color="#FFFFFF" />;
-  const person = <Icon name="account" size={40} color="#FFFFFF" />;
-  const store = <Icon name="store" size={40} color="#FFFFFF" />;
-
-  const [visible, setVisible] = React.useState<boolean>(false);
-  const {
-    colors: {background},
-  } = useTheme();
+const MainMap = () => {
+  const [visible, setVisible] = React.useState<boolean>(true);
 
   return (
     <View style={styles.topView}>
@@ -33,27 +27,58 @@ const MainMap = ({navigation}) => {
           style={styles.button}
           color="#EC87C0"
           mode="contained"
+          icon={() => (
+            <Icon
+              name="account"
+              size={40}
+              color="#FFFFFF"
+              style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+            />
+          )}
+          contentStyle={{flexDirection: 'column'}}
           onPress={() => console.log('Pressed')}>
-          <Text style={styles.subtitle}>{person} Perfil</Text>
+          <Text style={styles.subtitle}>Perfil</Text>
         </Button>
         <Button
           style={styles.button}
           color="#A0C96A"
           mode="contained"
+          icon={() => (
+            <Icon
+              name="store"
+              size={40}
+              color="#FFFFFF"
+              style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+            />
+          )}
+          contentStyle={{flexDirection: 'column'}}
           onPress={() => console.log('Pressed')}>
-          <Text style={styles.subtitle}>{store} Tienda</Text>
+          <Text style={styles.subtitle}>Tienda</Text>
         </Button>
-        <Button
-          style={styles.button3}
-          compact={true}
-          color="#F2C045"
-          mode="contained"
-          onPress={() => navigation.push('AvailableActivities')}>
+        <View style={styles.rightButtonView}>
           <Badge visible={visible} style={styles.badge}>
-            {User.activities}{' '}
+            {User.activities}
           </Badge>
-          <Text style={styles.subtitle}> {act} Actividades </Text>
-        </Button>
+          <View style={styles.buttonView}>
+            <Button
+              style={styles.button3}
+              compact={true}
+              color="#F2C045"
+              mode="contained"
+              icon={() => (
+                <Icon
+                  name="target"
+                  size={40}
+                  color="#FFFFFF"
+                  style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+                />
+              )}
+              contentStyle={{flexDirection: 'column'}}
+              onPress={() => console.log('Pressed')}>
+              <Text style={styles.subtitle}>Actividades</Text>
+            </Button>
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -73,29 +98,25 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   button: {
-    height: 70,
-    width: 150,
-    marginLeft: windowHeight / 30,
-    marginRight: 3,
-    justifyContent: 'center',
+    height: windowHeight / 5,
+    width: windowWidth / 4,
+    marginLeft: windowWidth / 30,
   },
   button3: {
-    height: 70,
-    width: 180,
-    marginLeft: 3,
-    marginRight: 3,
+    height: windowHeight / 5,
+    width: windowWidth / 3,
     position: 'absolute',
-    right: windowHeight / 30,
+    right: windowWidth / 50,
     justifyContent: 'center',
+    zIndex: 1,
   },
   chip: {
     backgroundColor: '#F1F3F8',
-    height: 40,
+    height: windowHeight / 10,
   },
   title: {
-    marginLeft: 10,
     fontFamily: 'Arial Black',
-    fontSize: 25,
+    fontSize: windowHeight / 17,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#000000',
@@ -115,14 +136,27 @@ const styles = StyleSheet.create({
     margin: 10,
     backgroundColor: '#F1F3F8',
   },
-  img: {
-    width: 200,
-    height: 200,
-  },
   badge: {
-    padding: 2,
-    bottom: 0,
-    right: 0,
+    position: 'absolute',
+    top: windowHeight / 400,
+    left: windowWidth / 8,
+    zIndex: 5,
+  },
+  rightButtonView: {
+    flex: 1,
+    height: 70,
+    width: 180,
+    marginLeft: 3,
+    marginRight: 3,
+    position: 'absolute',
+    right: windowHeight / 30,
+  },
+  buttonContentStyle: {
+    flexDirection: 'row',
+    zIndex: 1,
+  },
+  buttonView: {
+    zIndex: -1,
   },
 });
 
