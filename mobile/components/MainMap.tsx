@@ -12,9 +12,16 @@ const User = {
   activities: 3,
 };
 
-const MainMap = () => {
+const MainMap = ({navigation}) => {
   const [visible, setVisible] = React.useState<boolean>(true);
-
+  const HandleAct = () => {
+    if (User.activities > 0) {
+      navigation.push('AvailableActivities');
+    } 
+    else {
+      navigation.push('NoAvailableActivities');
+    }
+  };
   return (
     <View style={styles.topView}>
       <View style={styles.view}>
@@ -59,25 +66,23 @@ const MainMap = () => {
           <Badge visible={visible} style={styles.badge}>
             {User.activities}
           </Badge>
-          <View style={styles.buttonView}>
-            <Button
-              style={styles.button3}
-              compact={true}
-              color="#F2C045"
-              mode="contained"
-              icon={() => (
-                <Icon
-                  name="target"
-                  size={40}
-                  color="#FFFFFF"
-                  style={{width: windowWidth / 6.5, height: windowHeight / 10}}
-                />
-              )}
-              contentStyle={{flexDirection: 'column'}}
-              onPress={() => console.log('Pressed')}>
-              <Text style={styles.subtitle}>Actividades</Text>
-            </Button>
-          </View>
+          <Button
+            style={styles.button3}
+            compact={true}
+            color="#F2C045"
+            mode="contained"
+            icon={() => (
+              <Icon
+                name="target"
+                size={40}
+                color="#FFFFFF"
+                style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+              />
+            )}
+            contentStyle={{flexDirection: 'column'}}
+            onPress={HandleAct}>
+            <Text style={styles.subtitle}>Actividades</Text>
+          </Button>
         </View>
       </View>
     </View>
@@ -108,7 +113,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: windowWidth / 50,
     justifyContent: 'center',
-    zIndex: 1,
+    elevation: 3,
   },
   chip: {
     backgroundColor: '#F1F3F8',
@@ -140,7 +145,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: windowHeight / 400,
     left: windowWidth / 8,
-    zIndex: 5,
+    elevation: 7,
   },
   rightButtonView: {
     flex: 1,
@@ -150,13 +155,6 @@ const styles = StyleSheet.create({
     marginRight: 3,
     position: 'absolute',
     right: windowHeight / 30,
-  },
-  buttonContentStyle: {
-    flexDirection: 'row',
-    zIndex: 1,
-  },
-  buttonView: {
-    zIndex: -1,
   },
 });
 
