@@ -34,22 +34,20 @@ const Actitity = ({navigation, route}) => {
         </Card>
       </View>
       <View style={styles.viewText}>
-        <SafeAreaView style={styles.containerScroll}>
-          <ScrollView style={styles.scrollView}>
-            <Text style={styles.title}>{act.title}:</Text>
-            <Text style={styles.paragraph}>{act.description}</Text>
-            <View style={styles.viewButton}>
-              <Button
-                style={styles.button}
-                icon={() => <Icon name="star" size={20} color="#FFEA02" />}
-                color="#FF8A01"
-                mode="contained"
-                onPress={() => console.log('Pressed')}>
-                <Text style={styles.subtitle}>¡Iniciar!</Text>
-              </Button>
-            </View>
-          </ScrollView>
-        </SafeAreaView>
+        <ScrollView style={styles.scrollView}>
+          <Text style={styles.title}>{act.title}:</Text>
+          <Text style={styles.paragraph}>{act.description}</Text>
+          <View style={styles.viewButton}>
+            <Button
+              style={styles.button}
+              icon={() => <Icon name="star" size={20} color="#FFEA02" />}
+              color="#FF8A01"
+              mode="contained"
+              onPress={() => console.log('Pressed')}>
+              <Text style={styles.subtitle}>¡Iniciar!</Text>
+            </Button>
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
@@ -103,10 +101,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
     fontSize: 15,
-  },
-  containerScroll: {
-    flex: 1,
-    paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
     marginHorizontal: 10,
