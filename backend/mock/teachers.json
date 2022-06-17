@@ -1,0 +1,20 @@
+[
+  {
+    "names": "Cristian Juan",
+    "last_names": "Rojas Perez",
+    "mail": "example@mail.com",
+    "password": "clavesegura123",
+    "favorites": ["62a69a39ac207546263658e7", "62a69a39ac207546263658e9"],
+    "class_ids": [],
+    "planned": []
+  },
+  {
+    "names": "Juan Cristian",
+    "last_names": "Perez Rojas",
+    "mail": "example2@email.com",
+    "password": "clavesegura1234",
+    "favorites": ["62a69a39ac207546263658e7", "62a69a39ac207546263658ea"],
+    "class_ids": [],
+    "planned": []
+  }
+]
