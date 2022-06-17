@@ -1,48 +1,55 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  StatusBar,
+} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Actitity = () => {
-  const act = {
-    key: 1,
-    title: 'Actividad: Diagramas',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam.',
-    img_url: 'https://i.imgur.com/DNVoI8c.jpg',
-  };
+const Actitity = ({navigation, route}) => {
+  const {act} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
         <View style={styles.view}>
-          <Button color="#EC87C0" mode="contained">
+          <Button
+            color="#EC87C0"
+            mode="contained"
+            onPress={() => navigation.push('AvailableActivities')}>
             {back}
           </Button>
         </View>
-        <Card style={styles.card}>
+        <Card>
           <Card.Cover
             source={{
-              uri: act.img_url,
+              uri: act.img,
             }}
             style={{flexDirection: 'column', height: 250}}
           />
         </Card>
       </View>
       <View style={styles.viewText}>
-        <Text style={styles.title}>{act.title}:</Text>
-        <Text style={styles.paragraph}>{act.description}</Text>
-        <View style={styles.viewButton}>
-          <Button
-            style={styles.button}
-            icon={() => <Icon name="star" size={20} color="#FFEA02" />}
-            color="#FF8A01"
-            mode="contained"
-            onPress={() => console.log('Pressed')}>
-            <Text style={styles.subtitle}>¡Iniciar!</Text>
-          </Button>
-        </View>
+        <SafeAreaView style={styles.containerScroll}>
+          <ScrollView style={styles.scrollView}>
+            <Text style={styles.title}>{act.title}:</Text>
+            <Text style={styles.paragraph}>{act.description}</Text>
+            <View style={styles.viewButton}>
+              <Button
+                style={styles.button}
+                icon={() => <Icon name="star" size={20} color="#FFEA02" />}
+                color="#FF8A01"
+                mode="contained"
+                onPress={() => console.log('Pressed')}>
+                <Text style={styles.subtitle}>¡Iniciar!</Text>
+              </Button>
+            </View>
+          </ScrollView>
+        </SafeAreaView>
       </View>
     </View>
   );
@@ -96,6 +103,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
     fontSize: 15,
+  },
+  containerScroll: {
+    flex: 1,
+    paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {
+    marginHorizontal: 10,
+    marginVertical: 10,
   },
 });
 

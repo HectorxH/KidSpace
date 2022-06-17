@@ -4,23 +4,31 @@ import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Activities: {key: number; title: string; description: string}[] = [
+const Activities: {
+  key: number;
+  title: string;
+  description: string;
+  img: string;
+}[] = [
   {
     key: 1,
     title: 'Actividad: Diagramas',
-    description: 'example description 1',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam.',
     img: 'https://i.imgur.com/DNVoI8c.jpg',
   },
   {
     key: 2,
-    title: 'Activida: Reciclaje',
-    description: 'example description 2',
+    title: 'Actividad: Reciclaje',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam.',
     img: 'https://i.imgur.com/B5GxCOe.jpg',
   },
   {
     key: 3,
     title: 'Actividad: Materiales',
-    description: 'example description 3',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. Quisque porta leo ut lacus pulvinar aliquam.',
     img: 'https://i.imgur.com/kDNmFt7.png',
   },
 ];
@@ -42,7 +50,12 @@ const AvailableActivities = ({navigation}) => {
       <View style={styles.cards}>
         <>
           {Activities.map(activity => (
-              <ActivityCard key={activity.key} act={activity} /> 
+            <ActivityCard
+              key={activity.key}
+              act={activity}
+              quantity={Activities.length}
+              navigation={navigation}
+            />
           ))}
         </>
       </View>
@@ -63,7 +76,10 @@ const styles = StyleSheet.create({
   },
   cards: {
     flexDirection: 'row',
-    margin: 5,
+    justifyContent: 'center',
+  },
+  card: {
+    flex: 0,
   },
 });
 

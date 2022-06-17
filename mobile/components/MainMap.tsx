@@ -1,13 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
-import {
-  Button,
-  Card,
-  Badge,
-  Chip,
-  TextInput,
-  useTheme,
-} from 'react-native-paper';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import {Button, Badge, Chip, useTheme} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const windowHeight = Dimensions.get('window').height;
@@ -57,8 +50,9 @@ const MainMap = ({navigation}) => {
           mode="contained"
           onPress={() => navigation.push('AvailableActivities')}>
           <Badge visible={visible} style={styles.badge}>
-            {User.activities} </Badge>
-          <Text  style={styles.subtitle}> {act} Actividades </Text>
+            {User.activities}{' '}
+          </Badge>
+          <Text style={styles.subtitle}> {act} Actividades </Text>
         </Button>
       </View>
     </View>

@@ -1,26 +1,24 @@
 import * as React from 'react';
-import {StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Card} from 'react-native-paper';
 import {Dimensions} from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
-type ActivityCardProps = {
-  act: {key: number; title: string; description: string; img: string};
+
+const ActivityCard = ({act, quantity, navigation}) => {
+  return (
+    <Card
+      style={[styles.card, {width: windowWidth / 3 - 10 * quantity}]}
+      onPress={() => navigation.push('Activity', {act})}>
+      <Card.Cover
+        source={{
+          uri: act.img,
+        }}
+      />
+      <Card.Title title={act.title} titleStyle={styles.title} />
+    </Card>
+  );
 };
-const ActivityCard: React.FunctionComponent<ActivityCardProps> = ({
-  act,
-  quantity,
-}) => (
-  <Card
-    style={[styles.card, {width: windowWidth / 3 - 10 * quantity}]}>
-    <Card.Cover
-      source={{
-        uri: act.img,
-      }}
-    />
-    <Card.Title title={act.title} titleStyle={styles.title} />
-  </Card>
-);
 
 const styles = StyleSheet.create({
   card: {
