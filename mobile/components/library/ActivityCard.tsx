@@ -5,7 +5,15 @@ import {Dimensions} from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 
-const ActivityCard = ({act, quantity, navigation}) => {
+const ActivityCard = ({
+  act,
+  quantity,
+  navigation,
+}: {
+  navigation: any;
+  act: any;
+  quantity: any;
+}) => {
   return (
     <Card
       style={[styles.card, {width: windowWidth / 3 - 10 * quantity}]}

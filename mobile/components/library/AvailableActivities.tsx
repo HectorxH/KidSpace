@@ -35,7 +35,7 @@ const Activities: {
 
 const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
-const AvailableActivities = ({navigation}) => {
+const AvailableActivities = ({navigation}: {navigation: any}) => {
   return (
     <View>
       <View style={styles.view}>

@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Actitity = ({navigation, route}) => {
+const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
   const {act} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (

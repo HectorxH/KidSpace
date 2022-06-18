@@ -12,13 +12,12 @@ const User = {
   activities: 3,
 };
 
-const MainMap = ({navigation}) => {
+const MainMap = ({navigation}: {navigation: any}) => {
   const [visible, setVisible] = React.useState<boolean>(true);
   const HandleAct = () => {
     if (User.activities > 0) {
       navigation.push('AvailableActivities');
-    } 
-    else {
+    } else {
       navigation.push('NoAvailableActivities');
     }
   };

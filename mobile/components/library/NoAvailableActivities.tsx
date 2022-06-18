@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const NoAvailableActivities = ({navigation}) => {
+const NoAvailableActivities = ({navigation}: {navigation: any}) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   return (
