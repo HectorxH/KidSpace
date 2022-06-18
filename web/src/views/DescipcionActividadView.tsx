@@ -68,26 +68,46 @@ const Parte = ({ parte }: DescripcionParteParam) => (
 
 const DescripcionActividadView = () => {
   const params = useParams();
-  const { nUnidad, nActividad } = params;
+  const { nunidad, nactividad } = params;
 
-  if (typeof nUnidad === 'undefined') return <NotFoundView />;
-  if (typeof nActividad === 'undefined') return <NotFoundView />;
-  const numunidad = parseInt(nUnidad, 10);
-  const numactividad = parseInt(nActividad, 10);
-  const descripcion = _.find(actividadesDetails, { nunidad: numunidad, nactividad: numactividad });
+  if (typeof nunidad === 'undefined') return <NotFoundView />;
+  if (typeof nactividad === 'undefined') return <NotFoundView />;
+
+  const isFav = () => {
+    let favs = localStorage.getItem('favs');
+    if (favs === null) favs = '[]';
+    const favsArray : String[] = JSON.parse(favs);
+    return favsArray.includes(nactividad);
+  };
+
+  const descripcion = _.find(actividadesDetails, { nunidad, nactividad });
   if (typeof descripcion === 'undefined') return <NotFoundView />;
+  const startfav = isFav();
   const [process, setProcess] = useState({
-    icon: <BookmarkAddIcon />,
-    label: (descripcion.fav ? 'En favoritos' : 'Añadir a favoritos'),
+    icon: (startfav ? <BookmarkAddedIcon /> : <BookmarkAddIcon />),
+    label: (startfav ? 'En favoritos' : 'Añadir a favoritos'),
   });
 
+  const toggleFav = () => {
+    let favs = localStorage.getItem('favs');
+    if (favs === null) favs = '[]';
+    const favsArray : String[] = JSON.parse(favs);
+
+    const idx = favsArray.findIndex((o) => o === nactividad);
+    if (idx === -1) favsArray.push(nactividad);
+    else favsArray.splice(idx, 1);
+
+    localStorage.setItem('favs', JSON.stringify(favsArray));
+  };
+
   const handleClick = () => {
-    setProcess({ icon: <RotateLeftIcon />, label: (descripcion.fav ? 'Eliminando...' : 'Guardando...') });
-    descripcion.fav = !descripcion.fav;
+    setProcess({ icon: <RotateLeftIcon />, label: (isFav() ? 'Eliminando...' : 'Guardando...') });
+    toggleFav();
+    const fav = isFav();
     setTimeout(() => {
       setProcess({
-        icon: <BookmarkAddedIcon />,
-        label: (descripcion.fav ? 'En favoritos' : 'Añadir en favoritos'),
+        icon: (fav ? <BookmarkAddedIcon /> : <BookmarkAddIcon />),
+        label: (fav ? 'En favoritos' : 'Añadir en favoritos'),
       });
     }, 1200);
   };
