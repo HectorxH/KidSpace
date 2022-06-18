@@ -19,6 +19,5 @@ export default [
     img4: portadaAct1,
     img5: quiz,
     path: '/actividades/unidad/1/actividad/1/asignar/',
-    fav: false,
   },
 ];
