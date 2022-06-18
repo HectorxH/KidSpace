@@ -85,7 +85,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({ text, icon, path }) => {
-          const active = useMatch({ path, end: true }) !== null;
+          const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
           return (
             <ListItem
@@ -101,7 +101,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
                   {icon}
                 </ListItemIcon>
                 <ListItemText>
-                  <Typography>
+                  <Typography sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
                     {text}
                   </Typography>
                 </ListItemText>
@@ -213,7 +213,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       </Box>
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 0, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
         {children}

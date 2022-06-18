@@ -1,7 +1,9 @@
 import React from 'react';
+import {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Pusher from 'pusher-js/react-native';
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').height;
@@ -13,6 +15,27 @@ const User = {
 };
 
 const MainMap = ({navigation}: {navigation: any}) => {
+  const [message, setMessage] = useState('');
+  let allMessages = [];
+  useEffect(() => {
+    console.log('ho');
+    const pusher = new Pusher('6dd1e74d92d59d9a15ad', {
+      cluster: 'us2',
+    });
+    const channel = pusher.subscribe('channel');
+    console.log('ha');
+    channel.bind('message', function (data) {
+      console.log(data);
+      console.log(data.message);
+      console.log(JSON.stringify(data));
+      console.log('hi');
+      console.log(data);
+      allMessages.push(data);
+      setMessage(allMessages);
+      console.log(message);
+    });
+  }, []);
+
   const [visible, setVisible] = React.useState<boolean>(true);
   const HandleAct = () => {
     if (User.activities > 0) {

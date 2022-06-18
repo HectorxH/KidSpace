@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 
-const NotFound = () => (
-  <Typography>
+const NotFoundView = () => (
+  <Typography sx={{ p: 4 }}>
     Esta pagina no existe o no se encuentra disponible!
   </Typography>
 );
 
-export default NotFound;
+export default NotFoundView;

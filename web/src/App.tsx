@@ -8,42 +8,34 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import { CssBaseline } from '@mui/material';
 import Layout from './layout/Layout';
-import KoroneTestView from './views/KoroneTestView';
-import NotFound from './views/NotFound';
-
-// const App = () => (
-//   <div className="App">
-//     <header className="App-header">
-//       <img src={logo} className="App-logo" alt="logo" />
-//       <p>
-//         Edit <code>src/App.tsx</code> and save to reload.
-//       </p>
-//       <a
-//         className="App-link"
-//         href="https://reactjs.org"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       >
-//         Learn React
-//       </a>
-//     </header>
-//   </div>
-// );
+import NotFoundView from './views/NotFoundView';
+import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
+import UnidadView from './views/UnidadView';
+import DescripcionActividadView from './views/DescipcionActividadView';
+import PanelControlView from './views/PanelControlView';
+import AsignarView from './views/AsignarView';
 
 const App = () => (
   <>
     <CssBaseline />
     <Helmet>
       <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins"
+      />
     </Helmet>
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<KoroneTestView />} />
+          <Route path="/" element={<PanelControlView />} />
           <Route path="/cursos" />
-          <Route path="/actividades" />
+          <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
+          <Route path="/actividades/unidad/:nUnidad" element={<UnidadView />} />
+          <Route path="/actividades/unidad/:nUnidad/actividad/:nActividad" element={<DescripcionActividadView />} />
+          <Route path="/actividades/unidad/:nUnidad/actividad/:nActividad/asignar" element={<AsignarView />} />
           <Route path="/estadisticas" />
-          <Route path="/*" element={<NotFound />} />
+          <Route path="/*" element={<NotFoundView />} />
         </Routes>
       </Layout>
     </Router>

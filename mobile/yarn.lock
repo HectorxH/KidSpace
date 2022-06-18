@@ -1518,6 +1518,11 @@
   "resolved" "https://registry.npmjs.org/@react-native-community/eslint-plugin/-/eslint-plugin-1.2.0.tgz"
   "version" "1.2.0"
 
+"@react-native-community/netinfo@^9.0.0":
+  "integrity" "sha512-oodeVNdL0IT/Fv0cpL7CdxnnESNKiiAzf29yhvGSJBvuFmyHxvmYOtBIX27HWG9tQU8Yzeh+MyQcKBCNmkva+Q=="
+  "resolved" "https://registry.npmjs.org/@react-native-community/netinfo/-/netinfo-9.0.0.tgz"
+  "version" "9.0.0"
+
 "@react-native/assets@1.0.0":
   "integrity" "sha512-KrwSpS1tKI70wuKl68DwJZYEvXktDHdZMG0k2AXD/rJVSlB23/X2CB2cutVR0HwNMJIal9HOUOBB2rVfa6UGtQ=="
   "resolved" "https://registry.npmjs.org/@react-native/assets/-/assets-1.0.0.tgz"
@@ -5889,6 +5894,13 @@
   "resolved" "https://registry.npmjs.org/punycode/-/punycode-2.1.1.tgz"
   "version" "2.1.1"
 
+"pusher-js@^7.1.1-beta":
+  "integrity" "sha512-4aGhQFMOfHDmlc8hOS/wYf2f7wcKGJeUGUmLq5hDjRWlwYWBErPrGoTE5OdHJY9yRIsfwcBQzibvdyEXZ5ke6g=="
+  "resolved" "https://registry.npmjs.org/pusher-js/-/pusher-js-7.1.1-beta.tgz"
+  "version" "7.1.1-beta"
+  dependencies:
+    "tweetnacl" "^1.0.3"
+
 "query-string@^7.0.0":
   "integrity" "sha512-MplouLRDHBZSG9z7fpuAAcI7aAYjDLhtsiVZsevsfaHWDS2IDdORKbSd1kWUA+V4zyva/HZoSfpwnYMMQDhb0w=="
   "resolved" "https://registry.npmjs.org/query-string/-/query-string-7.1.1.tgz"
@@ -5986,7 +5998,7 @@
     "prop-types" "^15.7.2"
     "yargs" "^16.1.1"
 
-"react-native@*", "react-native@>=0.42.0", "react-native@0.65.1":
+"react-native@*", "react-native@>=0.42.0", "react-native@>=0.59", "react-native@0.65.1":
   "integrity" "sha512-0UOVSnlssweQZjuaUtzViCifE/4tXm8oRbxwakopc8GavPu9vLulde145GOw6QVYiOy4iL50f+2XXRdX9NmMeQ=="
   "resolved" "https://registry.npmjs.org/react-native/-/react-native-0.65.1.tgz"
   "version" "0.65.1"
@@ -6987,6 +6999,11 @@
   "version" "3.21.0"
   dependencies:
     "tslib" "^1.8.1"
+
+"tweetnacl@^1.0.3":
+  "integrity" "sha512-6rt+RN7aOi1nGMyC4Xa5DdYiukl2UWCbcJft7YhxReBGQD7OAM8Pbxw6YMo4r2diNEA8FEmu32YOn9rhaiE5yw=="
+  "resolved" "https://registry.npmjs.org/tweetnacl/-/tweetnacl-1.0.3.tgz"
+  "version" "1.0.3"
 
 "type-check@^0.4.0":
   "integrity" "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew=="
