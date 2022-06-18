@@ -24,11 +24,11 @@ const ActividadesPorUnidadesView = () => (
         y deseos, y solucionar sus problemas en numerosas dimensiones.
       </Typography>
     </Box>
-    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4} sx={{ px: 4 }}>
+    <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
       {unidades.map(({
         img, path, title, description,
       }) => (
-        <Card>
+        <Card sx={{ borderRadius: '20px' }}>
           <CardActionArea
             component={NavLink}
             to={path}

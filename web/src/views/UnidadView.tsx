@@ -27,7 +27,7 @@ const Actividad = ({ actividad }:ActividadParam) => (
     <AccordionSummary
       expandIcon={<ExpandMoreIcon sx={{ color: (theme: Theme) => theme.palette.textcol.light }} />}
     >
-      <Typography sx={{ color: (theme: Theme) => theme.palette.textcol.light }}>
+      <Typography variant="h6" sx={{ color: (theme: Theme) => theme.palette.textcol.light }}>
         {actividad.actividad} : {actividad.titulo}
       </Typography>
     </AccordionSummary>
@@ -50,9 +50,10 @@ const Actividad = ({ actividad }:ActividadParam) => (
               variant="button"
               sx={{
                 color: (theme: Theme) => theme.palette.primary.contrastText,
+
               }}
             >
-              Ver más
+              Ver más información
             </Typography>
           </Button>
         </Grid>
