@@ -149,7 +149,7 @@ const DescripcionActividadView = () => {
         </Button>
         <Button
           component={NavLink}
-          to={descripcion.path}
+          to={descripcion.pathAsignar}
           color="secondary"
           variant="contained"
           sx={{ margin: 2 }}

@@ -4,6 +4,7 @@ export default [
     unidad: 'Unidad 1',
     titulo: 'Actividades de Unidad 1',
     descripcion: 'Uso de software para presentaciones y hojas de cálculo. Uso de procesadores de texto, para la creación y edición de sus propios documentos digitales.',
+    path: '/actividades/unidad/1',
     actividades: [
       {
         nactividad: '1',

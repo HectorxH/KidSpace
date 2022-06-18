@@ -3,6 +3,7 @@ import {
 } from '@mui/material';
 import _ from 'lodash';
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import actividadesDetails from '../mock/actividadesDetails';
 import unidadesDetails from '../mock/unidadesDetails';
 import { IActividadDetail } from '../types/actividad';
@@ -19,12 +20,13 @@ interface FavoritaParams {
 
 const Favorita = ({ row } : FavoritaParams) => (
   <Card>
-    <CardActionArea>
+    <CardActionArea
+      component={NavLink}
+      to={row.path}
+    >
       <Grid
         container
-        columns={{
-          xs: 12, sm: 10, md: 10, lg: 8, xl: 10,
-        }}
+        columns={10}
       >
         <Grid item xs={2}>
           <CardMedia

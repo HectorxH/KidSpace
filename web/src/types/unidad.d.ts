@@ -13,5 +13,6 @@ export interface IUnidadDetail {
   unidad: string,
   titulo: string,
   descripcion: string,
+  path: string,
   actividades: IActividad[]
 }

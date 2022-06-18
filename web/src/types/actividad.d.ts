@@ -15,6 +15,7 @@ export interface IActividadDetail {
     img4: string,
     img5: string,
     path: string,
+    pathAsignar: string,
 }
 
 export interface IActividad {
