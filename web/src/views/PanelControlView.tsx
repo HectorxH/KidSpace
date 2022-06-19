@@ -5,7 +5,7 @@ import React from 'react';
 import Favoritas from '../components/Favoritas';
 import PlanificadasTable from '../components/PlanificadasTable';
 import SinFavoritas from '../components/SinFavoritas';
-import actividadesPlanificadas from '../mock/actividadesPlanificadas';
+import { IPlanificada } from '../types/planificadas';
 
 const loadFavoritas = () => {
   let favs = localStorage.getItem('favs');
@@ -14,8 +14,16 @@ const loadFavoritas = () => {
   return favsArray;
 };
 
+const loadPlanificadas = () => {
+  let planificadas = localStorage.getItem('planificadas');
+  if (planificadas == null) planificadas = '[]';
+  const planificadasArray : IPlanificada[] = JSON.parse(planificadas);
+  return planificadasArray;
+};
+
 const PanelControl = () => {
   const favoritas = loadFavoritas();
+  const planificadas = loadPlanificadas();
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ px: 4, py: 2 }}>
@@ -33,7 +41,7 @@ const PanelControl = () => {
         <Typography variant="h4" sx={{ my: 2 }}>
           Actividades planificadas
         </Typography>
-        <PlanificadasTable rows={actividadesPlanificadas} />
+        <PlanificadasTable rows={planificadas} />
       </Box>
     </Stack>
   );

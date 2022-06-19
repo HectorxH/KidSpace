@@ -2,8 +2,55 @@ import {
   Card, Button, Table, TableBody, Theme,
   TableCell, TableContainer, TableHead, TableRow, Typography,
 } from '@mui/material';
+import _ from 'lodash';
 import React from 'react';
-import { IPlanificadas } from '../types/planificadas';
+import { useNavigate } from 'react-router-dom';
+import actividadesDetails from '../mock/actividadesDetails';
+import { IPlanificada, IPlanificadas } from '../types/planificadas';
+
+interface RowParams {
+  row: IPlanificada
+}
+
+const Row = ({ row }:RowParams) => {
+  const {
+    nactividad, nunidad, curso, fecha,
+  } = row;
+  const actividad = _.find(actividadesDetails, { nactividad });
+  const navigate = useNavigate();
+  return (
+    <TableRow
+      key={nactividad}
+      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+    >
+      <TableCell
+        sx={{ cursor: 'pointer', '&:hover': { bgcolor: 'WhiteSmoke' } }}
+        component="th"
+        scope="row"
+        onClick={() => navigate(`/actividades/unidad/${nunidad}/actividad/${nactividad}`)}
+      >
+        {actividad?.titulo}
+      </TableCell>
+      <TableCell>{curso}</TableCell>
+      <TableCell>{fecha}</TableCell>
+      <TableCell>
+        <Button
+          color="quaternary"
+          variant="contained"
+        >
+          <Typography
+            variant="button"
+            sx={{
+              color: (theme: Theme) => theme.palette.primary.contrastText,
+            }}
+          >
+            Iniciar
+          </Typography>
+        </Button>
+      </TableCell>
+    </TableRow>
+  );
+};
 
 const PlanificadasTable = ({ rows }: { rows: IPlanificadas }) => (
   <TableContainer component={Card} elevation={4} sx={{ borderRadius: '20px' }}>
@@ -18,31 +65,7 @@ const PlanificadasTable = ({ rows }: { rows: IPlanificadas }) => (
       </TableHead>
       <TableBody>
         {rows.map((row) => (
-          <TableRow
-            key={row.actividad}
-            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-          >
-            <TableCell component="th" scope="row">
-              {row.actividad}
-            </TableCell>
-            <TableCell>{row.curso}</TableCell>
-            <TableCell>{row.fecha}</TableCell>
-            <TableCell>
-              <Button
-                color="quaternary"
-                variant="contained"
-              >
-                <Typography
-                  variant="button"
-                  sx={{
-                    color: (theme: Theme) => theme.palette.primary.contrastText,
-                  }}
-                >
-                  Iniciar
-                </Typography>
-              </Button>
-            </TableCell>
-          </TableRow>
+          <Row row={row} />
         ))}
       </TableBody>
     </Table>

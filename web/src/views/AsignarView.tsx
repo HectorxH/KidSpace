@@ -6,13 +6,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import NotFoundView from './NotFoundView';
-
-interface IAsignacion {
-  nactividad: string,
-  nunidad: string,
-  curso: string,
-  fecha: string
-}
+import { IPlanificada } from '../types/planificadas';
 
 const AsignarView = () => {
   const navigate = useNavigate();
@@ -31,17 +25,17 @@ const AsignarView = () => {
 
   const handleSubmit : React.FormEventHandler = (e) => {
     e.preventDefault();
-    const asignacion : IAsignacion = {
+    const asignacion : IPlanificada = {
       nactividad, nunidad, curso, fecha,
     };
 
-    let asignadas = localStorage.getItem('asignadas');
+    let asignadas = localStorage.getItem('planificadas');
     if (asignadas === null) asignadas = '[]';
 
-    const asignadasArray : IAsignacion[] = JSON.parse(asignadas);
+    const asignadasArray : IPlanificada[] = JSON.parse(asignadas);
     asignadasArray.push(asignacion);
 
-    localStorage.setItem('asignadas', JSON.stringify(asignadasArray));
+    localStorage.setItem('planificadas', JSON.stringify(asignadasArray));
     setSuccess(true);
     setTimeout(handleBack, 1200);
   };

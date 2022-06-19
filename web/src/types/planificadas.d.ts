@@ -1,7 +1,8 @@
-export interface IActividadPlanificada {
-  actividad: string,
+export interface IPlanificada {
+  nactividad: string,
+  nunidad: string,
   curso: string,
   fecha: string
 }
 
-export type IPlanificadas = IActividadPlanificada[]
+export type IPlanificadas = IPlanificada[]
