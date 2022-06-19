@@ -1,96 +1,132 @@
 import {
-  Box, Button, InputLabel, MenuItem, Select, SelectChangeEvent,
-  Grid, TextField, Typography, Theme,
+  Box, Button, MenuItem,
+  TextField, Typography, Theme, Stack,
 } from '@mui/material';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import NotFoundView from './NotFoundView';
 
-const AsignarView = () => {
-  const params = useParams();
-  const { nUnidad, nActividad } = params;
-  if (typeof nUnidad === 'undefined') return <NotFoundView />;
-  if (typeof nActividad === 'undefined') return <NotFoundView />;
+interface IAsignacion {
+  nactividad: string,
+  nunidad: string,
+  curso: string,
+  fecha: string
+}
 
-  const [curso, setCurso] = React.useState('');
-  const handleChange = (event: SelectChangeEvent) => {
-    setCurso(event.target.value as string);
+const AsignarView = () => {
+  const navigate = useNavigate();
+  const params = useParams();
+  const { nunidad, nactividad } = params;
+  if (typeof nunidad === 'undefined') return <NotFoundView />;
+  if (typeof nactividad === 'undefined') return <NotFoundView />;
+
+  const [curso, setCurso] = React.useState('A');
+  const [fecha, setFecha] = React.useState('');
+  const [success, setSuccess] = React.useState(false);
+
+  const handleBack = () => {
+    navigate(-1);
   };
 
+  const handleSubmit : React.FormEventHandler = (e) => {
+    e.preventDefault();
+    const asignacion : IAsignacion = {
+      nactividad, nunidad, curso, fecha,
+    };
+
+    let asignadas = localStorage.getItem('asignadas');
+    if (asignadas === null) asignadas = '[]';
+
+    const asignadasArray : IAsignacion[] = JSON.parse(asignadas);
+    asignadasArray.push(asignacion);
+
+    localStorage.setItem('asignadas', JSON.stringify(asignadasArray));
+    setSuccess(true);
+    setTimeout(handleBack, 1200);
+  };
+
+  console.log(localStorage.getItem('asignadas'));
+
   return (
-    <Box sx={{ px: 4, py: 2, mt: 2 }}>
-      <Typography variant="h4">
-        Nueva asignación
-      </Typography>
-      <Grid container spacing={1} sx={{ mt: '40px' }}>
-        <Grid item xs={6} sx={{ alignSelf: 'center' }}>
-          <Typography>
-            Seleccione un curso:
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <InputLabel id="label-select-curso">Curso</InputLabel>
-          <Select
-            labelId="label-select-curso"
-            id="select-curso"
-            value={curso}
-            sx={{ minWidth: '180px' }}
-            label="Curso"
-            onChange={handleChange}
-          >
-            <MenuItem value="A">A</MenuItem>
-            <MenuItem value="B">B</MenuItem>
-            <MenuItem value="C">C</MenuItem>
-          </Select>
-        </Grid>
-        <Grid item xs={6} sx={{ alignSelf: 'center' }}>
-          <Typography>
-            Seleccione la fecha:
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <TextField
-            id="date"
-            label="Fecha"
-            type="date"
-            sx={{ my: 4, minWidth: '150px' }}
-            InputLabelProps={{
-              shrink: true,
-            }}
-          />
-        </Grid>
-        <Grid item xs={2}>
-          <Button
-            color="extra"
-            variant="contained"
-          >
-            <Typography
-              variant="button"
-              sx={{
-                color: (theme: Theme) => theme.palette.textcol.main,
-              }}
-            >
-              Cancelar
+    <Box sx={{
+      px: 4, py: 2, mt: 2, width: { sx: '100%', md: '70%' },
+    }}
+    >
+      <form onSubmit={handleSubmit}>
+        <Typography variant="h4">
+          Nueva asignación
+        </Typography>
+        <Stack spacing={{ xs: 4, sm: 1 }} sx={{ mt: '40px' }}>
+          <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
+            <Typography alignSelf={{ sm: 'center' }}>
+              Seleccione un curso:
             </Typography>
-          </Button>
-        </Grid>
-        <Grid item xs={5} />
-        <Grid item xs={4}>
-          <Button
-            color="quaternary"
-            variant="contained"
-          >
-            <Typography
-              variant="button"
-              sx={{
-                color: (theme: Theme) => theme.palette.primary.contrastText,
-              }}
+            <TextField
+              select
+              id="select-curso"
+              sx={{ minWidth: '180px' }}
+              label="Curso"
+              defaultValue=""
+              onChange={(e) => setCurso(e.target.value)}
+              required
             >
-              Guardar
+              <MenuItem value="A">A</MenuItem>
+            </TextField>
+          </Stack>
+          <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
+            <Typography alignSelf={{ sm: 'center' }}>
+              Seleccione la fecha:
             </Typography>
-          </Button>
-        </Grid>
-      </Grid>
+            <TextField
+              id="date"
+              label="Fecha"
+              type="date"
+              sx={{ my: 2, minWidth: '150px' }}
+              InputLabelProps={{
+                shrink: true,
+              }}
+              onChange={(e) => setFecha(e.target.value)}
+              required
+            />
+          </Stack>
+          <Stack direction="row" justifyContent="space-between">
+            <Button
+              color="extra"
+              variant="contained"
+              onClick={handleBack}
+            >
+              <Typography
+                variant="button"
+                sx={{
+                  color: (theme: Theme) => theme.palette.textcol.main,
+                }}
+              >
+                Cancelar
+              </Typography>
+            </Button>
+            <Stack direction="row">
+              <Box justifyContent="center" flexDirection="column" display="flex" ml={3}>
+                {success ? <CheckCircleOutlineIcon color="success" /> : <div />}
+              </Box>
+              <Button
+                color="quaternary"
+                variant="contained"
+                type="submit"
+              >
+                <Typography
+                  variant="button"
+                  sx={{
+                    color: (theme: Theme) => theme.palette.primary.contrastText,
+                  }}
+                >
+                  Guardar
+                </Typography>
+              </Button>
+            </Stack>
+          </Stack>
+        </Stack>
+      </form>
     </Box>
   );
 };
