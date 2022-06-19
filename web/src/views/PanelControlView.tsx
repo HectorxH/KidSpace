@@ -20,13 +20,20 @@ const rows = [
   createData('Actividad 2: Materiales', 'C', '17-06-2022'),
 ];
 
-const Activities = {
-  key: 2,
-  title: 'Actividad 2: Materiales',
-  description:
+const Activities: {
+  key: number;
+  title: string;
+  description: string;
+  img: string;
+}[] = [
+  {
+    key: 2,
+    title: 'Actividad 2: Materiales',
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce viverra erat lorem, eu ullamcorper tellus maximus non. In eget nulla eu massa posuere tempor sit amet vulputate ex. Nullam eget sem aliquam, ultricies arcu ut, pharetra purus. Mauris ullamcorper suscipit velit in malesuada. Nam suscipit pretium condimentum. ',
-  img: 'https://i.imgur.com/B5GxCOe.jpg',
-};
+    img: 'https://i.imgur.com/B5GxCOe.jpg',
+  },
+];
 
 const PanelControl = () => {
   const [message] = useState(Activities);

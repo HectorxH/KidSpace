@@ -12,7 +12,7 @@ const NoAvailableActivities = ({navigation}: {navigation: any}) => {
         <Button
           color="#EC87C0"
           mode="contained"
-          onPress={() => navigation.push('MainMap')}>
+          onPress={() => navigation.goBack()}>
           {back}
         </Button>
         <Text style={styles.title}>Tus Actividades:</Text>

@@ -5,6 +5,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
   const {act} = route.params;
+  console.log(act);
+  console.log(route.params);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
     <View style={styles.container}>
@@ -13,7 +15,7 @@ const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
           <Button
             color="#EC87C0"
             mode="contained"
-            onPress={() => navigation.push('AvailableActivities')}>
+            onPress={() => navigation.goBack()}>
             {back}
           </Button>
         </View>

@@ -11,30 +11,28 @@ const windowWidth = Dimensions.get('window').height;
 const User = {
   key: 1,
   name: 'Renata',
-  activities: 3,
 };
 
+const pusher = new Pusher('942f26b33dcea4510931', {
+  cluster: 'us2',
+});
+const channel = pusher.subscribe('channel');
+
 const MainMap = ({navigation}: {navigation: any}) => {
-  const [message, setMessage] = useState('');
-  let allMessages = [];
+  const [message, setMessage] = useState({items: []});
+  const [visible, setVisible] = useState(false);
+  const [notification, setNotification] = useState(0);
   useEffect(() => {
-    const pusher = new Pusher('942f26b33dcea4510931', {
-      cluster: 'us2',
-    });
-    const channel = pusher.subscribe('channel');
     channel.bind('message', function (data: any) {
-      console.log(data.message);
-      // console.log(message);
-      // allMessages.push(data);
-      // setMessage(allMessages);
-      //console.log(message);
+      setMessage(data.message);
+      setNotification(data.message.length);
+      setVisible(true);
     });
   }, []);
-
-  const [visible, setVisible] = React.useState<boolean>(true);
   const HandleAct = () => {
-    if (User.activities > 0) {
-      navigation.push('AvailableActivities');
+    if (visible === true) {
+      navigation.push('AvailableActivities', {message});
+      console.log(message);
     } else {
       navigation.push('NoAvailableActivities');
     }
@@ -81,7 +79,7 @@ const MainMap = ({navigation}: {navigation: any}) => {
         </Button>
         <View style={styles.rightButtonView}>
           <Badge visible={visible} style={styles.badge}>
-            {User.activities}
+            {notification}
           </Badge>
           <Button
             style={styles.button3}

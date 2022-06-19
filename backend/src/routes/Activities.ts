@@ -20,7 +20,7 @@ router.post('/message', async (req, res) => {
   console.log('haa');
   try {
     console.log(req.body.msg);
-    await pusher.trigger('channel', 'message', {
+    pusher.trigger('channel', 'message', {
       message: req.body.msg,
     });
     console.log('ok');
