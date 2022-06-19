@@ -23,6 +23,7 @@ router.post('/message', async (req, res) => {
     await pusher.trigger('channel', 'message', {
       message: req.body.msg,
     });
+    console.log('ok');
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

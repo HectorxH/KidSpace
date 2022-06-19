@@ -18,21 +18,16 @@ const MainMap = ({navigation}: {navigation: any}) => {
   const [message, setMessage] = useState('');
   let allMessages = [];
   useEffect(() => {
-    console.log('ho');
-    const pusher = new Pusher('6dd1e74d92d59d9a15ad', {
+    const pusher = new Pusher('942f26b33dcea4510931', {
       cluster: 'us2',
     });
     const channel = pusher.subscribe('channel');
-    console.log('ha');
-    channel.bind('message', function (data) {
-      console.log(data);
+    channel.bind('message', function (data: any) {
       console.log(data.message);
-      console.log(JSON.stringify(data));
-      console.log('hi');
-      console.log(data);
-      allMessages.push(data);
-      setMessage(allMessages);
-      console.log(message);
+      // console.log(message);
+      // allMessages.push(data);
+      // setMessage(allMessages);
+      //console.log(message);
     });
   }, []);
 
