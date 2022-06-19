@@ -85,7 +85,7 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
             placement="bottom"
             arrow
           >
-            <>
+            <div>
               <Button
                 color={checkDisabled() ? 'extra' : 'quaternary'}
                 variant="contained"
@@ -119,7 +119,7 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
                   <Button onClick={handleCloseDialog}>Iniciar</Button>
                 </DialogActions>
               </Dialog>
-            </>
+            </div>
           </Tooltip>
         </ClickAwayListener>
       </TableCell>
