@@ -1,7 +1,8 @@
 import {
   Box, Card, Stack, Typography,
 } from '@mui/material';
-import React from 'react';
+import _ from 'lodash';
+import React, { useState } from 'react';
 import Favoritas from '../components/Favoritas';
 import PlanificadasTable from '../components/PlanificadasTable';
 import SinFavoritas from '../components/SinFavoritas';
@@ -17,13 +18,17 @@ const loadFavoritas = () => {
 const loadPlanificadas = () => {
   let planificadas = localStorage.getItem('planificadas');
   if (planificadas == null) planificadas = '[]';
-  const planificadasArray : IPlanificada[] = JSON.parse(planificadas);
+  let planificadasArray : IPlanificada[] = JSON.parse(planificadas);
+  planificadasArray = _.sortBy(planificadasArray, 'fecha');
   return planificadasArray;
 };
 
 const PanelControl = () => {
   const favoritas = loadFavoritas();
-  const planificadas = loadPlanificadas();
+  const [planificadas, setPlanificadas] = useState(loadPlanificadas());
+  const updatePlanificadas = () => {
+    setPlanificadas(loadPlanificadas());
+  };
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ px: 4, py: 2 }}>
@@ -34,14 +39,16 @@ const PanelControl = () => {
           Actividades que guardaste recientemente:
         </Typography>
         <Card elevation={4} sx={{ my: 2, borderRadius: '20px' }}>
-          {(favoritas.length === 0 ? <SinFavoritas /> : <Favoritas favoritas={favoritas} />)}
+          {(favoritas.length === 0
+            ? <SinFavoritas mainmsg="Sin actividades guardadas." submsg="Cuande marque una actividad como favorita, esta aparecerá aquí." />
+            : <Favoritas favoritas={favoritas} />)}
         </Card>
       </Box>
       <Box sx={{ px: 4 }}>
         <Typography variant="h4" sx={{ my: 2 }}>
           Actividades planificadas
         </Typography>
-        <PlanificadasTable rows={planificadas} />
+        <PlanificadasTable rows={planificadas} updatePlanificadas={updatePlanificadas} />
       </Box>
     </Stack>
   );

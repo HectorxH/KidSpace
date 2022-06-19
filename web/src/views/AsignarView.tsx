@@ -14,15 +14,13 @@ const AsignarView = () => {
   const { nunidad, nactividad } = params;
   if (typeof nunidad === 'undefined') return <NotFoundView />;
   if (typeof nactividad === 'undefined') return <NotFoundView />;
-
+  const currentDate = new Date().toISOString().slice(0, 10);
   const [curso, setCurso] = React.useState('A');
-  const [fecha, setFecha] = React.useState('');
+  const [fecha, setFecha] = React.useState(currentDate);
   const [success, setSuccess] = React.useState(false);
-
   const handleBack = () => {
     navigate(-1);
   };
-
   const handleSubmit : React.FormEventHandler = (e) => {
     e.preventDefault();
     const asignacion : IPlanificada = {
@@ -74,6 +72,7 @@ const AsignarView = () => {
               id="date"
               label="Fecha"
               type="date"
+              defaultValue={fecha}
               sx={{ my: 2, minWidth: '150px' }}
               InputLabelProps={{
                 shrink: true,

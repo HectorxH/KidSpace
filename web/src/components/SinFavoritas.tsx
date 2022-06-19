@@ -3,7 +3,12 @@ import React from 'react';
 
 const notfound: string = require('../assets/notfound.webp');
 
-const SinFavoritas = () => (
+interface NotFoundProps {
+  mainmsg : string,
+  submsg : string,
+}
+
+const SinFavoritas = ({ mainmsg, submsg }: NotFoundProps) => (
   <Stack direction="column" sx={{ alignItems: 'center' }}>
     <Box
       component="img"
@@ -16,10 +21,10 @@ const SinFavoritas = () => (
       src={notfound}
     />
     <Typography variant="h6">
-      Sin actividades guardadas.
+      {mainmsg}
     </Typography>
     <Typography sx={{ py: 2 }}>
-      Cuande marque una actividad como favorita, esta aparecerá aquí.
+      {submsg}
     </Typography>
   </Stack>
 );
