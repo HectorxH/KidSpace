@@ -24,6 +24,8 @@ const App = () => (
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Poppins"
       />
+      <title>Kidspace | Aplicacion educativa STEAM</title>
+      <meta name="description" content="Aplicación educativa libre de sesgos de género que, mediante desafíos con Realidad Aumentada e IA, desarrolla habilidades STEAM en niños y niñas, introduciéndolos a distintas profesiones." />
     </Helmet>
     <Router>
       <Layout>
