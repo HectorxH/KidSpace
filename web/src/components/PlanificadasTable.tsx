@@ -19,40 +19,52 @@ interface RowParams {
   eliminarAsignacion: Function,
 }
 
-const IniciarButton = ({ fecha, actividad }:{
-  fecha: string,
+interface IniciarButtonParams {
+  planificada: IPlanificada,
   actividad: IActividadDetail,
-}) => {
+  eliminarAsignacion: Function,
+}
+
+const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
+  :IniciarButtonParams) => {
   const [openTooltip, setOpenTooltip] = React.useState(false);
   const [openDialog, setOpenDialog] = React.useState(false);
+  const { fecha } = planificada;
+
   const handleTooltipClose = () => {
     setOpenTooltip(false);
   };
+
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
+
   const handleStartActivity = async () => {
     try {
       const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Activity/message`, {
         msg: actividad,
       });
       console.log(resp);
-      // Eliminar de actividades planificadas
+      eliminarAsignacion(planificada);
     } catch (e) {
       console.log(e);
     }
     setOpenDialog(false);
   };
+
   const handleTooltipOpen = () => {
     setOpenTooltip(true);
   };
+
   const handleClickActive = () => {
     setOpenDialog(true);
   };
+
   const checkDisabled = () => {
     const currentDate = new Date().toISOString().slice(0, 10);
     return currentDate !== fecha;
   };
+
   return (
     <ClickAwayListener onClickAway={handleTooltipClose}>
       <Tooltip
@@ -113,14 +125,13 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
   } = row;
   const actividad = _.find(actividadesDetails, { nactividad });
   if (actividad === undefined) {
-    // Borrar de favoritos
+    eliminarAsignacion(row);
     return null;
   }
   const navigate = useNavigate();
 
   return (
     <TableRow
-      key={nactividad}
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
       <TableCell
@@ -135,7 +146,11 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
       <TableCell>{fecha}</TableCell>
       <TableCell>
         <Stack direction="row">
-          <IniciarButton fecha={fecha} actividad={actividad} />
+          <IniciarButton
+            planificada={row}
+            actividad={actividad}
+            eliminarAsignacion={eliminarAsignacion}
+          />
           <IconButton
             color="warning"
             onClick={() => eliminarAsignacion({
@@ -153,17 +168,13 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
 const PlanificadasTable = (
   { rows, updatePlanificadas }: { rows: IPlanificadas, updatePlanificadas: Function },
 ) => {
-  const eliminarAsignacion = ({
-    nactividad, nunidad, curso, fecha,
-  }: IPlanificada) => {
+  const eliminarAsignacion = (actividadPlanificada: IPlanificada) => {
     const planificadas = JSON.parse(localStorage.getItem('planificadas') || '');
-    const filtered = planificadas.filter(
-      (i: IPlanificada) => i.nactividad !== nactividad
-      || i.nunidad !== nunidad || i.curso !== curso || i.fecha !== fecha,
-    );
-    localStorage.setItem('planificadas', JSON.stringify(filtered));
+    _.remove(planificadas, actividadPlanificada);
+    localStorage.setItem('planificadas', JSON.stringify(planificadas));
     updatePlanificadas();
   };
+
   return (
     <TableContainer component={Card} elevation={4} sx={{ borderRadius: '20px' }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -178,7 +189,13 @@ const PlanificadasTable = (
         <TableBody sx={{ justifyContent: 'center' }}>
           {(rows.length === 0
             ? ''
-            : rows.map((row) => (<Row row={row} eliminarAsignacion={eliminarAsignacion} />))
+            : rows.map((row) => (
+              <Row
+                key={row.nactividad}
+                row={row}
+                eliminarAsignacion={eliminarAsignacion}
+              />
+            ))
           )}
         </TableBody>
       </Table>
