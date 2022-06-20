@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import express from 'express';
-import { IFavoritePostRequest } from '../../types/teacher.d';
+import { IFavoritePostRequest } from '../types/teacher.d';
 import Teacher from '../models/Teacher';
 import ClassActivity from '../models/ClassActivity';
 
