@@ -5,7 +5,6 @@ import dotenv from 'dotenv-safe';
 // import unitRouter from './routes/unit';
 import cors from 'cors';
 import ActivityRouter from './routes/Activity';
-import './types/env';
 
 dotenv.config();
 
