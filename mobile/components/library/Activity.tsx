@@ -2,11 +2,10 @@ import React from 'react';
 import {View, Text, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../../android/app/src/main/assets/imgs/handler/images';
 
 const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
   const {act} = route.params;
-  console.log(act);
-  console.log(route.params);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
     <View style={styles.container}>
@@ -21,9 +20,7 @@ const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
         </View>
         <Card>
           <Card.Cover
-            source={{
-              uri: act.img,
-            }}
+            source={images['portadaAct'.concat(act.nactividad)].uri}
             style={{flexDirection: 'column', height: 250}}
           />
         </Card>
@@ -31,8 +28,8 @@ const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
       <View style={styles.viewText}>
         <SafeAreaView>
           <ScrollView style={styles.scrollView}>
-            <Text style={styles.title}>{act.title}:</Text>
-            <Text style={styles.paragraph}>{act.description}</Text>
+            <Text style={styles.title}>{act.titulo}</Text>
+            <Text style={styles.paragraph}>{act.descripcion}</Text>
             <View style={styles.viewButton}>
               <Button
                 style={styles.button}

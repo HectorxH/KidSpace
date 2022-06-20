@@ -3,8 +3,9 @@ const quiz : string = require('../assets/quiz.jpg');
 
 export default [
   {
-    nunidad: 1,
-    nactividad: 1,
+    id: '1',
+    nunidad: '1',
+    nactividad: '1',
     titulo: 'Actividad 1: Diagramas',
     descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
     portada: portadaAct1,
@@ -18,7 +19,7 @@ export default [
     img3: portadaAct1,
     img4: portadaAct1,
     img5: quiz,
-    path: '/actividades/unidad/1/actividad/1/asignar/',
-    fav: false,
+    path: '/actividades/unidad/1/actividad/1',
+    pathAsignar: '/actividades/unidad/1/actividad/1/asignar/',
   },
 ];

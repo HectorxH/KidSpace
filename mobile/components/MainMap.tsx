@@ -13,26 +13,27 @@ const User = {
   name: 'Renata',
 };
 
-const pusher = new Pusher('942f26b33dcea4510931', {
-  cluster: 'us2',
+const pusher = new Pusher('74009350c3b99530d9e9', {
+  cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation}: {navigation: any}) => {
-  const [message, setMessage] = useState({items: []});
+  const [message, setMessage] = useState({});
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
+  const allMessages = [];
   useEffect(() => {
     channel.bind('message', function (data: any) {
-      setMessage(data.message);
-      setNotification(data.message.length);
+      allMessages.push(data.message);
+      setMessage(allMessages);
+      setNotification(allMessages.length);
       setVisible(true);
     });
   }, []);
   const HandleAct = () => {
     if (visible === true) {
       navigation.push('AvailableActivities', {message});
-      console.log(message);
     } else {
       navigation.push('NoAvailableActivities');
     }

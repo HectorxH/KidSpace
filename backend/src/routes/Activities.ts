@@ -7,10 +7,10 @@ import express from 'express';
 const Pusher = require('pusher');
 
 const pusher = new Pusher({
-  appId: '1425382',
-  key: '942f26b33dcea4510931',
-  secret: '53c8f6c9b2469ab5027d',
-  cluster: 'us2',
+  appId: '1425238',
+  key: '74009350c3b99530d9e9',
+  secret: 'af9fa1923dc9d44d9836',
+  cluster: 'sa1',
   useTLS: true,
 });
 

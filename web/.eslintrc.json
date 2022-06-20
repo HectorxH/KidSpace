@@ -2,7 +2,7 @@
     "settings": {
         "import/resolver": {
             "node": {
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"]
             }
         }
     },
@@ -27,7 +27,7 @@
         "@typescript-eslint"
     ],
     "rules":  {
-        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx", ".d.ts"] }],
         "react/jsx-one-expression-per-line": "off",
         "import/extensions": "off",
         "react/function-component-definition": [ 

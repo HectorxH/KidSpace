@@ -13,6 +13,7 @@ const AvailableActivities = ({
 }) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   const act = route.params.message;
+  console.log(act);
   return (
     <View>
       <View style={styles.view}>
@@ -26,15 +27,14 @@ const AvailableActivities = ({
       </View>
       <View style={styles.cards}>
         <>
-          {act &&
-            act.map(activity => (
-              <ActivityCard
-                key={activity.key}
-                act={activity}
-                quantity={act.length}
-                navigation={navigation}
-              />
-            ))}
+          {act.map((activity, index) => (
+            <ActivityCard
+              key={index}
+              act={activity}
+              quantity={act.length}
+              navigation={navigation}
+            />
+          ))}
         </>
       </View>
     </View>

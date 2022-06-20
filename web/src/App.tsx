@@ -24,6 +24,8 @@ const App = () => (
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Poppins"
       />
+      <title>Kidspace | Aplicacion educativa STEAM</title>
+      <meta name="description" content="Aplicación educativa libre de sesgos de género que, mediante desafíos con Realidad Aumentada e IA, desarrolla habilidades STEAM en niños y niñas, introduciéndolos a distintas profesiones." />
     </Helmet>
     <Router>
       <Layout>
@@ -31,9 +33,9 @@ const App = () => (
           <Route path="/" element={<PanelControlView />} />
           <Route path="/cursos" />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
-          <Route path="/actividades/unidad/:nUnidad" element={<UnidadView />} />
-          <Route path="/actividades/unidad/:nUnidad/actividad/:nActividad" element={<DescripcionActividadView />} />
-          <Route path="/actividades/unidad/:nUnidad/actividad/:nActividad/asignar" element={<AsignarView />} />
+          <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
+          <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
+          <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
           <Route path="/estadisticas" />
           <Route path="/*" element={<NotFoundView />} />
         </Routes>
