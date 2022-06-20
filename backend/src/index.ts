@@ -1,11 +1,10 @@
 import express from 'express';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv-safe';
 // import mongoose from 'mongoose';
 // import teacherRouter from './routes/teacher';
 // import unitRouter from './routes/unit';
-import ActivitiesRouter from './routes/Activities';
-
-const cors = require('cors');
+import cors from 'cors';
+import ActivityRouter from './routes/Activity';
 
 dotenv.config();
 
@@ -24,7 +23,7 @@ app.use(cors());
 
 // app.use('/teacher', teacherRouter);
 // app.use('/unit', unitRouter);
-app.use('/Activities', ActivitiesRouter);
+app.use('/Activity', ActivityRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

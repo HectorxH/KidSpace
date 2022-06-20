@@ -12,6 +12,7 @@ import axios from 'axios';
 import actividadesDetails from '../mock/actividadesDetails';
 import { IPlanificada, IPlanificadas } from '../types/planificadas';
 import SinActividades from './SinActividades';
+import { IActividadDetail } from '../types/actividad';
 
 interface RowParams {
   row: IPlanificada,
@@ -20,26 +21,7 @@ interface RowParams {
 
 const IniciarButton = ({ fecha, actividad }:{
   fecha: string,
-  actividad: {
-    id: string,
-    nunidad: string,
-    nactividad: string,
-    titulo: string,
-    descripcion: string,
-    portada: string,
-    cuento1: string,
-    cuento2: string,
-    desafio1: string,
-    desafio2: string,
-    quiz: string,
-    img1: string,
-    img2: string,
-    img3: string,
-    img4: string,
-    img5: string,
-    path: string,
-    pathAsignar: string,
-  } | undefined,
+  actividad: IActividadDetail,
 }) => {
   const [openTooltip, setOpenTooltip] = React.useState(false);
   const [openDialog, setOpenDialog] = React.useState(false);
@@ -49,14 +31,16 @@ const IniciarButton = ({ fecha, actividad }:{
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
-  const handleStartActivity = () => {
-    axios.post('http://localhost:8080/Activities/message', {
-      msg: actividad,
-    }).then((data) => {
-      console.log(data);
-    }).catch((error) => {
-      console.log(error);
-    });
+  const handleStartActivity = async () => {
+    try {
+      const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Activity/message`, {
+        msg: actividad,
+      });
+      console.log(resp);
+      // Eliminar de actividades planificadas
+    } catch (e) {
+      console.log(e);
+    }
     setOpenDialog(false);
   };
   const handleTooltipOpen = () => {
@@ -128,6 +112,10 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
     nactividad, nunidad, curso, fecha,
   } = row;
   const actividad = _.find(actividadesDetails, { nactividad });
+  if (actividad === undefined) {
+    // Borrar de favoritos
+    return null;
+  }
   const navigate = useNavigate();
 
   return (
