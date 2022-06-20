@@ -8,7 +8,7 @@ interface NotFoundProps {
   submsg : string,
 }
 
-const SinFavoritas = ({ mainmsg, submsg }: NotFoundProps) => (
+const SinActividades = ({ mainmsg, submsg }: NotFoundProps) => (
   <Stack direction="column" sx={{ alignItems: 'center' }}>
     <Box
       component="img"
@@ -29,4 +29,4 @@ const SinFavoritas = ({ mainmsg, submsg }: NotFoundProps) => (
   </Stack>
 );
 
-export default SinFavoritas;
+export default SinActividades;

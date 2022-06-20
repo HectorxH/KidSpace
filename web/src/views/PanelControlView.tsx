@@ -5,7 +5,7 @@ import _ from 'lodash';
 import React, { useState } from 'react';
 import Favoritas from '../components/Favoritas';
 import PlanificadasTable from '../components/PlanificadasTable';
-import SinFavoritas from '../components/SinFavoritas';
+import SinActividades from '../components/SinActividades';
 import { IPlanificada } from '../types/planificadas';
 
 const loadFavoritas = () => {
@@ -40,7 +40,7 @@ const PanelControl = () => {
         </Typography>
         <Card elevation={4} sx={{ my: 2, borderRadius: '20px' }}>
           {(favoritas.length === 0
-            ? <SinFavoritas mainmsg="Sin actividades guardadas." submsg="Cuande marque una actividad como favorita, esta aparecerá aquí." />
+            ? <SinActividades mainmsg="Sin actividades guardadas." submsg="Cuande marque una actividad como favorita, esta aparecerá aquí." />
             : <Favoritas favoritas={favoritas} />)}
         </Card>
       </Box>
