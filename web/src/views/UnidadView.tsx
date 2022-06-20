@@ -4,14 +4,13 @@ import _ from 'lodash';
 import {
   Accordion, Stack, Box, Card, Theme,
   Typography, AccordionDetails, AccordionSummary, Button,
-  Grid,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import NotFoundView from './NotFoundView';
 import unidadesDetails from '../mock/unidadesDetails';
 
 interface IActividad {
-    numactividad: Number,
+    nactividad: string,
     actividad: string,
     titulo: string,
     descripcion: string,
@@ -32,44 +31,42 @@ const Actividad = ({ actividad }:ActividadParam) => (
       </Typography>
     </AccordionSummary>
     <AccordionDetails>
-      <Grid container spacing={6}>
-        <Grid item sm={8}>
-          <Typography>
-            {actividad.descripcion}
-          </Typography>
-        </Grid>
-        <Grid item sm={2} />
-        <Grid item sm={2}>
-          <Button
-            component={NavLink}
-            to={actividad.path}
-            color="quaternary"
-            variant="contained"
-          >
-            <Typography
-              variant="button"
-              sx={{
-                color: (theme: Theme) => theme.palette.primary.contrastText,
+      <Stack
+        direction={{ xs: 'column', sm: 'column', md: 'row' }}
+        spacing={{ xs: 2, sm: 2, md: 4 }}
+      >
+        <Typography>
+          {actividad.descripcion}
+        </Typography>
+        <Button
+          sx={{ px: 5 }}
+          component={NavLink}
+          to={actividad.path}
+          color="quaternary"
+          variant="contained"
+        >
+          <Typography
+            variant="button"
+            sx={{
+              color: (theme: Theme) => theme.palette.primary.contrastText,
 
-              }}
-            >
-              Ver más información
-            </Typography>
-          </Button>
-        </Grid>
-      </Grid>
+            }}
+          >
+            Ver más información
+          </Typography>
+        </Button>
+      </Stack>
     </AccordionDetails>
   </Accordion>
 );
 
 const UnidadView = () => {
   const params = useParams();
-  const { nUnidad } = params;
+  const { nunidad } = params;
 
-  if (typeof nUnidad === 'undefined') return (<NotFoundView />);
-  const numunidad = parseInt(nUnidad, 10);
+  if (typeof nunidad === 'undefined') return (<NotFoundView />);
 
-  const unidad = _.find(unidadesDetails, { numunidad });
+  const unidad = _.find(unidadesDetails, { nunidad });
   if (typeof unidad === 'undefined') return (<NotFoundView />);
 
   return (
@@ -93,7 +90,9 @@ const UnidadView = () => {
         </Card>
       </Box>
       <Stack direction="column" spacing={4} sx={{ px: 4 }}>
-        {unidad.actividades.map((actividad) => <Actividad actividad={actividad} />)}
+        {unidad.actividades.map((actividad) => (
+          <Actividad actividad={actividad} key={actividad.nactividad} />
+        ))}
       </Stack>
     </Stack>
   );

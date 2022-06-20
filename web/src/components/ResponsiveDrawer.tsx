@@ -16,8 +16,9 @@ import HomeIcon from '@mui/icons-material/Home';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
-  NavLink, Link, useMatch,
+  NavLink, Link, useMatch, useNavigate,
 } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -40,21 +41,25 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
 
   const items = [
     {
+      uid: 1,
       text: 'Panel de control',
       icon: <HomeIcon />,
       path: '/',
     },
     {
+      uid: 2,
       text: 'Cursos que dicto',
       icon: <HistoryEduIcon />,
       path: '/cursos',
     },
     {
+      uid: 3,
       text: 'Actividades',
       icon: <MenuBookIcon />,
       path: '/actividades',
     },
     {
+      uid: 4,
       text: 'Estadisticas',
       icon: <BarChartIcon />,
       path: '/estadisticas',
@@ -84,7 +89,9 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
         },
       }}
       >
-        {items.map(({ text, icon, path }) => {
+        {items.map(({
+          uid, text, icon, path,
+        }) => {
           const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
           return (
@@ -93,6 +100,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
               button
               component={NavLink}
               to={path}
+              key={uid}
             >
               <ListItemButton
                 selected={active}
@@ -121,6 +129,12 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     setAnchorEl(null);
   };
 
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate(-1);
+  };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar
@@ -141,6 +155,14 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
+          </IconButton>
+
+          <IconButton
+            color="inherit"
+            edge="start"
+            onClick={handleBack}
+          >
+            <ArrowBackIcon />
           </IconButton>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
