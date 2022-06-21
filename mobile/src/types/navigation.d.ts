@@ -1,15 +1,18 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IActivity} from './message';
+import {IActivity} from './activity';
+
+export type desafioTipo = 'introductory' | 'interactive';
+export type actividadNombre = 'diagramas';
 
 export type RootStackParamList = {
   MainMap: undefined;
   Activity: {activity: IActivity};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
-  CuentoInteractivo: {actividad: 'diagramas'};
-  CuentoIntroductorio: {actividad: 'diagramas'};
-  Desafio: {};
-  FinalQuiz: {};
+  CuentoInteractivo: {actividad: actividadNombre};
+  CuentoIntroductorio: {actividad: actividadNombre};
+  Desafio: {actividad: actividadNombre; tipo: desafioTipo};
+  FinalQuiz: undefined;
 };
 
 export type MainMapProps = NativeStackScreenProps<
@@ -40,4 +43,7 @@ export type FinalQuizProps = NativeStackScreenProps<
   RootStackParamList,
   'FinalQuiz'
 >;
-export type Desafio = NativeStackScreenProps<RootStackParamList, 'Desafio'>;
+export type DesafioProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Desafio'
+>;

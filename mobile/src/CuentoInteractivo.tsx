@@ -7,6 +7,7 @@ import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
 import {CuentoInteractivoProps} from './types/navigation';
+import {DesafioEstado} from './types/activity';
 
 const CuentoInteractivo = ({navigation, route}: CuentoInteractivoProps) => {
   const props = route.params;
@@ -14,7 +15,7 @@ const CuentoInteractivo = ({navigation, route}: CuentoInteractivoProps) => {
   const story = Stories[actividad].interactive;
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
-  const [estado, setEstado] = useState('desafio');
+  const [estado, setEstado] = useState<DesafioEstado>('desafio');
 
   return (
     <View style={styles.container}>
@@ -59,8 +60,7 @@ const CuentoInteractivo = ({navigation, route}: CuentoInteractivoProps) => {
           pageNumber={[pageNumber, setPageNumber]}
           canMove={[canMove, setCanMove]}
           navigation={navigation}
-          estado={estado}
-          setEstado={setEstado}
+          estado={[estado, setEstado]}
         />
       ) : (
         <View />

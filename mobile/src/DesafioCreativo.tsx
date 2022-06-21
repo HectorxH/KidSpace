@@ -6,13 +6,14 @@ import {
   ViroARSceneNavigator,
   ViroDirectionalLight,
   ViroAmbientLight,
+  // @ts-ignore
 } from '@viro-community/react-viro';
 import {Button} from 'react-native-paper';
 
 const DiagramasSceneAR = () => {
   const [tracking, setTracking] = useState(false);
 
-  function onInitialized(state: ViroTrackingStateConstants, reason: any) {
+  function onInitialized(state: any, reason: any) {
     console.log('state, reason, tracking:', state, reason, tracking);
     if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
       setTracking(true); // permite bindear cosas para que solo aparezcan cuando el tracking está activo

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, StatusBar, Text} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
+// @ts-ignore
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
-import {Button} from 'react-native-paper';
 import Activities from './assets/activities/activities';
 import DesafioIntroductorioSceneAR from './components/ARScenes/DesafioIntroductorioAR';
 import Inventario from './components/inventario/inventario';
@@ -10,15 +10,17 @@ import Questions from './components/IntroductoryChallenge/Questions';
 import ToggleButton from './components/IntroductoryChallenge/QuestionsButton';
 import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
+import {DesafioProps} from './types/navigation';
+import {DesafioEstado} from './types/activity';
 
-const Desafio = ({navigation, route}) => {
+const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
   const [models, setModels] = useState([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
-  const [estado, setEstado] = useState('story');
+  const [estado, setEstado] = useState<DesafioEstado>('story');
   const [toggleQuestions, setToggleQuestions] = useState(false);
   const [answersCount, setAnswersCount] = useState(0);
 
@@ -92,11 +94,10 @@ const Desafio = ({navigation, route}) => {
         Activities[actividad][tipo][estado][pageNumber].rightAnswer ===
           'none') ? (
         <StoryNavigation
-          storyLength={Activities[actividad][tipo][estado].length}
+          storyLength={Activities[actividad][tipo].quiz.length}
           pageNumber={[pageNumber, setPageNumber]}
           canMove={[canMove, setCanMove]}
-          estado={estado}
-          setEstado={setEstado}
+          estado={[estado, setEstado]}
         />
       ) : (
         <View />

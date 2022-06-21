@@ -1,13 +1,24 @@
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
+import {DesafioEstado} from '../types/activity';
+import {RootStackParamList} from '../types/navigation';
 
-const StoryNavigation = props => {
-  const storyLength = props.storyLength;
+interface StoryNavigationProps {
+  storyLength: number;
+  pageNumber: [number, React.Dispatch<React.SetStateAction<number>>];
+  canMove: [number, React.Dispatch<React.SetStateAction<number>>];
+  estado?: [DesafioEstado, React.Dispatch<React.SetStateAction<DesafioEstado>>];
+  navigation?: NativeStackNavigationProp<RootStackParamList>;
+}
+
+const StoryNavigation = (props: StoryNavigationProps) => {
+  const {storyLength, navigation} = props;
   const [pageNumber, setPageNumber] = props.pageNumber;
   const [, setCanMove] = props.canMove;
-  const estado = props.estado;
-  const setEstado = props.setEstado;
-  const navigation = props.navigation;
+  const [estado, setEstado] = props.estado
+    ? props.estado
+    : [undefined, undefined];
 
   function nextPageNumber() {
     if (pageNumber !== storyLength - 1) {
@@ -19,9 +30,9 @@ const StoryNavigation = props => {
         setPageNumber(0);
       } else {
         if (estado === 'desafio') {
-          navigation.push('MainMap', {});
+          navigation?.push('MainMap');
         } else {
-          navigation.push('Desafio', {
+          navigation?.push('Desafio', {
             actividad: 'diagramas',
             tipo: 'introductory',
           });
