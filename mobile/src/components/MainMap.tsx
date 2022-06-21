@@ -34,7 +34,8 @@ const MainMap = ({navigation}: MainMapProps) => {
       setNotification(allMessages.length);
       setVisible(true);
     });
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const HandleAct = () => {
     if (visible === true) {
