@@ -1,47 +1,21 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, StatusBar, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import Answers from './FinalQuizAnswers';
 
 const FinalQuizQuestion = props => {
   const pregunta = props.pregunta;
   const enunciado = props.enunciado;
   const alternativas = props.alternativas;
+  const answersCount = props.answersCount;
+  const setAnswersCount = props.setAnswersCount;
+  const rightAnswer = props.rightAnswer;
+  const setAnswer = props.setAnswer;
+  const answer = props.answer;
 
-  const rightAnswer = props.answer;
-
-  const [answerStyles, setAnswerStyles] = useState({
-    0: styles.answerButton,
-    1: styles.answerButton,
-    2: styles.answerButton,
-  });
-
-  const [answerTextStyles, setAnswerTextStyles] = useState({
-    0: styles.answerText,
-    1: styles.answerText,
-    2: styles.answerText,
-  });
-  // function checkAnswer(answer: any, index: number) {
-  //   if (answer === rightAnswer) {
-  //     setAnswerStyles({
-  //       0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
-  //       1: index === 1 ? styles.rightAnswerButton : answerStyles[1],
-  //       2: index === 2 ? styles.rightAnswerButton : answerStyles[2],
-  //     });
-  //     if (answerFlag === 0){
-  //       setAnswersCount(answersCount + 1);
-  //     }
-  //     setAnswer(1);
-  //   } else {
-  //     setAnswerStyles({
-  //       0: index === 0 ? styles.wrongAnswerButton : answerStyles[0],
-  //       1: index === 1 ? styles.wrongAnswerButton : answerStyles[1],
-  //       2: index === 2 ? styles.wrongAnswerButton : answerStyles[2],
-  //     });
-  //   }
-  // }
   return (
     <View style={styles.body}>
-      <View style={styles.pad} />
+      {/* <View style={styles.pad} /> */}
       <View style={styles.pregunta}>
         <Text style={styles.preguntaText}>{pregunta}</Text>
       </View>
@@ -49,7 +23,15 @@ const FinalQuizQuestion = props => {
         <Text style={styles.descripcionText}>{enunciado}</Text>
       </View>
       <View style={styles.alternativas}>
-        <View />
+        <Answers
+          messageAnswers={alternativas}
+          rightAnswer={rightAnswer}
+          answersCount={answersCount}
+          setAnswersCount={setAnswersCount}
+          setAnswer={setAnswer}
+          answer={answer}
+          orientation="row"
+        />
       </View>
       <View style={styles.pad} />
     </View>
@@ -66,12 +48,15 @@ const styles = StyleSheet.create({
   },
   pregunta: {
     flex: 1,
+    justifyContent: 'center',
   },
   descripcion: {
-    flex: 1,
+    flex: 2,
+    justifyContent: 'center',
   },
   alternativas: {
     flex: 2,
+    justifyContent: 'center',
   },
   buttonContainer: {
     flex: 2,
