@@ -66,7 +66,13 @@ const MainMap = ({navigation}: MainMapProps) => {
             />
           )}
           contentStyle={{flexDirection: 'column'}}
-          onPress={() => console.log('Pressed')}>
+          onPress={
+            () => navigation.push('FinalQuiz', {})
+            // navigation.push('Desafio', {
+            //   actividad: 'diagramas',
+            //   tipo: 'interactive',
+            // })
+          }>
           <Text style={styles.subtitle}>Perfil</Text>
         </Button>
         <Button

@@ -9,6 +9,7 @@ export type RootStackParamList = {
   CuentoInteractivo: {actividad: 'diagramas'};
   CuentoIntroductorio: {actividad: 'diagramas'};
   Desafio: {};
+  FinalQuiz: {};
 };
 
 export type MainMapProps = NativeStackScreenProps<
@@ -34,5 +35,9 @@ export type CuentoInteractivoProps = NativeStackScreenProps<
 export type CuentoIntroductorioProps = NativeStackScreenProps<
   RootStackParamList,
   'CuentoIntroductorio'
+>;
+export type FinalQuizProps = NativeStackScreenProps<
+  RootStackParamList,
+  'FinalQuiz'
 >;
 export type Desafio = NativeStackScreenProps<RootStackParamList, 'Desafio'>;

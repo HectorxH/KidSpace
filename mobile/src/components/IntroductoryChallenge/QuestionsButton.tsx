@@ -2,9 +2,10 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 
-const ToggleButton = (props) => {
+const ToggleButton = props => {
   const toggleQuestions = props.toggleQuestions;
   const setToggleQuestions = props.setToggleQuestions;
+  const settings = props.settings;
 
   function toggle() {
     if (toggleQuestions === true) {
@@ -20,14 +21,20 @@ const ToggleButton = (props) => {
         <View style={styles.topPad} />
         <View style={styles.buttonBox}>
           <Button
-            icon={toggleQuestions === false ? 'magnify' : 'cube'}
+            icon={
+              toggleQuestions === false
+                ? settings.buttonIconNormal
+                : settings.buttonIconAlt
+            }
             labelStyle={styles.iconStyle}
             mode="contained"
-            color="#FF8A00"
+            color={settings.buttonColorNormal}
             style={styles.buttonStyle}
             onPress={() => toggle()}>
             <Text style={styles.textStyle}>
-              {toggleQuestions === false ? 'Preguntas' : 'Volver'}
+              {toggleQuestions === false
+                ? settings.buttonTextNormal
+                : settings.buttonTextAlt}
             </Text>
           </Button>
         </View>

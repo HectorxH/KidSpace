@@ -20,6 +20,8 @@ const images: {
     extras: {
       chart: require('./character/extras/chart.png'),
       paper: require('./character/extras/paper.png'),
+      grafico_barras: require('./character/extras/grafico_barras.png'),
+      grafico_circular: require('./character/extras/grafico_circular.png'),
     },
   },
   background: {
@@ -43,6 +45,15 @@ const images: {
     },
     cajita: {
       square: require('./icons/cajita/square.png'),
+    },
+    caja_girasol: {
+      square: require('./icons/caja_girasol/square.png'),
+    },
+    caja_iris: {
+      square: require('./icons/caja_iris/square.png'),
+    },
+    caja_margarita: {
+      square: require('./icons/caja_margarita/square.png'),
     },
   },
 };

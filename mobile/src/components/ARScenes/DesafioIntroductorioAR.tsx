@@ -9,7 +9,7 @@ import {
 } from '@viro-community/react-viro';
 import Models from '../../assets/3d/models';
 
-const DesafioIntroductorioSceneAR = (props) => {
+const DesafioIntroductorioSceneAR = props => {
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
@@ -69,6 +69,7 @@ const DesafioIntroductorioSceneAR = (props) => {
               updatePosition(item, [position[0], position[1], position[2]])
             }
             dragType={'FixedToWorld'}
+            highAccuracyEvents={true}
             // onPinch={(pinchState, scaleFactor, source) =>
             //   updateScale(pinchState, scaleFactor, source)
             // }
