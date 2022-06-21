@@ -1,7 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../../android/app/src/main/assets/imgs/handler/images';
+
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').height;
 
 const NoAvailableActivities = ({navigation}: {navigation: any}) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
@@ -15,7 +19,7 @@ const NoAvailableActivities = ({navigation}: {navigation: any}) => {
           onPress={() => navigation.goBack()}>
           {back}
         </Button>
-        <Text style={styles.title}>Tus Actividades:</Text>
+        <Text style={styles.title}> Tus Actividades:</Text>
       </View>
       <View style={styles.content}>
         <Card style={styles.card}>
@@ -31,12 +35,7 @@ const NoAvailableActivities = ({navigation}: {navigation: any}) => {
         </Card>
       </View>
       <View style={styles.container}>
-        <Image
-          style={styles.img}
-          source={{
-            uri: 'https://i.imgur.com/lMHQpo1.png',
-          }}
-        />
+        <Image style={styles.img} source={images.actNoDisponible.uri} />
       </View>
     </View>
   );
@@ -49,27 +48,26 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: 10,
+    margin: Math.round(windowWidth * 0.03),
   },
   content: {
     justifyContent: 'center',
   },
   title: {
-    marginLeft: 10,
-    fontFamily: 'Arial Black',
-    fontSize: 25,
-    fontWeight: 'bold',
+    marginLeft: Math.round(windowWidth * 0.01),
+    fontFamily: 'Poppins-Bold',
+    fontSize: Math.round(windowWidth * 0.06),
     textAlign: 'center',
   },
   subtitle: {
-    marginLeft: 10,
-    fontFamily: 'Arial Black',
-    fontSize: 20,
+    marginLeft: Math.round(windowWidth * 0.01),
+    fontFamily: 'Poppins-Regular',
+    fontSize: Math.round(windowWidth * 0.04),
     textAlign: 'center',
   },
   card: {
-    marginLeft: 30,
-    marginRight: 30,
+    marginLeft: Math.round(windowWidth * 0.1),
+    marginRight: Math.round(windowWidth * 0.1),
     backgroundColor: '#F1F3F8',
   },
   img: {

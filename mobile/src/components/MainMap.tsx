@@ -60,9 +60,12 @@ const MainMap = ({navigation}: MainMapProps) => {
           icon={() => (
             <Icon
               name="account"
-              size={40}
+              size={Math.round(windowWidth * 0.11)}
               color="#FFFFFF"
-              style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+              style={{
+                width: Math.round(windowWidth * 0.15),
+                height: Math.round(windowHeight * 0.1),
+              }}
             />
           )}
           contentStyle={{flexDirection: 'column'}}
@@ -83,9 +86,12 @@ const MainMap = ({navigation}: MainMapProps) => {
           icon={() => (
             <Icon
               name="store"
-              size={40}
+              size={Math.round(windowWidth * 0.11)}
               color="#FFFFFF"
-              style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+              style={{
+                width: Math.round(windowWidth * 0.15),
+                height: Math.round(windowHeight * 0.1),
+              }}
             />
           )}
           contentStyle={{flexDirection: 'column'}}
@@ -104,9 +110,12 @@ const MainMap = ({navigation}: MainMapProps) => {
             icon={() => (
               <Icon
                 name="target"
-                size={40}
+                size={Math.round(windowWidth * 0.11)}
                 color="#FFFFFF"
-                style={{width: windowWidth / 6.5, height: windowHeight / 10}}
+                style={{
+                  width: Math.round(windowWidth * 0.15),
+                  height: Math.round(windowHeight * 0.1),
+                }}
               />
             )}
             contentStyle={{flexDirection: 'column'}}
@@ -125,7 +134,7 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: 10,
+    margin: Math.round(windowWidth * 0.03),
   },
   containerButtons: {
     flex: 1,
@@ -133,33 +142,30 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   button: {
-    height: windowHeight / 5,
-    width: windowWidth / 4,
-    marginLeft: windowWidth / 30,
+    height: Math.round(windowHeight * 0.2),
+    width: Math.round(windowWidth * 0.27),
+    marginLeft: Math.round(windowWidth * 0.02),
   },
   button3: {
-    height: windowHeight / 5,
-    width: windowWidth / 3,
+    height: Math.round(windowHeight * 0.2),
+    width: Math.round(windowWidth * 0.42),
     position: 'absolute',
-    right: windowWidth / 50,
+    right: Math.round(windowWidth * 0.01),
     justifyContent: 'center',
-    elevation: 3,
+    elevation: 4,
   },
   chip: {
     backgroundColor: '#F1F3F8',
-    height: windowHeight / 10,
   },
   title: {
-    fontFamily: 'Arial Black',
-    fontSize: windowHeight / 17,
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
+    fontSize: Math.round(windowWidth * 0.05),
     textAlign: 'center',
     color: '#000000',
   },
   subtitle: {
     marginLeft: 10,
-    fontFamily: 'Arial Black',
-    fontSize: 15,
+    fontSize: Math.round(windowWidth * 0.04),
     textAlign: 'center',
     color: '#ffffff',
   },
@@ -173,18 +179,16 @@ const styles = StyleSheet.create({
   },
   badge: {
     position: 'absolute',
-    top: windowHeight / 400,
-    left: windowWidth / 8,
-    elevation: 7,
+    top: 0,
+    left: 0,
+    elevation: 5,
   },
   rightButtonView: {
     flex: 1,
-    height: 70,
-    width: 180,
-    marginLeft: 3,
-    marginRight: 3,
+    height: Math.round(windowHeight * 0.2),
+    width: Math.round(windowWidth * 0.45),
     position: 'absolute',
-    right: windowHeight / 30,
+    right: Math.round(windowWidth * 0.01),
   },
 });
 

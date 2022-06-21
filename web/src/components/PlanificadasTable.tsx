@@ -1,6 +1,6 @@
 import {
-  Card, Button, Table, TableBody, Theme, IconButton,
-  TableCell, TableContainer, TableHead, TableRow, Stack,
+  TableContainer, Button, Table, TableBody, Theme, IconButton,
+  TableCell, TableHead, TableRow, Stack, Card,
   Typography, ClickAwayListener, Tooltip, Dialog,
   DialogActions, DialogContent, DialogContentText, DialogTitle,
 } from '@mui/material';
@@ -176,8 +176,16 @@ const PlanificadasTable = (
   };
 
   return (
-    <TableContainer component={Card} elevation={4} sx={{ borderRadius: '20px' }}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+
+    <TableContainer
+      component={Card}
+      elevation={4}
+      sx={{ borderRadius: '20px' }}
+    >
+      <Table
+        sx={{ overflowX: 'scroll' }}
+        aria-label="simple table"
+      >
         <TableHead>
           <TableRow>
             <TableCell>Actividad</TableCell>
@@ -203,6 +211,7 @@ const PlanificadasTable = (
         ? <SinActividades mainmsg="Sin actividades planificadas." submsg="Cuande asigne una actividad, esta aparecerá aquí." />
         : ''}
     </TableContainer>
+
   );
 };
 

@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {AvailableActivitiesProps} from '../../types/navigation';
+
+const windowWidth = Dimensions.get('window').height;
 
 const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
@@ -18,7 +20,7 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
           onPress={() => navigation.goBack()}>
           {back}
         </Button>
-        <Text style={styles.title}>Tus Actividades:</Text>
+        <Text style={styles.title}> Tus Actividades:</Text>
       </View>
       <View style={styles.cards}>
         <>
@@ -39,13 +41,12 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'row',
-    margin: 10,
+    margin: Math.round(windowWidth * 0.03),
   },
   title: {
     marginLeft: 10,
-    fontFamily: 'Arial Black',
-    fontSize: 25,
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
+    fontSize: Math.round(windowWidth * 0.06),
   },
   cards: {
     flexDirection: 'row',

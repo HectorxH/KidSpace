@@ -28,7 +28,7 @@ const Favorita = ({ row } : FavoritaParams) => (
         container
         columns={10}
       >
-        <Grid item xs={2}>
+        <Grid item xs={3}>
           <CardMedia
             component="img"
             image={row.portada}

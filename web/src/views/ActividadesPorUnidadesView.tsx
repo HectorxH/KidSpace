@@ -8,6 +8,7 @@ import {
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import unidades from '../mock/unidades';
+import '../App.css';
 
 const ActividadesPorUnidadesView = () => (
   <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
@@ -28,13 +29,14 @@ const ActividadesPorUnidadesView = () => (
       {unidades.map(({
         img, path, title, description,
       }) => (
-        <Card sx={{ borderRadius: '20px' }}>
+        <Card sx={{ borderRadius: '20px' }} className="MuiCard-root">
           <CardActionArea
             component={NavLink}
             to={path}
           >
             <CardMedia
               component="img"
+              sx={{ height: '150px' }}
               image={img}
               alt={`Imagen de ${title}`}
             />
