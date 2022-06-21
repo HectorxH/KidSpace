@@ -61,24 +61,24 @@ const Answers = props => {
 
   return (
     <View style={styles.horizontalContainer}>
-      <View style={styles.pad} />
       {messageAnswers.map((answer: any, index: number) => {
         return (
           <View
             style={styles.container}
             key={answer + (index + 1000).toString()}>
-            {/* <View style={styles.pad} key={answer + (index + 2000).toString()} /> */}
             <View
               style={styles.answerButtonBox}
               key={answer + (index + 3000).toString()}>
+              <View
+                style={styles.pad}
+                key={answer + (index + 2000).toString()}
+              />
               <Button
                 key={answer}
                 mode="contained"
                 color={
                   answerStyles[index] === styles.rightAnswerButton
-                    ? '#ccefd2'
-                    : answerStyles[index] === styles.wrongAnswerButton
-                    ? '#efccd2'
+                    ? '#5C9DEC'
                     : 'white'
                 }
                 style={answerStyles[index]}
@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
   horizontalContainer: {
     flex: 1,
     flexDirection: 'row',
+    justifyContent: 'space-evenly',
   },
   pad: {
     flex: 1,
@@ -110,7 +111,9 @@ const styles = StyleSheet.create({
     // backgroundColor: 'blue',
   },
   container: {
-    // padding: 4,
+    // flex: 2,
+    width: '20%',
+    justifyContent: 'space-between',
   },
 
   answerButtonBox: {
@@ -118,42 +121,49 @@ const styles = StyleSheet.create({
   },
   answerButton: {
     borderRadius: 18,
-    borderWidth: 3,
+    // borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
+    height: '100%',
     borderColor: '#5C9DEC',
+    elevation: 7,
   },
   wrongAnswerButton: {
     borderRadius: 18,
-    borderWidth: 3,
+    // borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
+    height: '100%',
     borderColor: '#b00020',
     color: '#efccd2',
+    elevation: 7,
   },
   rightAnswerButton: {
     borderRadius: 18,
-    borderWidth: 3,
+    // borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
+    height: '100%',
     borderColor: '#00b020',
-    color: '#ccefd2',
+    color: '#5C9DEC',
+    elevation: 7,
   },
   answerText: {
     height: '100%',
     color: '#063D69',
+    fontWeight: 'bold',
+    fontSize: 20,
     textTransform: 'none',
   },
   wrongAnswerText: {
     height: '100%',
-    color: '#b00020',
-    // fontSize: 15,
+    color: '#063D69',
+    fontWeight: 'bold',
+    fontSize: 20,
     textTransform: 'none',
   },
   rightAnswerText: {
     height: '100%',
-    color: '#00b020',
-    // fontSize: 15,
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 20,
     textTransform: 'none',
   },
 });
