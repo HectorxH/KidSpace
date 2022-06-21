@@ -2,16 +2,22 @@ import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 
-const CharacterSide = (props: {character: any; mood: any}) => {
-  const character = props.character;
-  const mood = props.mood;
+interface CharacterSideProps {
+  character: string;
+  mood: string;
+}
+
+const CharacterSide = ({character, mood}: CharacterSideProps) => {
+  if (character === 'none') {
+    return null;
+  }
 
   return (
-    <View style={character !== 'none' ? styles.characterContainer : {}}>
+    <View style={styles.characterContainer}>
       <Image
         style={styles.characterImage}
         resizeMode="contain"
-        source={character !== 'none' ? Images.character[character][mood] : {}}
+        source={Images.character[character][mood]}
       />
     </View>
   );

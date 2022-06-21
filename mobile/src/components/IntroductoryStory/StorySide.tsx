@@ -1,9 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
+import {CharacterPosition} from '../../types/story';
 
-const StorySide = (props: {message: string; characterPosition: any}) => {
-  const message = props.message.split('*');
-  const characterPosition = props.characterPosition;
+interface StorySideProps {
+  message: string;
+  characterPosition: CharacterPosition;
+}
+
+const StorySide = ({message, characterPosition}: StorySideProps) => {
+  const messages = message.split('*');
 
   return (
     <View style={styles.storyContainerColumn}>
@@ -16,7 +21,7 @@ const StorySide = (props: {message: string; characterPosition: any}) => {
         }>
         <View style={styles.storyBox}>
           <Text style={styles.baseText}>
-            {message.map((word, index) => {
+            {messages.map((word, index) => {
               return (
                 <Text
                   style={index % 2 === 1 ? styles.oddText : styles.evenText}

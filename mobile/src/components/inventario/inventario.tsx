@@ -6,15 +6,22 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  ImageSourcePropType,
 } from 'react-native';
 import Images from '../../assets/images/images';
+import {IItem} from '../../types/activity';
+import {Model} from '../../types/model';
 
-const Inventario = (props) => {
+interface InventarioProps {
+  items: IItem[];
+  models: [Model[], React.Dispatch<React.SetStateAction<Model[]>>];
+}
+
+const Inventario = (props: InventarioProps) => {
   const items = props.items;
   const [placedItems, setPlacedItems] = useState(items.map(() => 0));
   const [nPlacedItems, setNPlacedItems] = useState(0);
-  const models = props.models;
-  const setModels = props.setModels;
+  const [models, setModels] = props.models;
 
   function modelHandler(index: any) {
     let aux = [...placedItems];
@@ -34,25 +41,23 @@ const Inventario = (props) => {
         </View>
         <View style={styles.itemsBox}>
           <ScrollView>
-            {items.map((item: any, index: any) => {
+            {items.map((item: IItem, index: number) => {
               return (
                 <TouchableOpacity
                   onPress={() => modelHandler(index)}
                   style={styles.itemContainer}
                   key={index + 100}>
-                  {placedItems[index] === 0 ? (
+                  {placedItems[index] === 0 &&
+                  Images.icons[item.model].square !== undefined ? (
                     <Image
-                      key={index}
                       style={styles.iconImage}
                       resizeMode="contain"
                       source={
-                        item.icon !== 'none'
-                          ? Images.icons[item.model].square
-                          : {}
+                        Images.icons[item.model].square as ImageSourcePropType
                       }
                     />
                   ) : (
-                    <View key={index} />
+                    <View />
                   )}
                 </TouchableOpacity>
               );

@@ -1,8 +1,14 @@
 import {ImageSourcePropType} from 'react-native';
 
 const images: {
-  [key: string]: {
-    [key: string]: ImageSourcePropType | {[key: string]: ImageSourcePropType};
+  bubbles: {[key: string]: ImageSourcePropType};
+  background: {[key: string]: ImageSourcePropType};
+  character: {[character: string]: {[mood: string]: ImageSourcePropType}};
+  icons: {
+    [model: string]: {
+      circular?: ImageSourcePropType;
+      square?: ImageSourcePropType;
+    };
   };
 } = {
   character: {

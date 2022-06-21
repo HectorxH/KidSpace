@@ -1,4 +1,8 @@
-const stories = {
+import {Model, Resource} from '../../types/model';
+
+const stories: {
+  [key: string]: {[key: string]: {model: Model; resources: Resource[]}};
+} = {
   diagramas: {
     barras: {
       model: require('./diagrama/barras/barras1.glb'),

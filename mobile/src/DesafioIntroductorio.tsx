@@ -12,12 +12,13 @@ import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
 import {DesafioProps} from './types/navigation';
 import {DesafioEstado} from './types/activity';
+import {Model} from './types/model';
 
 const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
-  const [models, setModels] = useState([]);
+  const [models, setModels] = useState<Model[]>([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
   const [estado, setEstado] = useState<DesafioEstado>('story');
@@ -82,8 +83,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
         }>
         <Inventario
           items={Activities[actividad][tipo].items}
-          models={models}
-          setModels={setModels}
+          models={[models, setModels]}
         />
       </View>
       {canMove === 1 ||
