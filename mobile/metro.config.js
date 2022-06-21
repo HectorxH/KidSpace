@@ -6,6 +6,25 @@
  */
 
 module.exports = {
+  resolver: {
+    assetExts: [
+      'obj',
+      'OBJ',
+      'vrx',
+      'mtl',
+      'jpg',
+      'JPG',
+      'png',
+      'PNG',
+      'gltf',
+      'GLTF',
+      'glb',
+      'GLB',
+      'bin',
+      'arobject',
+      'hdr'
+    ]
+  },
   transformer: {
     getTransformOptions: async () => ({
       transform: {

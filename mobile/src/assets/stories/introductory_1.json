@@ -1,0 +1,58 @@
+[ 
+  {
+    "character": "Diego",
+    "mood": "smile",
+    "bubble": "flower",
+    "characterPosition": "left",
+    "message": "Diego es un *florista*.",
+    "background": "flowershop"
+  }, 
+  {
+    "character": "Diego",
+    "mood": "smile",
+    "bubble": "flower",
+    "characterPosition": "left",
+    "message": "Desde chico le han gustado las flores,",
+    "background": "flowershop"
+  },
+  {
+    "character": "Diego",
+    "mood": "bouquet",
+    "bubble": "idea",
+    "characterPosition": "right",
+    "message": "y ahora Diego usa su creatividad para diseñar y vender arreglos florales.",
+    "background": "flowershop"
+  },
+  {
+    "character": "Diego",
+    "mood": "troubled",
+    "bubble": "money",
+    "characterPosition": "right",
+    "message": "Diego abre su tienda de flores todos los días de la semana",
+    "background": "flowershop"
+  },
+  {
+    "character": "Diego",
+    "mood": "troubled",
+    "bubble": "money",
+    "characterPosition": "right",
+    "message": "y el día domingo analiza cuántas flores logró vender.",
+    "background": "flowershop"
+  },
+  {
+    "character": "extras",
+    "mood": "chart",
+    "bubble": "",
+    "characterPosition": "left",
+    "message": "Para esto Diego elabora un diagrama conocido como *Gráfico de barras*.",
+    "background": "flowershop"
+  },
+  {
+    "character": "Diego",
+    "mood": "troubled",
+    "bubble": "question_mark",
+    "characterPosition": "left",
+    "message": "¿Puedes ayudar a Diego a *analizarlo*?",
+    "background": "flowershop"
+  }
+]
