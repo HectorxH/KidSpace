@@ -1,22 +1,29 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
-const Answers = props => {
+interface AnswersProps {
+  messageAnswers: string[];
+  rightAnswer: string;
+  answersCount: [number, ReactStateSetter<number>];
+  answer: [number, ReactStateSetter<number>];
+}
+
+const Answers = (props: AnswersProps) => {
   const messageAnswers = props.messageAnswers;
   const rightAnswer = props.rightAnswer;
-  const answersCount = props.answersCount;
-  const setAnswersCount = props.setAnswersCount;
-  const setAnswer = props.setAnswer;
-  const answerFlag = props.answer;
+  const [answersCount, setAnswersCount] = props.answersCount;
+  const [answerFlag, setAnswer] = props.answer;
 
-  const [answerStyles, setAnswerStyles] = useState({
+  const [answerStyles, setAnswerStyles] = useState<any>({
     0: styles.answerButton,
     1: styles.answerButton,
     2: styles.answerButton,
   });
 
-  const [answerTextStyles, setAnswerTextStyles] = useState({
+  const [answerTextStyles, setAnswerTextStyles] = useState<any>({
     0: styles.answerText,
     1: styles.answerText,
     2: styles.answerText,
@@ -62,32 +69,23 @@ const Answers = props => {
   return (
     <View style={styles.horizontalContainer}>
       {messageAnswers.map((answer: any, index: number) => {
+        const style = answerStyles[index as 0 | 1 | 2];
         return (
           <View
             style={styles.container}
             key={answer + (index + 1000).toString()}>
-            <View
-              style={styles.answerButtonBox}
-              key={answer + (index + 3000).toString()}>
-              <View
-                style={styles.pad}
-                key={answer + (index + 2000).toString()}
-              />
-              <Button
-                key={answer}
-                mode="contained"
-                color={
-                  answerStyles[index] === styles.rightAnswerButton
-                    ? '#5C9DEC'
-                    : 'white'
-                }
-                style={answerStyles[index]}
-                onPress={() => checkAnswer(answer, index)}>
-                <Text key={index + 4000} style={answerTextStyles[index]}>
-                  {answer}
-                </Text>
-              </Button>
-            </View>
+            <Button
+              key={answer}
+              mode="contained"
+              color={style === styles.rightAnswerButton ? '#5C9DEC' : 'white'}
+              style={style}
+              onPress={() => checkAnswer(answer, index)}>
+              <Text
+                key={index + 4000}
+                style={answerTextStyles[index as 0 | 1 | 2]}>
+                {answer}
+              </Text>
+            </Button>
           </View>
         );
       })}
@@ -97,74 +95,51 @@ const Answers = props => {
 
 const styles = StyleSheet.create({
   horizontalContainer: {
-    flex: 1,
+    marginVertical: RSize(0.02),
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
-  },
-  pad: {
-    flex: 1,
-  },
-  answerBox: {
-    flex: 20,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    // backgroundColor: 'blue',
+    justifyContent: 'space-around',
   },
   container: {
-    // flex: 2,
-    width: '20%',
+    width: '22%',
     justifyContent: 'space-between',
   },
-
-  answerButtonBox: {
-    justifyContent: 'center',
-  },
   answerButton: {
-    borderRadius: 18,
-    // borderWidth: 3,
+    borderRadius: RSize(1),
     justifyContent: 'center',
-    height: '100%',
     borderColor: '#5C9DEC',
     elevation: 7,
   },
   wrongAnswerButton: {
-    borderRadius: 18,
-    // borderWidth: 3,
+    borderRadius: RSize(1),
     justifyContent: 'center',
-    height: '100%',
     borderColor: '#b00020',
     color: '#efccd2',
     elevation: 7,
   },
   rightAnswerButton: {
-    borderRadius: 18,
-    // borderWidth: 3,
+    borderRadius: RSize(1),
     justifyContent: 'center',
-    height: '100%',
     borderColor: '#00b020',
     color: '#5C9DEC',
     elevation: 7,
   },
   answerText: {
-    height: '100%',
     color: '#063D69',
-    fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: RSize(0.022),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
   wrongAnswerText: {
-    height: '100%',
     color: '#063D69',
-    fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: RSize(0.022),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
   rightAnswerText: {
-    height: '100%',
-    fontWeight: 'bold',
     color: 'white',
-    fontSize: 20,
+    fontSize: RSize(0.022),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
 });
 

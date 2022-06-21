@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/imgs/handler/images';
-
-const windowWidth = Dimensions.get('window').height;
+import {RSize} from '../../utils/responsive';
 
 const NoAvailableActivities = ({navigation}: {navigation: any}) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
@@ -47,26 +46,26 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: Math.round(windowWidth * 0.03),
+    margin: RSize(0.03, 'h'),
   },
   content: {
     justifyContent: 'center',
   },
   title: {
-    marginLeft: Math.round(windowWidth * 0.01),
+    marginLeft: RSize(0.01, 'h'),
     fontFamily: 'Poppins-Bold',
-    fontSize: Math.round(windowWidth * 0.06),
+    fontSize: RSize(0.06, 'h'),
     textAlign: 'center',
   },
   subtitle: {
-    marginLeft: Math.round(windowWidth * 0.01),
+    marginLeft: RSize(0.01, 'h'),
     fontFamily: 'Poppins-Regular',
-    fontSize: Math.round(windowWidth * 0.04),
+    fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
   },
   card: {
-    marginLeft: Math.round(windowWidth * 0.1),
-    marginRight: Math.round(windowWidth * 0.1),
+    marginLeft: RSize(0.1, 'h'),
+    marginRight: RSize(0.1, 'h'),
     backgroundColor: '#F1F3F8',
   },
   img: {
