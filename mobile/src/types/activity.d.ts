@@ -41,6 +41,7 @@ export interface IPregunta {
 
 export type ButtonSetting = {
   [key: string]: string;
+  buttonIconPosNormal: 'row' | 'column' | 'row-reverse' | 'column-reverse';
 };
 
 export interface ActividadDetail {
