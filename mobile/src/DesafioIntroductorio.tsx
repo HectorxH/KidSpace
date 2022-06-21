@@ -56,12 +56,16 @@ const Desafio = ({navigation, route}: DesafioProps) => {
             ? styles.overlay
             : styles.off
         }>
-        <ToggleButton toggleQuestions={[toggleQuestions, setToggleQuestions]} />
+        <ToggleButton
+          toggleQuestions={[toggleQuestions, setToggleQuestions]}
+          settings={Activities[actividad][tipo].settings[0]}
+        />
       </View>
       <View style={toggleQuestions === true ? styles.overlay : styles.off}>
         <ContinueButton
           answersCount={answersCount}
           answersNum={Activities[actividad][tipo].quiz.length}
+          settings={Activities[actividad][tipo].settings[1]}
           navigation={navigation}
         />
       </View>

@@ -92,6 +92,7 @@ const DesafioIntroductorioSceneAR = (
               updatePosition(item, [position[0], position[1], position[2]])
             }
             dragType={'FixedToWorld'}
+            highAccuracyEvents={true}
             // onPinch={(pinchState, scaleFactor, source) =>
             //   updateScale(pinchState, scaleFactor, source)
             // }

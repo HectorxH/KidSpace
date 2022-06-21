@@ -2,18 +2,24 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {ButtonSetting} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
 
 interface ContinueButtonProps {
   answersCount: number;
   answersNum: number;
   navigation: NativeStackNavigationProp<RootStackParamList, 'Desafio'>;
+  settings: ButtonSetting;
 }
 
 const ContinueButton = (props: ContinueButtonProps) => {
   const answersCount = props.answersCount;
   const answersNum = props.answersNum;
   const navigation = props.navigation;
+  const settings = props.settings;
+  const contentStyle = StyleSheet.create({
+    iconContentStyle: {flexDirection: settings.buttonIconPosNormal},
+  });
 
   function Continue() {
     navigation.push('CuentoInteractivo', {
@@ -27,14 +33,18 @@ const ContinueButton = (props: ContinueButtonProps) => {
         <View style={styles.topPad} />
         <View style={styles.buttonBox}>
           <Button
-            icon="arrow-right"
+            icon={settings.buttonIconNormal}
             labelStyle={styles.iconStyle}
-            contentStyle={styles.iconContentStyle}
+            contentStyle={contentStyle.iconContentStyle}
             mode="contained"
-            color={answersCount < answersNum ? '#BBBBBB' : '#A1C96A'}
+            color={
+              answersCount < answersNum
+                ? settings.buttonColorNormal
+                : settings.buttonColorAlt
+            }
             style={styles.buttonStyle}
             onPress={() => Continue()}>
-            <Text style={styles.textStyle}>Avanzar</Text>
+            <Text style={styles.textStyle}>{settings.buttonTextNormal}</Text>
           </Button>
         </View>
         <View style={styles.bottomPad} />
@@ -92,9 +102,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     color: 'white',
   },
-  iconContentStyle: {
-    flexDirection: 'row-reverse',
-  },
+  iconContentStyle: {},
 });
 
 export default ContinueButton;

@@ -13,6 +13,7 @@ import React from 'react';
 import CuentoIntroductorio from './CuentoIntroductorio';
 import CuentoInteractivo from './CuentoInteractivo';
 import Desafio from './DesafioIntroductorio';
+import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
@@ -60,6 +61,11 @@ const App = () => {
         <Stack.Screen
           name="Desafio"
           component={Desafio}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="FinalQuiz"
+          component={FinalQuiz}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

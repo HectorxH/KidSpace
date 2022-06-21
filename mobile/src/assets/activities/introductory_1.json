@@ -14,6 +14,29 @@
       "rotation": [0, 0, 0]
     } 
   ],
+  "settings": 
+  [
+    {
+      "buttonColorNormal": "#FF8A00",
+      "buttonColorAlt": "#FF8A00",
+      "buttonIconNormal": "magnify",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row",
+      "buttonIconPosAlt": "row",
+      "buttonTextNormal": "Preguntas",
+      "buttonTextAlt": "Volver"
+    },
+    {  
+      "buttonColorNormal": "#BBBBBB",
+      "buttonColorAlt": "#A1C96A",
+      "buttonIconNormal": "arrow-right",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row-reverse",
+      "buttonIconPosAlt": "row-reverse",
+      "buttonTextNormal": "Avanzar",
+      "buttonTextAlt": "Avanzar"
+    }
+  ],
   "story":
   [
     {
