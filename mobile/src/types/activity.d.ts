@@ -18,11 +18,13 @@ export interface IActivity {
   pathAsignar: string;
 }
 
+export type Vec3 = [number, number, number];
+
 export interface IItem {
   model: string;
   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
-  scale: [number, number, number];
-  rotation: [number, number, number];
+  scale: Vec3;
+  rotation: Vec3;
 }
 
 export interface IDialogo {

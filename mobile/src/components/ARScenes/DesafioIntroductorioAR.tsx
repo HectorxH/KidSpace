@@ -5,16 +5,39 @@ import {
   ViroDirectionalLight,
   ViroAmbientLight,
   Viro3DObject,
-  ViroText,
+  // @ts-ignore
 } from '@viro-community/react-viro';
 import Models from '../../assets/3d/models';
+import {IItem, Vec3} from '../../types/activity';
+import {ImageSourcePropType} from 'react-native';
 
-const DesafioIntroductorioSceneAR = (props) => {
+interface DesafioIntroductorioSceneARProps {
+  sceneNavigator: {
+    viroAppProps: {
+      models: number[];
+      actividad: string;
+      items: IItem[];
+    };
+  };
+}
+
+interface ITransform {
+  model: ImageSourcePropType;
+  resources: ImageSourcePropType[];
+  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+  scale: Vec3;
+  rotation: Vec3;
+  position: Vec3;
+}
+
+const DesafioIntroductorioSceneAR = (
+  props: DesafioIntroductorioSceneARProps,
+) => {
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
   const [tracking, setTracking] = useState(false);
-  const [transforms, setTransforms] = useState(
+  const [transforms, setTransforms] = useState<ITransform[]>(
     items.map(item => ({
       model: Models[actividad][item.model].model,
       resources: Models[actividad][item.model].resources,
@@ -24,21 +47,21 @@ const DesafioIntroductorioSceneAR = (props) => {
       position: [0, 0, -1],
     })),
   );
-  function updatePosition(index, position) {
+  function updatePosition(index: number, position: Vec3) {
     let transform = [...transforms];
     transform[index].position = position;
     setTransforms(transform);
   }
-  function updateRotation(index, rotation) {
-    let transform = [...transforms];
-    transform[index].rotation = rotation;
-    setTransforms(transform);
-  }
-  function updateScale(index, scale) {
-    let transform = [...transforms];
-    transform[index].scale = scale;
-    setTransforms(transform);
-  }
+  // function updateRotation(index: number, rotation: Vec3) {
+  //   let transform = [...transforms];
+  //   transform[index].rotation = rotation;
+  //   setTransforms(transform);
+  // }
+  // function updateScale(index: number, scale: Vec3) {
+  //   let transform = [...transforms];
+  //   transform[index].scale = scale;
+  //   setTransforms(transform);
+  // }
 
   function onInitialized(state: ViroTrackingStateConstants, reason: any) {
     console.log('state, reason, tracking:', state, reason, tracking);
@@ -55,12 +78,12 @@ const DesafioIntroductorioSceneAR = (props) => {
         castsShadow={true}
       />
       <ViroAmbientLight color="#FFFFFF" intensity={150} />
-      {models.map((item, index) => {
+      {models.map((item: number, index: number) => {
         return (
           <Viro3DObject
             key={actividad + '_3dobj_' + index.toString()}
-            source={transforms[item].model}
-            resources={transforms[item].resources}
+            source={transforms[item].model as ImageSourcePropType}
+            resources={transforms[item].resources as ImageSourcePropType[]}
             position={transforms[item].position}
             scale={transforms[item].scale}
             rotation={transforms[item].rotation}

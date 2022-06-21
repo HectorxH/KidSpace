@@ -2,16 +2,19 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import MessageBubble from './MessageBubble';
 import Answers from './Answers';
+import {ReactStateSetter} from '../../types/others';
 
-const StorySide = (props: {
+interface StorySideProps {
   message: string;
-  messagePosition: any;
-  messageExtra: any;
-  messageBubble: any;
-  messageAnswers: any;
-  rightAnswer: any;
-  canMove: [any, any];
-}) => {
+  messagePosition: string;
+  messageExtra: string;
+  messageBubble: string;
+  messageAnswers: [string, string, string] | 'none';
+  rightAnswer: string;
+  canMove: [number, ReactStateSetter<number>];
+}
+
+const StorySide = (props: StorySideProps) => {
   const message = props.message.split('*');
   const messagePosition = props.messagePosition;
   const messageExtra = props.messageExtra;

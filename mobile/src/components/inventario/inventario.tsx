@@ -10,11 +10,11 @@ import {
 } from 'react-native';
 import Images from '../../assets/images/images';
 import {IItem} from '../../types/activity';
-import {Model} from '../../types/model';
+import {ReactStateSetter} from '../../types/others';
 
 interface InventarioProps {
   items: IItem[];
-  models: [Model[], React.Dispatch<React.SetStateAction<Model[]>>];
+  models: [ImageSourcePropType[], ReactStateSetter<ImageSourcePropType[]>];
 }
 
 const Inventario = (props: InventarioProps) => {

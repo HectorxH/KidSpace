@@ -1,7 +1,11 @@
-import {Model, Resource} from '../../types/model';
-
+import {ImageSourcePropType} from 'react-native';
 const stories: {
-  [key: string]: {[key: string]: {model: Model; resources: Resource[]}};
+  [key: string]: {
+    [key: string]: {
+      model: ImageSourcePropType;
+      resources: ImageSourcePropType[];
+    };
+  };
 } = {
   diagramas: {
     barras: {

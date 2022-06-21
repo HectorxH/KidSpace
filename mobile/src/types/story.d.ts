@@ -1,6 +1,6 @@
 export interface IPagina {
   character: string;
-  characterPosition: string;
+  characterPosition: CharacterPosition;
   mood: string;
   bubble: string;
   bubblePosition: string;
@@ -8,9 +8,11 @@ export interface IPagina {
   messagePosition: string;
   messageExtra: string;
   messageBubble: string;
-  messageAnswers: string;
+  messageAnswers: [string, string, string] | 'none';
   rightAnswer: string;
   background: string;
 }
 
 export type Story = IPagina[];
+
+export type CharacterPosition = 'left' | 'right';

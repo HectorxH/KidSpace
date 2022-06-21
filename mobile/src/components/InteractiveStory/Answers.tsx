@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {ReactStateSetter} from '../../types/others';
 
-const MessageBubble = (props: {
-  messageAnswers: any;
-  rightAnswer: any;
-  canMove: [any, any];
-}) => {
+interface MessageBubbleProps {
+  messageAnswers: [string, string, string];
+  rightAnswer: string;
+  canMove: [number, ReactStateSetter<number>];
+}
+
+const MessageBubble = (props: MessageBubbleProps) => {
   const messageAnswers = props.messageAnswers;
   const rightAnswer = props.rightAnswer;
   const [, setCanMove] = props.canMove;
@@ -63,7 +66,8 @@ const MessageBubble = (props: {
       <View style={styles.verticalContainer}>
         <View style={styles.topPadding} />
         <View style={styles.answerBox}>
-          {messageAnswers.map((answer: any, index: number) => {
+          {messageAnswers.map((answer: string, index: number) => {
+            const style = answerStyles[index as 0 | 1 | 2];
             return (
               <View style={styles.container} key={index + 1000}>
                 <View style={styles.padding} key={index + 2000} />
@@ -72,15 +76,15 @@ const MessageBubble = (props: {
                     key={answer}
                     mode="contained"
                     color={
-                      answerStyles[index] === styles.rightAnswerButton
+                      style === styles.rightAnswerButton
                         ? '#ccefd2'
-                        : answerStyles[index] === styles.wrongAnswerButton
+                        : style === styles.wrongAnswerButton
                         ? '#efccd2'
                         : 'white'
                     }
-                    style={answerStyles[index]}
+                    style={style}
                     onPress={() => checkAnswer(answer, index)}>
-                    <Text key={index + 4000} style={answerTextStyles[index]}>
+                    <Text key={index + 4000} style={style}>
                       {answer}
                     </Text>
                   </Button>
@@ -90,7 +94,7 @@ const MessageBubble = (props: {
           })}
           <View style={styles.padding} />
         </View>
-        {messageAnswers !== 'none' ? <View /> : <View />}
+        <View />
       </View>
       <View style={styles.padding} />
     </View>

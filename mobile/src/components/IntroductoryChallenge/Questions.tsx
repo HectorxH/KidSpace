@@ -1,14 +1,21 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, Text, TouchableWithoutFeedback} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
+import {IPregunta} from '../../types/activity';
+import {ReactStateSetter} from '../../types/others';
 import Answers from './Answers';
 
-const Questions = (props) => {
+interface QuestionsProps {
+  quiz: IPregunta[];
+  toggleQuestions: boolean;
+  answersCount: [number, ReactStateSetter<number>];
+}
+
+const Questions = (props: QuestionsProps) => {
   const quiz = props.quiz;
   const q1 = quiz[0].question.split('*');
   const q2 = quiz[1].question.split('*');
   const toggleQuestions = props.toggleQuestions;
-  const answersCount = props.answersCount;
-  const setAnswersCount = props.setAnswersCount;
+  const [answersCount, setAnswersCount] = props.answersCount;
   const [leftAnswer, setLeftAnswer] = useState(0);
   const [rightAnswer, setRightAnswer] = useState(0);
 
@@ -40,10 +47,8 @@ const Questions = (props) => {
               <Answers
                 messageAnswers={quiz[0].answers}
                 rightAnswer={quiz[0].rightAnswer}
-                answersCount={answersCount}
-                setAnswersCount={setAnswersCount}
-                setAnswer={setLeftAnswer}
-                answer={leftAnswer}
+                answersCount={[answersCount, setAnswersCount]}
+                answer={[leftAnswer, setLeftAnswer]}
               />
             </View>
           ) : (
@@ -73,10 +78,8 @@ const Questions = (props) => {
             <Answers
               messageAnswers={quiz[1].answers}
               rightAnswer={quiz[1].rightAnswer}
-              answersCount={answersCount}
-              setAnswersCount={setAnswersCount}
-              setAnswer={setRightAnswer}
-              answer={rightAnswer}
+              answersCount={[answersCount, setAnswersCount]}
+              answer={[rightAnswer, setRightAnswer]}
             />
           </View>
         </View>

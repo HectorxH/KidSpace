@@ -2,15 +2,17 @@ import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 
-const CharacterSide = (props: {
-  character: any;
-  mood: any;
-  characterPosition: any;
-}) => {
-  const character = props.character;
-  const mood = props.mood;
-  const characterPosition = props.characterPosition;
+interface CharacterSideProps {
+  character: string;
+  mood: string;
+  characterPosition: string;
+}
 
+const CharacterSide = ({
+  character,
+  mood,
+  characterPosition,
+}: CharacterSideProps) => {
   return (
     <View
       style={

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, StatusBar} from 'react-native';
+import {View, StyleSheet, StatusBar, ImageSourcePropType} from 'react-native';
 // @ts-ignore
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
 import Activities from './assets/activities/activities';
@@ -12,13 +12,12 @@ import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
 import {DesafioProps} from './types/navigation';
 import {DesafioEstado} from './types/activity';
-import {Model} from './types/model';
 
 const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
-  const [models, setModels] = useState<Model[]>([]);
+  const [models, setModels] = useState<ImageSourcePropType[]>([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
   const [estado, setEstado] = useState<DesafioEstado>('story');
@@ -44,8 +43,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           <Questions
             quiz={Activities[actividad][tipo].quiz}
             toggleQuestions={toggleQuestions}
-            answersCount={answersCount}
-            setAnswersCount={setAnswersCount}
+            answersCount={[answersCount, setAnswersCount]}
           />
         </View>
       ) : (
@@ -58,10 +56,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
             ? styles.overlay
             : styles.off
         }>
-        <ToggleButton
-          toggleQuestions={toggleQuestions}
-          setToggleQuestions={setToggleQuestions}
-        />
+        <ToggleButton toggleQuestions={[toggleQuestions, setToggleQuestions]} />
       </View>
       <View style={toggleQuestions === true ? styles.overlay : styles.off}>
         <ContinueButton

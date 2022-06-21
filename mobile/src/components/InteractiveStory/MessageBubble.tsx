@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 
-const MessageBubble = (props: {messageBubble: any}) => {
+const MessageBubble = (props: {messageBubble: string}) => {
   const messageBubble = props.messageBubble;
 
   return (

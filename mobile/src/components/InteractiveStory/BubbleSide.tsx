@@ -2,15 +2,17 @@ import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 
-const BubbleSide = (props: {
-  bubble: any;
-  characterPosition: any;
-  bubblePosition: any;
-}) => {
-  const bubble = props.bubble;
-  const characterPosition = props.characterPosition;
-  const bubblePosition = props.bubblePosition;
+interface BubbleSideProps {
+  bubble: string;
+  characterPosition: string;
+  bubblePosition: string;
+}
 
+const BubbleSide = ({
+  bubble,
+  characterPosition,
+  bubblePosition,
+}: BubbleSideProps) => {
   return (
     <View style={styles.containerLeft}>
       {characterPosition !== 'none' || bubblePosition !== 'center' ? (

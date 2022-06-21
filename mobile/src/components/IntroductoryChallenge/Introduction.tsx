@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 
-const Introduction = (props) => {
-  const message = props.message.split('*');
+const Introduction = ({message}: {message: string}) => {
+  const messages = message.split('*');
 
   return (
     <View style={styles.horizontalContainer}>
@@ -14,7 +14,7 @@ const Introduction = (props) => {
             <View style={styles.pad} />
             <View style={styles.textContainer}>
               <Text style={styles.baseText}>
-                {message.map((word, index) => {
+                {messages.map((word, index) => {
                   return (
                     <Text
                       style={index % 2 === 1 ? styles.oddText : styles.evenText}

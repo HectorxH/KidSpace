@@ -3,12 +3,13 @@ import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {DesafioEstado} from '../types/activity';
 import {RootStackParamList} from '../types/navigation';
+import {ReactStateSetter} from '../types/others';
 
 interface StoryNavigationProps {
   storyLength: number;
-  pageNumber: [number, React.Dispatch<React.SetStateAction<number>>];
-  canMove: [number, React.Dispatch<React.SetStateAction<number>>];
-  estado?: [DesafioEstado, React.Dispatch<React.SetStateAction<DesafioEstado>>];
+  pageNumber: [number, ReactStateSetter<number>];
+  canMove: [number, ReactStateSetter<number>];
+  estado?: [DesafioEstado, ReactStateSetter<DesafioEstado>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 }
 

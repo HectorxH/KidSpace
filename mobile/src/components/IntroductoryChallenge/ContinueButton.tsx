@@ -1,8 +1,16 @@
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {RootStackParamList} from '../../types/navigation';
 
-const ContinueButton = (props) => {
+interface ContinueButtonProps {
+  answersCount: number;
+  answersNum: number;
+  navigation: NativeStackNavigationProp<RootStackParamList, 'Desafio'>;
+}
+
+const ContinueButton = (props: ContinueButtonProps) => {
   const answersCount = props.answersCount;
   const answersNum = props.answersNum;
   const navigation = props.navigation;

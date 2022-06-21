@@ -1,14 +1,20 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {ReactStateSetter} from '../../types/others';
 
-const Answer = (props) => {
+interface AnswerProps {
+  messageAnswers: [string, string, string];
+  rightAnswer: string;
+  answersCount: [number, ReactStateSetter<number>];
+  answer: [number, ReactStateSetter<number>];
+}
+
+const Answer = (props: AnswerProps) => {
   const messageAnswers = props.messageAnswers;
   const rightAnswer = props.rightAnswer;
-  const answersCount = props.answersCount;
-  const setAnswersCount = props.setAnswersCount;
-  const setAnswer = props.setAnswer;
-  const answerFlag = props.answer;
+  const [answersCount, setAnswersCount] = props.answersCount;
+  const [answerFlag, setAnswer] = props.answer;
 
   const [answerStyles, setAnswerStyles] = useState({
     0: styles.answerButton,
@@ -29,7 +35,7 @@ const Answer = (props) => {
         1: index === 1 ? styles.rightAnswerButton : answerStyles[1],
         2: index === 2 ? styles.rightAnswerButton : answerStyles[2],
       });
-      if (answerFlag === 0){
+      if (answerFlag === 0) {
         setAnswersCount(answersCount + 1);
       }
       setAnswer(1);
@@ -63,7 +69,8 @@ const Answer = (props) => {
     <View style={styles.verticalContainer}>
       <View style={styles.topPadding} />
       <View style={styles.answerBox}>
-        {messageAnswers.map((answer: any, index: number) => {
+        {messageAnswers.map((answer: string, index: number) => {
+          const style = answerStyles[index as 0 | 1 | 2];
           return (
             <View
               style={styles.container}
@@ -79,15 +86,15 @@ const Answer = (props) => {
                   key={answer}
                   mode="contained"
                   color={
-                    answerStyles[index] === styles.rightAnswerButton
+                    style === styles.rightAnswerButton
                       ? '#ccefd2'
-                      : answerStyles[index] === styles.wrongAnswerButton
+                      : style === styles.wrongAnswerButton
                       ? '#efccd2'
                       : 'white'
                   }
-                  style={answerStyles[index]}
+                  style={style}
                   onPress={() => checkAnswer(answer, index)}>
-                  <Text key={index + 4000} style={answerTextStyles[index]}>
+                  <Text key={index + 4000} style={style}>
                     {answer}
                   </Text>
                 </Button>
@@ -97,7 +104,7 @@ const Answer = (props) => {
         })}
         <View style={styles.padding} />
       </View>
-      {messageAnswers !== 'none' ? <View /> : <View />}
+      <View />
       <View style={styles.bottomPadding} />
     </View>
   );

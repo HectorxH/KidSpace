@@ -1,10 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {ReactStateSetter} from '../../types/others';
 
-const ToggleButton = (props) => {
-  const toggleQuestions = props.toggleQuestions;
-  const setToggleQuestions = props.setToggleQuestions;
+interface ToggleButtonProps {
+  toggleQuestions: [boolean, ReactStateSetter<boolean>];
+}
+
+const ToggleButton = (props: ToggleButtonProps) => {
+  const [toggleQuestions, setToggleQuestions] = props.toggleQuestions;
 
   function toggle() {
     if (toggleQuestions === true) {

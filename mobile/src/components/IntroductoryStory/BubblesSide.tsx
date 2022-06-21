@@ -1,11 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
+import {CharacterPosition} from '../../types/story';
 
-const BubbleSide = (props: {bubble: any; characterPosition: any}) => {
-  const bubble = props.bubble;
-  const characterPosition = props.characterPosition;
+interface BubbleSideProps {
+  bubble: string;
+  characterPosition: CharacterPosition;
+}
 
+const BubbleSide = ({bubble, characterPosition}: BubbleSideProps) => {
   return (
     <View style={styles.bubbleVContainer}>
       <View
