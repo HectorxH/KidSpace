@@ -84,7 +84,9 @@ const MessageBubble = (props: MessageBubbleProps) => {
                     }
                     style={style}
                     onPress={() => checkAnswer(answer, index)}>
-                    <Text key={index + 4000} style={style}>
+                    <Text
+                      key={index + 4000}
+                      style={answerTextStyles[index as 0 | 1 | 2]}>
                       {answer}
                     </Text>
                   </Button>

@@ -30,6 +30,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
       <ViroARSceneNavigator
         autofocus={true}
         initialScene={{
+          // @ts-ignore
           scene: DesafioIntroductorioSceneAR,
         }}
         viroAppProps={{
