@@ -1,0 +1,71 @@
+{
+  "items":
+  [
+    {
+      "model": "barras",
+      "type": "GLB",
+      "scale": [0.2, 0.2, 0.2],
+      "rotation": [0, 0, 0]
+    },
+    {
+      "model": "cajita",
+      "type": "GLB",
+      "scale": [0.2, 0.2, 0.2],
+      "rotation": [0, 0, 0]
+    } 
+  ],
+  "settings": 
+  [
+    {
+      "buttonColorNormal": "#FF8A00",
+      "buttonColorAlt": "#FF8A00",
+      "buttonIconNormal": "magnify",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row",
+      "buttonIconPosAlt": "row",
+      "buttonTextNormal": "Preguntas",
+      "buttonTextAlt": "Volver"
+    },
+    {  
+      "buttonColorNormal": "#BBBBBB",
+      "buttonColorAlt": "#A1C96A",
+      "buttonIconNormal": "arrow-right",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row-reverse",
+      "buttonIconPosAlt": "row-reverse",
+      "buttonTextNormal": "Avanzar",
+      "buttonTextAlt": "Avanzar"
+    }
+  ],
+  "story":
+  [
+    {
+      "message": "Ayuda a Diego a *analizar el gráfico de las ventanas*.",
+      "messagePosition": "center",
+      "spotlight": "none"
+    },
+    {
+      "message": "En el menu de *inventario* podrás encontrar el gráfico. *Intenta dar click en su imágen*.",
+      "messagePosition": "center",
+      "spotlight": "inventory"
+    },
+    {
+      "message": "Responda las preguntas sobre el gráfico, dando click en el botón en la *esquina superior izquierda*.",
+      "messagePosition": "center",
+      "spotlight": "preguntas"
+    }
+  ],
+  "quiz":
+  [
+    {
+      "question": "¿Cuántas margaritas vendió Diego el día sábado?",
+      "answers": ["25", "5", "35"],
+      "rightAnswer": "25"
+    },
+    {
+      "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
+      "answers": ["Margaritas", "Ninguna", "Girasoles"],
+      "rightAnswer": "Girasoles"
+    }
+  ]
+}
