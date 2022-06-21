@@ -70,7 +70,7 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={
-            () => navigation.push('FinalQuiz', {})
+            () => navigation.push('FinalQuiz')
             // navigation.push('Desafio', {
             //   actividad: 'diagramas',
             //   tipo: 'introductory',
