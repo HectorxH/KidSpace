@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 
-const StoryNavigation = (props) => {
+const StoryNavigation = props => {
   const storyLength = props.storyLength;
   const [pageNumber, setPageNumber] = props.pageNumber;
   const [, setCanMove] = props.canMove;

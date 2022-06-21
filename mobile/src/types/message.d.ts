@@ -1,4 +1,4 @@
-export interface IMessage {
+export interface IActivity {
   nunidad: string;
   nactividad: string;
   titulo: string;

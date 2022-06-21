@@ -3,17 +3,12 @@ import {View, Text, StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {AvailableActivitiesProps} from '../../types/navigation';
 
-const AvailableActivities = ({
-  navigation,
-  route,
-}: {
-  navigation: any;
-  route: any;
-}) => {
+const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  const act = route.params.message;
-  console.log(act);
+  const activities = route.params.activities;
+  console.log(activities);
   return (
     <View>
       <View style={styles.view}>
@@ -27,11 +22,11 @@ const AvailableActivities = ({
       </View>
       <View style={styles.cards}>
         <>
-          {act.map((activity, index) => (
+          {activities.map((activity, index) => (
             <ActivityCard
               key={index}
-              act={activity}
-              quantity={act.length}
+              activity={activity}
+              quantity={activities.length}
               navigation={navigation}
             />
           ))}

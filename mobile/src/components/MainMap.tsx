@@ -4,9 +4,8 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Pusher from 'pusher-js/react-native';
-import {IMessage} from '../types/message';
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParamList} from '../types/navigation';
+import {IActivity} from '../types/message';
+import {MainMapProps} from '../types/navigation';
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').height;
@@ -21,17 +20,15 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 });
 const channel = pusher.subscribe('channel');
 
-type MainMapProps = NativeStackScreenProps<RootStackParamList, 'MainMap'>;
-
 const MainMap = ({navigation}: MainMapProps) => {
-  const [message, setMessage] = useState<IMessage[]>([]);
+  const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
 
-  const allMessages: IMessage[] = [];
+  const allMessages: IActivity[] = [];
 
   useEffect(() => {
-    channel.bind('message', function (data: {message: IMessage}) {
+    channel.bind('message', function (data: {message: IActivity}) {
       allMessages.push(data.message);
       setMessage(allMessages);
       setNotification(allMessages.length);
@@ -41,7 +38,7 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const HandleAct = () => {
     if (visible === true) {
-      navigation.push('AvailableActivities', {message: message.slice(0, 3)});
+      navigation.push('AvailableActivities', {activities: message.slice(0, 3)});
     } else {
       navigation.push('NoAvailableActivities');
     }
