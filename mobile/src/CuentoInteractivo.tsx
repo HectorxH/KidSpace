@@ -13,6 +13,7 @@ const CuentoInteractivo = ({navigation, route}) => {
   const story = Stories[actividad].interactive;
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
+  const [estado, setEstado] = useState('desafio');
 
   return (
     <View style={styles.container}>
@@ -56,6 +57,9 @@ const CuentoInteractivo = ({navigation, route}) => {
           storyLength={story.length}
           pageNumber={[pageNumber, setPageNumber]}
           canMove={[canMove, setCanMove]}
+          navigation={navigation}
+          estado={estado}
+          setEstado={setEstado}
         />
       ) : (
         <View />
