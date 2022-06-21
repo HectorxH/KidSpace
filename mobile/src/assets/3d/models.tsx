@@ -17,15 +17,15 @@ const stories: {
       resources: [],
     },
     caja_girasol: {
-      model: require('./diagrama/caja_girasol/caja_girasol.glb'),
+      model: require('./diagrama/caja_girasol/cajas_girasoles.glb'),
       resources: [],
     },
     caja_iris: {
-      model: require('./diagrama/caja_iris/caja_iris.glb'),
+      model: require('./diagrama/caja_iris/cajas_irises.glb'),
       resources: [],
     },
     caja_margarita: {
-      model: require('./diagrama/caja_margarita/caja_margarita.glb'),
+      model: require('./diagrama/caja_margarita/cajas_margaritas.glb'),
       resources: [],
     },
   },

@@ -46,7 +46,7 @@
   "story":
   [
     {
-      "message": "En la bodega de la tienda de Diego queda un *total de 20 flores* de distintos tipos en venta: *margaritas, girasoles e iris*. ",
+      "message": "En la bodega de la tienda de Diego queda un *total de 20 flores* de distintos tipos: *margaritas, girasoles e iris*. ",
       "messagePosition": "center",
       "spotlight": "none"
     },
