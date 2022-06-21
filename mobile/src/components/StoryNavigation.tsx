@@ -18,10 +18,14 @@ const StoryNavigation = (props) => {
         setEstado('desafio');
         setPageNumber(0);
       } else {
-        navigation.push('Desafio', {
-          actividad: 'diagramas',
-          tipo: 'introductory',
-        });
+        if (estado === 'desafio') {
+          navigation.push('MainMap', {});
+        } else {
+          navigation.push('Desafio', {
+            actividad: 'diagramas',
+            tipo: 'introductory',
+          });
+        }
       }
     }
   }
