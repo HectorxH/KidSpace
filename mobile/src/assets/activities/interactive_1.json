@@ -77,6 +77,11 @@
       "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
       "answers": ["Margaritas", "Ninguna", "Girasoles"],
       "rightAnswer": "Girasoles"
+    },
+    {
+      "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
+      "answers": ["Margaritas", "Ninguna", "Girasoles"],
+      "rightAnswer": "Girasoles"
     }
   ]
 }

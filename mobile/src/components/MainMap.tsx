@@ -69,13 +69,15 @@ const MainMap = ({navigation}: MainMapProps) => {
             />
           )}
           contentStyle={{flexDirection: 'column'}}
-          onPress={
-            () => navigation.push('FinalQuiz')
+          onPress={() =>
+            // navigation.push('DynamicTable', {})
+            // navigation.push('FinalQuiz')
             // navigation.push('Desafio', {
-            //   actividad: 'diagramas',
-            //   tipo: 'introductory',
-            //   // tipo: 'interactive',
-            // })
+            navigation.push('CuentoIntroductorio', {
+              actividad: 'diagramas',
+              // tipo: 'introductory',
+              // tipo: 'interactive',
+            })
           }>
           <Text style={styles.subtitle}>Perfil</Text>
         </Button>

@@ -3,7 +3,7 @@ import {View, StyleSheet, StatusBar, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 import FinalQuizQuestion from './FinalQuizQuestion';
 
-const FinalQuiz = () => {
+const FinalQuiz = ({navigation, route}) => {
   const headerTitle = 'Quiz Final';
   const pregunta1 = '1. Seleccione la opción correcta';
   const pregunta2 = '2. Seleccione la opción correcta';
@@ -21,6 +21,9 @@ const FinalQuiz = () => {
   const [topAnswer, setTopAnswer] = useState(0);
   const [bottomAnswer, setBottomAnswer] = useState(0);
 
+  function Terminar() {
+    navigation?.push('MainMap');
+  }
   return (
     <View style={styles.verticalContainer}>
       <StatusBar hidden={true} />
@@ -60,7 +63,7 @@ const FinalQuiz = () => {
               mode="contained"
               color="#A1C96A"
               style={styles.buttonStyle}
-              onPress={() => {}}>
+              onPress={() => Terminar()}>
               <Text style={styles.textStyle}>Terminar</Text>
             </Button>
             <View style={styles.pad} />

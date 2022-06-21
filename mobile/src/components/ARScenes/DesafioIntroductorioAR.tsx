@@ -64,7 +64,7 @@ const DesafioIntroductorioSceneAR = (
   // }
 
   function onInitialized(state: ViroTrackingStateConstants, reason: any) {
-    console.log('state, reason, tracking:', state, reason, tracking);
+    // console.log('state, reason, tracking:', state, reason, tracking);
     if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
       setTracking(true); // permite bindear cosas para que solo aparezcan cuando el tracking está activo
     }

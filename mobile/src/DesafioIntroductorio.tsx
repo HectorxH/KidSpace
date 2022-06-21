@@ -10,6 +10,7 @@ import Questions from './components/IntroductoryChallenge/Questions';
 import ToggleButton from './components/IntroductoryChallenge/QuestionsButton';
 import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
+import DynamicTable from './components/Tables/DynamicTable';
 import {DesafioProps} from './types/navigation';
 import {DesafioEstado} from './types/activity';
 
@@ -41,11 +42,19 @@ const Desafio = ({navigation, route}: DesafioProps) => {
       />
       {toggleQuestions === true ? (
         <View style={styles.overlay}>
-          <Questions
-            quiz={Activities[actividad][tipo].quiz}
-            toggleQuestions={toggleQuestions}
-            answersCount={[answersCount, setAnswersCount]}
-          />
+          {tipo === 'introductory' ? (
+            <View style={styles.questions}>
+              <Questions
+                quiz={Activities[actividad][tipo].quiz}
+                toggleQuestions={toggleQuestions}
+                answersCount={[answersCount, setAnswersCount]}
+              />
+            </View>
+          ) : (
+            <View style={styles.table}>
+              <DynamicTable answersCount={[answersCount, setAnswersCount]} />
+            </View>
+          )}
         </View>
       ) : (
         <View />
@@ -60,6 +69,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
         <ToggleButton
           toggleQuestions={[toggleQuestions, setToggleQuestions]}
           settings={Activities[actividad][tipo].settings[0]}
+          answersCounts={[answersCount, setAnswersCount]}
         />
       </View>
       <View style={toggleQuestions === true ? styles.overlay : styles.off}>
@@ -68,6 +78,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           answersNum={Activities[actividad][tipo].quiz.length}
           settings={Activities[actividad][tipo].settings[1]}
           navigation={navigation}
+          tipo={tipo}
         />
       </View>
       <View style={estado === 'story' ? styles.overlay : styles.off}>
@@ -113,10 +124,17 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     position: 'absolute',
+    // backgroundColor: '#000000aa',
+  },
+  questions: {
+    flex: 1,
     justifyContent: 'center',
     alignSelf: 'flex-end',
     alignItems: 'center',
     // backgroundColor: '#000000aa',
+  },
+  table: {
+    flex: 1,
   },
   off: {
     flex: 0,

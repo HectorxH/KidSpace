@@ -10,6 +10,7 @@ interface ContinueButtonProps {
   answersNum: number;
   navigation: NativeStackNavigationProp<RootStackParamList, 'Desafio'>;
   settings: ButtonSetting;
+  tipo: string;
 }
 
 const ContinueButton = (props: ContinueButtonProps) => {
@@ -17,14 +18,22 @@ const ContinueButton = (props: ContinueButtonProps) => {
   const answersNum = props.answersNum;
   const navigation = props.navigation;
   const settings = props.settings;
+  const tipo = props.tipo;
   const contentStyle = StyleSheet.create({
     iconContentStyle: {flexDirection: settings.buttonIconPosNormal},
   });
 
   function Continue() {
-    navigation.push('CuentoInteractivo', {
-      actividad: 'diagramas',
-    });
+    if (answersCount >= answersNum) {
+      if (tipo === 'introductory') {
+        navigation.push('CuentoInteractivo', {
+          actividad: 'diagramas',
+        });
+      }
+      if (tipo === 'interactive') {
+        navigation.push('FinalQuiz');
+      }
+    }
   }
   return (
     <View style={styles.horizontalContainer}>
@@ -42,6 +51,7 @@ const ContinueButton = (props: ContinueButtonProps) => {
                 ? settings.buttonColorNormal
                 : settings.buttonColorAlt
             }
+            // disabled={answersCount < answersNum ? true : false}
             style={styles.buttonStyle}
             onPress={() => Continue()}>
             <Text style={styles.textStyle}>{settings.buttonTextNormal}</Text>
