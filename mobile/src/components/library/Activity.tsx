@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {images} from '../../android/app/src/main/assets/imgs/handler/images';
+import {images} from '../../assets/imgs/handler/images';
 
 const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
   const {act} = route.params;

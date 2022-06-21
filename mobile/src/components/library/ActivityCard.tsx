@@ -2,7 +2,7 @@ import * as React from 'react';
 import {StyleSheet} from 'react-native';
 import {Card} from 'react-native-paper';
 import {Dimensions} from 'react-native';
-import {images} from '../../android/app/src/main/assets/imgs/handler/images';
+import {images} from '../../assets/imgs/handler/images';
 
 const windowWidth = Dimensions.get('window').width;
 
