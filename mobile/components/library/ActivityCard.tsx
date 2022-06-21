@@ -27,7 +27,7 @@ const ActivityCard = ({
 
 const styles = StyleSheet.create({
   card: {
-    margin: 10,
+    margin: Math.round(windowWidth * 0.01),
     flexDirection: 'row',
     backgroundColor: '#5C9DEC',
     width: windowWidth / 3,
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
   title: {
     flex: 1,
     textAlign: 'center',
-    fontSize: 14,
+    fontSize: Math.round(windowWidth * 0.02),
+    fontFamily: 'Poppins-Regular',
     color: 'white',
   },
 });

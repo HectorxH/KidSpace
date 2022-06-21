@@ -7,7 +7,7 @@ export default [
     nunidad: '1',
     nactividad: '1',
     titulo: 'Actividad 1: Diagramas',
-    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
+    descripcion: 'En esta actividad, vas a conocer cómo Diego, un florista, analiza las ventas en su tienda. Aprenderás a organizar y comunicar los resultados estadísticos para distintos propósitos, mediante el análisis  de los diagramas y la elaboración de estos, usando las hojas de cálculo para crear tablas de doble entrada y para diseñar gráficos de barra simple, gráficos de línea y gráficos circulares. ',
     portada: portadaAct1,
     cuento1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
     cuento2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
