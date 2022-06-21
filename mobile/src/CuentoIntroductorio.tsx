@@ -6,8 +6,9 @@ import BubbleSide from './components/IntroductoryStory/BubblesSide';
 import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
+import {CuentoIntroductorioProps} from './types/navigation';
 
-const CuentoIntroductorio = ({navigation, route}) => {
+const CuentoIntroductorio = ({navigation, route}: CuentoIntroductorioProps) => {
   const actividad = route.params.actividad;
   const story = Stories[actividad].introductory;
   const [pageNumber, setPageNumber] = useState(0);

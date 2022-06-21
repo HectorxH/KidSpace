@@ -6,8 +6,8 @@ export type RootStackParamList = {
   Activity: {activity: IActivity};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
-  CuentoInteractivo: {};
-  CuentoIntroductorio: {};
+  CuentoInteractivo: {actividad: 'diagramas'};
+  CuentoIntroductorio: {actividad: 'diagramas'};
   Desafio: {};
 };
 

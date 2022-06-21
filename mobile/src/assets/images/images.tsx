@@ -1,4 +1,10 @@
-const images = {
+import {ImageSourcePropType} from 'react-native';
+
+const images: {
+  [key: string]: {
+    [key: string]: ImageSourcePropType | {[key: string]: ImageSourcePropType};
+  };
+} = {
   character: {
     Diego: {
       happy: require('./character/diego/diego_happy.png'),

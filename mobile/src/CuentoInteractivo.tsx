@@ -6,8 +6,9 @@ import BubbleSide from './components/InteractiveStory/BubbleSide';
 import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
+import {CuentoInteractivoProps} from './types/navigation';
 
-const CuentoInteractivo = ({navigation, route}) => {
+const CuentoInteractivo = ({navigation, route}: CuentoInteractivoProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const story = Stories[actividad].interactive;
