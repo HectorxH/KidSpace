@@ -10,6 +10,9 @@
 
 import React from 'react';
 
+import CuentoIntroductorio from './CuentoIntroductorio';
+import CuentoInteractivo from './CuentoInteractivo';
+import Desafio from './DesafioIntroductorio';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
@@ -41,6 +44,21 @@ const App = () => {
         <Stack.Screen
           name="AvailableActivities"
           component={AvailableActivities}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CuentoInteractivo"
+          component={CuentoInteractivo}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="CuentoIntroductorio"
+          component={CuentoIntroductorio}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Desafio"
+          component={Desafio}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

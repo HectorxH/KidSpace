@@ -7,6 +7,7 @@ const StoryNavigation = (props) => {
   const [, setCanMove] = props.canMove;
   const estado = props.estado;
   const setEstado = props.setEstado;
+  const navigation = props.navigation;
 
   function nextPageNumber() {
     if (pageNumber !== storyLength - 1) {
@@ -16,6 +17,11 @@ const StoryNavigation = (props) => {
       if (estado === 'story') {
         setEstado('desafio');
         setPageNumber(0);
+      } else {
+        navigation.push('Desafio', {
+          actividad: 'diagramas',
+          tipo: 'introductory',
+        });
       }
     }
   }

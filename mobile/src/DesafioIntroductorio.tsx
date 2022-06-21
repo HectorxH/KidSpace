@@ -11,7 +11,8 @@ import ToggleButton from './components/IntroductoryChallenge/QuestionsButton';
 import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
 
-const Desafio = (props) => {
+const Desafio = ({navigation, route}) => {
+  const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
   const [models, setModels] = useState([]);
@@ -63,6 +64,7 @@ const Desafio = (props) => {
         <ContinueButton
           answersCount={answersCount}
           answersNum={Activities[actividad][tipo].quiz.length}
+          navigation={navigation}
         />
       </View>
       <View style={estado === 'story' ? styles.overlay : styles.off}>

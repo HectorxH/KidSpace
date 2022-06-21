@@ -7,7 +7,8 @@ import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
 
-const CuentoInteractivo = (props: {actividad: any}) => {
+const CuentoInteractivo = ({navigation, route}) => {
+  const props = route.params;
   const actividad = props.actividad;
   const story = Stories[actividad].interactive;
   const [pageNumber, setPageNumber] = useState(0);

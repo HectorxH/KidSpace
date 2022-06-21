@@ -36,7 +36,12 @@ const Actitity = ({navigation, route}: {navigation: any; route: any}) => {
                 icon={() => <Icon name="star" size={20} color="#FFEA02" />}
                 color="#FF8A01"
                 mode="contained"
-                onPress={() => console.log('Pressed')}>
+                onPress={() =>
+                  navigation.push('CuentoIntroductorio', {
+                    actividad: 'diagramas',
+                  })
+                }>
+                {/* onPress={() => console.log('Pressed')}> */}
                 <Text style={styles.subtitle}>¡Iniciar!</Text>
               </Button>
             </View>
