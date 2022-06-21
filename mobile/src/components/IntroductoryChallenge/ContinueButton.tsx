@@ -5,8 +5,13 @@ import {Button} from 'react-native-paper';
 const ContinueButton = (props) => {
   const answersCount = props.answersCount;
   const answersNum = props.answersNum;
+  const navigation = props.navigation;
 
-  function Continue() {}
+  function Continue() {
+    navigation.push('CuentoInteractivo', {
+      actividad: 'diagramas',
+    });
+  }
   return (
     <View style={styles.horizontalContainer}>
       <View style={styles.leftPad} />

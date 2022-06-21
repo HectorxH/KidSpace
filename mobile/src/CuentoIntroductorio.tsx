@@ -7,8 +7,8 @@ import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
 
-const CuentoIntroductorio = (props: {actividad: any}) => {
-  const actividad = props.actividad;
+const CuentoIntroductorio = ({navigation, route}) => {
+  const actividad = route.params.actividad;
   const story = Stories[actividad].introductory;
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
@@ -43,6 +43,7 @@ const CuentoIntroductorio = (props: {actividad: any}) => {
         storyLength={story.length}
         pageNumber={[pageNumber, setPageNumber]}
         canMove={[canMove, setCanMove]}
+        navigation={navigation}
       />
     </View>
   );
