@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Text, TouchableWithoutFeedback} from 'react-native';
 import Answers from './Answers';
 
-const Questions = (props) => {
+const Questions = props => {
   const quiz = props.quiz;
   const q1 = quiz[0].question.split('*');
   const q2 = quiz[1].question.split('*');
@@ -44,6 +44,7 @@ const Questions = (props) => {
                 setAnswersCount={setAnswersCount}
                 setAnswer={setLeftAnswer}
                 answer={leftAnswer}
+                orientation="column"
               />
             </View>
           ) : (
@@ -77,6 +78,7 @@ const Questions = (props) => {
               setAnswersCount={setAnswersCount}
               setAnswer={setRightAnswer}
               answer={rightAnswer}
+              orientation="column"
             />
           </View>
         </View>

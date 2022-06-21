@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 
-const Answer = props => {
+const Answers = props => {
   const messageAnswers = props.messageAnswers;
   const rightAnswer = props.rightAnswer;
   const answersCount = props.answersCount;
@@ -60,58 +60,47 @@ const Answer = props => {
   }
 
   return (
-    <View style={styles.verticalContainer}>
-      <View style={styles.topPadding} />
-      <View style={styles.answerBox}>
-        {messageAnswers.map((answer: any, index: number) => {
-          return (
+    <View style={styles.horizontalContainer}>
+      <View style={styles.pad} />
+      {messageAnswers.map((answer: any, index: number) => {
+        return (
+          <View
+            style={styles.container}
+            key={answer + (index + 1000).toString()}>
+            {/* <View style={styles.pad} key={answer + (index + 2000).toString()} /> */}
             <View
-              style={styles.container}
-              key={answer + (index + 1000).toString()}>
-              <View
-                style={styles.padding}
-                key={answer + (index + 2000).toString()}
-              />
-              <View
-                style={styles.answerButtonBox}
-                key={answer + (index + 3000).toString()}>
-                <Button
-                  key={answer}
-                  mode="contained"
-                  color={
-                    answerStyles[index] === styles.rightAnswerButton
-                      ? '#ccefd2'
-                      : answerStyles[index] === styles.wrongAnswerButton
-                      ? '#efccd2'
-                      : 'white'
-                  }
-                  style={answerStyles[index]}
-                  onPress={() => checkAnswer(answer, index)}>
-                  <Text key={index + 4000} style={answerTextStyles[index]}>
-                    {answer}
-                  </Text>
-                </Button>
-              </View>
+              style={styles.answerButtonBox}
+              key={answer + (index + 3000).toString()}>
+              <Button
+                key={answer}
+                mode="contained"
+                color={
+                  answerStyles[index] === styles.rightAnswerButton
+                    ? '#ccefd2'
+                    : answerStyles[index] === styles.wrongAnswerButton
+                    ? '#efccd2'
+                    : 'white'
+                }
+                style={answerStyles[index]}
+                onPress={() => checkAnswer(answer, index)}>
+                <Text key={index + 4000} style={answerTextStyles[index]}>
+                  {answer}
+                </Text>
+              </Button>
             </View>
-          );
-        })}
-        <View style={styles.padding} />
-      </View>
-      {messageAnswers !== 'none' ? <View /> : <View />}
-      <View style={styles.bottomPadding} />
+          </View>
+        );
+      })}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  verticalContainer: {
+  horizontalContainer: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
   },
-  topPadding: {
-    flex: 1,
-  },
-  bottomPadding: {
+  pad: {
     flex: 1,
   },
   answerBox: {
@@ -121,10 +110,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'blue',
   },
   container: {
-    padding: 4,
-  },
-  padding: {
-    flex: 1,
+    // padding: 4,
   },
 
   answerButtonBox: {
@@ -172,4 +158,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Answer;
+export default Answers;

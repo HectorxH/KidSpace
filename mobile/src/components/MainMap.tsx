@@ -70,7 +70,8 @@ const MainMap = ({navigation}: MainMapProps) => {
             () => navigation.push('FinalQuiz', {})
             // navigation.push('Desafio', {
             //   actividad: 'diagramas',
-            //   tipo: 'interactive',
+            //   tipo: 'introductory',
+            //   // tipo: 'interactive',
             // })
           }>
           <Text style={styles.subtitle}>Perfil</Text>
