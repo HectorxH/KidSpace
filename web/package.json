@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@mui/types": "^7.1.4",
+    "@types/axios": "^0.14.0",
     "@types/lodash": "^4.14.182",
     "@types/react-helmet": "^6.1.5",
     "@types/react-router-dom": "^5.3.3",
