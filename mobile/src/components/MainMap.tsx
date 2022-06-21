@@ -4,7 +4,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Pusher from 'pusher-js/react-native';
-import {IActivity} from '../types/message';
+import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 
 const windowHeight = Dimensions.get('window').height;
