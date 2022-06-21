@@ -1,90 +1,57 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, StatusBar, Text} from 'react-native';
-import {Button} from 'react-native-paper';
+import React from 'react';
+import {View, StyleSheet, Text} from 'react-native';
+import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 import Answers from './FinalQuizAnswers';
 
-const FinalQuizQuestion = props => {
+interface FinalQuizQuestionProps {
+  pregunta: string;
+  enunciado: string;
+  alternativas: string[];
+  answersCount: [number, ReactStateSetter<number>];
+  rightAnswer: string;
+  answer: [number, ReactStateSetter<number>];
+}
+
+const FinalQuizQuestion = (props: FinalQuizQuestionProps) => {
   const pregunta = props.pregunta;
   const enunciado = props.enunciado;
   const alternativas = props.alternativas;
-  const answersCount = props.answersCount;
-  const setAnswersCount = props.setAnswersCount;
+  const [answersCount, setAnswersCount] = props.answersCount;
   const rightAnswer = props.rightAnswer;
-  const setAnswer = props.setAnswer;
-  const answer = props.answer;
+  const [answer, setAnswer] = props.answer;
 
   return (
     <View style={styles.body}>
-      {/* <View style={styles.pad} /> */}
-      <View style={styles.pregunta}>
-        <Text style={styles.preguntaText}>{pregunta}</Text>
-      </View>
-      <View style={styles.descripcion}>
-        <Text style={styles.descripcionText}>{enunciado}</Text>
-      </View>
-      <View style={styles.alternativas}>
-        <Answers
-          messageAnswers={alternativas}
-          rightAnswer={rightAnswer}
-          answersCount={answersCount}
-          setAnswersCount={setAnswersCount}
-          setAnswer={setAnswer}
-          answer={answer}
-          orientation="row"
-        />
-      </View>
-      <View style={styles.pad} />
+      <Text style={styles.preguntaText}>{pregunta}</Text>
+      <Text style={styles.descripcionText}>{enunciado}</Text>
+      <Answers
+        messageAnswers={alternativas}
+        rightAnswer={rightAnswer}
+        answersCount={[answersCount, setAnswersCount]}
+        answer={[answer, setAnswer]}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   body: {
-    flex: 1,
     flexDirection: 'column',
-  },
-  pad: {
-    flex: 1,
-  },
-  pregunta: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  descripcion: {
-    flex: 2,
-    justifyContent: 'center',
-  },
-  alternativas: {
-    flex: 2,
-    justifyContent: 'center',
-  },
-  buttonContainer: {
-    flex: 2,
+    justifyContent: 'space-between',
   },
   preguntaText: {
     color: '#063D69',
-    fontSize: 20,
+    fontSize: RSize(0.02),
     fontWeight: 'bold',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
     justifyContent: 'center',
   },
   descripcionText: {
     color: '#063D69',
-    fontSize: 24,
-    fontFamily: 'Poppins',
+    fontSize: RSize(0.02),
+    fontFamily: 'Poppins-Regular',
     justifyContent: 'center',
-  },
-  answerButton: {
-    borderRadius: 18,
-    borderWidth: 3,
-    justifyContent: 'center',
-    // height: '100%',
-    borderColor: '#5C9DEC',
-  },
-  answerText: {
-    height: '100%',
-    color: '#063D69',
-    textTransform: 'none',
   },
 });
 

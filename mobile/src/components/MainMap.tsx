@@ -1,14 +1,12 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
-
-const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').height;
+import {RSize} from '../utils/responsive';
 
 const User = {
   key: 1,
@@ -60,11 +58,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           icon={() => (
             <Icon
               name="account"
-              size={Math.round(windowWidth * 0.11)}
+              size={RSize(0.11, 'h')}
               color="#FFFFFF"
               style={{
-                width: Math.round(windowWidth * 0.15),
-                height: Math.round(windowHeight * 0.1),
+                width: RSize(0.15, 'h'),
+                height: RSize(0.1, 'h'),
               }}
             />
           )}
@@ -86,11 +84,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           icon={() => (
             <Icon
               name="store"
-              size={Math.round(windowWidth * 0.11)}
+              size={RSize(0.11, 'h')}
               color="#FFFFFF"
               style={{
-                width: Math.round(windowWidth * 0.15),
-                height: Math.round(windowHeight * 0.1),
+                width: RSize(0.15, 'h'),
+                height: RSize(0.1, 'h'),
               }}
             />
           )}
@@ -110,11 +108,11 @@ const MainMap = ({navigation}: MainMapProps) => {
             icon={() => (
               <Icon
                 name="target"
-                size={Math.round(windowWidth * 0.11)}
+                size={RSize(0.11, 'h')}
                 color="#FFFFFF"
                 style={{
-                  width: Math.round(windowWidth * 0.15),
-                  height: Math.round(windowHeight * 0.1),
+                  width: RSize(0.15, 'h'),
+                  height: RSize(0.1, 'h'),
                 }}
               />
             )}
@@ -134,7 +132,7 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: Math.round(windowWidth * 0.03),
+    margin: RSize(0.03, 'h'),
   },
   containerButtons: {
     flex: 1,
@@ -142,15 +140,15 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   button: {
-    height: Math.round(windowHeight * 0.2),
-    width: Math.round(windowWidth * 0.27),
-    marginLeft: Math.round(windowWidth * 0.02),
+    height: RSize(0.2, 'h'),
+    width: RSize(0.27, 'h'),
+    marginLeft: RSize(0.02, 'h'),
   },
   button3: {
-    height: Math.round(windowHeight * 0.2),
-    width: Math.round(windowWidth * 0.42),
+    height: RSize(0.2, 'h'),
+    width: RSize(0.42, 'h'),
     position: 'absolute',
-    right: Math.round(windowWidth * 0.01),
+    right: RSize(0.01, 'h'),
     justifyContent: 'center',
     elevation: 4,
   },
@@ -159,13 +157,13 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins-Bold',
-    fontSize: Math.round(windowWidth * 0.05),
+    fontSize: RSize(0.05, 'h'),
     textAlign: 'center',
     color: '#000000',
   },
   subtitle: {
     marginLeft: 10,
-    fontSize: Math.round(windowWidth * 0.04),
+    fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
     color: '#ffffff',
   },
@@ -185,10 +183,10 @@ const styles = StyleSheet.create({
   },
   rightButtonView: {
     flex: 1,
-    height: Math.round(windowHeight * 0.2),
-    width: Math.round(windowWidth * 0.45),
+    height: RSize(0.2, 'h'),
+    width: RSize(0.45, 'h'),
     position: 'absolute',
-    right: Math.round(windowWidth * 0.01),
+    right: RSize(0.01, 'h'),
   },
 });
 

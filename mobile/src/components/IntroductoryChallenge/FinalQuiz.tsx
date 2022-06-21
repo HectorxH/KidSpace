@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, StatusBar, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {RSize} from '../../utils/responsive';
 import FinalQuizQuestion from './FinalQuizQuestion';
 
 const FinalQuiz = () => {
@@ -28,7 +29,6 @@ const FinalQuiz = () => {
         <Text style={styles.headerText}>{headerTitle}</Text>
       </View>
       <View style={styles.horizontalContainer}>
-        <View style={styles.pad} />
         <View style={styles.body}>
           <View style={styles.preguntas}>
             <FinalQuizQuestion
@@ -36,26 +36,19 @@ const FinalQuiz = () => {
               enunciado={enunciado1}
               alternativas={alternativas1}
               rightAnswer={rightAnswer1}
-              answersCount={answersCount}
-              setAnswersCount={setAnswersCount}
-              setAnswer={setTopAnswer}
-              answer={topAnswer}
+              answersCount={[answersCount, setAnswersCount]}
+              answer={[topAnswer, setTopAnswer]}
             />
-          </View>
-          <View style={styles.preguntas}>
             <FinalQuizQuestion
               pregunta={pregunta2}
               enunciado={enunciado2}
               alternativas={alternativas2}
               rightAnswer={rightAnswer2}
-              answersCount={answersCount}
-              setAnswersCount={setAnswersCount}
-              setAnswer={setBottomAnswer}
-              answer={bottomAnswer}
+              answersCount={[answersCount, setAnswersCount]}
+              answer={[bottomAnswer, setBottomAnswer]}
             />
           </View>
           <View style={styles.buttonContainer}>
-            <View style={styles.pad} />
             <Button
               mode="contained"
               color="#A1C96A"
@@ -63,11 +56,8 @@ const FinalQuiz = () => {
               onPress={() => {}}>
               <Text style={styles.textStyle}>Terminar</Text>
             </Button>
-            <View style={styles.pad} />
           </View>
-          <View style={styles.pad} />
         </View>
-        <View style={styles.pad} />
       </View>
     </View>
   );
@@ -75,55 +65,49 @@ const FinalQuiz = () => {
 
 const styles = StyleSheet.create({
   verticalContainer: {
-    flex: 1,
+    height: '100%',
     flexDirection: 'column',
   },
   horizontalContainer: {
-    flex: 7,
+    flex: 1,
     flexDirection: 'row',
+    paddingHorizontal: RSize(0.05),
   },
   header: {
-    flex: 1,
+    padding: RSize(0.002),
     justifyContent: 'center',
     backgroundColor: '#EE93C6',
+    elevation: RSize(0.01),
   },
   body: {
-    flex: 12,
+    width: '100%',
     flexDirection: 'column',
-  },
-  pad: {
-    flex: 1,
+    justifyContent: 'space-evenly',
   },
   headerText: {
-    fontSize: 28,
-    fontFamily: 'Poppins',
-    justifyContent: 'center',
+    fontSize: RSize(0.035),
+    fontFamily: 'Poppins-Bold',
     alignSelf: 'center',
-    fontWeight: 'bold',
     color: 'white',
   },
   preguntas: {
-    flex: 5,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
   },
   buttonContainer: {
-    flex: 2,
+    justifyContent: 'center',
     flexDirection: 'row',
   },
   buttonStyle: {
-    flex: 1,
-    borderRadius: 15,
+    borderRadius: RSize(0.02),
     justifyContent: 'center',
+    paddingHorizontal: RSize(0.04),
   },
   textStyle: {
-    alignSelf: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
-    height: '100%',
+    fontSize: RSize(0.03),
     textTransform: 'none',
     color: 'white',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
   },
 });
 

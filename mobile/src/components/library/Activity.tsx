@@ -1,19 +1,10 @@
 import React from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  Dimensions,
-} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/imgs/handler/images';
 import {ActivityProps} from '../../types/navigation';
-
-const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').width;
+import {RSize} from '../../utils/responsive';
 
 const Actitity = ({navigation, route}: ActivityProps) => {
   const {activity} = route.params;
@@ -45,11 +36,7 @@ const Actitity = ({navigation, route}: ActivityProps) => {
               <Button
                 style={styles.button}
                 icon={() => (
-                  <Icon
-                    name="star"
-                    size={Math.round(windowWidth * 0.04)}
-                    color="#FFEA02"
-                  />
+                  <Icon name="star" size={RSize(0.04)} color="#FFEA02" />
                 )}
                 color="#FF8A01"
                 mode="contained"
@@ -76,50 +63,50 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: Math.round(windowWidth * 0.01),
+    margin: RSize(0.01),
   },
   viewLeft: {
     flex: 1.5,
     backgroundColor: '#F2C045',
-    paddingLeft: Math.round(windowWidth * 0.01),
-    paddingRight: Math.round(windowWidth * 0.01),
+    paddingLeft: RSize(0.01),
+    paddingRight: RSize(0.01),
   },
   viewText: {
     flex: 2,
     justifyContent: 'center',
-    marginLeft: Math.round(windowWidth * 0.02),
-    marginRight: Math.round(windowWidth * 0.02),
+    marginLeft: RSize(0.02),
+    marginRight: RSize(0.02),
   },
   viewButton: {
     alignItems: 'center',
   },
   button: {
-    width: Math.round(windowWidth * 0.18),
+    width: RSize(0.18),
     color: '#000000',
-    marginTop: Math.round(windowHeight * 0.02),
+    marginTop: RSize(0.02, 'h'),
   },
   title: {
-    marginLeft: Math.round(windowWidth * 0.015),
+    marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Bold',
-    fontSize: Math.round(windowWidth * 0.035),
+    fontSize: RSize(0.035),
     textAlign: 'left',
   },
   paragraph: {
-    marginLeft: Math.round(windowWidth * 0.015),
+    marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Regular',
-    fontSize: Math.round(windowWidth * 0.019),
+    fontSize: RSize(0.019),
     textAlign: 'left',
-    marginTop: Math.round(windowHeight * 0.001),
-    marginBottom: Math.round(windowHeight * 0.001),
+    marginTop: RSize(0.001, 'h'),
+    marginBottom: RSize(0.001, 'h'),
   },
   subtitle: {
     textAlign: 'center',
     color: '#ffffff',
-    fontSize: Math.round(windowWidth * 0.02),
+    fontSize: RSize(0.02),
   },
   scrollView: {
-    marginHorizontal: Math.round(windowWidth * 0.01),
-    marginVertical: Math.round(windowWidth * 0.01),
+    marginHorizontal: RSize(0.01),
+    marginVertical: RSize(0.01),
   },
 });
 
