@@ -17,6 +17,7 @@ import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
+import DynamicTable from './components/Tables/DynamicTable';
 import MainMap from './components/MainMap';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -66,6 +67,11 @@ const App = () => {
         <Stack.Screen
           name="FinalQuiz"
           component={FinalQuiz}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DynamicTable"
+          component={DynamicTable}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

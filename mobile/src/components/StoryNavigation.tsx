@@ -31,7 +31,10 @@ const StoryNavigation = (props: StoryNavigationProps) => {
         setPageNumber(0);
       } else {
         if (estado === 'desafio') {
-          navigation?.push('MainMap');
+          navigation?.push('Desafio', {
+            actividad: 'diagramas',
+            tipo: 'interactive',
+          });
         } else {
           navigation?.push('Desafio', {
             actividad: 'diagramas',
