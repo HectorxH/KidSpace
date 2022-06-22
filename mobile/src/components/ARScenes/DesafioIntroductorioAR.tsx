@@ -36,7 +36,7 @@ const DesafioIntroductorioSceneAR = (
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
-  const [tracking, setTracking] = useState(false);
+  const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
     items.map(item => ({
       model: Models[actividad][item.model].model,
@@ -63,7 +63,7 @@ const DesafioIntroductorioSceneAR = (
   //   setTransforms(transform);
   // }
 
-  function onInitialized(state: ViroTrackingStateConstants, reason: any) {
+  function onInitialized(state: ViroTrackingStateConstants) {
     // console.log('state, reason, tracking:', state, reason, tracking);
     if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
       setTracking(true); // permite bindear cosas para que solo aparezcan cuando el tracking está activo
