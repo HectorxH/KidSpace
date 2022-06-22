@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {CharacterPosition} from '../../types/story';
+import {RSize} from '../../utils/responsive';
 
 interface StorySideProps {
   message: string;
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
   storyContainerColumn: {
     flex: 3,
     flexDirection: 'column',
-    // backgroundColor: 'white',
   },
   storyContainerRowRight: {
     flex: 3,
@@ -60,10 +60,11 @@ const styles = StyleSheet.create({
     flex: 6,
     width: '100%',
     backgroundColor: 'white',
-    // alignSelf: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
+    borderRadius: RSize(0.08, 'h'),
     borderWidth: 5,
+    paddingVertical: RSize(0.01, 'h'),
+    paddingHorizontal: RSize(0.02, 'w'),
     borderColor: 'black',
   },
   baseText: {
@@ -71,9 +72,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
-    fontFamily: 'Poppins',
+    fontSize: RSize(0.075, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
   oddText: {
     color: '#5C9DEC',

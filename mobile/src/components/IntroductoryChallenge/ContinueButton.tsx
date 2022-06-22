@@ -4,6 +4,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 import {ButtonSetting} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
+import {RSize} from '../../utils/responsive';
 
 interface ContinueButtonProps {
   answersCount: number;
@@ -86,29 +87,25 @@ const styles = StyleSheet.create({
     flex: 70,
   },
   buttonBox: {
-    flex: 15,
-    borderRadius: 15,
+    flex: 11,
     justifyContent: 'center',
   },
   buttonStyle: {
-    borderRadius: 25,
-    borderWidth: 3,
+    borderRadius: RSize(0.05, 'h'),
     justifyContent: 'center',
   },
   textStyle: {
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 24,
-    height: '100%',
+    fontSize: RSize(0.05, 'h'),
     textTransform: 'none',
     color: 'white',
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
   },
   iconStyle: {
     alignSelf: 'center',
-    fontSize: 24,
+    fontSize: RSize(0.07, 'h'),
     justifyContent: 'center',
     color: 'white',
   },
