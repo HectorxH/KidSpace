@@ -13,12 +13,12 @@ interface ToggleButtonProps {
 
 const ToggleButton = (props: ToggleButtonProps) => {
   const [toggleQuestions, setToggleQuestions] = props.toggleQuestions;
-  const [, setAnswersCount] = props.answersCounts;
+  // const [, setAnswersCount] = props.answersCounts;
   const settings = props.settings;
 
   function toggle() {
     if (toggleQuestions === true) {
-      setAnswersCount(0);
+      // setAnswersCount(0);
       setToggleQuestions(false);
     } else {
       setToggleQuestions(true);

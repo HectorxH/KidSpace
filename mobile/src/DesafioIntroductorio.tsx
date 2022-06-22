@@ -13,6 +13,8 @@ import StoryNavigation from './components/StoryNavigation';
 import DynamicTable from './components/Tables/DynamicTable';
 import {DesafioProps} from './types/navigation';
 import {DesafioEstado, Vec3} from './types/activity';
+import {RSize} from './utils/responsive';
+import CellMenu from './components/Tables/CellMenu';
 
 const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
@@ -27,6 +29,63 @@ const Desafio = ({navigation, route}: DesafioProps) => {
   const [positions, setPositions] = useState<Vec3[]>([]);
 
   let sceneNav = useRef<ViroARSceneNavigator>(null);
+
+  // Desafio introductorio styles
+  // perdon uwu
+  const [leftAnswerStyles, setLeftAnswerStyles] = useState({
+    0: styles.answerButton,
+    1: styles.answerButton,
+    2: styles.answerButton,
+  });
+
+  const [leftAnswerTextStyles, setLeftAnswerTextStyles] = useState({
+    0: styles.answerText,
+    1: styles.answerText,
+    2: styles.answerText,
+  });
+
+  const [rightAnswerStyles, setRightAnswerStyles] = useState({
+    0: styles.answerButton,
+    1: styles.answerButton,
+    2: styles.answerButton,
+  });
+
+  const [rightAnswerTextStyles, setRightAnswerTextStyles] = useState({
+    0: styles.answerText,
+    1: styles.answerText,
+    2: styles.answerText,
+  });
+
+  // Desafío interactivo styles
+  const [isCorrect1, setIsCorrect1] = useState(false);
+  const [isCorrect2, setIsCorrect2] = useState(false);
+  const [isCorrect3, setIsCorrect3] = useState(false);
+  const [value1, setValue1] = useState(null);
+  const [value2, setValue2] = useState(null);
+  const [value3, setValue3] = useState(null);
+  const tableData = [
+    ['Margarita', 'Girasol', 'Iris'],
+    [
+      <CellMenu
+        correct={9}
+        isCorrect={[isCorrect1, setIsCorrect1]}
+        answersCount={[answersCount, setAnswersCount]}
+        value={[value3, setValue3]}
+      />,
+      <CellMenu
+        correct={7}
+        isCorrect={[isCorrect2, setIsCorrect2]}
+        answersCount={[answersCount, setAnswersCount]}
+        value={[value2, setValue2]}
+      />,
+      <CellMenu
+        correct={4}
+        isCorrect={[isCorrect3, setIsCorrect3]}
+        answersCount={[answersCount, setAnswersCount]}
+        value={[value1, setValue1]}
+      />,
+    ],
+  ];
 
   return (
     <View style={styles.container}>
@@ -54,11 +113,27 @@ const Desafio = ({navigation, route}: DesafioProps) => {
                 quiz={Activities[actividad][tipo].quiz}
                 toggleQuestions={toggleQuestions}
                 answersCount={[answersCount, setAnswersCount]}
+                leftAnswerButtonStyles={[leftAnswerStyles, setLeftAnswerStyles]}
+                leftAnswerTextStyles={[
+                  leftAnswerTextStyles,
+                  setLeftAnswerTextStyles,
+                ]}
+                rightAnswerButtonStyles={[
+                  rightAnswerStyles,
+                  setRightAnswerStyles,
+                ]}
+                rightAnswerTextStyles={[
+                  rightAnswerTextStyles,
+                  setRightAnswerTextStyles,
+                ]}
               />
             </View>
           ) : (
             <View style={styles.table}>
-              <DynamicTable answersCount={[answersCount, setAnswersCount]} />
+              <DynamicTable
+                answersCount={[answersCount, setAnswersCount]}
+                tableData={tableData}
+              />
             </View>
           )}
         </View>
@@ -147,6 +222,18 @@ const styles = StyleSheet.create({
   text: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  answerButton: {
+    borderRadius: RSize(0.04, 'h'),
+    borderWidth: 3,
+    justifyContent: 'center',
+    borderColor: '#5C9DEC',
+  },
+  answerText: {
+    color: '#063D69',
+    textTransform: 'none',
+    fontSize: RSize(0.035, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
 });
 
