@@ -22,7 +22,7 @@ const ConclusionStory = ({navigation, route}) => {
 
   const character = {
     name: 'Diego',
-    mood: 'troubled',
+    mood: 'happy',
     grid: [10, 10],
     start: [0, 0],
     end: [4, 10],

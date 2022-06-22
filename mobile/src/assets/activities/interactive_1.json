@@ -51,12 +51,12 @@
       "spotlight": "none"
     },
     {
-      "message": "Diego guarda *cada una de las flores en su propia caja*, que tiene un sticker con la imágen de la flor que está dentro.",
+      "message": "Diego guarda *cada una de las flores en su propia caja*. Cada caja tiene un sticker con la imágen de la flor que está dentro.",
       "messagePosition": "center",
       "spotlight": "inventory"
     },
     {
-      "message": "En el inventario encontrarás las cajas. ¡Colócalas en tu pantalla y *cuenta cuántas cajas de cada tipo hay*!",
+      "message": "En el inventario encontrarás todas las cajas. ¡Colócalas en tu pantalla y *cuenta cuántas cajas de cada tipo hay*!",
       "messagePosition": "center",
       "spotlight": "preguntas"
     },
