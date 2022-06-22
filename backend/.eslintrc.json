@@ -1,4 +1,11 @@
 {
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js",".ts",".d.ts"]
+            }
+        }
+    },
     "env": {
         "es2021": true,
         "node": true
@@ -14,6 +21,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "no-console": "off"
+        "no-console": "off",
+        "import/extensions": "off",
+        "no-underscore-dangle": "off"
     }
 }

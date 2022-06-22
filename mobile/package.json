@@ -1,5 +1,5 @@
 {
-  "name": "kidspace",
+  "name": "mobile",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,24 +10,39 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "^9.0.0",
+    "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.2",
+    "@types/react": "^18.0.12",
+    "@viro-community/react-viro": "^2.23.0",
+    "babel-plugin-optional-require": "^0.3.1",
+    "pusher-js": "^7.1.1-beta",
     "react": "17.0.2",
-    "react-native": "0.68.2"
+    "react-native": "0.65.1",
+    "react-native-element-dropdown": "^2.0.0",
+    "react-native-paper": "^4.12.1",
+    "react-native-responsive-fontsize": "^0.5.1",
+    "react-native-safe-area-context": "^4.3.1",
+    "react-native-screens": "^3.13.1",
+    "react-native-table-component": "https://github.com/slice312/react-native-table-component.git",
+    "react-native-vector-icons": "^9.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
     "@types/jest": "^26.0.23",
-    "@types/react-native": "^0.67.3",
+    "@types/react-native": "^0.67.8",
+    "@types/react-native-table-component": "^1.2.4",
+    "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.17.0",
-    "@typescript-eslint/parser": "^5.17.0",
     "babel-jest": "^26.6.3",
-    "eslint": "^7.32.0",
+    "eslint": "^7.14.0",
     "jest": "^26.6.3",
-    "metro-react-native-babel-preset": "^0.67.0",
+    "metro-react-native-babel-preset": "^0.66.0",
+    "react-native-codegen": "^0.0.7",
     "react-test-renderer": "17.0.2",
-    "typescript": "^4.4.4"
+    "typescript": "^3.8.3"
   },
   "resolutions": {
     "@types/react": "^17"
@@ -41,6 +56,11 @@
       "jsx",
       "json",
       "node"
+    ]
+  },
+  "rnpm": {
+    "assets": [
+      "./android/app/src/main/assets/fonts/"
     ]
   }
 }

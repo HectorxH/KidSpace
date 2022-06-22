@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import './App.css';
+import { Helmet } from 'react-helmet';
+import { CssBaseline } from '@mui/material';
+import Layout from './layout/Layout';
+import NotFoundView from './views/NotFoundView';
+import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
+import UnidadView from './views/UnidadView';
+import DescripcionActividadView from './views/DescipcionActividadView';
+import PanelControlView from './views/PanelControlView';
+import AsignarView from './views/AsignarView';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <>
+    <CssBaseline />
+    <Helmet>
+      <meta name="viewport" content="initial-scale=1, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins"
+      />
+      <title>Kidspace | Aplicacion educativa STEAM</title>
+      <meta name="description" content="Aplicación educativa libre de sesgos de género que, mediante desafíos con Realidad Aumentada e IA, desarrolla habilidades STEAM en niños y niñas, introduciéndolos a distintas profesiones." />
+    </Helmet>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<PanelControlView />} />
+          <Route path="/cursos" />
+          <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
+          <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
+          <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
+          <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
+          <Route path="/estadisticas" />
+          <Route path="/*" element={<NotFoundView />} />
+        </Routes>
+      </Layout>
+    </Router>
+  </>
+);
 
 export default App;

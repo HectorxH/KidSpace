@@ -1,0 +1,87 @@
+{
+  "items":
+  [
+    {
+      "model": "caja_margarita",
+      "type": "GLB",
+      "scale": [0.2, 0.2, 0.2],
+      "rotation": [0, 0, 0]
+    },
+    {
+      "model": "caja_girasol",
+      "type": "GLB",
+      "scale": [0.2, 0.2, 0.2],
+      "rotation": [0, 0, 0]
+    },
+    {
+      "model": "caja_iris",
+      "type": "GLB",
+      "scale": [0.2, 0.2, 0.2],
+      "rotation": [0, 0, 0]
+    }
+  ],
+  "settings": 
+  [
+    {
+      "buttonColorNormal": "#169C34",
+      "buttonColorAlt": "#169C34",
+      "buttonIconNormal": "table",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row",
+      "buttonIconPosAlt": "row",
+      "buttonTextNormal": "Hoja de cálculo",
+      "buttonTextAlt": "Volver"
+    },
+    {  
+      "buttonColorNormal": "#BBBBBB",
+      "buttonColorAlt": "#A1C96A",
+      "buttonIconNormal": "arrow-right",
+      "buttonIconAlt": "cube",
+      "buttonIconPosNormal": "row-reverse",
+      "buttonIconPosAlt": "row-reverse",
+      "buttonTextNormal": "Avanzar",
+      "buttonTextAlt": "Avanzar"
+    }
+  ],
+  "story":
+  [
+    {
+      "message": "En la bodega de la tienda de Diego queda un *total de 20 flores* de distintos tipos: *margaritas, girasoles e iris*. ",
+      "messagePosition": "center",
+      "spotlight": "none"
+    },
+    {
+      "message": "Diego guarda *cada una de las flores en su propia caja*. Cada caja tiene un sticker con la imágen de la flor que está dentro.",
+      "messagePosition": "center",
+      "spotlight": "inventory"
+    },
+    {
+      "message": "En el inventario encontrarás todas las cajas. ¡Colócalas en tu pantalla y *cuenta cuántas cajas de cada tipo hay*!",
+      "messagePosition": "center",
+      "spotlight": "preguntas"
+    },
+    {
+      "message": "Rellena la tabla de Excel sobre las flores, tocando el botón en la *esquina superior izquierda* de la pantalla.",
+      "messagePosition": "center",
+      "spotlight": "preguntas"
+    }
+  ],
+  "quiz":
+  [
+    {
+      "question": "¿Cuántas margaritas vendió Diego el día sábado?",
+      "answers": ["25", "5", "35"],
+      "rightAnswer": "25"
+    },
+    {
+      "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
+      "answers": ["Margaritas", "Ninguna", "Girasoles"],
+      "rightAnswer": "Girasoles"
+    },
+    {
+      "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
+      "answers": ["Margaritas", "Ninguna", "Girasoles"],
+      "rightAnswer": "Girasoles"
+    }
+  ]
+}

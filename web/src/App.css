@@ -1,5 +1,15 @@
+.MuiCard-root{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flexGrid{
+  overflow-x: auto;
+}
+
 .App {
-  text-align: center;
+  text-align: auto;
 }
 
 .App-logo {
