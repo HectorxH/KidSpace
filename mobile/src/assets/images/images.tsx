@@ -7,7 +7,7 @@ const images: {
   icons: {
     [model: string]: {
       circular?: ImageSourcePropType;
-      square?: ImageSourcePropType;
+      square: ImageSourcePropType;
     };
   };
 } = {

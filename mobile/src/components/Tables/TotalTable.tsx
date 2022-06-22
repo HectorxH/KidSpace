@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {
   Table,
   TableWrapper,
@@ -8,11 +8,11 @@ import {
   Col,
   Cols,
 } from 'react-native-table-component';
-import {Dimensions} from 'react-native';
+import {RSize} from '../../utils/responsive';
 
-const dim = Dimensions.get('window');
-const width = dim.width;
-const height = dim.height;
+const cellHeight = RSize(1 / 8, 'h');
+const cellWidth = RSize(1 / 9, 'w');
+const headerHeight = RSize(1 / 10, 'h');
 
 const TotalTable = () => {
   const tableTitle = ['1', '2', '3', '4', '5'];
@@ -27,13 +27,19 @@ const TotalTable = () => {
         style={{flexDirection: 'row'}}
         borderStyle={{borderWidth: 4, borderColor: '#169C34'}}>
         {/* Left Wrapper */}
-        <TableWrapper style={{width: width / 9}}>
+        <TableWrapper style={{width: cellWidth}}>
           <Cell data="" style={styles.singleHead} />
           <TableWrapper style={{flexDirection: 'row'}}>
             <Col
               data={tableTitle}
               style={styles.outerTitle}
-              heightArr={[height / 10, height / 8, height / 8, height / 8, height / 8]}
+              heightArr={[
+                headerHeight,
+                cellHeight,
+                cellHeight,
+                cellHeight,
+                cellHeight,
+              ]}
               textStyle={styles.numberText}
             />
           </TableWrapper>
@@ -53,7 +59,7 @@ const TotalTable = () => {
           />
           <Cols
             data={tableData}
-            heightArr={[height / 8, height / 8, height / 8, height / 8]}
+            heightArr={[cellHeight, cellHeight, cellHeight, cellHeight]}
             textStyle={styles.dataText}
           />
         </TableWrapper>
@@ -65,13 +71,13 @@ const TotalTable = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: height / 8,
-    marginHorizontal: width / 4,
+    marginVertical: RSize(0.125, 'h'),
+    marginHorizontal: RSize(0.25, 'w'),
     backgroundColor: 'white',
   },
   singleHead: {
-    width: width / 9,
-    height: height / 10,
+    width: cellWidth,
+    height: headerHeight,
     backgroundColor: '#F1F3F8',
   },
   innerTitle: {flex: 1, backgroundColor: '#A1C96A'},

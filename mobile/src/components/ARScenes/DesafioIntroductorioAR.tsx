@@ -18,6 +18,7 @@ interface DesafioIntroductorioSceneARProps {
       models: number[];
       actividad: string;
       items: IItem[];
+      positions: Vec3[];
     };
   };
 }
@@ -28,7 +29,7 @@ interface ITransform {
   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
   scale: Vec3;
   rotation: Vec3;
-  position: Vec3;
+  position?: Vec3;
 }
 
 const DesafioIntroductorioSceneAR = (
@@ -37,7 +38,9 @@ const DesafioIntroductorioSceneAR = (
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
-  const [tracking, setTracking] = useState(false);
+  const positions = props.sceneNavigator.viroAppProps.positions;
+
+  const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
     items.map(item => ({
       model: Models[actividad][item.model].model,
@@ -45,9 +48,9 @@ const DesafioIntroductorioSceneAR = (
       type: item.type,
       scale: item.scale,
       rotation: item.rotation,
-      position: [0, 0, -1],
     })),
   );
+
   function updatePosition(index: number, position: Vec3) {
     let transform = [...transforms];
     transform[index].position = position;
@@ -87,13 +90,12 @@ const DesafioIntroductorioSceneAR = (
     }
   }
 
-  function onInitialized(state: ViroTrackingStateConstants, reason: any) {
+  function onInitialized(state: ViroTrackingStateConstants) {
     // console.log('state, reason, tracking:', state, reason, tracking);
     if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
       setTracking(true); // permite bindear cosas para que solo aparezcan cuando el tracking está activo
     }
   }
-
   return (
     <ViroARScene onTrackingUpdated={onInitialized}>
       <ViroDirectionalLight
@@ -108,7 +110,7 @@ const DesafioIntroductorioSceneAR = (
             key={actividad + '_3dobj_' + index.toString()}
             source={transforms[item].model as ImageSourcePropType}
             resources={transforms[item].resources as ImageSourcePropType[]}
-            position={transforms[item].position}
+            position={positions[index]}
             scale={transforms[item].scale}
             rotation={transforms[item].rotation}
             type={transforms[item].type}

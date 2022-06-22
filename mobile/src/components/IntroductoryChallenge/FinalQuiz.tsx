@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, StatusBar, Text} from 'react-native';
 import {Button} from 'react-native-paper';
+import {FinalQuizProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 import FinalQuizQuestion from './FinalQuizQuestion';
 
-const FinalQuiz = ({navigation, route}) => {
+const FinalQuiz = ({navigation}: FinalQuizProps) => {
   const headerTitle = 'Quiz Final';
   const pregunta1 = '1. Seleccione la opción correcta';
   const pregunta2 = '2. Seleccione la opción correcta';
@@ -77,10 +78,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: RSize(0.05),
   },
   header: {
-    padding: RSize(0.002),
+    paddingVertical: RSize(0.01, 'h'),
     justifyContent: 'center',
     backgroundColor: '#EE93C6',
-    elevation: RSize(0.01),
+    elevation: 10,
   },
   body: {
     width: '100%',
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   headerText: {
-    fontSize: RSize(0.035),
+    fontSize: RSize(0.06, 'h'),
     fontFamily: 'Poppins-Bold',
     alignSelf: 'center',
     color: 'white',
@@ -102,12 +103,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   buttonStyle: {
-    borderRadius: RSize(0.02),
+    borderRadius: RSize(0.04, 'h'),
     justifyContent: 'center',
     paddingHorizontal: RSize(0.04),
   },
   textStyle: {
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.046, 'h'),
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',

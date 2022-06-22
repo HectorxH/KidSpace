@@ -13,6 +13,7 @@ export type RootStackParamList = {
   CuentoIntroductorio: {actividad: actividadNombre};
   Desafio: {actividad: actividadNombre; tipo: desafioTipo};
   FinalQuiz: undefined;
+  DynamicTable: undefined;
 };
 
 export type MainMapProps = NativeStackScreenProps<
@@ -46,4 +47,8 @@ export type FinalQuizProps = NativeStackScreenProps<
 export type DesafioProps = NativeStackScreenProps<
   RootStackParamList,
   'Desafio'
+>;
+export type DynamicTableProps = NativeStackScreenProps<
+  RootStackParamList,
+  'DynamicTable'
 >;

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
 interface MessageBubbleProps {
   messageAnswers: [string, string, string];
@@ -77,9 +78,9 @@ const MessageBubble = (props: MessageBubbleProps) => {
                     mode="contained"
                     color={
                       style === styles.rightAnswerButton
-                        ? '#ccefd2'
+                        ? '#A1C96A'
                         : style === styles.wrongAnswerButton
-                        ? '#efccd2'
+                        ? '#F96A61'
                         : 'white'
                     }
                     style={style}
@@ -131,44 +132,36 @@ const styles = StyleSheet.create({
     flex: 3,
   },
   answerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
     borderColor: '#5C9DEC',
   },
   answerText: {
-    height: '100%',
     color: '#063D69',
-    // fontSize: 15,
     textTransform: 'none',
+    fontSize: RSize(0.035, 'h'),
   },
   wrongAnswerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
-    borderColor: '#b00020',
-    color: '#efccd2',
+    borderColor: '#5C9DEC',
   },
   wrongAnswerText: {
-    height: '100%',
-    color: '#b00020',
-    // fontSize: 15,
+    color: '#ffffff',
+    fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
   },
   rightAnswerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
-    borderColor: '#00b020',
-    color: '#ccefd2',
+    borderColor: '#5C9DEC',
   },
   rightAnswerText: {
-    height: '100%',
-    color: '#00b020',
-    // fontSize: 15,
+    color: '#ffffff',
+    fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
   },
 });

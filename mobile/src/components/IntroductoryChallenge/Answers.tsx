@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
 interface AnswerProps {
   messageAnswers: [string, string, string];
@@ -28,7 +29,7 @@ const Answer = (props: AnswerProps) => {
     2: styles.answerText,
   });
 
-  function checkAnswer(answer: any, index: number) {
+  function checkAnswer(answer: string, index: 0 | 1 | 2) {
     if (answer === rightAnswer) {
       setAnswerStyles({
         0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
@@ -49,7 +50,7 @@ const Answer = (props: AnswerProps) => {
     updateAnswerText(answer, index);
   }
 
-  function updateAnswerText(answer: any, index: number) {
+  function updateAnswerText(answer: string, index: 0 | 1 | 2) {
     if (answer === rightAnswer) {
       setAnswerTextStyles({
         0: index === 0 ? styles.rightAnswerText : answerTextStyles[0],
@@ -87,13 +88,13 @@ const Answer = (props: AnswerProps) => {
                   mode="contained"
                   color={
                     style === styles.rightAnswerButton
-                      ? '#ccefd2'
+                      ? '#A1C96A'
                       : style === styles.wrongAnswerButton
-                      ? '#efccd2'
+                      ? '#F96A61'
                       : 'white'
                   }
                   style={style}
-                  onPress={() => checkAnswer(answer, index)}>
+                  onPress={() => checkAnswer(answer, index as 0 | 1 | 2)}>
                   <Text
                     key={index + 4000}
                     style={answerTextStyles[index as 0 | 1 | 2]}>
@@ -127,7 +128,6 @@ const styles = StyleSheet.create({
     flex: 20,
     flexDirection: 'column',
     justifyContent: 'center',
-    // backgroundColor: 'blue',
   },
   container: {
     padding: 4,
@@ -140,44 +140,40 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   answerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
     borderColor: '#5C9DEC',
   },
   wrongAnswerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
-    borderColor: '#b00020',
-    color: '#efccd2',
+    borderColor: '#5C9DEC',
   },
   rightAnswerButton: {
-    borderRadius: 18,
+    borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
-    // height: '100%',
-    borderColor: '#00b020',
-    color: '#ccefd2',
+    borderColor: '#5C9DEC',
   },
   answerText: {
-    height: '100%',
     color: '#063D69',
     textTransform: 'none',
+    fontSize: RSize(0.035, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
   wrongAnswerText: {
-    height: '100%',
-    color: '#b00020',
-    // fontSize: 15,
+    color: '#ffffff',
+    fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
   rightAnswerText: {
-    height: '100%',
-    color: '#00b020',
-    // fontSize: 15,
+    color: '#ffffff',
+    fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
 });
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {IPregunta} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 import Answers from './Answers';
 
 interface QuestionsProps {
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
   },
   questionBox: {
     flex: 28,
-    borderRadius: 15,
+    borderRadius: RSize(0.08, 'h'),
     backgroundColor: 'white',
   },
   questionArea: {
@@ -137,9 +138,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
-    fontFamily: 'Poppins',
+    fontSize: RSize(0.05, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
   oddText: {
     color: '#5C9DEC',

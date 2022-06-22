@@ -1773,6 +1773,15 @@
   "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
   "version" "15.7.5"
 
+"@types/react-native-table-component@^1.2.4":
+  "integrity" "sha512-JxTc3HXkBPxY/aFJpb4XFot+CM8ismemFCcPy7GlguX9C7Xc+kCmVOmFmA/o1jX2BNPuM45OS264QL6BMlPa6Q=="
+  "resolved" "https://registry.npmjs.org/@types/react-native-table-component/-/react-native-table-component-1.2.4.tgz"
+  "version" "1.2.4"
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    "csstype" "^3.0.3"
+
 "@types/react-native-vector-icons@^6.4.10":
   "integrity" "sha512-z4sexbuZ7nmYsp7Z9YB5fSQoN3KFn6nZA3QsCkQLOYnVmVlxX4U22v/bM9Xx/6dOA1vClxoRZo2CFDX16uryXQ=="
   "resolved" "https://registry.npmjs.org/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.10.tgz"
@@ -2838,7 +2847,7 @@
   dependencies:
     "cssom" "~0.3.6"
 
-"csstype@^3.0.2":
+"csstype@^3.0.2", "csstype@^3.0.3":
   "integrity" "sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA=="
   "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
   "version" "3.1.0"
