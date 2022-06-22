@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, StatusBar, Text, Image} from 'react-native';
 import {Button} from 'react-native-paper';
 import {RSize} from '../../utils/responsive';
-import FinalQuizQuestion from './FinalQuizQuestion';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../assets/images/images';
+import {ResultadoFinalProps} from '../../types/navigation';
 
-function ResultadoFinal({navigation, route}) {
+function ResultadoFinal({navigation}: ResultadoFinalProps) {
   const headerTitle = ' Resultado final ';
   const buttonText = 'Responder el quiz';
 
@@ -36,7 +36,7 @@ function ResultadoFinal({navigation, route}) {
             <View style={styles.container}>
               <Image
                 style={styles.imageStyle}
-                resizeMode="contain"
+                resizeMode="center"
                 source={Images.character.extras.grafico_barras}
               />
             </View>
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: RSize(0.05),
   },
   header: {
-    padding: RSize(0.002),
+    padding: RSize(0.015, 'h'),
     justifyContent: 'center',
     backgroundColor: '#FF8A00',
     elevation: RSize(0.01),
@@ -84,17 +84,12 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   images: {
-    marginVertical: RSize(0.02),
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
   container: {
-    width: '40%',
-    // height: '80%',
-    justifyContent: 'space-between',
-    // borderRadius: 1,
-    // elevation: 7,
-    // backgroundColor: 'white',
+    flex: 1,
+    justifyContent: 'center',
   },
   buttonContainer: {
     justifyContent: 'center',
@@ -106,13 +101,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: RSize(0.04),
   },
   textStyle: {
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',
   },
   imageStyle: {
-    height: '90%',
+    height: '70%',
     width: '100%',
     alignSelf: 'center',
   },

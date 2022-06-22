@@ -9,28 +9,24 @@ import {
   Cols,
 } from 'react-native-table-component';
 import {Dimensions} from 'react-native';
-// import CellMenu from './CellMenu';
+import {RSize} from '../../utils/responsive';
 
 const dim = Dimensions.get('window');
 const width = dim.width;
 const height = dim.height;
 
-const DynamicTable = props => {
+interface DynamicTableProps {
+  tableData: [any[], any[]];
+}
+
+const DynamicTable = (props: DynamicTableProps) => {
   // const [answersCount, setAnswersCount] = props.answersCount;
   const tableTitle = ['1', '2', '3', '4'];
   const tableData = props.tableData;
-  // const tableData = [
-  //   ['Margarita', 'Girasol', 'Iris'],
-  //   [
-  //     <CellMenu correct={9} answersCount={[answersCount, setAnswersCount]} />,
-  //     <CellMenu correct={7} answersCount={[answersCount, setAnswersCount]} />,
-  //     <CellMenu correct={4} answersCount={[answersCount, setAnswersCount]} />,
-  //   ],
-  // ];
 
   return (
     <View style={styles.container}>
-      <View style={styles.topPad} />
+      {/* <View style={styles.topPad} /> */}
       <View style={styles.tableContainer}>
         <Table
           style={{flexDirection: 'row'}}
@@ -61,13 +57,12 @@ const DynamicTable = props => {
             <Cols
               data={tableData}
               heightArr={[height / 7, height / 7, height / 7]}
-              style={styles.data}
               textStyle={styles.dataText}
             />
           </TableWrapper>
         </Table>
       </View>
-      <View style={styles.bottomPad} />
+      {/* <View style={styles.bottomPad} /> */}
     </View>
   );
 };
@@ -79,16 +74,14 @@ const styles = StyleSheet.create({
     // marginVertical: 0,
     // marginVertical: height / 6,
     marginHorizontal: width / 4,
+    justifyContent: 'center',
   },
   topPad: {
     flex: 6,
   },
   tableContainer: {
-    flex: 22,
-    backgroundColor: 'white',
-  },
-  bottomPad: {
-    flex: 7,
+    paddingTop: RSize(0.1, 'h'),
+    // flex: 1,
   },
 
   singleHead: {

@@ -8,7 +8,6 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
-  ImageSourcePropType,
 } from 'react-native';
 import {IconButton} from 'react-native-paper';
 import Images from '../../assets/images/images';
@@ -18,7 +17,7 @@ import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
   items: IItem[];
-  models: [ImageSourcePropType[], ReactStateSetter<ImageSourcePropType[]>];
+  models: [number[], ReactStateSetter<number[]>];
   visible: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
   sceneNav: React.RefObject<ViroARSceneNavigator>;
@@ -33,7 +32,7 @@ const Inventario = (props: InventarioProps) => {
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
-  function modelHandler(index: any) {
+  function modelHandler(index: number) {
     updatePosition();
     let aux = [...placedItems];
     aux[index] = 1;
@@ -58,6 +57,7 @@ const Inventario = (props: InventarioProps) => {
         setPositions([...positions, position]);
       })
       .catch(console.log);
+    // setPositions([...positions, [0, 0, -1]]);
   }
 
   if (!visible) {

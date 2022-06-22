@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {View, StyleSheet, StatusBar, ImageSourcePropType} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 // @ts-ignore
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
 import Activities from './assets/activities/activities';
@@ -15,12 +15,13 @@ import {DesafioProps} from './types/navigation';
 import {DesafioEstado, Vec3} from './types/activity';
 import {RSize} from './utils/responsive';
 import CellMenu from './components/Tables/CellMenu';
+import {Cell} from 'react-native-table-component';
 
 const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
-  const [models, setModels] = useState<ImageSourcePropType[]>([]);
+  const [models, setModels] = useState<number[]>([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
   const [estado, setEstado] = useState<DesafioEstado>('story');
@@ -60,11 +61,28 @@ const Desafio = ({navigation, route}: DesafioProps) => {
   const [isCorrect1, setIsCorrect1] = useState(false);
   const [isCorrect2, setIsCorrect2] = useState(false);
   const [isCorrect3, setIsCorrect3] = useState(false);
-  const [value1, setValue1] = useState(null);
-  const [value2, setValue2] = useState(null);
-  const [value3, setValue3] = useState(null);
+  const [value1, setValue1] = useState<number | null>(null);
+  const [value2, setValue2] = useState<number | null>(null);
+  const [value3, setValue3] = useState<number | null>(null);
+
   const tableData = [
-    ['Margarita', 'Girasol', 'Iris'],
+    [
+      <Cell
+        data={'Margarita'}
+        style={{backgroundColor: '#eeeeee', flex: 1}}
+        textStyle={styles.dataText}
+      />,
+      <Cell
+        data={'Girasol'}
+        style={{backgroundColor: '#eebc00', flex: 1}}
+        textStyle={styles.dataText}
+      />,
+      <Cell
+        data={'Iris'}
+        style={{backgroundColor: '#bf96f1', flex: 1}}
+        textStyle={styles.dataText}
+      />,
+    ],
     [
       <CellMenu
         correct={9}
@@ -91,8 +109,8 @@ const Desafio = ({navigation, route}: DesafioProps) => {
     <View style={styles.container}>
       <StatusBar hidden={true} />
       <ViroARSceneNavigator
-        // autofocus={true}
-        // bloomEnabled={true}
+        worldAlignment={'Camera'}
+        numberOfTrackedImages={4}
         ref={sceneNav}
         initialScene={{
           // @ts-ignore
@@ -102,7 +120,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           models: [...models],
           items: Activities[actividad][tipo].items,
           actividad: actividad,
-          positions: positions,
+          positions: [positions, setPositions],
         }}
       />
       {toggleQuestions === true ? (
@@ -235,6 +253,7 @@ const styles = StyleSheet.create({
     fontSize: RSize(0.035, 'h'),
     fontFamily: 'Poppins-Bold',
   },
+  dataText: {textAlign: 'center', color: '#063D69', fontFamily: 'Poppins-Bold'},
 });
 
 export default Desafio;

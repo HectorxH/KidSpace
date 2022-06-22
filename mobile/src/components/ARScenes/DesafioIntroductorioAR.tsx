@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {
   ViroARScene,
   ViroTrackingStateConstants,
@@ -10,7 +10,7 @@ import {
 import Models from '../../assets/3d/models';
 import {IItem, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
-import {createIconSetFromFontello} from 'react-native-vector-icons';
+import {ReactStateSetter} from '../../types/others';
 
 interface DesafioIntroductorioSceneARProps {
   sceneNavigator: {
@@ -18,7 +18,7 @@ interface DesafioIntroductorioSceneARProps {
       models: number[];
       actividad: string;
       items: IItem[];
-      positions: Vec3[];
+      positions: [Vec3[], ReactStateSetter<Vec3[]>];
     };
   };
 }
@@ -38,7 +38,7 @@ const DesafioIntroductorioSceneAR = (
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
-  const positions = props.sceneNavigator.viroAppProps.positions;
+  const [positions] = props.sceneNavigator.viroAppProps.positions;
 
   const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
@@ -48,14 +48,10 @@ const DesafioIntroductorioSceneAR = (
       type: item.type,
       scale: item.scale,
       rotation: item.rotation,
+      position: [0, 0, 0],
     })),
   );
 
-  function updatePosition(index: number, position: Vec3) {
-    let transform = [...transforms];
-    transform[index].position = position;
-    setTransforms(transform);
-  }
   function updateRotation(
     index: number,
     rotateState: number,
@@ -114,15 +110,12 @@ const DesafioIntroductorioSceneAR = (
             scale={transforms[item].scale}
             rotation={transforms[item].rotation}
             type={transforms[item].type}
-            onDrag={position =>
-              updatePosition(item, [position[0], position[1], position[2]])
-            }
+            onDrag={() => {}}
             dragType={'FixedToWorld'}
-            highAccuracyEvents={true}
-            onPinch={(pinchState, scaleFactor, source) =>
+            onPinch={(pinchState, scaleFactor) =>
               updateScale(index, pinchState, scaleFactor)
             }
-            onRotate={(rotateState, rotation, source) =>
+            onRotate={(rotateState, rotation) =>
               updateRotation(index, rotateState, rotation)
             }
           />

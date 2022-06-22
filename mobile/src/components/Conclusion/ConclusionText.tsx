@@ -1,8 +1,13 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, StatusBar, Text} from 'react-native';
+import React from 'react';
+import {View, StyleSheet, Text} from 'react-native';
 import {RSize} from '../../utils/responsive';
 
-const ConclusionText = props => {
+interface ConclusionTextProps {
+  text: string;
+  pagina?: string;
+}
+
+const ConclusionText = (props: ConclusionTextProps) => {
   const text = props.text;
   const pagina = props.pagina;
 
@@ -40,7 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   textStyle: {
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
   },
   oddText: {
     color: '#5C9DEC',

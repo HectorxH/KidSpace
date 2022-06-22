@@ -19,7 +19,7 @@ const PercentTable = () => {
   const tableData = [
     ['Margarita', 'Girasol', 'Iris', 'Total'],
     ['9', '7', '4', '20'],
-    ['45%', '35%', '20%', ''],
+    ['45%', '35%', '20%', '100%'],
   ];
 
   return (
@@ -54,7 +54,7 @@ const PercentTable = () => {
             textStyle={styles.text}
           />
           <Row
-            data={['Flores', 'Cantidades', '']}
+            data={['Flores', 'Cantidades', '%']}
             style={styles.innerTitle}
             textStyle={styles.titleText}
           />
