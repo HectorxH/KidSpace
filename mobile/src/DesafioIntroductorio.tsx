@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react';
-import {View, StyleSheet, StatusBar, ImageSourcePropType} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 // @ts-ignore
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
 import Activities from './assets/activities/activities';
@@ -18,7 +18,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;
-  const [models, setModels] = useState<ImageSourcePropType[]>([]);
+  const [models, setModels] = useState<number[]>([]);
   const [pageNumber, setPageNumber] = useState(0);
   const [canMove, setCanMove] = useState(0);
   const [estado, setEstado] = useState<DesafioEstado>('story');
@@ -32,8 +32,8 @@ const Desafio = ({navigation, route}: DesafioProps) => {
     <View style={styles.container}>
       <StatusBar hidden={true} />
       <ViroARSceneNavigator
-        // autofocus={true}
-        // bloomEnabled={true}
+        worldAlignment={'Camera'}
+        numberOfTrackedImages={4}
         ref={sceneNav}
         initialScene={{
           // @ts-ignore
@@ -43,7 +43,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           models: [...models],
           items: Activities[actividad][tipo].items,
           actividad: actividad,
-          positions: positions,
+          positions: [positions, setPositions],
         }}
       />
       {toggleQuestions === true ? (
