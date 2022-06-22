@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {
   ViroARScene,
   ViroTrackingStateConstants,
@@ -10,7 +10,6 @@ import {
 import Models from '../../assets/3d/models';
 import {IItem, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
-import {createIconSetFromFontello} from 'react-native-vector-icons';
 
 interface DesafioIntroductorioSceneARProps {
   sceneNavigator: {
@@ -119,10 +118,10 @@ const DesafioIntroductorioSceneAR = (
             }
             dragType={'FixedToWorld'}
             highAccuracyEvents={true}
-            onPinch={(pinchState, scaleFactor, source) =>
+            onPinch={(pinchState, scaleFactor) =>
               updateScale(index, pinchState, scaleFactor)
             }
-            onRotate={(rotateState, rotation, source) =>
+            onRotate={(rotateState, rotation) =>
               updateRotation(index, rotateState, rotation)
             }
           />
