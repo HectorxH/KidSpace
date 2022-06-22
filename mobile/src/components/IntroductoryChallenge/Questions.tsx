@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {IPregunta} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
@@ -9,16 +9,30 @@ interface QuestionsProps {
   quiz: IPregunta[];
   toggleQuestions: boolean;
   answersCount: [number, ReactStateSetter<number>];
+  leftAnswerButtonStyles: [any, ReactStateSetter<any>];
+  leftAnswerTextStyles: [any, ReactStateSetter<any>];
+  rightAnswerButtonStyles: [any, ReactStateSetter<any>];
+  rightAnswerTextStyles: [any, ReactStateSetter<any>];
 }
 
 const Questions = (props: QuestionsProps) => {
   const quiz = props.quiz;
-  const q1 = quiz[0].question.split('*');
-  const q2 = quiz[1].question.split('*');
   const toggleQuestions = props.toggleQuestions;
   const [answersCount, setAnswersCount] = props.answersCount;
-  const [leftAnswer, setLeftAnswer] = useState(0);
-  const [rightAnswer, setRightAnswer] = useState(0);
+
+  // desafío introductorio
+  const [leftAnswerStyles, setLeftAnswerStyles] = props.leftAnswerButtonStyles;
+  const [leftAnswerTextStyles, setLeftAnswerTextStyles] =
+    props.leftAnswerTextStyles;
+  const [rightAnswerStyles, setRightAnswerStyles] =
+    props.rightAnswerButtonStyles;
+  const [rightAnswerTextStyles, setRightAnswerTextStyles] =
+    props.rightAnswerTextStyles;
+
+  // const [leftAnswer, setLeftAnswer] = useState(0);
+  // const [rightAnswer, setRightAnswer] = useState(0);
+  const q1 = quiz[0].question.split('*');
+  const q2 = quiz[1].question.split('*');
 
   return (
     <View
@@ -29,7 +43,7 @@ const Questions = (props: QuestionsProps) => {
       <View style={styles.verticalContainer}>
         <View style={styles.topPad} />
         <View style={styles.questionBox}>
-          <View style={leftAnswer === 1 ? styles.overlay : styles.off} />
+          {/* <View style={leftAnswer === 1 ? styles.overlay : styles.off} /> */}
           <View style={styles.questionArea}>
             <Text style={styles.baseText}>
               {q1.map((word, index) => {
@@ -49,7 +63,12 @@ const Questions = (props: QuestionsProps) => {
                 messageAnswers={quiz[0].answers}
                 rightAnswer={quiz[0].rightAnswer}
                 answersCount={[answersCount, setAnswersCount]}
-                answer={[leftAnswer, setLeftAnswer]}
+                // answer={[leftAnswer, setLeftAnswer]}
+                answerButtonStyles={[leftAnswerStyles, setLeftAnswerStyles]}
+                answerTextStyles={[
+                  leftAnswerTextStyles,
+                  setLeftAnswerTextStyles,
+                ]}
               />
             </View>
           ) : (
@@ -80,7 +99,12 @@ const Questions = (props: QuestionsProps) => {
               messageAnswers={quiz[1].answers}
               rightAnswer={quiz[1].rightAnswer}
               answersCount={[answersCount, setAnswersCount]}
-              answer={[rightAnswer, setRightAnswer]}
+              // answer={[rightAnswer, setRightAnswer]}
+              answerButtonStyles={[rightAnswerStyles, setRightAnswerStyles]}
+              answerTextStyles={[
+                rightAnswerTextStyles,
+                setRightAnswerTextStyles,
+              ]}
             />
           </View>
         </View>

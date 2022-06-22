@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {ReactStateSetter} from '../../types/others';
 
 const data = [
   {label: '7', value: '7'},
@@ -9,12 +10,18 @@ const data = [
   {label: '9', value: '9'},
 ];
 
-const CellMenu = correct => {
+const CellMenu = (correct: {
+  answersCount: [any, any];
+  value: [any, any];
+  correct: number;
+  isCorrect: [boolean, ReactStateSetter<boolean>];
+}) => {
   const [answersCount, setAnswersCount] = correct.answersCount;
 
-  const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  // const [isCorrect, setIsCorrect] = useState(false);
+  const [isCorrect, setIsCorrect] = correct.isCorrect;
+  const [value, setValue] = correct.value;
 
   return (
     <View style={styles.container}>

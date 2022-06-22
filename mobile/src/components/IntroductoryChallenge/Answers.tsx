@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
 import {ReactStateSetter} from '../../types/others';
@@ -8,38 +8,45 @@ interface AnswerProps {
   messageAnswers: [string, string, string];
   rightAnswer: string;
   answersCount: [number, ReactStateSetter<number>];
-  answer: [number, ReactStateSetter<number>];
+  // answer: [number, ReactStateSetter<number>];
+  answerButtonStyles: [any, ReactStateSetter<any>];
+  answerTextStyles: [any, ReactStateSetter<any>];
 }
 
 const Answer = (props: AnswerProps) => {
   const messageAnswers = props.messageAnswers;
   const rightAnswer = props.rightAnswer;
   const [answersCount, setAnswersCount] = props.answersCount;
-  const [answerFlag, setAnswer] = props.answer;
+  // const [answerFlag, setAnswer] = props.answer;
+  const [answerStyles, setAnswerStyles] = props.answerButtonStyles;
+  const [answerTextStyles, setAnswerTextStyles] = props.answerTextStyles;
 
-  const [answerStyles, setAnswerStyles] = useState({
-    0: styles.answerButton,
-    1: styles.answerButton,
-    2: styles.answerButton,
-  });
+  // const [answerStyles, setAnswerStyles] = useState({
+  //   0: styles.answerButton,
+  //   1: styles.answerButton,
+  //   2: styles.answerButton,
+  // });
 
-  const [answerTextStyles, setAnswerTextStyles] = useState({
-    0: styles.answerText,
-    1: styles.answerText,
-    2: styles.answerText,
-  });
+  // const [answerTextStyles, setAnswerTextStyles] = useState({
+  //   0: styles.answerText,
+  //   1: styles.answerText,
+  //   2: styles.answerText,
+  // });
 
   function checkAnswer(answer: string, index: 0 | 1 | 2) {
     if (answer === rightAnswer) {
+      if (answerStyles[index] !== styles.rightAnswerButton) {
+        setAnswersCount(answersCount + 1);
+      }
       setAnswerStyles({
         0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
         1: index === 1 ? styles.rightAnswerButton : answerStyles[1],
         2: index === 2 ? styles.rightAnswerButton : answerStyles[2],
       });
-      if (answerFlag === 0) {
-        setAnswersCount(answersCount + 1);
-      }
-      setAnswer(1);
+      // if (answerFlag === 0) {
+      //   setAnswersCount(answersCount + 1);
+      // }
+      // setAnswer(1);
     } else {
       setAnswerStyles({
         0: index === 0 ? styles.wrongAnswerButton : answerStyles[0],
@@ -145,6 +152,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderColor: '#5C9DEC',
   },
+  answerText: {
+    color: '#063D69',
+    textTransform: 'none',
+    fontSize: RSize(0.035, 'h'),
+    fontFamily: 'Poppins-Bold',
+  },
   wrongAnswerButton: {
     borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
@@ -156,12 +169,6 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
-  },
-  answerText: {
-    color: '#063D69',
-    textTransform: 'none',
-    fontSize: RSize(0.035, 'h'),
-    fontFamily: 'Poppins-Bold',
   },
   wrongAnswerText: {
     color: '#ffffff',

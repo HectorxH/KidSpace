@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {
   Table,
   TableWrapper,
@@ -9,23 +9,24 @@ import {
   Cols,
 } from 'react-native-table-component';
 import {Dimensions} from 'react-native';
-import CellMenu from './CellMenu';
+// import CellMenu from './CellMenu';
 
 const dim = Dimensions.get('window');
 const width = dim.width;
 const height = dim.height;
 
 const DynamicTable = props => {
-  const [answersCount, setAnswersCount] = props.answersCount;
+  // const [answersCount, setAnswersCount] = props.answersCount;
   const tableTitle = ['1', '2', '3', '4'];
-  const tableData = [
-    ['Margarita', 'Girasol', 'Iris'],
-    [
-      <CellMenu correct={9} answersCount={[answersCount, setAnswersCount]} />,
-      <CellMenu correct={7} answersCount={[answersCount, setAnswersCount]} />,
-      <CellMenu correct={4} answersCount={[answersCount, setAnswersCount]} />,
-    ],
-  ];
+  const tableData = props.tableData;
+  // const tableData = [
+  //   ['Margarita', 'Girasol', 'Iris'],
+  //   [
+  //     <CellMenu correct={9} answersCount={[answersCount, setAnswersCount]} />,
+  //     <CellMenu correct={7} answersCount={[answersCount, setAnswersCount]} />,
+  //     <CellMenu correct={4} answersCount={[answersCount, setAnswersCount]} />,
+  //   ],
+  // ];
 
   return (
     <View style={styles.container}>
