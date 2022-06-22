@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   ViroARScene,
   ViroTrackingStateConstants,
@@ -10,6 +10,7 @@ import {
 import Models from '../../assets/3d/models';
 import {IItem, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
+import {createIconSetFromFontello} from 'react-native-vector-icons';
 
 interface DesafioIntroductorioSceneARProps {
   sceneNavigator: {
@@ -52,16 +53,39 @@ const DesafioIntroductorioSceneAR = (
     transform[index].position = position;
     setTransforms(transform);
   }
-  // function updateRotation(index: number, rotation: Vec3) {
-  //   let transform = [...transforms];
-  //   transform[index].rotation = rotation;
-  //   setTransforms(transform);
-  // }
-  // function updateScale(index: number, scale: Vec3) {
-  //   let transform = [...transforms];
-  //   transform[index].scale = scale;
-  //   setTransforms(transform);
-  // }
+  function updateRotation(
+    index: number,
+    rotateState: number,
+    rotation: number,
+  ) {
+    let transform = [...transforms];
+    console.log(transform);
+    // Giro en todos los ejes
+    //const temp = transform[index].rotation.map(x => x - rotation / 50);
+    //let temp2: Vec3 = [temp[0], temp[1], temp[2]];
+
+    //Giro en 1 eje
+    const temp = transform[index].rotation[2] - rotation;
+    let temp2: Vec3 = [
+      transform[index].rotation[0],
+      temp,
+      transform[index].rotation[2],
+    ];
+    transform[index].rotation = temp2;
+    setTransforms(transform);
+  }
+  function updateScale(index: number, pinchState: number, scaleFactor: number) {
+    const MIN_SCALE = 0.1;
+    const MAX_SCALE = 0.3;
+    let transform = [...transforms];
+    console.log(transform);
+    const temp = transform[index].scale.map(x => x * scaleFactor);
+    let temp2: Vec3 = [temp[0], temp[1], temp[2]];
+    if (temp2[0] >= MIN_SCALE && temp2[0] <= MAX_SCALE) {
+      transform[index].scale = temp2;
+      setTransforms(transform);
+    }
+  }
 
   function onInitialized(state: ViroTrackingStateConstants, reason: any) {
     // console.log('state, reason, tracking:', state, reason, tracking);
@@ -93,9 +117,12 @@ const DesafioIntroductorioSceneAR = (
             }
             dragType={'FixedToWorld'}
             highAccuracyEvents={true}
-            // onPinch={(pinchState, scaleFactor, source) =>
-            //   updateScale(pinchState, scaleFactor, source)
-            // }
+            onPinch={(pinchState, scaleFactor, source) =>
+              updateScale(index, pinchState, scaleFactor)
+            }
+            onRotate={(rotateState, rotation, source) =>
+              updateRotation(index, rotateState, rotation)
+            }
           />
         );
       })}
