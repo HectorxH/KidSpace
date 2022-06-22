@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   textStyle: {
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
   },
   oddText: {
     color: '#5C9DEC',

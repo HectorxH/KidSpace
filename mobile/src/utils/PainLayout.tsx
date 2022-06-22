@@ -157,11 +157,10 @@ const objectStyles = StyleSheet.create({
   overlay: {
     flex: 1,
     position: 'absolute',
-    // backgroundColor: 'red',
   },
   messageBox: {
     flex: 1,
-    borderRadius: 20,
+    borderRadius: RSize(0.08, 'h'),
     borderWidth: 5,
     borderColor: 'black',
     backgroundColor: 'white',
@@ -178,7 +177,7 @@ const objectStyles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
   },
   oddText: {
     color: '#5C9DEC',
@@ -188,12 +187,12 @@ const objectStyles = StyleSheet.create({
   },
   iconStyle: {
     alignSelf: 'center',
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.08, 'h'),
     justifyContent: 'center',
     color: 'white',
   },
   textStyle: {
-    fontSize: RSize(0.03),
+    fontSize: RSize(0.05, 'h'),
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',
