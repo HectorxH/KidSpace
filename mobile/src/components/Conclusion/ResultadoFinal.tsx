@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, StatusBar, Text, Image} from 'react-native';
 import {Button} from 'react-native-paper';
 import {RSize} from '../../utils/responsive';
-import FinalQuizQuestion from './FinalQuizQuestion';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Images from '../../assets/images/images';
+import {ResultadoFinalProps} from '../../types/navigation';
 
-function ResultadoFinal({navigation, route}) {
+function ResultadoFinal({navigation}: ResultadoFinalProps) {
   const headerTitle = ' Resultado final ';
   const buttonText = 'Responder el quiz';
 

@@ -10,7 +10,10 @@ import {ReactStateSetter} from '../../types/others';
 interface ContinueButtonProps {
   answersCount: number;
   answersNum: number;
-  navigation: NativeStackNavigationProp<RootStackParamList, 'Desafio'>;
+  navigation: NativeStackNavigationProp<
+    RootStackParamList,
+    'Desafio' | 'Conclusion'
+  >;
   settings: ButtonSetting;
   tipo: string;
   setNumPag: ReactStateSetter<number> | undefined;

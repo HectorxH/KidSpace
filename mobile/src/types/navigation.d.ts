@@ -55,3 +55,12 @@ export type DynamicTableProps = NativeStackScreenProps<
   RootStackParamList,
   'DynamicTable'
 >;
+type ConclusionProps = NativeStackScreenProps<RootStackParamList, 'Conclusion'>;
+export type ConclusionStoryProps = NativeStackScreenProps<
+  RootStackParamList,
+  'ConclusionStory'
+>;
+export type ResultadoFinalProps = NativeStackScreenProps<
+  RootStackParamList,
+  'DynamicTable'
+>;

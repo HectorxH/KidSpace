@@ -3,8 +3,9 @@ import {View, StyleSheet, StatusBar, ImageBackground} from 'react-native';
 import Images from '../../assets/images/images';
 import {RSize} from '../../utils/responsive';
 import PainLayout from '../../utils/PainLayout';
+import {ConclusionStoryProps} from '../../types/navigation';
 
-const ConclusionStory = ({navigation, route}) => {
+const ConclusionStory = ({navigation}: ConclusionStoryProps) => {
   const message = {
     grid: [10, 10],
     start: [4, 1],

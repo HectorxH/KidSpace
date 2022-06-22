@@ -6,10 +6,11 @@ import Activities from '../../assets/activities/activities';
 import PercentTable from '../Tables/PercentTable';
 import TotalTable from '../Tables/TotalTable';
 import ConclusionText from './ConclusionText';
+import {ConclusionProps} from '../../types/navigation';
 
 // import FinalQuizQuestion from './FinalQuizQuestion';
 
-const Conclusion = ({navigation, route}) => {
+const Conclusion = ({navigation, route}: ConclusionProps) => {
   const prop = route.params;
   const actividad = prop.actividad;
   const tipo = prop.tipo;

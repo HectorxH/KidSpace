@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
 const data = [
   {label: '7', value: '7'},
@@ -9,8 +11,13 @@ const data = [
   {label: '9', value: '9'},
 ];
 
-const CellMenu = correct => {
-  const [answersCount, setAnswersCount] = correct.answersCount;
+interface CellMenuProps {
+  correct: number;
+  answersCount: [number, ReactStateSetter<number>];
+}
+
+const CellMenu = (props: CellMenuProps) => {
+  const [answersCount, setAnswersCount] = props.answersCount;
 
   const [value, setValue] = useState(null);
   const [isFocus, setIsFocus] = useState(false);
@@ -36,8 +43,8 @@ const CellMenu = correct => {
           setValue(item.value);
           setIsFocus(false);
           console.log(item.value);
-          console.log(correct.correct);
-          if (correct.correct === parseInt(item.value, 10)) {
+          console.log(props.correct);
+          if (props.correct === parseInt(item.value, 10)) {
             console.log('correcto');
             if (isCorrect === false) {
               setAnswersCount(answersCount + 1);
@@ -68,13 +75,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+    flexDirection: 'column',
+    justifyContent: 'center',
   },
   dropdown: {
-    height: 50,
-    borderColor: 'gray',
-    borderWidth: 0.5,
-    borderRadius: 8,
-    paddingHorizontal: 8,
+    paddingHorizontal: RSize(0.03, 'h'),
   },
   icon: {
     marginRight: 5,
