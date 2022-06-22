@@ -33,7 +33,7 @@
     "mood": "happy",
     "bubble": "flowers",
     "bubblePosition": "bottom",
-    "message": "Para el reporte semanal, Diego debe calcular el total de flores vendidas.",
+    "message": "Para el reporte semanal, Diego debe calcular el total de las flores vendidas.",
     "messagePosition": "right",
     "messageExtra": "none",
     "messageBubble": "none",
@@ -52,7 +52,7 @@
     "messageExtra": "answers",
     "messageBubble": "none",
     "messageAnswers": ["SUMA()", "CONTAR()", "PROMEDIO()"],
-    "rightAnswer": "CONTAR()",
+    "rightAnswer": "SUMA()",
     "background": "flowershop"
   }, 
   {

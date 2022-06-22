@@ -17,7 +17,7 @@ const Conclusion = ({navigation, route}) => {
   const text1 =
     'Para calcular el total de las flores, en la celda B5 debemos poner *=SUMA(B2:B4)*';
   const text2 =
-    'Para calcular el porcentaje de cada flor, tenemos que *dividir la cantidad de una flor entre el total de flores*';
+    'Para calcular el porcentaje de cada flor, tenemos que *dividir la cantidad de una flor entre el total de las flores*';
 
   return (
     <View style={styles.verticalContainer}>
