@@ -29,7 +29,7 @@ const Answer = (props: AnswerProps) => {
     2: styles.answerText,
   });
 
-  function checkAnswer(answer: string, index: number) {
+  function checkAnswer(answer: string, index: 0 | 1 | 2) {
     if (answer === rightAnswer) {
       setAnswerStyles({
         0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
@@ -50,7 +50,7 @@ const Answer = (props: AnswerProps) => {
     updateAnswerText(answer, index);
   }
 
-  function updateAnswerText(answer: any, index: number) {
+  function updateAnswerText(answer: string, index: 0 | 1 | 2) {
     if (answer === rightAnswer) {
       setAnswerTextStyles({
         0: index === 0 ? styles.rightAnswerText : answerTextStyles[0],
@@ -94,7 +94,7 @@ const Answer = (props: AnswerProps) => {
                       : 'white'
                   }
                   style={style}
-                  onPress={() => checkAnswer(answer, index)}>
+                  onPress={() => checkAnswer(answer, index as 0 | 1 | 2)}>
                   <Text
                     key={index + 4000}
                     style={answerTextStyles[index as 0 | 1 | 2]}>
@@ -161,16 +161,19 @@ const styles = StyleSheet.create({
     color: '#063D69',
     textTransform: 'none',
     fontSize: RSize(0.035, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
   wrongAnswerText: {
     color: '#ffffff',
     fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
   rightAnswerText: {
     color: '#ffffff',
     fontSize: RSize(0.035, 'h'),
     textTransform: 'none',
+    fontFamily: 'Poppins-Bold',
   },
 });
 

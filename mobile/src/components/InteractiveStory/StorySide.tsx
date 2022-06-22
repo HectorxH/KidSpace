@@ -3,6 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import MessageBubble from './MessageBubble';
 import Answers from './Answers';
 import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
 interface StorySideProps {
   message: string;
@@ -142,15 +143,15 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     backgroundColor: 'white',
-    // alignSelf: 'center',
-    borderRadius: 20,
+    justifyContent: 'center',
+    borderRadius: RSize(0.08, 'h'),
     borderWidth: 5,
+    paddingVertical: RSize(0.01, 'h'),
+    paddingHorizontal: RSize(0.02, 'w'),
     borderColor: 'black',
-    flexDirection: 'column',
   },
   storyTextBox: {
     flex: 10,
-    // justifyContent: 'flex-end',
     justifyContent: 'center',
     flexDirection: 'row',
   },
@@ -179,9 +180,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 30,
-    fontFamily: 'Poppins',
+    fontSize: RSize(0.05, 'h'),
+    fontFamily: 'Poppins-Bold',
   },
   oddText: {
     color: '#5C9DEC',

@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Text,
   ScrollView,
+  SafeAreaView,
   Image,
   TouchableOpacity,
   ImageSourcePropType,
@@ -11,6 +12,7 @@ import {
 import Images from '../../assets/images/images';
 import {IItem} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
   items: IItem[];
@@ -34,36 +36,31 @@ const Inventario = (props: InventarioProps) => {
   }
   return (
     <View style={nPlacedItems !== items.length ? styles.container : styles.off}>
-      <View style={styles.screenPad} />
       <View style={styles.inventoryBox}>
         <View style={styles.titleBox}>
           <Text style={styles.text}>Inventario</Text>
         </View>
-        <View style={styles.itemsBox}>
-          <ScrollView>
+        <SafeAreaView style={styles.itemsBox}>
+          <ScrollView fadingEdgeLength={10} persistentScrollbar>
             {items.map((item: IItem, index: number) => {
+              if (placedItems[index] !== 0) {
+                return null;
+              }
               return (
                 <TouchableOpacity
                   onPress={() => modelHandler(index)}
                   style={styles.itemContainer}
                   key={index + 100}>
-                  {placedItems[index] === 0 &&
-                  Images.icons[item.model].square !== undefined ? (
-                    <Image
-                      style={styles.iconImage}
-                      resizeMode="contain"
-                      source={
-                        Images.icons[item.model].square as ImageSourcePropType
-                      }
-                    />
-                  ) : (
-                    <View />
-                  )}
+                  <Image
+                    style={styles.iconImage}
+                    resizeMode="contain"
+                    source={Images.icons[item.model].square}
+                  />
                 </TouchableOpacity>
               );
             })}
           </ScrollView>
-        </View>
+        </SafeAreaView>
       </View>
     </View>
   );
@@ -71,46 +68,43 @@ const Inventario = (props: InventarioProps) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    flexDirection: 'row',
+    height: '100%',
+    flexDirection: 'row-reverse',
   },
   off: {
     flex: 0,
   },
-  screenPad: {
-    flex: 6,
-  },
   inventoryBox: {
-    flex: 1,
+    width: '12%',
     backgroundColor: '#FFFFFF',
-    borderRadius: 15,
+    borderTopLeftRadius: RSize(0.04, 'h'),
+    borderBottomLeftRadius: RSize(0.04, 'h'),
     flexDirection: 'column',
   },
   titleBox: {
-    flex: 2,
+    flex: 1,
     justifyContent: 'center',
     alignSelf: 'center',
   },
   itemsBox: {
     flex: 9,
-    alignSelf: 'center',
-    justifyContent: 'center',
     flexDirection: 'column',
-    // backgroundColor: 'black',
+    paddingBottom: RSize(0.04, 'h'),
   },
   itemContainer: {
-    flex: 1,
+    alignItems: 'center',
+    marginVertical: RSize(0.035, 'h'),
   },
   text: {
-    fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
     color: '#5C9DEC',
-    fontSize: 20,
+    fontSize: RSize(0.03, 'h'),
   },
   iconImage: {
-    width: '90%',
-    height: undefined,
+    width: '80%',
+    height: 'auto',
     aspectRatio: 1,
-    borderRadius: 10,
+    borderRadius: RSize(0.1, 'h'),
   },
 });
 
