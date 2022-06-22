@@ -71,8 +71,8 @@ const TotalTable = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: RSize(0.125, 'h'),
-    marginHorizontal: RSize(0.25, 'w'),
+    // marginVertical: RSize(0.125, 'h'),
+    // marginHorizontal: RSize(0.25, 'w'),
     backgroundColor: 'white',
   },
   singleHead: {

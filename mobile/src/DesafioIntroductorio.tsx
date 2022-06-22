@@ -85,6 +85,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           settings={Activities[actividad][tipo].settings[1]}
           navigation={navigation}
           tipo={tipo}
+          setNumPag={undefined}
         />
       </View>
       <View style={estado === 'story' ? styles.overlay : styles.off}>

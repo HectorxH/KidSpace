@@ -5,6 +5,7 @@ import {Button} from 'react-native-paper';
 import {ButtonSetting} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
+import {ReactStateSetter} from '../../types/others';
 
 interface ContinueButtonProps {
   answersCount: number;
@@ -12,6 +13,7 @@ interface ContinueButtonProps {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Desafio'>;
   settings: ButtonSetting;
   tipo: string;
+  setNumPag: ReactStateSetter<number> | undefined;
 }
 
 const ContinueButton = (props: ContinueButtonProps) => {
@@ -20,6 +22,7 @@ const ContinueButton = (props: ContinueButtonProps) => {
   const navigation = props.navigation;
   const settings = props.settings;
   const tipo = props.tipo;
+  const setNumPag = props.setNumPag;
   const contentStyle = StyleSheet.create({
     iconContentStyle: {flexDirection: settings.buttonIconPosNormal},
   });
@@ -32,7 +35,13 @@ const ContinueButton = (props: ContinueButtonProps) => {
         });
       }
       if (tipo === 'interactive') {
-        navigation.push('FinalQuiz');
+        navigation.push('Conclusion', {actividad: 'diagramas', tipo: tipo});
+      }
+      if (tipo === 'conclusion' && setNumPag !== undefined) {
+        setNumPag(1);
+      }
+      if (tipo === 'conclusion2') {
+        navigation.push('ConclusionStory');
       }
     }
   }

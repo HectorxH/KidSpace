@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, TouchableOpacity, Alert} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {
   Table,
   TableWrapper,
@@ -34,7 +34,13 @@ const PercentTable = () => {
             <Col
               data={tableTitle}
               style={styles.outerTitle}
-              heightArr={[height / 10, height / 8, height / 8, height / 8, height / 8]}
+              heightArr={[
+                height / 10,
+                height / 8,
+                height / 8,
+                height / 8,
+                height / 8,
+              ]}
               textStyle={styles.numberText}
             />
           </TableWrapper>
@@ -66,8 +72,8 @@ const PercentTable = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: height / 8,
-    marginHorizontal: width / 4,
+    // marginVertical: height / 8,
+    // marginHorizontal: width / 4,
     backgroundColor: 'white',
   },
   singleHead: {
@@ -78,7 +84,12 @@ const styles = StyleSheet.create({
   innerTitle: {flex: 1, backgroundColor: '#A1C96A'},
   outerTitle: {flex: 1, backgroundColor: '#F1F3F8'},
   title: {flex: 1, backgroundColor: '#f6f8fa'},
-  titleText: {textAlign: 'center', fontFamily: 'Poppins-Bold', color: 'white', fontSize: 12},
+  titleText: {
+    textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
+    color: 'white',
+    fontSize: 12,
+  },
   text: {textAlign: 'center'},
   numberText: {
     textAlign: 'center',
