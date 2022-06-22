@@ -57,6 +57,7 @@ const FinalQuiz = ({navigation}: FinalQuizProps) => {
               mode="contained"
               color="#A1C96A"
               style={styles.buttonStyle}
+              disabled={answersCount !== 2 ? true : false}
               onPress={() => Terminar()}>
               <Text style={styles.textStyle}>Terminar</Text>
             </Button>
