@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import {View, StyleSheet, StatusBar, ImageSourcePropType} from 'react-native';
 // @ts-ignore
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
@@ -12,7 +12,7 @@ import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
 import DynamicTable from './components/Tables/DynamicTable';
 import {DesafioProps} from './types/navigation';
-import {DesafioEstado} from './types/activity';
+import {DesafioEstado, Vec3} from './types/activity';
 
 const Desafio = ({navigation, route}: DesafioProps) => {
   const props = route.params;
@@ -24,12 +24,17 @@ const Desafio = ({navigation, route}: DesafioProps) => {
   const [estado, setEstado] = useState<DesafioEstado>('story');
   const [toggleQuestions, setToggleQuestions] = useState(false);
   const [answersCount, setAnswersCount] = useState(0);
+  const [positions, setPositions] = useState<Vec3[]>([]);
+
+  let sceneNav = useRef<ViroARSceneNavigator>(null);
 
   return (
     <View style={styles.container}>
       <StatusBar hidden={true} />
       <ViroARSceneNavigator
-        autofocus={true}
+        // autofocus={true}
+        // bloomEnabled={true}
+        ref={sceneNav}
         initialScene={{
           // @ts-ignore
           scene: DesafioIntroductorioSceneAR,
@@ -38,6 +43,7 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           models: [...models],
           items: Activities[actividad][tipo].items,
           actividad: actividad,
+          positions: positions,
         }}
       />
       {toggleQuestions === true ? (
@@ -86,15 +92,13 @@ const Desafio = ({navigation, route}: DesafioProps) => {
           message={Activities[actividad][tipo].story[pageNumber].message}
         />
       </View>
-      <View
-        style={
-          Activities[actividad][tipo].items.length !== models.length
-            ? styles.overlay
-            : styles.off
-        }>
+      <View style={styles.overlay}>
         <Inventario
           items={Activities[actividad][tipo].items}
           models={[models, setModels]}
+          positions={[positions, setPositions]}
+          visible={!toggleQuestions}
+          sceneNav={sceneNav}
         />
       </View>
       {canMove === 1 ||

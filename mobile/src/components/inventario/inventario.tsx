@@ -1,3 +1,4 @@
+import {ViroARSceneNavigator} from '@viro-community/react-viro';
 import React, {useState} from 'react';
 import {
   View,
@@ -9,14 +10,18 @@ import {
   TouchableOpacity,
   ImageSourcePropType,
 } from 'react-native';
+import {IconButton} from 'react-native-paper';
 import Images from '../../assets/images/images';
-import {IItem} from '../../types/activity';
+import {IItem, Vec3} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
   items: IItem[];
   models: [ImageSourcePropType[], ReactStateSetter<ImageSourcePropType[]>];
+  visible: boolean;
+  positions: [Vec3[], ReactStateSetter<Vec3[]>];
+  sceneNav: React.RefObject<ViroARSceneNavigator>;
 }
 
 const Inventario = (props: InventarioProps) => {
@@ -24,8 +29,12 @@ const Inventario = (props: InventarioProps) => {
   const [placedItems, setPlacedItems] = useState(items.map(() => 0));
   const [nPlacedItems, setNPlacedItems] = useState(0);
   const [models, setModels] = props.models;
+  const visible = props.visible;
+  const sceneNav = props.sceneNav;
+  const [positions, setPositions] = props.positions;
 
   function modelHandler(index: any) {
+    updatePosition();
     let aux = [...placedItems];
     aux[index] = 1;
     setPlacedItems(aux);
@@ -34,8 +43,36 @@ const Inventario = (props: InventarioProps) => {
     aux2.push(index);
     setModels(aux2);
   }
+
+  function handlePickUp() {
+    setPlacedItems(items.map(() => 0));
+    setNPlacedItems(0);
+    setModels([]);
+    setPositions([]);
+  }
+
+  function updatePosition() {
+    sceneNav.current
+      ?._unproject([RSize(1, 'w'), RSize(1, 'h'), 0.05])
+      .then(({position}: {position: Vec3}) => {
+        setPositions([...positions, position]);
+      })
+      .catch(console.log);
+  }
+
+  if (!visible) {
+    return null;
+  }
+
   return (
-    <View style={nPlacedItems !== items.length ? styles.container : styles.off}>
+    <View style={styles.container}>
+      <View style={styles.pickUpContainer}>
+        <IconButton
+          icon="archive-refresh"
+          size={RSize(0.075, 'h')}
+          onPress={handlePickUp}
+        />
+      </View>
       <View style={styles.inventoryBox}>
         <View style={styles.titleBox}>
           <Text style={styles.text}>Inventario</Text>
@@ -67,9 +104,14 @@ const Inventario = (props: InventarioProps) => {
 };
 
 const styles = StyleSheet.create({
+  pickUpContainer: {
+    flexDirection: 'column-reverse',
+    width: '12%',
+  },
   container: {
     height: '100%',
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   off: {
     flex: 0,
