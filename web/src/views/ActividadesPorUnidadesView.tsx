@@ -36,7 +36,7 @@ const ActividadesPorUnidadesView = () => (
           >
             <CardMedia
               component="img"
-              sx={{ height: '150px' }}
+              sx={{ height: '300px' }}
               image={img}
               alt={`Imagen de ${title}`}
             />
