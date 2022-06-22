@@ -49,9 +49,6 @@ const images: {
       circular: require('./icons/barras/circular.png'),
       square: require('./icons/barras/square.png'),
     },
-    cajita: {
-      square: require('./icons/cajita/square.png'),
-    },
     caja_girasol: {
       square: require('./icons/caja_girasol/square.png'),
     },
