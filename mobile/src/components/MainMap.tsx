@@ -68,9 +68,6 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
-            // navigation.push('DynamicTable', {})
-            // navigation.push('FinalQuiz')
-            // navigation.push('Desafio', {
             navigation.push('CuentoIntroductorio', {
               actividad: 'diagramas',
               // tipo: 'introductory',
@@ -95,7 +92,12 @@ const MainMap = ({navigation}: MainMapProps) => {
             />
           )}
           contentStyle={{flexDirection: 'column'}}
-          onPress={() => console.log('Pressed')}>
+          onPress={() =>
+            navigation.push('Conclusion', {
+              actividad: 'diagramas',
+              tipo: 'interactive',
+            })
+          }>
           <Text style={styles.subtitle}>Tienda</Text>
         </Button>
         <View style={styles.rightButtonView}>

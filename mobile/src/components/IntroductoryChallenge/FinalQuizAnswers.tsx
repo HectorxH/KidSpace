@@ -13,7 +13,7 @@ interface AnswersProps {
 
 const Answers = (props: AnswersProps) => {
   const messageAnswers = props.messageAnswers;
-  const rightAnswer = props.rightAnswer;
+  // const rightAnswer = props.rightAnswer;
   const [answersCount, setAnswersCount] = props.answersCount;
   const [answerFlag, setAnswer] = props.answer;
 
@@ -30,41 +30,62 @@ const Answers = (props: AnswersProps) => {
   });
 
   function checkAnswer(answer: any, index: number) {
-    if (answer === rightAnswer) {
-      setAnswerStyles({
-        0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
-        1: index === 1 ? styles.rightAnswerButton : answerStyles[1],
-        2: index === 2 ? styles.rightAnswerButton : answerStyles[2],
-      });
-      if (answerFlag === 0) {
-        setAnswersCount(answersCount + 1);
-      }
-      setAnswer(1);
-    } else {
-      setAnswerStyles({
-        0: index === 0 ? styles.wrongAnswerButton : answerStyles[0],
-        1: index === 1 ? styles.wrongAnswerButton : answerStyles[1],
-        2: index === 2 ? styles.wrongAnswerButton : answerStyles[2],
-      });
+    setAnswerStyles({
+      0: index === 0 ? styles.rightAnswerButton : styles.answerButton,
+      1: index === 1 ? styles.rightAnswerButton : styles.answerButton,
+      2: index === 2 ? styles.rightAnswerButton : styles.answerButton,
+    });
+    if (answerFlag === 0) {
+      setAnswersCount(answersCount + 1);
     }
+    setAnswer(1);
     updateAnswerText(answer, index);
   }
-
   function updateAnswerText(answer: any, index: number) {
-    if (answer === rightAnswer) {
-      setAnswerTextStyles({
-        0: index === 0 ? styles.rightAnswerText : answerTextStyles[0],
-        1: index === 1 ? styles.rightAnswerText : answerTextStyles[1],
-        2: index === 2 ? styles.rightAnswerText : answerTextStyles[2],
-      });
-    } else {
-      setAnswerTextStyles({
-        0: index === 0 ? styles.wrongAnswerText : answerTextStyles[0],
-        1: index === 1 ? styles.wrongAnswerText : answerTextStyles[1],
-        2: index === 2 ? styles.wrongAnswerText : answerTextStyles[2],
-      });
-    }
+    setAnswerTextStyles({
+      0: index === 0 ? styles.rightAnswerText : styles.answerText,
+      1: index === 1 ? styles.rightAnswerText : styles.answerText,
+      2: index === 2 ? styles.rightAnswerText : styles.answerText,
+    });
   }
+
+  // old
+  // function checkAnswer(answer: any, index: number) {
+  //   if (answer === rightAnswer) {
+  //     setAnswerStyles({
+  //       0: index === 0 ? styles.rightAnswerButton : answerStyles[0],
+  //       1: index === 1 ? styles.rightAnswerButton : answerStyles[1],
+  //       2: index === 2 ? styles.rightAnswerButton : answerStyles[2],
+  //     });
+  //     if (answerFlag === 0) {
+  //       setAnswersCount(answersCount + 1);
+  //     }
+  //     setAnswer(1);
+  //   } else {
+  //     setAnswerStyles({
+  //       0: index === 0 ? styles.wrongAnswerButton : answerStyles[0],
+  //       1: index === 1 ? styles.wrongAnswerButton : answerStyles[1],
+  //       2: index === 2 ? styles.wrongAnswerButton : answerStyles[2],
+  //     });
+  //   }
+  //   updateAnswerText(answer, index);
+  // }
+
+  // function updateAnswerText(answer: any, index: number) {
+  //   if (answer === rightAnswer) {
+  //     setAnswerTextStyles({
+  //       0: index === 0 ? styles.rightAnswerText : answerTextStyles[0],
+  //       1: index === 1 ? styles.rightAnswerText : answerTextStyles[1],
+  //       2: index === 2 ? styles.rightAnswerText : answerTextStyles[2],
+  //     });
+  //   } else {
+  //     setAnswerTextStyles({
+  //       0: index === 0 ? styles.wrongAnswerText : answerTextStyles[0],
+  //       1: index === 1 ? styles.wrongAnswerText : answerTextStyles[1],
+  //       2: index === 2 ? styles.wrongAnswerText : answerTextStyles[2],
+  //     });
+  //   }
+  // }
 
   return (
     <View style={styles.horizontalContainer}>

@@ -15,7 +15,7 @@ const images: {
     Diego: {
       happy: require('./character/diego/diego_happy.png'),
       troubled: require('./character/diego/diego_troubled.png'),
-      smile: require('./character/diego/diego_happy.png'),
+      smile: require('./character/diego/diego_smile.png'),
       bouquet: require('./character/diego/diego_happy.png'),
       chart: require('./character/diego/diego_chart.png'),
     },
@@ -32,6 +32,7 @@ const images: {
   },
   background: {
     flowershop: require('./background/flowershop.png'),
+    bodega: require('./background/bodega.png'),
   },
   bubbles: {
     flower: require('./bubbles/flower.png'),

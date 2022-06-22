@@ -12,7 +12,10 @@ export type RootStackParamList = {
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
   Desafio: {actividad: actividadNombre; tipo: desafioTipo};
+  Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
+  ConclusionStory: undefined;
   FinalQuiz: undefined;
+  ResultadoFinal: undefined;
   DynamicTable: undefined;
 };
 
