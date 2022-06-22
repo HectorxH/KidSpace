@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
+import {RSize} from '../../utils/responsive';
 
 interface CharacterSideProps {
   character: string;
@@ -13,6 +14,8 @@ const CharacterSide = ({
   mood,
   characterPosition,
 }: CharacterSideProps) => {
+  // let style =
+
   return (
     <View
       style={
@@ -29,7 +32,6 @@ const CharacterSide = ({
           source={character !== 'none' ? Images.character[character][mood] : {}}
         />
       </View>
-      <View style={styles.storyPad} />
     </View>
   );
 };
@@ -43,14 +45,12 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row-reverse',
   },
-  storyPad: {
-    flex: 7,
-  },
   characterContainer: {
-    flex: 3,
     flexDirection: 'column',
+    width: '30%',
   },
   characterImage: {
+    aspectRatio: 1.4,
     height: '100%',
     alignSelf: 'center',
     justifyContent: 'flex-end',
