@@ -95,7 +95,7 @@ const Answers = (props: AnswersProps) => {
 
 const styles = StyleSheet.create({
   horizontalContainer: {
-    marginVertical: RSize(0.02),
+    marginVertical: RSize(0.05, 'h'),
     flexDirection: 'row',
     justifyContent: 'space-around',
   },
@@ -125,19 +125,19 @@ const styles = StyleSheet.create({
   },
   answerText: {
     color: '#063D69',
-    fontSize: RSize(0.022),
+    fontSize: RSize(0.04, 'h'),
     textTransform: 'none',
     fontFamily: 'Poppins-Bold',
   },
   wrongAnswerText: {
     color: '#063D69',
-    fontSize: RSize(0.022),
+    fontSize: RSize(0.04, 'h'),
     textTransform: 'none',
     fontFamily: 'Poppins-Bold',
   },
   rightAnswerText: {
     color: 'white',
-    fontSize: RSize(0.022),
+    fontSize: RSize(0.04, 'h'),
     textTransform: 'none',
     fontFamily: 'Poppins-Bold',
   },

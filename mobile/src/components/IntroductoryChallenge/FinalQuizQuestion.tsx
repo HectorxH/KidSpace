@@ -42,14 +42,14 @@ const styles = StyleSheet.create({
   },
   preguntaText: {
     color: '#063D69',
-    fontSize: RSize(0.02),
+    fontSize: RSize(0.038, 'h'),
     fontWeight: 'bold',
     fontFamily: 'Poppins-Bold',
     justifyContent: 'center',
   },
   descripcionText: {
     color: '#063D69',
-    fontSize: RSize(0.02),
+    fontSize: RSize(0.035, 'h'),
     fontFamily: 'Poppins-Regular',
     justifyContent: 'center',
   },
