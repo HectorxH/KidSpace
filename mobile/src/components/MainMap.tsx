@@ -24,23 +24,23 @@ const User = {
 
 const Carreras = [
   {
-    title: 'Carera: Informatica',
+    title: 'Carrera: Informatica',
     desc: 'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Aventurate en el fascinante mundo de computación y tecnología.',
   },
   {
-    title: 'Carera: Diseño',
+    title: 'Carrera: Diseño',
     desc: 'La carrera del diseño abre las puertas a la expresión creativa, permitiendo plasmar distintas ideas, mensajes y emociones a través de la imagen y sonido.',
   },
   {
-    title: 'Carera: Nutrición',
+    title: 'Carrera: Nutrición',
     desc: '¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.',
   },
   {
-    title: 'Carera: Minería',
+    title: 'Carrera: Minería',
     desc: 'La tierra esconde muchos tesoros en su interior, como distintos metales y minerales. Aprenda sobre la carrera de minería que trata de extraer estos tesoros del suelo.',
   },
   {
-    title: 'Carera: Astronomía',
+    title: 'Carrera: Astronomía',
     desc: 'Astronomía es una carrera que se enfoca en el estudio de los cuerpos celestes: las estrellas, los planetas, meteoritos, galaxias y toda la materia interestelar.',
   },
 ];
@@ -225,13 +225,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: RSize(0.02,'h'),
+    marginTop: RSize(0.02, 'h'),
   },
   modalView: {
     margin: RSize(0.15, 'w'),
     backgroundColor: 'white',
     borderRadius: 20,
-    padding: RSize(0.03,'w'),
+    padding: RSize(0.03, 'w'),
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
