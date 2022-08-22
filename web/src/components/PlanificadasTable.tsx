@@ -9,6 +9,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
+import moment from 'moment-timezone';
 import actividadesDetails from '../mock/actividadesDetails';
 import { IPlanificada, IPlanificadas } from '../types/planificadas';
 import SinActividades from './SinActividades';
@@ -61,7 +62,8 @@ const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
   };
 
   const checkDisabled = () => {
-    const currentDate = new Date().toISOString().slice(0, 10);
+    const date = new Date();
+    const currentDate = moment(date).format('DD-MM-YYYY');
     return currentDate !== fecha;
   };
 
