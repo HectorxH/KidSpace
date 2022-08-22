@@ -21,12 +21,12 @@ const AsignarView = () => {
   const currentDate = new Date().toISOString().slice(0, 10);
   const [curso, setCurso] = React.useState('A');
   const [fecha, setFecha] = React.useState(currentDate);
-  const [fecha2, setFecha2] = React.useState(currentDate);
+  const [fechaShow, setFechaShow] = React.useState(currentDate);
   const [success, setSuccess] = React.useState(false);
   const handleFecha = (e : any) => {
     const date = moment(e).format('DD-MM-YYYY');
     setFecha(date);
-    setFecha2(e);
+    setFechaShow(e);
   };
   const handleBack = () => {
     navigate(-1);
@@ -83,7 +83,7 @@ const AsignarView = () => {
                 label="Fecha"
                 inputFormat="dd/MM/yyyy"
                 disablePast
-                value={fecha2}
+                value={fechaShow}
                 onChange={handleFecha}
                 renderInput={(props) => (
                   <TextField
