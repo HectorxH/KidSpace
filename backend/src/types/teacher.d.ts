@@ -1,8 +1,10 @@
 import { Request } from 'express';
 
-export interface IFavoritePostRequest extends Request {
+export interface IFavoritaPostRequest extends Request {
   body: {
-    activity_id: number,
-    favorite: boolean
+    nunidad: Number,
+    nactividad: Number,
+    titulo: String,
+    favorita: boolean
   }
 }

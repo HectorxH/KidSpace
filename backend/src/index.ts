@@ -1,28 +1,25 @@
 import express from 'express';
 import dotenv from 'dotenv-safe';
-// import mongoose from 'mongoose';
-// import teacherRouter from './routes/teacher';
-// import unitRouter from './routes/unit';
+import mongoose from 'mongoose';
 import cors from 'cors';
+import ProfesorRouter from './routes/Profesor';
 import ActivityRouter from './routes/Activity';
 
 dotenv.config();
 
-// const connString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}`
-//   + '@kidspace.l3bfoxn.mongodb.net/KidSpace?retryWrites=true&w=majority';
+const connString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}`
+  + '@kidspace.l3bfoxn.mongodb.net/KidSpace?retryWrites=true&w=majority';
 
-// mongoose.connect(connString);
+mongoose.connect(connString);
 
 const app = express();
-const port = 8080;
-// process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-// app.use('/teacher', teacherRouter);
-// app.use('/unit', unitRouter);
+app.use('/Profesor', ProfesorRouter);
 app.use('/Activity', ActivityRouter);
 
 app.get('/', (req, res) => {
