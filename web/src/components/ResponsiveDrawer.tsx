@@ -70,6 +70,12 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <HomeIcon />,
       path: '/login',
     },
+    {
+      uid: 6,
+      text: 'Registro',
+      icon: <HomeIcon />,
+      path: '/registro',
+    },
   ];
 
   let seccionActual = 'Pagina no encontrada';

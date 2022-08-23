@@ -9,31 +9,29 @@ import {
   Alert,
 } from '@mui/material';
 
-const LoginView = () => {
-  const [checked, setChecked] = useState(true);
+const RegistroView = () => {
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
   const handleClick = (event) => {
     let cuentas = localStorage.getItem('cuentas');
-    let valid = false;
+    let valid = true;
     if (cuentas === null) cuentas = '[]';
     const cuentasArray = JSON.parse(cuentas);
     for (let i = 0; i < cuentasArray.length; i += 1) {
       const cuenta = cuentasArray[i];
-      if (cuenta.username === username && cuenta.password === password) {
-        valid = true;
+      if (cuenta.username === username) {
+        valid = false;
       }
     }
+
     if (valid) {
       setCorrect(true);
       setError(false);
+      cuentasArray.push({ username, password });
+      localStorage.setItem('cuentas', JSON.stringify(cuentasArray));
     } else {
       setError(true);
       setCorrect(false);
@@ -65,29 +63,17 @@ const LoginView = () => {
             <TextField label="Password" type="password" onChange={handlePasswordChange} />
           </Grid>
           <Grid item xs={12}>
-            <FormControlLabel
-              control={(
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  inputProps={{ 'aria-label': 'primary checkbox' }}
-                />
-              )}
-              label="Keep me logged in"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button fullWidth onClick={handleClick}> Login </Button>
+            <Button fullWidth onClick={handleClick}> Registrar </Button>
           </Grid>
           <Grid item xs={12}>
             {correct && (
               <Alert severity="success">
-                Sesión Iniciada
+                Usuario registrado
               </Alert>
             )}
             {error && (
               <Alert severity="error">
-                Usuario o Contraseña Incorrecta
+                Datos invalidos
               </Alert>
             )}
           </Grid>
@@ -97,4 +83,4 @@ const LoginView = () => {
   );
 };
 
-export default LoginView;
+export default RegistroView;
