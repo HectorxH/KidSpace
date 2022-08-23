@@ -6,13 +6,20 @@ export interface IFavorita {
   titulo: String,
 }
 
+export interface IPlanificada {
+  nunidad: Number,
+  nactividad: Number,
+  curso: String,
+  fecha: Date,
+}
+
 export interface IProfesor {
     nombre: String,
     apellidos: String,
     mail: String,
     password: String,
     favoritas: Types.Array<IFavorita>,
-    planificadas: [],
+    planificadas: Types.Array<IPlanificada>,
 }
 
 export const teacherSchema = new Schema<IProfesor>({
@@ -24,7 +31,12 @@ export const teacherSchema = new Schema<IProfesor>({
     type: [{ nunidad: Number, nactividad: Number, titulo: String }],
     default: [],
   },
-  planificadas: [],
+  planificadas: {
+    type: [{
+      nunidad: Number, nactividad: Number, curso: String, fecha: Date,
+    }],
+    default: [],
+  },
 });
 
 export default model<IProfesor>('Profesor', teacherSchema);

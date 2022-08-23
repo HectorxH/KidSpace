@@ -1,10 +1,18 @@
 import { Request } from 'express';
 
-export interface IFavoritaPostRequest extends Request {
+export interface IFavoritaRequest extends Request {
   body: {
     nunidad: Number,
     nactividad: Number,
-    titulo: String,
-    favorita: boolean
+    titulo: String
+  }
+}
+
+export interface IPlanificadaRequest extends Request {
+  body: {
+    nunidad: Number,
+    nactividad: Number,
+    curso: String,
+    fecha: Date
   }
 }
