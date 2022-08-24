@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import {
-  Checkbox,
   Grid,
   TextField,
-  FormControlLabel,
   Paper,
   Button,
   Alert,
 } from '@mui/material';
+import axios from 'axios';
 
 const RegistroView = () => {
   const [username, setUsername] = useState({});
@@ -15,34 +14,50 @@ const RegistroView = () => {
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleClick = (event) => {
-    let cuentas = localStorage.getItem('cuentas');
-    let valid = true;
-    if (cuentas === null) cuentas = '[]';
-    const cuentasArray = JSON.parse(cuentas);
-    for (let i = 0; i < cuentasArray.length; i += 1) {
-      const cuenta = cuentasArray[i];
-      if (cuenta.username === username) {
-        valid = false;
+  const handleClick = async () => {
+    try {
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/register`,
+        { username, password, tipo: 'profesor' },
+      );
+      if (res.status === 200) {
+        setCorrect(true);
+        setError(false);
+      } else {
+        setError(true);
+        setCorrect(false);
       }
+    } catch (e) {
+      console.log(e);
     }
 
-    if (valid) {
-      setCorrect(true);
-      setError(false);
-      cuentasArray.push({ username, password });
-      localStorage.setItem('cuentas', JSON.stringify(cuentasArray));
-    } else {
-      setError(true);
-      setCorrect(false);
-    }
+    // let cuentas = localStorage.getItem('cuentas');
+    // let valid = true;
+    // if (cuentas === null) cuentas = '[]';
+    // const cuentasArray = JSON.parse(cuentas);
+    // for (let i = 0; i < cuentasArray.length; i += 1) {
+    //   const cuenta = cuentasArray[i];
+    //   if (cuenta.username === username) {
+    //     valid = false;
+    //   }
+    // }
+
+    // if (valid) {
+    //   setCorrect(true);
+    //   setError(false);
+    //   cuentasArray.push({ username, password });
+    //   localStorage.setItem('cuentas', JSON.stringify(cuentasArray));
+    // } else {
+    //   setError(true);
+    //   setCorrect(false);
+    // }
   };
 
-  const handleUsernameChange = (event) => {
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };
 
-  const handlePasswordChange = (event) => {
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 

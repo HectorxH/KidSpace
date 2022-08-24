@@ -16,11 +16,11 @@ const LoginView = () => {
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     let cuentas = localStorage.getItem('cuentas');
     let valid = false;
     if (cuentas === null) cuentas = '[]';
@@ -40,11 +40,11 @@ const LoginView = () => {
     }
   };
 
-  const handleUsernameChange = (event) => {
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setUsername(event.target.value);
   };
 
-  const handlePasswordChange = (event) => {
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 

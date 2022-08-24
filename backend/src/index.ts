@@ -11,6 +11,7 @@ import ActivityRouter from './routes/Activity';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
+import Profesor from './models/Profesor';
 
 dotenv.config();
 
@@ -37,13 +38,19 @@ app.use(passport.session());
 
 app.post('/register', async (req, res) => {
   try {
-    const { username, password, type } = req.body;
-    if (_.some({ username, password, type }, _.isNil)) {
+    const { username, password, tipo } = req.body;
+    if (_.some({ username, password, tipo }, _.isNil)) {
+      console.log(req.body);
       res.sendStatus(404);
     }
-    const hashedPass = bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPass, type });
+    const hashedPass = await bcrypt.hash(password, 10);
+    const user = new User({ username, password: hashedPass, tipo });
     await user.save();
+
+    if (user.tipo === 'profesor') {
+      const profesor = new Profesor({ uid: user._id });
+      await profesor.save();
+    }
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

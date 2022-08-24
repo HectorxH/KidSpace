@@ -21,7 +21,7 @@ export interface IProfesor {
   planificadas: Types.Array<IPlanificada>,
 }
 
-export const teacherSchema = new Schema<IProfesor>({
+export const profesorSchema = new Schema<IProfesor>({
   uid: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
@@ -39,4 +39,4 @@ export const teacherSchema = new Schema<IProfesor>({
   },
 });
 
-export default model<IProfesor>('Profesor', teacherSchema);
+export default model<IProfesor>('Profesor', profesorSchema);
