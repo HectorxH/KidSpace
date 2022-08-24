@@ -8,6 +8,7 @@ import {
   Button,
   Alert,
 } from '@mui/material';
+import axios from 'axios';
 
 const LoginView = () => {
   const [checked, setChecked] = useState(true);
@@ -20,23 +21,19 @@ const LoginView = () => {
     setChecked(event.target.checked);
   };
 
-  const handleClick = () => {
-    let cuentas = localStorage.getItem('cuentas');
-    let valid = false;
-    if (cuentas === null) cuentas = '[]';
-    const cuentasArray = JSON.parse(cuentas);
-    for (let i = 0; i < cuentasArray.length; i += 1) {
-      const cuenta = cuentasArray[i];
-      if (cuenta.username === username && cuenta.password === password) {
-        valid = true;
-      }
-    }
-    if (valid) {
+  const handleClick = async () => {
+    try {
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/login`,
+        { username, password },
+      );
+      console.log(res);
       setCorrect(true);
       setError(false);
-    } else {
-      setError(true);
+    } catch (e) {
       setCorrect(false);
+      setError(true);
+      console.log(e);
     }
   };
 

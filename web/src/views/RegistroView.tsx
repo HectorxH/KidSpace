@@ -20,37 +20,14 @@ const RegistroView = () => {
         `${process.env.REACT_APP_BACKEND_URL}/register`,
         { username, password, tipo: 'profesor' },
       );
-      if (res.status === 200) {
-        setCorrect(true);
-        setError(false);
-      } else {
-        setError(true);
-        setCorrect(false);
-      }
+      console.log(res);
+      setCorrect(true);
+      setError(false);
     } catch (e) {
+      setCorrect(false);
+      setError(true);
       console.log(e);
     }
-
-    // let cuentas = localStorage.getItem('cuentas');
-    // let valid = true;
-    // if (cuentas === null) cuentas = '[]';
-    // const cuentasArray = JSON.parse(cuentas);
-    // for (let i = 0; i < cuentasArray.length; i += 1) {
-    //   const cuenta = cuentasArray[i];
-    //   if (cuenta.username === username) {
-    //     valid = false;
-    //   }
-    // }
-
-    // if (valid) {
-    //   setCorrect(true);
-    //   setError(false);
-    //   cuentasArray.push({ username, password });
-    //   localStorage.setItem('cuentas', JSON.stringify(cuentasArray));
-    // } else {
-    //   setError(true);
-    //   setCorrect(false);
-    // }
   };
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
