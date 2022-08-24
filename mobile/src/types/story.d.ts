@@ -1,4 +1,17 @@
 export interface IPagina {
+  items: [{name: string; start: Int32Array; end: Int32Array}] | 'none';
+  bubbles: [{name: string; start: Int32Array; end: Int32Array}] | 'none';
+  textBoxes: [{start: Int32Array; end: Int32Array}] | 'none';
+  texts: [{text: string; start: Int32Array; end: Int32Array}] | 'none';
+  questions:
+    | [
+        {
+          rightAnswer: string;
+          answers: [{text: string; start: Int32Array; end: Int32Array}];
+        },
+      ]
+    | 'none';
+
   character: string;
   characterPosition: CharacterPosition;
   mood: string;

@@ -32,9 +32,15 @@ const ContinueButton = (props: ContinueButtonProps) => {
 
   function Continue() {
     if (answersCount >= answersNum) {
+      // if (tipo === 'introductory') {
+      //   navigation.push('CuentoInteractivo', {
+      //     actividad: 'diagramas',
+      //   });
+      // }
       if (tipo === 'introductory') {
-        navigation.push('CuentoInteractivo', {
+        navigation.push('Cuentos', {
           actividad: 'diagramas',
+          tipo: 'interactive',
         });
       }
       if (tipo === 'interactive') {

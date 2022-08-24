@@ -1,9 +1,10 @@
 import {ImageSourcePropType} from 'react-native';
 
 const images: {
-  bubbles: {[key: string]: ImageSourcePropType};
   background: {[key: string]: ImageSourcePropType};
+  items: {[key: string]: ImageSourcePropType};
   character: {[character: string]: {[mood: string]: ImageSourcePropType}};
+  bubbles: {[key: string]: ImageSourcePropType};
   icons: {
     [model: string]: {
       circular?: ImageSourcePropType;
@@ -11,6 +12,28 @@ const images: {
     };
   };
 } = {
+  items: {
+    DiegoSmile: require('./character/diego/diego_smile.png'),
+    DiegoHappy: require('./character/diego/diego_happy.png'),
+    DiegoTroubled: require('./character/diego/diego_troubled.png'),
+    DiegoBouquet: require('./character/diego/diego_happy.png'),
+    chart: require('./character/diego/diego_chart.png'),
+    paper: require('./character/extras/paper.png'),
+    grafico_barras: require('./character/extras/grafico_barras.png'),
+    grafico_circular: require('./character/extras/grafico_circular.png'),
+    flower: require('./bubbles/flower.png'),
+    bouquet: require('./bubbles/bouquet.png'),
+    idea: require('./bubbles/idea.png'),
+    money: require('./bubbles/money.png'),
+    question_mark: require('./bubbles/question_mark.png'),
+    calendar: require('./bubbles/calendar.png'),
+    flowers: require('./bubbles/flowers.png'),
+    fraction: require('./bubbles/fraction.png'),
+    questions: require('./bubbles/questions.png'),
+
+    normal: require('./character/menhera/menhera_normal.png'),
+    cry: require('./character/menhera/menhera_cry.png'),
+  },
   character: {
     Diego: {
       happy: require('./character/diego/diego_happy.png'),

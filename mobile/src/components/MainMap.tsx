@@ -68,9 +68,9 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
-            navigation.push('CuentoIntroductorio', {
+            navigation.push('Cuentos', {
               actividad: 'diagramas',
-              // tipo: 'introductory',
+              tipo: 'introductory',
               // tipo: 'interactive',
             })
           }>
@@ -93,7 +93,8 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
-            navigation.push('Conclusion', {
+            // navigation.push('Conclusion', {
+            navigation.push('Cuentos', {
               actividad: 'diagramas',
               tipo: 'interactive',
             })

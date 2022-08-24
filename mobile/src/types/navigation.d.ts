@@ -9,6 +9,7 @@ export type RootStackParamList = {
   Activity: {activity: IActivity};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
+  Cuentos: {actividad: actividadNombre; tipo: desafioTipo};
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
   Desafio: {actividad: actividadNombre; tipo: desafioTipo};
@@ -60,6 +61,11 @@ export type ConclusionStoryProps = NativeStackScreenProps<
   RootStackParamList,
   'ConclusionStory'
 >;
+export type CuentosProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Cuentos'
+>;
+
 export type ResultadoFinalProps = NativeStackScreenProps<
   RootStackParamList,
   'DynamicTable'
