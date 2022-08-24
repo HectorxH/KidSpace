@@ -1,32 +1,32 @@
 import { Schema, Types, model } from 'mongoose';
 
 export interface IFavorita {
-  nunidad: Number,
-  nactividad: Number,
-  titulo: String,
+  nunidad: number,
+  nactividad: number,
+  titulo: string,
 }
 
 export interface IPlanificada {
-  nunidad: Number,
-  nactividad: Number,
-  curso: String,
+  nunidad: number,
+  nactividad: number,
+  curso: string,
   fecha: Date,
 }
 
 export interface IProfesor {
-    nombre: String,
-    apellidos: String,
-    mail: String,
-    password: String,
-    favoritas: Types.Array<IFavorita>,
-    planificadas: Types.Array<IPlanificada>,
+  uid: any,
+  nombre: string,
+  apellidos: string,
+  favoritas: Types.Array<IFavorita>,
+  planificadas: Types.Array<IPlanificada>,
 }
 
 export const teacherSchema = new Schema<IProfesor>({
+  uid: {
+    type: Types.ObjectId, ref: 'User', unique: true, index: true,
+  },
   nombre: String,
   apellidos: String,
-  mail: String,
-  password: String,
   favoritas: {
     type: [{ nunidad: Number, nactividad: Number, titulo: String }],
     default: [],

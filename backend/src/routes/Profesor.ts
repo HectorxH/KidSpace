@@ -6,9 +6,9 @@ import Profesor from '../models/Profesor';
 
 const router = express.Router();
 
-router.get('/:id/favoritas', async (req, res) => {
+router.get('/favoritas', async (req, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const profesor = await Profesor.findById(id);
 
     if (profesor === null) {
@@ -22,9 +22,9 @@ router.get('/:id/favoritas', async (req, res) => {
   }
 });
 
-router.post('/:id/favoritas', async (req:IFavoritaRequest, res) => {
+router.post('/favoritas', async (req:IFavoritaRequest, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const {
       nunidad, nactividad, titulo,
     } = req.body;
@@ -44,9 +44,9 @@ router.post('/:id/favoritas', async (req:IFavoritaRequest, res) => {
   }
 });
 
-router.delete('/:id/favoritas', async (req:IFavoritaRequest, res) => {
+router.delete('/favoritas', async (req:IFavoritaRequest, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const { nunidad, nactividad, titulo } = req.body;
     const profesor = await Profesor.findById(id);
     const favorita = { nunidad, nactividad, titulo };
@@ -64,9 +64,9 @@ router.delete('/:id/favoritas', async (req:IFavoritaRequest, res) => {
   }
 });
 
-router.get('/:id/planificadas', async (req, res) => {
+router.get('/planificadas', async (req, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const profesor = await Profesor.findById(id);
 
     if (profesor === null) {
@@ -80,9 +80,9 @@ router.get('/:id/planificadas', async (req, res) => {
   }
 });
 
-router.post('/:id/planificadas', async (req:IPlanificadaRequest, res) => {
+router.post('/planificadas', async (req:IPlanificadaRequest, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const {
       nunidad, nactividad, curso, fecha,
     } = req.body;
@@ -104,9 +104,9 @@ router.post('/:id/planificadas', async (req:IPlanificadaRequest, res) => {
   }
 });
 
-router.delete('/:id/planificadas', async (req:IPlanificadaRequest, res) => {
+router.delete('/planificadas', async (req:IPlanificadaRequest, res) => {
   try {
-    const { id } = req.params;
+    const id = req.user?._id;
     const {
       nunidad, nactividad, curso, fecha,
     } = req.body;
