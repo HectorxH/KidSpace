@@ -8,6 +8,8 @@ import {
   Image,
   TouchableWithoutFeedback,
   Modal,
+  ScrollView,
+  Pressable,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -24,24 +26,43 @@ const User = {
 
 const Carreras = [
   {
+    id: 1,
     title: 'Carrera: Informatica',
     desc: 'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Aventurate en el fascinante mundo de computación y tecnología.',
+    marginTop: 0.2,
+    marginLeft: 0.05,
+    uri: require('../assets/map/informatica.png'),
   },
   {
+    id: 2,
     title: 'Carrera: Diseño',
     desc: 'La carrera del diseño abre las puertas a la expresión creativa, permitiendo plasmar distintas ideas, mensajes y emociones a través de la imagen y sonido.',
+    marginTop: 0.01,
+    marginLeft: 0.15,
+    uri: require('../assets/map/diseno.png'),
   },
   {
-    title: 'Carrera: Nutrición',
+    id: 3,
     desc: '¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.',
+    marginTop: 0,
+    marginLeft: 0.2,
+    uri: require('../assets/map/nutricion.png'),
   },
   {
+    id: 4,
     title: 'Carrera: Minería',
     desc: 'La tierra esconde muchos tesoros en su interior, como distintos metales y minerales. Aprenda sobre la carrera de minería que trata de extraer estos tesoros del suelo.',
+    marginTop: 0.09,
+    marginLeft: 0.1,
+    uri: require('../assets/map/mineria.png'),
   },
   {
+    id: 5,
     title: 'Carrera: Astronomía',
     desc: 'Astronomía es una carrera que se enfoca en el estudio de los cuerpos celestes: las estrellas, los planetas, meteoritos, galaxias y toda la materia interestelar.',
+    marginTop: 0,
+    marginLeft: 0.15,
+    uri: require('../assets/map/astronomia.png'),
   },
 ];
 
@@ -54,11 +75,15 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
-
+  const [title, setTitle] = useState('');
+  const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-
+  const handleTapUnidad = (event: any) => {
+    setModalVisible(!modalVisible);
+    setTitle(event.carrera.title);
+    setDesc(event.carrera.desc);
+  };
   const allMessages: IActivity[] = [];
-
   useEffect(() => {
     channel.bind('message', function (data: {message: IActivity}) {
       allMessages.push(data.message);
@@ -79,47 +104,85 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   return (
     <View style={styles.topView}>
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}>
+        <Pressable
+          onPress={() => {
+            setModalVisible(!modalVisible);
+          }}
+          style={styles.background}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.titleModal}>{title}</Text>
+              <Text style={styles.paragraph}>{desc}</Text>
+              <View>
+                <Button
+                  style={styles.buttonModal}
+                  color="#FF8A01"
+                  mode="contained"
+                  // onPress={() =>
+                  //   navigation.push('CuentoIntroductorio', {
+                  //     actividad: 'diagramas',
+                  //   })
+                  // }>
+                  onPress={() => setModalVisible(!modalVisible)}>
+                  <Text style={styles.textModalButton}>Acceder</Text>
+                </Button>
+              </View>
+            </View>
+          </View>
+        </Pressable>
+      </Modal>
       <ImageBackground style={styles.background} source={images.solo_cielo.uri}>
-        <View style={styles.view}>
-          <Chip style={styles.chip}>
-            <Text style={styles.title}> ¡Hola, {User.name}!</Text>
-          </Chip>
-        </View>
         <ImageBackground
           style={styles.background}
           source={images.edificios.uri}>
-          <Modal
-            animationType="fade"
-            transparent={true}
-            visible={modalVisible}
-            onRequestClose={() => {
-              setModalVisible(!modalVisible);
-            }}>
-            <View style={styles.centeredView}>
-              <View style={styles.modalView}>
-                <Text style={styles.titleModal}>{Carreras[4].title}</Text>
-                <Text style={styles.paragraph}>{Carreras[4].desc}</Text>
-                <View>
-                  <Button
-                    style={styles.buttonModal}
-                    color="#FF8A01"
-                    mode="contained"
-                    // onPress={() =>
-                    //   navigation.push('CuentoIntroductorio', {
-                    //     actividad: 'diagramas',
-                    //   })
-                    // }>
-                    onPress={() => setModalVisible(!modalVisible)}>
-                    <Text style={styles.textModalButton}>Acceder</Text>
-                  </Button>
-                </View>
+          <View style={styles.view}>
+            <Chip style={styles.chip}>
+              <Text style={styles.title}> ¡Hola, {User.name}!</Text>
+            </Chip>
+          </View>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            contentContainerStyle={{flexGrow: 1}}
+            style={{flex: 1}}>
+            <ImageBackground
+              resizeMode="cover"
+              style={{
+                flex: 1,
+              }}
+              source={images.ruta.uri}>
+              <View style={{flexDirection: 'row'}}>
+                {Carreras.map(carrera => (
+                  <>
+                    <View style={{flex: 1}}>
+                      <TouchableWithoutFeedback
+                        onPress={() => handleTapUnidad({carrera})}>
+                        <Image
+                          style={{
+                            // flex: 1,
+                            position: 'relative',
+                            width: 150,
+                            height: 150,
+                            resizeMode: 'contain',
+                            marginLeft: RSize(carrera.marginLeft, 'w'),
+                            marginTop: RSize(carrera.marginTop, 'h'),
+                          }}
+                          source={carrera.uri}
+                        />
+                      </TouchableWithoutFeedback>
+                    </View>
+                  </>
+                ))}
               </View>
-            </View>
-          </Modal>
-          <TouchableWithoutFeedback
-            onPress={() => setModalVisible(!modalVisible)}>
-            <Image style={styles.islas} source={images.astronomia.uri} />
-          </TouchableWithoutFeedback>
+            </ImageBackground>
+          </ScrollView>
           <View style={styles.containerButtons}>
             <Button
               style={styles.button}
@@ -203,6 +266,10 @@ const MainMap = ({navigation}: MainMapProps) => {
 };
 
 const styles = StyleSheet.create({
+  scrollView: {
+    marginHorizontal: RSize(0.01),
+    marginVertical: RSize(0.01),
+  },
   titleModal: {
     marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Bold',
@@ -252,23 +319,15 @@ const styles = StyleSheet.create({
     flex: 1,
     resizeMode: 'cover',
   },
-  islas: {
-    flex: 1,
-    width: 150,
-  },
   topView: {
     flex: 1,
-  },
-  view: {
-    flexDirection: 'row',
-    margin: RSize(0.03, 'h'),
   },
   image: {
     flex: 1,
     justifyContent: 'center',
   },
   containerButtons: {
-    flex: 1,
+    flex: 0.3,
     flexDirection: 'row',
     alignItems: 'flex-end',
   },
@@ -285,8 +344,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 4,
   },
+  view: {
+    flex: 0.19,
+    flexDirection: 'row',
+  },
   chip: {
     backgroundColor: '#FFFFFF',
+    flexDirection: 'row',
+    margin: RSize(0.02, 'h'),
   },
   title: {
     fontFamily: 'Poppins-Bold',
