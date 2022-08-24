@@ -64,6 +64,18 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <BarChartIcon />,
       path: '/estadisticas',
     },
+    {
+      uid: 5,
+      text: 'Login',
+      icon: <HomeIcon />,
+      path: '/login',
+    },
+    {
+      uid: 6,
+      text: 'Registro',
+      icon: <HomeIcon />,
+      path: '/registro',
+    },
   ];
 
   let seccionActual = 'Pagina no encontrada';
