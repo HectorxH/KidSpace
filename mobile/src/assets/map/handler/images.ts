@@ -19,6 +19,15 @@ const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   placeholder: {
     uri: require('../placeholder.png'),
   },
+  estrelladorada: {
+    uri: require('../estrelladorada.png'),
+  },
+  estrellagris: {
+    uri: require('../estrellagris.png'),
+  },
+  moneda: {
+    uri: require('../moneda.png'),
+  },
   cielo: {
     uri: require('../cielo_con_ruta.png'),
   },

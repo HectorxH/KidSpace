@@ -77,21 +77,22 @@ const Carreras = [
   },
   {
     id: 3,
+    title: 'Carrera: Nutición',
     img: 'nutricion',
     desc: '¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.',
     marginTop: 0,
     marginLeft: 0.2,
     stories: [
       {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
+        carrera: 'Carrera: Nutición',
+        img: 'nutricion',
         title: 'Historia de X',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         coins: 200,
       },
       {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
+        carrera: 'Carrera: Nutición',
+        img: 'nutricion',
         title: 'Historia de X',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         coins: 200,
@@ -147,7 +148,6 @@ const Carreras = [
     ],
   },
 ];
-
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',

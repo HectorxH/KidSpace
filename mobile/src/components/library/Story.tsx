@@ -1,5 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView, SafeAreaView} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  Image,
+} from 'react-native';
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
@@ -25,7 +32,7 @@ const Story = ({navigation, route}: any) => {
         <Card>
           <Card.Cover
             source={images[`${Info.img}`].uri}
-            style={{ height: RSize(0.7,'h')}}
+            style={{height: RSize(0.75, 'h'), borderRadius: 10}}
           />
         </Card>
       </View>
@@ -38,7 +45,17 @@ const Story = ({navigation, route}: any) => {
           </View>
           <View style={{flexDirection: 'row', justifyContent: 'flex-end'}}>
             <Chip style={styles.chip2}>
-              <Text style={styles.textChip2}>Ganas {Info.coins}</Text>
+              <Text style={styles.textChip2}>
+                Ganas{' '}
+                <Image
+                  source={images.moneda.uri}
+                  style={{
+                    width: RSize(0.06, 'h'),
+                    height: RSize(0.06, 'h'),
+                  }}
+                />{' '}
+                {Info.coins}
+              </Text>
             </Chip>
           </View>
         </View>
@@ -77,13 +94,15 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
-    margin: RSize(0.01),
+    marginBottom: RSize(0.01),
   },
   viewLeft: {
-    flex: 1.5,
+    flex: 1,
     backgroundColor: '#B878EA',
-    paddingLeft: RSize(0.01),
-    paddingRight: RSize(0.01),
+    paddingLeft: RSize(0.02),
+    paddingRight: RSize(0.02),
+    paddingTop: RSize(0.01),
+    paddingBottom: RSize(0.02),
   },
   viewText: {
     flex: 2,

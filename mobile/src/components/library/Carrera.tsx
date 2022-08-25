@@ -6,6 +6,7 @@ import {
   ScrollView,
   SafeAreaView,
   TouchableHighlight,
+  Image,
 } from 'react-native';
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -16,7 +17,6 @@ import {RSize} from '../../utils/responsive';
 const Carrera = ({navigation, route}: any) => {
   const {carrera} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  console.log(carrera.title);
   return (
     <View style={styles.container}>
       <View style={{flex: 1.2}}>
@@ -37,7 +37,12 @@ const Carrera = ({navigation, route}: any) => {
       </View>
       {carrera.stories.map(story => (
         <>
-          <View style={{flex: 1, margin: 5}}> 
+          <View
+            style={{
+              flex: 1,
+              marginTop: RSize(0.04, 'h'),
+              marginRight: RSize(0.03, 'h'),
+            }}>
             <TouchableHighlight
               onPress={() =>
                 navigation.push('Story', {
@@ -45,13 +50,24 @@ const Carrera = ({navigation, route}: any) => {
                 })
               }>
               <Card>
-                <Card.Cover source={images[`${story.img}`].uri}/>
-                {/* source={images[`${story.img}`].uri}  */}
-                {/* source={story.uri}  */}
+                <Card.Cover
+                  source={images[`${story.img}`].uri}
+                  style={{height: RSize(0.6, 'h')}}
+                />
                 <Text style={styles.title2}>{story.title}</Text>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                   <Chip style={styles.chip2}>
-                    <Text style={styles.textChip2}>Ganas {story.coins}</Text>
+                    <Text style={styles.textChip2}>
+                      Ganas{' '}
+                      <Image
+                        source={images.moneda.uri}
+                        style={{
+                          width: RSize(0.06, 'h'),
+                          height: RSize(0.06, 'h'),
+                        }}
+                      />{' '}
+                      {story.coins}
+                    </Text>
                   </Chip>
                 </View>
               </Card>
