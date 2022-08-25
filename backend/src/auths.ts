@@ -8,7 +8,7 @@ export function checkAuth(
   if (req.isAuthenticated()) {
     return next();
   }
-  return res.sendStatus(403);
+  return res.sendStatus(401);
 }
 
 export function checkNotAuth(
@@ -17,7 +17,7 @@ export function checkNotAuth(
   next: express.NextFunction,
 ) {
   if (req.isAuthenticated()) {
-    return res.sendStatus(403);
+    return res.sendStatus(401);
   }
   return next();
 }

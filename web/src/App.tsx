@@ -7,6 +7,7 @@ import {
 import './App.css';
 import { Helmet } from 'react-helmet';
 import { CssBaseline } from '@mui/material';
+import axios from 'axios';
 import Layout from './layout/Layout';
 import NotFoundView from './views/NotFoundView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
@@ -16,6 +17,8 @@ import PanelControlView from './views/PanelControlView';
 import LoginView from './views/LoginView';
 import RegistroView from './views/RegistroView';
 import AsignarView from './views/AsignarView';
+
+axios.defaults.withCredentials = true;
 
 const App = () => (
   <>

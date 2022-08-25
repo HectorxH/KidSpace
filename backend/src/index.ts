@@ -13,6 +13,8 @@ import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
 import Profesor from './models/Profesor';
 
+const MongoStore = require('connect-mongo');
+
 dotenv.config();
 
 const connString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}`
@@ -27,14 +29,25 @@ initPassport(passport);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://app.kidspace.live/'],
+  credentials: true,
+}));
 app.use(session({
   secret: process.env.SESSION_SECRET,
+  store: MongoStore.create({
+    mongoUrl: connString,
+    ttl: 7 * 24 * 60 * 60, // 7 dias
+  }),
   resave: false,
   saveUninitialized: false,
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use((req, res, next) => {
+  console.log(`${req.method}: ${req.url}`);
+  return next();
+});
 
 app.post('/register', async (req, res) => {
   try {
@@ -58,10 +71,30 @@ app.post('/register', async (req, res) => {
   }
 });
 
-app.post('/login', checkNotAuth, passport.authenticate('local', {
-  successRedirect: '/',
-  failureRedirect: '/login',
-}));
+app.get('/checkauth', checkAuth, (req, res) => {
+  res.json('Autenticado!');
+});
+
+app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    if (user?.tipo === 'profesor') {
+      const profesor = await Profesor.findOne({ uid: user._id });
+      if (profesor === null) {
+        res.send(500);
+      } else {
+        res.json({
+          username: user.username,
+          tipo: user.tipo,
+          nombres: profesor.nombre,
+          apellidos: profesor.apellidos,
+        });
+      }
+    }
+  } catch (e) {
+    console.log(e);
+  }
+});
 
 app.delete('/logout', checkAuth, (req, res, next) => {
   req.logOut((err) => {
