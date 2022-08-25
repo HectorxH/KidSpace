@@ -1,7 +1,13 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
 
-export type desafioTipo = 'introductory' | 'interactive';
+export type desafioTipo =
+  | 'CuentoIntroductorio'
+  | 'DesafioIntroductorio'
+  | 'CuentoInteractivo'
+  | 'DesafioCreativo'
+  | 'introductory'
+  | 'creative';
 export type actividadNombre = 'diagramas' | 'diseños';
 
 export type RootStackParamList = {
@@ -9,10 +15,13 @@ export type RootStackParamList = {
   Activity: {activity: IActivity};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
-  Cuentos: {actividad: actividadNombre; tipo: desafioTipo};
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
-  Desafio: {actividad: actividadNombre; tipo: desafioTipo};
+
+  Actividades: {actividad: actividadNombre; tipo: desafioTipo};
+  Cuentos: {actividad: actividadNombre; tipo: desafioTipo};
+  Desafios: {actividad: actividadNombre; tipo: desafioTipo};
+
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;
   FinalQuiz: undefined;
@@ -48,10 +57,20 @@ export type FinalQuizProps = NativeStackScreenProps<
   RootStackParamList,
   'FinalQuiz'
 >;
-export type DesafioProps = NativeStackScreenProps<
+
+export type ActividadesProps = NativeStackScreenProps<
   RootStackParamList,
-  'Desafio'
+  'Actividades'
 >;
+export type CuentosProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Cuentos'
+>;
+export type DesafiosProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Desafios'
+>;
+
 export type DynamicTableProps = NativeStackScreenProps<
   RootStackParamList,
   'DynamicTable'
@@ -61,11 +80,6 @@ export type ConclusionStoryProps = NativeStackScreenProps<
   RootStackParamList,
   'ConclusionStory'
 >;
-export type CuentosProps = NativeStackScreenProps<
-  RootStackParamList,
-  'Cuentos'
->;
-
 export type ResultadoFinalProps = NativeStackScreenProps<
   RootStackParamList,
   'DynamicTable'

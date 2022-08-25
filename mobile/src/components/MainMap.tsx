@@ -68,10 +68,10 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
-            navigation.push('Cuentos', {
-              // actividad: 'diagramas',
-              actividad: 'diseños',
-              tipo: 'introductory',
+            navigation.navigate('Actividades', {
+              actividad: 'diagramas',
+              // actividad: 'diseños',
+              tipo: 'CuentoIntroductorio',
               // tipo: 'interactive',
             })
           }>
@@ -95,10 +95,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             // navigation.push('Conclusion', {
-            navigation.push('Cuentos', {
+            // navigation.navigate('Desafios', {
+            navigation.navigate('Actividades', {
               // actividad: 'diagramas',
               actividad: 'diseños',
-              tipo: 'interactive',
+              tipo: 'CuentoIntroductorio',
             })
           }>
           <Text style={styles.subtitle}>Tienda</Text>

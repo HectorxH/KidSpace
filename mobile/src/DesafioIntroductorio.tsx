@@ -11,13 +11,13 @@ import ToggleButton from './components/IntroductoryChallenge/QuestionsButton';
 import ContinueButton from './components/IntroductoryChallenge/ContinueButton';
 import StoryNavigation from './components/StoryNavigation';
 import DynamicTable from './components/Tables/DynamicTable';
-import {DesafioProps} from './types/navigation';
+import {DesafiosProps} from './types/navigation';
 import {DesafioEstado, Vec3} from './types/activity';
 import {RSize} from './utils/responsive';
 import CellMenu from './components/Tables/CellMenu';
 import {Cell} from 'react-native-table-component';
 
-const Desafio = ({navigation, route}: DesafioProps) => {
+const Desafio = ({navigation, route}: DesafiosProps) => {
   const props = route.params;
   const actividad = props.actividad;
   const tipo = props.tipo;

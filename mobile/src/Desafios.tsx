@@ -14,13 +14,13 @@ import {
   RootStackParamList,
 } from './types/navigation';
 
-interface CuentosProps {
+interface DesafiosProps {
   tipo: desafioTipo;
   actividad: actividadNombre;
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 }
 
-const Cuentos = (props: CuentosProps) => {
+const Desafios = (props: DesafiosProps) => {
   const {actividad, tipo, navigation} = props;
   const story = Stories[actividad][tipo];
   const [pageNumber, setPageNumber] = useState(0);
@@ -100,4 +100,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Cuentos;
+export default Desafios;
