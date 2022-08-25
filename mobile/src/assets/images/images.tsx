@@ -13,14 +13,34 @@ const images: {
   };
 } = {
   items: {
+    // characters
     DiegoSmile: require('./character/diego/diego_smile.png'),
     DiegoHappy: require('./character/diego/diego_happy.png'),
     DiegoTroubled: require('./character/diego/diego_troubled.png'),
     DiegoBouquet: require('./character/diego/diego_happy.png'),
-    chart: require('./character/diego/diego_chart.png'),
-    paper: require('./character/extras/paper.png'),
-    grafico_barras: require('./character/extras/grafico_barras.png'),
-    grafico_circular: require('./character/extras/grafico_circular.png'),
+
+    LucaAngry: require('./character/luca/luca_angry.png'),
+    LucaHappy: require('./character/luca/luca_happy.png'),
+    LucaSmile: require('./character/luca/luca_smile.png'),
+
+    normal: require('./character/menhera/menhera_normal.png'),
+    cry: require('./character/menhera/menhera_cry.png'),
+
+    // extras
+    chart: require('./extras/chart.png'),
+    paper: require('./extras/paper.png'),
+
+    grafico_barras: require('./extras/grafico_barras.png'),
+    grafico_circular: require('./extras/grafico_circular.png'),
+
+    colorEmpotions: require('./extras/color-empotions.png'),
+    colorwheel: require('./extras/colorwheel.png'),
+    textureExample: require('./extras/texture-example.png'),
+    regaderaMalDiseñada: require('./extras/regaderaMalDiseñada.png'),
+    regaderaComparacion: require('./extras/regaderaComparacion.png'),
+    fork: require('./extras/fork.png'),
+
+    // bubbles
     flower: require('./bubbles/flower.png'),
     bouquet: require('./bubbles/bouquet.png'),
     idea: require('./bubbles/idea.png'),
@@ -31,43 +51,17 @@ const images: {
     fraction: require('./bubbles/fraction.png'),
     questions: require('./bubbles/questions.png'),
 
-    normal: require('./character/menhera/menhera_normal.png'),
-    cry: require('./character/menhera/menhera_cry.png'),
+    bubbleDesign: require('./bubbles/bubble-design.png'),
+    bubbleHands: require('./bubbles/bubble-hands.png'),
+    bubbleColors: require('./bubbles/bubble-colors.png'),
   },
-  character: {
-    Diego: {
-      happy: require('./character/diego/diego_happy.png'),
-      troubled: require('./character/diego/diego_troubled.png'),
-      smile: require('./character/diego/diego_smile.png'),
-      bouquet: require('./character/diego/diego_happy.png'),
-      chart: require('./character/diego/diego_chart.png'),
-    },
-    Menhera: {
-      normal: require('./character/menhera/menhera_normal.png'),
-      cry: require('./character/menhera/menhera_cry.png'),
-    },
-    extras: {
-      chart: require('./character/extras/chart.png'),
-      paper: require('./character/extras/paper.png'),
-      grafico_barras: require('./character/extras/grafico_barras.png'),
-      grafico_circular: require('./character/extras/grafico_circular.png'),
-    },
-  },
+
   background: {
     flowershop: require('./background/flowershop.png'),
     bodega: require('./background/bodega.png'),
+    lucaOffice: require('./background/luca-office.png'),
   },
-  bubbles: {
-    flower: require('./bubbles/flower.png'),
-    bouquet: require('./bubbles/bouquet.png'),
-    idea: require('./bubbles/idea.png'),
-    money: require('./bubbles/money.png'),
-    question_mark: require('./bubbles/question_mark.png'),
-    calendar: require('./bubbles/calendar.png'),
-    flowers: require('./bubbles/flowers.png'),
-    fraction: require('./bubbles/fraction.png'),
-    questions: require('./bubbles/questions.png'),
-  },
+
   icons: {
     barras: {
       circular: require('./icons/barras/circular.png'),
@@ -82,6 +76,37 @@ const images: {
     caja_margarita: {
       square: require('./icons/caja_margarita/square.png'),
     },
+  },
+  // old, borrar despues de mover
+  character: {
+    Diego: {
+      happy: require('./character/diego/diego_happy.png'),
+      troubled: require('./character/diego/diego_troubled.png'),
+      smile: require('./character/diego/diego_smile.png'),
+      bouquet: require('./character/diego/diego_happy.png'),
+      chart: require('./extras/chart.png'),
+    },
+    Menhera: {
+      normal: require('./character/menhera/menhera_normal.png'),
+      cry: require('./character/menhera/menhera_cry.png'),
+    },
+    extras: {
+      chart: require('./extras/chart_old.png'),
+      paper: require('./extras/paper.png'),
+      grafico_barras: require('./extras/grafico_barras.png'),
+      grafico_circular: require('./extras/grafico_circular.png'),
+    },
+  },
+  bubbles: {
+    flower: require('./bubbles/flower.png'),
+    bouquet: require('./bubbles/bouquet.png'),
+    idea: require('./bubbles/idea.png'),
+    money: require('./bubbles/money.png'),
+    question_mark: require('./bubbles/question_mark.png'),
+    calendar: require('./bubbles/calendar.png'),
+    flowers: require('./bubbles/flowers.png'),
+    fraction: require('./bubbles/fraction.png'),
+    questions: require('./bubbles/questions.png'),
   },
 };
 

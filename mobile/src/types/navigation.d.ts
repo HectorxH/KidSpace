@@ -2,7 +2,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
 
 export type desafioTipo = 'introductory' | 'interactive';
-export type actividadNombre = 'diagramas';
+export type actividadNombre = 'diagramas' | 'diseños';
 
 export type RootStackParamList = {
   MainMap: undefined;

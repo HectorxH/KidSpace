@@ -69,7 +69,8 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             navigation.push('Cuentos', {
-              actividad: 'diagramas',
+              // actividad: 'diagramas',
+              actividad: 'diseños',
               tipo: 'introductory',
               // tipo: 'interactive',
             })
@@ -95,7 +96,8 @@ const MainMap = ({navigation}: MainMapProps) => {
           onPress={() =>
             // navigation.push('Conclusion', {
             navigation.push('Cuentos', {
-              actividad: 'diagramas',
+              // actividad: 'diagramas',
+              actividad: 'diseños',
               tipo: 'interactive',
             })
           }>

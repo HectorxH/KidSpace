@@ -1,9 +1,34 @@
 [
   {
-    "background": "flowershop",
+    "background": "lucaOffice",
     "items": [
       {
-        "name": "DiegoSmile",
+        "name": "LucaHappy",
+        "start": [11, 2],
+        "end": [17, 20]
+      }
+    ],
+    "textBoxes": [
+      {
+        "start": [2, 4],
+        "end": [12, 16]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Luca se dedica al *diseño de productos*.",
+        "start": [3, 5],
+        "end": [11, 15]
+      }
+    ],
+    "bubbles": [],
+    "questions": []
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaSmile",
         "start": [1, 2],
         "end": [7, 20]
       }
@@ -16,25 +41,25 @@
     ],
     "texts": [
       {
-        "text": "Diego es un *florista*.",
+        "text": "Él sabe que un producto bien diseñado facilita su uso,",
         "start": [9, 5],
         "end": [17, 15]
       }
     ],
     "bubbles": [
       {
-        "name": "flower",
-        "start": [6, 0],
+        "name": "bubbleDesign",
+        "start": [5, 0],
         "end": [10, 7]  
       }
     ],
     "questions": []
   },
   {
-    "background": "flowershop",
+    "background": "lucaOffice",
     "items": [
       {
-        "name": "DiegoSmile",
+        "name": "LucaSmile",
         "start": [1, 2],
         "end": [7, 20]
       }
@@ -47,27 +72,27 @@
     ],
     "texts": [
       {
-        "text": "Desde chico le han gustado las flores,",
+        "text": "mientras que uno mal diseñado puede llegar a ser desagradable de utilizar.",
         "start": [9, 5],
         "end": [17, 15]
       }
     ],
     "bubbles": [
       {
-        "name": "flower",
-        "start": [6, 0],
+        "name": "bubbleDesign",
+        "start": [5, 0],
         "end": [10, 7]  
       }
     ],
     "questions": []
   },
   {
-    "background": "flowershop",
+    "background": "lucaOffice",
     "items": [
       {
-        "name": "DiegoHappy",
-        "start": [13, 2],
-        "end": [19, 20]
+        "name": "LucaHappy",
+        "start": [11, 2],
+        "end": [17, 20]
       }
     ],
     "textBoxes": [
@@ -78,94 +103,27 @@
     ],
     "texts": [
       {
-        "text": "y ahora Diego usa su creatividad para diseñar y vender arreglos florales.",
+        "text": "Por esto, cuando diseña, Luca elige los *colores* y las *texturas* con mucho cuidado.",
         "start": [3, 5],
         "end": [11, 15]
       }
     ],
     "bubbles": [
       {
-        "name": "idea",
-        "start": [10, 0],
-        "end": [15, 7]  
-      },
-      {
-        "name": "bouquet",
-        "start": [11, 9],
-        "end": [16, 18]  
+        "name": "bubbleColors",
+        "start": [16, 0],
+        "end": [20, 7]  
       }
     ],
     "questions": []
   },
   {
-    "background": "flowershop",
+    "background": "lucaOffice",
     "items": [
       {
-        "name": "DiegoTroubled",
-        "start": [13, 2],
-        "end": [19, 20]
-      }
-    ],
-    "textBoxes": [
-      {
-        "start": [2, 4],
-        "end": [12, 16]
-      }
-    ],
-    "texts": [
-      {
-        "text": "Diego abre su tienda de flores todos los días de la semana",
-        "start": [3, 5],
-        "end": [11, 15]
-      }
-    ],
-    "bubbles": [
-      {
-        "name": "money",
-        "start": [10, 0.5],
-        "end": [15, 7.5]  
-      }
-    ],
-    "questions": []
-  },
-  {
-    "background": "flowershop",
-    "items": [
-      {
-        "name": "DiegoTroubled",
-        "start": [13, 2],
-        "end": [19, 20]
-      }
-    ],
-    "textBoxes": [
-      {
-        "start": [2, 4],
-        "end": [12, 16]
-      }
-    ],
-    "texts": [
-      {
-        "text": "y el día domingo analiza cuántas flores logró vender.",
-        "start": [3, 5],
-        "end": [11, 15]
-      }
-    ],
-    "bubbles": [
-      {
-        "name": "money",
-        "start": [10, 0.5],
-        "end": [15, 7.5]  
-      }
-    ],
-    "questions": []
-  },
-  {
-    "background": "flowershop",
-    "items": [
-      {
-        "name": "chart",
-        "start": [0, 0],
-        "end": [8, 20]
+        "name": "colorwheel",
+        "start": [1, 0],
+        "end": [7, 20]
       }
     ],
     "textBoxes": [
@@ -176,7 +134,7 @@
     ],
     "texts": [
       {
-        "text": "Para esto Diego elabora un diagrama conocido como *gráfico de barras*.",
+        "text": "Percibimos los colores a través de la vista y estos nos hacen sentir distintas emociones.",
         "start": [9, 5],
         "end": [17, 15]
       }
@@ -185,11 +143,11 @@
     "questions": []
   },
   {
-    "background": "flowershop",
+    "background": "lucaOffice",
     "items": [
       {
-        "name": "DiegoTroubled",
-        "start": [1, 2],
+        "name": "colorEmpotions",
+        "start": [1, 0],
         "end": [7, 20]
       }
     ],
@@ -201,18 +159,93 @@
     ],
     "texts": [
       {
-        "text": "¿Puedes ayudar a Diego a *analizarlo*?",
+        "text": "Relacionamos el rojo con peligro o enojo, el amarillo con alegría y el negro con la tristeza.",
         "start": [9, 5],
         "end": [17, 15]
       }
     ],
-    "bubbles": [
+    "bubbles": [],
+    "questions": []
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
       {
-        "name": "question_mark",
-        "start": [6, 0.5],
-        "end": [9, 6] 
+        "name": "LucaHappy",
+        "start": [11, 2],
+        "end": [17, 20]
       }
     ],
+    "textBoxes": [
+      {
+        "start": [2, 4],
+        "end": [12, 16]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Percibimos las texturas a través del tacto.",
+        "start": [3, 5],
+        "end": [11, 15]
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHands",
+        "start": [16, 0],
+        "end": [20, 7]  
+      }
+    ],
+    "questions": []
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "textureExample",
+        "start": [13, 0],
+        "end": [19, 20]
+      }
+    ],
+    "textBoxes": [
+      {
+        "start": [2, 4],
+        "end": [12, 16]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un objeto puede ser listo, áspero, rugoso o suave",
+        "start": [3, 5],
+        "end": [11, 15]
+      }
+    ],
+    "bubbles": [],
+    "questions": []
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "textureExample",
+        "start": [13, 0],
+        "end": [19, 20]
+      }
+    ],
+    "textBoxes": [
+      {
+        "start": [2, 4],
+        "end": [12, 16]
+      }
+    ],
+    "texts": [
+      {
+        "text": "y cada una de sus partes puede tener una textura diferente según su uso.",
+        "start": [3, 5],
+        "end": [11, 15]
+      }
+    ],
+    "bubbles": [],
     "questions": []
   }
 ]
