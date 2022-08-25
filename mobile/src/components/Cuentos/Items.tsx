@@ -4,43 +4,41 @@ import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
 
 interface ItemsProps {
-  images: [{name: string; start: Int32Array; end: Int32Array}] | 'none';
+  images: [{name: string; start: number[]; end: number[]}] | [];
 }
 
 const Items = ({images}: ItemsProps) => {
-  if (images === 'none') {
+  if (images.length === 0) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      {images.map(
-        (item: {name: string; start: Int32Array; end: Int32Array}) => {
-          return (
-            <View
-              style={styles.overlay}
-              key={
-                item.name +
-                item.start[0].toString() +
-                item.start[1].toString() +
-                item.end[0].toString() +
-                item.end[1].toString()
-              }>
-              <Layout
-                object={item}
-                ObjectView={
-                  <Image
-                    style={styles.image}
-                    // resizeMode="cover"
-                    resizeMode="contain"
-                    source={Images.items[item.name]}
-                  />
-                }
-              />
-            </View>
-          );
-        },
-      )}
+      {images.map((item: {name: string; start: number[]; end: number[]}) => {
+        return (
+          <View
+            style={styles.overlay}
+            key={
+              item.name +
+              item.start[0].toString() +
+              item.start[1].toString() +
+              item.end[0].toString() +
+              item.end[1].toString()
+            }>
+            <Layout
+              object={item}
+              ObjectView={
+                <Image
+                  style={styles.image}
+                  // resizeMode="cover"
+                  resizeMode="contain"
+                  source={Images.items[item.name]}
+                />
+              }
+            />
+          </View>
+        );
+      })}
     </View>
   );
 };

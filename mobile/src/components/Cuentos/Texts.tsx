@@ -4,17 +4,17 @@ import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 
 interface TextsProps {
-  texts: [{text: string; start: Int32Array; end: Int32Array}] | 'none';
+  texts: [{text: string; start: number[]; end: number[]}] | [];
 }
 
 const Texts = ({texts}: TextsProps) => {
-  if (texts === 'none') {
+  if (texts.length === 0) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      {texts.map((text: {text: string; start: Int32Array; end: Int32Array}) => {
+      {texts.map((text: {text: string; start: number[]; end: number[]}) => {
         const message = (
           <Text style={styles.baseText}>
             {text.text.split('*').map((word: string, index: number) => {

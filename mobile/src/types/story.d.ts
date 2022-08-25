@@ -1,16 +1,16 @@
 export interface IPagina {
-  items: [{name: string; start: Int32Array; end: Int32Array}] | 'none';
-  bubbles: [{name: string; start: Int32Array; end: Int32Array}] | 'none';
-  textBoxes: [{start: Int32Array; end: Int32Array}] | 'none';
-  texts: [{text: string; start: Int32Array; end: Int32Array}] | 'none';
+  items: [{name: string; start: number[]; end: number[]}] | [];
+  bubbles: [{name: string; start: number[]; end: number[]}] | [];
+  textBoxes: [{start: number[]; end: number[]}] | [];
+  texts: [{text: string; start: number[]; end: number[]}] | [];
   questions:
     | [
         {
           rightAnswer: string;
-          answers: [{text: string; start: Int32Array; end: Int32Array}];
+          answers: [{text: string; start: number[]; end: number[]}];
         },
       ]
-    | 'none';
+    | [];
 
   character: string;
   characterPosition: CharacterPosition;

@@ -3,7 +3,7 @@ import {View, StyleSheet, StatusBar, ImageBackground} from 'react-native';
 import Items from './components/Cuentos/Items';
 import TextBoxes from './components/Cuentos/TextBoxes';
 import Texts from './components/Cuentos/Texts';
-// import Questions from './components/Cuentos/Questions';
+import Questions from './components/Cuentos/Questions';
 import StoryNavigation from './components/StoryNavigation';
 import Images from './assets/images/images';
 import Stories from './assets/stories/stories';
@@ -14,9 +14,16 @@ const Cuentos = ({navigation, route}: CuentosProps) => {
   const tipo = route.params.tipo;
   const story = Stories[actividad][tipo];
   const [pageNumber, setPageNumber] = useState(0);
-  const [canMove, setCanMove] = useState(0);
 
-  const tempAux = 1;
+  const [userAnswers, setUserAnswers] = useState(
+    story.map(s => s.questions.map(() => 0)),
+  );
+  const [pickedAnswers, setPickedAnswers] = useState(
+    story.map(s => s.questions.map(q => q.answers.map(() => 0))),
+  );
+
+  // const todoItems = todos.map((todo, index) => 1);
+  const [canMove, setCanMove] = useState(0);
 
   return (
     <View style={styles.container}>
@@ -42,13 +49,18 @@ const Cuentos = ({navigation, route}: CuentosProps) => {
           <Items images={story[pageNumber].bubbles} />
         </View>
         {/* Alternativas/Botones */}
-        {/* <View style={styles.overlay}>
-          <Questions alternativas={story[pageNumber].alternativas} />
-        </View> */}
+        <View style={styles.overlay}>
+          <Questions
+            questions={story[pageNumber].questions}
+            userAnswers={[userAnswers, setUserAnswers]}
+            pickedAnswers={[pickedAnswers, setPickedAnswers]}
+            pageNumber={pageNumber}
+          />
+        </View>
       </ImageBackground>
-      {canMove === 1 ||
-      tempAux === 1 ||
-      story[pageNumber].questions === 'none' ? (
+      {userAnswers[pageNumber].reduce(function (x, y) {
+        return Number(x) + Number(y);
+      }, 0) === userAnswers[pageNumber].length ? (
         <StoryNavigation
           storyLength={story.length}
           pageNumber={[pageNumber, setPageNumber]}

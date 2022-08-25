@@ -4,17 +4,17 @@ import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 
 interface TextBoxProps {
-  boxes: [{start: Int32Array; end: Int32Array}] | 'none';
+  boxes: [{start: number[]; end: number[]}] | [];
 }
 
 const TextBoxes = ({boxes}: TextBoxProps) => {
-  if (boxes === 'none') {
+  if (boxes.length === 0) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      {boxes.map((box: {start: Int32Array; end: Int32Array}) => {
+      {boxes.map((box: {start: number[]; end: number[]}) => {
         return (
           <View
             style={styles.overlay}

@@ -7,6 +7,7 @@ import {ReactStateSetter} from '../types/others';
 
 interface StoryNavigationProps {
   storyLength: number;
+  // userAnswers: number[];
   pageNumber: [number, ReactStateSetter<number>];
   canMove: [number, ReactStateSetter<number>];
   estado?: [DesafioEstado, ReactStateSetter<DesafioEstado>];
@@ -20,6 +21,14 @@ const StoryNavigation = (props: StoryNavigationProps) => {
   const [estado, setEstado] = props.estado
     ? props.estado
     : [undefined, undefined];
+
+  // if (
+  //   props.userAnswers.reduce(function (x, y) {
+  //     return Number(x) + Number(y);
+  //   }, 0) !== props.userAnswers.length
+  // ) {
+  //   return null;
+  // }
 
   function nextPageNumber() {
     if (pageNumber !== storyLength - 1) {
