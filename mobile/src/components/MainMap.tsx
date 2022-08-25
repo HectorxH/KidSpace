@@ -18,136 +18,12 @@ import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import {images} from '../assets/map/handler/images';
+import Carreras from '../assets/stories/carreras.json';
 
 const User = {
   key: 1,
   name: 'Renata',
 };
-
-const Carreras = [
-  {
-    id: 1,
-    img: 'informatica',
-    title: 'Carrera: Informática',
-    desc: 'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Aventurate en el fascinante mundo de computación y tecnología.',
-    desc2:
-      'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Conoce las historias de X e Y - personas apasionadas por su profesión.\n\n¡Completa cada historia para ganar las medallas y monedas!',
-    marginTop: 0.2,
-    marginLeft: 0.05,
-    stories: [
-      {
-        carrera: 'Carrera: Informática',
-        img: 'placeholder',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-      {
-        carrera: 'Carrera: Informática',
-        img: 'placeholder',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-    ],
-  },
-  {
-    id: 2,
-    img: 'diseno',
-    title: 'Carrera: Diseño',
-    desc: 'La carrera del diseño abre las puertas a la expresión creativa, permitiendo plasmar distintas ideas, mensajes y emociones a través de la imagen y sonido.',
-    marginTop: 0.01,
-    marginLeft: 0.15,
-    stories: [
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Carrera: Nutición',
-    img: 'nutricion',
-    desc: '¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.',
-    marginTop: 0,
-    marginLeft: 0.2,
-    stories: [
-      {
-        carrera: 'Carrera: Nutición',
-        img: 'nutricion',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-      {
-        carrera: 'Carrera: Nutición',
-        img: 'nutricion',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-    ],
-  },
-  {
-    id: 4,
-    img: 'mineria',
-    title: 'Carrera: Minería',
-    desc: 'La tierra esconde muchos tesoros en su interior, como distintos metales y minerales. Aprenda sobre la carrera de minería que trata de extraer estos tesoros del suelo.',
-    marginTop: 0.09,
-    marginLeft: 0.1,
-    stories: [
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-    ],
-  },
-  {
-    id: 5,
-    img: 'astronomia',
-    title: 'Carrera: Astronomía',
-    desc: 'Astronomía es una carrera que se enfoca en el estudio de los cuerpos celestes: las estrellas, los planetas, meteoritos, galaxias y toda la materia interestelar.',
-    marginTop: 0,
-    marginLeft: 0.15,
-    stories: [
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-      {
-        carrera: 'Carrera: Informática',
-        img: 'informatica',
-        title: 'Historia de X',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        coins: 200,
-      },
-    ],
-  },
-];
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',
@@ -155,6 +31,7 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation}: MainMapProps) => {
+  console.log(Carreras);
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
@@ -194,7 +71,7 @@ const MainMap = ({navigation}: MainMapProps) => {
         transparent={true}
         visible={modalVisible}
         onRequestClose={() => {
-          setModalVisible(!modalVisible);
+          setModalVisible(false);
         }}>
         <Pressable
           onPress={() => {
