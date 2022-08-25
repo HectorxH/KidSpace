@@ -17,6 +17,8 @@ import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
+import Carrera from './components/library/Carrera';
+import Story from './components/library/Story';
 import Conclusion from './components/Conclusion/Conclusion';
 import ConclusionStory from './components/Conclusion/ConclusionStory';
 import ResultadoFinal from './components/Conclusion/ResultadoFinal';
@@ -40,6 +42,16 @@ const App = () => {
         <Stack.Screen
           name="Activity"
           component={Activity}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Carrera"
+          component={Carrera}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Story"
+          component={Story}
           options={{headerShown: false}}
         />
         <Stack.Screen

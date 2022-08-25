@@ -16,6 +16,9 @@ const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   mineria: {
     uri: require('../mineria.png'),
   },
+  placeholder: {
+    uri: require('../placeholder.png'),
+  },
   cielo: {
     uri: require('../cielo_con_ruta.png'),
   },

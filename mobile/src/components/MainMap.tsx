@@ -27,44 +27,127 @@ const User = {
 const Carreras = [
   {
     id: 1,
-    title: 'Carrera: Informatica',
+    img: 'informatica',
+    title: 'Carrera: Informática',
     desc: 'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Aventurate en el fascinante mundo de computación y tecnología.',
+    desc2:
+      'La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Conoce las historias de X e Y - personas apasionadas por su profesión.\n\n¡Completa cada historia para ganar las medallas y monedas!',
     marginTop: 0.2,
     marginLeft: 0.05,
-    uri: require('../assets/map/informatica.png'),
+    stories: [
+      {
+        carrera: 'Carrera: Informática',
+        img: 'placeholder',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+      {
+        carrera: 'Carrera: Informática',
+        img: 'placeholder',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+    ],
   },
   {
     id: 2,
+    img: 'diseno',
     title: 'Carrera: Diseño',
     desc: 'La carrera del diseño abre las puertas a la expresión creativa, permitiendo plasmar distintas ideas, mensajes y emociones a través de la imagen y sonido.',
     marginTop: 0.01,
     marginLeft: 0.15,
-    uri: require('../assets/map/diseno.png'),
+    stories: [
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+    ],
   },
   {
     id: 3,
+    img: 'nutricion',
     desc: '¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.',
     marginTop: 0,
     marginLeft: 0.2,
-    uri: require('../assets/map/nutricion.png'),
+    stories: [
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+    ],
   },
   {
     id: 4,
+    img: 'mineria',
     title: 'Carrera: Minería',
     desc: 'La tierra esconde muchos tesoros en su interior, como distintos metales y minerales. Aprenda sobre la carrera de minería que trata de extraer estos tesoros del suelo.',
     marginTop: 0.09,
     marginLeft: 0.1,
-    uri: require('../assets/map/mineria.png'),
+    stories: [
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+    ],
   },
   {
     id: 5,
+    img: 'astronomia',
     title: 'Carrera: Astronomía',
     desc: 'Astronomía es una carrera que se enfoca en el estudio de los cuerpos celestes: las estrellas, los planetas, meteoritos, galaxias y toda la materia interestelar.',
     marginTop: 0,
     marginLeft: 0.15,
-    uri: require('../assets/map/astronomia.png'),
+    stories: [
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+      {
+        carrera: 'Carrera: Informática',
+        img: 'informatica',
+        title: 'Historia de X',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        coins: 200,
+      },
+    ],
   },
 ];
+
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',
@@ -78,10 +161,12 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
+  const [carrera, setCarrera] = useState('');
   const handleTapUnidad = (event: any) => {
     setModalVisible(!modalVisible);
     setTitle(event.carrera.title);
     setDesc(event.carrera.desc);
+    setCarrera(event.carrera);
   };
   const allMessages: IActivity[] = [];
   useEffect(() => {
@@ -125,12 +210,11 @@ const MainMap = ({navigation}: MainMapProps) => {
                   style={styles.buttonModal}
                   color="#FF8A01"
                   mode="contained"
-                  // onPress={() =>
-                  //   navigation.push('CuentoIntroductorio', {
-                  //     actividad: 'diagramas',
-                  //   })
-                  // }>
-                  onPress={() => setModalVisible(!modalVisible)}>
+                  onPress={() =>
+                    navigation.push('Carrera', {
+                      carrera: carrera,
+                    })
+                  }>
                   <Text style={styles.textModalButton}>Acceder</Text>
                 </Button>
               </View>
@@ -166,7 +250,6 @@ const MainMap = ({navigation}: MainMapProps) => {
                         onPress={() => handleTapUnidad({carrera})}>
                         <Image
                           style={{
-                            // flex: 1,
                             position: 'relative',
                             width: 150,
                             height: 150,
@@ -174,7 +257,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                             marginLeft: RSize(carrera.marginLeft, 'w'),
                             marginTop: RSize(carrera.marginTop, 'h'),
                           }}
-                          source={carrera.uri}
+                          source={images[`${carrera.img}`].uri}
                         />
                       </TouchableWithoutFeedback>
                     </View>
