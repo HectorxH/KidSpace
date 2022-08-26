@@ -1,3 +1,5 @@
+import {Story} from './story';
+
 export interface IActivity {
   nunidad: string;
   nactividad: string;
@@ -46,8 +48,10 @@ export type ButtonSetting = {
 
 export interface ActividadDetail {
   items: IItem[];
-  story: IDialogo[];
-  quiz: IPregunta[];
+  // story: IDialogo[];
+  story: Story;
+  quiz: Story;
+  // quiz: IPregunta[];
   settings: ButtonSetting[];
 }
 export type DesafioEstado = 'story' | 'items' | 'quiz' | 'desafio';

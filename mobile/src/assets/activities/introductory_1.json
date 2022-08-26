@@ -34,32 +34,139 @@
   "story":
   [
     {
-      "message": "Ayuda a Diego a *analizar el gráfico de las ventas*.",
-      "messagePosition": "center",
-      "spotlight": "none"
+      "background": "",
+      "items": [],
+      "textBoxes": [
+        {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      ],
+      "texts": [
+        {
+          "text": "Ayuda a Diego a *analizar el gráfico de las ventas*.",
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      ],
+      "bubbles": [],
+      "questions": []
     },
     {
-      "message": "En el menu de *inventario* podrás encontrar el gráfico. *Intenta dar click en su imágen*.",
-      "messagePosition": "center",
-      "spotlight": "inventory"
+      "background": "",
+      "items": [],
+      "textBoxes": [
+        {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      ],
+      "texts": [
+        {
+          "text": "En el menu de *inventario* podrás encontrar el gráfico. *Intenta dar click en su imágen*.",
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      ],
+      "bubbles": [],
+      "questions": []
     },
     {
-      "message": "Responda las preguntas sobre el gráfico, dando click en el botón en la *esquina superior izquierda*.",
-      "messagePosition": "center",
-      "spotlight": "preguntas"
+      "background": "",
+      "items": [],
+      "textBoxes": [
+        {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      ],
+      "texts": [
+        {
+          "text": "Responda las preguntas sobre el gráfico, dando click en el botón en la *esquina superior izquierda*.",
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      ],
+      "bubbles": [],
+      "questions": []
     }
   ],
   "quiz":
   [
     {
-      "question": "¿Cuántas margaritas vendió Diego el día sábado?",
-      "answers": ["25", "5", "35"],
-      "rightAnswer": "25"
-    },
-    {
-      "question": "¿Cuál de las dos flores se vendió más el fin de semana?",
-      "answers": ["Margaritas", "Ninguna", "Girasoles"],
-      "rightAnswer": "Girasoles"
+      "background": "",
+      "items": [],
+      "textBoxes": [
+        {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        }
+      ],
+      "texts": [
+        {
+          "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        {
+          "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        }
+      ],
+      "bubbles": [],
+      "questions": [
+        {
+          "tipo": "alternativas",
+          "rightChoice": "",
+          "choices": [],
+          "rightAnswer": ["25"],
+          "answers": [
+            {
+              "text": "25",
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            },
+            {
+              "text": "5",
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            },
+            {
+              "text": "35",
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          ]
+        },
+        {
+          "tipo": "alternativas",
+          "rightChoice": "",
+          "choices": [],
+          "rightAnswer": ["Girasoles"],
+          "answers": [
+            {
+              "text": "Margaritas",
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            },
+            {
+              "text": "Ninguna",
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            },
+            {
+              "text": "Girasoles",
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

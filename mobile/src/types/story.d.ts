@@ -1,4 +1,5 @@
 export interface IPagina {
+  background: string;
   items: [{name: string; start: number[]; end: number[]}] | [];
   bubbles: [{name: string; start: number[]; end: number[]}] | [];
   textBoxes: [{start: number[]; end: number[]}] | [];
@@ -6,7 +7,10 @@ export interface IPagina {
   questions:
     | [
         {
-          rightAnswer: string;
+          tipo: string;
+          rightChoice: string;
+          choices: [];
+          rightAnswer: [string];
           answers: [{text: string; start: number[]; end: number[]}];
         },
       ]
@@ -23,7 +27,6 @@ export interface IPagina {
   messageBubble: string;
   messageAnswers: [string, string, string] | 'none';
   rightAnswer: string;
-  background: string;
 }
 
 export type Story = IPagina[];

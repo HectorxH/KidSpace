@@ -1,13 +1,15 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React, {useState} from 'react';
 import {View, StyleSheet, StatusBar, ImageBackground} from 'react-native';
+
+import Stories from './assets/stories/stories';
+import Images from './assets/images/images';
 import Items from './components/Cuentos/Items';
 import TextBoxes from './components/Cuentos/TextBoxes';
 import Texts from './components/Cuentos/Texts';
 import Questions from './components/Cuentos/Questions';
 import ActNavigation from './components/Cuentos/ActNavigation';
-import Images from './assets/images/images';
-import Stories from './assets/stories/stories';
+
 import {
   actividadNombre,
   desafioTipo,
@@ -23,18 +25,23 @@ interface CuentosProps {
 const Cuentos = (props: CuentosProps) => {
   const {actividad, tipo, navigation} = props;
   const story = Stories[actividad][tipo];
+
   const [pageNumber, setPageNumber] = useState(0);
 
-  const [userAnswers, setUserAnswers] = useState<number[][]>(
+  // Variables para controlar avance en preguntas de alternativas
+  const [userAnswers, setUserAnswers] = useState<number[][][]>(
     typeof story !== 'undefined'
-      ? story.map(s => s.questions.map(() => 0))
-      : [[]],
+      ? story.map(s => s.questions.map(q => q.rightAnswer.map(() => 0)))
+      : [[[]]],
   );
   const [pickedAnswers, setPickedAnswers] = useState<number[][][]>(
     typeof story !== 'undefined'
       ? story.map(s => s.questions.map(q => q.answers.map(() => 0)))
       : [[[]]],
   );
+
+  // Variables para controlar avance en preguntas con dropdown
+  // pendiente
 
   return (
     <View style={styles.container}>

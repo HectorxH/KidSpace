@@ -3,8 +3,10 @@ const activities: {
   [key: string]: {[key: string]: ActividadDetail};
 } = {
   diagramas: {
-    introductory: require('./introductory_1.json'),
-    interactive: require('./interactive_1.json'),
+    DesafioIntroductorio: require('./introductory_1.json'),
+    DesafioCreativo: require('./interactive_1.json'),
+    introductory: require('./introductory_1_old.json'),
+    interactive: require('./interactive_1_old.json'),
   },
 };
 

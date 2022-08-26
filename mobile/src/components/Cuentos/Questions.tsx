@@ -7,12 +7,15 @@ interface QuestionsProps {
   questions:
     | [
         {
-          rightAnswer: string;
+          tipo: string;
+          rightChoice: string;
+          choices: [];
+          rightAnswer: [string];
           answers: [{text: string; start: number[]; end: number[]}];
         },
       ]
     | [];
-  userAnswers: [number[][], ReactStateSetter<number[][]>];
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pageNumber: number;
 }
@@ -27,7 +30,10 @@ const Questions = (props: QuestionsProps) => {
       {props.questions.map(
         (
           question: {
-            rightAnswer: string;
+            tipo: string;
+            rightChoice: string;
+            choices: [];
+            rightAnswer: [string];
             answers: [{text: string; start: number[]; end: number[]}];
           },
           index,

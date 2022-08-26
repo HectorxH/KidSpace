@@ -71,7 +71,10 @@ const MainMap = ({navigation}: MainMapProps) => {
             navigation.navigate('Actividades', {
               actividad: 'diagramas',
               // actividad: 'diseños',
-              tipo: 'CuentoIntroductorio',
+              // tipo: 'CuentoIntroductorio',
+              // tipo: 'CuentoInteractivo',
+              tipo: 'DesafioIntroductorio',
+              // tipo: 'DesafioCreativo',
               // tipo: 'interactive',
             })
           }>
@@ -95,11 +98,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             // navigation.push('Conclusion', {
-            // navigation.navigate('Desafios', {
-            navigation.navigate('Actividades', {
-              // actividad: 'diagramas',
-              actividad: 'diseños',
-              tipo: 'CuentoIntroductorio',
+            navigation.navigate('Desafios', {
+              // navigation.navigate('Actividades', {
+              actividad: 'diagramas',
+              // actividad: 'diseños',
+              tipo: 'introductory',
             })
           }>
           <Text style={styles.subtitle}>Tienda</Text>

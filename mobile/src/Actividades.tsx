@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {ActividadesProps, desafioTipo} from './types/navigation';
 import Cuentos from './Cuentos';
+import Desafios from './Desafios';
 
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const actividad = route.params.actividad;
@@ -21,7 +22,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       {cuentos.includes(tipo) ? (
         <Cuentos navigation={navigation} actividad={actividad} tipo={tipo} />
       ) : desafios.includes(tipo) ? (
-        <View />
+        <Desafios navigation={navigation} actividad={actividad} tipo={tipo} />
       ) : (
         <View />
       )}

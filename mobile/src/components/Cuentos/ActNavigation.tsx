@@ -12,7 +12,7 @@ import {ReactStateSetter} from '../../types/others';
 
 interface ActNavigationProps {
   storyLength: number;
-  userAnswers: number[];
+  userAnswers: number[][];
   tipo: desafioTipo;
   actividad: actividadNombre;
   pageNumber: [number, ReactStateSetter<number>];
@@ -32,13 +32,20 @@ const ActNavigation = (props: ActNavigationProps) => {
   ];
 
   // Se bloquea la navegación cuando aparecen preguntas sin responder en el cuento/desafio
-  if (
-    userAnswers.reduce(function (x, y) {
-      return Number(x) + Number(y);
-    }, 0) !== userAnswers.length
-  ) {
+  // Caso 1: cuando las respuestas son alternativas/seleccion multiple
+  var respuestasCorrectas = userAnswers
+    .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
+    .reduce((x, y) => Number(x) + Number(y), 0);
+  var cantidadRespuestas = userAnswers
+    .map(b => b.length)
+    .reduce((x, y) => Number(x) + Number(y), 0);
+
+  if (respuestasCorrectas !== cantidadRespuestas) {
     return null;
   }
+
+  // Caso 2: cuando las respuestas son opciones dentro de 1 dropdown
+  // pendiente
 
   function nextPageNumber() {
     if (pageNumber !== storyLength - 1) {

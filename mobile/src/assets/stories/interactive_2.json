@@ -74,7 +74,10 @@
     "bubbles": [],
     "questions": [
       {
-        "rightAnswer": "Es difícil de usar",
+        "tipo": "alternativas",
+        "rightChoice": "",
+        "choices": [],
+        "rightAnswer": ["Es difícil de usar"],
         "answers": [
           {
             "text": "Es difícil de usar",
@@ -170,7 +173,10 @@
     "bubbles": [],
     "questions": [
       {
-        "rightAnswer": "Es demasiado grueso",
+        "tipo": "alternativas",
+        "rightChoice": "",
+        "choices": [],
+        "rightAnswer": ["Es demasiado grueso"],
         "answers": [
           {
             "text": "Su color no es adecuado",

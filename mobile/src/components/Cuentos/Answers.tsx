@@ -7,10 +7,13 @@ import Layout from '../Utils/Layout';
 
 interface AnswersProps {
   question: {
-    rightAnswer: string;
+    tipo: string;
+    rightChoice: string;
+    choices: [];
+    rightAnswer: [string];
     answers: [{text: string; start: number[]; end: number[]}];
   };
-  userAnswers: [number[][], ReactStateSetter<number[][]>];
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pageNumber: number;
   answerNumber: number;
@@ -39,9 +42,10 @@ const Answers = (props: AnswersProps) => {
   function checkAnswer(answer: string, index: number) {
     let newUserAnswers = [...userAnswers];
     let newPickedAnswers = [...pickedAnswers];
-    if (answer === rightAnswer) {
+    if (rightAnswer.includes(answer)) {
+      let answerIndex = rightAnswer.indexOf(answer);
       newPickedAnswers[pageNumber][answerNumber][index] = 2;
-      newUserAnswers[pageNumber][answerNumber] = 1;
+      newUserAnswers[pageNumber][answerNumber][answerIndex] = 1;
       setUserAnswers(newUserAnswers);
     } else {
       newPickedAnswers[pageNumber][answerNumber][index] = 1;
