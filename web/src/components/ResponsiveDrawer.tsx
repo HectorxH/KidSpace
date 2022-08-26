@@ -22,7 +22,9 @@ import {
 } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { Menu, MenuItem } from '@mui/material';
+import { Button, Menu, MenuItem } from '@mui/material';
+import axios from 'axios';
+import { useAuth } from '../hooks/useAuth';
 
 const logo = require('../assets/logo.png');
 
@@ -35,6 +37,8 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
+  const { user, logout } = useAuth();
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -45,36 +49,42 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       text: 'Panel de control',
       icon: <HomeIcon />,
       path: '/',
+      visible: true,
     },
     {
       uid: 2,
       text: 'Cursos que dicto',
       icon: <HistoryEduIcon />,
       path: '/cursos',
+      visible: true,
     },
     {
       uid: 3,
       text: 'Actividades',
       icon: <MenuBookIcon />,
       path: '/actividades',
+      visible: true,
     },
     {
       uid: 4,
       text: 'Estadisticas',
       icon: <BarChartIcon />,
       path: '/estadisticas',
+      visible: true,
     },
     {
       uid: 5,
       text: 'Login',
       icon: <HomeIcon />,
       path: '/login',
+      visible: false,
     },
     {
       uid: 6,
       text: 'Registro',
       icon: <HomeIcon />,
       path: '/registro',
+      visible: false,
     },
   ];
 
@@ -102,10 +112,11 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({
-          uid, text, icon, path,
+          uid, text, icon, path, visible,
         }) => {
           const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
+          if (!visible) return (<div />);
           return (
             <ListItem
               disablePadding
@@ -147,6 +158,16 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     navigate(-1);
   };
 
+  const handleLogout = async () => {
+    try {
+      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/logout`);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+    logout();
+  };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <AppBar
@@ -180,10 +201,18 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {seccionActual}
           </Typography>
-
+          { user
+          && (
           <IconButton onClick={handleClick}>
             <AccountCircle />
           </IconButton>
+          )}
+          {!user && (
+            <>
+              <Button href="/login">Login</Button>
+              <Button href="/registro">Registrate</Button>
+            </>
+          )}
           <Menu
             id="demo-positioned-menu"
             aria-labelledby="demo-positioned-button"
@@ -199,7 +228,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
               horizontal: 'left',
             }}
           >
-            <MenuItem onClick={handleClose} component={Link} to="/logout">Logout</MenuItem>
+            <MenuItem onClick={() => { handleClose(); handleLogout(); }} component={Link} to="/login">Logout</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>

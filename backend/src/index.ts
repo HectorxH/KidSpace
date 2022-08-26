@@ -71,8 +71,8 @@ app.post('/register', async (req, res) => {
   }
 });
 
-app.get('/checkauth', checkAuth, (req, res) => {
-  res.json('Autenticado!');
+app.get('/checkauth', (req, res) => {
+  res.json({ auth: req.isAuthenticated() });
 });
 
 app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res) => {

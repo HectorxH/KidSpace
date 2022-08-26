@@ -9,6 +9,8 @@ import {
   Alert,
 } from '@mui/material';
 import axios from 'axios';
+import { useAuth } from '../hooks/useAuth';
+import { IUser } from '../types/user';
 
 const LoginView = () => {
   const [checked, setChecked] = useState(true);
@@ -17,16 +19,19 @@ const LoginView = () => {
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
+  const { login } = useAuth();
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
 
   const handleClick = async () => {
     try {
-      const res = await axios.post(
+      const res = await axios.post<any, {data: IUser}>(
         `${process.env.REACT_APP_BACKEND_URL}/login`,
         { username, password },
       );
+      login(res.data);
       console.log(res);
       setCorrect(true);
       setError(false);

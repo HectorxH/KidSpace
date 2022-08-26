@@ -17,7 +17,7 @@ const RegistroView = () => {
   const handleClick = async () => {
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/register`,
+        `${process.env.REACT_APP_BACKEND_URL}/registro`,
         {
           username, password, tipo: 'profesor',
         },
