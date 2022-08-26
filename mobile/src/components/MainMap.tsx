@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
@@ -7,23 +7,33 @@ import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
-
-const User = {
-  key: 1,
-  name: 'Renata',
-};
+import {useFocusEffect} from '@react-navigation/native';
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');
 
-const MainMap = ({navigation}: MainMapProps) => {
+const MainMap = ({navigation, route}: MainMapProps) => {
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
+  const [user, setUser] = useState({key: 1, name: 'Renata'});
 
   const allMessages: IActivity[] = [];
+
+  useFocusEffect(
+    useCallback(() => {
+      if (route.params === undefined) {
+        return;
+      }
+      setUser({
+        key: 2,
+        name: JSON.parse(route.params.event.data).name,
+      });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [route]),
+  );
 
   useEffect(() => {
     channel.bind('message', function (data: {message: IActivity}) {
@@ -47,7 +57,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     <View style={styles.topView}>
       <View style={styles.view}>
         <Chip style={styles.chip}>
-          <Text style={styles.title}> ¡Hola, {User.name}!</Text>
+          <Text style={styles.title}> ¡Hola, {user.name}!</Text>
         </Chip>
       </View>
       <View style={styles.containerButtons}>
@@ -92,12 +102,7 @@ const MainMap = ({navigation}: MainMapProps) => {
             />
           )}
           contentStyle={{flexDirection: 'column'}}
-          onPress={() =>
-            navigation.push('Conclusion', {
-              actividad: 'diagramas',
-              tipo: 'interactive',
-            })
-          }>
+          onPress={() => navigation.push('Qr')}>
           <Text style={styles.subtitle}>Tienda</Text>
         </Button>
         <View style={styles.rightButtonView}>

@@ -14,6 +14,7 @@ import UnidadView from './views/UnidadView';
 import DescripcionActividadView from './views/DescipcionActividadView';
 import PanelControlView from './views/PanelControlView';
 import AsignarView from './views/AsignarView';
+import Qr from './views/Qr';
 
 const App = () => (
   <>
@@ -31,6 +32,7 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<PanelControlView />} />
+          <Route path="/qrcode" element={<Qr />} />
           <Route path="/cursos" />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
           <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
