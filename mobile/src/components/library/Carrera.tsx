@@ -11,6 +11,7 @@ import {
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
+import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 // import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
@@ -51,8 +52,8 @@ const Carrera = ({navigation, route}: any) => {
               }>
               <Card>
                 <Card.Cover
-                  source={images[`${story.img}`].uri}
-                  style={{height: RSize(0.6, 'h')}}
+                  source={imagesPersonajes[`${story.img}`].uri}
+                  style={{height: RSize(0.63, 'h')}}
                 />
                 <Text style={styles.title2}>{story.title}</Text>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
@@ -114,14 +115,13 @@ const styles = StyleSheet.create({
   },
   chip2: {
     backgroundColor: '#EFEFEF',
-    margin: RSize(0.02, 'h'),
+    marginBottom: RSize(0.02, 'h'),
   },
   textChip2: {
     marginLeft: RSize(0.015),
     fontFamily: 'Poppins-SemiBold',
     fontSize: RSize(0.019),
     textAlign: 'left',
-    marginTop: RSize(0.001, 'h'),
     marginBottom: RSize(0.001, 'h'),
   },
 });

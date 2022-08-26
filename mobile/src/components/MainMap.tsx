@@ -31,7 +31,6 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation}: MainMapProps) => {
-  console.log(Carreras);
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);

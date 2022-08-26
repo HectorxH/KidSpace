@@ -10,13 +10,13 @@ import {
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
+import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 // import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Story = ({navigation, route}: any) => {
   const {Info} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  // const coins = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   console.log(Info.title);
   return (
     <View style={styles.container}>
@@ -31,7 +31,7 @@ const Story = ({navigation, route}: any) => {
         </View>
         <Card>
           <Card.Cover
-            source={images[`${Info.img}`].uri}
+            source={imagesPersonajes[`${Info.img}`].uri}
             style={{height: RSize(0.75, 'h'), borderRadius: 10}}
           />
         </Card>

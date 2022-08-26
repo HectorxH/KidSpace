@@ -10,14 +10,14 @@
     "stories":[
       {
         "carrera":"Carrera: Informática",
-        "img":"placeholder2",
+        "img":"portada_inf1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
         "carrera":"Carrera: Informática",
-        "img":"placeholder2",
+        "img":"portada_inf2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
@@ -33,15 +33,15 @@
     "marginLeft":0.15,
     "stories":[
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Diseño",
+        "img":"portada_dis1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Diseño",
+        "img":"portada_dis2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
@@ -57,15 +57,15 @@
     "marginLeft":0.2,
     "stories":[
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Nutición",
+        "img":"portada_nut1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Nutición",
+        "img":"portada_nut2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
@@ -81,15 +81,15 @@
     "marginLeft":0.1,
     "stories":[
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Minería",
+        "img":"portada_min1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Minería",
+        "img":"portada_min2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
@@ -105,15 +105,15 @@
     "marginLeft":0.15,
     "stories": [
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Astronomía",
+        "img":"portada_astr1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
-        "carrera":"Carrera: Informática",
-        "img":"informatica",
+        "carrera":"Carrera: Astronomía",
+        "img":"portada_astr2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
