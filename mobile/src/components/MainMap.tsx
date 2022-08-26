@@ -6,10 +6,10 @@ import {
   StyleSheet,
   ImageBackground,
   Image,
-  TouchableWithoutFeedback,
   Modal,
   ScrollView,
   Pressable,
+  Animated,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -37,12 +37,12 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
-  const [carrera, setCarrera] = useState('');
+  const [unidadCarrera, setUnidadCarrera] = useState('');
   const handleTapUnidad = (event: any) => {
-    setModalVisible(!modalVisible);
+    setModalVisible(true);
     setTitle(event.carrera.title);
     setDesc(event.carrera.desc);
-    setCarrera(event.carrera);
+    setUnidadCarrera(event.carrera);
   };
   const allMessages: IActivity[] = [];
   useEffect(() => {
@@ -62,6 +62,23 @@ const MainMap = ({navigation}: MainMapProps) => {
       navigation.push('NoAvailableActivities');
     }
   };
+
+  const HandleCarrera = (event: any) => {
+    navigation.push('Carrera', {
+      carrera: event.unidadCarrera,
+    });
+    setModalVisible(false);
+  };
+
+  // const animated = new Animated.Value(0);
+  // const Animacion = () => {
+  //   Animated.loop(
+  //     Animated.timing(animatedValue, {
+  //       toValue: -100,
+  //       duration: 3000,
+  //     }),
+  //   ).start();
+  // };
 
   return (
     <View style={styles.topView}>
@@ -86,11 +103,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                   style={styles.buttonModal}
                   color="#FF8A01"
                   mode="contained"
-                  onPress={() =>
-                    navigation.push('Carrera', {
-                      carrera: carrera,
-                    })
-                  }>
+                  onPress={() => HandleCarrera({unidadCarrera})}>
                   <Text style={styles.textModalButton}>Acceder</Text>
                 </Button>
               </View>
@@ -122,7 +135,16 @@ const MainMap = ({navigation}: MainMapProps) => {
                 {Carreras.map(carrera => (
                   <>
                     <View style={{flex: 1}}>
-                      <TouchableWithoutFeedback
+                      {/* <Animated.View
+                        style={{
+                          marginLeft: 5,
+                          marginRight: 5,
+                          backgroundColor: 'blue',
+                          width: 100,
+                        }}
+                      /> */}
+                      <Pressable
+                        // onPressIn={fadeIn}
                         onPress={() => handleTapUnidad({carrera})}>
                         <Image
                           style={{
@@ -135,7 +157,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                           }}
                           source={images[`${carrera.img}`].uri}
                         />
-                      </TouchableWithoutFeedback>
+                      </Pressable>
                     </View>
                   </>
                 ))}
@@ -348,3 +370,9 @@ const styles = StyleSheet.create({
 });
 
 export default MainMap;
+function animatedValue(
+  animatedValue: any,
+  arg1: {toValue: number; duration: number},
+): Animated.CompositeAnimation {
+  throw new Error('Function not implemented.');
+}

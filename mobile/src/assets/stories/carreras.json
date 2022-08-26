@@ -50,21 +50,21 @@
   },
   {
     "id":3,
-    "title":"Carrera: Nutición",
+    "title":"Carrera: Nutrición",
     "img":"nutricion",
     "desc":"¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.",
     "marginTop":0,
     "marginLeft":0.2,
     "stories":[
       {
-        "carrera":"Carrera: Nutición",
+        "carrera":"Carrera: Nutrición",
         "img":"portada_nut1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200
       },
       {
-        "carrera":"Carrera: Nutición",
+        "carrera":"Carrera: Nutrición",
         "img":"portada_nut2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
