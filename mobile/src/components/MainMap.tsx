@@ -11,6 +11,7 @@ import {
   Pressable,
   Animated,
   TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -149,7 +150,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                           marginLeft: RSize(carrera.marginLeft, 'w'),
                           marginTop: RSize(carrera.marginTop, 'h'),
                         }}>
-                        <TouchableHighlight
+                        <TouchableOpacity
                           key={id}
                           style={{borderRadius: 99}}
                           onPress={() => handleTapUnidad({carrera})}>
@@ -162,7 +163,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                             }}
                             source={images[`${carrera.img}`].uri}
                           />
-                        </TouchableHighlight>
+                        </TouchableOpacity>
                       </View>
                     </View>
                   </>
