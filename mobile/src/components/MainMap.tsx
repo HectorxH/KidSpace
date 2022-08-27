@@ -10,6 +10,7 @@ import {
   ScrollView,
   Pressable,
   Animated,
+  TouchableHighlight,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -143,22 +144,26 @@ const MainMap = ({navigation}: MainMapProps) => {
                           width: 100,
                         }}
                       /> */}
-                      <Pressable
-                        key={id}
-                        // onPressIn={fadeIn}
-                        onPress={() => handleTapUnidad({carrera})}>
-                        <Image
-                          style={{
-                            position: 'relative',
-                            width: 150,
-                            height: 150,
-                            resizeMode: 'contain',
-                            marginLeft: RSize(carrera.marginLeft, 'w'),
-                            marginTop: RSize(carrera.marginTop, 'h'),
-                          }}
-                          source={images[`${carrera.img}`].uri}
-                        />
-                      </Pressable>
+                      <View
+                        style={{
+                          marginLeft: RSize(carrera.marginLeft, 'w'),
+                          marginTop: RSize(carrera.marginTop, 'h'),
+                        }}>
+                        <TouchableHighlight
+                          key={id}
+                          style={{borderRadius: 99}}
+                          onPress={() => handleTapUnidad({carrera})}>
+                          <Image
+                            style={{
+                              position: 'relative',
+                              width: 150,
+                              height: 150,
+                              overflow: 'hidden',
+                            }}
+                            source={images[`${carrera.img}`].uri}
+                          />
+                        </TouchableHighlight>
+                      </View>
                     </View>
                   </>
                 ))}
