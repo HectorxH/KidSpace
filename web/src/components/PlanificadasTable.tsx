@@ -9,10 +9,12 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
+import moment from 'moment';
 import actividadesDetails from '../mock/actividadesDetails';
 import { IPlanificada, IPlanificadas } from '../types/planificadas';
 import SinActividades from './SinActividades';
 import { IActividadDetail } from '../types/actividad';
+import { useAuth } from '../hooks/useAuth';
 
 interface RowParams {
   row: IPlanificada,
@@ -29,7 +31,7 @@ const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
   :IniciarButtonParams) => {
   const [openTooltip, setOpenTooltip] = React.useState(false);
   const [openDialog, setOpenDialog] = React.useState(false);
-  const { fecha } = planificada;
+  const fecha = moment(planificada.fecha);
 
   const handleTooltipClose = () => {
     setOpenTooltip(false);
@@ -61,8 +63,8 @@ const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
   };
 
   const checkDisabled = () => {
-    const currentDate = new Date().toISOString().slice(0, 10);
-    return currentDate !== fecha;
+    const currentDate = moment();
+    return !fecha.isSame(currentDate, 'day');
   };
 
   return (
@@ -123,9 +125,8 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
   const {
     nactividad, nunidad, curso, fecha,
   } = row;
-  const actividad = _.find(actividadesDetails, { nactividad });
+  const actividad = _.find(actividadesDetails, { nactividad, nunidad });
   if (actividad === undefined) {
-    eliminarAsignacion(row);
     return null;
   }
   const navigate = useNavigate();
@@ -143,7 +144,7 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
         {actividad?.titulo}
       </TableCell>
       <TableCell>{curso}</TableCell>
-      <TableCell>{fecha}</TableCell>
+      <TableCell>{moment(fecha).format('DD/MM/YYYY')}</TableCell>
       <TableCell>
         <Stack direction="row">
           <IniciarButton
@@ -168,10 +169,16 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
 const PlanificadasTable = (
   { rows, updatePlanificadas }: { rows: IPlanificadas, updatePlanificadas: Function },
 ) => {
-  const eliminarAsignacion = (actividadPlanificada: IPlanificada) => {
-    const planificadas = JSON.parse(localStorage.getItem('planificadas') || '');
-    _.remove(planificadas, actividadPlanificada);
-    localStorage.setItem('planificadas', JSON.stringify(planificadas));
+  const { logout } = useAuth();
+  const eliminarAsignacion = async (actividadPlanificada: IPlanificada) => {
+    try {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Profesor/planificadas`, { del: true, ...actividadPlanificada });
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+        logout();
+      }
+    }
     updatePlanificadas();
   };
 
@@ -196,10 +203,10 @@ const PlanificadasTable = (
         </TableHead>
         <TableBody sx={{ justifyContent: 'center' }}>
           {(rows.length === 0
-            ? ''
+            ? <TableRow />
             : rows.map((row) => (
               <Row
-                key={row.nactividad}
+                key={row.fecha}
                 row={row}
                 eliminarAsignacion={eliminarAsignacion}
               />

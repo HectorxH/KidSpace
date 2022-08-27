@@ -1,7 +1,7 @@
 import { IActividad } from './actividad';
 
 export interface IUnidad {
-  nunidad: string,
+  nunidad: number,
   img: string,
   path: string,
   title: string,
@@ -9,7 +9,7 @@ export interface IUnidad {
 }
 
 export interface IUnidadDetail {
-  nunidad: string,
+  nunidad: number,
   unidad: string,
   titulo: string,
   descripcion: string,

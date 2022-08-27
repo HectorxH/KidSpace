@@ -2,38 +2,44 @@ import {
   Box, Button, MenuItem,
   TextField, Typography, Theme, Stack,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import axios from 'axios';
 import NotFoundView from './NotFoundView';
-import { IPlanificada } from '../types/planificadas';
+import { useAuth } from '../hooks/useAuth';
 
 const AsignarView = () => {
   const navigate = useNavigate();
   const params = useParams();
-  const { nunidad, nactividad } = params;
-  if (typeof nunidad === 'undefined') return <NotFoundView />;
-  if (typeof nactividad === 'undefined') return <NotFoundView />;
+  if (typeof params.nunidad === 'undefined') return <NotFoundView />;
+  if (typeof params.nactividad === 'undefined') return <NotFoundView />;
+  const nunidad = Number(params.nunidad);
+  const nactividad = Number(params.nactividad);
+
+  const { logout } = useAuth();
+
   const currentDate = new Date().toISOString().slice(0, 10);
-  const [curso, setCurso] = React.useState('A');
-  const [fecha, setFecha] = React.useState(currentDate);
-  const [success, setSuccess] = React.useState(false);
+  const [curso, setCurso] = useState('A');
+  const [fecha, setFecha] = useState(currentDate);
+  const [success, setSuccess] = useState(false);
   const handleBack = () => {
     navigate(-1);
   };
-  const handleSubmit : React.FormEventHandler = (e) => {
+  const handleSubmit : React.FormEventHandler = async (e) => {
     e.preventDefault();
-    const asignacion : IPlanificada = {
-      nactividad, nunidad, curso, fecha,
+    const req = {
+      nactividad, nunidad, curso, fecha, del: false,
     };
 
-    let asignadas = localStorage.getItem('planificadas');
-    if (asignadas === null) asignadas = '[]';
-
-    const asignadasArray : IPlanificada[] = JSON.parse(asignadas);
-    asignadasArray.push(asignacion);
-
-    localStorage.setItem('planificadas', JSON.stringify(asignadasArray));
+    try {
+      await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Profesor/planificadas`, req);
+    } catch (err) {
+      console.log(err);
+      if (axios.isAxiosError(err) && err.response && err.response.status === 401) {
+        logout();
+      }
+    }
     setSuccess(true);
     setTimeout(handleBack, 1200);
   };

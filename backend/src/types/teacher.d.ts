@@ -2,17 +2,18 @@ import { Request } from 'express';
 
 export interface IFavoritaRequest extends Request {
   body: {
-    nunidad: Number,
-    nactividad: Number,
-    titulo: String
+    nunidad: number,
+    nactividad: number,
+    del?: boolean
   }
 }
 
 export interface IPlanificadaRequest extends Request {
   body: {
-    nunidad: Number,
-    nactividad: Number,
-    curso: String,
-    fecha: Date
+    nunidad: number,
+    nactividad: number,
+    curso: string,
+    fecha: Date,
+    del?: boolean
   }
 }

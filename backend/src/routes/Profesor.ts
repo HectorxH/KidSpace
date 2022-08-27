@@ -8,11 +8,11 @@ const router = express.Router();
 
 router.get('/favoritas', async (req, res) => {
   try {
-    const id = req.user?._id;
-    const profesor = await Profesor.findById(id);
+    const uid = req.user?._id;
+    const profesor = await Profesor.findOne({ uid });
 
     if (profesor === null) {
-      res.send(404);
+      res.sendStatus(404);
     } else {
       res.json({ favoritas: profesor.favoritas });
     }
@@ -24,40 +24,23 @@ router.get('/favoritas', async (req, res) => {
 
 router.post('/favoritas', async (req:IFavoritaRequest, res) => {
   try {
-    const id = req.user?._id;
+    const uid = req.user?._id;
     const {
-      nunidad, nactividad, titulo,
+      nunidad, nactividad, del,
     } = req.body;
-    const profesor = await Profesor.findById(id);
-    const favorita = { nunidad, nactividad, titulo };
-
-    if (_.some(favorita, _.isNil) || profesor === null) {
+    const favorita = { nunidad, nactividad };
+    if (_.some(favorita, _.isNil) || del === null) {
       res.sendStatus(404);
-    } else {
-      profesor.favoritas.addToSet(favorita);
-      await profesor.save();
-      res.json({ favoritas: profesor.favoritas });
     }
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
 
-router.delete('/favoritas', async (req:IFavoritaRequest, res) => {
-  try {
-    const id = req.user?._id;
-    const { nunidad, nactividad, titulo } = req.body;
-    const profesor = await Profesor.findById(id);
-    const favorita = { nunidad, nactividad, titulo };
-
-    if (_.some(favorita, _.isNil) || profesor === null) {
-      res.sendStatus(404);
+    if (del) {
+      await Profesor.updateOne({ uid }, { $pull: { favoritas: favorita } });
     } else {
-      profesor.favoritas.pull(favorita);
-      await profesor.save();
-      res.json({ favoritas: profesor.favoritas });
+      await Profesor.updateOne({ uid }, { $addToSet: { favoritas: favorita } });
     }
+
+    const profesor = await Profesor.findOne({ uid });
+    res.json({ favoritas: profesor?.favoritas });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
@@ -66,11 +49,11 @@ router.delete('/favoritas', async (req:IFavoritaRequest, res) => {
 
 router.get('/planificadas', async (req, res) => {
   try {
-    const id = req.user?._id;
-    const profesor = await Profesor.findById(id);
+    const uid = req.user?._id;
+    const profesor = await Profesor.findOne({ uid });
 
     if (profesor === null) {
-      res.send(404);
+      res.sendStatus(404);
     } else {
       res.json({ planificadas: profesor.planificadas });
     }
@@ -82,46 +65,26 @@ router.get('/planificadas', async (req, res) => {
 
 router.post('/planificadas', async (req:IPlanificadaRequest, res) => {
   try {
-    const id = req.user?._id;
+    const uid = req.user?._id;
     const {
-      nunidad, nactividad, curso, fecha,
+      nunidad, nactividad, curso, fecha, del,
     } = req.body;
-    const profesor = await Profesor.findById(id);
     const planificada = {
-      nunidad, nactividad, curso, fecha,
+      nunidad, nactividad, curso, fecha, del,
     };
 
-    if (_.some(planificada, _.isNil) || profesor === null) {
+    if (_.some(planificada, _.isNil) || del === null) {
       res.sendStatus(404);
-    } else {
-      profesor.planificadas.addToSet(planificada);
-      await profesor.save();
-      res.json({ planificadas: profesor.planificadas });
     }
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
 
-router.delete('/planificadas', async (req:IPlanificadaRequest, res) => {
-  try {
-    const id = req.user?._id;
-    const {
-      nunidad, nactividad, curso, fecha,
-    } = req.body;
-    const profesor = await Profesor.findById(id);
-    const planificada = {
-      nunidad, nactividad, curso, fecha,
-    };
-
-    if (_.some(planificada, _.isNil) || profesor === null) {
-      res.sendStatus(404);
+    if (del) {
+      await Profesor.updateOne({ uid }, { $pull: { planificadas: planificada } });
     } else {
-      profesor.planificadas.pull(planificada);
-      await profesor.save();
-      res.json({ planificadas: profesor.planificadas });
+      await Profesor.updateOne({ uid }, { $addToSet: { planificadas: planificada } });
     }
+
+    const profesor = await Profesor.findOne({ uid });
+    res.json({ favoritas: profesor?.planificadas });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

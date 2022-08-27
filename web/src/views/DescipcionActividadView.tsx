@@ -4,14 +4,16 @@ import {
 import RotateLeftIcon from '@mui/icons-material/RotateLeft';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import _ from 'lodash';
 import { useParams, NavLink } from 'react-router-dom';
+import axios from 'axios';
 import NotFoundView from './NotFoundView';
 import actividadesDetails from '../mock/actividadesDetails';
+import { useAuth } from '../hooks/useAuth';
 
 interface IDescripcionParte {
-  num: string,
+  num: number,
   title: string,
   descripcion: string,
   img: string,
@@ -66,49 +68,102 @@ const Parte = ({ parte }: DescripcionParteParam) => (
   </Card>
 );
 
+interface IFavoritasRes {
+  data: {
+    favoritas: [{nunidad: number, nactividad: number}]
+  }
+}
+
 const DescripcionActividadView = () => {
   const params = useParams();
-  const { nunidad, nactividad } = params;
+  const { user, logout } = useAuth();
 
-  if (typeof nunidad === 'undefined') return <NotFoundView />;
-  if (typeof nactividad === 'undefined') return <NotFoundView />;
+  if (typeof params.nunidad === 'undefined') return <NotFoundView />;
+  if (typeof params.nactividad === 'undefined') return <NotFoundView />;
 
-  const isFav = () => {
-    let favs = localStorage.getItem('favs');
-    if (favs === null) favs = '[]';
-    const favsArray : String[] = JSON.parse(favs);
-    return favsArray.includes(nactividad);
+  const nunidad = Number(params.nunidad);
+  const nactividad = Number(params.nactividad);
+
+  const isFav = async () => {
+    try {
+      const res: IFavoritasRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/favoritas`);
+      const { favoritas } = res.data;
+      return _.findIndex(
+        favoritas,
+        (o) => o.nunidad === nunidad && o.nactividad === nactividad,
+      ) > -1;
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+        logout();
+      }
+      return false;
+    }
   };
 
   const descripcion = _.find(actividadesDetails, { nunidad, nactividad });
   if (typeof descripcion === 'undefined') return <NotFoundView />;
-  const startfav = isFav();
-  const [process, setProcess] = useState({
-    icon: (startfav ? <BookmarkAddedIcon /> : <BookmarkAddIcon />),
-    label: (startfav ? 'En favoritos' : 'Añadir a favoritos'),
-  });
+  const [favorita, setFavorita] = useState<string>('cargando');
 
-  const toggleFav = () => {
-    let favs = localStorage.getItem('favs');
-    if (favs === null) favs = '[]';
-    const favsArray : String[] = JSON.parse(favs);
-
-    const idx = favsArray.findIndex((o) => o === nactividad);
-    if (idx === -1) favsArray.push(nactividad);
-    else favsArray.splice(idx, 1);
-
-    localStorage.setItem('favs', JSON.stringify(favsArray));
+  const getFavoritaInfo = (info: string) => {
+    let icon;
+    let label;
+    if (info === 'cargando') {
+      icon = <RotateLeftIcon />;
+      label = 'Cargando...';
+    } else if (info === 'favorita') {
+      icon = <BookmarkAddedIcon />;
+      label = 'En favoritos';
+    } else if (info === 'no favorita') {
+      icon = <BookmarkAddIcon />;
+      label = 'Añadir a favoritos';
+    } else if (info === 'eliminando') {
+      icon = <RotateLeftIcon />;
+      label = 'Eliminando...';
+    } else if (info === 'guardando') {
+      icon = <RotateLeftIcon />;
+      label = 'Guardando...';
+    }
+    return { icon, label };
   };
 
-  const handleClick = () => {
-    setProcess({ icon: <RotateLeftIcon />, label: (isFav() ? 'Eliminando...' : 'Guardando...') });
-    toggleFav();
-    const fav = isFav();
+  useEffect(() => {
+    const setFavoritaState = async () => {
+      try {
+        const fav = await isFav();
+        setFavorita(fav ? 'favorita' : 'no favorita');
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    if (favorita === 'cargando') {
+      setFavoritaState();
+    }
+  }, []);
+
+  const changeFav = async (fav: boolean) => {
+    try {
+      const req = { nunidad, nactividad, del: fav };
+      const res: IFavoritasRes = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Profesor/favoritas`, req);
+      return _.findIndex(
+        res.data.favoritas,
+        (o) => o.nunidad === nunidad && o.nactividad === nactividad,
+      ) > -1;
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+        logout();
+      }
+      return false;
+    }
+  };
+
+  const handleClick = async () => {
+    let fav = await isFav();
+    setFavorita(fav ? 'eliminando' : 'guardando');
+    fav = await changeFav(fav);
     setTimeout(() => {
-      setProcess({
-        icon: (fav ? <BookmarkAddedIcon /> : <BookmarkAddIcon />),
-        label: (fav ? 'En favoritos' : 'Añadir en favoritos'),
-      });
+      setFavorita(fav ? 'favorita' : 'no favorita');
     }, 1200);
   };
 
@@ -139,13 +194,14 @@ const DescripcionActividadView = () => {
           />
         </Stack>
       </Box>
+      {user && (
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
         <Button
           variant="contained"
-          startIcon={process.icon}
+          startIcon={getFavoritaInfo(favorita).icon}
           onClick={handleClick}
         >
-          {process.label}
+          {getFavoritaInfo(favorita).label}
         </Button>
         <Button
           component={NavLink}
@@ -164,25 +220,26 @@ const DescripcionActividadView = () => {
           </Typography>
         </Button>
       </Box>
+      )}
       <Stack direction="column" spacing={4} sx={{ px: 4 }}>
         <Parte parte={{
-          num: '1', title: 'Cuento introductorio', descripcion: descripcion.cuento1, img: descripcion.img1,
+          num: 1, title: 'Cuento introductorio', descripcion: descripcion.cuento1, img: descripcion.img1,
         }}
         />
         <Parte parte={{
-          num: '2', title: 'Desafío introductorio', descripcion: descripcion.desafio1, img: descripcion.img2,
+          num: 2, title: 'Desafío introductorio', descripcion: descripcion.desafio1, img: descripcion.img2,
         }}
         />
         <Parte parte={{
-          num: '3', title: 'Cuento interactivo', descripcion: descripcion.cuento2, img: descripcion.img3,
+          num: 3, title: 'Cuento interactivo', descripcion: descripcion.cuento2, img: descripcion.img3,
         }}
         />
         <Parte parte={{
-          num: '4', title: 'Desafío creativo', descripcion: descripcion.desafio2, img: descripcion.img4,
+          num: 4, title: 'Desafío creativo', descripcion: descripcion.desafio2, img: descripcion.img4,
         }}
         />
         <Parte parte={{
-          num: '5', title: 'Quiz de evaluación', descripcion: descripcion.quiz, img: descripcion.img5,
+          num: 5, title: 'Quiz de evaluación', descripcion: descripcion.quiz, img: descripcion.img5,
         }}
         />
       </Stack>

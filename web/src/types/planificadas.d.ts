@@ -1,6 +1,6 @@
 export interface IPlanificada {
-  nactividad: string,
-  nunidad: string,
+  nactividad: number,
+  nunidad: number,
   curso: string,
   fecha: string,
 }

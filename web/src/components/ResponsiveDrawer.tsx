@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -34,8 +34,9 @@ interface DrawerProps {
 }
 
 const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const [loading, setLoading] = useState(true);
 
   const { user, logout } = useAuth();
 
@@ -116,7 +117,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
         }) => {
           const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
-          if (!visible) return (<div />);
+          if (!visible) return '';
           return (
             <ListItem
               disablePadding
@@ -167,6 +168,10 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     }
     logout();
   };
+
+  useEffect(() => {
+    setLoading(false);
+  }, []);
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -279,7 +284,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
         sx={{ flexGrow: 1, p: 0, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
-        {children}
+        {!loading && children}
       </Box>
     </Box>
   );

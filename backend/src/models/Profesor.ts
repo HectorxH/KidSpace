@@ -3,7 +3,6 @@ import { Schema, Types, model } from 'mongoose';
 export interface IFavorita {
   nunidad: number,
   nactividad: number,
-  titulo: string,
 }
 
 export interface IPlanificada {
