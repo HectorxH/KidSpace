@@ -42,7 +42,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             key={id}
             style={{
               flex: 1,
-              marginTop: RSize(0.04, 'h'),
               marginRight: RSize(0.03, 'h'),
               justifyContent: 'center',
             }}>
@@ -59,7 +58,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                     flex: 1,
                     alignItems: 'center',
                     alignContent: 'center',
-                    justifyContent: 'center',
                     elevation: 5,
                   }}>
                   <Image
