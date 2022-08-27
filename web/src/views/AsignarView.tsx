@@ -6,6 +6,10 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import axios from 'axios';
+import moment from 'moment-timezone';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
 
@@ -22,7 +26,13 @@ const AsignarView = () => {
   const currentDate = new Date().toISOString().slice(0, 10);
   const [curso, setCurso] = useState('A');
   const [fecha, setFecha] = useState(currentDate);
+  const [fechaShow, setFechaShow] = React.useState(currentDate);
   const [success, setSuccess] = useState(false);
+  const handleFecha = (e : any) => {
+    const date = moment(e).format('DD-MM-YYYY');
+    setFecha(date);
+    setFechaShow(e);
+  };
   const handleBack = () => {
     navigate(-1);
   };
@@ -61,7 +71,7 @@ const AsignarView = () => {
             <TextField
               select
               id="select-curso"
-              sx={{ minWidth: '180px' }}
+              sx={{ minWidth: '270px' }}
               label="Curso"
               defaultValue=""
               onChange={(e) => setCurso(e.target.value)}
@@ -74,18 +84,26 @@ const AsignarView = () => {
             <Typography alignSelf={{ sm: 'center' }}>
               Seleccione la fecha:
             </Typography>
-            <TextField
-              id="date"
-              label="Fecha"
-              type="date"
-              defaultValue={fecha}
-              sx={{ my: 2, minWidth: '150px' }}
-              InputLabelProps={{
-                shrink: true,
-              }}
-              onChange={(e) => setFecha(e.target.value)}
-              required
-            />
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
+              <DesktopDatePicker
+                label="Fecha"
+                inputFormat="dd/MM/yyyy"
+                disablePast
+                value={fechaShow}
+                onChange={handleFecha}
+                renderInput={(props) => (
+                  <TextField
+                    // eslint-disable-next-line react/jsx-props-no-spreading
+                    {...props}
+                    sx={{ my: 2, minWidth: '270px' }}
+                    InputLabelProps={{
+                      shrink: true,
+                    }}
+                    required
+                  />
+                )}
+              />
+            </LocalizationProvider>
           </Stack>
           <Stack direction="row" justifyContent="space-between">
             <Button

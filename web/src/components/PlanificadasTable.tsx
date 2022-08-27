@@ -9,6 +9,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
+import moment from 'moment-timezone';
 import moment from 'moment';
 import actividadesDetails from '../mock/actividadesDetails';
 import { IPlanificada, IPlanificadas } from '../types/planificadas';
