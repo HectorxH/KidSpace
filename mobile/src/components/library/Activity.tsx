@@ -6,7 +6,7 @@ import {images} from '../../assets/imgs/handler/images';
 import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const Actitity = ({navigation, route}: ActivityProps) => {
+const Activity = ({navigation, route}: ActivityProps) => {
   const {activity} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
@@ -110,4 +110,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Actitity;
+export default Activity;
