@@ -11,10 +11,10 @@ import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
-// import {ActivityProps} from '../../types/navigation';
+import {InfoProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const Story = ({navigation, route}: any) => {
+const Story = ({navigation, route}: InfoProps) => {
   const {Info} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   console.log(Info.title);

@@ -13,14 +13,16 @@
         "img":"portada_inf1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrelladorada"
       },
       {
         "carrera":"Carrera: Informática",
         "img":"portada_inf2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrellagris"
       }
     ]
   },
@@ -37,14 +39,16 @@
         "img":"portada_dis1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrelladorada"
       },
       {
         "carrera":"Carrera: Diseño",
         "img":"portada_dis2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrellagris"
       }
     ]
   },
@@ -61,14 +65,16 @@
         "img":"portada_nut1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado": "estrellagris"
       },
       {
         "carrera":"Carrera: Nutrición",
         "img":"portada_nut2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrellagris"
       }
     ]
   },
@@ -85,14 +91,16 @@
         "img":"portada_min1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrellagris"
       },
       {
         "carrera":"Carrera: Minería",
         "img":"portada_min2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado":"estrellagris"
       }
     ]
   },
@@ -109,14 +117,16 @@
         "img":"portada_astr1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado": 0
       },
       {
         "carrera":"Carrera: Astronomía",
         "img":"portada_astr2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200
+        "coins":200,
+        "estado": 0
       }
     ]
   }

@@ -132,9 +132,9 @@ const MainMap = ({navigation}: MainMapProps) => {
               }}
               source={images.ruta.uri}>
               <View style={{flexDirection: 'row'}}>
-                {Carreras.map(carrera => (
+                {Carreras.map((carrera, id) => (
                   <>
-                    <View style={{flex: 1}}>
+                    <View key={id} style={{flex: 1}}>
                       {/* <Animated.View
                         style={{
                           marginLeft: 5,
@@ -144,6 +144,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                         }}
                       /> */}
                       <Pressable
+                        key={id}
                         // onPressIn={fadeIn}
                         onPress={() => handleTapUnidad({carrera})}>
                         <Image
@@ -370,9 +371,3 @@ const styles = StyleSheet.create({
 });
 
 export default MainMap;
-function animatedValue(
-  animatedValue: any,
-  arg1: {toValue: number; duration: number},
-): Animated.CompositeAnimation {
-  throw new Error('Function not implemented.');
-}

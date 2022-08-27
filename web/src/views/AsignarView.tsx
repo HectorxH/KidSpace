@@ -6,6 +6,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import moment from 'moment-timezone';
+import es from 'date-fns/locale/es';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
@@ -78,7 +79,7 @@ const AsignarView = () => {
             <Typography alignSelf={{ sm: 'center' }}>
               Seleccione la fecha:
             </Typography>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <LocalizationProvider locale={es} dateAdapter={AdapterDateFns}>
               <DesktopDatePicker
                 label="Fecha"
                 inputFormat="dd/MM/yyyy"

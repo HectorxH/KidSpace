@@ -1,12 +1,15 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
+import {ICarrera, IInfo} from './carrera';
 
 export type desafioTipo = 'introductory' | 'interactive';
 export type actividadNombre = 'diagramas';
 
 export type RootStackParamList = {
-  MainMap: undefined;
+  MainMap: {carrera: ICarrera[]};
   Activity: {activity: IActivity};
+  Carrera: {carrera: ICarrera};
+  Story: {Info: IInfo};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
   CuentoInteractivo: {actividad: actividadNombre};
@@ -26,6 +29,14 @@ export type MainMapProps = NativeStackScreenProps<
 export type ActivityProps = NativeStackScreenProps<
   RootStackParamList,
   'Activity'
+>;
+export type CarreraProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Carrera'
+>;
+export type InfoProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Story'
 >;
 export type NoAvailableActivitiesProps = NativeStackScreenProps<
   RootStackParamList,

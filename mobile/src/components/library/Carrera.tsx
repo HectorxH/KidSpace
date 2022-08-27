@@ -12,10 +12,10 @@ import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
-// import {ActivityProps} from '../../types/navigation';
+import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const Carrera = ({navigation, route}: any) => {
+const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
@@ -36,21 +36,40 @@ const Carrera = ({navigation, route}: any) => {
           </ScrollView>
         </SafeAreaView>
       </View>
-      {carrera.stories.map(story => (
+      {carrera.stories.map((story, id) => (
         <>
           <View
+            key={id}
             style={{
               flex: 1,
               marginTop: RSize(0.04, 'h'),
               marginRight: RSize(0.03, 'h'),
+              justifyContent: 'center',
             }}>
             <TouchableHighlight
+              key={id}
               onPress={() =>
                 navigation.push('Story', {
                   Info: story,
                 })
               }>
               <Card>
+                <View
+                  style={{
+                    flex: 1,
+                    alignItems: 'center',
+                    alignContent: 'center',
+                    justifyContent: 'center',
+                    elevation: 5,
+                  }}>
+                  <Image
+                    source={images[`${story.estado}`].uri}
+                    style={{
+                      width: RSize(0.06, 'h'),
+                      height: RSize(0.06, 'h'),
+                    }}
+                  />
+                </View>
                 <Card.Cover
                   source={imagesPersonajes[`${story.img}`].uri}
                   style={{height: RSize(0.63, 'h')}}
