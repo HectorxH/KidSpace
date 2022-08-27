@@ -10,6 +10,7 @@ import moment from 'moment-timezone';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import es from 'date-fns/locale/es';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
 
@@ -84,7 +85,7 @@ const AsignarView = () => {
             <Typography alignSelf={{ sm: 'center' }}>
               Seleccione la fecha:
             </Typography>
-            <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <LocalizationProvider dateAdapter={AdapterDateFns} locale={es}>
               <DesktopDatePicker
                 label="Fecha"
                 inputFormat="dd/MM/yyyy"
