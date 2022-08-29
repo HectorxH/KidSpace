@@ -14,6 +14,11 @@ import UnidadView from './views/UnidadView';
 import DescripcionActividadView from './views/DescipcionActividadView';
 import PanelControlView from './views/PanelControlView';
 import AsignarView from './views/AsignarView';
+import AgregarCursoView from './views/AgregarCursoView';
+import CursosView from './views/CursosView';
+import ParticipantesView from './views/ParticipantesView';
+import EditarCursoView from './views/EditarCursoView';
+import QRView from './views/QRView';
 
 const App = () => (
   <>
@@ -31,7 +36,11 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<PanelControlView />} />
-          <Route path="/cursos" />
+          <Route path="/cursos" element={<CursosView />} />
+          <Route path="/cursos/agregar" element={<AgregarCursoView />} />
+          <Route path="/cursos/:ncurso" element={<ParticipantesView />} />
+          <Route path="/cursos/:ncurso/editar" element={<EditarCursoView />} />
+          <Route path="/cursos/:ncurso/qr" element={<QRView />} />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
           <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
           <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

@@ -136,7 +136,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               <View style={{flexDirection: 'row'}}>
                 {Carreras.map((carrera, id) => (
                   <>
-                    <View key={id} style={{flex: 1}}>
+                    <View style={{flex: 1}}>
                       {/* <Animated.View
                         style={{
                           marginLeft: 5,
@@ -155,6 +155,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                           style={{borderRadius: 99}}
                           onPress={() => handleTapUnidad({carrera})}>
                           <Image
+                            key={id}
                             style={{
                               position: 'relative',
                               width: 150,

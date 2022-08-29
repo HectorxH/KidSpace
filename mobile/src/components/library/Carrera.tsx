@@ -39,7 +39,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
       {carrera.stories.map((story, id) => (
         <>
           <View
-            key={id}
             style={{
               flex: 1,
               marginRight: RSize(0.03, 'h'),
@@ -52,7 +51,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   Info: story,
                 })
               }>
-              <Card>
+              <Card key={id}>
                 <View
                   style={{
                     flex: 1,
