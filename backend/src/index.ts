@@ -7,11 +7,14 @@ import passport from 'passport';
 import bcrypt from 'bcrypt';
 import _ from 'lodash';
 import ProfesorRouter from './routes/Profesor';
+import CursoRouter from './routes/Curso';
+import EstudianteRouter from './routes/Estudiante';
 import ActivityRouter from './routes/Activity';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
 import Profesor from './models/Profesor';
+import Estudiante from './models/Estudiante';
 
 const MongoStore = require('connect-mongo');
 
@@ -49,21 +52,31 @@ app.use((req, res, next) => {
   return next();
 });
 
-app.post('/register', async (req, res) => {
+app.post('/register', checkNotAuth, async (req, res) => {
+  console.log(req.body);
+
   try {
-    const { username, password, tipo } = req.body;
-    if (_.some({ username, password, tipo }, _.isNil)) {
+    const {
+      nombres, apellidos, username, password, tipo,
+    } = req.body;
+    if (_.some(req.body, _.isNil)) {
       console.log(req.body);
       res.sendStatus(404);
     }
     const hashedPass = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPass, tipo });
+    const user = new User({
+      nombres, apellidos, username, password: hashedPass, tipo,
+    });
     await user.save();
 
     if (user.tipo === 'profesor') {
       const profesor = new Profesor({ uid: user._id });
       await profesor.save();
+    } else if (user.tipo === 'estudiante') {
+      const estudiante = new Estudiante({ uid: user._id });
+      await estudiante.save();
     }
+
     res.sendStatus(200);
   } catch (e) {
     console.log(e);
@@ -78,19 +91,13 @@ app.get('/checkauth', (req, res) => {
 app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
-    if (user?.tipo === 'profesor') {
-      const profesor = await Profesor.findOne({ uid: user._id });
-      if (profesor === null) {
-        res.send(500);
-      } else {
-        res.json({
-          username: user.username,
-          tipo: user.tipo,
-          nombres: profesor.nombre,
-          apellidos: profesor.apellidos,
-        });
-      }
-    }
+    if (user?.tipo === 'estudiante') return res.sendStatus(403);
+    res.json({
+      username: user?.username,
+      tipo: user?.tipo,
+      nombres: user?.nombres,
+      apellidos: user?.apellidos,
+    });
   } catch (e) {
     console.log(e);
   }
@@ -104,6 +111,8 @@ app.delete('/logout', checkAuth, (req, res, next) => {
 });
 
 app.use('/Profesor', checkAuth, ProfesorRouter);
+app.use('/Curso', checkAuth, CursoRouter);
+app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Activity', ActivityRouter);
 
 app.get('/', (req, res) => {

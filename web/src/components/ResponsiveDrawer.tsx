@@ -208,9 +208,14 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           </Typography>
           { user
           && (
-          <IconButton onClick={handleClick}>
-            <AccountCircle />
-          </IconButton>
+            <>
+              <Typography>
+                {`${user.nombres} ${user.apellidos}`}
+              </Typography>
+              <IconButton onClick={handleClick}>
+                <AccountCircle />
+              </IconButton>
+            </>
           )}
           {!user && (
             <>

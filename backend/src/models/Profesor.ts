@@ -1,4 +1,5 @@
 import { Schema, Types, model } from 'mongoose';
+import { ICurso } from './Curso';
 
 export interface IFavorita {
   nunidad: number,
@@ -14,18 +15,15 @@ export interface IPlanificada {
 
 export interface IProfesor {
   uid: any,
-  nombre: string,
-  apellidos: string,
-  favoritas: Types.Array<IFavorita>,
-  planificadas: Types.Array<IPlanificada>,
+  favoritas?: Types.Array<IFavorita>,
+  planificadas?: Types.Array<IPlanificada>,
+  cursos?: Types.Array<ICurso>,
 }
 
 export const profesorSchema = new Schema<IProfesor>({
   uid: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
-  nombre: String,
-  apellidos: String,
   favoritas: {
     type: [{ nunidad: Number, nactividad: Number, titulo: String }],
     default: [],
@@ -36,6 +34,7 @@ export const profesorSchema = new Schema<IProfesor>({
     }],
     default: [],
   },
+  cursos: [{ type: Types.ObjectId, ref: 'Curso' }],
 });
 
 export default model<IProfesor>('Profesor', profesorSchema);

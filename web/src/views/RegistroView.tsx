@@ -9,6 +9,8 @@ import {
 import axios from 'axios';
 
 const RegistroView = () => {
+  const [nombres, setNombres] = useState('');
+  const [apellidos, setApellidos] = useState('');
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
   const [correct, setCorrect] = useState(false);
@@ -17,9 +19,9 @@ const RegistroView = () => {
   const handleClick = async () => {
     try {
       const res = await axios.post(
-        `${process.env.REACT_APP_BACKEND_URL}/registro`,
+        `${process.env.REACT_APP_BACKEND_URL}/register`,
         {
-          username, password, tipo: 'profesor',
+          nombres, apellidos, username, password, tipo: 'profesor',
         },
       );
       console.log(res);
@@ -30,6 +32,14 @@ const RegistroView = () => {
       setError(true);
       console.log(e);
     }
+  };
+
+  const handleNombresChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNombres(event.target.value);
+  };
+
+  const handleApellidosChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setApellidos(event.target.value);
   };
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,10 +61,16 @@ const RegistroView = () => {
           justifyContent="center"
         >
           <Grid item xs={12}>
-            <TextField label="Username" onChange={handleUsernameChange} />
+            <TextField label="Nombres" onChange={handleNombresChange} />
           </Grid>
           <Grid item xs={12}>
-            <TextField label="Password" type="password" onChange={handlePasswordChange} />
+            <TextField label="Apellidos" onChange={handleApellidosChange} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField label="Nombre de usuario" onChange={handleUsernameChange} />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField label="Contraseña" type="password" onChange={handlePasswordChange} />
           </Grid>
           <Grid item xs={12}>
             <Button fullWidth onClick={handleClick}> Registrar </Button>
