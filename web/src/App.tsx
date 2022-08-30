@@ -14,6 +14,7 @@ import UnidadView from './views/UnidadView';
 import DescripcionActividadView from './views/DescipcionActividadView';
 import PanelControlView from './views/PanelControlView';
 import AsignarView from './views/AsignarView';
+import CursoView from './views/CursoView';
 
 const App = () => (
   <>
@@ -31,7 +32,7 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<PanelControlView />} />
-          <Route path="/cursos" />
+          <Route path="/cursos" element={<CursoView />} />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
           <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
           <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
