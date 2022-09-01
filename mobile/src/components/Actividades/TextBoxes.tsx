@@ -2,9 +2,10 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
+import {ITextBoxes} from '../../types/activity';
 
 interface TextBoxProps {
-  boxes: [{start: number[]; end: number[]}] | [];
+  boxes: ITextBoxes[] | never[];
 }
 
 const TextBoxes = ({boxes}: TextBoxProps) => {
@@ -14,18 +15,18 @@ const TextBoxes = ({boxes}: TextBoxProps) => {
 
   return (
     <View style={styles.container}>
-      {boxes.map((box: {start: number[]; end: number[]}) => {
+      {boxes.map((box: ITextBoxes) => {
         return (
           <View
             style={styles.overlay}
             key={
-              box.start[0].toString() +
-              box.start[1].toString() +
-              box.end[0].toString() +
-              box.end[1].toString()
+              box.position.start[0].toString() +
+              box.position.start[1].toString() +
+              box.position.end[0].toString() +
+              box.position.end[1].toString()
             }>
             <Layout
-              object={box}
+              position={box.position}
               ObjectView={<View style={styles.storyBox} />}
             />
           </View>

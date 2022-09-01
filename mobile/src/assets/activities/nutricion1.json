@@ -1,0 +1,597 @@
+[
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía es una *nutricionista*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleNutricion",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su carrera se enfoca en la prevención de problemas de salud relacionados con la nutrición.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleNutricion",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para educar a sus pacientes, Sofía siempre les hace una clase ",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "sobre cómo elegir la comida saludable.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y para esto es importante saber leer las etiquetas de los alimentos.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En una etiqueta de un alimento podrás encontrar su aporte energético en calorías",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y cantidad de porciones.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si consumes más calorías de las que usa tu cuerpo, podrás aumentar de peso.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En una etiqueta podrás encontrar los macronutrientes: la proteína, la grasa y los carbohidratos.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, estas galletas contienen 1.3 gramos de proteína,  10.5 gramos de grasa",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y 27.5 gramos de carbohidratos por una porción.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Son fuentes de energía para nuestro cuerpo,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "pero el exceso de cualquiera de los tres puede causar daños a tu salud.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cuando un alimento contiene altos índices de calorías, grasas y azúcares,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_sellos",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "estos tendrán un sello negro.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Se recomienda disminuir o incluso excluir estos alimentos de tu dieta.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía te propone analizar un par de alimentos y ver qué dicen sus etiquetas.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "etiqueta_jugo",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19.5, 19]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Calorías en 1 porción",
+        "position": {
+          "start": [8.5, 6],
+          "end": [14.5, 8.5]
+        }
+      },
+      {
+        "text": "Cantidad de proteína",
+        "position": {
+          "start": [8.5, 9],
+          "end": [14.5, 11.5]
+        }
+      },
+      {
+        "text": "¿Alto en calorías?",
+        "position": {
+          "start": [8.5, 12],
+          "end": [14.5, 14.5]
+        }
+      },
+      {
+        "text": "¿Alto en azúcar?",
+        "position": {
+          "start": [8.5, 15],
+          "end": [14.5, 17.5]
+        }
+      }
+    ],
+    "alternativasDropdown": [
+      {
+        "rightAnswer": ["40"],
+        "answers": ["20", "40", "0"],
+        "position": {
+          "start": [15, 6],
+          "end": [19, 8.5]
+        }
+      },
+      {
+        "rightAnswer": ["0.0"],
+        "answers": ["0.0", "4.8", "9.6"],
+        "position": {
+          "start": [15, 9],
+          "end": [19, 11.5]
+        }
+      },
+      {
+        "rightAnswer": ["No"],
+        "answers": ["Si", "No"],
+        "position": {
+          "start": [15, 12],
+          "end": [19, 14.5]
+        }
+      },
+      {
+        "rightAnswer": ["No"],
+        "answers": ["Si", "No"],
+        "position": {
+          "start": [15, 15],
+          "end": [19, 17.5]
+        }
+      }
+    ]
+  }
+]

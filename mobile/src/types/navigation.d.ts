@@ -8,7 +8,13 @@ export type desafioTipo =
   | 'DesafioCreativo'
   | 'introductory'
   | 'creative';
-export type actividadNombre = 'diagramas' | 'diseños';
+export type actividadNombre =
+  | 'diagramas'
+  | 'diseños'
+  | 'diseño1'
+  | 'diseño2'
+  | 'nutricion1'
+  | 'nutricion2';
 
 export type RootStackParamList = {
   MainMap: undefined;
@@ -18,9 +24,7 @@ export type RootStackParamList = {
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
 
-  Actividades: {actividad: actividadNombre; tipo: desafioTipo};
-  Cuentos: {actividad: actividadNombre; tipo: desafioTipo};
-  Desafios: {actividad: actividadNombre; tipo: desafioTipo};
+  Actividades: {actividad: actividadNombre};
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;
@@ -61,14 +65,6 @@ export type FinalQuizProps = NativeStackScreenProps<
 export type ActividadesProps = NativeStackScreenProps<
   RootStackParamList,
   'Actividades'
->;
-export type CuentosProps = NativeStackScreenProps<
-  RootStackParamList,
-  'Cuentos'
->;
-export type DesafiosProps = NativeStackScreenProps<
-  RootStackParamList,
-  'Desafios'
 >;
 
 export type DynamicTableProps = NativeStackScreenProps<

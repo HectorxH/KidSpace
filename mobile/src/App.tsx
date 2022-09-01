@@ -10,9 +10,7 @@
 
 import React from 'react';
 
-import Cuentos from './Cuentos';
 import Actividades from './Actividades';
-import Desafio from './DesafioIntroductorio';
 import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
@@ -55,16 +53,6 @@ const App = () => {
         <Stack.Screen
           name="Actividades"
           component={Actividades}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Cuentos"
-          component={Cuentos}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Desafios"
-          component={Desafio}
           options={{headerShown: false}}
         />
         <Stack.Screen

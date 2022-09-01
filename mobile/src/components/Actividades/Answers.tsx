@@ -1,18 +1,14 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-paper';
-import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 import Layout from '../Utils/Layout';
+import {ReactStateSetter} from '../../types/others';
+import {IAlternativas} from '../../types/activity';
+import {IAnswers} from '../../types/activity';
 
 interface AnswersProps {
-  question: {
-    tipo: string;
-    rightChoice: string;
-    choices: [];
-    rightAnswer: [string];
-    answers: [{text: string; start: number[]; end: number[]}];
-  };
+  question: IAlternativas;
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pageNumber: number;
@@ -55,41 +51,39 @@ const Answers = (props: AnswersProps) => {
 
   return (
     <View style={styles.container}>
-      {messageAnswers.map(
-        (item: {text: string; start: number[]; end: number[]}, index) => {
-          return (
-            <View style={styles.overlay} key={index.toString()}>
-              <Layout
-                object={item}
-                ObjectView={
-                  <Button
-                    mode="contained"
+      {messageAnswers.map((item: IAnswers, index) => {
+        return (
+          <View style={styles.overlay} key={index.toString()}>
+            <Layout
+              position={item.position}
+              ObjectView={
+                <Button
+                  mode="contained"
+                  style={
+                    answerButtonStyles[
+                      pickedAnswers[pageNumber][answerNumber][index]
+                    ]
+                  }
+                  color={
+                    answerButtonColor[
+                      pickedAnswers[pageNumber][answerNumber][index]
+                    ]
+                  }
+                  onPress={() => checkAnswer(item.text, index)}>
+                  <Text
                     style={
-                      answerButtonStyles[
+                      answerTextStyles[
                         pickedAnswers[pageNumber][answerNumber][index]
                       ]
-                    }
-                    color={
-                      answerButtonColor[
-                        pickedAnswers[pageNumber][answerNumber][index]
-                      ]
-                    }
-                    onPress={() => checkAnswer(item.text, index)}>
-                    <Text
-                      style={
-                        answerTextStyles[
-                          pickedAnswers[pageNumber][answerNumber][index]
-                        ]
-                      }>
-                      {item.text}
-                    </Text>
-                  </Button>
-                }
-              />
-            </View>
-          );
-        },
-      )}
+                    }>
+                    {item.text}
+                  </Text>
+                </Button>
+              }
+            />
+          </View>
+        );
+      })}
     </View>
   );
 };

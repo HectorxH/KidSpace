@@ -1,31 +1,68 @@
-import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import {ActividadesProps, desafioTipo} from './types/navigation';
-import Cuentos from './Cuentos';
-import Desafios from './Desafios';
+import React, {useState} from 'react';
+import {View, StyleSheet, StatusBar} from 'react-native';
+import {ActividadesProps} from './types/navigation';
+import ActividadComponent from './components/Actividades/ActividadComponent';
+import Activities from './assets/activities/activities';
 
 const Actividades = ({navigation, route}: ActividadesProps) => {
-  const actividad = route.params.actividad;
-  const tipo = route.params.tipo;
+  const nombreActividad = route.params.actividad;
 
-  const cuentos: [desafioTipo, desafioTipo] = [
-    'CuentoIntroductorio',
-    'CuentoInteractivo',
-  ];
-  const desafios: [desafioTipo, desafioTipo] = [
-    'DesafioIntroductorio',
-    'DesafioCreativo',
-  ];
+  const actividad = Activities[nombreActividad];
+
+  const [pageNumber, setPageNumber] = useState(0);
+
+  // Variables para controlar avance en preguntas de alternativas
+  const [userAnswers, setUserAnswers] = useState<number[][][]>(
+    actividad.map(s =>
+      typeof s.alternativas !== 'undefined'
+        ? s.alternativas.map(q => q.rightAnswer.map(() => 0))
+        : [[]],
+    ),
+  );
+  const [pickedAnswers, setPickedAnswers] = useState<number[][][]>(
+    actividad.map(s =>
+      typeof s.alternativas !== 'undefined'
+        ? s.alternativas.map(q => q.answers.map(() => 0))
+        : [[]],
+    ),
+  );
+
+  // Variables para controlar avance en preguntas de alternativasDropdown
+  const [userAnswersDropdown, setUserAnswersDropdown] = useState<number[][][]>(
+    actividad.map(s =>
+      typeof s.alternativasDropdown !== 'undefined'
+        ? s.alternativasDropdown.map(q => q.rightAnswer.map(() => 0))
+        : [[]],
+    ),
+  );
+  const [pickedAnswersDropdown, setPickedAnswersDropdown] = useState<
+    number[][][]
+  >(
+    actividad.map(s =>
+      typeof s.alternativasDropdown !== 'undefined'
+        ? s.alternativasDropdown.map(q => q.answers.map(() => 0))
+        : [[]],
+    ),
+  );
 
   return (
     <View style={styles.container}>
-      {cuentos.includes(tipo) ? (
-        <Cuentos navigation={navigation} actividad={actividad} tipo={tipo} />
-      ) : desafios.includes(tipo) ? (
-        <Desafios navigation={navigation} actividad={actividad} tipo={tipo} />
-      ) : (
-        <View />
-      )}
+      <StatusBar hidden={true} />
+      <View style={styles.overlay}>
+        <ActividadComponent
+          actividades={actividad}
+          nombreActividad={nombreActividad}
+          pageNumber={[pageNumber, setPageNumber]}
+          userAnswers={[userAnswers, setUserAnswers]}
+          pickedAnswers={[pickedAnswers, setPickedAnswers]}
+          userAnswersDropdown={[userAnswersDropdown, setUserAnswersDropdown]}
+          pickedAnswersDropdown={[
+            pickedAnswersDropdown,
+            setPickedAnswersDropdown,
+          ]}
+          navigation={navigation}
+        />
+      </View>
     </View>
   );
 };
@@ -33,6 +70,19 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  overlay: {
+    flex: 1,
+    position: 'absolute',
+    opacity: 1,
+    width: '100%',
+    height: '100%',
+    flexDirection: 'column',
+  },
+  backgroundImage: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

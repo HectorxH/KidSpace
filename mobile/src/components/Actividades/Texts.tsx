@@ -2,9 +2,10 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
+import {ITexts} from '../../types/activity';
 
 interface TextsProps {
-  texts: [{text: string; start: number[]; end: number[]}] | [];
+  texts: ITexts[] | never[];
 }
 
 const Texts = ({texts}: TextsProps) => {
@@ -14,7 +15,7 @@ const Texts = ({texts}: TextsProps) => {
 
   return (
     <View style={styles.container}>
-      {texts.map((text: {text: string; start: number[]; end: number[]}) => {
+      {texts.map((text: ITexts) => {
         const message = (
           <Text style={styles.baseText}>
             {text.text.split('*').map((word: string, index: number) => {
@@ -32,13 +33,13 @@ const Texts = ({texts}: TextsProps) => {
           <View
             style={styles.overlay}
             key={
-              text.start[0].toString() +
-              text.start[1].toString() +
-              text.end[0].toString() +
-              text.end[1].toString()
+              text.position.start[0].toString() +
+              text.position.start[1].toString() +
+              text.position.end[0].toString() +
+              text.position.end[1].toString()
             }>
             <Layout
-              object={text}
+              position={text.position}
               ObjectView={<View style={styles.textBox}>{message}</View>}
             />
           </View>

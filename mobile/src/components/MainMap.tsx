@@ -69,13 +69,8 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             navigation.navigate('Actividades', {
-              actividad: 'diagramas',
+              actividad: 'nutricion1',
               // actividad: 'diseños',
-              // tipo: 'CuentoIntroductorio',
-              // tipo: 'CuentoInteractivo',
-              tipo: 'DesafioIntroductorio',
-              // tipo: 'DesafioCreativo',
-              // tipo: 'interactive',
             })
           }>
           <Text style={styles.subtitle}>Perfil</Text>
@@ -97,12 +92,9 @@ const MainMap = ({navigation}: MainMapProps) => {
           )}
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
-            // navigation.push('Conclusion', {
-            navigation.navigate('Desafios', {
-              // navigation.navigate('Actividades', {
-              actividad: 'diagramas',
+            navigation.navigate('Actividades', {
+              actividad: 'diseños',
               // actividad: 'diseños',
-              tipo: 'introductory',
             })
           }>
           <Text style={styles.subtitle}>Tienda</Text>

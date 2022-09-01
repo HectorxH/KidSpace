@@ -1,14 +1,15 @@
 import React from 'react';
 import {StyleSheet, View, StatusBar} from 'react-native';
+import {IPosition} from '../../types/activity';
 
-const Layout = (props: {object: any; ObjectView: any}) => {
-  const object = props.object;
+const Layout = (props: {position: IPosition; ObjectView: any}) => {
+  const position = props.position;
   const nRows = 20;
   const nCols = 20;
-  const xi = object.start[0];
-  const yi = object.start[1];
-  const xf = object.end[0];
-  const yf = object.end[1];
+  const xi = position.start[0];
+  const yi = position.start[1];
+  const xf = position.end[0];
+  const yf = position.end[1];
 
   const styles = StyleSheet.create({
     container: {

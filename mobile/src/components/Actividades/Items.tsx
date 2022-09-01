@@ -2,36 +2,40 @@ import React from 'react';
 import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
+import {IImages} from '../../types/activity';
 
 interface ItemsProps {
-  images: [{name: string; start: number[]; end: number[]}] | [];
+  images: IImages[] | never[];
+  resize?: 'contain' | 'cover' | 'stretch' | 'repeat' | 'center';
 }
 
-const Items = ({images}: ItemsProps) => {
-  if (images.length === 0) {
+const Items = ({images, resize}: ItemsProps) => {
+  if (typeof images === 'undefined' || images.length === 0) {
     return null;
   }
 
   return (
     <View style={styles.container}>
-      {images.map((item: {name: string; start: number[]; end: number[]}) => {
+      {images.map((item: IImages) => {
         return (
           <View
             style={styles.overlay}
             key={
               item.name +
-              item.start[0].toString() +
-              item.start[1].toString() +
-              item.end[0].toString() +
-              item.end[1].toString()
+              item.position.start[0].toString() +
+              item.position.start[1].toString() +
+              item.position.end[0].toString() +
+              item.position.end[1].toString()
             }>
             <Layout
-              object={item}
+              position={item.position}
               ObjectView={
                 <Image
                   style={styles.image}
                   // resizeMode="cover"
-                  resizeMode="contain"
+                  resizeMode={
+                    typeof resize !== 'undefined' ? resize : 'contain'
+                  }
                   source={Images.items[item.name]}
                 />
               }

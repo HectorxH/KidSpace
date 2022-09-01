@@ -11,12 +11,12 @@ import {
 } from 'react-native';
 import {IconButton} from 'react-native-paper';
 import Images from '../../assets/images/images';
-import {IItem, Vec3} from '../../types/activity';
+import {IModels, Vec3} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
-  items: IItem[];
+  items: IModels[];
   models: [number[], ReactStateSetter<number[]>];
   visible: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
@@ -25,12 +25,16 @@ interface InventarioProps {
 
 const Inventario = (props: InventarioProps) => {
   const items = props.items;
-  const [placedItems, setPlacedItems] = useState(items.map(() => 0));
-  const [nPlacedItems, setNPlacedItems] = useState(0);
   const [models, setModels] = props.models;
+  const [placedItems, setPlacedItems] = useState(
+    items.map((_item, index) => (models.includes(index) ? 1 : 0)),
+  );
+  const [nPlacedItems, setNPlacedItems] = useState(models.length);
   const visible = props.visible;
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
+
+  console.log(models);
 
   function modelHandler(index: number) {
     updatePosition();
@@ -59,8 +63,10 @@ const Inventario = (props: InventarioProps) => {
       .catch(console.log);
     // setPositions([...positions, [0, 0, -1]]);
   }
-
   if (!visible) {
+    return null;
+  }
+  if (items.length === 0) {
     return null;
   }
 
@@ -79,7 +85,7 @@ const Inventario = (props: InventarioProps) => {
         </View>
         <SafeAreaView style={styles.itemsBox}>
           <ScrollView fadingEdgeLength={10} persistentScrollbar>
-            {items.map((item: IItem, index: number) => {
+            {items.map((item: IModels, index: number) => {
               if (placedItems[index] !== 0) {
                 return null;
               }

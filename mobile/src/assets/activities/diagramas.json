@@ -1,0 +1,1192 @@
+[
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego es un *florista*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flower",
+        "position": {
+          "start": [6, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Desde chico le han gustado las flores,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flower",
+        "position": {
+          "start": [6, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y ahora Diego usa su creatividad para diseñar y vender arreglos florales.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "idea",
+        "position": {
+          "start": [10, 0],
+          "end": [15, 7]  
+        }
+      },
+      {
+        "name": "bouquet",
+        "position": {
+          "start": [11, 9],
+          "end": [16, 18]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego abre su tienda de flores todos los días de la semana",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "money",
+        "position": {
+          "start": [10, 0.5],
+          "end": [15, 7.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y el día domingo analiza cuántas flores logró vender.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "money",
+        "position": {
+          "start": [10, 0.5],
+          "end": [15, 7.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "chart",
+        "position": {
+          "start": [0, 0],
+          "end": [8, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para esto Diego elabora un diagrama conocido como *gráfico de barras*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Puedes ayudar a Diego a *analizarlo*?",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "question_mark",
+        "position": {
+          "start": [6, 0.5],
+          "end": [9, 6] 
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "barras",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ayuda a Diego a *analizar el gráfico de las ventas*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Preguntas",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el menu de *inventario* podrás encontrar el gráfico. *Intenta dar click en su imágen*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Preguntas",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Responda las preguntas sobre el gráfico, dando click en el botón en la *esquina superior izquierda*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Preguntas",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        }
+      },
+      {
+        "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["25"],
+        "answers": [
+          {
+            "text": "25",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "5",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "35",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["Girasoles"],
+        "answers": [
+          {
+            "text": "Margaritas",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "Ninguna",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "Girasoles",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Preguntas",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 4]
+        },
+        "target": 11,
+        "require": [10],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+
+  {
+    "background": "flowershop",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 2],
+          "end": [18, 18]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Antes de hacer el gráfico, Diego tiene que crear *una tabla* con la información sobre las ventas.",
+        "position": {
+          "start": [3, 5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "calendar",
+        "position": {
+          "start": [7, 11],
+          "end": [13, 16]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [5, 2],
+          "end": [15, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Con qué *software* le recomendaría a Diego crear la tabla?",
+        "position": {
+          "start": [6, 2.5],
+          "end": [14, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Excel"],
+        "answers": [
+          {
+            "text": "Excel",
+            "position": {
+              "start": [7, 10.5],
+              "end": [13, 12.5]
+            }
+          },
+          {
+            "text": "Paint",
+            "position": {
+              "start": [7,13.5],
+              "end": [13, 15.5]
+            }
+          },
+          {
+            "text": "Word",
+            "position": {
+              "start": [7, 16.5],
+              "end": [13, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para el reporte semanal, Diego debe calcular el total de las flores vendidas.",
+        "position": {
+          "start": [8, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flowers",
+        "position": {
+          "start": [4, 11],
+          "end": [9, 19]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [18, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué *función* le recomiendas a Diego para esto?",
+        "position": {
+          "start": [8, 2.5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "questions",
+        "position": {
+          "start": [5, 1],
+          "end": [7.5, 8]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["SUMA()"],
+        "answers": [
+          {
+            "text": "SUMA()",
+            "position": {
+              "start": [9.5, 10.5],
+              "end": [15.5, 12.5]
+            }
+          },
+          {
+            "text": "CONTAR()",
+            "position": {
+              "start": [9.5, 13.5],
+              "end": [15.5, 15.5]
+            }
+          },
+          {
+            "text": "PROMEDIO()",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [15.5, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "paper",
+        "position": {
+          "start": [12.5, 0],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [13, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego obtuvo que los girasoles constituyen *1/5* de las ventas totales.",
+        "position": {
+          "start": [2, 5],
+          "end": [12, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "paper",
+        "position": {
+          "start": [12.5, 0],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [13, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué tipo de dato debe tener una celda de la tabla para mostrar el resultado como *“20%”*?",
+        "position": {
+          "start": [2, 2.5],
+          "end": [12, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Porcentaje"],
+        "answers": [
+          {
+            "text": "Número",
+            "position": {
+              "start": [4, 10.5],
+              "end": [10, 12.5]
+            }
+          },
+          {
+            "text": "Porcentaje",
+            "position": {
+              "start": [4, 13.5],
+              "end": [10, 15.5]
+            }
+          },
+          {
+            "text": "Moneda",
+            "position": {
+              "start": [4, 16.5],
+              "end": [10, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la bodega de la tienda de Diego quedan un *total de 20 flores* de distintos tipos: *margaritas, girasoles e iris*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "table",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": "Hoja de cálculo",
+          "buttonTextAlt": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego guarda *cada una de las flores en su propia caja*. Cada caja tiene un sticker con la imágen de la flor que está dentro.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "table",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": "Hoja de cálculo",
+          "buttonTextAlt": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el inventario encontrarás todas las cajas. ¡Colócalas en tu pantalla y *cuenta cuántas cajas de cada tipo hay*!",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "table",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": "Hoja de cálculo",
+          "buttonTextAlt": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Rellena la tabla de Excel sobre las flores, tocando el botón en la *esquina superior izquierda* de la pantalla.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "table",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": "Hoja de cálculo",
+          "buttonTextAlt": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "type": "GLB",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        }
+      },
+      {
+        "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        }
+      }
+    ],
+      "alternativasDropdown": [
+        {
+          "rightAnswer": ["9"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [9, 10],
+            "end": [12, 12]
+          }
+        },
+        {
+          "rightAnswer": ["7"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [9, 13],
+            "end": [12, 15]
+          }
+        },
+        {
+          "rightAnswer": ["4"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [9, 16],
+            "end": [12, 18]
+          }
+        }
+      ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "table",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": "Hoja de cálculo",
+          "buttonTextAlt": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 4]
+        },
+        "target": 0,
+        "require": [21],
+        "visible": false
+      }
+    ]
+  }
+]
+
+

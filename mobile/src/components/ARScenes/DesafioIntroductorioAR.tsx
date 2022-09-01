@@ -8,7 +8,7 @@ import {
   // @ts-ignore
 } from '@viro-community/react-viro';
 import Models from '../../assets/3d/models';
-import {IItem, Vec3} from '../../types/activity';
+import {IModels, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
 
@@ -17,7 +17,7 @@ interface DesafioIntroductorioSceneARProps {
     viroAppProps: {
       models: number[];
       actividad: string;
-      items: IItem[];
+      items: IModels[];
       positions: [Vec3[], ReactStateSetter<Vec3[]>];
     };
   };
