@@ -23,6 +23,7 @@ import Conclusion from './components/Conclusion/Conclusion';
 import ConclusionStory from './components/Conclusion/ConclusionStory';
 import ResultadoFinal from './components/Conclusion/ResultadoFinal';
 import DynamicTable from './components/Tables/DynamicTable';
+import Qr from './components/QR/Qr';
 import MainMap from './components/MainMap';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -104,6 +105,7 @@ const App = () => {
           component={ResultadoFinal}
           options={{headerShown: false}}
         />
+        <Stack.Screen name="Qr" component={Qr} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

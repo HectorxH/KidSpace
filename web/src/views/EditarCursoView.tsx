@@ -18,8 +18,7 @@ const EditarCursoView = () => {
   const [modalVisble, setModalVisble] = React.useState(false);
   if (typeof ncurso === 'undefined') return (<NotFoundView />);
   const navigate = useNavigate();
-  const [curso, setCurso] = React.useState(ncurso[0]);
-  const [letra, setLetra] = React.useState(ncurso[2]);
+  const [curso, setCurso] = React.useState(ncurso);
   const [success, setSuccess] = React.useState(false);
   const handleClose = () => {
     setModalVisble(false);
@@ -121,53 +120,21 @@ const EditarCursoView = () => {
       >
         <form onSubmit={handleSubmit}>
           <Typography variant="h4">
-            Curso {ncurso}
+            Curso {curso}
           </Typography>
           <Stack spacing={{ xs: 4, sm: 1 }} sx={{ mt: '40px' }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
               <Typography alignSelf={{ sm: 'center' }}>
-                Seleccione un curso:
+                Nombre del curso:
               </Typography>
               <TextField
-                select
                 id="select-curso"
                 sx={{ minWidth: '270px' }}
-                label="Curso"
-                defaultValue="6"
+                label="Curso-Letra"
+                defaultValue={curso}
                 onChange={(e) => setCurso(e.target.value)}
                 required
-              >
-                <MenuItem value="6">6</MenuItem>
-                <MenuItem value="7">7</MenuItem>
-                <MenuItem value="8">8</MenuItem>
-              </TextField>
-            </Stack>
-            <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
-              <Typography alignSelf={{ sm: 'center' }}>
-                Seleccione la letra:
-              </Typography>
-              <TextField
-                select
-                id="select-letra"
-                sx={{ minWidth: '270px' }}
-                label="Letra"
-                defaultValue="A"
-                onChange={(e) => setLetra(e.target.value)}
-                required
-              >
-                <MenuItem value="A">A</MenuItem>
-                <MenuItem value="B">B</MenuItem>
-                <MenuItem value="C">C</MenuItem>
-                <MenuItem value="D">D</MenuItem>
-                <MenuItem value="E">F</MenuItem>
-                <MenuItem value="G">G</MenuItem>
-                <MenuItem value="H">H</MenuItem>
-                <MenuItem value="I">I</MenuItem>
-                <MenuItem value="J">J</MenuItem>
-                <MenuItem value="K">K</MenuItem>
-                <MenuItem value="M">M</MenuItem>
-                <MenuItem value="N">N</MenuItem>
-              </TextField>
+              />
             </Stack>
             <Stack direction="row" justifyContent="space-between" sx={{ py: 3 }}>
               <Button

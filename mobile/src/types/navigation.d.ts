@@ -6,7 +6,7 @@ export type desafioTipo = 'introductory' | 'interactive';
 export type actividadNombre = 'diagramas';
 
 export type RootStackParamList = {
-  MainMap: {carrera: ICarrera[]};
+  MainMap: any;
   Activity: {activity: IActivity};
   Carrera: {carrera: ICarrera};
   Story: {Info: IInfo};
@@ -20,6 +20,7 @@ export type RootStackParamList = {
   FinalQuiz: undefined;
   ResultadoFinal: undefined;
   DynamicTable: undefined;
+  Qr: undefined;
 };
 
 export type MainMapProps = NativeStackScreenProps<

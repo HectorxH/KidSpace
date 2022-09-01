@@ -5,6 +5,7 @@ import {
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import Qr from '../components/Qr';
 import NotFoundView from './NotFoundView';
 import RSize from '../utils/responsive';
 import '../App.css';
@@ -66,14 +67,10 @@ const QRView = () => {
         </Box>
         <Box sx={{ width: 2 / 4, justifyContent: 'center' }}>
           <Card sx={{
-            alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5,
+            alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5, paddingTop: 5,
           }}
           >
-            <CardMedia
-              component="img"
-              sx={{ height: 100, width: 100, margin: 5 }}
-              image={img}
-            />
+            <Qr />
             <CardMedia
               component="img"
               sx={{ width: '50%' }}

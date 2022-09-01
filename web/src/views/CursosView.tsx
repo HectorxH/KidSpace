@@ -106,5 +106,4 @@ const CursosView = () => (
     </Stack>
   </Stack>
 );
-
 export default CursosView;

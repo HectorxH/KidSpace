@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useEffect, useState} from 'react';
 import {
   View,
@@ -9,8 +9,7 @@ import {
   Modal,
   ScrollView,
   Pressable,
-  Animated,
-  TouchableHighlight,
+  // Animated,
   TouchableOpacity,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
@@ -21,18 +20,14 @@ import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import {images} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
-
-const User = {
-  key: 1,
-  name: 'Renata',
-};
+import {useFocusEffect} from '@react-navigation/native';
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');
 
-const MainMap = ({navigation}: MainMapProps) => {
+const MainMap = ({navigation, route}: MainMapProps) => {
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
@@ -40,6 +35,8 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
+  const [user, setUser] = useState({key: 1, name: 'Renata'});
+
   const handleTapUnidad = (event: any) => {
     setModalVisible(true);
     setTitle(event.carrera.title);
@@ -47,6 +44,19 @@ const MainMap = ({navigation}: MainMapProps) => {
     setUnidadCarrera(event.carrera);
   };
   const allMessages: IActivity[] = [];
+
+  useFocusEffect(
+    useCallback(() => {
+      if (route.params === undefined) {
+        return;
+      }
+      setUser({
+        key: 2,
+        name: JSON.parse(route.params.event.data).name,
+      });
+    }, [route]),
+  );
+
   useEffect(() => {
     channel.bind('message', function (data: {message: IActivity}) {
       allMessages.push(data.message);
@@ -119,7 +129,7 @@ const MainMap = ({navigation}: MainMapProps) => {
           source={images.edificios.uri}>
           <View style={styles.view}>
             <Chip style={styles.chip}>
-              <Text style={styles.title}> ¡Hola, {User.name}!</Text>
+              <Text style={styles.title}> ¡Hola, {user.name}!</Text>
             </Chip>
           </View>
           <ScrollView
@@ -214,12 +224,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() =>
-                navigation.push('Conclusion', {
-                  actividad: 'diagramas',
-                  tipo: 'interactive',
-                })
-              }>
+              onPress={() => navigation.push('Qr')}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
