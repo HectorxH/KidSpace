@@ -15,6 +15,7 @@ import DescripcionActividadView from './views/DescipcionActividadView';
 import PanelControlView from './views/PanelControlView';
 import AsignarView from './views/AsignarView';
 import CursoView from './views/CursoView';
+import EditarEstudianteView from './views/EditarEstudianteView';
 
 const App = () => (
   <>
@@ -33,6 +34,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<PanelControlView />} />
           <Route path="/cursos" element={<CursoView />} />
+          <Route path="/cursos/:curso/:nestudiante" element={<EditarEstudianteView />} />
           <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
           <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
           <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

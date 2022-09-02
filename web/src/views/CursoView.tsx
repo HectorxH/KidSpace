@@ -1,5 +1,5 @@
 import {
-  Box, Button, Stack, Typography, Theme,
+  Box, Button, Stack, Typography,
 } from '@mui/material';
 import _ from 'lodash';
 import React, { useState } from 'react';
@@ -9,12 +9,10 @@ import estudiantesDetails from '../mock/estudiantesDetails';
 import { IEstudiante } from '../types/estudiantes';
 
 const loadEstudiantes = () => {
-  //  let estudiantes = localStorage.getItem('estudiantes');
-  //  if (estudiantes == null) estudiantes = '[]';
-  //  let estudiantesArray : IEstudiante[] = JSON.parse(estudiantes);
-  //  estudiantesArray = _.sortBy(estudiantesArray, 'apellidos');
-  //  return estudiantesArray;
-  const estudiantesArray: IEstudiante[] = estudiantesDetails;
+  let estudiantes = localStorage.getItem('estudiantes');
+  if (estudiantes == null) estudiantes = '[]';
+  let estudiantesArray : IEstudiante[] = JSON.parse(estudiantes);
+  estudiantesArray = _.sortBy(estudiantesArray, 'apellidos');
   return estudiantesArray;
 };
 
@@ -23,6 +21,11 @@ const Curso = () => {
   const updateEstudiantes = () => {
     setEstudiantes(loadEstudiantes());
   };
+  const initialEstudiantes = () => {
+    const estudiantesArray: IEstudiante[] = estudiantesDetails;
+    localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
+    setEstudiantes(estudiantesArray);
+  };
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box display="flex" justifyContent="flex-end" sx={{ px: 4, py: 2 }}>
@@ -30,7 +33,7 @@ const Curso = () => {
           Los y las estudiantes deben escanear el código
           QR dentro de la aplicación para unirse al curso.
         </Typography>
-        <Button variant="contained" startIcon={<Icon baseClassName="fas" className="fa-solid fa-qrcode" />}>Generar QR</Button>
+        <Button variant="contained" startIcon={<Icon baseClassName="fas" className="fa-solid fa-qrcode" />} onClick={initialEstudiantes}>Generar QR</Button>
       </Box>
       <Box sx={{ px: 4 }}>
         <Typography variant="h4" sx={{ my: 2 }}>
