@@ -9,6 +9,7 @@ import _ from 'lodash';
 import ProfesorRouter from './routes/Profesor';
 import CursoRouter from './routes/Curso';
 import EstudianteRouter from './routes/Estudiante';
+import ApoderadoRouter from './routes/Apoderado';
 import ActivityRouter from './routes/Activity';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
@@ -113,6 +114,7 @@ app.delete('/logout', checkAuth, (req, res, next) => {
 app.use('/Profesor', checkAuth, ProfesorRouter);
 app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
+app.use('/Apoderado', checkAuth, ApoderadoRouter);
 app.use('/Activity', ActivityRouter);
 
 app.get('/', (req, res) => {

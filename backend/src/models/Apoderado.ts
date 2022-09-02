@@ -13,4 +13,4 @@ export const apoderadoSchema = new Schema<IApoderado>({
   estudiantes: [{ type: Types.ObjectId, ref: 'Estudiante' }],
 });
 
-export default model<IApoderado>('Estudiante', apoderadoSchema);
+export default model<IApoderado>('Apoderado', apoderadoSchema);
