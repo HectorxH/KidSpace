@@ -10,6 +10,7 @@ export interface IFavoritaRequest extends Request {
 
 export interface IPlanificadaRequest extends Request {
   body: {
+    _id: any,
     nunidad: number,
     nactividad: number,
     curso: string,

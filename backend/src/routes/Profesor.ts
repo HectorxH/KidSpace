@@ -67,7 +67,7 @@ router.post('/planificadas', async (req:IPlanificadaRequest, res) => {
   try {
     const uid = req.user?._id;
     const {
-      nunidad, nactividad, curso, fecha, del,
+      _id, nunidad, nactividad, curso, fecha, del,
     } = req.body;
     const planificada = {
       nunidad, nactividad, curso, fecha, del,
@@ -78,7 +78,7 @@ router.post('/planificadas', async (req:IPlanificadaRequest, res) => {
     }
 
     if (del) {
-      await Profesor.updateOne({ uid }, { $pull: { planificadas: planificada } });
+      await Profesor.updateOne({ uid }, { $pull: { planificadas: { _id } } });
     } else {
       await Profesor.updateOne({ uid }, { $addToSet: { planificadas: planificada } });
     }

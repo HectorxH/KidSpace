@@ -5,7 +5,7 @@ import {
   DialogActions, DialogContent, DialogContentText, DialogTitle,
 } from '@mui/material';
 import _ from 'lodash';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import axios from 'axios';
@@ -29,8 +29,8 @@ interface IniciarButtonParams {
 
 const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
   :IniciarButtonParams) => {
-  const [openTooltip, setOpenTooltip] = React.useState(false);
-  const [openDialog, setOpenDialog] = React.useState(false);
+  const [openTooltip, setOpenTooltip] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
   const fecha = moment(planificada.fecha);
 
   const handleTooltipClose = () => {
@@ -154,9 +154,7 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
           />
           <IconButton
             color="warning"
-            onClick={() => eliminarAsignacion({
-              nactividad, nunidad, curso, fecha,
-            })}
+            onClick={() => eliminarAsignacion(row)}
           >
             <DeleteIcon />
           </IconButton>
@@ -172,6 +170,7 @@ const PlanificadasTable = (
   const { logout } = useAuth();
   const eliminarAsignacion = async (actividadPlanificada: IPlanificada) => {
     try {
+      console.log(actividadPlanificada);
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Profesor/planificadas`, { del: true, ...actividadPlanificada });
     } catch (e) {
       console.log(e);
