@@ -17,6 +17,8 @@ import PanelControlView from './views/PanelControlView';
 import LoginView from './views/LoginView';
 import RegistroView from './views/RegistroView';
 import AsignarView from './views/AsignarView';
+import CursoView from './views/CursoView';
+import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
 
@@ -41,7 +43,8 @@ const App = () => (
             <Route path="/" element={<PanelControlView />} />
             <Route path="/login" element={<ProtectedRoute loggedout><LoginView /></ProtectedRoute>} />
             <Route path="/registro" element={<ProtectedRoute loggedout><RegistroView /></ProtectedRoute>} />
-            <Route path="/cursos" />
+            <Route path="/cursos" element={<CursoView />} />
+            <Route path="/cursos/:curso/:nestudiante" element={<EditarEstudianteView />} />
             <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
             <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
             <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

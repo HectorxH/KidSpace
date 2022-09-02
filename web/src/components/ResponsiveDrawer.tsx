@@ -240,6 +240,9 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           >
             <MenuItem onClick={() => { handleClose(); handleLogout(); }} component={Link} to="/login">Logout</MenuItem>
           </Menu>
+          <Typography variant="h6" component="div">
+            Nombre Apellido
+          </Typography>
         </Toolbar>
       </AppBar>
       <Box
