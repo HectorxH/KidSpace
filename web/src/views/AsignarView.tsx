@@ -6,7 +6,6 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import axios from 'axios';
-import moment from 'moment-timezone';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
@@ -27,11 +26,10 @@ const AsignarView = () => {
   const currentDate = new Date().toISOString().slice(0, 10);
   const [curso, setCurso] = useState('A');
   const [fecha, setFecha] = useState(currentDate);
-  const [fechaShow, setFechaShow] = React.useState(currentDate);
+  const [fechaShow, setFechaShow] = useState(currentDate);
   const [success, setSuccess] = useState(false);
   const handleFecha = (e : any) => {
-    const date = moment(e).format('DD-MM-YYYY');
-    setFecha(date);
+    setFecha(e);
     setFechaShow(e);
   };
   const handleBack = () => {
