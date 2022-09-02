@@ -3,12 +3,12 @@
 /* eslint-disable no-plusplus */
 import {
   Button, TextField, Card, CardContent,
-  Divider, Stack, Theme, Typography,
+  Divider, Stack, Typography,
   Dialog, DialogActions, DialogContent,
   DialogContentText, DialogTitle,
 } from '@mui/material';
-import _ from 'lodash';
-import { useParams } from 'react-router-dom';
+// import _ from 'lodash';
+// import { useParams } from 'react-router-dom';
 import React, { useState } from 'react';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -20,22 +20,22 @@ interface EdtiarApoderadoParams {
   handleEliminarApoderado: Function
 }
 
-const getApoderado = (napoderado: string) => {
-  const apoderados = localStorage.getItem('apoderados');
-  if (apoderados === null) return null;
-  const apoderadosArray = JSON.parse(apoderados);
-  for (let i = 0; i < apoderadosArray.length; i++) {
-    const apoderado = apoderadosArray[i];
-    if (apoderado.napoderado === napoderado) {
-      return [apoderado.nombres, apoderado.apellidos, apoderado.correo];
-    }
-  }
-  return ['', ''];
-};
+// const getApoderado = (napoderado: string) => {
+//   const apoderados = localStorage.getItem('apoderados');
+//   if (apoderados === null) return null;
+//   const apoderadosArray = JSON.parse(apoderados);
+//   for (let i = 0; i < apoderadosArray.length; i++) {
+//     const apoderado = apoderadosArray[i];
+//     if (apoderado.napoderado === napoderado) {
+//       return [apoderado.nombres, apoderado.apellidos, apoderado.correo];
+//     }
+//   }
+//   return ['', ''];
+// };
 
 const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApoderado }:
   EdtiarApoderadoParams) => {
-  const datos = useParams();
+  // const datos = useParams();
   const [nombres, setNombres] = useState(apoderado.nombres);
   const [apellidos, setApellidos] = useState(apoderado.apellidos);
   const [correo, setCorreo] = useState(apoderado.correo);
