@@ -64,15 +64,15 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            ¿Desea eliminar a NombreCompleto?
+            ¿Desea eliminar a {estudiante.nombres} {estudiante.apellidos}?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button sx={{ backgroundColor: '#EA6A6A' }} variant="contained" onClick={handleEliminarStudent}>Eliminar</Button>
-          <Button variant="contained" onClick={handleCloseDialog}>
+          <Button sx={{ backgroundColor: '#F1F3F8' }} variant="contained" onClick={handleCloseDialog}>
             <Typography
               variant="button"
-              color={(theme: Theme) => theme.palette.error.contrastText}
+              sx={{ color: '#929292' }}
             >
               Cancelar
             </Typography>

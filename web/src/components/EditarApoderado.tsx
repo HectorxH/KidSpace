@@ -2,8 +2,10 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-plusplus */
 import {
-  Button, Paper, Grid, Alert, TextField,
-  Card, CardContent, Divider, Stack, Theme, Typography,
+  Button, TextField, Card, CardContent,
+  Divider, Stack, Theme, Typography,
+  Dialog, DialogActions, DialogContent,
+  DialogContentText, DialogTitle,
 } from '@mui/material';
 import _ from 'lodash';
 import { useParams } from 'react-router-dom';
@@ -38,7 +40,7 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
   const [apellidos, setApellidos] = useState(apoderado.apellidos);
   const [correo, setCorreo] = useState(apoderado.correo);
   const [editing, setEditing] = useState(false);
-  const [correct, setCorrect] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
 
   const changeApoderadoEditing = () => {
     setEditing(!editing);
@@ -62,11 +64,6 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
     handleUpdateApoderado(newApoderado);
   };
 
-  const handleEliminar = () => {
-    changeApoderadoEditing();
-    handleEliminarApoderado(apoderado.napoderado);
-  };
-
   const handleNombresChange = (event: any) => {
     setNombres(event.target.value);
   };
@@ -77,6 +74,20 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
 
   const handleCorreoChange = (event: any) => {
     setCorreo(event.target.value);
+  };
+
+  const handleClickActive = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const handleEliminar = () => {
+    changeApoderadoEditing();
+    handleEliminarApoderado(apoderado.napoderado);
+    handleCloseDialog();
   };
 
   return (
@@ -121,7 +132,33 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
             {editing && (
               <Stack direction="row" justifyContent="space-between">
                 <Stack>
-                  <Button sx={{ color: '#EA6A6A' }} onClick={handleEliminar} startIcon={<DeleteIcon />}>Eliminar</Button>
+                  <Button sx={{ color: '#EA6A6A' }} onClick={handleClickActive} startIcon={<DeleteIcon />}>Eliminar</Button>
+                  <Dialog
+                    open={openDialog}
+                    onClose={handleCloseDialog}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                  >
+                    <DialogTitle id="alert-dialog-title">
+                      Confirme la acción
+                    </DialogTitle>
+                    <DialogContent>
+                      <DialogContentText id="alert-dialog-description">
+                        ¿Desea eliminar a {nombres} {apellidos}?
+                      </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                      <Button sx={{ backgroundColor: '#EA6A6A' }} variant="contained" onClick={handleEliminar}>Eliminar</Button>
+                      <Button variant="contained" onClick={handleCloseDialog} sx={{ backgroundColor: '#F1F3F8' }}>
+                        <Typography
+                          variant="button"
+                          sx={{ color: '#929292' }}
+                        >
+                          Cancelar
+                        </Typography>
+                      </Button>
+                    </DialogActions>
+                  </Dialog>
                 </Stack>
                 <Stack direction="row" alignItems="end">
                   <Button onClick={handleCancelarClick} variant="contained" color="inherit" sx={{ marginRight: 2 }}> Cancelar </Button>
