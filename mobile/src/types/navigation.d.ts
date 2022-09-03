@@ -1,12 +1,18 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
+import {ICarrera, IInfo, IMainMap} from './carrera';
 
 export type desafioTipo = 'introductory' | 'interactive';
 export type actividadNombre = 'diagramas';
 
 export type RootStackParamList = {
-  MainMap: undefined;
+  InicioView: undefined;
+  ErrorView: undefined;
+  FormularioView: any;
+  MainMap: {datos: IMainMap};
   Activity: {activity: IActivity};
+  Carrera: {carrera: ICarrera};
+  Story: {Info: IInfo};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
   CuentoInteractivo: {actividad: actividadNombre};
@@ -17,8 +23,21 @@ export type RootStackParamList = {
   FinalQuiz: undefined;
   ResultadoFinal: undefined;
   DynamicTable: undefined;
+  Qr: undefined;
 };
 
+export type InicioViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'InicioView'
+>;
+export type FormularioViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'FormularioView'
+>;
+export type ErrorViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'ErrorView'
+>;
 export type MainMapProps = NativeStackScreenProps<
   RootStackParamList,
   'MainMap'
@@ -26,6 +45,14 @@ export type MainMapProps = NativeStackScreenProps<
 export type ActivityProps = NativeStackScreenProps<
   RootStackParamList,
   'Activity'
+>;
+export type CarreraProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Carrera'
+>;
+export type InfoProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Story'
 >;
 export type NoAvailableActivitiesProps = NativeStackScreenProps<
   RootStackParamList,
