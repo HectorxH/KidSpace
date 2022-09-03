@@ -1,24 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Card,
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import Qr from '../components/Qr';
 import NotFoundView from './NotFoundView';
-import RSize from '../utils/responsive';
+// import RSize from '../utils/responsive';
 import '../App.css';
+import { ICurso } from '../types/cursos';
+import { useAuth } from '../hooks/useAuth';
 
 const img = require('../assets/cursosimg.png');
 const logoKidspace = require('../assets/logo-horizontal.png');
 
 const QRView = () => {
   const params = useParams();
-  const { ncurso } = params;
+  const [curso, setCurso] = useState<ICurso>();
+  const [loading, setLoading] = useState(true);
+  const { cursoId } = params;
   // const navigate = useNavigate();
-  if (typeof ncurso === 'undefined') return (<NotFoundView />);
 
+  const { logout } = useAuth();
+
+  const getCurso = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
+      setCurso(res.data.curso);
+      setLoading(false);
+      console.log(res.data);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!curso) getCurso();
+  }, []);
+
+  if (loading) return (<Box />);
+  if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Stack direction="row" style={{ width: '100%', justifyContent: 'center' }}>
@@ -29,13 +56,13 @@ const QRView = () => {
         >
           <Stack direction="column" spacing={2}>
             <Typography display="block" variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-              <b>Curso: {ncurso}</b>
+              <b>Curso: {curso.nombre}</b>
             </Typography>
           </Stack>
         </Box>
         <CardMedia
           component="img"
-          sx={{ height: RSize(0.3, 'h'), width: 3.5 / 4 }}
+          sx={{ height: '25%', width: 3.5 / 4 }}
           image={img}
         />
       </Stack>
@@ -70,14 +97,14 @@ const QRView = () => {
             alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5, paddingTop: 5,
           }}
           >
-            <Qr />
+            <Qr curso={curso} />
             <CardMedia
               component="img"
               sx={{ width: '50%' }}
               image={logoKidspace}
             />
             <Typography variant="h5">
-              ¡Únete al curso {ncurso}!
+              ¡Únete al curso {curso.nombre}!
             </Typography>
           </Card>
         </Box>

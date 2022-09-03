@@ -3,52 +3,90 @@ import {
   Box, Button, MenuItem,
   TextField, Typography, Theme, Stack, CardMedia, Modal, Card,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import axios from 'axios';
 import RSize from '../utils/responsive';
 import NotFoundView from './NotFoundView';
+import { ICurso } from '../types/cursos';
+import { useAuth } from '../hooks/useAuth';
 
 const img = require('../assets/cursosimg.png');
 
 const EditarCursoView = () => {
   const params = useParams();
-  const { ncurso } = params;
-  const [modalVisble, setModalVisble] = React.useState(false);
-  if (typeof ncurso === 'undefined') return (<NotFoundView />);
+  const { cursoId } = params;
+  const [modalVisble, setModalVisble] = useState(false);
   const navigate = useNavigate();
-  const [curso, setCurso] = React.useState(ncurso);
-  const [success, setSuccess] = React.useState(false);
+  const [curso, setCurso] = useState<ICurso>();
+  const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [nombre, setNombre] = useState('');
+
+  const { logout } = useAuth();
+
+  const getCurso = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
+      setCurso(res.data.curso);
+      if (curso) setNombre(curso.nombre);
+      setLoading(false);
+      console.log(res.data);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+      setLoading(false);
+    }
+  };
+
   const handleClose = () => {
     setModalVisble(false);
   };
   const handleOpen = () => {
     setModalVisble(true);
   };
-  const handleBack = () => {
-    navigate(-1);
+  const handleEliminar : React.FormEventHandler = async (event) => {
+    event.preventDefault();
+    try {
+      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
+      console.log(res.data);
+      navigate('/cursos');
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
   };
-  const handleEliminar = (e: { preventDefault: () => void; }) => {
-    e.preventDefault();
+  const handleSubmit : React.FormEventHandler = async (event) => {
+    event.preventDefault();
+    try {
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`,
+        { nombre },
+      );
+      console.log(res.data);
+      setSuccess(true);
+      navigate(`/cursos/${cursoId}`);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+      setSuccess(false);
+    }
   };
-  const handleSubmit : React.FormEventHandler = (e) => {
-    e.preventDefault();
-    // const cursoAgregado : ICurso = {
-    //   curso, letra,
-    // };
 
-    // let asignadas = localStorage.getItem('cursos');
-    // if (asignadas === null) asignadas = '[]';
+  useEffect(() => {
+    if (!curso) getCurso();
+  }, []);
 
-    // const asignadasArray : ICurso[] = JSON.parse(asignadas);
-    // asignadasArray.push(cursoAgregado);
-
-    // localStorage.setItem('cursos', JSON.stringify(asignadasArray));
-    setSuccess(true);
-    // setTimeout(handleBack, 1200);
-  };
-
+  if (loading) return (<Box />);
+  if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Modal
@@ -105,12 +143,12 @@ const EditarCursoView = () => {
           }}
         >
           <Typography display="block" variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-            <b>Curso: {ncurso}</b>
+            <b>Curso: {curso.nombre}</b>
           </Typography>
         </Box>
         <CardMedia
           component="img"
-          sx={{ height: RSize(0.3, 'h'), width: 3.5 / 4 }}
+          // sx={{ height: RSize(0.3, 'h'), width: 3.5 / 4 }}
           image={img}
         />
       </Stack>
@@ -120,7 +158,7 @@ const EditarCursoView = () => {
       >
         <form onSubmit={handleSubmit}>
           <Typography variant="h4">
-            Curso {curso}
+            Curso {curso.nombre}
           </Typography>
           <Stack spacing={{ xs: 4, sm: 1 }} sx={{ mt: '40px' }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
@@ -130,9 +168,9 @@ const EditarCursoView = () => {
               <TextField
                 id="select-curso"
                 sx={{ minWidth: '270px' }}
-                label="Curso-Letra"
-                defaultValue={curso}
-                onChange={(e) => setCurso(e.target.value)}
+                label="Nombre de curso"
+                defaultValue={curso.nombre}
+                onChange={(e) => setNombre(e.target.value)}
                 required
               />
             </Stack>
@@ -156,7 +194,7 @@ const EditarCursoView = () => {
                 <Button
                   color="extra"
                   variant="contained"
-                  onClick={handleBack}
+                  onClick={() => { navigate(`/cursos/${cursoId}`); }}
                 >
                   <Typography
                     variant="button"

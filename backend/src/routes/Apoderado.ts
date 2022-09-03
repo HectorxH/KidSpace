@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/:id', async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const { nombres, apellidos, email } = req.body;
     const apoderado = await Apoderado.findById(id);
     const uid = apoderado?.uid;
@@ -22,7 +22,7 @@ router.post('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const apoderado = await Apoderado.findById(id);
     const uid = apoderado?.uid;
     await Apoderado.findByIdAndDelete(id);

@@ -3,14 +3,19 @@ import {
 } from '@mui/material';
 import React from 'react';
 import QRCode from 'react-qr-code';
+import { ICurso } from '../types/cursos';
 
-const Qr = () => (
-  <Stack>
-    <QRCode value={JSON.stringify({
-      name: '6-A', // curso
-    })}
-    />
-  </Stack>
-);
+interface QrParams {
+  curso: ICurso
+}
+
+const Qr = ({ curso }:QrParams) => {
+  const { _id } = curso;
+  return (
+    <Stack>
+      <QRCode value={_id} />
+    </Stack>
+  );
+};
 
 export default Qr;

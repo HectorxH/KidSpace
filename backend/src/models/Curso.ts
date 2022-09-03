@@ -11,7 +11,7 @@ export interface ICurso {
 export const cursoSchema = new Schema<ICurso>({
   nombre: String,
   profesor: { type: Types.ObjectId, ref: 'Profesor' },
-  estudiantes: [{ type: Types.ObjectId, ref: 'Alumno' }],
+  estudiantes: [{ type: Types.ObjectId, ref: 'Estudiante' }],
 });
 
 export default model<ICurso>('Curso', cursoSchema);

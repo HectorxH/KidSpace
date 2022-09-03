@@ -18,7 +18,7 @@ import LoginView from './views/LoginView';
 import RegistroView from './views/RegistroView';
 import AsignarView from './views/AsignarView';
 import AgregarCursoView from './views/AgregarCursoView';
-// import CursosView from './views/CursosView';
+import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
 import QRView from './views/QRView';
@@ -48,12 +48,13 @@ const App = () => (
             <Route path="/" element={<PanelControlView />} />
             <Route path="/login" element={<ProtectedRoute loggedout><LoginView /></ProtectedRoute>} />
             <Route path="/registro" element={<ProtectedRoute loggedout><RegistroView /></ProtectedRoute>} />
-            <Route path="/cursos" element={<CursoView />} />
-            <Route path="/cursos/:curso/:nestudiante" element={<EditarEstudianteView />} />
+            <Route path="/curso" element={<CursoView />} />
+            <Route path="/cursos" element={<CursosView />} />
+            <Route path="/cursos/:cursoId/:estudianteId" element={<EditarEstudianteView />} />
             <Route path="/cursos/agregar" element={<AgregarCursoView />} />
-            <Route path="/cursos/:ncurso" element={<ParticipantesView />} />
-            <Route path="/cursos/:ncurso/editar" element={<EditarCursoView />} />
-            <Route path="/cursos/:ncurso/qr" element={<QRView />} />
+            <Route path="/cursos/:cursoId" element={<ParticipantesView />} />
+            <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
+            <Route path="/cursos/:cursoId/qr" element={<QRView />} />
             <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
             <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
             <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

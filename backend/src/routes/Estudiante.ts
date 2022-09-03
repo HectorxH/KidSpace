@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.post('/:id', async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const { nombres, apellidos } = req.body;
     const estudiante = await Estudiante.findById(id);
     const uid = estudiante?.uid;
@@ -22,7 +22,7 @@ router.post('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const estudiante = await Estudiante.findById(id);
     const uid = estudiante?.uid;
     await Estudiante.findByIdAndDelete(id);

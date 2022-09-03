@@ -1,6 +1,6 @@
 export interface ICurso {
-  curso: string,
-  letra: string,
+  _id: string,
+  nombre: string
 }
 
-export type ICursos = ICursos[]
+export type ICursos = ICurso[]
