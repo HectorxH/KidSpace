@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import session from 'express-session';
 import passport from 'passport';
+import crypto from 'crypto';
 import bcrypt from 'bcrypt';
 import _ from 'lodash';
 import ProfesorRouter from './routes/Profesor';
@@ -34,7 +35,7 @@ initPassport(passport);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://app.kidspace.live/'],
+  origin: ['http://localhost:3000', 'http://app.kidspace.live/', '*'],
   credentials: true,
 }));
 app.use(session({
@@ -54,16 +55,27 @@ app.use((req, res, next) => {
 });
 
 app.post('/register', checkNotAuth, async (req, res) => {
-  console.log(req.body);
-
   try {
     const {
-      nombres, apellidos, username, password, tipo,
+      nombres, apellidos, tipo,
     } = req.body;
+    let { username, password } = req.body;
     if (_.some(req.body, _.isNil)) {
       console.log(req.body);
       res.sendStatus(404);
     }
+
+    if (tipo === 'estudiante') {
+      password = crypto.randomBytes(48).toString('hex');
+      let user;
+      do {
+        username = crypto.randomBytes(48).toString('hex');
+        // eslint-disable-next-line no-await-in-loop
+        user = await User.findOne({ username });
+      } while (user);
+      console.log({ username, password });
+    }
+
     const hashedPass = await bcrypt.hash(password, 10);
     const user = new User({
       nombres, apellidos, username, password: hashedPass, tipo,
@@ -73,12 +85,12 @@ app.post('/register', checkNotAuth, async (req, res) => {
     if (user.tipo === 'profesor') {
       const profesor = new Profesor({ uid: user._id });
       await profesor.save();
+      res.sendStatus(200);
     } else if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ uid: user._id });
       await estudiante.save();
+      res.json({ username, password });
     }
-
-    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
@@ -101,6 +113,7 @@ app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res
     });
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 

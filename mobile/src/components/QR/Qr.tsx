@@ -4,6 +4,7 @@ import {MainMapProps} from '../../types/navigation';
 
 const Qr = ({navigation}: MainMapProps) => {
   const onSuccess = (event: any) => {
+    console.log(event);
     navigation.navigate('FormularioView', {event});
   };
 

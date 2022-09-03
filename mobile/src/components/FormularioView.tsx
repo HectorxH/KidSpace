@@ -1,5 +1,6 @@
 import React from 'react';
-// import axios from "axios";
+import axios from 'axios';
+import Config from 'react-native-config';
 import {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {Button, Card} from 'react-native-paper';
@@ -7,29 +8,28 @@ import {FormularioViewProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import {images} from '../assets/inicio/handler/images';
 
-const FormularioView = ({navigation}: FormularioViewProps) => {
+const FormularioView = ({navigation, route}: FormularioViewProps) => {
+  // const {event} = route.params;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
-  const handleEnviar = () => {
-    //   try {
-    //     const response = await axios.post('URL', {
-    //       nombres,
-    //       apellidos,
-    //     });
-    //     if (response.status === 201) {
-    //       console.log(response);
-    //     } else {
-    //       throw new Error("An error has occurred");
-    //     }
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    navigation.push('ErrorView');
-    // , {
-    //   datos: nombres,
-    // });
+  const handleEnviar = async () => {
+    try {
+      console.log(`${Config.BACKEND_URL}`);
+      const response = await axios.post(`${Config.BACKEND_URL}/register`, {
+        nombres,
+        apellidos,
+        tipo: 'estudiante',
+      });
+      console.log(response.data);
+      navigation.push('MainMap', {datos: {nombres}});
+    } catch (error) {
+      console.log(JSON.stringify(error));
+      navigation.push('ErrorView');
+    }
   };
+  // , {
+  //   datos: nombres,
+  // });
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
@@ -50,7 +50,7 @@ const FormularioView = ({navigation}: FormularioViewProps) => {
           style={styles.button}
           color="#FF8A01"
           mode="contained"
-          onPress={() => handleEnviar()}>
+          onPress={handleEnviar}>
           <Text style={styles.textButton}>Enviar</Text>
         </Button>
       </View>

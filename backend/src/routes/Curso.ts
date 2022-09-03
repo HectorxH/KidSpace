@@ -18,6 +18,7 @@ router.post('/', async (req, res) => {
     res.json(curso);
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
@@ -32,6 +33,7 @@ router.get('/', async (req, res) => {
     }
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
@@ -42,6 +44,7 @@ router.get('/:id', async (req, res) => {
     res.json({ curso });
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
@@ -59,6 +62,7 @@ router.post('/:id', async (req, res) => {
     }
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
@@ -69,10 +73,11 @@ router.delete('/:id', async (req, res) => {
     res.send(200);
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 
-router.post('/inscribir/:id', async (req, res) => {
+router.post('/:id/inscribir', async (req, res) => {
   try {
     const { id } = req.params;
     const uid = req.user?._id;
@@ -86,6 +91,7 @@ router.post('/inscribir/:id', async (req, res) => {
     res.send(200);
   } catch (e) {
     console.log(e);
+    res.sendStatus(500);
   }
 });
 

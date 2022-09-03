@@ -7,30 +7,17 @@ import {
 import QrCodeIcon from '@mui/icons-material/QrCode';
 import { useNavigate, useParams } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
-import _ from 'lodash';
 import axios from 'axios';
 import NotFoundView from './NotFoundView';
-// import RSize from '../utils/responsive';
 import '../App.css';
 import CursoTable from '../components/CursoTable';
-import { IEstudiante } from '../types/estudiantes';
-// import estudiantesDetails from '../mock/estudiantesDetails';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
 
 const img = require('../assets/cursosimg.png');
 
-const loadEstudiantes = () => {
-  let estudiantes = localStorage.getItem('estudiantes');
-  if (estudiantes == null) estudiantes = '[]';
-  let estudiantesArray : IEstudiante[] = JSON.parse(estudiantes);
-  estudiantesArray = _.sortBy(estudiantesArray, 'apellidos');
-  return estudiantesArray;
-};
-
 const ParticipantesView = () => {
   const params = useParams();
-  const [estudiantes, setEstudiantes] = useState(loadEstudiantes());
   const [curso, setCurso] = useState<ICurso>();
   const [loading, setLoading] = useState(true);
   const { cursoId } = params;
@@ -56,10 +43,6 @@ const ParticipantesView = () => {
   useEffect(() => {
     if (!curso) getCurso();
   }, []);
-
-  const updateEstudiantes = () => {
-    setEstudiantes(loadEstudiantes());
-  };
 
   if (loading) return (<Box />);
   if (!curso) return (<NotFoundView />);
@@ -114,7 +97,7 @@ const ParticipantesView = () => {
         <Typography variant="h4" sx={{ my: 2 }}>
           Participantes
         </Typography>
-        <CursoTable rows={estudiantes} updateEstudiantes={updateEstudiantes} />
+        <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
       </Box>
     </Stack>
   );
