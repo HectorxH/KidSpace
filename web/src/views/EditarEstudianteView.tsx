@@ -55,6 +55,7 @@ const EditarEstudiante = () => {
           nombres: 'Nombres',
           apellidos: 'Apellidos',
           correo: 'Correo',
+          isNew: true,
         }];
         localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
         setApoderados(estudiantesArray[i].apoderados);
