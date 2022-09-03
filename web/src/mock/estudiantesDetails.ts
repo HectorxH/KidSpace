@@ -10,6 +10,7 @@ export default [
         nombres: 'Anastasiia',
         apellidos: 'Fedorova',
         correo: 'anastasiia@hotmail.com',
+        isNew: false,
       },
     ],
   },
@@ -21,9 +22,10 @@ export default [
     apoderados: [
       {
         napoderado: '2',
-        nombres: 'Tamara',
+        nombres: 'Tami',
         apellidos: 'Letelier',
         correo: 'tamara@hotmail.com',
+        isNew: false,
       },
     ],
   },
