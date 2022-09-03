@@ -4,7 +4,7 @@ import {MainMapProps} from '../../types/navigation';
 
 const Qr = ({navigation}: MainMapProps) => {
   const onSuccess = (event: any) => {
-    navigation.navigate('MainMap', {event});
+    navigation.navigate('FormularioView', {event});
   };
 
   return <QRCodeScanner onRead={onSuccess} />;

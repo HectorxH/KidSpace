@@ -17,3 +17,7 @@ export interface IInfo {
   coins: Int16Array;
   estado: string;
 }
+
+export interface IMainMap {
+  nombres: string;
+}

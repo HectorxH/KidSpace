@@ -1,12 +1,15 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
-import {ICarrera, IInfo} from './carrera';
+import {ICarrera, IInfo, IMainMap} from './carrera';
 
 export type desafioTipo = 'introductory' | 'interactive';
 export type actividadNombre = 'diagramas';
 
 export type RootStackParamList = {
-  MainMap: any;
+  InicioView: undefined;
+  ErrorView: undefined;
+  FormularioView: any;
+  MainMap: {datos: IMainMap};
   Activity: {activity: IActivity};
   Carrera: {carrera: ICarrera};
   Story: {Info: IInfo};
@@ -23,6 +26,18 @@ export type RootStackParamList = {
   Qr: undefined;
 };
 
+export type InicioViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'InicioView'
+>;
+export type FormularioViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'FormularioView'
+>;
+export type ErrorViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'ErrorView'
+>;
 export type MainMapProps = NativeStackScreenProps<
   RootStackParamList,
   'MainMap'

@@ -25,6 +25,9 @@ import ResultadoFinal from './components/Conclusion/ResultadoFinal';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
 import MainMap from './components/MainMap';
+import InicioView from './components/InicioView';
+import ErrorView from './components/library/ErrorView';
+import FormularioView from './components/FormularioView';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/navigation';
@@ -35,6 +38,21 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen
+          name="InicioView"
+          component={InicioView}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="FormularioView"
+          component={FormularioView}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ErrorView"
+          component={ErrorView}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="MainMap"
           component={MainMap}

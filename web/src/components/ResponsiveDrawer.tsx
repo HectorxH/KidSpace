@@ -64,12 +64,6 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <BarChartIcon />,
       path: '/estadisticas',
     },
-    {
-      uid: 5,
-      text: 'QR',
-      icon: <BarChartIcon />,
-      path: '/qrcode',
-    },
   ];
 
   let seccionActual = 'Pagina no encontrada';

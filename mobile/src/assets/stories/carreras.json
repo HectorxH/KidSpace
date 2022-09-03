@@ -79,32 +79,6 @@
     ]
   },
   {
-    "id":4,
-    "img":"mineria",
-    "title":"Carrera: Minería",
-    "desc":"La tierra esconde muchos tesoros en su interior, como distintos metales y minerales. Aprenda sobre la carrera de minería que trata de extraer estos tesoros del suelo.",
-    "marginTop":0.09,
-    "marginLeft":0.1,
-    "stories":[
-      {
-        "carrera":"Carrera: Minería",
-        "img":"portada_min1",
-        "title":"Historia de X",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
-        "estado":"estrellagris"
-      },
-      {
-        "carrera":"Carrera: Minería",
-        "img":"portada_min2",
-        "title":"Historia de X",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
-        "estado":"estrellagris"
-      }
-    ]
-  },
-  {
     "id":5,
     "img":"astronomia",
     "title":"Carrera: Astronomía",

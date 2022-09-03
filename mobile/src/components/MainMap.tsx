@@ -28,6 +28,7 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation, route}: MainMapProps) => {
+  const {datos} = route.params;
   const [message, setMessage] = useState<IActivity[]>([]);
   const [visible, setVisible] = useState(false);
   const [notification, setNotification] = useState(0);
@@ -35,7 +36,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
-  const [user, setUser] = useState({key: 1, name: 'Renata'});
+  const [user, setUser] = useState({key: 1, name: datos.nombres});
 
   const handleTapUnidad = (event: any) => {
     setModalVisible(true);
@@ -52,9 +53,9 @@ const MainMap = ({navigation, route}: MainMapProps) => {
       }
       setUser({
         key: 2,
-        name: JSON.parse(route.params.event.data).name,
+        name: datos.nombres,
       });
-    }, [route]),
+    }, [datos.nombres, route.params]),
   );
 
   useEffect(() => {
@@ -224,7 +225,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() => navigation.push('Qr')}>
+              onPress={() => console.log('Pressed')}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
