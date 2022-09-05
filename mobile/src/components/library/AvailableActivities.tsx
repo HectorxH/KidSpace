@@ -6,44 +6,10 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {AvailableActivitiesProps} from '../../types/navigation';
 
 const windowHeight = Dimensions.get('window').height;
-const windowWidth = Dimensions.get('window').width;
-
-const activities: any = [
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-  {
-    nactividad: '1',
-    length: '1',
-    titulo: 'ayuda',
-  },
-];
 
 const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  //const activities = route.params.activities;
+  const activities = route.params.activities;
   console.log(activities);
   return (
     <View>
