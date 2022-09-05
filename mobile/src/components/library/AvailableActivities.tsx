@@ -1,15 +1,49 @@
 import React from 'react';
-import {View, Text, StyleSheet, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Dimensions, ScrollView} from 'react-native';
 import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {AvailableActivitiesProps} from '../../types/navigation';
 
-const windowWidth = Dimensions.get('window').height;
+const windowHeight = Dimensions.get('window').height;
+const windowWidth = Dimensions.get('window').width;
+
+const activities: any = [
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+  {
+    nactividad: '1',
+    length: '1',
+    titulo: 'ayuda',
+  },
+];
 
 const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  const activities = route.params.activities;
+  //const activities = route.params.activities;
   console.log(activities);
   return (
     <View>
@@ -23,7 +57,9 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
         <Text style={styles.title}> Tus Actividades:</Text>
       </View>
       <View style={styles.cards}>
-        <>
+        <ScrollView
+          horizontal={true}
+          contentContainerStyle={styles.scrollContent}>
           {activities.map((activity, index) => (
             <ActivityCard
               key={index}
@@ -32,7 +68,7 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
               navigation={navigation}
             />
           ))}
-        </>
+        </ScrollView>
       </View>
     </View>
   );
@@ -41,19 +77,22 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
 const styles = StyleSheet.create({
   view: {
     flexDirection: 'row',
-    margin: Math.round(windowWidth * 0.03),
+    margin: Math.round(windowHeight * 0.03),
   },
   title: {
     marginLeft: 10,
     fontFamily: 'Poppins-Bold',
-    fontSize: Math.round(windowWidth * 0.06),
+    fontSize: Math.round(windowHeight * 0.06),
   },
   cards: {
     flexDirection: 'row',
-    justifyContent: 'center',
   },
   card: {
-    flex: 0,
+    flex: 1,
+  },
+  scrollContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
   },
 });
 
