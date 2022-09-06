@@ -35,7 +35,7 @@ initPassport(passport);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://app.kidspace.live/', '*'],
+  origin: ['http://localhost:3000', 'http://app.kidspace.live', 'http://app.kidspace.live:8080'],
   credentials: true,
 }));
 app.use(session({

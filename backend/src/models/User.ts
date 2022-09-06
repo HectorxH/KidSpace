@@ -16,7 +16,7 @@ export const userSchema = new Schema<IUser>({
   apellidos: String,
   password: String,
   email: String,
-  tipo: { type: String, enum: ['profesor', 'representante'] },
+  tipo: { type: String, enum: ['profesor', 'representante', 'apoderado', 'estudiante'] },
 });
 
 export default model<IUser>('User', userSchema);
