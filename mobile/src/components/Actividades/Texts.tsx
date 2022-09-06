@@ -3,6 +3,8 @@ import {View, StyleSheet, Text} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 import {ITexts} from '../../types/activity';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import {getTextStyle} from './utils';
 
 interface TextsProps {
   texts: ITexts[] | never[];
@@ -16,17 +18,38 @@ const Texts = ({texts}: TextsProps) => {
   return (
     <View style={styles.container}>
       {texts.map((text: ITexts) => {
+        const textStyles = getTextStyle(styles.baseText, text.settings);
         const message = (
-          <Text style={styles.baseText}>
+          <Text style={textStyles.settings}>
+            {typeof text.leftIcon !== 'undefined' && (
+              <Icon
+                name={text.leftIcon.name}
+                size={RSize(text.leftIcon.size)}
+                color={text.leftIcon.color}
+              />
+            )}
             {text.text.split('*').map((word: string, index: number) => {
               return (
                 <Text
-                  style={index % 2 === 1 ? styles.oddText : styles.evenText}
+                  style={
+                    typeof textStyles.textColor.color !== 'undefined'
+                      ? textStyles.textColor
+                      : index % 2 === 1
+                      ? styles.oddText
+                      : styles.evenText
+                  }
                   key={word}>
                   {word}
                 </Text>
               );
             })}
+            {typeof text.rightIcon !== 'undefined' && (
+              <Icon
+                name={text.rightIcon.name}
+                size={RSize(text.rightIcon.size)}
+                color={text.rightIcon.color}
+              />
+            )}
           </Text>
         );
         return (
@@ -67,8 +90,10 @@ const styles = StyleSheet.create({
   },
   baseText: {
     textAlign: 'center',
-    fontSize: RSize(0.075, 'h'),
     fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.075, 'h'),
+    fontWeight: 'normal',
+    elevation: 0,
   },
   oddText: {
     color: '#5C9DEC',

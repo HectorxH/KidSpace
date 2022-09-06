@@ -69,8 +69,13 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             navigation.navigate('Actividades', {
-              actividad: 'nutricion1',
+              // actividad: 'diagramas',
               // actividad: 'diseños',
+              // actividad: 'diseño1',
+              // actividad: 'diseño2',
+              // actividad: 'nutricion1',
+              actividad: 'nutricion2',
+              // actividad: 'debug',
             })
           }>
           <Text style={styles.subtitle}>Perfil</Text>
@@ -93,7 +98,7 @@ const MainMap = ({navigation}: MainMapProps) => {
           contentStyle={{flexDirection: 'column'}}
           onPress={() =>
             navigation.navigate('Actividades', {
-              actividad: 'diseños',
+              actividad: 'debug',
               // actividad: 'diseños',
             })
           }>

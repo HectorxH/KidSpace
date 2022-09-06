@@ -44,6 +44,30 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
         : [[]],
     ),
   );
+  // Variables para controlar valor en las preguntas con dropdowns
+  // const [userAnswersDropdownValue, setUserAnswersDropdownValue] = useState<
+  //   string[][][]
+  // >(
+  //   actividad.map(s =>
+  //     typeof s.alternativasDropdown !== 'undefined'
+  //       ? s.alternativasDropdown.map(q => q.rightAnswer.map(() => ''))
+  //       : [[]],
+  //   ),
+  // );
+
+  // Variables para controlar avance en preguntas de Quiz
+  const [userAnswersQuiz, setUserAnswersQuiz] = useState<number[][]>(
+    actividad.map(s =>
+      typeof s.quiz !== 'undefined' ? s.quiz.map(() => 0) : [],
+    ),
+  );
+  const [pickedAnswersQuiz, setPickedAnswersQuiz] = useState<number[][][]>(
+    actividad.map(s =>
+      typeof s.quiz !== 'undefined'
+        ? s.quiz.map(q => q.answers.map(() => 0))
+        : [[]],
+    ),
+  );
 
   return (
     <View style={styles.container}>
@@ -60,6 +84,8 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
             pickedAnswersDropdown,
             setPickedAnswersDropdown,
           ]}
+          userAnswersQuiz={[userAnswersQuiz, setUserAnswersQuiz]}
+          pickedAnswersQuiz={[pickedAnswersQuiz, setPickedAnswersQuiz]}
           navigation={navigation}
         />
       </View>

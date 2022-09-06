@@ -19,6 +19,7 @@ interface InventarioProps {
   items: IModels[];
   models: [number[], ReactStateSetter<number[]>];
   visible: boolean;
+  showInventory: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
   sceneNav: React.RefObject<ViroARSceneNavigator>;
 }
@@ -31,6 +32,7 @@ const Inventario = (props: InventarioProps) => {
   );
   const [nPlacedItems, setNPlacedItems] = useState(models.length);
   const visible = props.visible;
+  const showInventory = props.showInventory;
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
@@ -79,32 +81,34 @@ const Inventario = (props: InventarioProps) => {
           onPress={handlePickUp}
         />
       </View>
-      <View style={styles.inventoryBox}>
-        <View style={styles.titleBox}>
-          <Text style={styles.text}>Inventario</Text>
+      {showInventory && (
+        <View style={styles.inventoryBox}>
+          <View style={styles.titleBox}>
+            <Text style={styles.text}>Inventario</Text>
+          </View>
+          <SafeAreaView style={styles.itemsBox}>
+            <ScrollView fadingEdgeLength={10} persistentScrollbar>
+              {items.map((item: IModels, index: number) => {
+                if (placedItems[index] !== 0) {
+                  return null;
+                }
+                return (
+                  <TouchableOpacity
+                    onPress={() => modelHandler(index)}
+                    style={styles.itemContainer}
+                    key={index + 100}>
+                    <Image
+                      style={styles.iconImage}
+                      resizeMode="contain"
+                      source={Images.icons[item.model].square}
+                    />
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+          </SafeAreaView>
         </View>
-        <SafeAreaView style={styles.itemsBox}>
-          <ScrollView fadingEdgeLength={10} persistentScrollbar>
-            {items.map((item: IModels, index: number) => {
-              if (placedItems[index] !== 0) {
-                return null;
-              }
-              return (
-                <TouchableOpacity
-                  onPress={() => modelHandler(index)}
-                  style={styles.itemContainer}
-                  key={index + 100}>
-                  <Image
-                    style={styles.iconImage}
-                    resizeMode="contain"
-                    source={Images.icons[item.model].square}
-                  />
-                </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
-        </SafeAreaView>
-      </View>
+      )}
     </View>
   );
 };

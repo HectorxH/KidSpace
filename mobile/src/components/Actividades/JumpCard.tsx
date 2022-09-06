@@ -12,6 +12,7 @@ interface JumpCardProps {
   toggleVisibility: boolean;
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
+  userAnswersQuiz: number[][];
 }
 
 const JumpCard = (props: JumpCardProps) => {
@@ -24,6 +25,7 @@ const JumpCard = (props: JumpCardProps) => {
       checkAnswers(
         props.userAnswers,
         props.userAnswersDropdown,
+        props.userAnswersQuiz,
         requirements,
       ) === true
     ) {

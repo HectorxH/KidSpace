@@ -11,13 +11,13 @@
 import React from 'react';
 
 import Actividades from './Actividades';
-import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
-import Conclusion from './components/Conclusion/Conclusion';
-import ConclusionStory from './components/Conclusion/ConclusionStory';
-import ResultadoFinal from './components/Conclusion/ResultadoFinal';
+// import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
+// import Conclusion from './components/Conclusion/Conclusion';
+// import ConclusionStory from './components/Conclusion/ConclusionStory';
+// import ResultadoFinal from './components/Conclusion/ResultadoFinal';
 import DynamicTable from './components/Tables/DynamicTable';
 import MainMap from './components/MainMap';
 import {NavigationContainer} from '@react-navigation/native';
@@ -56,13 +56,13 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="FinalQuiz"
-          component={FinalQuiz}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
           name="DynamicTable"
           component={DynamicTable}
+          options={{headerShown: false}}
+        />
+        {/* <Stack.Screen
+          name="FinalQuiz"
+          component={FinalQuiz}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -79,7 +79,7 @@ const App = () => {
           name="ResultadoFinal"
           component={ResultadoFinal}
           options={{headerShown: false}}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );

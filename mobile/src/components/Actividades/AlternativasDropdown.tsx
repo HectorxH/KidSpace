@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import AnswersDropdown from './AnswersDropdown';
 import {ReactStateSetter} from '../../types/others';
@@ -12,12 +12,6 @@ interface AlternativasDropdownProps {
 }
 
 const AlternativasDropdown = (props: AlternativasDropdownProps) => {
-  const value = useState<string[]>(
-    props.questionsDropdown.map(() => {
-      return '';
-    }),
-  );
-
   if (props.questionsDropdown.length === 0) {
     return null;
   }
@@ -26,14 +20,17 @@ const AlternativasDropdown = (props: AlternativasDropdownProps) => {
     <View style={styles.container}>
       {props.questionsDropdown.map((question: IAlternativasDropdown, index) => {
         return (
-          <View style={styles.overlay} key={index.toString()}>
+          <View
+            style={styles.overlay}
+            key={
+              question.rightAnswer[0] + question.answers[0] + index.toString()
+            }>
             <AnswersDropdown
               question={question}
               userAnswersDropdown={props.userAnswersDropdown}
               pickedAnswersDropdown={props.pickedAnswersDropdown}
               pageNumber={props.pageNumber}
               answerNumber={index}
-              value={value}
             />
           </View>
         );

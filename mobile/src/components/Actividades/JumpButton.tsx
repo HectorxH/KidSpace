@@ -9,9 +9,11 @@ import {checkAnswers} from './utils';
 interface JumpButtonProps {
   jumpButtons: IJumpButton[] | never[];
   pageNumber: [number, ReactStateSetter<number>];
+  nextPage(): void;
   toggleVisibility: boolean;
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
+  userAnswersQuiz: number[][];
 }
 
 const JumpButton = (props: JumpButtonProps) => {
@@ -24,10 +26,15 @@ const JumpButton = (props: JumpButtonProps) => {
       checkAnswers(
         props.userAnswers,
         props.userAnswersDropdown,
+        props.userAnswersQuiz,
         requirements,
       ) === true
     ) {
-      props.pageNumber[1](pgNumber);
+      if (pgNumber === -1) {
+        props.nextPage();
+      } else {
+        props.pageNumber[1](pgNumber);
+      }
     }
   };
 
@@ -48,6 +55,7 @@ const JumpButton = (props: JumpButtonProps) => {
                       checkAnswers(
                         props.userAnswers,
                         props.userAnswersDropdown,
+                        props.userAnswersQuiz,
                         jumpButton.require,
                       ) === true
                         ? {

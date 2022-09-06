@@ -16,6 +16,8 @@ interface StoryComponentProps {
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
 }
 
 const StoryComponent = (props: StoryComponentProps) => {
@@ -28,6 +30,8 @@ const StoryComponent = (props: StoryComponentProps) => {
 
   const alternativas =
     typeof story.alternativas !== 'undefined' ? story.alternativas : [];
+
+  const quiz = typeof story.quiz !== 'undefined' ? story.quiz : [];
 
   const alternativasDropdown =
     typeof story.alternativasDropdown !== 'undefined'
@@ -56,8 +60,11 @@ const StoryComponent = (props: StoryComponentProps) => {
       <View style={styles.overlay}>
         <Alternativas
           questions={alternativas}
+          quiz={quiz}
           userAnswers={props.userAnswers}
           pickedAnswers={props.pickedAnswers}
+          userAnswersQuiz={props.userAnswersQuiz}
+          pickedAnswersQuiz={props.pickedAnswersQuiz}
           pageNumber={props.pageNumber}
         />
       </View>

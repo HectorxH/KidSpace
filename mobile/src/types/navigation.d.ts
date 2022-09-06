@@ -14,7 +14,8 @@ export type actividadNombre =
   | 'diseño1'
   | 'diseño2'
   | 'nutricion1'
-  | 'nutricion2';
+  | 'nutricion2'
+  | 'debug';
 
 export type RootStackParamList = {
   MainMap: undefined;

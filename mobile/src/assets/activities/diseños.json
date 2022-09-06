@@ -369,7 +369,7 @@
     ],
     "texts": [
       {
-        "text": "En el menu de *inventario* podrás encontrar varios objetos. *Intenta dar click en sus imágenes*.",
+        "text": "En el menú de *inventario* podrás encontrar varios objetos. *Intenta dar click en sus imágenes*.",
         "position": {
           "start": [3, 4.5],
           "end": [15, 15.5]
@@ -530,13 +530,23 @@
         "position": {
           "start": [0.3, 4.5],
           "end": [6.5, 10]
+        },
+        "settings": {
+          "fontSize": 0.05,
+          "color": "black"  
         }
-      },
+      }
+      
+      ,
       {
         "text": "¿Cuáles de los objetos son rojos?",
         "position": {
           "start": [6.9, 4.5],
           "end": [13.1, 10]
+        },
+        "settings": {
+          "fontSize": 0.05,
+          "color": "black"  
         }
       },
       {
@@ -544,12 +554,16 @@
         "position": {
           "start": [13.5, 4.5],
           "end": [19.7, 10]
+        },
+        "settings": {
+          "fontSize": 0.05,
+          "color": "black"  
         }
       }
     ],
     "alternativas": [
       {
-        "rightAnswer": ["Peluche", "Calcetines"],
+        "rightAnswer": ["Peluche", "Pluma"],
         "answers": [
           {
             "text": "Peluche",
@@ -566,7 +580,7 @@
             }
           },
           {
-            "text": "Calcetines",
+            "text": "Pluma",
             "position": {
               "start": [1, 16.5],
               "end": [6, 19]
@@ -575,7 +589,7 @@
         ]
       },
       {
-        "rightAnswer": ["Taza", "Calcetines"],
+        "rightAnswer": ["Taza"],
         "answers": [
           {
             "text": "Taza",
@@ -585,7 +599,7 @@
             }
           },
           {
-            "text": "Calcetines",
+            "text": "Pluma",
             "position": {
               "start": [7.5, 13.5],
               "end": [12.5, 16]
@@ -1174,7 +1188,7 @@
     ],
     "texts": [
       {
-        "text": "En tu vida cotidiana utilizas diversos objetos y cada uno tiene sus características.",
+        "text": "Rellena las observaciones en el cuaderno ,dando click en el boton en *la esquina superior izquierda*.",
         "position": {
           "start": [3, 4.5],
           "end": [15, 15.5]
@@ -1218,6 +1232,10 @@
         "position": {
           "start": [0, 0],
           "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0
         }
       }
     ],
@@ -1344,6 +1362,10 @@
         "position": {
           "start": [0, 0],
           "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0
         }
       }
     ],
@@ -1362,6 +1384,13 @@
         "position": {
           "start": [1, 6],
           "end": [8, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
@@ -1369,6 +1398,13 @@
         "position": {
           "start": [1, 9],
           "end": [8, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
@@ -1376,6 +1412,13 @@
         "position": {
           "start": [1, 12],
           "end": [8, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
@@ -1477,6 +1520,10 @@
         "position": {
           "start": [0, 0],
           "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0
         }
       }
     ],
@@ -1561,6 +1608,10 @@
         "position": {
           "start": [0, 0],
           "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0
         }
       }
     ],
@@ -1579,6 +1630,13 @@
         "position": {
           "start": [1, 6],
           "end": [8, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
@@ -1586,6 +1644,13 @@
         "position": {
           "start": [1, 9],
           "end": [8, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
@@ -1593,6 +1658,13 @@
         "position": {
           "start": [1, 12],
           "end": [8, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
@@ -1694,6 +1766,10 @@
         "position": {
           "start": [0, 0],
           "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0
         }
       }
     ],
@@ -1801,8 +1877,177 @@
           "start": [9, 15.5],
           "end": [17, 18.5]
         },
-        "target": 0,
+        "target": 33,
         "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "white",
+          "elevation": 21
+        },     
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El diseño siempre debe seguir la ______ del producto",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "answers": [
+          {
+            "text": "idea",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "función",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "creatividad",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "answers": [
+          {
+            "text": "color",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "tamaño",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "textura",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [0],
         "visible": false
       }
     ]

@@ -33,6 +33,10 @@ export type IToggleButtonSetting = {
   buttonTextAlt: string;
 };
 
+export type IToggleButtonStyle = {
+  buttonTextAlt?: string;
+};
+
 export type Vec3 = [number, number, number];
 
 export interface IPosition {
@@ -42,11 +46,27 @@ export interface IPosition {
 
 export interface ITextBoxes {
   position: IPosition;
+  settings?: ITextBoxSettings;
+}
+
+export interface ITextBoxSettings {
+  backgroundColor?: string;
+  borderRadius?: number;
+  borderWidth?: number;
+  borderColor?: string;
+  elevation?: number;
+  paddingVertical?: number;
+  paddingHorizontal?: number;
 }
 
 export interface IImages {
   name: string;
   position: IPosition;
+  settings?: IImagesSettings;
+}
+
+export interface IImagesSettings {
+  pendientePorImplementar?: string;
 }
 
 export interface IAlternativas {
@@ -65,6 +85,10 @@ export interface IAlternativasDropdown {
   position: IPosition;
 }
 
+export interface IQuiz {
+  answers: IAnswers[];
+}
+
 export interface IModels {
   model: string;
   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
@@ -80,6 +104,36 @@ export interface IAR {
 export interface ITexts {
   text: string;
   position: IPosition;
+  leftIcon?: ITextIcons;
+  rightIcon?: ITextIcons;
+  settings?: ITextSettings;
+}
+
+export interface ITextSettings {
+  textAlign?: 'center' | 'auto' | 'left' | 'right' | 'justify';
+  elevation?: number;
+  fontSize?: number;
+  color?: string;
+  fontFamily?: string;
+  fontWeight?:
+    | 'normal'
+    | 'bold'
+    | '100'
+    | '200'
+    | '300'
+    | '400'
+    | '500'
+    | '600'
+    | '700'
+    | '800'
+    | '900'
+    | undefined;
+}
+
+export interface ITextIcons {
+  name: string;
+  size: number;
+  color: string;
 }
 
 export interface IToggleButton {
@@ -93,6 +147,7 @@ export interface IJumpButton {
   require: number[];
   position: IPosition;
   settings: IToggleButtonSetting;
+  style: IToggleButtonStyle;
   visible: boolean;
 }
 
@@ -104,6 +159,11 @@ export interface IJumpCard {
   require: number[];
   // settings: IToggleButtonSetting;
   visible: boolean;
+}
+
+export interface IHeaderSettings {
+  backgroundColor?: string;
+  elevation?: number;
 }
 
 export interface IActivityPage {
@@ -118,6 +178,7 @@ export interface IActivityPage {
   toggleButton?: IToggleButton[] | never[];
   jumpButton?: IJumpButton[] | never[];
   jumpCard?: IJumpCard[] | never[];
+  quiz?: IQuiz[] | never[];
 }
 
 export type Actividad = IActivityPage[];

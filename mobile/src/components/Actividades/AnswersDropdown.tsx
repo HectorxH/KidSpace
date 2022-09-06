@@ -11,7 +11,6 @@ interface AnswersProps {
   question: IAlternativasDropdown;
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  value: [string[], ReactStateSetter<string[]>];
   pageNumber: number;
   answerNumber: number;
 }
@@ -22,7 +21,6 @@ const Answers = (props: AnswersProps) => {
   const rightAnswer = props.question.rightAnswer;
   const pageNumber = props.pageNumber;
   const answerNumber = props.answerNumber;
-  const [value, setValue] = props.value;
 
   const [isFocus, setIsFocus] = useState<boolean>(false);
 
@@ -62,6 +60,14 @@ const Answers = (props: AnswersProps) => {
     setPickedAnswers(newPickedAnswers);
   }
 
+  function getAnswerIndex() {
+    for (let i = 0; i < pickedAnswers[pageNumber][answerNumber].length; i++) {
+      if (pickedAnswers[pageNumber][answerNumber][i] !== 0) {
+        return i;
+      }
+    }
+    return -1;
+  }
   return (
     <View style={styles.container}>
       <View style={styles.overlay}>
@@ -81,34 +87,19 @@ const Answers = (props: AnswersProps) => {
                 valueField="value"
                 placeholder={
                   !isFocus
-                    ? pickedAnswers[pageNumber][answerNumber].findIndex(
-                        element => {
-                          if (element !== 0) {
-                            return true;
-                          }
-                          return false;
-                        },
-                      ) !== -1
-                      ? props.question.answers[
-                          pickedAnswers[pageNumber][answerNumber].findIndex(
-                            element => {
-                              if (element !== 0) {
-                                return true;
-                              }
-                              return false;
-                            },
-                          )
-                        ]
+                    ? getAnswerIndex() !== -1
+                      ? props.question.answers[getAnswerIndex()]
                       : 'Valor'
                     : '...'
                 }
-                value={value[answerNumber]}
+                value={
+                  getAnswerIndex() !== -1
+                    ? props.question.answers[getAnswerIndex()]
+                    : 'Valor'
+                }
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setIsFocus(false)}
                 onChange={item => {
-                  let v = [...value];
-                  v[answerNumber] = item.value;
-                  setValue(v);
                   setIsFocus(false);
                   checkAnswer(item.value);
                 }}
@@ -118,14 +109,14 @@ const Answers = (props: AnswersProps) => {
                     color={
                       answerIconColor[
                         pickedAnswers[pageNumber][answerNumber][
-                          props.question.answers.indexOf(value[answerNumber])
+                          getAnswerIndex() !== -1 ? getAnswerIndex() : 0
                         ]
                       ]
                     }
                     name={
                       answerIconName[
                         pickedAnswers[pageNumber][answerNumber][
-                          props.question.answers.indexOf(value[answerNumber])
+                          getAnswerIndex() !== -1 ? getAnswerIndex() : 0
                         ]
                       ]
                     }

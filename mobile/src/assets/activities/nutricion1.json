@@ -299,7 +299,7 @@
     ],
     "texts": [
       {
-        "text": "Por ejemplo, estas galletas contienen 1.3 gramos de proteína,  10.5 gramos de grasa",
+        "text": "Por ejemplo, estas galletas contienen 1,3 gramos de proteínas, 10,5 gramos de grasa",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -328,7 +328,7 @@
     ],
     "texts": [
       {
-        "text": "y 27.5 gramos de carbohidratos por una porción.",
+        "text": "y 27,5 gramos de carbohidratos en cada porción.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -514,6 +514,122 @@
     "background": "bg_nutricion1",
     "items": [
       {
+        "name": "etiqueta_choco",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19.5, 19]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Calorías en una porción",
+        "position": {
+          "start": [8.5, 6],
+          "end": [14.7, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Proteínas en una porción",
+        "position": {
+          "start": [8.5, 9],
+          "end": [14.7, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en calorías?",
+        "position": {
+          "start": [8.5, 12],
+          "end": [14.7, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en azúcares?",
+        "position": {
+          "start": [8.5, 15],
+          "end": [14.7, 17.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativasDropdown": [
+      {
+        "rightAnswer": ["156"],
+        "answers": ["389", "40", "156"],
+        "position": {
+          "start": [15, 6],
+          "end": [19, 8.5]
+        }
+      },
+      {
+        "rightAnswer": ["2,2"],
+        "answers": ["2,2", "4,8", "9,6"],
+        "position": {
+          "start": [15, 9],
+          "end": [19, 11.5]
+        }
+      },
+      {
+        "rightAnswer": ["Sí"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 12],
+          "end": [19, 14.5]
+        }
+      },
+      {
+        "rightAnswer": ["Sí"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 15],
+          "end": [19, 17.5]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
         "name": "etiqueta_jugo",
         "position": {
           "start": [1, 0],
@@ -531,31 +647,63 @@
     ],
     "texts": [
       {
-        "text": "Calorías en 1 porción",
+        "text": "Calorías en una porción",
         "position": {
           "start": [8.5, 6],
-          "end": [14.5, 8.5]
+          "end": [14.7, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
-        "text": "Cantidad de proteína",
+        "text": "Cantidad de proteínas",
         "position": {
           "start": [8.5, 9],
-          "end": [14.5, 11.5]
+          "end": [14.7, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
         "text": "¿Alto en calorías?",
         "position": {
           "start": [8.5, 12],
-          "end": [14.5, 14.5]
+          "end": [14.7, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       },
       {
-        "text": "¿Alto en azúcar?",
+        "text": "¿Alto en azúcares?",
         "position": {
           "start": [8.5, 15],
-          "end": [14.5, 17.5]
+          "end": [14.7, 17.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "textAlign": "left",
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
@@ -569,8 +717,8 @@
         }
       },
       {
-        "rightAnswer": ["0.0"],
-        "answers": ["0.0", "4.8", "9.6"],
+        "rightAnswer": ["0,0"],
+        "answers": ["0,0", "4,8", "9,6"],
         "position": {
           "start": [15, 9],
           "end": [19, 11.5]
@@ -578,7 +726,7 @@
       },
       {
         "rightAnswer": ["No"],
-        "answers": ["Si", "No"],
+        "answers": ["Sí", "No"],
         "position": {
           "start": [15, 12],
           "end": [19, 14.5]
@@ -586,7 +734,7 @@
       },
       {
         "rightAnswer": ["No"],
-        "answers": ["Si", "No"],
+        "answers": ["Sí", "No"],
         "position": {
           "start": [15, 15],
           "end": [19, 17.5]

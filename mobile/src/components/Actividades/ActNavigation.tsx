@@ -13,6 +13,7 @@ interface ActNavigationProps {
   storyLength: number;
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
+  userAnswersQuiz: number[][];
   pageNumber: [number, ReactStateSetter<number>];
   jumpVisibility: boolean;
   models: [number[], ReactStateSetter<number[]>];
@@ -25,6 +26,7 @@ const ActNavigation = (props: ActNavigationProps) => {
   const [pageNumber, setPageNumber] = props.pageNumber;
   const userAnswers = props.userAnswers[pageNumber];
   const userAnswersDropdown = props.userAnswersDropdown[pageNumber];
+  const userAnswersQuiz = props.userAnswersQuiz[pageNumber];
 
   const actividad = actividades[pageNumber];
 
@@ -35,13 +37,15 @@ const ActNavigation = (props: ActNavigationProps) => {
       .reduce((x, y) => Number(x) + Number(y), 0) +
     userAnswersDropdown
       .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
-      .reduce((x, y) => Number(x) + Number(y), 0);
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    userAnswersQuiz.reduce((x, y) => Number(x) + Number(y), 0);
 
   var cantidadRespuestas =
     userAnswers.map(b => b.length).reduce((x, y) => Number(x) + Number(y), 0) +
     userAnswersDropdown
       .map(b => b.length)
-      .reduce((x, y) => Number(x) + Number(y), 0);
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    userAnswersQuiz.length;
 
   const nextPageNumber = () => {
     if (pageNumber !== storyLength - 1) {
@@ -94,6 +98,7 @@ const ActNavigation = (props: ActNavigationProps) => {
             jumpCards={jumpCards}
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
+            userAnswersQuiz={props.userAnswersQuiz}
             pageNumber={props.pageNumber}
             toggleVisibility={props.jumpVisibility}
           />
@@ -105,7 +110,9 @@ const ActNavigation = (props: ActNavigationProps) => {
             jumpButtons={jumpButtons}
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
+            userAnswersQuiz={props.userAnswersQuiz}
             pageNumber={props.pageNumber}
+            nextPage={() => nextPageNumber()}
             toggleVisibility={props.jumpVisibility}
           />
         </View>

@@ -25,6 +25,8 @@ interface ActividadComponentProps {
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 }
 
@@ -34,8 +36,10 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     nombreActividad,
     userAnswers,
     userAnswersDropdown,
+    userAnswersQuiz,
     pickedAnswers,
     pickedAnswersDropdown,
+    pickedAnswersQuiz,
   } = props;
   const [pageNumber, setPageNumber] = props.pageNumber;
 
@@ -95,6 +99,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 pickedAnswers={pickedAnswers}
                 userAnswersDropdown={userAnswersDropdown}
                 pickedAnswersDropdown={pickedAnswersDropdown}
+                userAnswersQuiz={userAnswersQuiz}
+                pickedAnswersQuiz={pickedAnswersQuiz}
               />
             </View>
           )}
@@ -109,6 +115,12 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   toggleDefaultValue === true
                 }
                 sceneNav={sceneNav}
+                showInventory={
+                  !(
+                    toggleDefaultValue === true ||
+                    models3d.length === models.length
+                  )
+                }
               />
             </View>
           )}
@@ -129,6 +141,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           storyLength={actividades.length}
           userAnswers={userAnswers[0]}
           userAnswersDropdown={userAnswersDropdown[0]}
+          userAnswersQuiz={userAnswersQuiz[0]}
           models={[models, setModels]}
           pageNumber={[pageNumber, setPageNumber]}
           navigation={props.navigation}

@@ -16,6 +16,12 @@ const TextBoxes = ({boxes}: TextBoxProps) => {
   return (
     <View style={styles.container}>
       {boxes.map((box: ITextBoxes) => {
+        const boxStyles = StyleSheet.create({
+          settings:
+            typeof box.settings !== 'undefined'
+              ? {...styles.storyBox, ...box.settings}
+              : {...styles.storyBox, ...styles.storyBoxDefault},
+        });
         return (
           <View
             style={styles.overlay}
@@ -27,7 +33,7 @@ const TextBoxes = ({boxes}: TextBoxProps) => {
             }>
             <Layout
               position={box.position}
-              ObjectView={<View style={styles.storyBox} />}
+              ObjectView={<View style={boxStyles.settings} />}
             />
           </View>
         );
@@ -49,10 +55,13 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   storyBox: {
-    flex: 6,
+    flex: 1,
     width: '100%',
-    backgroundColor: 'white',
     justifyContent: 'center',
+    // elevation: 20,
+  },
+  storyBoxDefault: {
+    backgroundColor: 'white',
     borderRadius: RSize(0.08, 'h'),
     borderWidth: 5,
     paddingVertical: RSize(0.01, 'h'),
