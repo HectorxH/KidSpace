@@ -9,19 +9,29 @@ import {RSize} from '../utils/responsive';
 import {images} from '../assets/inicio/handler/images';
 
 const FormularioView = ({navigation, route}: FormularioViewProps) => {
-  // const {event} = route.params;
+  const cursoId = route.params.event.data;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const handleEnviar = async () => {
     try {
       console.log(`${Config.BACKEND_URL}`);
-      const response = await axios.post(`${Config.BACKEND_URL}/register`, {
+      let res = await axios.post(`${Config.BACKEND_URL}/register`, {
         nombres,
         apellidos,
         tipo: 'estudiante',
       });
-      console.log(response.data);
-      navigation.push('MainMap', {datos: {nombres}});
+      console.log(res.data);
+
+      const {username, password} = res.data;
+      await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
+
+      res = await axios.post(
+        `${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`,
+      );
+
+      navigation.push('MainMap', {
+        datos: {nombres},
+      });
     } catch (error) {
       console.log(JSON.stringify(error));
       navigation.push('ErrorView');

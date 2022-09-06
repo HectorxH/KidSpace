@@ -31,8 +31,11 @@ import FormularioView from './components/FormularioView';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/navigation';
+import axios from 'axios';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
+
+axios.defaults.withCredentials = true;
 
 const App = () => {
   return (

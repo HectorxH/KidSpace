@@ -104,7 +104,6 @@ app.get('/checkauth', (req, res) => {
 app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res) => {
   try {
     const user = await User.findOne({ username: req.body.username });
-    if (user?.tipo === 'estudiante') return res.sendStatus(403);
     res.json({
       username: user?.username,
       tipo: user?.tipo,

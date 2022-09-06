@@ -146,9 +146,8 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               source={images.ruta.uri}>
               <View style={{flexDirection: 'row'}}>
                 {Carreras.map((carrera, id) => (
-                  <>
-                    <View style={{flex: 1}}>
-                      {/* <Animated.View
+                  <View style={{flex: 1}} key={id}>
+                    {/* <Animated.View
                         style={{
                           marginLeft: 5,
                           marginRight: 5,
@@ -156,29 +155,28 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                           width: 100,
                         }}
                       /> */}
-                      <View
-                        style={{
-                          marginLeft: RSize(carrera.marginLeft, 'w'),
-                          marginTop: RSize(carrera.marginTop, 'h'),
-                        }}>
-                        <TouchableOpacity
+                    <View
+                      style={{
+                        marginLeft: RSize(carrera.marginLeft, 'w'),
+                        marginTop: RSize(carrera.marginTop, 'h'),
+                      }}>
+                      <TouchableOpacity
+                        key={id}
+                        style={{borderRadius: 99}}
+                        onPress={() => handleTapUnidad({carrera})}>
+                        <Image
                           key={id}
-                          style={{borderRadius: 99}}
-                          onPress={() => handleTapUnidad({carrera})}>
-                          <Image
-                            key={id}
-                            style={{
-                              position: 'relative',
-                              width: 150,
-                              height: 150,
-                              overflow: 'hidden',
-                            }}
-                            source={images[`${carrera.img}`].uri}
-                          />
-                        </TouchableOpacity>
-                      </View>
+                          style={{
+                            position: 'relative',
+                            width: 150,
+                            height: 150,
+                            overflow: 'hidden',
+                          }}
+                          source={images[`${carrera.img}`].uri}
+                        />
+                      </TouchableOpacity>
                     </View>
-                  </>
+                  </View>
                 ))}
               </View>
             </ImageBackground>
