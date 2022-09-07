@@ -136,7 +136,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', width: '100%' }}>
       <AppBar
         position="fixed"
         sx={{
@@ -200,6 +200,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
+          disableScrollLock
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
