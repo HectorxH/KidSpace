@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import express from 'express';
+import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
 import User from '../models/User';
 
@@ -10,8 +11,7 @@ router.post('/:id', async (req, res) => {
     const { id } = req.params;
     const { nombres, apellidos } = req.body;
     const estudiante = await Estudiante.findById(id);
-    const uid = estudiante?.uid;
-    const user = await User.findById(uid);
+    const user = await User.findById(estudiante?.user);
     await user?.update({ nombres, apellidos });
     await user?.save();
     res.sendStatus(200);
@@ -24,9 +24,10 @@ router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const estudiante = await Estudiante.findById(id);
-    const uid = estudiante?.uid;
+    const user = estudiante?.user;
+    await Curso.findByIdAndUpdate(estudiante?.curso, { $pullAll: { estudiantes: [id] } });
     await Estudiante.findByIdAndDelete(id);
-    await User.findByIdAndDelete(uid);
+    await User.findByIdAndDelete(user);
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

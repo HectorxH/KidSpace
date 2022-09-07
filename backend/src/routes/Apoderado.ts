@@ -10,8 +10,7 @@ router.post('/:id', async (req, res) => {
     const { id } = req.params;
     const { nombres, apellidos, email } = req.body;
     const apoderado = await Apoderado.findById(id);
-    const uid = apoderado?.uid;
-    const user = await User.findById(uid);
+    const user = await User.findById(apoderado?.user);
     await user?.update({ nombres, apellidos, email });
     await user?.save();
     res.sendStatus(200);
@@ -24,9 +23,9 @@ router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const apoderado = await Apoderado.findById(id);
-    const uid = apoderado?.uid;
+    const user = apoderado?.user;
     await Apoderado.findByIdAndDelete(id);
-    await User.findByIdAndDelete(uid);
+    await User.findByIdAndDelete(user);
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

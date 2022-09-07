@@ -83,11 +83,11 @@ app.post('/register', checkNotAuth, async (req, res) => {
     await user.save();
 
     if (user.tipo === 'profesor') {
-      const profesor = new Profesor({ uid: user._id });
+      const profesor = new Profesor({ user: user._id });
       await profesor.save();
       res.sendStatus(200);
     } else if (user.tipo === 'estudiante') {
-      const estudiante = new Estudiante({ uid: user._id });
+      const estudiante = new Estudiante({ user: user._id });
       await estudiante.save();
       res.json({ username, password });
     }

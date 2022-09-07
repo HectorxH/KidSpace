@@ -8,9 +8,9 @@ const router = express.Router();
 
 router.post('/', async (req, res) => {
   try {
-    const uid = req.user?._id;
+    const user = req.user?._id;
     const { nombre } = req.body;
-    const profesor = await Profesor.findOne({ uid });
+    const profesor = await Profesor.findOne({ user });
     const curso = await new Curso({ nombre, profesor: profesor?._id });
     await curso.save();
     profesor?.cursos?.push(curso._id);
@@ -24,10 +24,10 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
   try {
-    const uid = req.user?._id;
+    const user = req.user?._id;
     const tipo = req.user?.tipo;
     if (tipo === 'profesor') {
-      const profesor = await Profesor.findOne({ uid }).populate('cursos');
+      const profesor = await Profesor.findOne({ user }).populate('cursos');
       const cursos = profesor?.cursos;
       res.json({ cursos });
     }
@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const curso = await Curso.findById(id).populate('estudiantes');
+    const curso = await Curso.findById(id).populate({ path: 'estudiantes', populate: { path: 'user' } });
     res.json({ curso });
   } catch (e) {
     console.log(e);
@@ -80,13 +80,18 @@ router.delete('/:id', async (req, res) => {
 router.post('/:id/inscribir', async (req, res) => {
   try {
     const { id } = req.params;
-    const uid = req.user?._id;
+    const user = req.user?._id;
     const tipo = req.user?.tipo;
     if (tipo === 'estudiante') {
-      const estudiante = await Estudiante.findOne({ uid });
+      const estudiante = await Estudiante.findOne({ user });
       const curso = await Curso.findById(id);
-      await curso?.estudiantes?.push(estudiante?.id);
-      await curso?.save();
+      if (curso && estudiante) {
+        curso.estudiantes?.push(estudiante?.id);
+        await curso?.save();
+
+        estudiante.curso = id;
+        await estudiante?.save();
+      }
     }
     res.send(200);
   } catch (e) {

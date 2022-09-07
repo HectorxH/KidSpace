@@ -2,12 +2,12 @@ import { Schema, Types, model } from 'mongoose';
 import { IEstudiante } from './Estudiante';
 
 export interface IApoderado {
-  uid: any,
+  user: any,
   estudiantes?: Types.Array<IEstudiante>
 }
 
 export const apoderadoSchema = new Schema<IApoderado>({
-  uid: {
+  user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
   estudiantes: [{ type: Types.ObjectId, ref: 'Estudiante' }],

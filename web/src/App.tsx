@@ -22,7 +22,7 @@ import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
 import QRView from './views/QRView';
-import CursoView from './views/CursoView';
+// import CursoView from './views/CursoView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
@@ -48,7 +48,7 @@ const App = () => (
             <Route path="/" element={<PanelControlView />} />
             <Route path="/login" element={<ProtectedRoute loggedout><LoginView /></ProtectedRoute>} />
             <Route path="/registro" element={<ProtectedRoute loggedout><RegistroView /></ProtectedRoute>} />
-            <Route path="/curso" element={<CursoView />} />
+            {/* <Route path="/curso" element={<CursoView />} /> */}
             <Route path="/cursos" element={<CursosView />} />
             <Route path="/cursos/:cursoId/:estudianteId" element={<EditarEstudianteView />} />
             <Route path="/cursos/agregar" element={<AgregarCursoView />} />

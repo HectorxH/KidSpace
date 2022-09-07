@@ -217,7 +217,6 @@ const PlanificadasTable = (
         ? <SinActividades mainmsg="Sin actividades planificadas." submsg="Cuande asigne una actividad, esta aparecerá aquí." />
         : ''}
     </TableContainer>
-
   );
 };
 

@@ -14,14 +14,14 @@ export interface IPlanificada {
 }
 
 export interface IProfesor {
-  uid: any,
+  user: any,
   favoritas?: Types.Array<IFavorita>,
   planificadas?: Types.Array<IPlanificada>,
   cursos?: Types.Array<ICurso>,
 }
 
 export const profesorSchema = new Schema<IProfesor>({
-  uid: {
+  user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
   favoritas: {
