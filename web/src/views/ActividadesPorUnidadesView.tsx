@@ -28,9 +28,9 @@ const ActividadesPorUnidadesView = () => (
     </Box>
     <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
       {unidades.map(({
-        img, path, title, description,
+        img, path, title, description, nunidad,
       }) => (
-        <Card sx={{ borderRadius: '20px' }} className="MuiCard-root">
+        <Card sx={{ borderRadius: '20px' }} className="MuiCard-root" key={nunidad}>
           <CardActionArea
             component={NavLink}
             to={path}

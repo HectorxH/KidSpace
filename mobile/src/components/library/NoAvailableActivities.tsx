@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F1F3F8',
   },
   img: {
-    width: 200,
-    height: 200,
+    width: RSize(0.25, 'w'),
+    height: RSize(0.4, 'h'),
   },
 });
 

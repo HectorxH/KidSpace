@@ -1,0 +1,107 @@
+[
+  {
+    "id":1,
+    "img":"informatica",
+    "title":"Carrera: Informática",
+    "desc":"La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Aventurate en el fascinante mundo de computación y tecnología.",
+    "desc2":"La carrera de informática se enfoca en desarrollar aplicaciones y sistemas de información. Conoce las historias de X e Y - personas apasionadas por su profesión.\n\n¡Completa cada historia para ganar las medallas y monedas!",
+    "marginTop":0.2,
+    "marginLeft":0.05,
+    "stories":[
+      {
+        "carrera":"Carrera: Informática",
+        "img":"portada_inf1",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrelladorada"
+      },
+      {
+        "carrera":"Carrera: Informática",
+        "img":"portada_inf2",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrellagris"
+      }
+    ]
+  },
+  {
+    "id":2,
+    "img":"diseno",
+    "title":"Carrera: Diseño",
+    "desc":"La carrera del diseño abre las puertas a la expresión creativa, permitiendo plasmar distintas ideas, mensajes y emociones a través de la imagen y sonido.",
+    "marginTop":0.01,
+    "marginLeft":0.15,
+    "stories":[
+      {
+        "carrera":"Carrera: Diseño",
+        "img":"portada_dis1",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrelladorada"
+      },
+      {
+        "carrera":"Carrera: Diseño",
+        "img":"portada_dis2",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrellagris"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "title":"Carrera: Nutrición",
+    "img":"nutricion",
+    "desc":"¿Has escuchado la frase “eres lo que comes”? Los alimentos ingeirdos afectan a nuestro sistema, y la carrera de nutrición se encarga de estudiar estos efectos.",
+    "marginTop":0,
+    "marginLeft":0.2,
+    "stories":[
+      {
+        "carrera":"Carrera: Nutrición",
+        "img":"portada_nut1",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado": "estrellagris"
+      },
+      {
+        "carrera":"Carrera: Nutrición",
+        "img":"portada_nut2",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrellagris"
+      }
+    ]
+  },
+  {
+    "id":5,
+    "img":"astronomia",
+    "title":"Carrera: Astronomía",
+    "desc":"Astronomía es una carrera que se enfoca en el estudio de los cuerpos celestes: las estrellas, los planetas, meteoritos, galaxias y toda la materia interestelar.",
+    "marginTop":0,
+    "marginLeft":0.15,
+    "stories": [
+      {
+        "carrera":"Carrera: Astronomía",
+        "img":"portada_astr1",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrellagris"
+      },
+      {
+        "carrera":"Carrera: Astronomía",
+        "img":"portada_astr2",
+        "title":"Historia de X",
+        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "coins":200,
+        "estado":"estrellagris"
+      }
+    ]
+  }
+]

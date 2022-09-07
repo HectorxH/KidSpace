@@ -1,6 +1,17 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {useEffect, useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ImageBackground,
+  Image,
+  Modal,
+  ScrollView,
+  Pressable,
+  // Animated,
+  TouchableOpacity,
+} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -8,17 +19,16 @@ import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
-
-const User = {
-  key: 1,
-  name: 'Renata',
-};
+import {images} from '../assets/map/handler/images';
+import Carreras from '../assets/stories/carreras.json';
+import {useFocusEffect} from '@react-navigation/native';
 
 const pusher = new Pusher('74009350c3b99530d9e9', {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');
 
+<<<<<<< HEAD
 const MainMap = ({navigation}: MainMapProps) => {
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
@@ -78,6 +88,38 @@ const MainMap = ({navigation}: MainMapProps) => {
       console.log(e);
     }
   };
+=======
+const MainMap = ({navigation, route}: MainMapProps) => {
+  const {datos} = route.params;
+  const [message, setMessage] = useState<IActivity[]>([]);
+  const [visible, setVisible] = useState(false);
+  const [notification, setNotification] = useState(0);
+  const [title, setTitle] = useState('');
+  const [desc, setDesc] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+  const [unidadCarrera, setUnidadCarrera] = useState('');
+  const [user, setUser] = useState({key: 1, name: datos.nombres});
+
+  const handleTapUnidad = (event: any) => {
+    setModalVisible(true);
+    setTitle(event.carrera.title);
+    setDesc(event.carrera.desc);
+    setUnidadCarrera(event.carrera);
+  };
+  const allMessages: IActivity[] = [];
+>>>>>>> b2b7b0773690e177c85830704c422291b6d49d7e
+
+  useFocusEffect(
+    useCallback(() => {
+      if (route.params === undefined) {
+        return;
+      }
+      setUser({
+        key: 2,
+        name: datos.nombres,
+      });
+    }, [datos.nombres, route.params]),
+  );
 
   useEffect(() => {
     initialLoader();
@@ -98,27 +140,74 @@ const MainMap = ({navigation}: MainMapProps) => {
     }
   };
 
+  const HandleCarrera = (event: any) => {
+    navigation.push('Carrera', {
+      carrera: event.unidadCarrera,
+    });
+    setModalVisible(false);
+  };
+
+  // const animated = new Animated.Value(0);
+  // const Animacion = () => {
+  //   Animated.loop(
+  //     Animated.timing(animatedValue, {
+  //       toValue: -100,
+  //       duration: 3000,
+  //     }),
+  //   ).start();
+  // };
+
   return (
     <View style={styles.topView}>
-      <View style={styles.view}>
-        <Chip style={styles.chip}>
-          <Text style={styles.title}> ¡Hola, {User.name}!</Text>
-        </Chip>
-      </View>
-      <View style={styles.containerButtons}>
-        <Button
-          style={styles.button}
-          color="#EC87C0"
-          mode="contained"
-          icon={() => (
-            <Icon
-              name="account"
-              size={RSize(0.11, 'h')}
-              color="#FFFFFF"
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}>
+        <Pressable
+          onPress={() => {
+            setModalVisible(!modalVisible);
+          }}
+          style={styles.background}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.titleModal}>{title}</Text>
+              <Text style={styles.paragraph}>{desc}</Text>
+              <View>
+                <Button
+                  style={styles.buttonModal}
+                  color="#FF8A01"
+                  mode="contained"
+                  onPress={() => HandleCarrera({unidadCarrera})}>
+                  <Text style={styles.textModalButton}>Acceder</Text>
+                </Button>
+              </View>
+            </View>
+          </View>
+        </Pressable>
+      </Modal>
+      <ImageBackground style={styles.background} source={images.solo_cielo.uri}>
+        <ImageBackground
+          style={styles.background}
+          source={images.edificios.uri}>
+          <View style={styles.view}>
+            <Chip style={styles.chip}>
+              <Text style={styles.title}> ¡Hola, {user.name}!</Text>
+            </Chip>
+          </View>
+          <ScrollView
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            contentContainerStyle={{flexGrow: 1}}
+            style={{flex: 1}}>
+            <ImageBackground
+              resizeMode="cover"
               style={{
-                width: RSize(0.15, 'h'),
-                height: RSize(0.1, 'h'),
+                flex: 1,
               }}
+<<<<<<< HEAD
             />
           )}
           contentStyle={{flexDirection: 'column'}}
@@ -179,20 +268,186 @@ const MainMap = ({navigation}: MainMapProps) => {
           </Button>
         </View>
       </View>
+=======
+              source={images.ruta.uri}>
+              <View style={{flexDirection: 'row'}}>
+                {Carreras.map((carrera, id) => (
+                  <View style={{flex: 1}} key={id}>
+                    {/* <Animated.View
+                        style={{
+                          marginLeft: 5,
+                          marginRight: 5,
+                          backgroundColor: 'blue',
+                          width: 100,
+                        }}
+                      /> */}
+                    <View
+                      style={{
+                        marginLeft: RSize(carrera.marginLeft, 'w'),
+                        marginTop: RSize(carrera.marginTop, 'h'),
+                      }}>
+                      <TouchableOpacity
+                        key={id}
+                        style={{borderRadius: 99}}
+                        onPress={() => handleTapUnidad({carrera})}>
+                        <Image
+                          key={id}
+                          style={{
+                            position: 'relative',
+                            width: 150,
+                            height: 150,
+                            overflow: 'hidden',
+                          }}
+                          source={images[`${carrera.img}`].uri}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                ))}
+              </View>
+            </ImageBackground>
+          </ScrollView>
+          <View style={styles.containerButtons}>
+            <Button
+              style={styles.button}
+              color="#EC87C0"
+              mode="contained"
+              icon={() => (
+                <Icon
+                  name="account"
+                  size={RSize(0.11, 'h')}
+                  color="#FFFFFF"
+                  style={{
+                    width: RSize(0.15, 'h'),
+                    height: RSize(0.1, 'h'),
+                  }}
+                />
+              )}
+              contentStyle={{flexDirection: 'column'}}
+              onPress={() =>
+                navigation.push('CuentoIntroductorio', {
+                  actividad: 'diagramas',
+                  // tipo: 'introductory',
+                  // tipo: 'interactive',
+                })
+              }>
+              <Text style={styles.subtitle}>Perfil</Text>
+            </Button>
+            <Button
+              style={styles.button}
+              color="#A0C96A"
+              mode="contained"
+              icon={() => (
+                <Icon
+                  name="store"
+                  size={RSize(0.11, 'h')}
+                  color="#FFFFFF"
+                  style={{
+                    width: RSize(0.15, 'h'),
+                    height: RSize(0.1, 'h'),
+                  }}
+                />
+              )}
+              contentStyle={{flexDirection: 'column'}}
+              onPress={() => console.log('Pressed')}>
+              <Text style={styles.subtitle}>Tienda</Text>
+            </Button>
+            <View style={styles.rightButtonView}>
+              <Badge visible={visible} style={styles.badge}>
+                {notification}
+              </Badge>
+              <Button
+                style={styles.button3}
+                compact={true}
+                color="#F2C045"
+                mode="contained"
+                icon={() => (
+                  <Icon
+                    name="target"
+                    size={RSize(0.11, 'h')}
+                    color="#FFFFFF"
+                    style={{
+                      width: RSize(0.15, 'h'),
+                      height: RSize(0.1, 'h'),
+                    }}
+                  />
+                )}
+                contentStyle={{flexDirection: 'column'}}
+                onPress={HandleAct}>
+                <Text style={styles.subtitle}>Actividades</Text>
+              </Button>
+            </View>
+          </View>
+        </ImageBackground>
+      </ImageBackground>
+>>>>>>> b2b7b0773690e177c85830704c422291b6d49d7e
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  scrollView: {
+    marginHorizontal: RSize(0.01),
+    marginVertical: RSize(0.01),
+  },
+  titleModal: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.035),
+  },
+  paragraph: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Regular',
+    fontSize: RSize(0.019),
+    textAlign: 'center',
+    marginTop: RSize(0.001, 'h'),
+    marginBottom: RSize(0.001, 'h'),
+  },
+  textModalButton: {
+    textAlign: 'center',
+    color: '#ffffff',
+    fontSize: RSize(0.02),
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: RSize(0.02, 'h'),
+  },
+  modalView: {
+    margin: RSize(0.15, 'w'),
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: RSize(0.03, 'w'),
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  buttonModal: {
+    borderRadius: 10,
+    marginTop: RSize(0.05, 'h'),
+    height: RSize(0.1, 'h'),
+    width: RSize(0.38, 'h'),
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
   topView: {
     flex: 1,
   },
-  view: {
-    flexDirection: 'row',
-    margin: RSize(0.03, 'h'),
+  image: {
+    flex: 1,
+    justifyContent: 'center',
   },
   containerButtons: {
-    flex: 1,
+    flex: 0.3,
     flexDirection: 'row',
     alignItems: 'flex-end',
   },
@@ -209,8 +464,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 4,
   },
+  view: {
+    flex: 0.19,
+    flexDirection: 'row',
+  },
   chip: {
-    backgroundColor: '#F1F3F8',
+    backgroundColor: '#FFFFFF',
+    flexDirection: 'row',
+    margin: RSize(0.02, 'h'),
   },
   title: {
     fontFamily: 'Poppins-Bold',
