@@ -19,6 +19,10 @@ const cursosAux = [
     _id: 1,
     nombre: '6-A',
   },
+  {
+    _id: 2,
+    nombre: '6-B',
+  },
 ];
 
 const CursosView = () => {
@@ -60,7 +64,7 @@ const CursosView = () => {
           }) => (
             <Card
               sx={{
-                borderRadius: '20px', alignItems: 'center', maxWidth: '30vw',
+                borderRadius: '20px', alignItems: 'center', width: '25vw',
               }}
               className="MuiCard-root"
               key={_id}
@@ -101,7 +105,7 @@ const CursosView = () => {
           ))}
           <Card
             sx={{
-              borderRadius: '20px',
+              borderRadius: '20px', width: '25vw',
             }}
             className="MuiCard-root"
           >

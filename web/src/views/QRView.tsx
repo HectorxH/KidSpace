@@ -47,7 +47,12 @@ const QRView = () => {
   if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-      <Stack direction="row" style={{ width: '100%', justifyContent: 'center' }}>
+      <Stack
+        direction="row"
+        style={{
+          width: '100%', justifyContent: 'center', height: '30vh',
+        }}
+      >
         <Box
           sx={{
             backgroundColor: '#B878EA', px: 3, py: 3, width: 1.5 / 4, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -61,7 +66,7 @@ const QRView = () => {
         </Box>
         <CardMedia
           component="img"
-          sx={{ height: '30vh', width: 3.5 / 4 }}
+          sx={{ width: 2.5 / 4 }}
           image={img}
         />
       </Stack>
