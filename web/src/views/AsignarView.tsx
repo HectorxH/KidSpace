@@ -13,7 +13,7 @@ import es from 'date-fns/locale/es';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
 
-const cursosD = [
+const cursosAux = [
   {
     id: 1,
     nombre: '6-A',
@@ -87,7 +87,7 @@ const AsignarView = () => {
               onChange={(e) => setCurso(e.target.value)}
               required
             >
-              {cursosD.map((nombre) => (
+              {cursosAux.map((nombre) => (
                 <MenuItem value={nombre.nombre}>{nombre.nombre}</MenuItem>
               ))}
             </TextField>
