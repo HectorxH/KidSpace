@@ -1,9 +1,10 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../assets/imgs/handler/images';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
@@ -23,6 +24,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
   const [notification, setNotification] = useState('0');
+  const [cantMonedas, setCantMonedas] = useState(0);
 
   const loadNotification = () => {
     let visible = false;
@@ -50,10 +52,14 @@ const MainMap = ({navigation}: MainMapProps) => {
       setMessage(JSON.parse(jsonAllMessages!));
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
+      const m = await AsyncStorage.getItem('@monedas');
+      setCantMonedas(Number(m));
     } catch (e) {
+      console.log('A');
       console.log(e);
     }
   };
+
   const loadMessage = async () => {
     try {
       channel.bind('message', async function (data: {message: IActivity}) {
@@ -71,10 +77,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           '@notification',
           allMessages.length.toString(),
         );
-        const n = await AsyncStorage.getItem('@notification');
+        let n = await AsyncStorage.getItem('@notification');
         setNotification(n!);
       });
     } catch (e) {
+      console.log('B');
       console.log(e);
     }
   };
@@ -87,9 +94,6 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const HandleAct = async () => {
     try {
-      //const jsonMessages = await AsyncStorage.getItem('@message');
-      //const messages = JSON.parse(jsonMessages!);
-      //const visible = await AsyncStorage.getItem('@visible');
       notification !== '0'
         ? navigation.push('AvailableActivities', {activities: message})
         : navigation.push('NoAvailableActivities');
@@ -101,8 +105,12 @@ const MainMap = ({navigation}: MainMapProps) => {
   return (
     <View style={styles.topView}>
       <View style={styles.view}>
-        <Chip style={styles.chip}>
+        <Chip style={styles.nameChip}>
           <Text style={styles.title}> ¡Hola, {User.name}!</Text>
+        </Chip>
+        <Chip style={styles.monedaChip}>
+          <Image style={styles.icon} source={images.moneda.uri} />
+          <Text style={styles.monedaText}>{cantMonedas}</Text>
         </Chip>
       </View>
       <View style={styles.containerButtons}>
@@ -147,12 +155,7 @@ const MainMap = ({navigation}: MainMapProps) => {
             />
           )}
           contentStyle={{flexDirection: 'column'}}
-          onPress={() =>
-            navigation.push('Conclusion', {
-              actividad: 'diagramas',
-              tipo: 'interactive',
-            })
-          }>
+          onPress={() => navigation.push('Recompensas')}>
           <Text style={styles.subtitle}>Tienda</Text>
         </Button>
         <View style={styles.rightButtonView}>
@@ -189,6 +192,7 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     margin: RSize(0.03, 'h'),
   },
   containerButtons: {
@@ -209,8 +213,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 4,
   },
-  chip: {
+  nameChip: {
     backgroundColor: '#F1F3F8',
+  },
+  monedaChip: {
+    backgroundColor: '#F1F3F8',
+  },
+  monedaText: {
+    color: 'black',
   },
   title: {
     fontFamily: 'Poppins-Bold',
@@ -244,6 +254,11 @@ const styles = StyleSheet.create({
     width: RSize(0.45, 'h'),
     position: 'absolute',
     right: RSize(0.01, 'h'),
+  },
+  icon: {
+    resizeMode: 'cover',
+    height: RSize(0.05, 'h'),
+    width: RSize(0.05, 'h'),
   },
 });
 

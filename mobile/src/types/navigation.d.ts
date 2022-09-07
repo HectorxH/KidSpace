@@ -17,6 +17,7 @@ export type RootStackParamList = {
   FinalQuiz: undefined;
   ResultadoFinal: undefined;
   DynamicTable: undefined;
+  Recompensas: undefined;
 };
 
 export type MainMapProps = NativeStackScreenProps<
@@ -63,4 +64,8 @@ export type ConclusionStoryProps = NativeStackScreenProps<
 export type ResultadoFinalProps = NativeStackScreenProps<
   RootStackParamList,
   'DynamicTable'
+>;
+export type RecompensasProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Recompensas'
 >;
