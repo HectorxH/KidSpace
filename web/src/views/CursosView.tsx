@@ -9,7 +9,6 @@ import {
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-// import RSize from '../utils/responsive';
 import '../App.css';
 import { useAuth } from '../hooks/useAuth';
 import { ICursos } from '../types/cursos';
@@ -66,7 +65,6 @@ const CursosView = () => {
                 <CardMedia
                   component="img"
                   sx={{ height: '30vh' }}
-                  // sx={{ height: RSize(0.3, 'h') }}
                   image={img}
                 />
                 <CardContent>
