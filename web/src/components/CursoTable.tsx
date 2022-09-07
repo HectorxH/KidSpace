@@ -134,7 +134,19 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
             estudiante={row}
             eliminarAsignacion={eliminarAsignacion}
           />
-          <Button variant="contained" onClick={handleEditClick} sx={{ marginLeft: '1vw' }}>
+          <Button
+            variant="contained"
+            onClick={handleEditClick}
+            sx={{
+              marginLeft: '1vw',
+              backgroundColor: '#5C9DEC',
+              color: '#FFFFFF',
+              '&:hover': {
+                backgroundColor: '#c0d5ed',
+                color: '#FFFFFF',
+              },
+            }}
+          >
             <Typography
               variant="button"
               color={(theme: Theme) => theme.palette.info.contrastText}
