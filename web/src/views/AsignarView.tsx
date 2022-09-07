@@ -12,6 +12,17 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import NotFoundView from './NotFoundView';
 import { IPlanificada } from '../types/planificadas';
 
+const cursosD = [
+  {
+    id: 1,
+    nombre: '6-A',
+  },
+  {
+    id: 2,
+    nombre: '6-B',
+  },
+];
+
 const AsignarView = () => {
   const navigate = useNavigate();
   const params = useParams();
@@ -71,7 +82,9 @@ const AsignarView = () => {
               onChange={(e) => setCurso(e.target.value)}
               required
             >
-              <MenuItem value="A">A</MenuItem>
+              {cursosD.map((nombre) => (
+                <MenuItem value={nombre.nombre}>{nombre.nombre}</MenuItem>
+              ))}
             </TextField>
           </Stack>
           <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
