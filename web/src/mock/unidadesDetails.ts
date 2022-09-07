@@ -16,6 +16,22 @@ export default [
     ],
   },
   {
+    nunidad: '2',
+    unidad: 'Unidad 2',
+    titulo: 'Actividades de Unidad 2',
+    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis dictum tortor. Ut luctus auctor ex, in lobortis metus ullamcorper nec. Donec ut tristique velit. Aliquam blandit, metus vitae posuere.',
+    path: '/actividades/unidad/3',
+    actividades: [
+      {
+        nactividad: '2',
+        actividad: 'Actividad',
+        titulo: '',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis posuere felis. Morbi euismod elit ut massa maximus pharetra. Nam maximus venenatis dolor id iaculis. Suspendisse eget purus vitae orci cursus tincidunt nec sed nunc. Mauris eget gravida quam. Quisque a lacus in orci tempor feugiat id eu mi. Integer turpis purus, commodo non mi at, fermentum blandit orci. Suspendisse.',
+        path: '/actividades/unidad/2/actividad/2',
+      },
+    ],
+  },
+  {
     nunidad: '3',
     unidad: 'Unidad 3',
     titulo: 'Actividades de Unidad 3',
