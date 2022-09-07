@@ -134,7 +134,7 @@ const CursoTable = (
   { rows, updateEstudiantes }: { rows: IEstudiantes, updateEstudiantes: Function },
 ) => {
   const eliminarAsignacion = (estudiante: IEstudiante) => {
-    const estudiantes = JSON.parse(localStorage.getItem('estudiantes') || '');
+    const estudiantes = JSON.parse(localStorage.getItem('estudiantes') || '[]');
     _.remove(estudiantes, estudiante);
     localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
     updateEstudiantes();
