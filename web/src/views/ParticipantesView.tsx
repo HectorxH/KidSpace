@@ -115,9 +115,9 @@ const ParticipantesView = () => {
         </Box>
         <Button
           sx={{
+            marginRight: 2,
             backgroundColor: '#FF8A01',
             color: '#FFFFFF',
-            marginRight: 2,
             '&:hover': {
               backgroundColor: '#ffbe82',
               color: '#FFFFFF',

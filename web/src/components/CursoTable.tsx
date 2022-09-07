@@ -43,11 +43,18 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
       <Button
         variant="contained"
         onClick={handleClickActive}
-        sx={{ backgroundColor: '#EA6A6A' }}
+        sx={{
+          backgroundColor: '#EA6A6A',
+          color: '#FFFFFF',
+          '&:hover': {
+            backgroundColor: '#f9b3b3',
+            color: '#FFFFFF',
+          },
+        }}
+
       >
         <Typography
           variant="button"
-          color={(theme: Theme) => theme.palette.primary.contrastText}
         >
           Eliminar
         </Typography>
@@ -67,7 +74,19 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button sx={{ backgroundColor: '#EA6A6A' }} variant="contained" onClick={handleEliminarStudent}>Eliminar</Button>
+          <Button
+            sx={{
+              backgroundColor: '#EA6A6A',
+              color: '#FFFFFF',
+              '&:hover': {
+                backgroundColor: '#f9b3b3',
+                color: '#FFFFFF',
+              },
+            }}
+            variant="contained"
+            onClick={handleEliminarStudent}
+          >Eliminar
+          </Button>
           <Button sx={{ backgroundColor: '#F1F3F8' }} variant="contained" onClick={handleCloseDialog}>
             <Typography
               variant="button"

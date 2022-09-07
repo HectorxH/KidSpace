@@ -64,7 +64,7 @@ const CursosView = () => {
           }) => (
             <Card
               sx={{
-                borderRadius: '20px', alignItems: 'center', width: '25vw',
+                borderRadius: '20px', alignItems: 'center', width: '25vw', minWidth: 250,
               }}
               className="MuiCard-root"
               key={_id}
@@ -105,7 +105,7 @@ const CursosView = () => {
           ))}
           <Card
             sx={{
-              borderRadius: '20px', width: '25vw',
+              borderRadius: '20px', width: '25vw', minWidth: 250,
             }}
             className="MuiCard-root"
           >
