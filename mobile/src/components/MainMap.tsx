@@ -28,11 +28,16 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 });
 const channel = pusher.subscribe('channel');
 
-<<<<<<< HEAD
-const MainMap = ({navigation}: MainMapProps) => {
+const MainMap = ({navigation, route}: MainMapProps) => {
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
   const [notification, setNotification] = useState('0');
+  const {datos} = route.params;
+  const [title, setTitle] = useState('');
+  const [desc, setDesc] = useState('');
+  const [modalVisible, setModalVisible] = useState(false);
+  const [unidadCarrera, setUnidadCarrera] = useState('');
+  const [user, setUser] = useState({key: 1, name: datos.nombres});
 
   const loadNotification = () => {
     let visible = false;
@@ -88,17 +93,6 @@ const MainMap = ({navigation}: MainMapProps) => {
       console.log(e);
     }
   };
-=======
-const MainMap = ({navigation, route}: MainMapProps) => {
-  const {datos} = route.params;
-  const [message, setMessage] = useState<IActivity[]>([]);
-  const [visible, setVisible] = useState(false);
-  const [notification, setNotification] = useState(0);
-  const [title, setTitle] = useState('');
-  const [desc, setDesc] = useState('');
-  const [modalVisible, setModalVisible] = useState(false);
-  const [unidadCarrera, setUnidadCarrera] = useState('');
-  const [user, setUser] = useState({key: 1, name: datos.nombres});
 
   const handleTapUnidad = (event: any) => {
     setModalVisible(true);
@@ -106,8 +100,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
     setDesc(event.carrera.desc);
     setUnidadCarrera(event.carrera);
   };
-  const allMessages: IActivity[] = [];
->>>>>>> b2b7b0773690e177c85830704c422291b6d49d7e
 
   useFocusEffect(
     useCallback(() => {
@@ -207,68 +199,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               style={{
                 flex: 1,
               }}
-<<<<<<< HEAD
-            />
-          )}
-          contentStyle={{flexDirection: 'column'}}
-          onPress={() =>
-            navigation.push('CuentoIntroductorio', {
-              actividad: 'diagramas',
-              // tipo: 'introductory',
-              // tipo: 'interactive',
-            })
-          }>
-          <Text style={styles.subtitle}>Perfil</Text>
-        </Button>
-        <Button
-          style={styles.button}
-          color="#A0C96A"
-          mode="contained"
-          icon={() => (
-            <Icon
-              name="store"
-              size={RSize(0.11, 'h')}
-              color="#FFFFFF"
-              style={{
-                width: RSize(0.15, 'h'),
-                height: RSize(0.1, 'h'),
-              }}
-            />
-          )}
-          contentStyle={{flexDirection: 'column'}}
-          onPress={() =>
-            navigation.push('Conclusion', {
-              actividad: 'diagramas',
-              tipo: 'interactive',
-            })
-          }>
-          <Text style={styles.subtitle}>Tienda</Text>
-        </Button>
-        <View style={styles.rightButtonView}>
-          {loadNotification()}
-          <Button
-            style={styles.button3}
-            compact={true}
-            color="#F2C045"
-            mode="contained"
-            icon={() => (
-              <Icon
-                name="target"
-                size={RSize(0.11, 'h')}
-                color="#FFFFFF"
-                style={{
-                  width: RSize(0.15, 'h'),
-                  height: RSize(0.1, 'h'),
-                }}
-              />
-            )}
-            contentStyle={{flexDirection: 'column'}}
-            onPress={HandleAct}>
-            <Text style={styles.subtitle}>Actividades</Text>
-          </Button>
-        </View>
-      </View>
-=======
               source={images.ruta.uri}>
               <View style={{flexDirection: 'row'}}>
                 {Carreras.map((carrera, id) => (
@@ -353,9 +283,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
-              <Badge visible={visible} style={styles.badge}>
-                {notification}
-              </Badge>
+              {loadNotification()}
               <Button
                 style={styles.button3}
                 compact={true}
@@ -380,7 +308,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           </View>
         </ImageBackground>
       </ImageBackground>
->>>>>>> b2b7b0773690e177c85830704c422291b6d49d7e
     </View>
   );
 };
