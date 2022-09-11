@@ -17,6 +17,7 @@ import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
 import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
+import Apoderado from './models/Apoderado';
 
 const MongoStore = require('connect-mongo');
 
@@ -54,10 +55,10 @@ app.use((req, res, next) => {
   return next();
 });
 
-app.post('/register', checkNotAuth, async (req, res) => {
+app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo,
+      nombres, apellidos, tipo, email,
     } = req.body;
     let { username, password } = req.body;
     if (_.some(req.body, _.isNil)) {
@@ -74,22 +75,40 @@ app.post('/register', checkNotAuth, async (req, res) => {
         user = await User.findOne({ username });
       } while (user);
       console.log({ username, password });
+    } else if (tipo === 'apoderado') {
+      password = crypto.randomBytes(8).toString('hex');
+      const name = `${nombres.split(' ')[0]}.${apellidos.split(' ')[0]}`;
+      let user;
+      username = `${name}`;
+      do {
+        // eslint-disable-next-line no-await-in-loop
+        user = await User.findOne({ username });
+        if (user) {
+          username = `${name}.${crypto.randomBytes(2).toString('hex')}`;
+        }
+      } while (user);
+      console.log({ username, password });
     }
 
     const hashedPass = await bcrypt.hash(password, 10);
     const user = new User({
-      nombres, apellidos, username, password: hashedPass, tipo,
+      nombres, apellidos, username, password: hashedPass, tipo, email,
     });
     await user.save();
 
     if (user.tipo === 'profesor') {
-      const profesor = new Profesor({ uid: user._id });
+      const profesor = new Profesor({ user: user._id });
       await profesor.save();
       res.sendStatus(200);
     } else if (user.tipo === 'estudiante') {
-      const estudiante = new Estudiante({ uid: user._id });
+      const estudiante = new Estudiante({ user: user._id });
       await estudiante.save();
       res.json({ username, password });
+    } else if (user.tipo === 'apoderado') {
+      const apoderado = new Apoderado({ user: user._id });
+      await apoderado.save();
+      apoderado.populate('user');
+      res.json({ apoderado });
     }
   } catch (e) {
     console.log(e);

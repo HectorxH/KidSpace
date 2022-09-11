@@ -1,22 +1,21 @@
 import { Schema, Types, model } from 'mongoose';
 import { IApoderado } from './Apoderado';
-import { ICurso } from './Curso';
 import { IProfesor } from './Profesor';
 
 export interface IEstudiante {
-  uid: any
-  curso?: ICurso,
+  user: any
+  curso?: any,
   profesor?: IProfesor
-  apoderados?: Types.Array<IApoderado>
+  apoderados: Types.Array<IApoderado>
 }
 
 export const estudianteSchema = new Schema<IEstudiante>({
-  uid: {
+  user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
   curso: { type: Types.ObjectId, ref: 'Curso' },
   profesor: { type: Types.ObjectId, ref: 'Profesor' },
-  apoderados: [{ type: Types.ObjectId, ref: 'Apoderado' }],
+  apoderados: [{ type: Types.ObjectId, ref: 'Apoderado', default: [] }],
 });
 
 export default model<IEstudiante>('Estudiante', estudianteSchema);

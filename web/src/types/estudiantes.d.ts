@@ -1,11 +1,11 @@
+import { IUser } from './user';
 import { IApoderados } from './apoderados';
 
 export interface IEstudiante {
-  nestudiante: string,
-  curso: string,
-  apellidos: string,
-  nombres: string,
+  _id: string,
+  user: IUser,
   apoderados: IApoderados,
+  curso: string
 }
 
 export type IEstudiantes = IEstudiante[]

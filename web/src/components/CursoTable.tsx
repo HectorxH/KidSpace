@@ -1,15 +1,16 @@
+/* eslint-disable no-underscore-dangle */
 import {
   TableContainer, Button, Table, TableBody, Theme,
   TableCell, TableHead, TableRow, Stack, Card,
   Typography, Dialog, DialogActions, DialogContent,
   DialogContentText, DialogTitle,
 } from '@mui/material';
-import _ from 'lodash';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import estudiantesDetails from '../mock/estudiantesDetails';
+import axios from 'axios';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
+import { useAuth } from '../hooks/useAuth';
 
 interface RowParams {
   row: IEstudiante,
@@ -70,7 +71,7 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            ¿Desea eliminar a {estudiante.nombres} {estudiante.apellidos}?
+            ¿Desea eliminar a {estudiante.user.nombres} {estudiante.user.apellidos}?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -103,17 +104,13 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
 
 const Row = ({ row, eliminarAsignacion }:RowParams) => {
   const {
-    nestudiante, curso, nombres, apellidos,
+    _id, user, curso,
   } = row;
-  const estudiante = _.find(estudiantesDetails, { nestudiante });
-  if (estudiante === undefined) {
-    eliminarAsignacion(row);
-    return null;
-  }
+  const { nombres, apellidos } = user;
   const navigate = useNavigate();
 
   const handleEditClick = () => {
-    navigate(`/cursos/${curso}/${nestudiante}`);
+    navigate(`/cursos/${curso}/${_id}`);
   };
 
   return (
@@ -160,14 +157,26 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
   );
 };
 
+interface ICursoTableParams {
+  rows: IEstudiantes,
+  updateEstudiantes: Function
+}
+
 const CursoTable = (
-  { rows, updateEstudiantes }: { rows: IEstudiantes, updateEstudiantes: Function },
+  { rows, updateEstudiantes }: ICursoTableParams,
 ) => {
-  const eliminarAsignacion = (estudiante: IEstudiante) => {
-    const estudiantes = JSON.parse(localStorage.getItem('estudiantes') || '[]');
-    _.remove(estudiantes, estudiante);
-    localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
-    updateEstudiantes();
+  const { logout } = useAuth();
+  const eliminarAsignacion = async (estudiante: IEstudiante) => {
+    try {
+      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudiante._id}`);
+      console.log(res);
+      updateEstudiantes();
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
   };
 
   return (
@@ -193,7 +202,7 @@ const CursoTable = (
             ? ''
             : rows.map((row) => (
               <Row
-                key={row.nestudiante}
+                key={row._id}
                 row={row}
                 eliminarAsignacion={eliminarAsignacion}
               />
