@@ -128,7 +128,7 @@ const EditarApoderado = ({ initialApoderado, updateApoderados, deleteApoderados 
               </Stack>
               <Stack direction="row" alignItems="center" justifyContent="space-between">
                 <Typography variant="subtitle2" px={4}>
-                  Correo electrónico
+                  Correo
                 </Typography>
                 <TextField size="small" disabled={!editing} value={apoderado.user.email} onChange={handleCorreoChange} sx={{ borderRadius: 10 }} />
               </Stack>
