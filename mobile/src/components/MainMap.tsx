@@ -13,6 +13,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
@@ -28,15 +29,70 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation, route}: MainMapProps) => {
-  const {datos} = route.params;
+  let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
-  const [visible, setVisible] = useState(false);
-  const [notification, setNotification] = useState(0);
+  const [notification, setNotification] = useState('0');
+  const {datos} = route.params;
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
   const [user, setUser] = useState({key: 1, name: datos.nombres});
+
+  const loadNotification = () => {
+    let visible = false;
+    if (notification !== '0') {
+      visible = true;
+    }
+    return (
+      <View>
+        {visible && (
+          <Badge visible={visible} style={styles.badge}>
+            {parseInt(notification!, 10)}
+          </Badge>
+        )}
+      </View>
+    );
+  };
+
+  const initialLoader = async () => {
+    try {
+      let jsonAllMessages = await AsyncStorage.getItem('@message');
+      //check if value previously stored
+      jsonAllMessages != null
+        ? (allMessages = JSON.parse(jsonAllMessages))
+        : [];
+      setMessage(JSON.parse(jsonAllMessages!));
+      const n = await AsyncStorage.getItem('@notification');
+      setNotification(n!);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  const loadMessage = async () => {
+    try {
+      channel.bind('message', async function (data: {message: IActivity}) {
+        let jsonAllMessages = await AsyncStorage.getItem('@message');
+        //check if value previously stored
+        jsonAllMessages != null
+          ? (allMessages = JSON.parse(jsonAllMessages))
+          : [];
+        allMessages.push(data.message);
+        jsonAllMessages = JSON.stringify(allMessages);
+        await AsyncStorage.setItem('@message', jsonAllMessages);
+        const m = await AsyncStorage.getItem('@message');
+        setMessage(JSON.parse(m!));
+        await AsyncStorage.setItem(
+          '@notification',
+          allMessages.length.toString(),
+        );
+        const n = await AsyncStorage.getItem('@notification');
+        setNotification(n!);
+      });
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   const handleTapUnidad = (event: any) => {
     setModalVisible(true);
@@ -44,7 +100,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
     setDesc(event.carrera.desc);
     setUnidadCarrera(event.carrera);
   };
-  const allMessages: IActivity[] = [];
 
   useFocusEffect(
     useCallback(() => {
@@ -59,20 +114,21 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   );
 
   useEffect(() => {
-    channel.bind('message', function (data: {message: IActivity}) {
-      allMessages.push(data.message);
-      setMessage(allMessages);
-      setNotification(allMessages.length);
-      setVisible(true);
-    });
+    initialLoader();
+    loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const HandleAct = () => {
-    if (visible === true) {
-      navigation.push('AvailableActivities', {activities: message.slice(0, 3)});
-    } else {
-      navigation.push('NoAvailableActivities');
+  const HandleAct = async () => {
+    try {
+      //const jsonMessages = await AsyncStorage.getItem('@message');
+      //const messages = JSON.parse(jsonMessages!);
+      //const visible = await AsyncStorage.getItem('@visible');
+      notification !== '0'
+        ? navigation.push('AvailableActivities', {activities: message})
+        : navigation.push('NoAvailableActivities');
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -227,9 +283,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
-              <Badge visible={visible} style={styles.badge}>
-                {notification}
-              </Badge>
+              {loadNotification()}
               <Button
                 style={styles.button3}
                 compact={true}

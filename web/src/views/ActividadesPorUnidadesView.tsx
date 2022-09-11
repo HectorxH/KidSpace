@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import unidades from '../mock/unidades';
-import RSize from '../utils/responsive';
+// import RSize from '../utils/responsive';
 import '../App.css';
 
 const ActividadesPorUnidadesView = () => (
@@ -37,7 +37,7 @@ const ActividadesPorUnidadesView = () => (
           >
             <CardMedia
               component="img"
-              sx={{ height: RSize(0.3, 'h') }}
+              sx={{ height: '30vh' }}
               image={img}
               alt={`Imagen de ${title}`}
             />

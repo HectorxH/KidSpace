@@ -13,6 +13,17 @@ import es from 'date-fns/locale/es';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
 
+const cursosAux = [
+  {
+    id: 1,
+    nombre: '6-A',
+  },
+  {
+    id: 2,
+    nombre: '6-B',
+  },
+];
+
 const AsignarView = () => {
   const navigate = useNavigate();
   const params = useParams();
@@ -76,7 +87,9 @@ const AsignarView = () => {
               onChange={(e) => setCurso(e.target.value)}
               required
             >
-              <MenuItem value="A">A</MenuItem>
+              {cursosAux.map((nombre) => (
+                <MenuItem value={nombre.nombre}>{nombre.nombre}</MenuItem>
+              ))}
             </TextField>
           </Stack>
           <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">

@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
-import RSize from '../utils/responsive';
 import { useAuth } from '../hooks/useAuth';
 
 interface RowParams {
@@ -45,11 +44,18 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
       <Button
         variant="contained"
         onClick={handleClickActive}
-        sx={{ backgroundColor: '#EA6A6A' }}
+        sx={{
+          backgroundColor: '#EA6A6A',
+          color: '#FFFFFF',
+          '&:hover': {
+            backgroundColor: '#f9b3b3',
+            color: '#FFFFFF',
+          },
+        }}
+
       >
         <Typography
           variant="button"
-          color={(theme: Theme) => theme.palette.primary.contrastText}
         >
           Eliminar
         </Typography>
@@ -69,7 +75,19 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button sx={{ backgroundColor: '#EA6A6A' }} variant="contained" onClick={handleEliminarStudent}>Eliminar</Button>
+          <Button
+            sx={{
+              backgroundColor: '#EA6A6A',
+              color: '#FFFFFF',
+              '&:hover': {
+                backgroundColor: '#f9b3b3',
+                color: '#FFFFFF',
+              },
+            }}
+            variant="contained"
+            onClick={handleEliminarStudent}
+          >Eliminar
+          </Button>
           <Button sx={{ backgroundColor: '#F1F3F8' }} variant="contained" onClick={handleCloseDialog}>
             <Typography
               variant="button"
@@ -113,7 +131,19 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
             estudiante={row}
             eliminarAsignacion={eliminarAsignacion}
           />
-          <Button variant="contained" onClick={handleEditClick} sx={{ marginLeft: RSize(0.0005, 'w') }}>
+          <Button
+            variant="contained"
+            onClick={handleEditClick}
+            sx={{
+              marginLeft: '1vw',
+              backgroundColor: '#5C9DEC',
+              color: '#FFFFFF',
+              '&:hover': {
+                backgroundColor: '#c0d5ed',
+                color: '#FFFFFF',
+              },
+            }}
+          >
             <Typography
               variant="button"
               color={(theme: Theme) => theme.palette.info.contrastText}

@@ -9,11 +9,21 @@ import {
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
-// import RSize from '../utils/responsive';
 import '../App.css';
 import { useAuth } from '../hooks/useAuth';
 import { ICursos } from '../types/cursos';
 import img from '../assets/cursosimg.png';
+
+const cursosAux = [
+  {
+    _id: 1,
+    nombre: '6-A',
+  },
+  {
+    _id: 2,
+    nombre: '6-B',
+  },
+];
 
 const CursosView = () => {
   const [cursos, setCursos] = useState<ICursos>([]);
@@ -49,12 +59,12 @@ const CursosView = () => {
       {!loading
         && (
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
-          {cursos.map(({
+          {cursosAux.map(({
             nombre, _id,
           }) => (
             <Card
               sx={{
-                borderRadius: '20px', alignItems: 'center',
+                borderRadius: '20px', alignItems: 'center', width: '25vw', minWidth: 250,
               }}
               className="MuiCard-root"
               key={_id}
@@ -65,8 +75,7 @@ const CursosView = () => {
               >
                 <CardMedia
                   component="img"
-                  sx={{ height: '50%' }}
-                  // sx={{ height: RSize(0.3, 'h') }}
+                  sx={{ height: '30vh' }}
                   image={img}
                 />
                 <CardContent>
@@ -96,7 +105,7 @@ const CursosView = () => {
           ))}
           <Card
             sx={{
-              borderRadius: '20px',
+              borderRadius: '20px', width: '25vw', minWidth: 250,
             }}
             className="MuiCard-root"
           >

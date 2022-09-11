@@ -8,7 +8,6 @@ import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import axios from 'axios';
-import RSize from '../utils/responsive';
 import NotFoundView from './NotFoundView';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
@@ -148,7 +147,7 @@ const EditarCursoView = () => {
         </Box>
         <CardMedia
           component="img"
-          // sx={{ height: RSize(0.3, 'h'), width: 3.5 / 4 }}
+          sx={{ height: '30vh' }}
           image={img}
         />
       </Stack>

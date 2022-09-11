@@ -17,6 +17,28 @@ import { useAuth } from '../hooks/useAuth';
 
 const img = require('../assets/cursosimg.png');
 
+const cursosAux = [
+  {
+    _id: '1',
+    nombre: '6-A',
+    estudiantes: [
+      {
+        nestudiante: '',
+        curso: '',
+        apellidos: '',
+        nombres: '',
+        apoderados: {
+          napoderado: '',
+          nombres: '',
+          apellidos: '',
+          correo: '',
+          isNew: true,
+        },
+      },
+    ],
+  },
+];
+
 const ParticipantesView = () => {
   const params = useParams();
   const [curso, setCurso] = useState<ICurso>();
@@ -25,7 +47,6 @@ const ParticipantesView = () => {
   const navigate = useNavigate();
 
   const { logout } = useAuth();
-
   const getCurso = async () => {
     try {
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
@@ -49,7 +70,12 @@ const ParticipantesView = () => {
   if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-      <Stack direction="row" style={{ width: '100%', justifyContent: 'center' }}>
+      <Stack
+        direction="row"
+        style={{
+          width: '100%', justifyContent: 'center', height: '30vh',
+        }}
+      >
         <Box
           sx={{
             backgroundColor: '#B878EA', px: 3, py: 3, width: 1.5 / 4, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -68,7 +94,7 @@ const ParticipantesView = () => {
         </Box>
         <CardMedia
           component="img"
-          sx={{ height: '33%', width: 3.5 / 4 }}
+          sx={{ width: 2.5 / 4 }}
           image={img}
         />
       </Stack>
@@ -88,7 +114,15 @@ const ParticipantesView = () => {
           </Typography>
         </Box>
         <Button
-          sx={{ backgroundColor: '#FF8A01', color: '#FFFFFF', marginRight: 2 }}
+          sx={{
+            marginRight: 2,
+            backgroundColor: '#FF8A01',
+            color: '#FFFFFF',
+            '&:hover': {
+              backgroundColor: '#ffbe82',
+              color: '#FFFFFF',
+            },
+          }}
           onClick={() => navigate(`/cursos/${cursoId}/qr`)}
         >
           <QrCodeIcon />Generar QR
