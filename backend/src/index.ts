@@ -19,6 +19,18 @@ import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
 import Apoderado from './models/Apoderado';
 
+// Agrega la funcion .format como en python
+if (!String.prototype.format) {
+  // eslint-disable-next-line no-extend-native, func-names
+  String.prototype.format = function () {
+    // eslint-disable-next-line prefer-rest-params
+    const args = arguments;
+    return this.replace(/{(\d+)}/g, (match, number) => (typeof args[number] !== 'undefined'
+      ? args[number]
+      : match));
+  };
+}
+
 const MongoStore = require('connect-mongo');
 
 dotenv.config();

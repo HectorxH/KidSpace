@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
 declare global {
+  interface String {
+    format(...args: any[]): string;
+  }
   namespace Express {
     interface User {
       nombres: string,

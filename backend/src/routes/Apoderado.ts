@@ -2,6 +2,8 @@
 import express from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv-safe';
+import { readFileSync } from 'fs';
+import path from 'path';
 import Apoderado from '../models/Apoderado';
 import Estudiante from '../models/Estudiante';
 import User from '../models/User';
@@ -9,6 +11,8 @@ import User from '../models/User';
 dotenv.config();
 
 const router = express.Router();
+
+const emailTemplate = readFileSync(path.join(__dirname, '../assets/email/index.html')).toString();
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -44,14 +48,18 @@ router.post('/:id/sendCredentials', async (req, res) => {
     const { id } = req.params;
     const apoderado = await Apoderado.findById(id).populate('user');
 
-    const mail = await transporter.sendMail({
+    await transporter.sendMail({
       from: 'Kidspace.cl',
       to: apoderado?.user.email,
       subject: 'Credenciales de acceso Kidspace', // Subject
-      html: `<b>Nombre de usuario:</b> ${apoderado?.user.username} <b>Contraseña:</b> ${apoderado?.password}`, // html body
+      html: emailTemplate.format(apoderado?.user.username, apoderado?.password),
+      attachments: [{
+        filename: 'image-1.png',
+        path: path.join(__dirname, '../assets/email/images/image-1.png'),
+        cid: 'templateEmailImage@Kidspace',
+      }],
     });
-    console.log(mail.messageId);
-    console.log(nodemailer.getTestMessageUrl(mail));
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
