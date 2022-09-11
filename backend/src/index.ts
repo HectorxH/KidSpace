@@ -105,7 +105,7 @@ app.post('/register', async (req, res) => {
       await estudiante.save();
       res.json({ username, password });
     } else if (user.tipo === 'apoderado') {
-      const apoderado = new Apoderado({ user: user._id });
+      const apoderado = new Apoderado({ user: user._id, password });
       await apoderado.save();
       apoderado.populate('user');
       res.json({ apoderado });

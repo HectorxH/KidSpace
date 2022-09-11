@@ -20,6 +20,8 @@ declare global {
       PUSHER_CLUSTER: string;
       MONGO_USER: string;
       MONGO_PASS: string;
+      EMAIL_USER: string;
+      EMAIL_PASS: string;
     }
   }
 }

@@ -1,11 +1,25 @@
 /* eslint-disable camelcase */
 import express from 'express';
+import nodemailer from 'nodemailer';
+import dotenv from 'dotenv-safe';
 import Apoderado from '../models/Apoderado';
 import Estudiante from '../models/Estudiante';
 import User from '../models/User';
 
+dotenv.config();
+
 const router = express.Router();
-const nodemailer = require('nodemailer');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false,
+  },
+});
 
 router.post('/:id', async (req, res) => {
   try {
@@ -29,23 +43,15 @@ router.post('/:id/sendCredentials', async (req, res) => {
   try {
     const { id } = req.params;
     const apoderado = await Apoderado.findById(id).populate('user');
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
-    });
 
-    await transporter.sendMail({
+    const mail = await transporter.sendMail({
       from: 'Kidspace.cl',
       to: apoderado?.user.email,
       subject: 'Credenciales de acceso Kidspace', // Subject
-      html: `<b>Nombre de usuario:</b> ${apoderado?.user.username} <b>Contraseña:</b> ${apoderado?.user.password}`, // html body
+      html: `<b>Nombre de usuario:</b> ${apoderado?.user.username} <b>Contraseña:</b> ${apoderado?.password}`, // html body
     });
+    console.log(mail.messageId);
+    console.log(nodemailer.getTestMessageUrl(mail));
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

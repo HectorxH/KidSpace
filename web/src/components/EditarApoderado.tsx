@@ -39,15 +39,8 @@ const EditarApoderado = ({ initialApoderado, updateApoderados, deleteApoderados 
   };
 
   const handleUpdate = () => {
-    changeApoderadoEditing();
-    if (apoderado) {
-      setApoderado({
-        ...apoderado,
-        new: false,
-      });
-    }
-    setDefaultApoderado(apoderado);
     updateApoderados(apoderado);
+    changeApoderadoEditing();
   };
 
   const handleNombresChange = (event: any) => {
@@ -92,7 +85,7 @@ const EditarApoderado = ({ initialApoderado, updateApoderados, deleteApoderados 
 
   const sendCredentials = async () => {
     try {
-      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Apoderados/${apoderado._id}/sendCredentials`);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Apoderado/${apoderado._id}/sendCredentials`);
       console.log(res);
     } catch (e) {
       console.log(e);

@@ -11,9 +11,8 @@ import React, { useEffect, useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
-import { randomBytes } from 'crypto';
 import EditarApoderado from '../components/EditarApoderado';
-import { IApoderado } from '../types/apoderados';
+import { IApoderados, IApoderado } from '../types/apoderados';
 import { useAuth } from '../hooks/useAuth';
 import { IEstudiante } from '../types/estudiantes';
 import NotFoundView from './NotFoundView';
@@ -26,6 +25,7 @@ const EditarEstudiante = () => {
   const [defaultEstudiante, setDefaultEstudiante] = useState<IEstudiante>();
   const [estudiante, setEstudiante] = useState<IEstudiante>();
   const [editingEstudiante, setEditingEstudiante] = useState(false);
+  const [apoderados, setApoderados] = useState<IApoderados>();
 
   const { logout } = useAuth();
 
@@ -35,6 +35,7 @@ const EditarEstudiante = () => {
       const est : IEstudiante = res.data.estudiante;
       setDefaultEstudiante(est);
       setEstudiante(est);
+      setApoderados(est.apoderados);
       console.log(est);
     } catch (e) {
       console.log(e);
@@ -72,13 +73,14 @@ const EditarEstudiante = () => {
         ...estudiante,
         apoderados: estudiante.apoderados.concat([apodrado]),
       });
+      setApoderados(estudiante?.apoderados);
     }
   };
 
   const updateApoderados = async (apoderado: IApoderado) => {
     if (estudiante) {
       const { nombres, apellidos, email } = apoderado.user;
-      const { apoderados } = estudiante;
+
       try {
         if (apoderado.new) {
           const res = await axios.post(
@@ -94,6 +96,7 @@ const EditarEstudiante = () => {
               apoderadoId: apoderado._id,
             },
           );
+          await getEstudiante();
         } else {
           const res = await axios.post(
             `${process.env.REACT_APP_BACKEND_URL}/Apoderado/${apoderado._id}`,
@@ -104,27 +107,18 @@ const EditarEstudiante = () => {
       } catch (e) {
         console.log(e);
       }
-      for (let i = 0; i < apoderados.length; i++) {
-        if (apoderados[i]._id === apoderado._id) {
-          apoderados[i] = apoderado;
-        }
-      }
-      setEstudiante({
-        ...estudiante,
-        apoderados,
-      });
     }
   };
 
   const deleteApoderados = async (_id: string) => {
-    if (estudiante) {
+    if (estudiante && apoderados) {
       try {
         const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Apoderado/${_id}`);
         console.log(res);
       } catch (e) {
         console.log(e);
       }
-      const apoderados = estudiante.apoderados.filter((apoderado) => apoderado._id !== _id);
+      setApoderados(apoderados.filter((apoderado) => apoderado._id !== _id));
       setEstudiante({
         ...estudiante,
         apoderados,
