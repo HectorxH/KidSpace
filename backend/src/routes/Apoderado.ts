@@ -12,10 +12,8 @@ router.post('/:id', async (req, res) => {
     const { id } = req.params;
     const { nombres, apellidos, email } = req.body;
     const apoderado = await Apoderado.findById(id);
+    await User.findByIdAndUpdate(apoderado?.user, { $set: { nombres, apellidos, email } });
     if (apoderado) {
-      const user = await User.findById(apoderado.user);
-      await user?.update({ nombres, apellidos, email });
-      await user?.save();
       apoderado.populate('user');
       res.json({ apoderado });
     } else {
@@ -34,8 +32,8 @@ router.post('/:id/sendCredentials', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'cosmosphere.tech@gmail.com', // Cambiar
-        pass: 'f3r14k1dsp4c3*',
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
         rejectUnauthorized: false,
@@ -44,16 +42,15 @@ router.post('/:id/sendCredentials', async (req, res) => {
 
     await transporter.sendMail({
       from: 'Kidspace.cl',
-      to: email,
+      to: apoderado?.user.email,
       subject: 'Credenciales de acceso Kidspace', // Subject
-      text: 'Bienvenido a la plataforma Kidspace', // plain text
-      html: '<b>Hello world?</b>', // html body
+      html: `<b>Nombre de usuario:</b> ${apoderado?.user.username} <b>Contraseña:</b> ${apoderado?.user.password}`, // html body
     });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
   }
-})
+});
 
 router.delete('/:id', async (req, res) => {
   try {

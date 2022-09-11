@@ -12,6 +12,7 @@ import React, { useState } from 'react';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
+import axios from 'axios';
 import { IApoderado } from '../types/apoderados';
 
 interface EdtiarApoderadoParams {
@@ -89,7 +90,14 @@ const EditarApoderado = ({ initialApoderado, updateApoderados, deleteApoderados 
     handleCloseDialog();
   };
 
-  const sendCredentials = () => {};
+  const sendCredentials = async () => {
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Apoderados/${apoderado._id}/sendCredentials`);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <Stack>

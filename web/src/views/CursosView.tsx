@@ -14,17 +14,6 @@ import { useAuth } from '../hooks/useAuth';
 import { ICursos } from '../types/cursos';
 import img from '../assets/cursosimg.png';
 
-const cursosAux = [
-  {
-    _id: 1,
-    nombre: '6-A',
-  },
-  {
-    _id: 2,
-    nombre: '6-B',
-  },
-];
-
 const CursosView = () => {
   const [cursos, setCursos] = useState<ICursos>([]);
   const [loading, setLoading] = useState(false);
@@ -59,7 +48,7 @@ const CursosView = () => {
       {!loading
         && (
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
-          {cursosAux.map(({
+          {cursos.map(({
             nombre, _id,
           }) => (
             <Card

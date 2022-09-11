@@ -17,28 +17,6 @@ import { useAuth } from '../hooks/useAuth';
 
 const img = require('../assets/cursosimg.png');
 
-const cursosAux = [
-  {
-    _id: '1',
-    nombre: '6-A',
-    estudiantes: [
-      {
-        nestudiante: '',
-        curso: '',
-        apellidos: '',
-        nombres: '',
-        apoderados: {
-          napoderado: '',
-          nombres: '',
-          apellidos: '',
-          correo: '',
-          isNew: true,
-        },
-      },
-    ],
-  },
-];
-
 const ParticipantesView = () => {
   const params = useParams();
   const [curso, setCurso] = useState<ICurso>();
