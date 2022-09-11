@@ -69,6 +69,7 @@ router.post('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    await Estudiante.updateMany({ curso: id }, { $set: { curso: null } });
     await Curso.deleteOne({ _id: id });
     res.send(200);
   } catch (e) {
@@ -84,11 +85,8 @@ router.post('/:id/inscribir', async (req, res) => {
     const tipo = req.user?.tipo;
     if (tipo === 'estudiante') {
       const estudiante = await Estudiante.findOne({ user });
-      const curso = await Curso.findById(id);
-      if (curso && estudiante) {
-        curso.estudiantes?.push(estudiante?.id);
-        await curso?.save();
-
+      await Curso.findByIdAndUpdate(id, { $addToSet: { estudiantes: estudiante?._id } });
+      if (estudiante) {
         estudiante.curso = id;
         await estudiante?.save();
       }

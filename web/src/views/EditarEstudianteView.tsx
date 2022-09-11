@@ -1,138 +1,173 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-underscore-dangle */
 import {
   Button, TextField, Card, CardContent,
   Divider, Stack, Typography,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
+import axios from 'axios';
+import { randomBytes } from 'crypto';
 import EditarApoderado from '../components/EditarApoderado';
 import { IApoderado } from '../types/apoderados';
-
-const getEstudiante = (datos: any) => {
-  const estudiantes = localStorage.getItem('estudiantes');
-  if (estudiantes === null) return null;
-  const estudiantesArray = JSON.parse(estudiantes);
-  for (let i = 0; i < estudiantesArray.length; i++) {
-    const estudiante = estudiantesArray[i];
-    if (estudiante.nestudiante === datos.nestudiante) {
-      return [estudiante.nombres, estudiante.apellidos, estudiante.apoderados];
-    }
-  }
-  return ['', '', []];
-};
+import { useAuth } from '../hooks/useAuth';
+import { IEstudiante } from '../types/estudiantes';
+import NotFoundView from './NotFoundView';
 
 const EditarEstudiante = () => {
-  const datos = useParams();
-  const informacion = getEstudiante(datos);
-  const [nombres, setNombres] = useState(informacion![0]);
-  const [apellidos, setApellidos] = useState(informacion![1]);
-  const [apoderados, setApoderados] = useState(informacion![2]);
-  const [editing, setEditing] = useState(false);
+  const params = useParams();
+  const { estudianteId } = params;
+  if (!estudianteId) return <NotFoundView />;
 
-  const changeEditing = () => {
-    setEditing(!editing);
+  const [defaultEstudiante, setDefaultEstudiante] = useState<IEstudiante>();
+  const [estudiante, setEstudiante] = useState<IEstudiante>();
+  const [editingEstudiante, setEditingEstudiante] = useState(false);
+
+  const { logout } = useAuth();
+
+  const getEstudiante = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudianteId}`);
+      const est : IEstudiante = res.data.estudiante;
+      setDefaultEstudiante(est);
+      setEstudiante(est);
+      console.log(est);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
   };
 
+  useEffect(() => {
+    if (!estudiante) getEstudiante();
+  }, []);
+
   const handleCancelarClick = () => {
-    const info = getEstudiante(datos);
-    setNombres(info![0]);
-    setApellidos(info![1]);
-    changeEditing();
-    return null;
+    setEstudiante(defaultEstudiante);
+    setEditingEstudiante(false);
   };
 
   const handleAddApoderadoClick = () => {
-    const estudiantes = localStorage.getItem('estudiantes');
-    if (estudiantes === null) return null;
-    const estudiantesArray = JSON.parse(estudiantes);
-    for (let i = 0; i < estudiantesArray.length; i++) {
-      const estudiante = estudiantesArray[i];
-      if (estudiante.nestudiante === datos.nestudiante) {
-        estudiantesArray[i].apoderados = [...estudiantesArray[i].apoderados, {
-          napoderado: (estudiantesArray[i].apoderados.length + 1).toString(),
-          nombres: 'Nombres',
-          apellidos: 'Apellidos',
-          correo: 'Correo',
-          isNew: true,
-        }];
-        localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
-        setApoderados(estudiantesArray[i].apoderados);
-        return null;
-      }
+    if (estudiante) {
+      const _id = (Math.random() + 1).toString(36).substring(7);
+      const apodrado: IApoderado = {
+        _id,
+        user: {
+          nombres: '',
+          apellidos: '',
+          email: '',
+          tipo: 'apoderado',
+        },
+        enviado: false,
+        new: true,
+        estudiantes: [estudianteId],
+      };
+      setEstudiante({
+        ...estudiante,
+        apoderados: estudiante.apoderados.concat([apodrado]),
+      });
     }
-    return null;
   };
 
-  const handleUpdateApoderado = (apoderado: IApoderado) => {
-    const estudiantes = localStorage.getItem('estudiantes');
-    if (estudiantes === null) return null;
-    const estudiantesArray = JSON.parse(estudiantes);
-    for (let i = 0; i < estudiantesArray.length; i++) {
-      const estudiante = estudiantesArray[i];
-      if (estudiante.nestudiante === datos.nestudiante) {
-        const oldApoderados = estudiantesArray[i].apoderados;
-        for (let j = 0; j < oldApoderados.length; j++) {
-          const oldApoderado = oldApoderados[j];
-          if (oldApoderado.napoderado === apoderado.napoderado) {
-            estudiantesArray[i].apoderados[j] = apoderado;
-            localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
-            setApoderados(estudiantesArray[i].apoderados);
-            return null;
-          }
+  const updateApoderados = async (apoderado: IApoderado) => {
+    if (estudiante) {
+      const { nombres, apellidos, email } = apoderado.user;
+      const { apoderados } = estudiante;
+      try {
+        if (apoderado.new) {
+          const res = await axios.post(
+            `${process.env.REACT_APP_BACKEND_URL}/register`,
+            {
+              nombres, apellidos, email, tipo: 'apoderado',
+            },
+          );
+          apoderado._id = res.data.apoderado._id;
+          await axios.put(
+            `${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudiante._id}/apoderados`,
+            {
+              apoderadoId: apoderado._id,
+            },
+          );
+        } else {
+          const res = await axios.post(
+            `${process.env.REACT_APP_BACKEND_URL}/Apoderado/${apoderado._id}`,
+            { nombres, apellidos, email },
+          );
+          console.log(res);
+        }
+      } catch (e) {
+        console.log(e);
+      }
+      for (let i = 0; i < apoderados.length; i++) {
+        if (apoderados[i]._id === apoderado._id) {
+          apoderados[i] = apoderado;
         }
       }
+      setEstudiante({
+        ...estudiante,
+        apoderados,
+      });
     }
-    return null;
   };
 
-  const handleEliminarApoderado = (napoderado: string) => {
-    const estudiantes = localStorage.getItem('estudiantes');
-    if (estudiantes === null) return null;
-    const estudiantesArray = JSON.parse(estudiantes);
-    for (let i = 0; i < estudiantesArray.length; i++) {
-      const estudiante = estudiantesArray[i];
-      if (estudiante.nestudiante === datos.nestudiante) {
-        const oldApoderados = estudiantesArray[i].apoderados;
-        for (let j = 0; j < oldApoderados.length; j++) {
-          const oldApoderado = oldApoderados[j];
-          if (oldApoderado.napoderado === napoderado) {
-            estudiantesArray[i].apoderados.splice(j, 1);
-            localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
-            setApoderados(estudiantesArray[i].apoderados);
-            return null;
-          }
-        }
+  const deleteApoderados = async (_id: string) => {
+    if (estudiante) {
+      try {
+        const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Apoderado/${_id}`);
+        console.log(res);
+      } catch (e) {
+        console.log(e);
       }
+      const apoderados = estudiante.apoderados.filter((apoderado) => apoderado._id !== _id);
+      setEstudiante({
+        ...estudiante,
+        apoderados,
+      });
     }
-    return null;
   };
 
-  const handleGuardarClick = () => {
-    const estudiantes = localStorage.getItem('estudiantes');
-    if (estudiantes === null) return null;
-    const estudiantesArray = JSON.parse(estudiantes);
-    for (let i = 0; i < estudiantesArray.length; i++) {
-      const estudiante = estudiantesArray[i];
-      if (estudiante.nestudiante === datos.nestudiante) {
-        estudiantesArray[i].nombres = nombres;
-        estudiantesArray[i].apellidos = apellidos;
-        localStorage.setItem('estudiantes', JSON.stringify(estudiantesArray));
-        changeEditing();
-        return null;
+  const handleGuardarClick = async () => {
+    try {
+      const res = await axios.post(
+        `${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudianteId}`,
+        { nombres: estudiante?.user.nombres, apellidos: estudiante?.user.apellidos },
+      );
+      console.log(res);
+      setEditingEstudiante(false);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
       }
     }
-    return null;
   };
 
   const handleNombresChange = (event: any) => {
-    setNombres(event.target.value);
+    if (estudiante) {
+      setEstudiante({
+        ...estudiante,
+        user: { ...estudiante.user, nombres: event.target.value },
+      });
+    }
   };
 
   const handleApellidosChange = (event: any) => {
-    setApellidos(event.target.value);
+    if (estudiante) {
+      setEstudiante({
+        ...estudiante,
+        user: { ...estudiante.user, apellidos: event.target.value },
+      });
+    }
   };
+
+  if (!estudiante) return <div />;
+
   return (
     <Stack padding={4}>
       <Typography variant="h4">
@@ -144,7 +179,7 @@ const EditarEstudiante = () => {
             <Typography>
               Datos del estudiante:
             </Typography>
-            <Button startIcon={<EditIcon />} onClick={changeEditing}>
+            <Button startIcon={<EditIcon />} onClick={() => { setEditingEstudiante(true); }}>
               Editar
             </Button>
           </Stack>
@@ -158,15 +193,15 @@ const EditarEstudiante = () => {
               <Typography variant="subtitle2" px={4}>
                 Nombres
               </Typography>
-              <TextField size="small" disabled={!editing} value={nombres} onChange={handleNombresChange} sx={{ borderRadius: 10 }} />
+              <TextField size="small" disabled={!editingEstudiante} value={estudiante?.user.nombres} onChange={handleNombresChange} sx={{ borderRadius: 10 }} />
             </Stack>
             <Stack direction="row" alignItems="center">
               <Typography variant="subtitle2" px={4}>
                 Apellidos
               </Typography>
-              <TextField size="small" disabled={!editing} value={apellidos} onChange={handleApellidosChange} sx={{ borderRadius: 10 }} />
+              <TextField size="small" disabled={!editingEstudiante} value={estudiante?.user.apellidos} onChange={handleApellidosChange} sx={{ borderRadius: 10 }} />
             </Stack>
-            {editing && (
+            {editingEstudiante && (
               <Stack direction="row" justifyContent="end">
                 <Button onClick={handleCancelarClick} variant="contained" color="inherit" sx={{ marginRight: 2 }}> Cancelar </Button>
                 <Button onClick={handleGuardarClick} variant="contained" color="quaternary">
@@ -184,13 +219,13 @@ const EditarEstudiante = () => {
           Apoderado/a
         </Button>
       </Stack>
-      {apoderados.length !== 0 && (
-        apoderados.map((apoderado: IApoderado) => (
+      {estudiante?.apoderados.length !== 0 && (
+        estudiante?.apoderados.map((apoderado: IApoderado) => (
           <EditarApoderado
-            key={apoderado.napoderado}
-            apoderado={apoderado}
-            handleUpdateApoderado={handleUpdateApoderado}
-            handleEliminarApoderado={handleEliminarApoderado}
+            key={apoderado._id}
+            initialApoderado={apoderado}
+            updateApoderados={updateApoderados}
+            deleteApoderados={deleteApoderados}
           />
         ))
       )}

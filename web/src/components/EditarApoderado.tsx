@@ -1,5 +1,6 @@
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable no-unused-vars */
 /* eslint-disable prefer-destructuring */
-/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-plusplus */
 import {
   Button, TextField, Card, CardContent,
@@ -10,21 +11,21 @@ import {
 import React, { useState } from 'react';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 import { IApoderado } from '../types/apoderados';
 
 interface EdtiarApoderadoParams {
-  apoderado: IApoderado,
-  handleUpdateApoderado: Function,
-  handleEliminarApoderado: Function
+  initialApoderado: IApoderado,
+  updateApoderados: Function,
+  deleteApoderados: Function
 }
 
-const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApoderado }:
+const EditarApoderado = ({ initialApoderado, updateApoderados, deleteApoderados }:
   EdtiarApoderadoParams) => {
-  const [initialSave, setInitialSave] = useState(apoderado.isNew);
-  const [editing, setEditing] = useState(apoderado.isNew);
-  const [nombres, setNombres] = useState(apoderado.nombres);
-  const [apellidos, setApellidos] = useState(apoderado.apellidos);
-  const [correo, setCorreo] = useState(apoderado.correo);
+  // eslint-disable-next-line react/destructuring-assignment
+  const [defaultApoderado, setDefaultApoderado] = useState(initialApoderado);
+  const [apoderado, setApoderado] = useState(initialApoderado);
+  const [editing, setEditing] = useState(apoderado.new);
   const [openDialog, setOpenDialog] = useState(false);
 
   const changeApoderadoEditing = () => {
@@ -32,39 +33,47 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
   };
 
   const handleCancelarClick = () => {
-    if (initialSave) {
-      handleEliminarApoderado(apoderado.napoderado);
-    } else {
-      setNombres(apoderado.nombres);
-      setApellidos(apoderado.apellidos);
-      setCorreo(apoderado.correo);
-      changeApoderadoEditing();
-    }
+    setApoderado(defaultApoderado);
+    changeApoderadoEditing();
   };
 
   const handleUpdate = () => {
-    setInitialSave(false);
     changeApoderadoEditing();
-    const newApoderado = {
-      napoderado: apoderado.napoderado,
-      nombres,
-      apellidos,
-      correo,
-      isNew: false,
-    };
-    handleUpdateApoderado(newApoderado);
+    if (apoderado) {
+      setApoderado({
+        ...apoderado,
+        new: false,
+      });
+    }
+    setDefaultApoderado(apoderado);
+    updateApoderados(apoderado);
   };
 
   const handleNombresChange = (event: any) => {
-    setNombres(event.target.value);
+    if (apoderado) {
+      setApoderado({
+        ...apoderado,
+        user: { ...apoderado.user, nombres: event.target.value },
+      });
+    }
   };
 
   const handleApellidosChange = (event: any) => {
-    setApellidos(event.target.value);
+    if (apoderado) {
+      setApoderado({
+        ...apoderado,
+        user: { ...apoderado.user, apellidos: event.target.value },
+      });
+    }
   };
 
   const handleCorreoChange = (event: any) => {
-    setCorreo(event.target.value);
+    if (apoderado) {
+      setApoderado({
+        ...apoderado,
+        user: { ...apoderado.user, email: event.target.value },
+      });
+    }
   };
 
   const handleClickActive = () => {
@@ -76,9 +85,11 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
   };
 
   const handleEliminar = () => {
-    handleEliminarApoderado(apoderado.napoderado);
+    deleteApoderados(apoderado._id);
     handleCloseDialog();
   };
+
+  const sendCredentials = () => {};
 
   return (
     <Stack>
@@ -88,9 +99,12 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
             <Typography>
               Datos del apoderado:
             </Typography>
-            <Button startIcon={<EditIcon />} onClick={changeApoderadoEditing}>
-              Editar
-            </Button>
+            {!editing
+            && (
+              <Button startIcon={<EditIcon />} onClick={changeApoderadoEditing}>
+                Editar
+              </Button>
+            )}
           </Stack>
           <Divider />
           <Stack
@@ -104,19 +118,19 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
                 <Typography variant="subtitle2" px={4}>
                   Nombres
                 </Typography>
-                <TextField size="small" disabled={!editing} value={nombres} onChange={handleNombresChange} sx={{ borderRadius: 10 }} />
+                <TextField size="small" disabled={!editing} value={apoderado.user.nombres} onChange={handleNombresChange} sx={{ borderRadius: 10 }} />
               </Stack>
               <Stack direction="row" alignItems="center" justifyContent="space-between">
                 <Typography variant="subtitle2" px={4}>
                   Apellidos
                 </Typography>
-                <TextField size="small" disabled={!editing} value={apellidos} onChange={handleApellidosChange} sx={{ borderRadius: 10 }} />
+                <TextField size="small" disabled={!editing} value={apoderado.user.apellidos} onChange={handleApellidosChange} sx={{ borderRadius: 10 }} />
               </Stack>
               <Stack direction="row" alignItems="center" justifyContent="space-between">
                 <Typography variant="subtitle2" px={4}>
                   Correo electrónico
                 </Typography>
-                <TextField size="small" disabled={!editing} value={correo} onChange={handleCorreoChange} sx={{ borderRadius: 10 }} />
+                <TextField size="small" disabled={!editing} value={apoderado.user.email} onChange={handleCorreoChange} sx={{ borderRadius: 10 }} />
               </Stack>
             </Stack>
             {editing && (
@@ -134,7 +148,7 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
                     </DialogTitle>
                     <DialogContent>
                       <DialogContentText id="alert-dialog-description">
-                        ¿Desea eliminar a {nombres} {apellidos}?
+                        ¿Desea eliminar a {apoderado.user.nombres} {apoderado.user.apellidos}?
                       </DialogContentText>
                     </DialogContent>
                     <DialogActions>
@@ -154,13 +168,23 @@ const EditarApoderado = ({ apoderado, handleUpdateApoderado, handleEliminarApode
                   <Button onClick={handleCancelarClick} variant="contained" color="inherit" sx={{ marginRight: 2 }}> Cancelar </Button>
                   <Button onClick={handleUpdate} variant="contained" color="quaternary">
                     <Typography variant="button" color="white">
-                      Guardar
+                      {apoderado.new ? 'Crear' : 'Guardar'}
                     </Typography>
                   </Button>
                 </Stack>
               </Stack>
             )}
           </Stack>
+          {!editing && (
+            <Stack direction="row" px={3}>
+              <Button
+                startIcon={<ForwardToInboxIcon />}
+                onClick={sendCredentials}
+              >
+                Enviar credenciales
+              </Button>
+            </Stack>
+          )}
         </CardContent>
       </Card>
     </Stack>

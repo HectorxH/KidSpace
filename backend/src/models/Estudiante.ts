@@ -6,7 +6,7 @@ export interface IEstudiante {
   user: any
   curso?: any,
   profesor?: IProfesor
-  apoderados?: Types.Array<IApoderado>
+  apoderados: Types.Array<IApoderado>
 }
 
 export const estudianteSchema = new Schema<IEstudiante>({
@@ -15,7 +15,7 @@ export const estudianteSchema = new Schema<IEstudiante>({
   },
   curso: { type: Types.ObjectId, ref: 'Curso' },
   profesor: { type: Types.ObjectId, ref: 'Profesor' },
-  apoderados: [{ type: Types.ObjectId, ref: 'Apoderado' }],
+  apoderados: [{ type: Types.ObjectId, ref: 'Apoderado', default: [] }],
 });
 
 export default model<IEstudiante>('Estudiante', estudianteSchema);

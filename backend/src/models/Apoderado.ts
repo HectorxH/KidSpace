@@ -3,14 +3,16 @@ import { IEstudiante } from './Estudiante';
 
 export interface IApoderado {
   user: any,
-  estudiantes?: Types.Array<IEstudiante>
+  enviado: boolean,
+  estudiantes: Types.Array<IEstudiante>
 }
 
 export const apoderadoSchema = new Schema<IApoderado>({
   user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
-  estudiantes: [{ type: Types.ObjectId, ref: 'Estudiante' }],
+  enviado: { type: Boolean, default: false },
+  estudiantes: [{ type: Types.ObjectId, ref: 'Estudiante', default: [] }],
 });
 
 export default model<IApoderado>('Apoderado', apoderadoSchema);

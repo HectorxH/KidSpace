@@ -10,12 +10,7 @@ router.get('/favoritas', async (req, res) => {
   try {
     const user = req.user?._id;
     const profesor = await Profesor.findOne({ user });
-
-    if (profesor === null) {
-      res.sendStatus(404);
-    } else {
-      res.json({ favoritas: profesor.favoritas });
-    }
+    res.json({ favoritas: profesor?.favoritas });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
