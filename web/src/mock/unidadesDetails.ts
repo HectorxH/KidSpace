@@ -19,7 +19,7 @@ export default [
     nunidad: 2,
     unidad: 'Unidad 2',
     titulo: 'Actividades de Unidad 2',
-    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis dictum tortor. Ut luctus auctor ex, in lobortis metus ullamcorper nec. Donec ut tristique velit. Aliquam blandit, metus vitae posuere.',
+    descripcion: 'Creación de diseños innovadores de objetos o sistemas tecnológicos para aprovechar oportunidades o entregar soluciones a diversos problemas.',
     path: '/actividades/unidad/3',
     actividades: [
       {
@@ -35,14 +35,14 @@ export default [
     nunidad: 3,
     unidad: 'Unidad 3',
     titulo: 'Actividades de Unidad 3',
-    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis dictum tortor. Ut luctus auctor ex, in lobortis metus ullamcorper nec. Donec ut tristique velit. Aliquam blandit, metus vitae posuere.',
+    descripcion: 'Aplicación de diversas técnicas, materiales y herramientas para la elaboración de un producto, objeto o sistema tecnológico de calidad.',
     path: '/actividades/unidad/3',
     actividades: [
       {
         nactividad: 3,
         actividad: 'Actividad',
         titulo: 'Diseños',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis posuere felis. Morbi euismod elit ut massa maximus pharetra. Nam maximus venenatis dolor id iaculis. Suspendisse eget purus vitae orci cursus tincidunt nec sed nunc. Mauris eget gravida quam. Quisque a lacus in orci tempor feugiat id eu mi. Integer turpis purus, commodo non mi at, fermentum blandit orci. Suspendisse.',
+        descripcion: 'En esta actividad vas a conocer a Luca que trabaja en el área de diseño de productos. Junto con Luca vas a aprender sobre las distintas características que poseen los objetos, como las texturas o los colores. Además, conocerás un concepto clave - el diseño siempre sigue la función - y aprenderás qué es lo que esto significa a la hora de crear un producto que será utilizado por otras personas.',
         path: '/actividades/unidad/3/actividad/3',
       },
     ],
