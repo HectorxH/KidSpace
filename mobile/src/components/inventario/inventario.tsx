@@ -1,5 +1,5 @@
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -18,6 +18,8 @@ import {RSize} from '../../utils/responsive';
 interface InventarioProps {
   items: IModels[];
   models: [number[], ReactStateSetter<number[]>];
+  placedItems: [number[], ReactStateSetter<number[]>];
+  nPlacedItems: [number, ReactStateSetter<number>];
   visible: boolean;
   showInventory: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
@@ -26,17 +28,20 @@ interface InventarioProps {
 
 const Inventario = (props: InventarioProps) => {
   const items = props.items;
-  const [models, setModels] = props.models;
-  const [placedItems, setPlacedItems] = useState(
-    items.map((_item, index) => (models.includes(index) ? 1 : 0)),
-  );
-  const [nPlacedItems, setNPlacedItems] = useState(models.length);
+  const [placedItems, setPlacedItems] = props.placedItems;
+  const [nPlacedItems, setNPlacedItems] = props.nPlacedItems;
+  // const [placedItems, setPlacedItems] = useState(
+  //   items.map((_item, index) => (props.models[0].includes(index) ? 1 : 0)),
+  // );
+  // const [nPlacedItems, setNPlacedItems] = useState(props.models[0].length);
   const visible = props.visible;
   const showInventory = props.showInventory;
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
-  console.log(models);
+  console.log('inventario: ', props.models[0]);
+  console.log('inventario - placedItems: ', placedItems);
+  console.log('inventario - NplacedItems: ', nPlacedItems);
 
   function modelHandler(index: number) {
     updatePosition();
@@ -44,15 +49,15 @@ const Inventario = (props: InventarioProps) => {
     aux[index] = 1;
     setPlacedItems(aux);
     setNPlacedItems(nPlacedItems + 1);
-    let aux2 = [...models];
+    let aux2 = [...props.models[0]];
     aux2.push(index);
-    setModels(aux2);
+    props.models[1](aux2);
   }
 
   function handlePickUp() {
     setPlacedItems(items.map(() => 0));
     setNPlacedItems(0);
-    setModels([]);
+    props.models[1]([]);
     setPositions([]);
   }
 

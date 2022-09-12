@@ -138,6 +138,23 @@ const Models: {
       resources: [],
     },
   },
+  nutricion2: {
+    soda: {
+      model: require('./nutricion2/soda/soda.glb'),
+      type: 'GLB',
+      resources: [],
+    },
+    galletas: {
+      model: require('./nutricion2/galletas/galletas.glb'),
+      type: 'GLB',
+      resources: [],
+    },
+    cereal: {
+      model: require('./nutricion2/cereal/cereal.glb'),
+      type: 'GLB',
+      resources: [],
+    },
+  },
   diseño1: {
     barras: {
       model: require('./diagrama/barras/barras.glb'),
@@ -161,50 +178,109 @@ const Models: {
     },
   },
   diseño2: {
-    barras: {
-      model: require('./diagrama/barras/barras.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_girasol: {
-      model: require('./diagrama/caja_girasol/cajas_girasoles.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_iris: {
-      model: require('./diagrama/caja_iris/cajas_irises.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_margarita: {
-      model: require('./diagrama/caja_margarita/cajas_margaritas.glb'),
-      type: 'GLB',
-      resources: [],
+    caja_torta: {
+      model: require('./diseño2/caja_torta/caja-torta.obj'),
+      resources: [require('./diseño2/caja_torta/caja-torta.mtl')],
+      type: 'OBJ',
+      materialsOrder: ['Material', 'Logo', 'Etiqueta'],
+      materialChoices: [
+        ['mat1', 'mat2', 'mat3'],
+        ['logo1', 'logo2'],
+        ['et1', 'et2'],
+      ],
+      materials: {
+        default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/default.png'),
+        },
+        mat1_default_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1++.png'),
+        },
+        mat2_default_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2++.png'),
+        },
+        mat3_default_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3++.png'),
+        },
+        mat1_logo1_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo1+.png'),
+        },
+        mat1_logo2_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo2+.png'),
+        },
+        mat2_logo1_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo1+.png'),
+        },
+        mat2_logo2_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo2+.png'),
+        },
+        mat3_logo1_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo1+.png'),
+        },
+        mat3_logo2_default: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo2+.png'),
+        },
+        mat1_logo1_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo1+et1.png'),
+        },
+        mat1_logo2_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo2+et1.png'),
+        },
+        mat2_logo1_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo1+et1.png'),
+        },
+        mat2_logo2_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo2+et1.png'),
+        },
+        mat3_logo1_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo1+et1.png'),
+        },
+        mat3_logo2_et1: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo2+et1.png'),
+        },
+        mat1_logo1_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo1+et2.png'),
+        },
+        mat1_logo2_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1+logo2+et2.png'),
+        },
+        mat2_logo1_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo1+et2.png'),
+        },
+        mat2_logo2_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat2+logo2+et2.png'),
+        },
+        mat3_logo1_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo1+et2.png'),
+        },
+        mat3_logo2_et2: {
+          lightingModel: 'PBR',
+          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat3+logo2+et2.png'),
+        },
+      },
     },
   },
   nutricion1: {
-    barras: {
-      model: require('./diagrama/barras/barras.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_girasol: {
-      model: require('./diagrama/caja_girasol/cajas_girasoles.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_iris: {
-      model: require('./diagrama/caja_iris/cajas_irises.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-    caja_margarita: {
-      model: require('./diagrama/caja_margarita/cajas_margaritas.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-  },
-  nutricion2: {
     barras: {
       model: require('./diagrama/barras/barras.glb'),
       type: 'GLB',

@@ -84,6 +84,8 @@ const images: {
     caja1: require('./extras/caja1.png'),
     caja2: require('./extras/caja2.png'),
     caja3: require('./extras/caja3.png'),
+    ejemplo_contraste1: require('./extras/ejemplo_contraste1.png'),
+    ejemplo_contraste2: require('./extras/ejemplo_contraste2.png'),
 
     tempera_roja: require('./extras/tempera_roja.png'),
     tempera_negra: require('./extras/tempera_negra.png'),
@@ -185,6 +187,18 @@ const images: {
     },
     mug: {
       square: require('./icons/mug/mug.png'),
+    },
+    galletas: {
+      square: require('./icons/galletas/galletas.png'),
+    },
+    cereal: {
+      square: require('./icons/cereal/cereal.png'),
+    },
+    soda: {
+      square: require('./icons/soda/soda.png'),
+    },
+    caja_torta: {
+      square: require('./icons/caja_torta/caja_torta.png'),
     },
   },
   // old, borrar despues de mover

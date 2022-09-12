@@ -627,7 +627,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja2",
+        "name": "ejemplo_contraste1",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -656,7 +656,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja2",
+        "name": "ejemplo_contraste1",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -685,7 +685,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "CarlosQuestion",
+        "name": "ejemplo_contraste2",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -695,8 +695,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [7, 2],
-          "end": [18, 14]
+          "start": [8, 2],
+          "end": [19, 14]
         }
       }
     ],
@@ -704,8 +704,8 @@
       {
         "text": "Analiza estas combinaciones de fondos y textos. ¿Cuál es la *más legible*?",
         "position": {
-          "start": [8, 2.5],
-          "end": [17, 10]
+          "start": [9, 2.5],
+          "end": [18, 10]
         }
       }
     ],
@@ -716,22 +716,22 @@
           {
             "text": "Azul con blanco",
             "position": {
-              "start": [9.5, 10.5],
-              "end": [15.5, 12.5]
+              "start": [10.5, 10.5],
+              "end": [16.5, 12.5]
             }
           },
           {
             "text": "Verde con rojo",
             "position": {
-              "start": [9.5, 13.5],
-              "end": [15.5, 15.5]
+              "start": [10.5, 13.5],
+              "end": [16.5, 15.5]
             }
           },
           {
             "text": "Naranjo con amarillo",
             "position": {
-              "start": [9.5, 16.5],
-              "end": [15.5, 18.5]
+              "start": [10.5, 16.5],
+              "end": [16.5, 18.5]
             }
           }
         ]
@@ -938,6 +938,538 @@
           "start": [3, 5],
           "end": [11, 15]
         }
+      }
+    ]
+  },
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Layla te invita a ayudarle a diseñar una caja para guardar y vender tortas. Para esto, necesitas elegir *un material de cierto color*",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para esto, necesitas elegir de *qué color será el material de la caja*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Además, debes elegir *un logo* que refleje el mensaje de producto, y *una etiqueta* con su descripción.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para esto, en el inventario encontrarás un objeto base. Una vez que lo coloques en la pantalla,",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "podrás cambiar los elementos del objeto. Primero tienes que elegir *el material*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Después, *el logo*. Y,finalmente, *la etiqueta* de la caja para tortas.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una vez listo el diseño, Layla diseñará *un poster para promocionar el producto*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para ver el poster de Layla, tienes que tocar el botón en la *esquina superior izquierda*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+
+    "background": "",
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 4]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 4]
+        },
+        "target": 14,
+        "require": [13],
+        "visible": false
       }
     ]
   }

@@ -2,7 +2,7 @@ import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {CommonActions} from '@react-navigation/native';
 import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
-import {Actividad} from '../../types/activity';
+import {Actividad, Vec3} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
 import {ReactStateSetter} from '../../types/others';
 import JumpButton from './JumpButton';
@@ -17,6 +17,9 @@ interface ActNavigationProps {
   pageNumber: [number, ReactStateSetter<number>];
   jumpVisibility: boolean;
   models: [number[], ReactStateSetter<number[]>];
+  placedItems: [number[], ReactStateSetter<number[]>];
+  nPlacedItems: [number, ReactStateSetter<number>];
+  positions: [Vec3[], ReactStateSetter<Vec3[]>];
   toggleValues: [number[], ReactStateSetter<number[]>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 }
@@ -49,9 +52,21 @@ const ActNavigation = (props: ActNavigationProps) => {
 
   const nextPageNumber = () => {
     if (pageNumber !== storyLength - 1) {
-      if (typeof actividades[pageNumber + 1].AR !== 'undefined') {
-        props.models[1]([]);
+      if (
+        typeof actividades[pageNumber + 1].AR !== 'undefined' &&
+        actividades[pageNumber + 1].AR?.start === true
+      ) {
         props.toggleValues[1]([0]);
+        props.placedItems[1](
+          actividades[pageNumber + 1].AR.models.map(() => 0),
+        );
+        props.nPlacedItems[1](0);
+        props.models[1]([]);
+        props.positions[1]([]);
+        // setPlacedItems(items.map(() => 0));
+        // setNPlacedItems(0);
+        // props.models[1]([]);
+        // setPositions([]);
       }
       setPageNumber(pageNumber + 1);
     } else {

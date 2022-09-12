@@ -78,6 +78,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
   }>({materialOrder: [], materialChoices: [[]]});
 
   const [activeModelIndex, setActiveModelIndex] = useState<number>(0);
+
+  // Vars inventario
+  const [placedItems, setPlacedItems] = useState<number[]>(
+    models3d.map((_item, index) => (models.includes(index) ? 1 : 0)),
+  );
+  const [nPlacedItems, setNPlacedItems] = useState<number>(models.length);
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -131,6 +138,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 items={models3d}
                 models={[models, setModels]}
                 positions={[positions, setPositions]}
+                placedItems={[placedItems, setPlacedItems]}
+                nPlacedItems={[nPlacedItems, setNPlacedItems]}
                 visible={
                   !(toggleDefaultValue === true || toggleValues[0] === 1) ||
                   toggleDefaultValue === true
@@ -180,6 +189,9 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           userAnswersDropdown={userAnswersDropdown[0]}
           userAnswersQuiz={userAnswersQuiz[0]}
           models={[models, setModels]}
+          placedItems={[placedItems, setPlacedItems]}
+          nPlacedItems={[nPlacedItems, setNPlacedItems]}
+          positions={[positions, setPositions]}
           pageNumber={[pageNumber, setPageNumber]}
           navigation={props.navigation}
           jumpVisibility={toggleDefaultValue === true || toggleValues[0] === 1}

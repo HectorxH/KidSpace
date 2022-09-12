@@ -171,9 +171,8 @@ export interface IJumpCard {
   visible: boolean;
 }
 
-export interface IHeaderSettings {
+export interface ITextFieldQuestion {
   backgroundColor?: string;
-  elevation?: number;
 }
 
 export interface IActivityPage {
@@ -190,6 +189,7 @@ export interface IActivityPage {
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
   draggable?: boolean;
+  textFieldQuestion?: ITextFieldQuestion[];
 }
 
 export type Actividad = IActivityPage[];

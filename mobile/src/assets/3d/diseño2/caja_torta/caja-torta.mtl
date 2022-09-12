@@ -1,0 +1,13 @@
+# Blender MTL File: 'untitled.blend'
+# Material Count: 1
+
+newmtl box_mat_02
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\argentumx\\Downloads\\Las tortas más frescas (1)\\mat3+logo2+et2.png

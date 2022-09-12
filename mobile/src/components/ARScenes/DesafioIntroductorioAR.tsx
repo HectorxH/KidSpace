@@ -36,18 +36,24 @@ interface DesafioIntroductorioSceneARProps {
 }
 
 interface ITransform {
-  model: ImageSourcePropType;
-  modelName: string;
-  modelIndex: number;
-  resources: ImageSourcePropType[];
-  materials?: ViroMaterialDict;
-  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
-  interactable: string[];
-  ARMaterials: TSelectedMaterial;
   scale: Vec3;
   rotation: Vec3;
   position?: Vec3;
 }
+
+// interface ITransform {
+//   model: ImageSourcePropType;
+//   modelName: string;
+//   modelIndex: number;
+//   resources: ImageSourcePropType[];
+//   materials?: ViroMaterialDict;
+//   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+//   interactable: string[];
+//   ARMaterials: TSelectedMaterial;
+//   scale: Vec3;
+//   rotation: Vec3;
+//   position?: Vec3;
+// }
 
 const DesafioIntroductorioSceneAR = (
   props: DesafioIntroductorioSceneARProps,
@@ -66,24 +72,29 @@ const DesafioIntroductorioSceneAR = (
 
   const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
-    items.map((item, index) => ({
-      model: Models[actividad][item.model].model,
-      modelName: item.model,
-      modelIndex: index,
-      resources: Models[actividad][item.model].resources,
-      materials: Models[actividad][item.model].materials,
-      type: Models[actividad][item.model].type,
-      interactable:
-        typeof item.interactable !== 'undefined' ? item.interactable : [],
-      ARMaterials:
-        typeof item.ARMaterials !== 'undefined'
-          ? item.ARMaterials
-          : {materialOrder: [], materialChoices: []},
+    items.map(item => ({
       scale: item.scale,
       rotation: item.rotation,
       position: [0, 0, 0],
     })),
   );
+  const modelProps = items.map((item, index) => ({
+    model: Models[actividad][item.model].model,
+    modelName: item.model,
+    modelIndex: index,
+    resources: Models[actividad][item.model].resources,
+    materials: Models[actividad][item.model].materials,
+    type: Models[actividad][item.model].type,
+    interactable:
+      typeof item.interactable !== 'undefined' ? item.interactable : [],
+    ARMaterials:
+      typeof item.ARMaterials !== 'undefined'
+        ? item.ARMaterials
+        : {materialOrder: [], materialChoices: []},
+    scale: item.scale,
+    rotation: item.rotation,
+    position: [0, 0, 0],
+  }));
 
   function updateRotation(
     index: number,
@@ -133,16 +144,16 @@ const DesafioIntroductorioSceneAR = (
 
   function onModelClick(itemIndex: number) {
     if (
-      transforms[itemIndex].interactable.length === 0 ||
+      modelProps[itemIndex].interactable.length === 0 ||
       materialSelectorToggle === 1
     ) {
       return;
     }
-    for (let i = 0; i < transforms[itemIndex].interactable.length; i++) {
-      if (transforms[itemIndex].interactable[i] === 'materials') {
-        makeMaterials(transforms[itemIndex].materials);
-        setSelectedModelMaterials(transforms[itemIndex].ARMaterials);
-        setActiveModelIndex(transforms[itemIndex].modelIndex);
+    for (let i = 0; i < modelProps[itemIndex].interactable.length; i++) {
+      if (modelProps[itemIndex].interactable[i] === 'materials') {
+        makeMaterials(modelProps[itemIndex].materials);
+        setSelectedModelMaterials(modelProps[itemIndex].ARMaterials);
+        setActiveModelIndex(modelProps[itemIndex].modelIndex);
         setMaterialSelectorToggle(1);
       }
     }
@@ -160,14 +171,14 @@ const DesafioIntroductorioSceneAR = (
         return (
           <ViroNode key={actividad + '_3dobj_' + index.toString()}>
             <Viro3DObject
-              source={transforms[item].model as ImageSourcePropType}
-              resources={transforms[item].resources}
+              source={modelProps[item].model as ImageSourcePropType}
+              resources={modelProps[item].resources}
               materials={modelsMaterials[index]}
-              // resources={transforms[item].resources as ImageSourcePropType[]}
+              // resources={modelProps[item].resources as ImageSourcePropType[]}
               position={positions[index]}
-              scale={transforms[item].scale}
-              rotation={transforms[item].rotation}
-              type={transforms[item].type}
+              scale={modelProps[item].scale}
+              rotation={modelProps[item].rotation}
+              type={modelProps[item].type}
               onDrag={() => {}}
               dragType={'FixedToWorld'}
               onPinch={(pinchState, scaleFactor) =>
