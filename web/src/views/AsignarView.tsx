@@ -2,7 +2,7 @@ import {
   Box, Button, MenuItem,
   TextField, Typography, Theme, Stack,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import axios from 'axios';
@@ -12,17 +12,7 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import es from 'date-fns/locale/es';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
-
-const cursosAux = [
-  {
-    id: 1,
-    nombre: '6-A',
-  },
-  {
-    id: 2,
-    nombre: '6-B',
-  },
-];
+import { ICursos } from '../types/cursos';
 
 const AsignarView = () => {
   const navigate = useNavigate();
@@ -35,7 +25,8 @@ const AsignarView = () => {
   const { logout } = useAuth();
 
   const currentDate = new Date().toISOString().slice(0, 10);
-  const [curso, setCurso] = useState('A');
+  const [curso, setCurso] = useState('');
+  const [cursos, setCursos] = useState<ICursos>([]);
   const [fecha, setFecha] = useState(currentDate);
   const [fechaShow, setFechaShow] = useState(currentDate);
   const [success, setSuccess] = useState(false);
@@ -64,6 +55,23 @@ const AsignarView = () => {
     setTimeout(handleBack, 1200);
   };
 
+  const updateCursos = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso`);
+      setCursos(res.data.cursos);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+        logout();
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (cursos.length === 0) updateCursos();
+  }, []);
+
   return (
     <Box sx={{
       px: 4, py: 2, mt: 2, width: { sx: '100%', md: '70%' },
@@ -87,7 +95,7 @@ const AsignarView = () => {
               onChange={(e) => setCurso(e.target.value)}
               required
             >
-              {cursosAux.map((nombre) => (
+              {cursos.map((nombre) => (
                 <MenuItem value={nombre.nombre}>{nombre.nombre}</MenuItem>
               ))}
             </TextField>

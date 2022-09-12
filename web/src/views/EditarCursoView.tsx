@@ -122,14 +122,25 @@ const EditarCursoView = () => {
                 </Typography>
               </Button>
               <Button
+                sx={{
+                  backgroundColor: '#EA6A6A',
+                  color: '#FFFFFF',
+                  '&:hover': {
+                    backgroundColor: '#f9b3b3',
+                    color: '#FFFFFF',
+                  },
+                }}
                 variant="contained"
                 type="submit"
                 onClick={handleEliminar}
-                sx={{
-                  backgroundColor: '#EA6A6A', color: '#FFFFFF',
-                }}
               >
-                Eliminar
+                <Typography
+                  sx={{
+                    color: (theme: Theme) => theme.palette.extra.main,
+                  }}
+                >
+                  Eliminar
+                </Typography>
               </Button>
             </Stack>
           </Card>
