@@ -3,6 +3,7 @@ import {View, StyleSheet, Image} from 'react-native';
 import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
 import {IImages} from '../../types/activity';
+import {getImageStyle} from './utils';
 
 interface ItemsProps {
   images: IImages[] | never[];
@@ -17,6 +18,7 @@ const Items = ({images, resize}: ItemsProps) => {
   return (
     <View style={styles.container}>
       {images.map((item: IImages) => {
+        const imageStyles = getImageStyle(styles.image, item.settings);
         return (
           <View
             style={styles.overlay}
@@ -31,7 +33,8 @@ const Items = ({images, resize}: ItemsProps) => {
               position={item.position}
               ObjectView={
                 <Image
-                  style={styles.image}
+                  // style={styles.image}
+                  style={imageStyles.settings}
                   // resizeMode="cover"
                   resizeMode={
                     typeof resize !== 'undefined' ? resize : 'contain'
@@ -63,6 +66,7 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     alignSelf: 'center',
+    opacity: 1,
   },
 });
 

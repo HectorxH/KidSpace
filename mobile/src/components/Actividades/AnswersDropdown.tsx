@@ -89,13 +89,13 @@ const Answers = (props: AnswersProps) => {
                   !isFocus
                     ? getAnswerIndex() !== -1
                       ? props.question.answers[getAnswerIndex()]
-                      : 'Valor'
+                      : 'Selecciona'
                     : '...'
                 }
                 value={
                   getAnswerIndex() !== -1
                     ? props.question.answers[getAnswerIndex()]
-                    : 'Valor'
+                    : 'Selecciona'
                 }
                 onFocus={() => setIsFocus(true)}
                 onBlur={() => setIsFocus(false)}

@@ -741,5 +741,599 @@
         }
       }
     ]
+  },
+
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía, como *nutricionista*, además de mejorar la alimentación de sus pacientes",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHealth",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "tiene el gran trabajo de medir y evaluar su estado de salud.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHealth",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "bubbleWeight",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, el *peso* es un indicador del estado de salud de una persona.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pero con tan solo peso resulta difícil hacer una evaluación precisa.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePerson",
+        "position": {
+          "start": [5.5, 0],
+          "end": [9.5, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc2",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para una persona de 1,9m y una de 1,6m *no será lo mismo* tener un peso de 90kg.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc2",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es por esto que los y las nutricionistas suelen medir *la estatura* de sus pacientes.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 3],
+          "end": [17, 17]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Existe una métrica, que relaciona la estatura con el peso. Esta se conoce como *IMC - Índice de Masa Corporal*.",
+        "position": {
+          "start": [3.5, 3.5],
+          "end": [16.5, 16.5]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Generalmente se utiliza para analizar la población adulta.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El IMC es una métrica simple y se resume con un diagrama.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePerson",
+        "position": {
+          "start": [5.5, 0],
+          "end": [9.5, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los números de la escala corresponden al valor de IMC calculado.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, si el IMC de una persona *es menor a 18*, tiene peso muy bajo",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si el IMC *es mayor a 25*, estamos ante el peso elevado o el sobrepeso.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La forma de calcular el IMC no varía en función del sexo ni de la edad de una persona.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_weight",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La fórmula del IMC es *el peso en kg dividido por el cuadrado de la altura* en metros.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía tiene unos pacientes cuyo IMC todavía tiene que calcular. ¿Puedes ayudarle?",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 5],
+          "end": [9, 15]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ficha Médica",
+        "position": {
+          "start": [1.5, 5.5],
+          "end": [8.5, 7.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold"
+        }
+      },
+      {
+        "text": "Nombre:",
+        "position": {
+          "start": [2, 7.5],
+          "end": [4.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Altura:",
+        "position": {
+          "start": [2, 10],
+          "end": [4.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Peso:",
+        "position": {
+          "start": [2, 12.5],
+          "end": [4.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Patricia",
+        "position": {
+          "start": [5.5, 7.5],
+          "end": [8.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "1,74 [m]",
+        "position": {
+          "start": [5.5, 10],
+          "end": [8.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "75 [kg]",
+        "position": {
+          "start": [5.5, 12.5],
+          "end": [8.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Calculadora de IMC",
+        "position": {
+          "start": [10.5, 3],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 0.09
+        }
+      }
+    ]
   }
 ]

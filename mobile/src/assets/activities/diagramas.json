@@ -272,7 +272,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -320,7 +319,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -368,7 +366,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -416,7 +413,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -834,19 +830,16 @@
       "models": [
         {
           "model": "caja_margarita",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_girasol",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_iris",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -894,19 +887,16 @@
       "models": [
         {
           "model": "caja_margarita",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_girasol",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_iris",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -954,19 +944,16 @@
       "models": [
         {
           "model": "caja_margarita",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_girasol",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_iris",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1014,19 +1001,16 @@
       "models": [
         {
           "model": "caja_margarita",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_girasol",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_iris",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1074,19 +1058,16 @@
       "models": [
         {
           "model": "caja_margarita",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_girasol",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         },
         {
           "model": "caja_iris",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }

@@ -3,8 +3,10 @@ import {View, StyleSheet, ImageBackground} from 'react-native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
 
-import StoryComponent from '../Actividades/StoryComponent';
+import StoryComponent from './StoryComponent';
 import ToggleButton from './ToggleButton';
+import ActNavigation from './ActNavigation';
+// import MaterialSelector from './MaterialSelector';
 
 import Images from '../../assets/images/images';
 
@@ -15,7 +17,7 @@ import {RootStackParamList} from '../../types/navigation';
 
 import DesafioIntroductorioSceneAR from '../ARScenes/DesafioIntroductorioAR';
 import Inventario from '../inventario/inventario';
-import ActNavigation from './ActNavigation';
+import MaterialSelector from './MaterialSelector';
 
 interface ActividadComponentProps {
   actividades: Actividad;
@@ -27,6 +29,8 @@ interface ActividadComponentProps {
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 }
 
@@ -40,6 +44,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     pickedAnswers,
     pickedAnswersDropdown,
     pickedAnswersQuiz,
+    modelMaterial,
   } = props;
   const [pageNumber, setPageNumber] = props.pageNumber;
 
@@ -64,6 +69,15 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     toggleButtons.map(b => (b.value === true ? 1 : 0)),
   );
 
+  const [materialSelectorToggle, setMaterialSelectorToggle] =
+    useState<number>(0);
+
+  const [selectedModelMaterials, setSelectedModelMaterials] = useState<{
+    materialOrder: string[];
+    materialChoices: string[][];
+  }>({materialOrder: [], materialChoices: [[]]});
+
+  const [activeModelIndex, setActiveModelIndex] = useState<number>(0);
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -86,6 +100,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   models: [...models],
                   actividad: nombreActividad,
                   positions: [positions, setPositions],
+                  materialSelectorToggle: [
+                    materialSelectorToggle,
+                    setMaterialSelectorToggle,
+                  ],
+                  setSelectedModelMaterials: setSelectedModelMaterials,
+                  modelMaterial: modelMaterial[0][pageNumber],
+                  setActiveModelIndex: setActiveModelIndex,
                 }}
               />
             </View>
@@ -117,8 +138,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 sceneNav={sceneNav}
                 showInventory={
                   !(
-                    toggleDefaultValue === true ||
-                    models3d.length === models.length
+                    // toggleDefaultValue === true ||
+                    (models3d.length === models.length)
                   )
                 }
               />
@@ -130,6 +151,22 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               <ToggleButton
                 toggleButtons={toggleButtons}
                 toggleQuestions={[toggleValues, setToggleValues]}
+              />
+            </View>
+          )}
+          {useAR === true && materialSelectorToggle === 1 && (
+            <View style={styles.overlay}>
+              <MaterialSelector
+                materialSelectorToggle={[
+                  materialSelectorToggle,
+                  setMaterialSelectorToggle,
+                ]}
+                pageNumber={pageNumber}
+                modelMaterial={props.modelMaterial}
+                selectedMaterial={props.selectedMaterial}
+                selectedModelMaterials={selectedModelMaterials}
+                activeModelIndex={activeModelIndex}
+                models3d={models3d}
               />
             </View>
           )}

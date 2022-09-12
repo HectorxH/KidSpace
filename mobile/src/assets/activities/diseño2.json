@@ -1,5 +1,944 @@
 [
   {
-    
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Layla es *diseñadora gráfica*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se dedica a la *comunicación visual*, mediante el diseño de imágenes.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Has notado los mensajes visuales que te rodean?",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "questions",
+        "position": {
+          "start": [5, 1],
+          "end": [7.5, 8]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, observa este empaque de un jugo.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El diseño es simple y llamativo a la vez",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El primer consejo de Layla es que el diseño siempre debe ser *limpio y ordenado*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Además, la imágen de las frambuesas indica claramente de qué está hecho el jugo.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un buen producto siempre debe usar la *imagen correcta*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esta imagen está claramente visible, y no nos cuesta diferenciarla del fondo.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa que la imágen muestra frambuesas frescas y brillantes.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su elección no fue aleatoria.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se busca *transmitir un mensaje* sobre el producto.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja3",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Nos dice que es un jugo muy fresco y sabroso.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Al diseñar debemos elegir los elementos con cuidado para crear un mensaje claro.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "También existen algunas reglas que nos ayudan no cometer errores al diseñar.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa el siguiente afiche. Como se puede ver, su diseño podría ser mejor.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, el texto de este afiche tiene *más de un estilo de letra*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los estilos de letra se conocen como *fuentes*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "etiqueta_muffin",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántos estilos de letra o fuentes distintas tiene este afiche?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3 estilos"],
+        "answers": [
+          {
+            "text": "1 estilo",
+            "position": {
+              "start": [3, 11.5],
+              "end": [10, 13.5]
+            }
+          },
+          {
+            "text": "2 estilos",
+            "position": {
+              "start": [3, 14.5],
+              "end": [10, 16.5]
+            }
+          },
+          {
+            "text": "3 estilos",
+            "position": {
+              "start": [3, 17.5],
+              "end": [10, 19.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien!",
+        "position": {
+          "start": [3, 6],
+          "end": [11, 8]
+        }
+      },
+      {
+        "text": "Son exactamente 3 fuentes distintas.",
+        "position": {
+          "start": [3, 8],
+          "end": [11, 14]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cuanto menor sea el contraste de claridad y oscuridad entre las letras y el fondo",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "menos legible resulta el texto el mensaje.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [18, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Analiza estas combinaciones de fondos y textos. ¿Cuál es la *más legible*?",
+        "position": {
+          "start": [8, 2.5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Azul con blanco"],
+        "answers": [
+          {
+            "text": "Azul con blanco",
+            "position": {
+              "start": [9.5, 10.5],
+              "end": [15.5, 12.5]
+            }
+          },
+          {
+            "text": "Verde con rojo",
+            "position": {
+              "start": [9.5, 13.5],
+              "end": [15.5, 15.5]
+            }
+          },
+          {
+            "text": "Naranjo con amarillo",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [15.5, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Finalmente, el afiche analizado no tiene imágenes acordes a lo que se quiere comunicar.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "caja1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Y aquellas que están presentes *no facilitan la transmisión* del mensaje.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Entonces, siempre que tengas que crear un diseño, debes recordar estas 3 simples reglas:",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Él diseño siempre debe ser ordenado y simple.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las imágenes que uses deben ayudar a transmitir el mensaje.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y por último, los colores deben ser adecuados y legibles.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Layla te invita a diseñar tu propio producto ahora. ¡Recuerda las reglas que aprendiste!",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
   }
 ]

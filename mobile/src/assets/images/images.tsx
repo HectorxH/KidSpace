@@ -35,6 +35,10 @@ const images: {
     CarlosHappy: require('./character/carlos/carlos-happy.png'),
     CarlosQuestion: require('./character/carlos/carlos-question.png'),
 
+    LaylaQuestion: require('./character/layla/layla-question.png'),
+    LaylaHappy: require('./character/layla/layla-happy.png'),
+    LaylaSmile: require('./character/layla/layla-smile.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
 
@@ -52,8 +56,10 @@ const images: {
     regaderaComparacion: require('./extras/regaderaComparacion.png'),
     fork: require('./extras/fork.png'),
     taza: require('./extras/taza.jpg'),
-    silla_chueca: require('./extras/silla_chueca.jpg'),
-    taza_fail: require('./extras/taza_fail.jpg'),
+    notebook_paper: require('./extras/notebook_paper.png'),
+    silla_chueca: require('./extras/silla_chueca.png'),
+    newsilla: require('./extras/newsilla.png'),
+    taza_fail: require('./extras/taza_fail.png'),
 
     diseño1_color1: require('./extras/diseño1_color1.png'),
     diseño1_color2: require('./extras/diseño1_color2.png'),
@@ -75,6 +81,21 @@ const images: {
     diseño1_colores_suma4: require('./extras/diseño1_colores_suma4.png'),
     temperas: require('./extras/temperas.png'),
     ryb: require('./extras/ryb.png'),
+    caja1: require('./extras/caja1.png'),
+    caja2: require('./extras/caja2.png'),
+    caja3: require('./extras/caja3.png'),
+
+    tempera_roja: require('./extras/tempera_roja.png'),
+    tempera_negra: require('./extras/tempera_negra.png'),
+    tempera_blanca: require('./extras/tempera_blanca.png'),
+    tempera_amarilla: require('./extras/tempera_amarilla.png'),
+    tempera_azul: require('./extras/tempera_azul.png'),
+
+    lombriz1: require('./extras/lombriz1.png'),
+    lombriz2: require('./extras/lombriz2.png'),
+    lombriz3: require('./extras/lombriz3.png'),
+    lombriz4: require('./extras/lombriz4.png'),
+    lombriz5: require('./extras/lombriz5.png'),
 
     extra_nutricion: require('./extras/extra_nutricion.png'),
     extra_sellos: require('./extras/extra_sellos.png'),
@@ -127,6 +148,7 @@ const images: {
     bg_nutricion2: require('./background/bg_nutricion2.png'),
     bg_nutricion3: require('./background/bg_nutricion3.png'),
     bg_diseño1: require('./background/diseño1_introductorio.png'),
+    bg_diseño2: require('./background/bg_diseño2.png'),
   },
 
   icons: {
@@ -142,6 +164,27 @@ const images: {
     },
     caja_margarita: {
       square: require('./icons/caja_margarita/square.png'),
+    },
+    phone: {
+      square: require('./icons/phone/phone.png'),
+    },
+    pelota: {
+      square: require('./icons/pelota/pelota.png'),
+    },
+    peluche: {
+      square: require('./icons/peluche/peluche.png'),
+    },
+    pluma: {
+      square: require('./icons/pluma/pluma.png'),
+    },
+    taza: {
+      square: require('./icons/taza/taza.png'),
+    },
+    silla: {
+      square: require('./icons/silla/silla.png'),
+    },
+    mug: {
+      square: require('./icons/mug/mug.png'),
     },
   },
   // old, borrar despues de mover

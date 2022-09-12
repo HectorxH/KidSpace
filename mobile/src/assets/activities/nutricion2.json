@@ -1038,7 +1038,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1050,6 +1049,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1082,11 +1084,10 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1098,6 +1099,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1130,11 +1134,10 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1146,6 +1149,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1178,11 +1184,10 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1194,6 +1199,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1226,11 +1234,10 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1242,6 +1249,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1274,11 +1284,10 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1290,6 +1299,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1329,7 +1341,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1378,12 +1389,18 @@
         "position": {
           "start": [1.5, 4],
           "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       },
       {
         "position": {
           "start": [10.2, 4],
           "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1419,24 +1436,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["1"],
+        "rightAnswer": ["9,5"],
         "answers": [
           {
-            "text": "1",
+            "text": "9,5",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "115,2",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "31,5",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -1448,7 +1465,7 @@
         "rightAnswer": ["2"],
         "answers": [
           {
-            "text": "1",
+            "text": "9",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
@@ -1462,7 +1479,7 @@
             }
           },
           {
-            "text": "3",
+            "text": "11",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -1481,7 +1498,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1493,6 +1509,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1528,11 +1547,10 @@
 
   {
     "AR": {
-      "start": false,
+      "start": true,
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1581,12 +1599,18 @@
         "position": {
           "start": [1.5, 4],
           "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       },
       {
         "position": {
           "start": [10.2, 4],
           "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1622,24 +1646,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["2"],
+        "rightAnswer": ["10,4"],
         "answers": [
           {
-            "text": "1",
+            "text": "29,7",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "10,4",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "8,3",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -1648,24 +1672,24 @@
         ]
       },
       {
-        "rightAnswer": ["1"],
+        "rightAnswer": ["2"],
         "answers": [
           {
-            "text": "1",
+            "text": "2",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "2",
+            "text": "3",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "3",
+            "text": "5",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -1684,7 +1708,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1696,6 +1719,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1742,7 +1768,6 @@
       "models": [
         {
           "model": "barras",
-          "type": "GLB",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 0, 0]
         }
@@ -1791,12 +1816,18 @@
         "position": {
           "start": [1.5, 4],
           "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       },
       {
         "position": {
           "start": [10.2, 4],
           "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1832,24 +1863,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["3"],
+        "rightAnswer": ["37"],
         "answers": [
           {
-            "text": "1",
+            "text": "11,1",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "44",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "37",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -1858,24 +1889,24 @@
         ]
       },
       {
-        "rightAnswer": ["3"],
+        "rightAnswer": ["7"],
         "answers": [
           {
-            "text": "1",
+            "text": "5",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "2",
+            "text": "6",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "3",
+            "text": "7",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]

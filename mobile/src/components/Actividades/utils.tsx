@@ -1,5 +1,9 @@
-import {StyleSheet} from 'react-native';
-import {ITextSettings} from '../../types/activity';
+import {FlexAlignType, StyleSheet} from 'react-native';
+import {
+  IImagesSettings,
+  ITextBoxSettings,
+  ITextSettings,
+} from '../../types/activity';
 import {RSize} from '../../utils/responsive';
 
 export function checkAnswers(
@@ -49,22 +53,6 @@ export function checkAnswers(
   console.log(respuestasCorrectas, cantidadRespuestas);
   return respuestasCorrectas === cantidadRespuestas;
 }
-
-// var respuestasCorrectas =
-// userAnswers
-//   .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
-//   .reduce((x, y) => Number(x) + Number(y), 0) +
-// userAnswersDropdown
-//   .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
-//   .reduce((x, y) => Number(x) + Number(y), 0) +
-// userAnswersQuiz.reduce((x, y) => Number(x) + Number(y), 0);
-
-// var cantidadRespuestas =
-// userAnswers.map(b => b.length).reduce((x, y) => Number(x) + Number(y), 0) +
-// userAnswersDropdown
-//   .map(b => b.length)
-//   .reduce((x, y) => Number(x) + Number(y), 0) +
-// userAnswersQuiz.length;
 
 interface BaseTextProps {
   elevation: number;
@@ -122,4 +110,96 @@ export function getTextStyle(
   });
 
   return textStyles;
+}
+
+interface BaseTextBoxProps {
+  width: string;
+  height: string;
+  backgroundColor: string;
+  borderRadius: number;
+  borderWidth: number;
+  borderColor: string;
+  paddingVertical: number;
+  paddingHorizontal: number;
+}
+export function getTextBoxStyle(
+  baseTextBoxStyle: BaseTextBoxProps,
+  boxStyle: ITextBoxSettings | undefined,
+) {
+  const newTextBoxStyle = typeof boxStyle !== 'undefined' ? boxStyle : {};
+  const boxStyles = StyleSheet.create({
+    settings: {
+      ...baseTextBoxStyle,
+      ...{
+        backgroundColor:
+          typeof newTextBoxStyle.backgroundColor !== 'undefined'
+            ? newTextBoxStyle.backgroundColor
+            : baseTextBoxStyle.backgroundColor,
+        borderRadius:
+          typeof newTextBoxStyle.borderRadius !== 'undefined'
+            ? RSize(newTextBoxStyle.borderRadius, 'h')
+            : baseTextBoxStyle.borderRadius,
+        borderWidth:
+          typeof newTextBoxStyle.borderWidth !== 'undefined'
+            ? RSize(newTextBoxStyle.borderWidth, 'h')
+            : baseTextBoxStyle.borderWidth,
+        borderColor:
+          typeof newTextBoxStyle.borderColor !== 'undefined'
+            ? newTextBoxStyle.borderColor
+            : baseTextBoxStyle.borderColor,
+        paddingVertical:
+          typeof newTextBoxStyle.paddingVertical !== 'undefined'
+            ? RSize(newTextBoxStyle.paddingVertical, 'h')
+            : baseTextBoxStyle.paddingVertical,
+        paddingHorizontal:
+          typeof newTextBoxStyle.paddingHorizontal !== 'undefined'
+            ? RSize(newTextBoxStyle.paddingHorizontal, 'h')
+            : baseTextBoxStyle.paddingHorizontal,
+        elevation:
+          typeof newTextBoxStyle.elevation !== 'undefined'
+            ? newTextBoxStyle.elevation
+            : 0,
+      },
+    },
+  });
+
+  return boxStyles;
+}
+
+interface BaseImageProps {
+  height: string;
+  width: string;
+  alignSelf: FlexAlignType | 'auto' | undefined;
+  opacity: number;
+}
+export function getImageStyle(
+  baseImageStyle: BaseImageProps,
+  imageStyle: IImagesSettings | undefined,
+) {
+  const newImageStyle = typeof imageStyle !== 'undefined' ? imageStyle : {};
+  const imageStyles = StyleSheet.create({
+    settings: {
+      ...baseImageStyle,
+      ...{
+        height:
+          typeof newImageStyle.height !== 'undefined'
+            ? newImageStyle.height
+            : baseImageStyle.height,
+        width:
+          typeof newImageStyle.width !== 'undefined'
+            ? newImageStyle.width
+            : baseImageStyle.width,
+        alignSelf:
+          typeof newImageStyle.alignSelf !== 'undefined'
+            ? newImageStyle.alignSelf
+            : baseImageStyle.alignSelf,
+        opacity:
+          typeof newImageStyle.opacity !== 'undefined'
+            ? newImageStyle.opacity
+            : baseImageStyle.opacity,
+      },
+    },
+  });
+
+  return imageStyles;
 }

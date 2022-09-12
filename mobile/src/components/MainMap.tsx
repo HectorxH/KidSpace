@@ -71,10 +71,10 @@ const MainMap = ({navigation}: MainMapProps) => {
             navigation.navigate('Actividades', {
               // actividad: 'diagramas',
               // actividad: 'diseños',
-              // actividad: 'diseño1',
-              // actividad: 'diseño2',
               // actividad: 'nutricion1',
-              actividad: 'nutricion2',
+              actividad: 'diseño1',
+              // actividad: 'nutricion2',
+              // actividad: 'diseño2',
               // actividad: 'debug',
             })
           }>

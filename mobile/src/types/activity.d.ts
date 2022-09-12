@@ -1,3 +1,5 @@
+import {FlexAlignType} from 'react-native';
+
 export interface IActivity {
   nunidad: string;
   nactividad: string;
@@ -66,7 +68,10 @@ export interface IImages {
 }
 
 export interface IImagesSettings {
-  pendientePorImplementar?: string;
+  opacity?: number;
+  height?: string;
+  width?: string;
+  alignSelf?: FlexAlignType | 'auto' | undefined;
 }
 
 export interface IAlternativas {
@@ -91,9 +96,14 @@ export interface IQuiz {
 
 export interface IModels {
   model: string;
-  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+  // type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
   scale: Vec3;
   rotation: Vec3;
+  interactable?: string[];
+  ARMaterials?: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
 }
 
 export interface IAR {
@@ -182,42 +192,3 @@ export interface IActivityPage {
 }
 
 export type Actividad = IActivityPage[];
-
-// {
-//   "background": "flowershop",
-//   "items": [
-//     {
-//       "name": "cry",
-//       "position": {
-//         "start": [13, 2],
-//         "end": [20, 20]
-//       }
-//     }
-//   ],
-//   "alternativasDropdown": [
-//     {
-//       "rightAnswer": ["9"],
-//       "answers": ["9", "4", "7"],
-//       "position": {
-//         "start": [9, 10],
-//         "end": [12, 12]
-//       }
-//     },
-//     {
-//       "rightAnswer": ["7"],
-//       "answers": ["9", "4", "7"],
-//       "position": {
-//         "start": [9, 13],
-//         "end": [12, 15]
-//       }
-//     },
-//     {
-//       "rightAnswer": ["4"],
-//       "answers": ["9", "4", "7"],
-//       "position": {
-//         "start": [9, 16],
-//         "end": [12, 18]
-//       }
-//     }
-//   ]
-// },

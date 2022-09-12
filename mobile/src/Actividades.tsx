@@ -44,16 +44,6 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
         : [[]],
     ),
   );
-  // Variables para controlar valor en las preguntas con dropdowns
-  // const [userAnswersDropdownValue, setUserAnswersDropdownValue] = useState<
-  //   string[][][]
-  // >(
-  //   actividad.map(s =>
-  //     typeof s.alternativasDropdown !== 'undefined'
-  //       ? s.alternativasDropdown.map(q => q.rightAnswer.map(() => ''))
-  //       : [[]],
-  //   ),
-  // );
 
   // Variables para controlar avance en preguntas de Quiz
   const [userAnswersQuiz, setUserAnswersQuiz] = useState<number[][]>(
@@ -65,6 +55,30 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
     actividad.map(s =>
       typeof s.quiz !== 'undefined'
         ? s.quiz.map(q => q.answers.map(() => 0))
+        : [[]],
+    ),
+  );
+
+  // Variables para controlar las texturas del modelo 3d en caso de que aplique
+  // [pageNumber][models_number] = "nombre_textura", ejemplo: modelMaterial[0][0] = "azul_quijote"
+  const [modelMaterial, setModelMaterial] = useState<string[][]>(
+    actividad.map(s =>
+      typeof s.AR !== 'undefined' ? s.AR.models.map(() => 'default') : [],
+    ),
+  );
+
+  // Variables para controlar las texturas del modelo 3d usando el selector de texturas
+  // [pageNumber][models_number][materialOrder] = "nombre_textura",
+  // ejemplo: selectedModelMaterialFields[0][0][0] = "azul" // modelo 0 en página 0 tiene valor azul en textura 0
+  // ejemplo: selectedModelMaterialFields[0][0][1] = "quijote"  // modelo 0 en página 0 tiene valor quijote en textura 1
+  const [selectedMaterial, setSelectedMaterial] = useState<string[][][]>(
+    actividad.map(s =>
+      typeof s.AR !== 'undefined'
+        ? s.AR.models.map(model =>
+            typeof model.ARMaterials !== 'undefined'
+              ? model.ARMaterials.materialOrder.map(() => 'default')
+              : [],
+          )
         : [[]],
     ),
   );
@@ -86,6 +100,8 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
           ]}
           userAnswersQuiz={[userAnswersQuiz, setUserAnswersQuiz]}
           pickedAnswersQuiz={[pickedAnswersQuiz, setPickedAnswersQuiz]}
+          modelMaterial={[modelMaterial, setModelMaterial]}
+          selectedMaterial={[selectedMaterial, setSelectedMaterial]}
           navigation={navigation}
         />
       </View>

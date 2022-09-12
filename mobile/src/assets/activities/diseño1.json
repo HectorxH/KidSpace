@@ -539,7 +539,7 @@
         "settings": {      
           "backgroundColor": "white",
           "elevation": 20,
-          "borderRadius": 20
+          "borderWidth": 0
         }
       }
     ],
@@ -580,7 +580,7 @@
         "settings": {      
           "backgroundColor": "white",
           "elevation": 20,
-          "borderRadius": 20
+          "borderWidth": 0
         }
       }
     ],
@@ -621,7 +621,7 @@
         "settings": {      
           "backgroundColor": "white",
           "elevation": 20,
-          "borderRadius": 20
+          "borderWidth": 0
         }
       }
     ],
@@ -1284,6 +1284,806 @@
           "start": [3, 5],
           "end": [11, 15]
         }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz1",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [8.5, 8],
+          "end": [11, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [12.5, 8],
+          "end": [15, 13.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [16.5, 8],
+          "end": [19, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [8, 14.5],
+          "end": [10.2, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [10.3, 14.5],
+          "end": [12.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12.6, 14.5],
+          "end": [14.8, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.9, 14.5],
+          "end": [17.1, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17.2, 14.5],
+          "end": [19.4, 19.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 40,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "auto-fix",
+          "buttonIconNormal": "auto-fix",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 42,
+        "require": [41],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz2",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [8.5, 8],
+          "end": [11, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [12.5, 8],
+          "end": [15, 13.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [16.5, 8],
+          "end": [19, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [8, 14.5],
+          "end": [10.2, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [10.3, 14.5],
+          "end": [12.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12.6, 14.5],
+          "end": [14.8, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.9, 14.5],
+          "end": [17.1, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17.2, 14.5],
+          "end": [19.4, 19.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 41,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "auto-fix",
+          "buttonIconNormal": "auto-fix",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 43,
+        "require": [42],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz3",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [8.5, 8],
+          "end": [11, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [12.5, 8],
+          "end": [15, 13.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [16.5, 8],
+          "end": [19, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [8, 14.5],
+          "end": [10.2, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [10.3, 14.5],
+          "end": [12.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12.6, 14.5],
+          "end": [14.8, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.9, 14.5],
+          "end": [17.1, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17.2, 14.5],
+          "end": [19.4, 19.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 42,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "auto-fix",
+          "buttonIconNormal": "auto-fix",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 44,
+        "require": [43],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz4",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [8.5, 8],
+          "end": [11, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [12.5, 8],
+          "end": [15, 13.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [16.5, 8],
+          "end": [19, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [8, 14.5],
+          "end": [10.2, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [10.3, 14.5],
+          "end": [12.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12.6, 14.5],
+          "end": [14.8, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.9, 14.5],
+          "end": [17.1, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17.2, 14.5],
+          "end": [19.4, 19.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 43,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "auto-fix",
+          "buttonIconNormal": "auto-fix",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 45,
+        "require": [44],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz5",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [8.5, 8],
+          "end": [11, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [12.5, 8],
+          "end": [15, 13.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [16.5, 8],
+          "end": [19, 13.5]
+        }
+      },
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [8, 14.5],
+          "end": [10.2, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [10.3, 14.5],
+          "end": [12.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12.6, 14.5],
+          "end": [14.8, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.9, 14.5],
+          "end": [17.1, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17.2, 14.5],
+          "end": [19.4, 19.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 44,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "auto-fix",
+          "buttonIconNormal": "auto-fix",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 46,
+        "require": [45],
+        "visible": false
       }
     ]
   },

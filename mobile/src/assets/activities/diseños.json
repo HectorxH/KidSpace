@@ -259,7 +259,7 @@
     ],
     "texts": [
       {
-        "text": "Un objeto puede ser listo, áspero, rugoso o suave",
+        "text": "Un objeto puede ser liso, áspero, rugoso o suave",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -303,9 +303,28 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 180, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
           "rotation": [0, 0, 0]
         }
       ]
@@ -316,12 +335,15 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
     "texts": [
       {
-        "text": "En tu vida cotidiana utilizas diversos objetos y cada uno tiene sus características.",
+        "text": "En la vida cotidiana usamos diversos objetos y cada uno tiene sus propias características.",
         "position": {
           "start": [3, 4.5],
           "end": [15, 15.5]
@@ -351,9 +373,28 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 180, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
           "rotation": [0, 0, 0]
         }
       ]
@@ -364,6 +405,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -399,9 +443,28 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 180, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
           "rotation": [0, 0, 0]
         }
       ]
@@ -412,6 +475,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -447,9 +513,28 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 180, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
           "rotation": [0, 0, 0]
         }
       ]
@@ -460,6 +545,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -495,9 +583,28 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 180, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
           "rotation": [0, 0, 0]
         }
       ]
@@ -509,18 +616,27 @@
         "position": {
           "start": [0.2, 4],
           "end": [6.6, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       },
       {
         "position": {
           "start": [6.8, 4],
           "end": [13.2, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       },
       {
         "position": {
           "start": [13.4, 4],
           "end": [19.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -978,10 +1094,14 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -991,6 +1111,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1026,10 +1149,14 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1039,6 +1166,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1074,10 +1204,14 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1087,6 +1221,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1122,10 +1259,14 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1135,6 +1276,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1170,10 +1314,14 @@
       "start": true,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1183,6 +1331,9 @@
         "position": {
           "start": [2, 4],
           "end": [16, 16]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
@@ -1218,10 +1369,14 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1235,7 +1390,8 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 0
+          "elevation": 0,
+          "borderRadius": 0
         }
       }
     ],
@@ -1305,10 +1461,17 @@
         ],
         "texts": [
           {
-            "text": "Nombre1",
+            "text": "Silla",
             "position" : {
               "start": [0, 16],
               "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 0.06,
+              "color": "black",
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
             }
           }
         ]
@@ -1333,10 +1496,17 @@
         ],
         "texts": [
           {
-            "text": "Nombre2",
+            "text": "Taza",
             "position" : {
               "start": [0, 16],
               "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 0.06,
+              "color": "black",
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
             }
           }
         ]
@@ -1349,10 +1519,14 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1375,6 +1549,16 @@
         "position" : {
           "start": [13.5, 4],
           "end": [19, 16]
+        }
+      },
+      {
+        "name": "notebook_paper",
+        "position": {
+          "start": [0, 0],
+          "end": [10, 20]
+        },
+        "settings": {
+          "opacity": 0.2
         }
       }
     ],
@@ -1507,10 +1691,14 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1529,7 +1717,7 @@
     ],
     "bubbles": [
       {
-        "name": "silla_chueca",
+        "name": "newsilla",
         "position" : {
           "start": [1, 4],
           "end": [8, 16]
@@ -1549,6 +1737,13 @@
         "position": {
           "start": [9.5, 5],
           "end": [19, 15.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
@@ -1595,10 +1790,14 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1621,6 +1820,16 @@
         "position" : {
           "start": [13.5, 4],
           "end": [19, 16]
+        }
+      },
+      {
+        "name": "notebook_paper",
+        "position": {
+          "start": [0, 0],
+          "end": [10, 20]
+        },
+        "settings": {
+          "opacity": 0.2
         }
       }
     ],
@@ -1753,10 +1962,14 @@
       "start": false,
       "models": [
         {
-          "model": "barras",
-          "type": "GLB",
-          "scale": [0.2, 0.2, 0.2],
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
           "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1791,10 +2004,17 @@
         }
       },
       {
-        "text": "Lorem ipsum",
+        "text": "El diseño final cumple con la funcionalidad esperada de una taza, proporcionando la comodidad total al tomar la taza usando su mango.",
         "position": {
           "start": [9.5, 5],
           "end": [19, 15.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
@@ -1893,6 +2113,8 @@
         },
         "settings": {      
           "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
           "elevation": 20
         }
       }
@@ -1908,7 +2130,7 @@
           "fontSize": 0.06,
           "color": "white",
           "elevation": 21
-        },     
+        },
         "leftIcon": {
           "name": "star",
           "size": 0.035,
@@ -2047,7 +2269,7 @@
           "end": [13, 19.5]
         },
         "target": -1,
-        "require": [0],
+        "require": [33],
         "visible": false
       }
     ]
