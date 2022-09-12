@@ -20,6 +20,7 @@
 /// <reference types="mongoose/types/utility" />
 /// <reference types="mongoose/types/validation" />
 import { Schema, Types } from 'mongoose';
+
 export interface ITeacher {
     names: String;
     last_names: String;
@@ -29,7 +30,7 @@ export interface ITeacher {
     classes: Types.Array<Types.ObjectId>;
     planned: [];
 }
-export declare const teacherSchema: Schema<ITeacher, import("mongoose").Model<ITeacher, any, any, any>, {}, {}, any>;
-declare const _default: import("mongoose").Model<ITeacher, {}, {}, {}>;
+export declare const teacherSchema: Schema<ITeacher, import('mongoose').Model<ITeacher, any, any, any>, {}, {}, any>;
+declare const _default: import('mongoose').Model<ITeacher, {}, {}, {}>;
 export default _default;
-//# sourceMappingURL=Teacher.d.ts.map
+// # sourceMappingURL=Teacher.d.ts.map

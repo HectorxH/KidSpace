@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "mkdir -p dist/assets && cp -R src/assets dist/assets && nodemon src/index.ts",
-    "build": "npm run lint && rimraf dist/ && mkdir -p dist/assets && cp -R src/assets dist && tsc",
+    "dev": "mkdir -p dist\\assets && xcopy -R src\\assets dist\\assets && nodemon src\\index.ts",
+    "build": "npm run lint && rimraf dist\\ && mkdir dist\\assets && xcopy src/assets dist && tsc",
     "start": "npm run build && node dist/index.js",
-    "lint": "eslint src/**/*.ts"
+    "lint": "eslint src\\**\\*.ts"
   },
   "keywords": [],
   "author": "",
