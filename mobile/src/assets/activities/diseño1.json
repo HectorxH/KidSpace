@@ -1445,7 +1445,8 @@
         "require": [41],
         "visible": false
       }
-    ]
+    ],
+    "draggable": true
   },
   {
     "background": "",
@@ -1605,7 +1606,8 @@
         "require": [42],
         "visible": false
       }
-    ]
+    ],
+    "draggable": true
   },
   {
     "background": "",
@@ -1765,7 +1767,8 @@
         "require": [43],
         "visible": false
       }
-    ]
+    ],
+    "draggable": true
   },
   {
     "background": "",
@@ -1925,7 +1928,8 @@
         "require": [44],
         "visible": false
       }
-    ]
+    ],
+    "draggable": true
   },
   {
     "background": "",
@@ -2085,7 +2089,8 @@
         "require": [45],
         "visible": false
       }
-    ]
+    ],
+    "draggable": true
   },
   {
     "background": "bg_diseño1",

@@ -189,6 +189,7 @@ export interface IActivityPage {
   jumpButton?: IJumpButton[] | never[];
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
+  draggable?: boolean;
 }
 
 export type Actividad = IActivityPage[];

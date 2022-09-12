@@ -8,6 +8,7 @@ import Alternativas from './Alternativas';
 import AlternativasDropdown from './AlternativasDropdown';
 import {ReactStateSetter} from '../../types/others';
 import {IActivityPage} from '../../types/activity';
+import Draggable from './Draggable';
 
 interface StoryComponentProps {
   story: IActivityPage;
@@ -77,6 +78,13 @@ const StoryComponent = (props: StoryComponentProps) => {
           pageNumber={props.pageNumber}
         />
       </View>
+
+      {/* Draggable / Seleccion colores */}
+      {typeof story.draggable !== 'undefined' && story.draggable === true && (
+        <View style={styles.overlay}>
+          <Draggable />
+        </View>
+      )}
     </View>
   );
 };
