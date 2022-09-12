@@ -9,16 +9,19 @@ import Texts from './Texts';
 interface CardComponentProps {
   onPressFunction(): void;
   jumpCard: IJumpCard;
+  disabled: boolean;
 }
 
 const CardComponent = (props: CardComponentProps) => {
   const {onPressFunction, jumpCard} = props;
   return (
     <TouchableOpacity
-      activeOpacity={0.7}
-      style={styles.container}
-      onPress={onPressFunction}
-      disabled={false}>
+      activeOpacity={props.disabled === false ? 1 : 0.5}
+      disabled={props.disabled}
+      style={
+        props.disabled === false ? styles.container : styles.containerDisabled
+      }
+      onPress={onPressFunction}>
       <View style={styles.overlay}>
         <Items images={jumpCard.items} resize="cover" />
       </View>
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
     borderBottomStartRadius: RSize(0.05, 'h'),
     borderBottomEndRadius: RSize(0.05, 'h'),
     elevation: 10,
-    opacity: 0.5,
+    opacity: 0.3,
   },
   overlay: {
     flex: 1,

@@ -70,11 +70,11 @@ const MainMap = ({navigation}: MainMapProps) => {
           onPress={() =>
             navigation.navigate('Actividades', {
               // actividad: 'diagramas',
-              // actividad: 'diseños',
+              actividad: 'diseños',
               // actividad: 'nutricion1',
               // actividad: 'diseño1',
               // actividad: 'nutricion2',
-              actividad: 'diseño2',
+              // actividad: 'diseño2',
               // actividad: 'debug',
             })
           }>

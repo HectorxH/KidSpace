@@ -315,7 +315,7 @@
         {
           "model": "phone",
           "scale": [0.02, 0.02, 0.02],
-          "rotation": [0, 180, 0]
+          "rotation": [0, 135, 0]
         },
         {
           "model": "pluma",
@@ -385,7 +385,7 @@
         {
           "model": "phone",
           "scale": [0.02, 0.02, 0.02],
-          "rotation": [0, 180, 0]
+          "rotation": [0, 135, 0]
         },
         {
           "model": "pluma",
@@ -455,7 +455,7 @@
         {
           "model": "phone",
           "scale": [0.02, 0.02, 0.02],
-          "rotation": [0, 180, 0]
+          "rotation": [0, 135, 0]
         },
         {
           "model": "pluma",
@@ -525,7 +525,7 @@
         {
           "model": "phone",
           "scale": [0.02, 0.02, 0.02],
-          "rotation": [0, 180, 0]
+          "rotation": [0, 135, 0]
         },
         {
           "model": "pluma",
@@ -595,7 +595,7 @@
         {
           "model": "phone",
           "scale": [0.02, 0.02, 0.02],
-          "rotation": [0, 180, 0]
+          "rotation": [0, 135, 0]
         },
         {
           "model": "pluma",
@@ -779,7 +779,7 @@
         "settings": {
           "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
+          "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
           "buttonTextAlt": "Avanzar",
           "buttonTextNormal": "Avanzar"
@@ -1426,7 +1426,7 @@
         "settings": {
           "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
+          "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
           "buttonTextAlt": "Avanzar",
           "buttonTextNormal": "Avanzar"

@@ -47,6 +47,14 @@ const JumpCard = (props: JumpCardProps) => {
                       jumpPage(jumpCard.target, jumpCard.require)
                     }
                     jumpCard={jumpCard}
+                    disabled={
+                      checkAnswers(
+                        props.userAnswers,
+                        props.userAnswersDropdown,
+                        props.userAnswersQuiz,
+                        jumpCard.disableWhen,
+                      ) === true
+                    }
                   />
                 }
               />

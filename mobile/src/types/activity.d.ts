@@ -167,6 +167,7 @@ export interface IJumpCard {
   position: IPosition;
   target: number;
   require: number[];
+  disableWhen: number[];
   // settings: IToggleButtonSetting;
   visible: boolean;
 }
