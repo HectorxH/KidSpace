@@ -12,7 +12,7 @@ dotenv.config();
 
 const router = express.Router();
 
-const emailTemplate = readFileSync(path.join(__dirname, '../assets/email/index.html')).toString();
+const emailTemplate = readFileSync(path.join(__dirname, '../../assets/email/index.html')).toString();
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -55,7 +55,7 @@ router.post('/:id/sendCredentials', async (req, res) => {
       html: emailTemplate.format(apoderado?.user.username, apoderado?.password),
       attachments: [{
         filename: 'image-1.png',
-        path: path.join(__dirname, '../assets/email/images/image-1.png'),
+        path: path.join(__dirname, '../../assets/email/images/image-1.png'),
         cid: 'templateEmailImage@Kidspace',
       }],
     });
