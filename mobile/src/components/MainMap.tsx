@@ -119,7 +119,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   useEffect(() => {
     initialLoader();
     loadMessage();
-    loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
