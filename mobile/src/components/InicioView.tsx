@@ -6,8 +6,11 @@ import {RSize} from '../utils/responsive';
 import {InicioViewProps} from '../types/navigation';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Config from 'react-native-config';
 
 const InicioView = ({navigation}: InicioViewProps) => {
+  console.log(`${Config.REACT_APP_PUSHER_KEY}`);
+  console.log(`${Config.REACT_APP_BACKEND_URL}`);
   return (
     <View>
       <LottieView

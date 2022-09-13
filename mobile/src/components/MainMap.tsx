@@ -22,8 +22,9 @@ import {RSize} from '../utils/responsive';
 import {images} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
 import {useFocusEffect} from '@react-navigation/native';
+import Config from 'react-native-config';
 
-const pusher = new Pusher('74009350c3b99530d9e9', {
+const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');

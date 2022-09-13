@@ -9,19 +9,22 @@ import {RSize} from '../utils/responsive';
 import {images} from '../assets/inicio/handler/images';
 
 const FormularioView = ({navigation, route}: FormularioViewProps) => {
+  console.log(`${Config.REACT_APP_PUSHER_KEY}`);
+  console.log(`${Config.REACT_APP_BACKEND_URL}`);
   const cursoId = route.params.event.data;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const handleEnviar = async () => {
     try {
-      console.log(`${Config.BACKEND_URL}`);
-      let res = await axios.post(`${Config.BACKEND_URL}/register`, {
+      console.log(`${Config.REACT_APP_BACKEND_URL}`);
+      console.log(1);
+      let res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/register`, {
         nombres,
         apellidos,
         tipo: 'estudiante',
       });
       console.log(res.data);
-
+      console.log(0);
       const {username, password} = res.data;
       await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
       await axios.post(`${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`);

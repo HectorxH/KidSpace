@@ -56,6 +56,9 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
       >
         <Typography
           variant="button"
+          sx={{
+            color: (theme: Theme) => theme.palette.extra.main,
+          }}
         >
           Eliminar
         </Typography>
@@ -81,17 +84,28 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
               color: '#FFFFFF',
               '&:hover': {
                 backgroundColor: '#f9b3b3',
-                color: '#FFFFFF',
               },
             }}
             variant="contained"
             onClick={handleEliminarStudent}
-          >Eliminar
-          </Button>
-          <Button sx={{ backgroundColor: '#F1F3F8' }} variant="contained" onClick={handleCloseDialog}>
+          >
             <Typography
-              variant="button"
-              sx={{ color: '#929292' }}
+              sx={{
+                color: (theme: Theme) => theme.palette.extra.main,
+              }}
+            >
+              Eliminar
+            </Typography>
+          </Button>
+          <Button
+            color="extra"
+            variant="contained"
+            onClick={handleCloseDialog}
+          >
+            <Typography
+              sx={{
+                color: (theme: Theme) => theme.palette.textcol.main,
+              }}
             >
               Cancelar
             </Typography>
