@@ -9,7 +9,7 @@ import {RSize} from '../utils/responsive';
 import {images} from '../assets/inicio/handler/images';
 
 const FormularioView = ({navigation, route}: FormularioViewProps) => {
-  console.log(`${Config.PUSHER_KEY}`);
+  console.log(`${Config.REACT_APP_PUSHER_KEY}`);
   console.log(`${Config.REACT_APP_BACKEND_URL}`);
   const cursoId = route.params.event.data;
   const [nombres, setNombres] = useState('');
