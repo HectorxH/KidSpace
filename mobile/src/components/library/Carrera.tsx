@@ -17,7 +17,21 @@ import {RSize} from '../../utils/responsive';
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera} = route.params;
+  const oldCompletadas = route.params.completadas;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+
+  const checkCompletada = (nombre: string) => {
+    try {
+      console.log(oldCompletadas);
+      if (JSON.parse(oldCompletadas).includes(nombre)) {
+        return 'estrelladorada';
+      }
+      return 'estrellagris';
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={{flex: 1.2}}>
@@ -59,7 +73,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   elevation: 5,
                 }}>
                 <Image
-                  source={mapImages[`${story.estado}`].uri}
+                  source={mapImages[`${checkCompletada(story.actividad)}`].uri}
                   style={{
                     width: RSize(0.06, 'h'),
                     height: RSize(0.06, 'h'),

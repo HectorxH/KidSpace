@@ -191,6 +191,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
       <View style={styles.overlay}>
         <ActNavigation
           actividades={actividades}
+          nombreActividad={nombreActividad}
           cantMonedas={cantMonedas}
           storyLength={actividades.length}
           dragAnswers={dragAnswers}

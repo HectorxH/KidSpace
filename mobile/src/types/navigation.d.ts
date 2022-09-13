@@ -1,6 +1,6 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
-import {ICarrera, IInfo, IMainMap} from './carrera';
+import {ICarrera, IInfo} from './carrera';
 
 export type desafioTipo =
   | 'CuentoIntroductorio'
@@ -22,9 +22,9 @@ export type RootStackParamList = {
   InicioView: undefined;
   ErrorView: undefined;
   FormularioView: {event: any};
-  MainMap: {datos: IMainMap};
+  MainMap: undefined;
   Activity: {activity: IActivity};
-  Carrera: {carrera: ICarrera};
+  Carrera: {carrera: ICarrera; completadas: string};
   Story: {Info: IInfo};
   NoAvailableActivities: undefined;
   AvailableActivities: {activities: IActivity[]};
@@ -39,7 +39,7 @@ export type RootStackParamList = {
   ResultadoFinal: undefined;
   DynamicTable: undefined;
   Qr: undefined;
-  Recompensas: {cantMonedas: number};
+  Recompensas: {cantMonedas: number; nombreActividad: string};
 };
 
 export type InicioViewProps = NativeStackScreenProps<

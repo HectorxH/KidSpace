@@ -10,6 +10,7 @@
     "stories":[
       {
         "carrera":"Carrera: Informática",
+        "actividad":"informatica1",
         "img":"portada_inf1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -18,6 +19,7 @@
       },
       {
         "carrera":"Carrera: Informática",
+        "actividad":"informatica2",
         "img":"portada_inf2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -36,6 +38,7 @@
     "stories":[
       {
         "carrera":"Carrera: Diseño",
+        "actividad":"diseño1",
         "img":"portada_dis1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -44,6 +47,7 @@
       },
       {
         "carrera":"Carrera: Diseño",
+        "actividad":"diseño2",
         "img":"portada_dis2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -62,6 +66,7 @@
     "stories":[
       {
         "carrera":"Carrera: Nutrición",
+        "actividad":"nutricion1",
         "img":"portada_nut1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -70,6 +75,7 @@
       },
       {
         "carrera":"Carrera: Nutrición",
+        "actividad":"nutricion1",
         "img":"portada_nut2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -88,6 +94,7 @@
     "stories": [
       {
         "carrera":"Carrera: Astronomía",
+        "actividad":"astronomia1",
         "img":"portada_astr1",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -96,6 +103,7 @@
       },
       {
         "carrera":"Carrera: Astronomía",
+        "actividad":"astronomia2",
         "img":"portada_astr2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

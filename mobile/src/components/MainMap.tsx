@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import {useEffect, useState} from 'react';
 import {
   View,
@@ -22,7 +22,6 @@ import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import {mapImages} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
-import {useFocusEffect} from '@react-navigation/native';
 import Config from 'react-native-config';
 
 const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
@@ -30,17 +29,17 @@ const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
 });
 const channel = pusher.subscribe('channel');
 
-const MainMap = ({navigation, route}: MainMapProps) => {
+const MainMap = ({navigation}: MainMapProps) => {
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
   const [notification, setNotification] = useState('0');
-  const {datos} = route.params;
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
-  const [user, setUser] = useState({key: 1, name: datos.nombres});
+  const [user, setUser] = useState('');
   const [cantMonedas, setCantMonedas] = useState(0);
+  const [completadas, setCompletadas] = useState('[]');
 
   const loadNotification = () => {
     let visible = false;
@@ -66,10 +65,14 @@ const MainMap = ({navigation, route}: MainMapProps) => {
         ? (allMessages = JSON.parse(jsonAllMessages))
         : [];
       setMessage(JSON.parse(jsonAllMessages!));
+      const u = await AsyncStorage.getItem('@nombres');
+      setUser(u!);
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
       const m = await AsyncStorage.getItem('@monedas');
       setCantMonedas(parseInt(m!, 10));
+      const c = await AsyncStorage.getItem('@completadas');
+      c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
       console.log('A');
       console.log(e);
@@ -109,18 +112,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
     setUnidadCarrera(event.carrera);
   };
 
-  useFocusEffect(
-    useCallback(() => {
-      if (route.params === undefined) {
-        return;
-      }
-      setUser({
-        key: 2,
-        name: datos.nombres,
-      });
-    }, [datos.nombres, route.params]),
-  );
-
   useEffect(() => {
     initialLoader();
     loadMessage();
@@ -138,8 +129,10 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   };
 
   const HandleCarrera = (event: any) => {
+    console.log(completadas);
     navigation.push('Carrera', {
       carrera: event.unidadCarrera,
+      completadas: completadas,
     });
     setModalVisible(false);
   };
@@ -193,7 +186,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           source={mapImages.edificios.uri}>
           <View style={styles.view}>
             <Chip style={styles.nameChip}>
-              <Text style={styles.title}> ¡Hola, {user.name}!</Text>
+              <Text style={styles.title}> ¡Hola, {user}!</Text>
             </Chip>
             <Chip style={styles.monedaChip}>
               <Image style={styles.icon} source={images.moneda.uri} />

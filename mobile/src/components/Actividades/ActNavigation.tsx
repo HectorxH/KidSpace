@@ -9,6 +9,7 @@ import JumpCard from './JumpCard';
 
 interface ActNavigationProps {
   actividades: Actividad;
+  nombreActividad: string;
   cantMonedas: number;
   storyLength: number;
   dragAnswers: [string[], ReactStateSetter<string[]>];
@@ -29,6 +30,7 @@ interface ActNavigationProps {
 const ActNavigation = (props: ActNavigationProps) => {
   const {actividades, storyLength, navigation} = props;
   const cantMonedas = props.cantMonedas;
+  const nombreActividad = props.nombreActividad;
   const [pageNumber, setPageNumber] = props.pageNumber;
   const userAnswers = props.userAnswers[pageNumber];
   const userAnswersDropdown = props.userAnswersDropdown[pageNumber];
@@ -73,7 +75,7 @@ const ActNavigation = (props: ActNavigationProps) => {
       }
       setPageNumber(pageNumber + 1);
     } else {
-      navigation?.navigate('Recompensas', {cantMonedas});
+      navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
     }
   };
 

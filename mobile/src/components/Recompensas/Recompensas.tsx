@@ -13,6 +13,7 @@ import {RSize} from '../../utils/responsive';
 
 const Recompensas = ({navigation, route}: RecompensasProps) => {
   const cantMonedas = route.params.cantMonedas;
+  const nombreActividad = route.params.nombreActividad;
   let animationBadge: any = React.createRef();
   let animationConfetti: any = React.createRef();
   let loadingButton = false;
@@ -54,6 +55,21 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
         '@monedas',
         (parseInt(oldCantMonedas, 10) + cantMonedas).toString(),
       );
+
+      let oldCompletadas = await AsyncStorage.getItem('@completadas');
+      if (oldCompletadas === null) {
+        oldCompletadas = '[]';
+      }
+      oldCompletadas = JSON.parse(oldCompletadas);
+      // chequeamos que la actividad no este marcada como completada de antes
+      if (!oldCompletadas!.includes(nombreActividad)) {
+        const newCompletadas = [...oldCompletadas!, nombreActividad];
+        console.log(newCompletadas);
+        await AsyncStorage.setItem(
+          '@completadas',
+          JSON.stringify(newCompletadas),
+        );
+      }
       navigation?.dispatch(
         CommonActions.reset({
           index: 0,

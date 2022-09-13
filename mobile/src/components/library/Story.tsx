@@ -71,12 +71,12 @@ const Story = ({navigation, route}: InfoProps) => {
                 )}
                 color="#FF8A01"
                 mode="contained"
-                // onPress={() =>
-                //   navigation.push('CuentoIntroductorio', {
-                //     actividad: 'diagramas',
-                //   })
-                // }>
-                onPress={() => console.log('Pressed')}>
+                onPress={() =>
+                  navigation.navigate('Actividades', {
+                    actividad: Info.actividad,
+                    cantMonedas: Info.coins,
+                  })
+                }>
                 <Text style={styles.textButton}>¡Iniciar!</Text>
               </Button>
             </View>
