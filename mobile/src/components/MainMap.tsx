@@ -33,11 +33,8 @@ const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation, route}: MainMapProps) => {
   const [notification, setNotification] = useState('0');
-  console.log(notification);
-  console.log(9999);
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
-
   const {datos} = route.params;
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
@@ -47,9 +44,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
 
   const loadNotification = () => {
     let visible = false;
-    console.log(notification);
-    console.log(55);
-    if (notification !== '0' || notification !== null) {
+    if (notification !== '0' && notification !== null) {
       visible = true;
     }
     return (
@@ -124,6 +119,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   useEffect(() => {
     initialLoader();
     loadMessage();
+    loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

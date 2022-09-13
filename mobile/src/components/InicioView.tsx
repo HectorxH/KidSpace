@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
 import axios from 'axios';
 import Config from 'react-native-config';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const InicioView = ({navigation}: InicioViewProps) => {
   const {user, refresh, logout} = useAuth();
@@ -23,6 +24,7 @@ const InicioView = ({navigation}: InicioViewProps) => {
   }, []);
 
   const testLogout = async () => {
+    await AsyncStorage.removeItem('@notification');
     await axios.delete(`${Config.BACKEND_URL}/logout`);
     await logout();
   };
