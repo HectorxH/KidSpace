@@ -17,7 +17,6 @@ import {RSize} from '../../utils/responsive';
 const Story = ({navigation, route}: InfoProps) => {
   const {Info} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  console.log(Info.title);
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
@@ -29,10 +28,10 @@ const Story = ({navigation, route}: InfoProps) => {
             {back}
           </Button>
         </View>
-        <Card>
+        <Card style={{borderRadius: 20}}>
           <Card.Cover
             source={imagesPersonajes[`${Info.img}`].uri}
-            style={{height: RSize(0.75, 'h'), borderRadius: 10}}
+            style={{height: RSize(0.75, 'h'), borderRadius: 20}}
           />
         </Card>
       </View>

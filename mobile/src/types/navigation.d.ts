@@ -8,6 +8,7 @@ export type actividadNombre = 'diagramas';
 export type RootStackParamList = {
   InicioView: undefined;
   ErrorView: undefined;
+  CargaView: undefined;
   FormularioView: {event: any};
   MainMap: {datos: IMainMap};
   Activity: {activity: IActivity};
@@ -37,6 +38,10 @@ export type FormularioViewProps = NativeStackScreenProps<
 export type ErrorViewProps = NativeStackScreenProps<
   RootStackParamList,
   'ErrorView'
+>;
+export type CargaViewProps = NativeStackScreenProps<
+  RootStackParamList,
+  'CargaView'
 >;
 export type MainMapProps = NativeStackScreenProps<
   RootStackParamList,

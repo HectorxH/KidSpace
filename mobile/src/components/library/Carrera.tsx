@@ -36,52 +36,61 @@ const Carrera = ({navigation, route}: CarreraProps) => {
         </View>
       </View>
       {carrera.stories.map((story, id) => (
-        <>
-          <View
-            key={story.title}
+        <View
+          key={id}
+          style={{
+            flex: 1,
+            marginRight: RSize(0.03, 'h'),
+            justifyContent: 'center',
+          }}>
+          <TouchableHighlight
+            underlayColor={'#F6F6F6'}
+            key={id}
             style={{
-              flex: 1,
-              marginRight: RSize(0.03, 'h'),
-              justifyContent: 'center',
-            }}>
-            <TouchableHighlight
-              key={id}
-              onPress={() =>
-                navigation.push('Story', {
-                  Info: story,
-                })
-              }>
-              <Card key={story.title}>
-                <View
+              borderRadius: 20,
+            }}
+            onPress={() =>
+              navigation.push('Story', {
+                Info: story,
+              })
+            }>
+            <Card
+              // key={story.title}
+              style={{
+                borderRadius: 20,
+              }}>
+              <View
+                style={{
+                  flex: 1,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  elevation: 5,
+                }}>
+                <Image
+                  source={images[`${story.estado}`].uri}
                   style={{
-                    flex: 1,
-                    alignItems: 'center',
-                    alignContent: 'center',
-                    elevation: 5,
-                  }}>
-                  <Image
-                    source={images[`${story.estado}`].uri}
-                    style={{
-                      width: RSize(0.06, 'h'),
-                      height: RSize(0.06, 'h'),
-                    }}
-                  />
-                </View>
-                <Card.Cover
-                  source={imagesPersonajes[`${story.img}`].uri}
-                  style={{height: RSize(0.63, 'h')}}
-                />
-                <Text style={styles.title2}>{story.title}</Text>
-                <View
-                  style={{
-                    flexDirection: 'row',
-                    justifyContent: 'center',
+                    width: RSize(0.06, 'h'),
+                    height: RSize(0.06, 'h'),
                   }}
                 />
-              </Card>
-            </TouchableHighlight>
-          </View>
-        </>
+              </View>
+              <Card.Cover
+                source={imagesPersonajes[`${story.img}`].uri}
+                style={{
+                  height: RSize(0.63, 'h'),
+                  marginTop: RSize(0.045, 'h'),
+                }}
+              />
+              <Text style={styles.title2}>{story.title}</Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                }}
+              />
+            </Card>
+          </TouchableHighlight>
+        </View>
       ))}
     </View>
   );
@@ -99,7 +108,7 @@ const styles = StyleSheet.create({
   viewText: {
     flexDirection: 'column',
     margin: RSize(0.01),
-    marginBottom: RSize(0.19),
+    marginBottom: RSize(0.14),
   },
   title: {
     marginLeft: RSize(0.015),
@@ -108,7 +117,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   title2: {
-    marginLeft: RSize(0.015),
+    margin: RSize(0.01),
     fontFamily: 'Poppins-Bold',
     fontSize: RSize(0.03),
     textAlign: 'center',
