@@ -447,7 +447,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -476,7 +476,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -505,7 +505,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -534,7 +534,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "etiqueta_muffin",
+        "name": "chillona",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -591,7 +591,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja2",
+        "name": "chillona",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -644,7 +644,7 @@
     ],
     "texts": [
       {
-        "text": "Cuanto menor sea el contraste de claridad y oscuridad entre las letras y el fondo",
+        "text": "Cuanto menor sea el *contraste de claridad y oscuridad* entre las letras y el fondo",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -742,7 +742,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -771,7 +771,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  

@@ -23,18 +23,30 @@ interface ActividadComponentProps {
   actividades: Actividad;
   nombreActividad: string;
   cantMonedas: number;
-  dragAnswers: [string[], ReactStateSetter<string[]>];
-  rightDragAnswer: string[];
   pageNumber: [number, ReactStateSetter<number>];
-  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
-  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
+
+  // drag
+  dragAnswers: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
+
+  // inputfield
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
+
+  // alternativas
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+
+  // dropdown
+  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+
+  // quiz
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
 }
 
 const ActividadComponent = (props: ActividadComponentProps) => {
@@ -44,6 +56,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     cantMonedas,
     dragAnswers,
     rightDragAnswer,
+    userInputAnswers,
+    rightInputAnswer,
     userAnswers,
     userAnswersDropdown,
     userAnswersQuiz,
@@ -129,6 +143,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               <StoryComponent
                 story={actividad}
                 pageNumber={pageNumber}
+                userInputAnswers={userInputAnswers}
                 dragAnswers={dragAnswers}
                 userAnswers={userAnswers}
                 pickedAnswers={pickedAnswers}
@@ -194,6 +209,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           cantMonedas={cantMonedas}
           storyLength={actividades.length}
           dragAnswers={dragAnswers}
+          userInputAnswers={userInputAnswers}
+          rightInputAnswer={rightInputAnswer}
           rightDragAnswer={rightDragAnswer}
           userAnswers={userAnswers[0]}
           userAnswersDropdown={userAnswersDropdown[0]}

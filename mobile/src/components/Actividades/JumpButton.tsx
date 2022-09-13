@@ -11,11 +11,23 @@ interface JumpButtonProps {
   pageNumber: [number, ReactStateSetter<number>];
   nextPage(): void;
   toggleVisibility: boolean;
+
+  // alternativas
   userAnswers: number[][][];
+
+  // dropdown
   userAnswersDropdown: number[][][];
+
+  // quiz
   userAnswersQuiz: number[][];
+
+  // drag
   userDragAnswer: [string[], ReactStateSetter<string[]>];
   rightDragAnswer: string[];
+
+  // inputfield
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswers: number[][];
 }
 
 const JumpButton = (props: JumpButtonProps) => {
@@ -26,12 +38,14 @@ const JumpButton = (props: JumpButtonProps) => {
   const jumpPage = (pgNumber: number, requirements: number[]) => {
     if (
       checkAnswers(
+        requirements,
         props.userAnswers,
         props.userAnswersDropdown,
         props.userAnswersQuiz,
-        requirements,
         props.userDragAnswer[0],
         props.rightDragAnswer,
+        props.userInputAnswers[0],
+        props.rightInputAnswers,
       ) === true
     ) {
       if (pgNumber === -1) {
@@ -57,12 +71,14 @@ const JumpButton = (props: JumpButtonProps) => {
                     }
                     settings={
                       checkAnswers(
+                        jumpButton.require,
                         props.userAnswers,
                         props.userAnswersDropdown,
                         props.userAnswersQuiz,
-                        jumpButton.require,
                         props.userDragAnswer[0],
                         props.rightDragAnswer,
+                        props.userInputAnswers[0],
+                        props.rightInputAnswers,
                       ) === true
                         ? {
                             buttonIcon: jumpButton.settings.buttonIconNormal,

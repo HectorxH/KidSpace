@@ -86,6 +86,7 @@ const images: {
     caja3: require('./extras/caja3.png'),
     ejemplo_contraste1: require('./extras/ejemplo_contraste1.png'),
     ejemplo_contraste2: require('./extras/ejemplo_contraste2.png'),
+    chillona: require('./extras/chillona.png'),
 
     tempera_roja: require('./extras/tempera_roja.png'),
     tempera_negra: require('./extras/tempera_negra.png'),
@@ -111,6 +112,9 @@ const images: {
     azucar1: require('./extras/azucar1.png'),
     azucar2: require('./extras/azucar2.png'),
     cocaAzucar: require('./extras/coca-azucar.png'),
+    persona1: require('./extras/persona1.png'),
+    persona2: require('./extras/persona2.png'),
+    persona3: require('./extras/persona3.png'),
 
     p1: require('./extras/p1.png'),
     p2: require('./extras/p2.png'),

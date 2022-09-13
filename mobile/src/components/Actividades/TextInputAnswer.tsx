@@ -1,51 +1,55 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import Answers from './Answers';
+import {View, StyleSheet, TextInput} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
-import {IAlternativas, IQuiz} from '../../types/activity';
-import QuizAnswers from './QuizAnswers';
+import {ITextFieldQuestion} from '../../types/activity';
+import Layout from '../Utils/Layout';
+import {RSize} from '../../utils/responsive';
 
 interface TextInputAnswerProps {
-  questions: IAlternativas[] | never[];
-  quiz: IQuiz[] | never[];
-  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
-  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+  textFieldQuestions: ITextFieldQuestion[] | never[];
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
   pageNumber: number;
 }
 
 const TextInputAnswer = (props: TextInputAnswerProps) => {
-  if (props.questions.length === 0 && props.quiz.length === 0) {
+  if (props.textFieldQuestions.length === 0) {
     return null;
   }
 
+  // function onFieldChange(newValue: number, answerNumber: number) {
+  //   let userAnswers = [...props.userInputAnswers[0]];
+  //   userAnswers[props.pageNumber][answerNumber] = newValue;
+  //   props.userInputAnswers[1](userAnswers);
+  // }
+
   return (
     <View style={styles.container}>
-      {props.questions.length !== 0 &&
-        props.questions.map((question: IAlternativas, index) => {
+      {props.textFieldQuestions.length !== 0 &&
+        props.textFieldQuestions.map((question: ITextFieldQuestion, index) => {
           return (
             <View style={styles.overlay} key={index.toString()}>
-              <Answers
-                question={question}
-                userAnswers={props.userAnswers}
-                pickedAnswers={props.pickedAnswers}
-                pageNumber={props.pageNumber}
-                answerNumber={index}
-              />
-            </View>
-          );
-        })}
-      {props.quiz.length !== 0 &&
-        props.quiz.map((question: IQuiz, index) => {
-          return (
-            <View style={styles.overlay} key={index.toString()}>
-              <QuizAnswers
-                question={question}
-                userAnswersQuiz={props.userAnswersQuiz}
-                pickedAnswersQuiz={props.pickedAnswersQuiz}
-                pageNumber={props.pageNumber}
-                answerNumber={index}
+              <Layout
+                position={question.position}
+                ObjectView={
+                  <View style={styles.inputFieldBox}>
+                    <TextInput
+                      style={styles.input}
+                      onChangeText={newValue => {
+                        let userAnswers = [...props.userInputAnswers[0]];
+                        userAnswers[props.pageNumber][index] = parseInt(
+                          newValue,
+                          10,
+                        );
+                        props.userInputAnswers[1](userAnswers);
+                      }}
+                      value={props.userInputAnswers[0][props.pageNumber][
+                        index
+                      ].toString()}
+                      placeholder="useless placeholder"
+                      keyboardType="numeric"
+                    />
+                  </View>
+                }
               />
             </View>
           );
@@ -65,6 +69,23 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     flexDirection: 'column',
+  },
+  inputFieldBox: {
+    backgroundColor: 'white',
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: 'black',
+    height: '100%',
+    width: '100%',
+  },
+  input: {
+    height: '100%',
+    width: '100%',
+    textAlign: 'center',
+    fontSize: RSize(0.05, 'h'),
+    // margin: 12,
+    // borderWidth: 1,
+    // padding: 10,
   },
 });
 

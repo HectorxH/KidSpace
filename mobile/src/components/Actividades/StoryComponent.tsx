@@ -9,17 +9,29 @@ import AlternativasDropdown from './AlternativasDropdown';
 import {ReactStateSetter} from '../../types/others';
 import {IActivityPage} from '../../types/activity';
 import Draggable from './Draggable';
+import TextInputAnswer from './TextInputAnswer';
 
 interface StoryComponentProps {
   story: IActivityPage;
   pageNumber: number;
+
+  // drag
   dragAnswers: [string[], ReactStateSetter<string[]>];
+
+  // alternativas
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+
+  // dropdown
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+
+  // quiz
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+
+  // input field
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
 }
 
 const StoryComponent = (props: StoryComponentProps) => {
@@ -38,6 +50,11 @@ const StoryComponent = (props: StoryComponentProps) => {
   const alternativasDropdown =
     typeof story.alternativasDropdown !== 'undefined'
       ? story.alternativasDropdown
+      : [];
+
+  const inputFieldQuestions =
+    typeof story.textFieldQuestion !== 'undefined'
+      ? story.textFieldQuestion
       : [];
 
   return (
@@ -79,7 +96,14 @@ const StoryComponent = (props: StoryComponentProps) => {
           pageNumber={props.pageNumber}
         />
       </View>
-
+      {/* Preguntas / InputField */}
+      <View style={styles.overlay}>
+        <TextInputAnswer
+          textFieldQuestions={inputFieldQuestions}
+          userInputAnswers={props.userInputAnswers}
+          pageNumber={props.pageNumber}
+        />
+      </View>
       {/* Draggable / Seleccion colores */}
       {typeof story.draggable !== 'undefined' &&
         story.draggable.draggable === true && (

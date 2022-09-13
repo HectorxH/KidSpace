@@ -1,6 +1,5 @@
 import {FlexAlignType, StyleSheet} from 'react-native';
 import {
-  IAlternativasSettings,
   IImagesSettings,
   ITextBoxSettings,
   ITextSettings,
@@ -8,12 +7,14 @@ import {
 import {RSize} from '../../utils/responsive';
 
 export function checkAnswers(
+  requirements: number[],
   userAnswers: number[][][],
   userAnswersDropdown: number[][][],
   userAnswersQuiz: number[][],
-  requirements: number[],
   userDragAnswer: string[],
   rightDragAnswer: string[],
+  userInputAnswers: number[][],
+  rightInputsAnswers: number[][],
 ) {
   var respuestasCorrectas =
     requirements
@@ -35,6 +36,15 @@ export function checkAnswers(
       .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n => (userDragAnswer[n] === rightDragAnswer[n] ? [1] : [0]))
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n =>
+        userInputAnswers[n]
+          .map((userAnswer, idx) =>
+            userAnswer === rightInputsAnswers[n][idx] ? [1] : [0],
+          )
+          .reduce((x, y) => Number(x) + Number(y), 0),
+      )
       .reduce((x, y) => Number(x) + Number(y), 0);
 
   var cantidadRespuestas =
@@ -55,9 +65,41 @@ export function checkAnswers(
     requirements
       .map(n => userAnswersQuiz[n].length)
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    requirements.length;
+    requirements.length + // este requirements.length es para los drag, siempre es 1 por página
+    requirements
+      .map(n => rightInputsAnswers[n].length)
+      .reduce((x, y) => Number(x) + Number(y), 0);
 
-  console.log(respuestasCorrectas, cantidadRespuestas);
+  console.log(
+    'Respuestas correctas: ',
+    respuestasCorrectas,
+    'Cantidad respuestas: ',
+    cantidadRespuestas,
+  );
+
+  console.log(
+    'Respuestas correctas inputfield: ',
+    requirements
+      .map(n =>
+        userInputAnswers[n]
+          .map((userAnswer, idx) =>
+            userAnswer === rightInputsAnswers[n][idx] ? [1] : [0],
+          )
+          .reduce((x, y) => Number(x) + Number(y), 0),
+      )
+      .reduce((x, y) => Number(x) + Number(y), 0),
+    // .reduce((x, y) => Number(x) + Number(y), 0),
+    // ,
+    'Cantidad respuestas inputfield: ',
+    requirements
+      .map(n => rightInputsAnswers[n].length)
+      .reduce((x, y) => Number(x) + Number(y), 0),
+  );
+
+  requirements.map(n => {
+    console.log('input field answers:', userInputAnswers[n]);
+    console.log('right field answers:', rightInputsAnswers[n]);
+  });
   return respuestasCorrectas === cantidadRespuestas;
 }
 
@@ -209,30 +251,4 @@ export function getImageStyle(
   });
 
   return imageStyles;
-}
-
-interface BaseAnswerProps {
-  height: string;
-  width: string;
-  alignSelf: FlexAlignType | 'auto' | undefined;
-  opacity: number;
-}
-export function getAnswerStyle(
-  baseAnswerStyle: BaseAnswerProps,
-  answerStyle: IAlternativasSettings | undefined,
-) {
-  const newAnswerStyle = typeof answerStyle !== 'undefined' ? answerStyle : {};
-  const answerStyles = StyleSheet.create({
-    settings: {
-      ...baseAnswerStyle,
-      ...{
-        elevation:
-          typeof newAnswerStyle.elevation !== 'undefined'
-            ? newAnswerStyle.elevation
-            : 1,
-      },
-    },
-  });
-
-  return answerStyles;
 }
