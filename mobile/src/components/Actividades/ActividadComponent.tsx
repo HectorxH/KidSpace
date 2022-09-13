@@ -22,6 +22,7 @@ import MaterialSelector from './MaterialSelector';
 interface ActividadComponentProps {
   actividades: Actividad;
   nombreActividad: string;
+  cantMonedas: number;
   dragAnswers: [string[], ReactStateSetter<string[]>];
   rightDragAnswer: string[];
   pageNumber: [number, ReactStateSetter<number>];
@@ -40,6 +41,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
   const {
     actividades,
     nombreActividad,
+    cantMonedas,
     dragAnswers,
     rightDragAnswer,
     userAnswers,
@@ -189,6 +191,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
       <View style={styles.overlay}>
         <ActNavigation
           actividades={actividades}
+          cantMonedas={cantMonedas}
           storyLength={actividades.length}
           dragAnswers={dragAnswers}
           rightDragAnswer={rightDragAnswer}

@@ -1,6 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Animated, Image} from 'react-native';
+import {CommonActions} from '@react-navigation/native';
 import {Button, Chip} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -10,11 +11,11 @@ import LottieRecompensaBadge from '../../assets/recompensa/badge.json';
 import LottieConfetti from '../../assets/recompensa/confetti.json';
 import {RSize} from '../../utils/responsive';
 
-const cantMonedas = 200;
-
-const Recompensas = ({navigation}: RecompensasProps) => {
+const Recompensas = ({navigation, route}: RecompensasProps) => {
+  const cantMonedas = route.params.cantMonedas;
   let animationBadge: any = React.createRef();
   let animationConfetti: any = React.createRef();
+  let loadingButton = false;
   const [fadeAnimFel] = useState(new Animated.Value(0));
   const [fadeAnimMon] = useState(new Animated.Value(0));
   const [fadeAnimBut] = useState(new Animated.Value(0));
@@ -43,15 +44,23 @@ const Recompensas = ({navigation}: RecompensasProps) => {
   }, []);
 
   const handleEndRecompensa = async () => {
-    let oldCantMonedas = await AsyncStorage.getItem('@monedas');
-    if (oldCantMonedas === null) {
-      oldCantMonedas = '0';
+    if (!loadingButton) {
+      loadingButton = true;
+      let oldCantMonedas = await AsyncStorage.getItem('@monedas');
+      if (oldCantMonedas === null) {
+        oldCantMonedas = '0';
+      }
+      await AsyncStorage.setItem(
+        '@monedas',
+        (parseInt(oldCantMonedas, 10) + cantMonedas).toString(),
+      );
+      navigation?.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{name: 'MainMap'}],
+        }),
+      );
     }
-    await AsyncStorage.setItem(
-      '@monedas',
-      (Number(oldCantMonedas) + cantMonedas).toString(),
-    );
-    navigation.push('MainMap');
   };
 
   return (

@@ -53,7 +53,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
       const m = await AsyncStorage.getItem('@monedas');
-      setCantMonedas(Number(m));
+      setCantMonedas(parseInt(m!, 10));
     } catch (e) {
       console.log('A');
       console.log(e);
@@ -136,6 +136,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               // actividad: 'diseños',
               // actividad: 'nutricion1',
               actividad: 'diseño1',
+              cantMonedas: 200,
               // actividad: 'nutricion2',
               // actividad: 'diseño2',
               // actividad: 'debug',
@@ -162,6 +163,7 @@ const MainMap = ({navigation}: MainMapProps) => {
           onPress={() =>
             navigation.navigate('Actividades', {
               actividad: 'debug',
+              cantMonedas: 200,
               // actividad: 'diseños',
             })
           }>

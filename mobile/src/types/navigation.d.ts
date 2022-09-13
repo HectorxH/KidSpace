@@ -25,14 +25,14 @@ export type RootStackParamList = {
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
 
-  Actividades: {actividad: actividadNombre};
+  Actividades: {actividad: actividadNombre; cantMonedas: number};
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;
   FinalQuiz: undefined;
   ResultadoFinal: undefined;
   DynamicTable: undefined;
-  Recompensas: undefined;
+  Recompensas: {cantMonedas: number};
 };
 
 export type MainMapProps = NativeStackScreenProps<

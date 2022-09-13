@@ -58,8 +58,7 @@ const Draggable = (props: DraggableProps) => {
   const [receivingItemList, setReceivedItemList] = React.useState(
     FirstReceivingItemList,
   );
-  const [dragItemMiddleList, setDragItemListMiddle] =
-    React.useState(draggableItemList);
+
   const [resultColor, setResultColor] = React.useState('white');
 
   const colores = [
@@ -72,7 +71,7 @@ const Draggable = (props: DraggableProps) => {
     'tempera_blanca',
   ];
 
-  const colorResult = newReceivingItemList => {
+  const colorResult = (newReceivingItemList: any) => {
     console.log(newReceivingItemList);
     const first = newReceivingItemList[0].name;
     const second = newReceivingItemList[1].name;
@@ -146,7 +145,7 @@ const Draggable = (props: DraggableProps) => {
     setResultColor(color);
   };
 
-  const DragUIComponent = ({item, index}: any) => {
+  const DragUIComponent = ({_, index}: any) => {
     return (
       <DraxView
         style={styles.draggableCircle}
@@ -166,13 +165,9 @@ const Draggable = (props: DraggableProps) => {
       <DraxView
         style={[styles.receivingZone, {backgroundColor: item.background_color}]}
         receivingStyle={styles.receiving}
-        renderContent={({viewState}) => {
-          const receivingDrag = viewState && viewState.receivingDrag;
-          const payload = receivingDrag && receivingDrag.payload;
-        }}
         key={index}
         onReceiveDragDrop={event => {
-          let selected_item = dragItemMiddleList[event.dragged.payload];
+          let selected_item = draggableItemList[event.dragged.payload];
           let newReceivingItemList = [...receivingItemList];
           newReceivingItemList[index] = selected_item;
           setReceivedItemList(newReceivingItemList);
@@ -200,7 +195,7 @@ const Draggable = (props: DraggableProps) => {
           </View>
           <View style={styles.draxListContainer}>
             <DraxList
-              data={dragItemMiddleList}
+              data={draggableItemList}
               renderItemContent={DragUIComponent}
               keyExtractor={(item, index) => index.toString()}
               numColumns={5}

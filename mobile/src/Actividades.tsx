@@ -6,6 +6,7 @@ import Activities from './assets/activities/activities';
 
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const nombreActividad = route.params.actividad;
+  const cantMonedas = route.params.cantMonedas;
 
   const actividad = Activities[nombreActividad];
 
@@ -98,6 +99,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
         <ActividadComponent
           actividades={actividad}
           nombreActividad={nombreActividad}
+          cantMonedas={cantMonedas}
           pageNumber={[pageNumber, setPageNumber]}
           userAnswers={[userAnswers, setUserAnswers]}
           pickedAnswers={[pickedAnswers, setPickedAnswers]}

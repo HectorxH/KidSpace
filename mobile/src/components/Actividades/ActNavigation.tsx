@@ -1,5 +1,4 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
-import {CommonActions} from '@react-navigation/native';
 import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {Actividad, Vec3} from '../../types/activity';
@@ -10,6 +9,7 @@ import JumpCard from './JumpCard';
 
 interface ActNavigationProps {
   actividades: Actividad;
+  cantMonedas: number;
   storyLength: number;
   dragAnswers: [string[], ReactStateSetter<string[]>];
   rightDragAnswer: string[];
@@ -28,6 +28,7 @@ interface ActNavigationProps {
 
 const ActNavigation = (props: ActNavigationProps) => {
   const {actividades, storyLength, navigation} = props;
+  const cantMonedas = props.cantMonedas;
   const [pageNumber, setPageNumber] = props.pageNumber;
   const userAnswers = props.userAnswers[pageNumber];
   const userAnswersDropdown = props.userAnswersDropdown[pageNumber];
@@ -60,7 +61,7 @@ const ActNavigation = (props: ActNavigationProps) => {
       ) {
         props.toggleValues[1]([0]);
         props.placedItems[1](
-          actividades[pageNumber + 1].AR.models.map(() => 0),
+          actividades[pageNumber + 1].AR!.models.map(() => 0),
         );
         props.nPlacedItems[1](0);
         props.models[1]([]);
@@ -72,12 +73,7 @@ const ActNavigation = (props: ActNavigationProps) => {
       }
       setPageNumber(pageNumber + 1);
     } else {
-      navigation?.dispatch(
-        CommonActions.reset({
-          index: 0,
-          routes: [{name: 'MainMap'}],
-        }),
-      );
+      navigation?.navigate('Recompensas', {cantMonedas});
     }
   };
 
