@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import express from 'express';
 import _ from 'lodash';
-import { IFavoritaRequest, IPlanificadaRequest } from '../types/teacher';
+import { IFavoritaRequest } from '../types/teacher';
 import Profesor from '../models/Profesor';
 
 const router = express.Router();
@@ -45,7 +45,7 @@ router.post('/favoritas', async (req:IFavoritaRequest, res) => {
 router.get('/planificadas', async (req, res) => {
   try {
     const user = req.user?._id;
-    const profesor = await Profesor.findOne({ user });
+    const profesor = await Profesor.findOne({ user }).populate({ path: 'planificadas', populate: { path: 'curso' } });
 
     if (profesor === null) {
       res.sendStatus(404);
@@ -58,7 +58,7 @@ router.get('/planificadas', async (req, res) => {
   }
 });
 
-router.post('/planificadas', async (req:IPlanificadaRequest, res) => {
+router.post('/planificadas', async (req, res) => {
   try {
     const user = req.user?._id;
     const {

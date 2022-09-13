@@ -24,10 +24,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
 
       const {username, password} = res.data;
       await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
-
-      res = await axios.post(
-        `${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`,
-      );
+      await axios.post(`${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`);
 
       navigation.push('MainMap', {
         datos: {nombres},

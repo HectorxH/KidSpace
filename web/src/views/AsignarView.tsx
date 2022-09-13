@@ -1,8 +1,9 @@
+/* eslint-disable no-underscore-dangle */
 import {
   Box, Button, MenuItem,
   TextField, Typography, Theme, Stack,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import axios from 'axios';
@@ -12,17 +13,7 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import es from 'date-fns/locale/es';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
-
-const cursosAux = [
-  {
-    id: 1,
-    nombre: '6-A',
-  },
-  {
-    id: 2,
-    nombre: '6-B',
-  },
-];
+import { ICursos } from '../types/cursos';
 
 const AsignarView = () => {
   const navigate = useNavigate();
@@ -35,7 +26,8 @@ const AsignarView = () => {
   const { logout } = useAuth();
 
   const currentDate = new Date().toISOString().slice(0, 10);
-  const [curso, setCurso] = useState('A');
+  const [cursos, setCursos] = useState<ICursos>();
+  const [cursoId, setCursoId] = useState('');
   const [fecha, setFecha] = useState(currentDate);
   const [fechaShow, setFechaShow] = useState(currentDate);
   const [success, setSuccess] = useState(false);
@@ -49,20 +41,36 @@ const AsignarView = () => {
   const handleSubmit : React.FormEventHandler = async (e) => {
     e.preventDefault();
     const req = {
-      nactividad, nunidad, curso, fecha, del: false,
+      nactividad, nunidad, curso: cursoId, fecha, del: false,
     };
 
     try {
       await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Profesor/planificadas`, req);
     } catch (err) {
       console.log(err);
-      if (axios.isAxiosError(err) && err.response && err.response.status === 401) {
+      if (axios.isAxiosError(err) && err.response?.status === 401) {
         logout();
       }
     }
     setSuccess(true);
     setTimeout(handleBack, 1200);
   };
+
+  const updateCursos = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso`);
+      setCursos(res.data.cursos);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (!cursos) updateCursos();
+  }, []);
 
   return (
     <Box sx={{
@@ -84,11 +92,11 @@ const AsignarView = () => {
               sx={{ minWidth: '270px' }}
               label="Curso"
               defaultValue=""
-              onChange={(e) => setCurso(e.target.value)}
+              onChange={(e) => setCursoId(e.target.value)}
               required
             >
-              {cursosAux.map((nombre) => (
-                <MenuItem value={nombre.nombre}>{nombre.nombre}</MenuItem>
+              {cursos?.map((c) => (
+                <MenuItem key={c._id} value={c._id}>{c.nombre}</MenuItem>
               ))}
             </TextField>
           </Stack>

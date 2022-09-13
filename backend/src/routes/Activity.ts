@@ -21,6 +21,7 @@ router.post('/message', async (req, res) => {
     console.log(`${req.body.nunidad}->${req.body.titulo}`);
     pusher.trigger('channel', 'message', {
       message: req.body.msg,
+      curso: req.body.curso,
     });
     console.log('ok');
     res.sendStatus(200);

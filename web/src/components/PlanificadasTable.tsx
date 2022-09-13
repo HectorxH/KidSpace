@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import {
   TableContainer, Button, Table, TableBody, Theme, IconButton,
   TableCell, TableHead, TableRow, Stack, Card,
@@ -45,6 +46,7 @@ const IniciarButton = ({ planificada, actividad, eliminarAsignacion }
     try {
       const resp = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Activity/message`, {
         msg: actividad,
+        curso: planificada.curso._id,
       });
       console.log(resp);
       eliminarAsignacion(planificada);
@@ -143,7 +145,7 @@ const Row = ({ row, eliminarAsignacion }:RowParams) => {
       >
         {actividad?.titulo}
       </TableCell>
-      <TableCell>{curso}</TableCell>
+      <TableCell>{curso.nombre}</TableCell>
       <TableCell>{moment(fecha).format('DD/MM/YYYY')}</TableCell>
       <TableCell>
         <Stack direction="row">

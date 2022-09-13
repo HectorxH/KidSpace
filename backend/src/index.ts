@@ -158,7 +158,7 @@ app.use('/Profesor', checkAuth, ProfesorRouter);
 app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
-app.use('/Activity', ActivityRouter);
+app.use('/Activity', checkAuth, ActivityRouter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

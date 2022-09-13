@@ -9,7 +9,7 @@ export interface IFavorita {
 export interface IPlanificada {
   nunidad: number,
   nactividad: number,
-  curso: string,
+  cursoId: any,
   fecha: Date,
 }
 
@@ -30,7 +30,10 @@ export const profesorSchema = new Schema<IProfesor>({
   },
   planificadas: {
     type: [{
-      nunidad: Number, nactividad: Number, curso: String, fecha: Date,
+      nunidad: Number,
+      nactividad: Number,
+      curso: { type: Types.ObjectId, ref: 'Curso' },
+      fecha: Date,
     }],
     default: [],
   },
