@@ -24,7 +24,7 @@ import Carreras from '../assets/stories/carreras.json';
 import {useFocusEffect} from '@react-navigation/native';
 import Config from 'react-native-config';
 
-const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
+const pusher = new Pusher(Config.PUSHER_KEY, {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');

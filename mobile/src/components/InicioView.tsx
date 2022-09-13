@@ -6,18 +6,14 @@ import {RSize} from '../utils/responsive';
 import {InicioViewProps} from '../types/navigation';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
 
 const InicioView = ({navigation}: InicioViewProps) => {
-  console.log(`${Config.REACT_APP_PUSHER_KEY}`);
-  console.log(`${Config.REACT_APP_BACKEND_URL}`);
-
   const {user, refresh} = useAuth();
 
   if (user) {
     refresh();
-    navigation.push('MainMap', {datos: {nombres: user.nombres}});
+    navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
   }
 
   return (

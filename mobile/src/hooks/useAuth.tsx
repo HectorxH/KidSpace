@@ -30,7 +30,7 @@ export const AuthProvider = ({children}: {children: any}) => {
     try {
       await AsyncStorage.setItem('@user', JSON.stringify(data));
       setUser(data);
-      navigation?.navigate('MainMap');
+      navigation?.navigate('MainMap', {datos: {nombres: user?.nombres}});
     } catch (e) {
       console.log(e);
     }
