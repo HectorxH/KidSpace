@@ -11,6 +11,8 @@ import JumpCard from './JumpCard';
 interface ActNavigationProps {
   actividades: Actividad;
   storyLength: number;
+  dragAnswers: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
   userAnswersQuiz: number[][];
@@ -114,6 +116,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
             userAnswersQuiz={props.userAnswersQuiz}
+            userDragAnswer={props.dragAnswers}
+            rightDragAnswer={props.rightDragAnswer}
             pageNumber={props.pageNumber}
             toggleVisibility={props.jumpVisibility}
           />
@@ -126,6 +130,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
             userAnswersQuiz={props.userAnswersQuiz}
+            userDragAnswer={props.dragAnswers}
+            rightDragAnswer={props.rightDragAnswer}
             pageNumber={props.pageNumber}
             nextPage={() => nextPageNumber()}
             toggleVisibility={props.jumpVisibility}

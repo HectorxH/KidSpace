@@ -22,6 +22,8 @@ import MaterialSelector from './MaterialSelector';
 interface ActividadComponentProps {
   actividades: Actividad;
   nombreActividad: string;
+  dragAnswers: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
   pageNumber: [number, ReactStateSetter<number>];
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
@@ -38,6 +40,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
   const {
     actividades,
     nombreActividad,
+    dragAnswers,
+    rightDragAnswer,
     userAnswers,
     userAnswersDropdown,
     userAnswersQuiz,
@@ -123,6 +127,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               <StoryComponent
                 story={actividad}
                 pageNumber={pageNumber}
+                dragAnswers={dragAnswers}
                 userAnswers={userAnswers}
                 pickedAnswers={pickedAnswers}
                 userAnswersDropdown={userAnswersDropdown}
@@ -185,6 +190,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
         <ActNavigation
           actividades={actividades}
           storyLength={actividades.length}
+          dragAnswers={dragAnswers}
+          rightDragAnswer={rightDragAnswer}
           userAnswers={userAnswers[0]}
           userAnswersDropdown={userAnswersDropdown[0]}
           userAnswersQuiz={userAnswersQuiz[0]}

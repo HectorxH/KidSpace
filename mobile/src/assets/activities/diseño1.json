@@ -538,7 +538,7 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 20,
+          "elevation": 10,
           "borderWidth": 0
         }
       }
@@ -557,6 +557,33 @@
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Cálidos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 9],
+              "end": [8.5, 12]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 12.5],
+              "end": [8.5, 15.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
       }
     ]
   },
@@ -579,7 +606,7 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 20,
+          "elevation": 10,
           "borderWidth": 0
         }
       }
@@ -594,10 +621,37 @@
         "settings": { 
           "fontSize": 0.06,
           "color": "black",
-          "elevation": 21,
+          "elevation": 11,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Fríos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 9],
+              "end": [8.5, 12]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 12.5],
+              "end": [8.5, 15.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
       }
     ]
   },
@@ -620,7 +674,7 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 20,
+          "elevation": 10,
           "borderWidth": 0
         }
       }
@@ -635,10 +689,37 @@
         "settings": { 
           "fontSize": 0.06,
           "color": "black",
-          "elevation": 21,
+          "elevation": 11,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Fríos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 9],
+              "end": [8.5, 12]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 12.5],
+              "end": [8.5, 15.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
       }
     ]
   },
@@ -1352,62 +1433,6 @@
           "start": [1, 4],
           "end": [7.5, 14]
         }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [8.5, 8],
-          "end": [11, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [12.5, 8],
-          "end": [15, 13.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [16.5, 8],
-          "end": [19, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [8, 14.5],
-          "end": [10.2, 19.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [10.3, 14.5],
-          "end": [12.5, 19.5]
-        }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [12.6, 14.5],
-          "end": [14.8, 19.5]
-        }
-      },
-      {
-        "name": "tempera_azul",
-        "position": {
-          "start": [14.9, 14.5],
-          "end": [17.1, 19.5]
-        }
-      },
-      {
-        "name": "tempera_amarilla",
-        "position": {
-          "start": [17.2, 14.5],
-          "end": [19.4, 19.5]
-        }
       }
     ],
     "jumpButton": [
@@ -1446,7 +1471,10 @@
         "visible": false
       }
     ],
-    "draggable": true
+    "draggable": {
+      "draggable": true,
+      "answer": "#31C852"
+    }
   },
   {
     "background": "",
@@ -1464,7 +1492,7 @@
     ],
     "texts": [
       {
-        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "text": "Ahora necesitas pintar la lombriz. Arrastra dos colores que, al mezclar, dan el rosado.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
@@ -1513,62 +1541,6 @@
           "start": [1, 4],
           "end": [7.5, 14]
         }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [8.5, 8],
-          "end": [11, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [12.5, 8],
-          "end": [15, 13.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [16.5, 8],
-          "end": [19, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [8, 14.5],
-          "end": [10.2, 19.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [10.3, 14.5],
-          "end": [12.5, 19.5]
-        }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [12.6, 14.5],
-          "end": [14.8, 19.5]
-        }
-      },
-      {
-        "name": "tempera_azul",
-        "position": {
-          "start": [14.9, 14.5],
-          "end": [17.1, 19.5]
-        }
-      },
-      {
-        "name": "tempera_amarilla",
-        "position": {
-          "start": [17.2, 14.5],
-          "end": [19.4, 19.5]
-        }
       }
     ],
     "jumpButton": [
@@ -1607,7 +1579,10 @@
         "visible": false
       }
     ],
-    "draggable": true
+    "draggable": {
+      "draggable": true,
+      "answer": "#FFAFAD"
+    }
   },
   {
     "background": "",
@@ -1625,7 +1600,7 @@
     ],
     "texts": [
       {
-        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "text": "Ahora necesitas pintar el cielo. Arrastra dos colores que, al mezclar, dan el azul claro.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
@@ -1674,62 +1649,6 @@
           "start": [1, 4],
           "end": [7.5, 14]
         }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [8.5, 8],
-          "end": [11, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [12.5, 8],
-          "end": [15, 13.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [16.5, 8],
-          "end": [19, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [8, 14.5],
-          "end": [10.2, 19.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [10.3, 14.5],
-          "end": [12.5, 19.5]
-        }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [12.6, 14.5],
-          "end": [14.8, 19.5]
-        }
-      },
-      {
-        "name": "tempera_azul",
-        "position": {
-          "start": [14.9, 14.5],
-          "end": [17.1, 19.5]
-        }
-      },
-      {
-        "name": "tempera_amarilla",
-        "position": {
-          "start": [17.2, 14.5],
-          "end": [19.4, 19.5]
-        }
       }
     ],
     "jumpButton": [
@@ -1768,7 +1687,10 @@
         "visible": false
       }
     ],
-    "draggable": true
+    "draggable": {
+      "draggable": true,
+      "answer": "#9EF3FF"
+    }
   },
   {
     "background": "",
@@ -1786,7 +1708,7 @@
     ],
     "texts": [
       {
-        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
@@ -1835,62 +1757,6 @@
           "start": [1, 4],
           "end": [7.5, 14]
         }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [8.5, 8],
-          "end": [11, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [12.5, 8],
-          "end": [15, 13.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [16.5, 8],
-          "end": [19, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [8, 14.5],
-          "end": [10.2, 19.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [10.3, 14.5],
-          "end": [12.5, 19.5]
-        }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [12.6, 14.5],
-          "end": [14.8, 19.5]
-        }
-      },
-      {
-        "name": "tempera_azul",
-        "position": {
-          "start": [14.9, 14.5],
-          "end": [17.1, 19.5]
-        }
-      },
-      {
-        "name": "tempera_amarilla",
-        "position": {
-          "start": [17.2, 14.5],
-          "end": [19.4, 19.5]
-        }
       }
     ],
     "jumpButton": [
@@ -1929,7 +1795,10 @@
         "visible": false
       }
     ],
-    "draggable": true
+    "draggable": {
+      "draggable": true,
+      "answer": "#63313C"
+    }
   },
   {
     "background": "",
@@ -1947,7 +1816,7 @@
     ],
     "texts": [
       {
-        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
@@ -1996,62 +1865,6 @@
           "start": [1, 4],
           "end": [7.5, 14]
         }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [8.5, 8],
-          "end": [11, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [12.5, 8],
-          "end": [15, 13.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [16.5, 8],
-          "end": [19, 13.5]
-        }
-      },
-      {
-        "name": "tempera_negra",
-        "position": {
-          "start": [8, 14.5],
-          "end": [10.2, 19.5]
-        }
-      },
-      {
-        "name": "tempera_blanca",
-        "position": {
-          "start": [10.3, 14.5],
-          "end": [12.5, 19.5]
-        }
-      },
-      {
-        "name": "tempera_roja",
-        "position": {
-          "start": [12.6, 14.5],
-          "end": [14.8, 19.5]
-        }
-      },
-      {
-        "name": "tempera_azul",
-        "position": {
-          "start": [14.9, 14.5],
-          "end": [17.1, 19.5]
-        }
-      },
-      {
-        "name": "tempera_amarilla",
-        "position": {
-          "start": [17.2, 14.5],
-          "end": [19.4, 19.5]
-        }
       }
     ],
     "jumpButton": [
@@ -2076,49 +1889,23 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Pintar",
-          "buttonTextNormal": "Pintar"
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
         },
         "position" : {
           "start": [2.2, 16.5],
           "end": [6.3, 19]
         },
-        "target": 46,
-        "require": [45],
+        "target": -1,
+        "require": [],
         "visible": false
       }
     ],
-    "draggable": true
-  },
-  {
-    "background": "bg_diseño1",
-    "items": [
-      {
-        "name": "cry",
-        "position": {
-          "start": [13, 2],
-          "end": [19, 20]
-        }
-      }
-    ],
-    "textBoxes": [
-      {
-        "position": {
-          "start": [2, 4],
-          "end": [12, 16]
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": "Parte cursed pendiente",
-        "position": {
-          "start": [3, 5],
-          "end": [11, 15]
-        }
-      }
-    ]
+    "draggable": {
+      "draggable": true,
+      "answer": ""
+    }
   }
 ]

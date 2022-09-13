@@ -82,6 +82,11 @@ export interface IAlternativas {
 export interface IAnswers {
   text: string;
   position: IPosition;
+  settings?: IAlternativasSettings;
+}
+
+export interface IAlternativasSettings {
+  elevation?: number;
 }
 
 export interface IAlternativasDropdown {
@@ -176,6 +181,11 @@ export interface ITextFieldQuestion {
   backgroundColor?: string;
 }
 
+export interface IDraggable {
+  draggable: boolean;
+  answer: string;
+}
+
 export interface IActivityPage {
   background: string;
   items?: IImages[] | never[];
@@ -189,7 +199,7 @@ export interface IActivityPage {
   jumpButton?: IJumpButton[] | never[];
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
-  draggable?: boolean;
+  draggable?: IDraggable;
   textFieldQuestion?: ITextFieldQuestion[];
 }
 

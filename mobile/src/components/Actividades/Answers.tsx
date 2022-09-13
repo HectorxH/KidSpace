@@ -105,18 +105,21 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
+    elevation: 11,
   },
   wrongAnswerButton: {
     borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
+    elevation: 11,
   },
   rightAnswerButton: {
     borderRadius: RSize(0.04, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
+    elevation: 11,
   },
   answerText: {
     color: '#063D69',

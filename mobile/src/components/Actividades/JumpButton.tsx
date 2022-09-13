@@ -14,6 +14,8 @@ interface JumpButtonProps {
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
   userAnswersQuiz: number[][];
+  userDragAnswer: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
 }
 
 const JumpButton = (props: JumpButtonProps) => {
@@ -28,6 +30,8 @@ const JumpButton = (props: JumpButtonProps) => {
         props.userAnswersDropdown,
         props.userAnswersQuiz,
         requirements,
+        props.userDragAnswer[0],
+        props.rightDragAnswer,
       ) === true
     ) {
       if (pgNumber === -1) {
@@ -57,6 +61,8 @@ const JumpButton = (props: JumpButtonProps) => {
                         props.userAnswersDropdown,
                         props.userAnswersQuiz,
                         jumpButton.require,
+                        props.userDragAnswer[0],
+                        props.rightDragAnswer,
                       ) === true
                         ? {
                             buttonIcon: jumpButton.settings.buttonIconNormal,

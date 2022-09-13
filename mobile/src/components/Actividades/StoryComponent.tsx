@@ -13,6 +13,7 @@ import Draggable from './Draggable';
 interface StoryComponentProps {
   story: IActivityPage;
   pageNumber: number;
+  dragAnswers: [string[], ReactStateSetter<string[]>];
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
@@ -80,11 +81,15 @@ const StoryComponent = (props: StoryComponentProps) => {
       </View>
 
       {/* Draggable / Seleccion colores */}
-      {typeof story.draggable !== 'undefined' && story.draggable === true && (
-        <View style={styles.overlay}>
-          <Draggable />
-        </View>
-      )}
+      {typeof story.draggable !== 'undefined' &&
+        story.draggable.draggable === true && (
+          <View style={styles.overlay}>
+            <Draggable
+              pageNumber={props.pageNumber}
+              userDragAnswers={props.dragAnswers}
+            />
+          </View>
+        )}
     </View>
   );
 };

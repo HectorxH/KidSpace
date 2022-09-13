@@ -1,5 +1,6 @@
 import {FlexAlignType, StyleSheet} from 'react-native';
 import {
+  IAlternativasSettings,
   IImagesSettings,
   ITextBoxSettings,
   ITextSettings,
@@ -11,6 +12,8 @@ export function checkAnswers(
   userAnswersDropdown: number[][][],
   userAnswersQuiz: number[][],
   requirements: number[],
+  userDragAnswer: string[],
+  rightDragAnswer: string[],
 ) {
   var respuestasCorrectas =
     requirements
@@ -29,6 +32,9 @@ export function checkAnswers(
       .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n => userAnswersQuiz[n].reduce((x, y) => Number(x) + Number(y), 0))
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n => (userDragAnswer[n] === rightDragAnswer[n] ? [1] : [0]))
       .reduce((x, y) => Number(x) + Number(y), 0);
 
   var cantidadRespuestas =
@@ -48,7 +54,8 @@ export function checkAnswers(
       .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n => userAnswersQuiz[n].length)
-      .reduce((x, y) => Number(x) + Number(y), 0);
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements.length;
 
   console.log(respuestasCorrectas, cantidadRespuestas);
   return respuestasCorrectas === cantidadRespuestas;
@@ -202,4 +209,30 @@ export function getImageStyle(
   });
 
   return imageStyles;
+}
+
+interface BaseAnswerProps {
+  height: string;
+  width: string;
+  alignSelf: FlexAlignType | 'auto' | undefined;
+  opacity: number;
+}
+export function getAnswerStyle(
+  baseAnswerStyle: BaseAnswerProps,
+  answerStyle: IAlternativasSettings | undefined,
+) {
+  const newAnswerStyle = typeof answerStyle !== 'undefined' ? answerStyle : {};
+  const answerStyles = StyleSheet.create({
+    settings: {
+      ...baseAnswerStyle,
+      ...{
+        elevation:
+          typeof newAnswerStyle.elevation !== 'undefined'
+            ? newAnswerStyle.elevation
+            : 1,
+      },
+    },
+  });
+
+  return answerStyles;
 }

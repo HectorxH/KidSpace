@@ -13,6 +13,8 @@ interface JumpCardProps {
   userAnswers: number[][][];
   userAnswersDropdown: number[][][];
   userAnswersQuiz: number[][];
+  userDragAnswer: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
 }
 
 const JumpCard = (props: JumpCardProps) => {
@@ -27,6 +29,8 @@ const JumpCard = (props: JumpCardProps) => {
         props.userAnswersDropdown,
         props.userAnswersQuiz,
         requirements,
+        props.userDragAnswer[0],
+        props.rightDragAnswer,
       ) === true
     ) {
       props.pageNumber[1](pgNumber);
@@ -53,6 +57,8 @@ const JumpCard = (props: JumpCardProps) => {
                         props.userAnswersDropdown,
                         props.userAnswersQuiz,
                         jumpCard.disableWhen,
+                        props.userDragAnswer[0],
+                        props.rightDragAnswer,
                       ) === true
                     }
                   />

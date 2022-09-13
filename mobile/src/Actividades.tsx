@@ -59,6 +59,14 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
     ),
   );
 
+  // Variables para controlar avance en preguntas de drag; [pageNumber] = pageAnswer
+  const [userDragAnswer, setUserDragAnswer] = useState<string[]>(
+    actividad.map(() => ''),
+  );
+  const rightDragAnswer = actividad.map(s =>
+    typeof s.draggable !== 'undefined' ? s.draggable.answer : '',
+  );
+
   // Variables para controlar las texturas del modelo 3d en caso de que aplique
   // [pageNumber][models_number] = "nombre_textura", ejemplo: modelMaterial[0][0] = "azul_quijote"
   const [modelMaterial, setModelMaterial] = useState<string[][]>(
@@ -100,6 +108,8 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
           ]}
           userAnswersQuiz={[userAnswersQuiz, setUserAnswersQuiz]}
           pickedAnswersQuiz={[pickedAnswersQuiz, setPickedAnswersQuiz]}
+          dragAnswers={[userDragAnswer, setUserDragAnswer]}
+          rightDragAnswer={rightDragAnswer}
           modelMaterial={[modelMaterial, setModelMaterial]}
           selectedMaterial={[selectedMaterial, setSelectedMaterial]}
           navigation={navigation}
