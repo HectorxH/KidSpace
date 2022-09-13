@@ -15,11 +15,12 @@ import {
 import {Button, Badge, Chip} from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../assets/imgs/handler/images';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
-import {images} from '../assets/map/handler/images';
+import {mapImages} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
 import {useFocusEffect} from '@react-navigation/native';
 import Config from 'react-native-config';
@@ -39,6 +40,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
   const [user, setUser] = useState({key: 1, name: datos.nombres});
+  const [cantMonedas, setCantMonedas] = useState(0);
 
   const loadNotification = () => {
     let visible = false;
@@ -66,10 +68,14 @@ const MainMap = ({navigation, route}: MainMapProps) => {
       setMessage(JSON.parse(jsonAllMessages!));
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
+      const m = await AsyncStorage.getItem('@monedas');
+      setCantMonedas(parseInt(m!, 10));
     } catch (e) {
+      console.log('A');
       console.log(e);
     }
   };
+
   const loadMessage = async () => {
     try {
       channel.bind('message', async function (data: {message: IActivity}) {
@@ -87,10 +93,11 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           '@notification',
           allMessages.length.toString(),
         );
-        const n = await AsyncStorage.getItem('@notification');
+        let n = await AsyncStorage.getItem('@notification');
         setNotification(n!);
       });
     } catch (e) {
+      console.log('B');
       console.log(e);
     }
   };
@@ -122,9 +129,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
 
   const HandleAct = async () => {
     try {
-      //const jsonMessages = await AsyncStorage.getItem('@message');
-      //const messages = JSON.parse(jsonMessages!);
-      //const visible = await AsyncStorage.getItem('@visible');
       notification !== '0'
         ? navigation.push('AvailableActivities', {activities: message})
         : navigation.push('NoAvailableActivities');
@@ -181,13 +185,19 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           </View>
         </Pressable>
       </Modal>
-      <ImageBackground style={styles.background} source={images.solo_cielo.uri}>
+      <ImageBackground
+        style={styles.background}
+        source={mapImages.solo_cielo.uri}>
         <ImageBackground
           style={styles.background}
-          source={images.edificios.uri}>
+          source={mapImages.edificios.uri}>
           <View style={styles.view}>
-            <Chip style={styles.chip}>
+            <Chip style={styles.nameChip}>
               <Text style={styles.title}> ¡Hola, {user.name}!</Text>
+            </Chip>
+            <Chip style={styles.monedaChip}>
+              <Image style={styles.icon} source={images.moneda.uri} />
+              <Text style={styles.monedaText}>{cantMonedas}</Text>
             </Chip>
           </View>
           <ScrollView
@@ -200,7 +210,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               style={{
                 flex: 1,
               }}
-              source={images.ruta.uri}>
+              source={mapImages.ruta.uri}>
               <View style={{flexDirection: 'row'}}>
                 {Carreras.map((carrera, id) => (
                   <View style={{flex: 1}} key={id}>
@@ -229,7 +239,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                             height: 150,
                             overflow: 'hidden',
                           }}
-                          source={images[`${carrera.img}`].uri}
+                          source={mapImages[`${carrera.img}`].uri}
                         />
                       </TouchableOpacity>
                     </View>
@@ -256,10 +266,15 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               )}
               contentStyle={{flexDirection: 'column'}}
               onPress={() =>
-                navigation.push('CuentoIntroductorio', {
-                  actividad: 'diagramas',
-                  // tipo: 'introductory',
-                  // tipo: 'interactive',
+                navigation.navigate('Actividades', {
+                  // actividad: 'diagramas',
+                  // actividad: 'diseños',
+                  // actividad: 'nutricion1',
+                  actividad: 'diseño1',
+                  cantMonedas: 200,
+                  // actividad: 'nutricion2',
+                  // actividad: 'diseño2',
+                  // actividad: 'debug',
                 })
               }>
               <Text style={styles.subtitle}>Perfil</Text>
@@ -280,7 +295,13 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() => console.log('Pressed')}>
+              onPress={() =>
+                navigation.navigate('Actividades', {
+                  actividad: 'debug',
+                  cantMonedas: 200,
+                  // actividad: 'diseños',
+                })
+              }>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
@@ -395,11 +416,23 @@ const styles = StyleSheet.create({
   view: {
     flex: 0.19,
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  chip: {
+  nameChip: {
     backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     margin: RSize(0.02, 'h'),
+  },
+  monedaChip: {
+    backgroundColor: '#F1F3F8',
+    margin: RSize(0.02, 'h'),
+    justifyContent: 'center',
+  },
+  monedaText: {
+    fontFamily: 'Poppins',
+    fontSize: RSize(0.04, 'h'),
+    textAlign: 'center',
+    color: '#000000',
   },
   title: {
     fontFamily: 'Poppins-Bold',
@@ -433,6 +466,11 @@ const styles = StyleSheet.create({
     width: RSize(0.45, 'h'),
     position: 'absolute',
     right: RSize(0.01, 'h'),
+  },
+  icon: {
+    resizeMode: 'cover',
+    height: RSize(0.05, 'h'),
+    width: RSize(0.05, 'h'),
   },
 });
 

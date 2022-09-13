@@ -10,18 +10,17 @@
 
 import React from 'react';
 
-import CuentoIntroductorio from './CuentoIntroductorio';
-import CuentoInteractivo from './CuentoInteractivo';
-import Desafio from './DesafioIntroductorio';
-import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
+import Actividades from './Actividades';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
 import Carrera from './components/library/Carrera';
 import Story from './components/library/Story';
-import Conclusion from './components/Conclusion/Conclusion';
-import ConclusionStory from './components/Conclusion/ConclusionStory';
-import ResultadoFinal from './components/Conclusion/ResultadoFinal';
+// import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
+// import Conclusion from './components/Conclusion/Conclusion';
+import Recompensas from './components/Recompensas/Recompensas';
+// import ConclusionStory from './components/Conclusion/ConclusionStory';
+// import ResultadoFinal from './components/Conclusion/ResultadoFinal';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
 import MainMap from './components/MainMap';
@@ -87,28 +86,23 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="CuentoInteractivo"
-          component={CuentoInteractivo}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="CuentoIntroductorio"
-          component={CuentoIntroductorio}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Desafio"
-          component={Desafio}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="FinalQuiz"
-          component={FinalQuiz}
+          name="Actividades"
+          component={Actividades}
           options={{headerShown: false}}
         />
         <Stack.Screen
           name="DynamicTable"
           component={DynamicTable}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Recompensas"
+          component={Recompensas}
+          options={{headerShown: false}}
+        />
+        {/* <Stack.Screen
+          name="FinalQuiz"
+          component={FinalQuiz}
           options={{headerShown: false}}
         />
         <Stack.Screen
@@ -125,7 +119,7 @@ const App = () => {
           name="ResultadoFinal"
           component={ResultadoFinal}
           options={{headerShown: false}}
-        />
+        /> */}
         <Stack.Screen name="Qr" component={Qr} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>

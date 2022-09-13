@@ -13,6 +13,9 @@ const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   actNoDisponible: {
     uri: require('../actNoDisponible.png'),
   },
+  moneda: {
+    uri: require('../moneda.png'),
+  },
 };
 
 export {images};

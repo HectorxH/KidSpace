@@ -22,8 +22,8 @@ module.exports = {
       'GLB',
       'bin',
       'arobject',
-      'hdr'
-    ]
+      'hdr',
+    ],
   },
   transformer: {
     getTransformOptions: async () => ({

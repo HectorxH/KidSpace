@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {images} from '../../assets/map/handler/images';
+import {mapImages} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 import {InfoProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
@@ -48,7 +48,7 @@ const Story = ({navigation, route}: InfoProps) => {
               <Text style={styles.textChip2}>
                 Ganas{' '}
                 <Image
-                  source={images.moneda.uri}
+                  source={mapImages.moneda.uri}
                   style={{
                     width: RSize(0.06, 'h'),
                     height: RSize(0.06, 'h'),

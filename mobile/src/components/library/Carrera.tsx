@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {images} from '../../assets/map/handler/images';
+import {mapImages} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
@@ -36,61 +36,59 @@ const Carrera = ({navigation, route}: CarreraProps) => {
           </ScrollView>
         </SafeAreaView>
       </View>
-      {carrera.stories.map((story, id) => (
-        <>
-          <View
-            style={{
-              flex: 1,
-              marginRight: RSize(0.03, 'h'),
-              justifyContent: 'center',
-            }}>
-            <TouchableHighlight
-              key={id}
-              onPress={() =>
-                navigation.push('Story', {
-                  Info: story,
-                })
-              }>
-              <Card key={id}>
-                <View
+      {carrera.stories.map((story, index) => (
+        <View
+          key={index}
+          style={{
+            flex: 1,
+            marginRight: RSize(0.03, 'h'),
+            justifyContent: 'center',
+          }}>
+          <TouchableHighlight
+            onPress={() =>
+              navigation.push('Story', {
+                Info: story,
+              })
+            }>
+            <Card>
+              <View
+                style={{
+                  flex: 1,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  elevation: 5,
+                }}>
+                <Image
+                  source={mapImages[`${story.estado}`].uri}
                   style={{
-                    flex: 1,
-                    alignItems: 'center',
-                    alignContent: 'center',
-                    elevation: 5,
-                  }}>
-                  <Image
-                    source={images[`${story.estado}`].uri}
-                    style={{
-                      width: RSize(0.06, 'h'),
-                      height: RSize(0.06, 'h'),
-                    }}
-                  />
-                </View>
-                <Card.Cover
-                  source={imagesPersonajes[`${story.img}`].uri}
-                  style={{height: RSize(0.63, 'h')}}
+                    width: RSize(0.06, 'h'),
+                    height: RSize(0.06, 'h'),
+                  }}
                 />
-                <Text style={styles.title2}>{story.title}</Text>
-                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                  <Chip style={styles.chip2}>
-                    <Text style={styles.textChip2}>
-                      Ganas{' '}
-                      <Image
-                        source={images.moneda.uri}
-                        style={{
-                          width: RSize(0.06, 'h'),
-                          height: RSize(0.06, 'h'),
-                        }}
-                      />{' '}
-                      {story.coins}
-                    </Text>
-                  </Chip>
-                </View>
-              </Card>
-            </TouchableHighlight>
-          </View>
-        </>
+              </View>
+              <Card.Cover
+                source={imagesPersonajes[`${story.img}`].uri}
+                style={{height: RSize(0.63, 'h')}}
+              />
+              <Text style={styles.title2}>{story.title}</Text>
+              <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                <Chip style={styles.chip2}>
+                  <Text style={styles.textChip2}>
+                    Ganas{' '}
+                    <Image
+                      source={mapImages.moneda.uri}
+                      style={{
+                        width: RSize(0.06, 'h'),
+                        height: RSize(0.06, 'h'),
+                      }}
+                    />{' '}
+                    {story.coins}
+                  </Text>
+                </Chip>
+              </View>
+            </Card>
+          </TouchableHighlight>
+        </View>
       ))}
     </View>
   );

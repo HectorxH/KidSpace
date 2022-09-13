@@ -1,6 +1,6 @@
 import {ImageSourcePropType} from 'react-native';
 
-const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
+const mapImages: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   astronomia: {
     uri: require('../astronomia.png'),
   },
@@ -48,4 +48,4 @@ const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   },
 };
 
-export {images};
+export {mapImages};
