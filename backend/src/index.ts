@@ -132,20 +132,33 @@ app.get('/checkauth', (req, res) => {
   res.json({ auth: req.isAuthenticated() });
 });
 
-app.post('/login', checkNotAuth, passport.authenticate('local'), async (req, res) => {
-  try {
-    const user = await User.findOne({ username: req.body.username });
-    res.json({
-      username: user?.username,
-      tipo: user?.tipo,
-      nombres: user?.nombres,
-      apellidos: user?.apellidos,
-    });
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
+app.post(
+  '/login',
+  checkNotAuth,
+  (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+      if (err) return next(err);
+      if (!user) return res.status(401).json({ message: info.message });
+      req.user = user;
+      req.login(user, next);
+      return next();
+    })(req, res, next);
+  },
+  async (req, res) => {
+    try {
+      const user = await User.findOne({ username: req.body.username });
+      return res.json({
+        username: user?.username,
+        tipo: user?.tipo,
+        nombres: user?.nombres,
+        apellidos: user?.apellidos,
+      });
+    } catch (e) {
+      console.log(e);
+      return res.sendStatus(500);
+    }
+  },
+);
 
 app.delete('/logout', checkAuth, (req, res, next) => {
   req.logOut((err) => {
