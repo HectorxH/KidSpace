@@ -30,7 +30,6 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
             <ActivityCard
               key={index}
               activity={activity}
-              quantity={activities.length}
               navigation={navigation}
             />
           ))}

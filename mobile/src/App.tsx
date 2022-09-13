@@ -10,18 +10,13 @@
 
 import React from 'react';
 
-import CuentoIntroductorio from './CuentoIntroductorio';
-import CuentoInteractivo from './CuentoInteractivo';
-import Desafio from './DesafioIntroductorio';
-import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
+import Actividades from './Actividades';
 import AvailableActivities from './components/library/AvailableActivities';
 import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
 import Carrera from './components/library/Carrera';
 import Story from './components/library/Story';
-import Conclusion from './components/Conclusion/Conclusion';
-import ConclusionStory from './components/Conclusion/ConclusionStory';
-import ResultadoFinal from './components/Conclusion/ResultadoFinal';
+import Recompensas from './components/Recompensas/Recompensas';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
 import MainMap from './components/MainMap';
@@ -95,23 +90,8 @@ const App = () => {
             options={{headerShown: false}}
           />
           <Stack.Screen
-            name="CuentoInteractivo"
-            component={CuentoInteractivo}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="CuentoIntroductorio"
-            component={CuentoIntroductorio}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="Desafio"
-            component={Desafio}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="FinalQuiz"
-            component={FinalQuiz}
+            name="Actividades"
+            component={Actividades}
             options={{headerShown: false}}
           />
           <Stack.Screen
@@ -120,18 +100,8 @@ const App = () => {
             options={{headerShown: false}}
           />
           <Stack.Screen
-            name="Conclusion"
-            component={Conclusion}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ConclusionStory"
-            component={ConclusionStory}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="ResultadoFinal"
-            component={ResultadoFinal}
+            name="Recompensas"
+            component={Recompensas}
             options={{headerShown: false}}
           />
           <Stack.Screen

@@ -18,14 +18,14 @@ const InicioView = ({navigation}: InicioViewProps) => {
     console.log('User: ', user);
     if (user) {
       refresh();
-      navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
+      navigation.navigate('MainMap');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const testLogout = async () => {
     await AsyncStorage.removeItem('@notification');
-    await axios.delete(`${Config.BACKEND_URL}/logout`);
+    await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
     await logout();
   };
 

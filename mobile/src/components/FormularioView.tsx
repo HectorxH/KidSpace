@@ -3,6 +3,7 @@ import axios from 'axios';
 import Config from 'react-native-config';
 import {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Button, Card} from 'react-native-paper';
 import {FormularioViewProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
@@ -18,21 +19,26 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
 
   useEffect(() => {
     if (user) {
-      navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
+      navigation.navigate('MainMap');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const handleEnviar = async () => {
     try {
-      let res = await axios.post(`${Config.BACKEND_URL}/register`, {
+      let res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/register`, {
         nombres,
         apellidos,
         tipo: 'estudiante',
       });
       const {_id, username, password} = res.data;
-      await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
-      await axios.post(`${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`);
+      await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
+        username,
+        password,
+      });
+      await axios.post(
+        `${Config.REACT_APP_BACKEND_URL}/Curso/${cursoId}/inscribir`,
+      );
       await login({
         _id,
         username,
@@ -41,6 +47,17 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
         apellidos,
         tipo: 'estudiante',
       });
+      console.log(cursoId);
+      await axios.post(
+        `${Config.REACT_APP_BACKEND_URL}/Curso/${cursoId}/inscribir`,
+      );
+      console.log(password);
+
+      await AsyncStorage.setItem('@username', username);
+      await AsyncStorage.setItem('@password', password);
+
+      await AsyncStorage.setItem('@nombres', nombres);
+      navigation.push('MainMap');
     } catch (error) {
       console.log(JSON.stringify(error));
       navigation.push('ErrorView');

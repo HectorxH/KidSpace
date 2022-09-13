@@ -1,5 +1,8 @@
+import {actividadNombre} from './navigation';
+
 export interface ICarrera {
   id: Int16Array;
+  completadas: string;
   img: string;
   title: string;
   desc: string;
@@ -11,13 +14,10 @@ export interface ICarrera {
 
 export interface IInfo {
   carrera: string;
+  actividad: actividadNombre;
   img: string;
   title: string;
   desc: string;
-  coins: Int16Array;
+  coins: number;
   estado: string;
-}
-
-export interface IMainMap {
-  nombres: string;
 }

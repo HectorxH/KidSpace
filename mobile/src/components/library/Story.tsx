@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {images} from '../../assets/map/handler/images';
+import {mapImages} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 import {InfoProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
@@ -47,7 +47,7 @@ const Story = ({navigation, route}: InfoProps) => {
               <Text style={styles.textChip2}>
                 Ganas{' '}
                 <Image
-                  source={images.moneda.uri}
+                  source={mapImages.moneda.uri}
                   style={{
                     width: RSize(0.06, 'h'),
                     height: RSize(0.06, 'h'),
@@ -70,12 +70,12 @@ const Story = ({navigation, route}: InfoProps) => {
                 )}
                 color="#FF8A01"
                 mode="contained"
-                // onPress={() =>
-                //   navigation.push('CuentoIntroductorio', {
-                //     actividad: 'diagramas',
-                //   })
-                // }>
-                onPress={() => console.log('Pressed')}>
+                onPress={() =>
+                  navigation.navigate('Actividades', {
+                    actividad: Info.actividad,
+                    cantMonedas: Info.coins,
+                  })
+                }>
                 <Text style={styles.textButton}>¡Iniciar!</Text>
               </Button>
             </View>

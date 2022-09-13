@@ -7,16 +7,30 @@ import {
   TouchableHighlight,
   Image,
 } from 'react-native';
-import {Button, Card} from 'react-native-paper';
+import {Button, Card, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {images} from '../../assets/map/handler/images';
+import {mapImages} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
 import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera} = route.params;
+  const oldCompletadas = route.params.completadas;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+
+  const checkCompletada = (nombre: string) => {
+    try {
+      console.log(oldCompletadas);
+      if (JSON.parse(oldCompletadas).includes(nombre)) {
+        return 'estrelladorada';
+      }
+      return 'estrellagris';
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <View style={styles.container}>
       <View style={{flex: 1.2}}>
@@ -35,9 +49,9 @@ const Carrera = ({navigation, route}: CarreraProps) => {
           </ScrollView>
         </View>
       </View>
-      {carrera.stories.map((story, id) => (
+      {carrera.stories.map((story, index) => (
         <View
-          key={id}
+          key={index}
           style={{
             flex: 1,
             marginRight: RSize(0.03, 'h'),
@@ -45,7 +59,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
           }}>
           <TouchableHighlight
             underlayColor={'#F6F6F6'}
-            key={id}
             style={{
               borderRadius: 20,
             }}
@@ -55,7 +68,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
               })
             }>
             <Card
-              // key={story.title}
               style={{
                 borderRadius: 20,
               }}>
@@ -67,7 +79,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   elevation: 5,
                 }}>
                 <Image
-                  source={images[`${story.estado}`].uri}
+                  source={mapImages[`${checkCompletada(story.actividad)}`].uri}
                   style={{
                     width: RSize(0.06, 'h'),
                     height: RSize(0.06, 'h'),
@@ -82,12 +94,21 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                 }}
               />
               <Text style={styles.title2}>{story.title}</Text>
-              <View
-                style={{
-                  flexDirection: 'row',
-                  justifyContent: 'center',
-                }}
-              />
+              <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                <Chip style={styles.chip2}>
+                  <Text style={styles.textChip2}>
+                    Ganas{' '}
+                    <Image
+                      source={mapImages.moneda.uri}
+                      style={{
+                        width: RSize(0.06, 'h'),
+                        height: RSize(0.06, 'h'),
+                      }}
+                    />{' '}
+                    {story.coins}
+                  </Text>
+                </Chip>
+              </View>
             </Card>
           </TouchableHighlight>
         </View>

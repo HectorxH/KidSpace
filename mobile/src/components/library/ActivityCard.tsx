@@ -11,14 +11,13 @@ const windowWidth = Dimensions.get('window').width;
 
 interface ActivityCardProps {
   activity: IActivity;
-  quantity: number;
   navigation: NativeStackNavigationProp<
     RootStackParamList,
     'AvailableActivities'
   >;
 }
 
-const ActivityCard = ({activity, quantity, navigation}: ActivityCardProps) => {
+const ActivityCard = ({activity, navigation}: ActivityCardProps) => {
   return (
     <Card
       style={styles.card}

@@ -64,8 +64,8 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const refresh = async () => {
     try {
-      await axios.delete(`${Config.BACKEND_URL}/logout`);
-      await axios.post(`${Config.BACKEND_URL}/login`, {
+      await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
+      await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
         username: user?.username,
         password: user?.password,
       });

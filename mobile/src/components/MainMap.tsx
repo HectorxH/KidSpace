@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React from 'react';
 import {useEffect, useState} from 'react';
 import {
   View,
@@ -15,32 +15,33 @@ import {
 import {Button, Badge, Chip} from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../assets/imgs/handler/images';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
-import {images} from '../assets/map/handler/images';
+import {mapImages} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
-import {useFocusEffect} from '@react-navigation/native';
 import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
 import axios from 'axios';
 
-const pusher = new Pusher(Config.PUSHER_KEY, {
+const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
   cluster: 'sa1',
 });
 const channel = pusher.subscribe('channel');
 
-const MainMap = ({navigation, route}: MainMapProps) => {
-  const [notification, setNotification] = useState('0');
+const MainMap = ({navigation}: MainMapProps) => {
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
-  const {datos} = route.params;
+  const [notification, setNotification] = useState('0');
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
-  const [user, setUser] = useState({key: 1, name: datos.nombres});
+  const [user, setUser] = useState('');
+  const [cantMonedas, setCantMonedas] = useState(0);
+  const [completadas, setCompletadas] = useState('[]');
 
   const loadNotification = () => {
     let visible = false;
@@ -66,12 +67,20 @@ const MainMap = ({navigation, route}: MainMapProps) => {
         ? (allMessages = JSON.parse(jsonAllMessages))
         : [];
       setMessage(JSON.parse(jsonAllMessages!));
+      const u = await AsyncStorage.getItem('@nombres');
+      setUser(u!);
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
+      const m = await AsyncStorage.getItem('@monedas');
+      setCantMonedas(parseInt(m!, 10));
+      const c = await AsyncStorage.getItem('@completadas');
+      c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
+      console.log('A');
       console.log(e);
     }
   };
+
   const loadMessage = async () => {
     try {
       channel.bind('message', async function (data: {message: IActivity}) {
@@ -89,10 +98,11 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           '@notification',
           allMessages.length.toString(),
         );
-        const n = await AsyncStorage.getItem('@notification');
+        let n = await AsyncStorage.getItem('@notification');
         setNotification(n!);
       });
     } catch (e) {
+      console.log('B');
       console.log(e);
     }
   };
@@ -103,18 +113,6 @@ const MainMap = ({navigation, route}: MainMapProps) => {
     setDesc(event.carrera.desc);
     setUnidadCarrera(event.carrera);
   };
-
-  useFocusEffect(
-    useCallback(() => {
-      if (route.params === undefined) {
-        return;
-      }
-      setUser({
-        key: 2,
-        name: datos.nombres,
-      });
-    }, [datos.nombres, route.params]),
-  );
 
   useEffect(() => {
     initialLoader();
@@ -136,8 +134,10 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   };
 
   const HandleCarrera = (event: any) => {
+    console.log(completadas);
     navigation.push('Carrera', {
       carrera: event.unidadCarrera,
+      completadas: completadas,
     });
     setModalVisible(false);
   };
@@ -154,7 +154,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
 
   const {logout} = useAuth();
   const testLogout = async () => {
-    await axios.delete(`${Config.BACKEND_URL}/logout`);
+    await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
     await logout();
     console.log('!!!');
     navigation.navigate('InicioView');
@@ -191,13 +191,19 @@ const MainMap = ({navigation, route}: MainMapProps) => {
           </View>
         </Pressable>
       </Modal>
-      <ImageBackground style={styles.background} source={images.solo_cielo.uri}>
+      <ImageBackground
+        style={styles.background}
+        source={mapImages.solo_cielo.uri}>
         <ImageBackground
           style={styles.background}
-          source={images.edificios.uri}>
+          source={mapImages.edificios.uri}>
           <View style={styles.view}>
-            <Chip style={styles.chip}>
-              <Text style={styles.title}> ¡Hola, {user.name}!</Text>
+            <Chip style={styles.nameChip}>
+              <Text style={styles.title}> ¡Hola, {user}!</Text>
+            </Chip>
+            <Chip style={styles.monedaChip}>
+              <Image style={styles.icon} source={images.moneda.uri} />
+              <Text style={styles.monedaText}>{cantMonedas}</Text>
             </Chip>
           </View>
           <ScrollView
@@ -210,7 +216,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               style={{
                 flex: 1,
               }}
-              source={images.ruta.uri}>
+              source={mapImages.ruta.uri}>
               <View style={{flexDirection: 'row'}}>
                 {Carreras.map((carrera, id) => (
                   <View style={{flex: 1}} key={id}>
@@ -239,7 +245,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                             height: 150,
                             overflow: 'hidden',
                           }}
-                          source={images[`${carrera.img}`].uri}
+                          source={mapImages[`${carrera.img}`].uri}
                         />
                       </TouchableOpacity>
                     </View>
@@ -266,10 +272,15 @@ const MainMap = ({navigation, route}: MainMapProps) => {
               )}
               contentStyle={{flexDirection: 'column'}}
               onPress={() =>
-                navigation.push('CuentoIntroductorio', {
-                  actividad: 'diagramas',
-                  // tipo: 'introductory',
-                  // tipo: 'interactive',
+                navigation.navigate('Actividades', {
+                  // actividad: 'diagramas',
+                  // actividad: 'diseños',
+                  // actividad: 'nutricion1',
+                  actividad: 'diseño1',
+                  cantMonedas: 200,
+                  // actividad: 'nutricion2',
+                  // actividad: 'diseño2',
+                  // actividad: 'debug',
                 })
               }>
               <Text style={styles.subtitle}>Perfil</Text>
@@ -405,11 +416,23 @@ const styles = StyleSheet.create({
   view: {
     flex: 0.19,
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
-  chip: {
+  nameChip: {
     backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     margin: RSize(0.02, 'h'),
+  },
+  monedaChip: {
+    backgroundColor: '#F1F3F8',
+    margin: RSize(0.02, 'h'),
+    justifyContent: 'center',
+  },
+  monedaText: {
+    fontFamily: 'Poppins',
+    fontSize: RSize(0.04, 'h'),
+    textAlign: 'center',
+    color: '#000000',
   },
   title: {
     fontFamily: 'Poppins-Bold',
@@ -443,6 +466,11 @@ const styles = StyleSheet.create({
     width: RSize(0.45, 'h'),
     position: 'absolute',
     right: RSize(0.01, 'h'),
+  },
+  icon: {
+    resizeMode: 'cover',
+    height: RSize(0.05, 'h'),
+    width: RSize(0.05, 'h'),
   },
 });
 
