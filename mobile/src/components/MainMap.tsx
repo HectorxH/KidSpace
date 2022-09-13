@@ -127,7 +127,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
       //const jsonMessages = await AsyncStorage.getItem('@message');
       //const messages = JSON.parse(jsonMessages!);
       //const visible = await AsyncStorage.getItem('@visible');
-      notification !== '0'
+      notification !== '0' && notification !== null
         ? navigation.push('AvailableActivities', {activities: message})
         : navigation.push('NoAvailableActivities');
     } catch (e) {
