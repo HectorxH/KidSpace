@@ -120,7 +120,6 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           return (
             <ListItem
               disablePadding
-              button
               component={NavLink}
               to={path}
               key={uid}
@@ -162,10 +161,10 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     try {
       const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/logout`);
       console.log(res);
+      logout();
     } catch (e) {
       console.log(e);
     }
-    logout();
   };
 
   return (
@@ -214,8 +213,8 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           )}
           {!user && (
             <>
-              <Button href="/login">Login</Button>
-              <Button href="/registro">Registrate</Button>
+              <Button component={Link} to="/login">Login</Button>
+              <Button component={Link} to="/registro">Registrate</Button>
             </>
           )}
           <Menu
@@ -233,7 +232,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
               horizontal: 'left',
             }}
           >
-            <MenuItem onClick={() => { handleClose(); handleLogout(); }} component={Link} to="/login">Logout</MenuItem>
+            <MenuItem onClick={() => { handleClose(); handleLogout(); }}>Logout</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>

@@ -7,7 +7,7 @@
     "dev": "nodemon src/index.ts",
     "build": "npm run lint && rimraf dist/ && tsc",
     "start": "npm run build && node dist/index.js",
-    "lint": "eslint src\\**\\*.ts"
+    "lint": "eslint src/**/*.ts"
   },
   "keywords": [],
   "author": "",

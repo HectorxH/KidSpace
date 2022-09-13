@@ -32,6 +32,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/navigation';
 import axios from 'axios';
+import {AuthProvider} from './hooks/useAuth';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -39,96 +40,102 @@ axios.defaults.withCredentials = true;
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="InicioView"
-          component={InicioView}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="FormularioView"
-          component={FormularioView}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ErrorView"
-          component={ErrorView}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="MainMap"
-          component={MainMap}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Activity"
-          component={Activity}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Carrera"
-          component={Carrera}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Story"
-          component={Story}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="NoAvailableActivities"
-          component={NoAvailableActivities}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="AvailableActivities"
-          component={AvailableActivities}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="CuentoInteractivo"
-          component={CuentoInteractivo}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="CuentoIntroductorio"
-          component={CuentoIntroductorio}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Desafio"
-          component={Desafio}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="FinalQuiz"
-          component={FinalQuiz}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="DynamicTable"
-          component={DynamicTable}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Conclusion"
-          component={Conclusion}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ConclusionStory"
-          component={ConclusionStory}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="ResultadoFinal"
-          component={ResultadoFinal}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen name="Qr" component={Qr} options={{headerShown: false}} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <AuthProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="InicioView"
+            component={InicioView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="FormularioView"
+            component={FormularioView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ErrorView"
+            component={ErrorView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="MainMap"
+            component={MainMap}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Activity"
+            component={Activity}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Carrera"
+            component={Carrera}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Story"
+            component={Story}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="NoAvailableActivities"
+            component={NoAvailableActivities}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="AvailableActivities"
+            component={AvailableActivities}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="CuentoInteractivo"
+            component={CuentoInteractivo}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="CuentoIntroductorio"
+            component={CuentoIntroductorio}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Desafio"
+            component={Desafio}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="FinalQuiz"
+            component={FinalQuiz}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="DynamicTable"
+            component={DynamicTable}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Conclusion"
+            component={Conclusion}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ConclusionStory"
+            component={ConclusionStory}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ResultadoFinal"
+            component={ResultadoFinal}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Qr"
+            component={Qr}
+            options={{headerShown: false}}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </AuthProvider>
   );
 };
 

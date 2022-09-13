@@ -163,6 +163,8 @@ app.post(
 app.delete('/logout', checkAuth, (req, res, next) => {
   req.logOut((err) => {
     if (err) return next(err);
+    req.session.destroy(() => {});
+    req.logout(() => {});
     return res.sendStatus(200);
   });
 });

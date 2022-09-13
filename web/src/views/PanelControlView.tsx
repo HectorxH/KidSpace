@@ -15,27 +15,29 @@ const PanelControl = () => {
   const [planificadas, setPlanificadas] = useState<IPlanificada[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
 
   const updatePlanificadas = async () => {
+    if (!user) return;
     try {
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/planificadas`);
       setPlanificadas(res.data.planificadas);
     } catch (e) {
       console.log(e);
-      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
         logout();
       }
     }
   };
 
   const updateFavoritas = async () => {
+    if (!user) return;
     try {
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/favoritas`);
       setFavoritas(res.data.favoritas);
     } catch (e) {
       console.log(e);
-      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
         logout();
       }
     }
@@ -46,6 +48,7 @@ const PanelControl = () => {
     if (planificadas.length === 0) updatePlanificadas();
     setLoading(false);
   }, []);
+
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ px: 4, py: 2 }}>
