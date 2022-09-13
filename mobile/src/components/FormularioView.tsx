@@ -33,7 +33,6 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
       const {_id, username, password} = res.data;
       await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
       await axios.post(`${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`);
-
       await login({
         _id,
         username,

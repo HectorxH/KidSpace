@@ -4,11 +4,10 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  SafeAreaView,
   TouchableHighlight,
   Image,
 } from 'react-native';
-import {Button, Card, Chip} from 'react-native-paper';
+import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
@@ -29,16 +28,17 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             {back}
           </Button>
         </View>
-        <SafeAreaView>
+        <View style={styles.viewText}>
+          <Text style={styles.title}>{carrera.title}</Text>
           <ScrollView style={styles.scrollView}>
-            <Text style={styles.title}>{carrera.title}</Text>
             <Text style={styles.paragraph}>{carrera.desc2}</Text>
           </ScrollView>
-        </SafeAreaView>
+        </View>
       </View>
       {carrera.stories.map((story, id) => (
         <>
           <View
+            key={story.title}
             style={{
               flex: 1,
               marginRight: RSize(0.03, 'h'),
@@ -51,7 +51,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   Info: story,
                 })
               }>
-              <Card key={id}>
+              <Card key={story.title}>
                 <View
                   style={{
                     flex: 1,
@@ -72,21 +72,12 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   style={{height: RSize(0.63, 'h')}}
                 />
                 <Text style={styles.title2}>{story.title}</Text>
-                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                  <Chip style={styles.chip2}>
-                    <Text style={styles.textChip2}>
-                      Ganas{' '}
-                      <Image
-                        source={images.moneda.uri}
-                        style={{
-                          width: RSize(0.06, 'h'),
-                          height: RSize(0.06, 'h'),
-                        }}
-                      />{' '}
-                      {story.coins}
-                    </Text>
-                  </Chip>
-                </View>
+                <View
+                  style={{
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                  }}
+                />
               </Card>
             </TouchableHighlight>
           </View>
@@ -104,6 +95,11 @@ const styles = StyleSheet.create({
   view: {
     flexDirection: 'row',
     margin: RSize(0.01),
+  },
+  viewText: {
+    flexDirection: 'column',
+    margin: RSize(0.01),
+    marginBottom: RSize(0.19),
   },
   title: {
     marginLeft: RSize(0.015),

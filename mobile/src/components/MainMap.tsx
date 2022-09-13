@@ -32,9 +32,12 @@ const pusher = new Pusher(Config.PUSHER_KEY, {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation, route}: MainMapProps) => {
+  const [notification, setNotification] = useState('0');
+  console.log(notification);
+  console.log(9999);
   let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
-  const [notification, setNotification] = useState('0');
+
   const {datos} = route.params;
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
@@ -44,7 +47,9 @@ const MainMap = ({navigation, route}: MainMapProps) => {
 
   const loadNotification = () => {
     let visible = false;
-    if (notification !== '0') {
+    console.log(notification);
+    console.log(55);
+    if (notification !== '0' || notification !== null) {
       visible = true;
     }
     return (

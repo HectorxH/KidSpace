@@ -26,6 +26,7 @@ import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
 import MainMap from './components/MainMap';
 import InicioView from './components/InicioView';
+import CargaView from './components/CargaView';
 import ErrorView from './components/library/ErrorView';
 import FormularioView from './components/FormularioView';
 import {NavigationContainer} from '@react-navigation/native';
@@ -46,6 +47,11 @@ const App = () => {
           <Stack.Screen
             name="InicioView"
             component={InicioView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="CargaView"
+            component={CargaView}
             options={{headerShown: false}}
           />
           <Stack.Screen
