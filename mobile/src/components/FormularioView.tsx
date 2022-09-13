@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import axios from 'axios';
 import Config from 'react-native-config';
 import {useState} from 'react';
@@ -10,38 +10,43 @@ import {images} from '../assets/inicio/handler/images';
 import {useAuth} from '../hooks/useAuth';
 
 const FormularioView = ({navigation, route}: FormularioViewProps) => {
-  console.log(`${Config.REACT_APP_PUSHER_KEY}`);
-  console.log(`${Config.REACT_APP_BACKEND_URL}`);
   const cursoId = route.params.event.data;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
 
-  const {login} = useAuth();
+  const {user, login} = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user]);
 
   const handleEnviar = async () => {
     try {
-      console.log(`${Config.BACKEND_URL}`);
-      console.log(1);
       let res = await axios.post(`${Config.BACKEND_URL}/register`, {
         nombres,
         apellidos,
         tipo: 'estudiante',
       });
-      console.log(res.data);
-      console.log(0);
       const {_id, username, password} = res.data;
       await axios.post(`${Config.BACKEND_URL}/login`, {username, password});
       await axios.post(`${Config.BACKEND_URL}/Curso/${cursoId}/inscribir`);
 
-      login({_id, username, password, nombres, apellidos, tipo: 'estudiante'});
+      await login({
+        _id,
+        username,
+        password,
+        nombres,
+        apellidos,
+        tipo: 'estudiante',
+      });
     } catch (error) {
       console.log(JSON.stringify(error));
       navigation.push('ErrorView');
     }
   };
-  // , {
-  //   datos: nombres,
-  // });
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>

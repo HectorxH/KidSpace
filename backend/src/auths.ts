@@ -8,7 +8,8 @@ export function checkAuth(
   if (req.isAuthenticated()) {
     return next();
   }
-  return res.sendStatus(401);
+  console.log('!!No autenticado');
+  return res.status(401).json({ message: 'No estas autenticado' });
 }
 
 export function checkNotAuth(
@@ -17,7 +18,8 @@ export function checkNotAuth(
   next: express.NextFunction,
 ) {
   if (req.isAuthenticated()) {
-    return res.sendStatus(401);
+    console.log('!!Autenticado');
+    return res.status(401).json({ message: 'Estas autenticado' });
   }
   return next();
 }

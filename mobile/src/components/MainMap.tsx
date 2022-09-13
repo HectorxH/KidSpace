@@ -23,6 +23,8 @@ import {images} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
 import {useFocusEffect} from '@react-navigation/native';
 import Config from 'react-native-config';
+import {useAuth} from '../hooks/useAuth';
+import axios from 'axios';
 
 const pusher = new Pusher(Config.PUSHER_KEY, {
   cluster: 'sa1',
@@ -149,6 +151,14 @@ const MainMap = ({navigation, route}: MainMapProps) => {
   //     }),
   //   ).start();
   // };
+
+  const {logout} = useAuth();
+  const testLogout = async () => {
+    await axios.delete(`${Config.BACKEND_URL}/logout`);
+    await logout();
+    console.log('!!!');
+    navigation.navigate('InicioView');
+  };
 
   return (
     <View style={styles.topView}>
@@ -280,7 +290,7 @@ const MainMap = ({navigation, route}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() => console.log('Pressed')}>
+              onPress={testLogout}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>

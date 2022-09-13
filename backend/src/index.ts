@@ -48,7 +48,7 @@ initPassport(passport);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://app.kidspace.live', 'http://app.kidspace.live:8080'],
+  origin: ['*', 'http://localhost:3000', 'http://app.kidspace.live', 'http://app.kidspace.live:8080'],
   credentials: true,
 }));
 app.use(session({
@@ -115,7 +115,7 @@ app.post('/register', async (req, res) => {
     } else if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ user: user._id });
       await estudiante.save();
-      res.json({ username, password });
+      res.json({ username, password, _id: user._id });
     } else if (user.tipo === 'apoderado') {
       const apoderado = new Apoderado({ user: user._id, password });
       await apoderado.save();
@@ -138,7 +138,10 @@ app.post(
   (req, res, next) => {
     passport.authenticate('local', (err, user, info) => {
       if (err) return next(err);
-      if (!user) return res.status(401).json({ message: info.message });
+      if (!user) {
+        console.log('!!!', 'User: ', user);
+        return res.status(401).json({ message: info.message });
+      }
       req.user = user;
       req.login(user, next);
       return next();

@@ -1,23 +1,23 @@
-import React, {createContext, useContext, useMemo, useState} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {IUser} from '../types/user';
-import {NavigationContext} from '@react-navigation/native';
+import {NavigationContext} from '@react-navigation/core';
 import axios from 'axios';
 import Config from 'react-native-config';
 
 interface IAuthContext {
   user: IUser | null;
-  login: (data: IUser | null) => void;
-  logout: () => void;
-  refresh: () => void;
+  login: (data: IUser | null) => Promise<void>;
+  logout: () => Promise<void>;
+  refresh: () => Promise<void>;
 }
 
 const AuthContext = createContext<IAuthContext>({
   user: null,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  login: (data: IUser | null) => {},
-  logout: () => {},
-  refresh: () => {},
+  login: async (data: IUser | null) => {},
+  logout: async () => {},
+  refresh: async () => {},
 });
 
 export const AuthProvider = ({children}: {children: any}) => {
@@ -25,12 +25,27 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const navigation = useContext(NavigationContext);
 
+  useEffect(() => {
+    console.log('Initial User:', user);
+    if (!user) {
+      AsyncStorage.getItem('@user').then(u => {
+        if (u) {
+          setUser(JSON.parse(u));
+        }
+        console.log('Loaded User:', user);
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // call this function when you want to authenticate the user
   const login = async (data: IUser | null) => {
     try {
       await AsyncStorage.setItem('@user', JSON.stringify(data));
-      setUser(data);
-      navigation?.navigate('MainMap', {datos: {nombres: user?.nombres}});
+      const userData = await AsyncStorage.getItem('@user');
+      if (userData) {
+        setUser(JSON.parse(userData));
+      }
     } catch (e) {
       console.log(e);
     }
@@ -60,16 +75,17 @@ export const AuthProvider = ({children}: {children: any}) => {
     }
   };
 
-  const value = useMemo(
-    () => ({
-      user,
-      login,
-      logout,
-      refresh,
-    }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [user],
-  );
+  // const value = useMemo(
+  //   () => ({
+  //     user,
+  //     login,
+  //     logout,
+  //     refresh,
+  //   }),
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   [],
+  // );
+  const value = {user, login, logout, refresh};
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 

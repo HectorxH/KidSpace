@@ -6,9 +6,9 @@ import User from './models/User';
 const LocalStrategy = passportLocal.Strategy;
 
 function initialize(passport : PassportStatic) {
-  passport.use(new LocalStrategy({ usernameField: 'username', passReqToCallback: true }, async (req, username, password, done) => {
+  passport.use(new LocalStrategy({ usernameField: 'username' }, async (username, password, done) => {
     const user = await User.findOne({ username });
-    if (user === null) {
+    if (!user) {
       return done(null, false, { message: 'Usuario invalido' });
     }
     try {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
@@ -7,14 +7,25 @@ import {InicioViewProps} from '../types/navigation';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
+import axios from 'axios';
+import Config from 'react-native-config';
 
 const InicioView = ({navigation}: InicioViewProps) => {
-  const {user, refresh} = useAuth();
+  const {user, refresh, logout} = useAuth();
 
-  if (user) {
-    refresh();
-    navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
-  }
+  useEffect(() => {
+    console.log('User: ', user);
+    if (user) {
+      refresh();
+      navigation.navigate('MainMap', {datos: {nombres: user.nombres}});
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const testLogout = async () => {
+    await axios.delete(`${Config.BACKEND_URL}/logout`);
+    await logout();
+  };
 
   return (
     <View>
@@ -39,6 +50,7 @@ const InicioView = ({navigation}: InicioViewProps) => {
             la cámara
           </Text>
         </Button>
+        <Button onPress={testLogout}>!!!LOGOUT TEMPORAL!!!</Button>
       </View>
     </View>
   );
