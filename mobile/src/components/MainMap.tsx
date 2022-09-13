@@ -1,8 +1,10 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Button, Badge, Chip} from 'react-native-paper';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import {images} from '../assets/imgs/handler/images';
 import Pusher from 'pusher-js/react-native';
 import {IActivity} from '../types/activity';
 import {MainMapProps} from '../types/navigation';
@@ -19,35 +21,96 @@ const pusher = new Pusher('74009350c3b99530d9e9', {
 const channel = pusher.subscribe('channel');
 
 const MainMap = ({navigation}: MainMapProps) => {
+  let allMessages: IActivity[] = [];
   const [message, setMessage] = useState<IActivity[]>([]);
-  const [visible, setVisible] = useState(false);
-  const [notification, setNotification] = useState(0);
+  const [notification, setNotification] = useState('0');
+  const [cantMonedas, setCantMonedas] = useState(0);
 
-  const allMessages: IActivity[] = [];
+  const loadNotification = () => {
+    let visible = false;
+    if (notification !== '0') {
+      visible = true;
+    }
+    return (
+      <View>
+        {visible && (
+          <Badge visible={visible} style={styles.badge}>
+            {parseInt(notification!, 10)}
+          </Badge>
+        )}
+      </View>
+    );
+  };
+
+  const initialLoader = async () => {
+    try {
+      let jsonAllMessages = await AsyncStorage.getItem('@message');
+      //check if value previously stored
+      jsonAllMessages != null
+        ? (allMessages = JSON.parse(jsonAllMessages))
+        : [];
+      setMessage(JSON.parse(jsonAllMessages!));
+      const n = await AsyncStorage.getItem('@notification');
+      setNotification(n!);
+      const m = await AsyncStorage.getItem('@monedas');
+      setCantMonedas(Number(m));
+    } catch (e) {
+      console.log('A');
+      console.log(e);
+    }
+  };
+
+  const loadMessage = async () => {
+    try {
+      channel.bind('message', async function (data: {message: IActivity}) {
+        let jsonAllMessages = await AsyncStorage.getItem('@message');
+        //check if value previously stored
+        jsonAllMessages != null
+          ? (allMessages = JSON.parse(jsonAllMessages))
+          : [];
+        allMessages.push(data.message);
+        jsonAllMessages = JSON.stringify(allMessages);
+        await AsyncStorage.setItem('@message', jsonAllMessages);
+        const m = await AsyncStorage.getItem('@message');
+        setMessage(JSON.parse(m!));
+        await AsyncStorage.setItem(
+          '@notification',
+          allMessages.length.toString(),
+        );
+        let n = await AsyncStorage.getItem('@notification');
+        setNotification(n!);
+      });
+    } catch (e) {
+      console.log('B');
+      console.log(e);
+    }
+  };
 
   useEffect(() => {
-    channel.bind('message', function (data: {message: IActivity}) {
-      allMessages.push(data.message);
-      setMessage(allMessages);
-      setNotification(allMessages.length);
-      setVisible(true);
-    });
+    initialLoader();
+    loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const HandleAct = () => {
-    if (visible === true) {
-      navigation.push('AvailableActivities', {activities: message.slice(0, 3)});
-    } else {
-      navigation.push('NoAvailableActivities');
+  const HandleAct = async () => {
+    try {
+      notification !== '0'
+        ? navigation.push('AvailableActivities', {activities: message})
+        : navigation.push('NoAvailableActivities');
+    } catch (e) {
+      console.log(e);
     }
   };
 
   return (
     <View style={styles.topView}>
       <View style={styles.view}>
-        <Chip style={styles.chip}>
+        <Chip style={styles.nameChip}>
           <Text style={styles.title}> ¡Hola, {User.name}!</Text>
+        </Chip>
+        <Chip style={styles.monedaChip}>
+          <Image style={styles.icon} source={images.moneda.uri} />
+          <Text style={styles.monedaText}>{cantMonedas}</Text>
         </Chip>
       </View>
       <View style={styles.containerButtons}>
@@ -105,9 +168,7 @@ const MainMap = ({navigation}: MainMapProps) => {
           <Text style={styles.subtitle}>Tienda</Text>
         </Button>
         <View style={styles.rightButtonView}>
-          <Badge visible={visible} style={styles.badge}>
-            {notification}
-          </Badge>
+          {loadNotification()}
           <Button
             style={styles.button3}
             compact={true}
@@ -140,6 +201,7 @@ const styles = StyleSheet.create({
   },
   view: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     margin: RSize(0.03, 'h'),
   },
   containerButtons: {
@@ -160,8 +222,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     elevation: 4,
   },
-  chip: {
+  nameChip: {
     backgroundColor: '#F1F3F8',
+  },
+  monedaChip: {
+    backgroundColor: '#F1F3F8',
+  },
+  monedaText: {
+    color: 'black',
   },
   title: {
     fontFamily: 'Poppins-Bold',
@@ -195,6 +263,11 @@ const styles = StyleSheet.create({
     width: RSize(0.45, 'h'),
     position: 'absolute',
     right: RSize(0.01, 'h'),
+  },
+  icon: {
+    resizeMode: 'cover',
+    height: RSize(0.05, 'h'),
+    width: RSize(0.05, 'h'),
   },
 });
 

@@ -16,6 +16,7 @@ import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
 // import FinalQuiz from './components/IntroductoryChallenge/FinalQuiz';
 // import Conclusion from './components/Conclusion/Conclusion';
+import Recompensas from './components/Recompensas/Recompensas';
 // import ConclusionStory from './components/Conclusion/ConclusionStory';
 // import ResultadoFinal from './components/Conclusion/ResultadoFinal';
 import DynamicTable from './components/Tables/DynamicTable';
@@ -58,6 +59,11 @@ const App = () => {
         <Stack.Screen
           name="DynamicTable"
           component={DynamicTable}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Recompensas"
+          component={Recompensas}
           options={{headerShown: false}}
         />
         {/* <Stack.Screen
