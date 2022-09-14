@@ -78,7 +78,7 @@
     ],
     "texts": [
       {
-        "text": "Noah se dedica principalmente a la pintura.",
+        "text": "Noah se dedica principalmente a *la pintura*.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -92,7 +92,7 @@
       {
         "name": "NoahQuestion",
         "position": {
-          "start": [2, 2],
+          "start": [1, 2],
           "end": [8, 20]  
         }
       }
@@ -100,8 +100,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -109,8 +109,8 @@
       {
         "text": "Para pintar cada uno de sus cuadros, Noah tiene que manejar bien los conceptos de la *teoría de color*.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ]
@@ -129,8 +129,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -138,8 +138,8 @@
       {
         "text": "La teoría de color es un grupo de reglas en la mezcla de colores",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ],
@@ -167,8 +167,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -176,8 +176,8 @@
       {
         "text": "para conseguir el efecto o tono deseado.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ],
@@ -197,16 +197,16 @@
       {
         "name": "diseño1_rueda1",
         "position": {
-          "start": [12.5, 0],
-          "end": [19.5, 20]
+          "start": [12, 0],
+          "end": [19, 20]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -214,8 +214,8 @@
       {
         "text": "Para representar a los colores en el mundo artístico se utiliza la *rueda de colores*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -226,16 +226,16 @@
       {
         "name": "diseño1_rueda1",
         "position": {
-          "start": [12.5, 0],
-          "end": [19.5, 20]
+          "start": [12, 0],
+          "end": [19, 20]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -243,8 +243,8 @@
       {
         "text": "Como dice su nombre, es un diagrama circular de colores.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -255,16 +255,16 @@
       {
         "name": "diseño1_rueda2",
         "position": {
-          "start": [12.5, 0],
-          "end": [19.5, 20]
+          "start": [12, 0],
+          "end": [19, 20]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -272,8 +272,8 @@
       {
         "text": "Podemos separar el círculo cromático en dos mitades: izquierda y derecha.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -284,16 +284,16 @@
       {
         "name": "diseño1_rueda2",
         "position": {
-          "start": [12.5, 0],
-          "end": [19.5, 20]
+          "start": [12, 0],
+          "end": [19, 20]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -301,8 +301,8 @@
       {
         "text": "De este modo descubriremos los colores denominados como *cálidos* y *fríos*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -342,7 +342,7 @@
       {
         "name": "diseño1_color2",
         "position": {
-          "start": [0.5, 0],
+          "start": [1, 0],
           "end": [7.5, 20]  
         }
       }
@@ -371,7 +371,7 @@
       {
         "name": "diseño1_color1",
         "position": {
-          "start": [0.5, 0],
+          "start": [1, 0],
           "end": [7.5, 20]  
         }
       }
@@ -408,8 +408,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -417,8 +417,8 @@
       {
         "text": "En la pintura, es importante tomar en cuenta *las emociones* que generan los colores.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ],
@@ -446,8 +446,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -455,8 +455,8 @@
       {
         "text": "Así, los *colores fríos* se perciben como más *oscuros, tristes y lejanos*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -475,8 +475,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -484,8 +484,8 @@
       {
         "text": "Mientras que los *colores cálidos* se perciben como más *alegres y energéticos*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -504,8 +504,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -513,8 +513,8 @@
       {
         "text": "Noah te propone intentar analizar los colores de un par de objetos, para entrenar tu ojo.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -525,8 +525,8 @@
       {
         "name": "helado_naranjo",
         "position": {
-          "start": [11, 4],
-          "end": [18, 16]
+          "start": [11, 5],
+          "end": [18, 18]
         }
       }
     ],
@@ -627,8 +627,8 @@
       {
         "name": "bolsa_rosa",
         "position": {
-          "start": [11, 4],
-          "end": [18, 16]
+          "start": [11, 5],
+          "end": [18, 17]
         }
       }
     ],
@@ -729,7 +729,7 @@
       {
         "name": "libro_verdeazul",
         "position": {
-          "start": [11, 4],
+          "start": [11, 6],
           "end": [18, 16]
         }
       }
@@ -897,8 +897,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -906,8 +906,8 @@
       {
         "text": "Pero además, la rueda esconde dos grandes grupos de colores: los *colores primarios* y los *colores secundarios*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -926,8 +926,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -935,8 +935,8 @@
       {
         "text": "Al centro de la rueda se ubican el rojo, el azul y el amarillo.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ]
@@ -955,8 +955,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -964,8 +964,8 @@
       {
         "text": "Estos colores no se pueden obtener mediante la mezcla de otros colores.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ]
@@ -984,8 +984,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -993,8 +993,8 @@
       {
         "text": "Es por ello que estos tres colores se conocen como *colores primarios*.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ]
@@ -1013,8 +1013,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1022,8 +1022,8 @@
       {
         "text": "Los *colores secundarios* se pueden obtener *mezclando los colores primarios*",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -1042,8 +1042,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1051,8 +1051,8 @@
       {
         "text": "El verde, el morado y el naranjo son *colores secundarios*.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -1071,8 +1071,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1080,8 +1080,8 @@
       {
         "text": "Cuando Noah compra pinturas, siempre compra solamente témpera con los colores primarios",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -1100,8 +1100,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1109,8 +1109,8 @@
       {
         "text": "Las reglas para obtener los colores secundarios faltantes son muy simples.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ],
@@ -1138,8 +1138,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1147,8 +1147,8 @@
       {
         "text": "Observa la siguiente imágen. Los tres grandes círculos representan a los tres colores primarios.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -1167,8 +1167,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -1176,8 +1176,8 @@
       {
         "text": "¿Qué pasaría si superponemos estos colores?",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -1196,8 +1196,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -1205,8 +1205,8 @@
       {
         "text": "Observa los nuevos colores obtenidos.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ]
@@ -1225,8 +1225,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -1234,8 +1234,8 @@
       {
         "text": "Rojo con amarillo da el naranjo.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ],
@@ -1263,8 +1263,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -1272,8 +1272,8 @@
       {
         "text": "Amarillo con azul da el verde.",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ],
@@ -1301,8 +1301,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8, 4],
-          "end": [18, 16]
+          "start": [9, 4],
+          "end": [19, 16]
         }
       }
     ],
@@ -1310,8 +1310,8 @@
       {
         "text": "Azul con rojo da el morado. ",
         "position": {
-          "start": [9, 5],
-          "end": [17, 15]
+          "start": [10, 5],
+          "end": [18, 15]
         }
       }
     ],
