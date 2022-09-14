@@ -23,7 +23,7 @@
         "img":"portada_inf2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
+        "coins":350,
         "estado":"estrellagris"
       }
     ]
@@ -52,7 +52,7 @@
         "img":"portada_dis1",
         "title":"Historia de Layla",
         "desc":"En esta actividad conocerás a Layla - una diseñadora gráfica. Junto con Layla podrás aprender sobra la importancia de los distintos elementos que componen el diseño de todos los objetos que te rodean. Verás algunas reglas de diseño y podrás aplicarlas, diseñando tu propia caja para repostería.",
-        "coins":200,
+        "coins":350,
         "estado":"estrelladorada"
       }
     ]
@@ -81,7 +81,7 @@
         "img":"portada_nut2",
         "title":"Historia de Carlos ",
         "desc":"En esta actividad conocerás a Carlos - un nutriólogo, que se encarga a ayudar a sus pacientes a controlar sus dietas para mejorar el estado de su salud. Junto con Carlos, aprenderás sobre la pirámide alimenticia. Además, verás como detectar la azúcar invisible en los alimentos que consumes, para evitar problemas de salud y mantener el balance en tu nutrición.",
-        "coins":200,
+        "coins":350,
         "estado":"estrellagris"
       }
     ]
@@ -110,7 +110,7 @@
         "img":"portada_astr2",
         "title":"Historia de X",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
+        "coins":350,
         "estado":"estrellagris"
       }
     ]
