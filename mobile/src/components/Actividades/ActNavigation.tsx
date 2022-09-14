@@ -42,6 +42,8 @@ interface ActNavigationProps {
   nPlacedItems: [number, ReactStateSetter<number>];
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
   setUpdateMaterial: ReactStateSetter<boolean>;
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
 }
 
 const ActNavigation = (props: ActNavigationProps) => {

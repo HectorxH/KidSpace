@@ -24,9 +24,12 @@ interface ActividadComponentProps {
   nombreActividad: string;
   cantMonedas: number;
   pageNumber: [number, ReactStateSetter<number>];
+  navigation?: NativeStackNavigationProp<RootStackParamList>;
+
+  // 3d
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
-  navigation?: NativeStackNavigationProp<RootStackParamList>;
+  // rotations: [Vec3[], ReactStateSetter<Vec3[]>];
 
   // drag
   dragAnswers: [string[], ReactStateSetter<string[]>];
@@ -65,6 +68,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     pickedAnswersDropdown,
     pickedAnswersQuiz,
     modelMaterial,
+    // rotations,
   } = props;
   const [pageNumber, setPageNumber] = props.pageNumber;
 
@@ -128,6 +132,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   models: [...models],
                   actividad: nombreActividad,
                   positions: [positions, setPositions],
+                  // rotations: rotations,
                   materialSelectorToggle: [
                     materialSelectorToggle,
                     setMaterialSelectorToggle,
@@ -229,6 +234,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           jumpVisibility={toggleDefaultValue === true || toggleValues[0] === 1}
           toggleValues={[toggleValues, setToggleValues]}
           setUpdateMaterial={setUpdateMaterial}
+          modelMaterial={props.modelMaterial}
+          selectedMaterial={props.selectedMaterial}
         />
       </View>
     </View>
