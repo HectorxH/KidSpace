@@ -48,6 +48,7 @@ const ToggleButton = (props: ToggleButtonProps) => {
                           buttonText: toggleButton.settings.buttonTextAlt,
                         }
                   }
+                  disabled={false}
                 />
               }
             />

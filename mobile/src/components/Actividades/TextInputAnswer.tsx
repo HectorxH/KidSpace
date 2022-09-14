@@ -29,7 +29,7 @@ const TextInputAnswer = (props: TextInputAnswerProps) => {
           return (
             <View
               style={styles.overlay}
-              key={question.rightAnswer + (index + 9999).toString()}>
+              key={question.position.start[0] + question.position.start[1]}>
               <Layout
                 position={question.position}
                 ObjectView={
@@ -38,16 +38,25 @@ const TextInputAnswer = (props: TextInputAnswerProps) => {
                       style={styles.input}
                       onChangeText={newValue => {
                         let userAnswers = [...props.userInputAnswers[0]];
-                        userAnswers[props.pageNumber][index] = parseInt(
-                          newValue,
-                          10,
-                        );
+                        const inputInt = parseInt(newValue, 10);
+                        if (inputInt) {
+                          userAnswers[props.pageNumber][index] = inputInt;
+                        } else {
+                          userAnswers[props.pageNumber][index] = 0;
+                        }
                         props.userInputAnswers[1](userAnswers);
                       }}
-                      value={props.userInputAnswers[0][props.pageNumber][
-                        index
-                      ].toString()}
-                      placeholder="useless placeholder"
+                      // value={props.userInputAnswers[0][props.pageNumber][
+                      //   index
+                      // ].toString()}
+                      value={
+                        props.userInputAnswers[0][props.pageNumber][index]
+                          ? props.userInputAnswers[0][props.pageNumber][
+                              index
+                            ].toString()
+                          : ''
+                      }
+                      placeholder="Ingrese un número"
                       keyboardType="numeric"
                     />
                   </View>
