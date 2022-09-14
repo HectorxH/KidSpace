@@ -27,6 +27,7 @@ interface DesafioIntroductorioSceneARProps {
       actividad: string;
       items: IModels[];
       positions: [Vec3[], ReactStateSetter<Vec3[]>];
+      // rotations: [Vec3[], ReactStateSetter<Vec3[]>];
       materialSelectorToggle: [number, ReactStateSetter<number>];
       setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
       modelMaterial: string[];
@@ -98,6 +99,7 @@ const DesafioIntroductorioSceneAR = (
     rotation: item.rotation,
     position: [0, 0, 0],
   }));
+  const [rotations, setRotations] = useState<number[]>(modelProps.map(() => 0));
 
   function updateRotation(
     index: number,
@@ -107,22 +109,31 @@ const DesafioIntroductorioSceneAR = (
     let transform = [...transforms];
     // Giro en todos los ejes
     //const temp = transform[index].rotation.map(x => x - rotation / 50);
-    //let temp2: Vec3 = [temp[0], temp[1], temp[2]];
+    // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
 
     //Giro en 1 eje
-    const temp = transform[index].rotation[2] - rotation;
-    let temp2: Vec3 = [
+    console.log(rotation, rotateState);
+    // const temp = transform[index].rotation[2] - rotation;
+
+    transform[index].rotation = [
       transform[index].rotation[0],
-      temp,
+      transform[index].rotation[2] - rotation,
       transform[index].rotation[2],
     ];
-    transform[index].rotation = temp2;
-    setTransforms(transform);
+    let rots = [...rotations];
+    rots[index] = rotation;
+
+    if (rotateState === 2) {
+      setTransforms(transform);
+    }
+    if (rotateState !== 2) {
+      setRotations(rots);
+    }
   }
   function updateScale(index: number, pinchState: number, scaleFactor: number) {
-    const MIN_SCALE = items[index].scale[0] * 0.9;
-    const MAX_SCALE = items[index].scale[0] * 1.1;
     let transform = [...transforms];
+    const MIN_SCALE = items[index].scale[0] * 0.8; // posible mejora: cambiar por valor default del json * 0.1
+    const MAX_SCALE = items[index].scale[0] * 1.3;
     const temp = transform[index].scale.map(x => x * scaleFactor);
     let temp2: Vec3 = [temp[0], temp[1], temp[2]];
     if (temp2[0] >= MIN_SCALE && temp2[0] <= MAX_SCALE) {
@@ -200,7 +211,7 @@ const DesafioIntroductorioSceneAR = (
                 updateScale(index, pinchState, scaleFactor)
               }
               onRotate={(rotateState, rotation) =>
-                updateRotation(index, rotateState, rotation)
+                updateRotation(index, rotateState, rotation + rotations[index])
               }
               onClick={() => onModelClick(item)}
             />
