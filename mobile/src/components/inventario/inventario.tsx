@@ -85,6 +85,7 @@ const Inventario = (props: InventarioProps) => {
         <IconButton
           icon="archive-refresh"
           size={RSize(0.075, 'h')}
+          color="white"
           onPress={handlePickUp}
         />
       </View>
