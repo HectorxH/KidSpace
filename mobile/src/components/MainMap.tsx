@@ -75,7 +75,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
       const m = await AsyncStorage.getItem('@monedas');
-      setCantMonedas(parseInt(m!, 10));
+      m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
       const c = await AsyncStorage.getItem('@completadas');
       c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
@@ -304,7 +304,9 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() => {
+                AsyncStorage.clear();
+              }}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
