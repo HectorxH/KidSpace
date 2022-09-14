@@ -44,7 +44,7 @@ const Activity = ({navigation, route}: ActivityProps) => {
                 onPress={() =>
                   navigation.push('Actividades', {
                     actividad: activity.nombreActividad,
-                    cantMonedas: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
+                    cantMonedas: 0,
                   })
                 }>
                 {/* onPress={() => console.log('Pressed')}> */}
