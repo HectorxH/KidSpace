@@ -33,6 +33,7 @@ interface JumpButtonProps {
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   setMaterialSelectorToggle: ReactStateSetter<number>;
+  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
 const JumpButton = (props: JumpButtonProps) => {
@@ -41,6 +42,20 @@ const JumpButton = (props: JumpButtonProps) => {
   }
 
   const jumpPage = (pgNumber: number, requirements: number[]) => {
+    props.selectedPageOrder[1](0);
+    let defaulSelectedtMaterial = [...props.selectedMaterial[0]];
+    let defaultMaterial = [...props.modelMaterial[0]];
+    if (typeof defaulSelectedtMaterial[pgNumber] !== 'undefined') {
+      for (let j = 0; j < defaulSelectedtMaterial[pgNumber].length; j++) {
+        for (let k = 0; k < defaulSelectedtMaterial[pgNumber][j].length; k++) {
+          defaulSelectedtMaterial[pgNumber][j][k] = 'default';
+        }
+        defaultMaterial[pgNumber][j] = 'default';
+      }
+    }
+    props.modelMaterial[1](defaultMaterial);
+    props.selectedMaterial[1](defaulSelectedtMaterial);
+
     if (
       checkAnswers(
         requirements,

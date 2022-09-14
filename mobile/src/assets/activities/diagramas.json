@@ -300,14 +300,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -347,14 +347,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -394,14 +394,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -509,14 +509,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": false
       }
@@ -528,12 +528,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "cube",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 11,
         "require": [10],
@@ -645,7 +645,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [7, 4],
+          "start": [7, 3.5],
           "end": [18, 16]
         }
       }
@@ -868,14 +868,14 @@
         "settings": {
           "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "table",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": "Hoja de cálculo",
-          "buttonTextAlt": "Volver"
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -925,14 +925,14 @@
         "settings": {
           "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "table",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": "Hoja de cálculo",
-          "buttonTextAlt": "Volver"
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -982,14 +982,14 @@
         "settings": {
           "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "table",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": "Hoja de cálculo",
-          "buttonTextAlt": "Volver"
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1039,14 +1039,14 @@
         "settings": {
           "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "table",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": "Hoja de cálculo",
-          "buttonTextAlt": "Volver"
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1078,30 +1078,267 @@
     "textBoxes": [
       {
         "position": {
-          "start": [1.5, 4],
-          "end": [9.8, 19.5]
+          "start": [5, 4.5],
+          "end": [7.5, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
         }
       },
       {
         "position": {
-          "start": [10.2, 4],
-          "end": [18.5, 19.5]
+          "start": [5, 7],
+          "end": [7.5, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 9.5],
+          "end": [7.5, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 12],
+          "end": [7.5, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 14.5],
+          "end": [7.5, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 4.5],
+          "end": [11.25, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 7],
+          "end": [11.25, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 9.5],
+          "end": [11.25, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 12],
+          "end": [11.25, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 14.5],
+          "end": [11.25, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 4.5],
+          "end": [15, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 7],
+          "end": [15, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 9.5],
+          "end": [15, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 12],
+          "end": [15, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 14.5],
+          "end": [15, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
         }
       }
     ],
     "texts": [
       {
-        "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+        "text": "1",
         "position": {
-          "start": [2, 4.5],
-          "end": [9.3, 10]
+          "start": [5, 7],
+          "end": [7.5, 9.5]
         }
       },
       {
-        "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+        "text": "2",
         "position": {
-          "start": [10.7, 4.5],
-          "end": [18, 10]
+          "start": [5, 9.5],
+          "end": [7.5, 12]
+        }
+      },
+      {
+        "text": "3",
+        "position": {
+          "start": [5, 12],
+          "end": [7.5, 14.5]
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [5, 14.5],
+          "end": [7.5, 17]
+        }
+      },
+      {
+        "text": "A",
+        "position": {
+          "start": [7.5, 4.5],
+          "end": [11.25, 7]
+        }
+      },
+      {
+        "text": "Flores",
+        "position": {
+          "start": [7.5, 7],
+          "end": [11.25, 9.5]
+        },
+        "settings": {
+          "color": "#FFFFFF"
+        }
+      },
+      {
+        "text": "Margarita",
+        "position": {
+          "start": [7.5, 9.5],
+          "end": [11.25, 12]
+        }
+      },
+      {
+        "text": "Girasol",
+        "position": {
+          "start": [7.5, 12],
+          "end": [11.25, 14.5]
+        }
+      },
+      {
+        "text": "Iris",
+        "position": {
+          "start": [7.5, 14.5],
+          "end": [11.25, 17]
+        }
+      },
+      {
+        "text": "B",
+        "position": {
+          "start": [11.25, 4.5],
+          "end": [15, 7]
+        }
+      },
+      {
+        "text": "Cantidades",
+        "position": {
+          "start": [11.25, 7],
+          "end": [15, 9.5]
+        }, 
+        "settings": {
+          "color": "#FFFFFF"
         }
       }
     ],
@@ -1110,24 +1347,24 @@
           "rightAnswer": ["9"],
           "answers": ["9", "4", "7"],
           "position": {
-            "start": [9, 10],
-            "end": [12, 12]
+            "start": [11.25, 9.5],
+            "end": [15, 12]
           }
         },
         {
           "rightAnswer": ["7"],
           "answers": ["9", "4", "7"],
           "position": {
-            "start": [9, 13],
-            "end": [12, 15]
+            "start": [11.25, 12],
+            "end": [15, 14.5]
           }
         },
         {
           "rightAnswer": ["4"],
           "answers": ["9", "4", "7"],
           "position": {
-            "start": [9, 16],
-            "end": [12, 18]
+            "start": [11.25, 14.5],
+            "end": [15, 17]
           }
         }
       ],
@@ -1136,14 +1373,14 @@
         "settings": {
           "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "table",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": "Hoja de cálculo",
-          "buttonTextAlt": "Volver"
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": false
       }
@@ -1155,12 +1392,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "cube",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 0,
         "require": [21],

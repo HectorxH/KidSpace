@@ -241,6 +241,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           modelMaterial={props.modelMaterial}
           selectedMaterial={props.selectedMaterial}
           setMaterialSelectorToggle={setMaterialSelectorToggle}
+          selectedPageOrder={[selectedPageOrder, setSelectedPageOrder]}
         />
       </View>
     </View>

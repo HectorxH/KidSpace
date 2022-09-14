@@ -98,7 +98,7 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
           <Layout
             position={{
               start: [15, 2],
-              end: [20, 3],
+              end: [20, 4],
             }}
             ObjectView={
               <Text style={styles.buttonText}>
@@ -116,15 +116,16 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                   position={{
                     start: [
                       15.25 + 2.375 * (index % 2),
-                      4 + 4.5 * (index / 2) * (1 - (index % 2)),
+                      5 + 4.5 * (index / 2) * (1 - (index % 2)),
                     ],
                     end: [
                       17.375 + 2.375 * (index % 2),
-                      8 + 4.5 * (index / 2) * (1 - (index % 2)),
+                      9 + 4.5 * (index / 2) * (1 - (index % 2)),
                     ],
                   }}
                   ObjectView={
                     <TouchableHighlight
+                      underlayColor={'gray'}
                       style={
                         props.selectedMaterial[0][props.pageNumber][
                           props.objectNumber
@@ -162,7 +163,19 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
             }}
             ObjectView={
               <TouchableHighlight
-                style={styles.continueButton}
+                underlayColor={'gray'}
+                disabled={
+                  props.selectedMaterial[0][props.pageNumber][
+                    props.objectNumber
+                  ][selectedPageOrder] === 'default'
+                }
+                style={
+                  props.selectedMaterial[0][props.pageNumber][
+                    props.objectNumber
+                  ][selectedPageOrder] !== 'default'
+                    ? styles.continueButton
+                    : styles.continueButtonDisabled
+                }
                 onPress={() => changePage()}>
                 <Text style={styles.buttonText}>{'Listo'}</Text>
               </TouchableHighlight>
@@ -259,6 +272,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: RSize(0.03, 'h'),
     backgroundColor: '#A1C96A',
+    width: '100%',
+    height: '100%',
+  },
+  continueButtonDisabled: {
+    borderWidth: 0,
+    justifyContent: 'center',
+    borderRadius: RSize(0.03, 'h'),
+    backgroundColor: '#BBBBBB',
     width: '100%',
     height: '100%',
   },
