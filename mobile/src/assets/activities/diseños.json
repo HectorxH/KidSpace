@@ -221,7 +221,7 @@
     ],
     "texts": [
       {
-        "text": "Percibimos las texturas a través del tacto.",
+        "text": "Percibimos las texturas a través del *tacto*.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -259,7 +259,7 @@
     ],
     "texts": [
       {
-        "text": "Un objeto puede ser liso, áspero, rugoso o suave",
+        "text": "Un objeto puede ser *liso*, *áspero*, *rugoso* o *suave*",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -333,8 +333,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -345,8 +345,8 @@
       {
         "text": "En la vida cotidiana usamos diversos objetos y cada uno tiene sus propias características.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -403,8 +403,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -415,8 +415,8 @@
       {
         "text": "En el menú de *inventario* podrás encontrar varios objetos. *Intenta dar click en sus imágenes*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -473,8 +473,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -485,8 +485,8 @@
       {
         "text": "Observa y analiza *las texturas* y *los colores* de los objetos.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -543,8 +543,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -555,8 +555,8 @@
       {
         "text": "Responda las preguntas sobre los objetos tocando el botón en la *esquina superior izquierda de la pantalla*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -887,22 +887,22 @@
           {
             "text": "Es difícil de usar",
             "position": {
-              "start": [3, 11.5],
-              "end": [10, 13.5]
+              "start": [3, 10.5],
+              "end": [10, 12.5]
             }
           },
           {
             "text": "El color no es adecuado",
             "position": {
-              "start": [3, 14.5],
-              "end": [10, 16.5]
+              "start": [3, 13.5],
+              "end": [10, 15.5]
             }
           },
           {
             "text": "La regadera es muy chica",
             "position": {
-              "start": [3, 17.5],
-              "end": [10, 19.5]
+              "start": [3, 16.5],
+              "end": [10, 18.5]
             }
           }
         ]
@@ -1002,22 +1002,22 @@
           {
             "text": "Su color no es adecuado",
             "position": {
-              "start": [3, 11.5],
-              "end": [10, 13.5]
+              "start": [3, 10.5],
+              "end": [10, 12.5]
             }
           },
           {
             "text": "Es demasiado grueso",
             "position": {
-              "start": [3, 14.5],
-              "end": [10, 16.5]
+              "start": [3, 13.5],
+              "end": [10, 15.5]
             }
           },
           {
             "text": "Es poco resistente",
             "position": {
-              "start": [3, 17.5],
-              "end": [10, 19.5]
+              "start": [3, 16.5],
+              "end": [10, 18.5]
             }
           }
         ]
@@ -1045,7 +1045,7 @@
     ],
     "texts": [
       {
-        "text": "¡Así es!. Las proporciones de un objeto pueden hacer que este sea díficil de usar.",
+        "text": "¡Así es! Las proporciones de un objeto pueden hacer que este sea díficil de usar.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -1106,8 +1106,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1118,8 +1118,8 @@
       {
         "text": "Luca tiene *un cuaderno* especial, en el cual anota todas las observaciones sobre los diseños de productos.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1161,8 +1161,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1173,8 +1173,8 @@
       {
         "text": "Luca tiene que verificar que cada producto cumpla con 2 criterios: sus elementos deben tener *forma o proporciones* adecuadas",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1216,8 +1216,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1228,8 +1228,8 @@
       {
         "text": "y cada objeto debe ser *fácil de usar*. ¡Recuerda que el diseño siempre debe seguir la función!",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1271,8 +1271,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1283,8 +1283,8 @@
       {
         "text": "En el inventario podrás encontrar los objetos. ¡Colócalos en tu pantalla y *observa sus diseños*!",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1326,8 +1326,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1338,8 +1338,8 @@
       {
         "text": "Rellena las observaciones en el cuaderno ,dando click en el boton en *la esquina superior izquierda*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1464,7 +1464,7 @@
               "end": [20, 20]
             },
             "settings": { 
-              "fontSize": 0.06,
+              "fontSize": 0.05,
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1498,7 +1498,7 @@
               "end": [20, 20]
             },
             "settings": { 
-              "fontSize": 0.06,
+              "fontSize": 0.05,
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1733,7 +1733,7 @@
           "end": [19, 15.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1980,7 +1980,7 @@
     ],
     "bubbles": [
       {
-        "name": "taza_fail",
+        "name": "taza_ok",
         "position" : {
           "start": [1, 4],
           "end": [8, 16]
@@ -2002,7 +2002,7 @@
           "end": [19, 15.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

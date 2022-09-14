@@ -60,6 +60,7 @@ const images: {
     silla_chueca: require('./extras/silla_chueca.png'),
     newsilla: require('./extras/newsilla.png'),
     taza_fail: require('./extras/taza_fail.png'),
+    taza_ok: require('./extras/taza_ok.png'),
 
     diseño1_color1: require('./extras/diseño1_color1.png'),
     diseño1_color2: require('./extras/diseño1_color2.png'),
