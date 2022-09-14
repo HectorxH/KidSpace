@@ -242,7 +242,7 @@ const styles = StyleSheet.create({
   },
   hoverDragging: {
     borderColor: 'magenta',
-    borderWidth: 2,
+    borderWidth: 0,
     opacity: 1,
   },
   receivingContainer: {

@@ -191,8 +191,8 @@ const DesafioIntroductorioSceneAR = (
               materials={modelsMaterials[index]}
               // resources={modelProps[item].resources as ImageSourcePropType[]}
               position={positions[index]}
-              scale={modelProps[item].scale}
-              rotation={modelProps[item].rotation}
+              scale={transforms[item].scale}
+              rotation={transforms[item].rotation}
               type={modelProps[item].type}
               onDrag={() => {}}
               dragType={'FixedToWorld'}

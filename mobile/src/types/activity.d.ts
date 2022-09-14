@@ -18,6 +18,7 @@ export interface IActivity {
   img5: string;
   path: string;
   pathAsignar: string;
+  nombreActividad: 'diagramas' | 'diseños';
 }
 
 export type ButtonSetting = {

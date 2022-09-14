@@ -9,7 +9,7 @@ import {RSize} from '../../utils/responsive';
 const Activity = ({navigation, route}: ActivityProps) => {
   const {activity} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  console.log(activity);
+  // console.log(activity);
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
@@ -42,8 +42,9 @@ const Activity = ({navigation, route}: ActivityProps) => {
                 color="#FF8A01"
                 mode="contained"
                 onPress={() =>
-                  navigation.push('CuentoIntroductorio', {
-                    actividad: 'diagramas',
+                  navigation.push('Actividades', {
+                    actividad: activity.nombreActividad,
+                    cantMonedas: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
                   })
                 }>
                 {/* onPress={() => console.log('Pressed')}> */}

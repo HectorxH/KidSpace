@@ -15,6 +15,7 @@ const ButtonComponent = (props: ButtonComponentProps) => {
   return (
     <View style={styles.container}>
       <TouchableHighlight
+        underlayColor={'gray'}
         // icon={settings.buttonIcon}
         // labelStyle={styles.iconStyle}
         // mode="contained"

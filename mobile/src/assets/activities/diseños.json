@@ -320,7 +320,7 @@
         {
           "model": "pluma",
           "scale": [0.1, 0.1, 0.1],
-          "rotation": [0, 90, 0]
+          "rotation": [90, 0, 0]
         },
         {
           "model": "taza",
@@ -355,14 +355,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -390,7 +390,7 @@
         {
           "model": "pluma",
           "scale": [0.1, 0.1, 0.1],
-          "rotation": [0, 90, 0]
+          "rotation": [90, 0, 0]
         },
         {
           "model": "taza",
@@ -425,14 +425,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -460,7 +460,7 @@
         {
           "model": "pluma",
           "scale": [0.1, 0.1, 0.1],
-          "rotation": [0, 90, 0]
+          "rotation": [90, 0, 0]
         },
         {
           "model": "taza",
@@ -495,14 +495,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -530,7 +530,7 @@
         {
           "model": "pluma",
           "scale": [0.1, 0.1, 0.1],
-          "rotation": [0, 90, 0]
+          "rotation": [90, 0, 0]
         },
         {
           "model": "taza",
@@ -565,14 +565,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -600,7 +600,7 @@
         {
           "model": "pluma",
           "scale": [0.1, 0.1, 0.1],
-          "rotation": [0, 90, 0]
+          "rotation": [90, 0, 0]
         },
         {
           "model": "taza",
@@ -759,14 +759,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": false
       }
@@ -778,12 +778,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 14,
         "require": [13],
@@ -1128,14 +1128,14 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1183,14 +1183,14 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1238,14 +1238,14 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1293,14 +1293,14 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1348,14 +1348,14 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1406,10 +1406,10 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1425,8 +1425,8 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
@@ -1630,10 +1630,10 @@
           "settings": {
             "buttonColorAlt": "#B878EA",
             "buttonColorNormal": "#B878EA",
-            "buttonIconAlt": "notebook",
+            "buttonIconAlt": "book",
             "buttonIconNormal": "cube",
-            "buttonTextAlt": "Cuaderno",
-            "buttonTextNormal": "Volver"
+            "buttonTextAlt": " Cuaderno",
+            "buttonTextNormal": " Volver"
           },
           "position" : {
             "start": [0, 0],
@@ -1654,7 +1654,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 27,
         "require": [],
@@ -1664,10 +1664,10 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Mejorar el diseño",
-          "buttonTextNormal": "Mejorar el diseño"
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Mejorar el diseño",
+          "buttonTextNormal": " Mejorar el diseño"
         },
         "position" : {
           "start": [13.5, 16.5],
@@ -1704,7 +1704,8 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 0
+          "elevation": 0,
+          "borderRadius": 0
         }
       }
     ],
@@ -1744,10 +1745,10 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [0, 0],
@@ -1763,8 +1764,8 @@
           "buttonColorNormal": "#B878EA",
           "buttonIconAlt": "",
           "buttonIconNormal": "",
-          "buttonTextAlt": "Volver",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [12.5, 16.5],
@@ -1802,7 +1803,8 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 0
+          "elevation": 0,
+          "borderRadius": 0
         }
       }
     ],
@@ -1897,10 +1899,10 @@
           "settings": {
             "buttonColorAlt": "#B878EA",
             "buttonColorNormal": "#B878EA",
-            "buttonIconAlt": "notebook",
+            "buttonIconAlt": "book",
             "buttonIconNormal": "cube",
-            "buttonTextAlt": "Cuaderno",
-            "buttonTextNormal": "Volver"
+            "buttonTextAlt": " Cuaderno",
+            "buttonTextNormal": " Volver"
           },
           "position" : {
             "start": [0, 0],
@@ -1921,7 +1923,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 27,
         "require": [],
@@ -1931,10 +1933,10 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Mejorar el diseño",
-          "buttonTextNormal": "Mejorar el diseño"
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Mejorar el diseño",
+          "buttonTextNormal": " Mejorar el diseño"
         },
         "position" : {
           "start": [13.5, 16.5],
@@ -1971,7 +1973,8 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 0
+          "elevation": 0,
+          "borderRadius": 0
         }
       }
     ],
@@ -2011,10 +2014,10 @@
         "settings": {
           "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "notebook",
+          "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Cuaderno",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [0, 0],
@@ -2030,8 +2033,8 @@
           "buttonColorNormal": "#B878EA",
           "buttonIconAlt": "",
           "buttonIconNormal": "",
-          "buttonTextAlt": "Volver",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [12.5, 16.5],

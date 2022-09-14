@@ -70,32 +70,6 @@ export function checkAnswers(
       .map(n => rightInputsAnswers[n].length)
       .reduce((x, y) => Number(x) + Number(y), 0);
 
-  console.log(
-    'Respuestas correctas: ',
-    respuestasCorrectas,
-    'Cantidad respuestas: ',
-    cantidadRespuestas,
-  );
-
-  console.log(
-    'Respuestas correctas inputfield: ',
-    requirements
-      .map(n =>
-        userInputAnswers[n]
-          .map((userAnswer, idx) =>
-            userAnswer === rightInputsAnswers[n][idx] ? [1] : [0],
-          )
-          .reduce((x, y) => Number(x) + Number(y), 0),
-      )
-      .reduce((x, y) => Number(x) + Number(y), 0),
-    // .reduce((x, y) => Number(x) + Number(y), 0),
-    // ,
-    'Cantidad respuestas inputfield: ',
-    requirements
-      .map(n => rightInputsAnswers[n].length)
-      .reduce((x, y) => Number(x) + Number(y), 0),
-  );
-
   requirements.map(n => {
     console.log('input field answers:', userInputAnswers[n]);
     console.log('right field answers:', rightInputsAnswers[n]);

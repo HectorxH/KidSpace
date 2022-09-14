@@ -97,17 +97,19 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       <Animated.View style={[styles.mainView, {opacity: fadeAnimFel}]}>
         <Text style={styles.blueText}> ¡Felicitaciones!</Text>
       </Animated.View>
-      <Animated.View style={[styles.mainView, {opacity: fadeAnimMon}]}>
-        <Chip style={styles.chip}>
-          <View style={styles.viewLeft}>
-            <Text style={styles.greyText}> Ganaste </Text>
-          </View>
-          <View style={styles.viewRight}>
-            <Image style={styles.icon} source={images.moneda.uri} />
-            <Text style={styles.blackText}>{cantMonedas} monedas</Text>
-          </View>
-        </Chip>
-      </Animated.View>
+      {cantMonedas !== 0 && (
+        <Animated.View style={[styles.mainView, {opacity: fadeAnimMon}]}>
+          <Chip style={styles.chip}>
+            <View style={styles.viewLeft}>
+              <Text style={styles.greyText}> Ganaste </Text>
+            </View>
+            <View style={styles.viewRight}>
+              <Image style={styles.icon} source={images.moneda.uri} />
+              <Text style={styles.blackText}>{cantMonedas} monedas</Text>
+            </View>
+          </Chip>
+        </Animated.View>
+      )}
       <Animated.View style={[styles.buttonView, {opacity: fadeAnimBut}]}>
         <Button onPress={handleEndRecompensa} style={styles.button}>
           <Text style={styles.buttonText}>Entendido</Text>

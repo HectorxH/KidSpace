@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
   },
   answerButton: {
     borderRadius: RSize(0.04, 'h'),
+    height: RSize(0.12, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
@@ -109,6 +110,7 @@ const styles = StyleSheet.create({
   },
   wrongAnswerButton: {
     borderRadius: RSize(0.04, 'h'),
+    height: RSize(0.12, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
@@ -116,6 +118,7 @@ const styles = StyleSheet.create({
   },
   rightAnswerButton: {
     borderRadius: RSize(0.04, 'h'),
+    height: RSize(0.12, 'h'),
     borderWidth: 3,
     justifyContent: 'center',
     borderColor: '#5C9DEC',
@@ -124,16 +127,16 @@ const styles = StyleSheet.create({
   answerText: {
     color: '#063D69',
     textTransform: 'none',
-    fontSize: RSize(0.035, 'h'),
+    fontSize: RSize(0.04, 'h'),
   },
   wrongAnswerText: {
     color: '#ffffff',
-    fontSize: RSize(0.035, 'h'),
+    fontSize: RSize(0.04, 'h'),
     textTransform: 'none',
   },
   rightAnswerText: {
     color: '#ffffff',
-    fontSize: RSize(0.035, 'h'),
+    fontSize: RSize(0.04, 'h'),
     textTransform: 'none',
   },
 });
