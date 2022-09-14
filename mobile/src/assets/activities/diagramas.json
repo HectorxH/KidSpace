@@ -1263,6 +1263,9 @@
         "position": {
           "start": [5, 7],
           "end": [7.5, 9.5]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1270,6 +1273,9 @@
         "position": {
           "start": [5, 9.5],
           "end": [7.5, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1277,6 +1283,9 @@
         "position": {
           "start": [5, 12],
           "end": [7.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1284,6 +1293,9 @@
         "position": {
           "start": [5, 14.5],
           "end": [7.5, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1291,6 +1303,9 @@
         "position": {
           "start": [7.5, 4.5],
           "end": [11.25, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1300,7 +1315,8 @@
           "end": [11.25, 9.5]
         },
         "settings": {
-          "color": "#FFFFFF"
+          "color": "#FFFFFF",
+          "fontSize": 0.05
         }
       },
       {
@@ -1308,6 +1324,9 @@
         "position": {
           "start": [7.5, 9.5],
           "end": [11.25, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1315,6 +1334,9 @@
         "position": {
           "start": [7.5, 12],
           "end": [11.25, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1322,6 +1344,9 @@
         "position": {
           "start": [7.5, 14.5],
           "end": [11.25, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1329,6 +1354,9 @@
         "position": {
           "start": [11.25, 4.5],
           "end": [15, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
         }
       },
       {
@@ -1338,6 +1366,7 @@
           "end": [15, 9.5]
         }, 
         "settings": {
+          "fontSize": 0.05,
           "color": "#FFFFFF"
         }
       }
@@ -1399,11 +1428,449 @@
           "start": [13, 1],
           "end": [19, 3.5]
         },
-        "target": 0,
+        "target": 22,
         "require": [21],
         "visible": false
       }
     ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4.5],
+          "end": [3.5, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.5, 4.5],
+          "end": [19.5, 19.5]
+        }, 
+        "settings": {
+          "borderWidth" : 0,
+          "backgroundColor": "#FFFFFF",
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "1",
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "2",
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "3",
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "5",
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "A",
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Flores",
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        },
+        "settings": {
+          "color": "#FFFFFF",
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Margarita",
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Girasol",
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Iris",
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Total",
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "B",
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Cantidades",
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "fontSize": 0.05,
+          "color": "#FFFFFF"
+        }
+      },
+      {
+        "text": "9",
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "7",
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "20",
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Para calcular el total de las flores, en la celda B5 debemos poner *=SUMA(B2:B4)*",
+        "position": {
+          "start": [12, 5],
+          "end": [19, 19]
+        },
+        "settings": {
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 23,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": ""
   }
 ]
 
