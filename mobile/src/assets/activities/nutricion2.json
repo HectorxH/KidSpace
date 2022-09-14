@@ -892,22 +892,22 @@
           {
             "text": "20,1 gramos",
             "position": {
-              "start": [3, 11.5],
-              "end": [10, 13.5]
+              "start": [3, 9.5],
+              "end": [10, 11.5]
             }
           },
           {
             "text": "2 gramos",
             "position": {
-              "start": [3, 14.5],
-              "end": [10, 16.5]
+              "start": [3, 12.5],
+              "end": [10, 14.5]
             }
           },
           {
             "text": "190 gramos",
             "position": {
-              "start": [3, 17.5],
-              "end": [10, 19.5]
+              "start": [3, 15.5],
+              "end": [10, 17.5]
             }
           }
         ]
@@ -949,22 +949,22 @@
           {
             "text": "Aproximadamente 2",
             "position": {
-              "start": [3, 11.5],
-              "end": [10, 13.5]
+              "start": [3, 9.5],
+              "end": [10, 11.5]
             }
           },
           {
             "text": "Aproximadamente 3",
             "position": {
-              "start": [3, 14.5],
-              "end": [10, 16.5]
+              "start": [3, 12.5],
+              "end": [10, 14.5]
             }
           },
           {
             "text": "Aproximadamente 4",
             "position": {
-              "start": [3, 17.5],
-              "end": [10, 19.5]
+              "start": [3, 15.5],
+              "end": [10, 17.5]
             }
           }
         ]
@@ -1021,7 +1021,7 @@
     ],
     "texts": [
       {
-        "text": "Carlos te invita a analizar algunos alimentos, para ver cuánto azúcar  tienen.",
+        "text": "Carlos te invita a analizar algunos alimentos, para ver cuánta azúcar tienen.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1047,8 +1047,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1059,8 +1059,8 @@
       {
         "text": "Puedes evitar los alimentos altos en azúcar a la hora de comprar en supermercado.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1097,8 +1097,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1109,8 +1109,8 @@
       {
         "text": "Para esto, debes ser capaz de encontrar la *etiqueta con la información nutricional* en el alimento elegido",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1147,8 +1147,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1159,8 +1159,8 @@
       {
         "text": "y analizar *cuánta azucar tiene por porción*.  Si es demasiada, debes *evitar* consumir este alimento.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1197,8 +1197,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1209,8 +1209,8 @@
       {
         "text": "En el inventario podrás encontrar un alimento. *¡Encuentra la etiqueta, y analiza si es un aliemento sano!*",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1247,8 +1247,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1259,8 +1259,8 @@
       {
         "text": "Si tocas el botón en la *esquina superior izquierda* de la pantalla, podrás registrar tu respuesta.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1297,8 +1297,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1309,8 +1309,8 @@
       {
         "text": "Cuando termines de responder las preguntas, podrás avanzar al siguiente alimento.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1412,7 +1412,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1425,7 +1425,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1505,8 +1505,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1517,8 +1517,8 @@
       {
         "text": "¡Muy bien! Seguiremos practicando. ¡Las reglas son las mismas!",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -1620,7 +1620,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1633,7 +1633,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1713,8 +1713,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1723,17 +1723,10 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente!",
+        "text": "¡Excelente!\n Carlos te tiene el último desafío para practicar.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 6]
-        }
-      },
-      {
-        "text": "Carlos te tiene el último desafío para practicar.",
-        "position": {
-          "start": [3, 6.5],
-          "end": [15, 15.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -1835,7 +1828,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1848,7 +1841,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1949,8 +1942,8 @@
           "buttonTextNormal": "Terminar"
         },
         "position" : {
-          "start": [9, 15.5],
-          "end": [17, 18.5]
+          "start": [9, 13.5],
+          "end": [17, 16.5]
         },
         "target": -1,
         "require": [],

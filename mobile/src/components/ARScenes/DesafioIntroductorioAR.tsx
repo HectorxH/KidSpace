@@ -120,8 +120,8 @@ const DesafioIntroductorioSceneAR = (
     setTransforms(transform);
   }
   function updateScale(index: number, pinchState: number, scaleFactor: number) {
-    const MIN_SCALE = 0.1;
-    const MAX_SCALE = 0.3;
+    const MIN_SCALE = items[index].scale[0] * 0.9;
+    const MAX_SCALE = items[index].scale[0] * 1.1;
     let transform = [...transforms];
     const temp = transform[index].scale.map(x => x * scaleFactor);
     let temp2: Vec3 = [temp[0], temp[1], temp[2]];
