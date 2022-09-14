@@ -43,6 +43,8 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [cantMonedas, setCantMonedas] = useState(0);
   const [completadas, setCompletadas] = useState('[]');
 
+  const userData = useAuth().user;
+
   const loadNotification = () => {
     let visible = false;
     if (notification !== '0' && notification !== null) {
@@ -67,8 +69,9 @@ const MainMap = ({navigation}: MainMapProps) => {
         ? (allMessages = JSON.parse(jsonAllMessages))
         : [];
       setMessage(JSON.parse(jsonAllMessages!));
-      const u = await AsyncStorage.getItem('@nombres');
-      setUser(u!);
+      if (userData) {
+        setUser(userData?.nombres);
+      }
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
       const m = await AsyncStorage.getItem('@monedas');

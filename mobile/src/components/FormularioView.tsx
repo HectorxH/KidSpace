@@ -3,7 +3,6 @@ import axios from 'axios';
 import Config from 'react-native-config';
 import {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Button, Card} from 'react-native-paper';
 import {FormularioViewProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
@@ -30,15 +29,13 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
         nombres,
         apellidos,
         tipo: 'estudiante',
+        cursoId,
       });
       const {_id, username, password} = res.data;
       await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
         username,
         password,
       });
-      await axios.post(
-        `${Config.REACT_APP_BACKEND_URL}/Curso/${cursoId}/inscribir`,
-      );
       await login({
         _id,
         username,
@@ -47,17 +44,6 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
         apellidos,
         tipo: 'estudiante',
       });
-      console.log(cursoId);
-      await axios.post(
-        `${Config.REACT_APP_BACKEND_URL}/Curso/${cursoId}/inscribir`,
-      );
-      console.log(password);
-
-      await AsyncStorage.setItem('@username', username);
-      await AsyncStorage.setItem('@password', password);
-
-      await AsyncStorage.setItem('@nombres', nombres);
-      navigation.push('MainMap');
     } catch (error) {
       console.log(JSON.stringify(error));
       navigation.push('ErrorView');

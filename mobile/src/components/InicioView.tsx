@@ -21,12 +21,12 @@ const InicioView = ({navigation}: InicioViewProps) => {
       navigation.navigate('MainMap');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
 
   const testLogout = async () => {
+    await logout();
     await AsyncStorage.removeItem('@notification');
     await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-    await logout();
   };
 
   return (

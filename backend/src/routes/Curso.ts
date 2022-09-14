@@ -78,24 +78,24 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-router.post('/:id/inscribir', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const user = req.user?._id;
-    const tipo = req.user?.tipo;
-    if (tipo === 'estudiante') {
-      const estudiante = await Estudiante.findOne({ user });
-      await Curso.findByIdAndUpdate(id, { $addToSet: { estudiantes: estudiante?._id } });
-      if (estudiante) {
-        estudiante.curso = id;
-        await estudiante?.save();
-      }
-    }
-    res.send(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
+// router.post('/:id/inscribir', async (req, res) => {
+//   try {
+//     const { id } = req.params;
+//     const user = req.user?._id;
+//     const tipo = req.user?.tipo;
+//     if (tipo === 'estudiante') {
+//       const estudiante = await Estudiante.findOne({ user });
+//       await Curso.findByIdAndUpdate(id, { $addToSet: { estudiantes: estudiante?._id } });
+//       if (estudiante) {
+//         estudiante.curso = id;
+//         await estudiante?.save();
+//       }
+//     }
+//     res.send(200);
+//   } catch (e) {
+//     console.log(e);
+//     res.sendStatus(500);
+//   }
+// });
 
 export default router;

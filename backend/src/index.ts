@@ -18,6 +18,7 @@ import User from './models/User';
 import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
 import Apoderado from './models/Apoderado';
+import Curso from './models/Curso';
 
 // Agrega la funcion .format como en python
 if (!String.prototype.format) {
@@ -70,7 +71,7 @@ app.use((req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo, email,
+      nombres, apellidos, tipo, email, cursoId,
     } = req.body;
     let { username, password } = req.body;
     if (_.some(req.body, _.isNil)) {
@@ -113,7 +114,8 @@ app.post('/register', async (req, res) => {
       await profesor.save();
       res.sendStatus(200);
     } else if (user.tipo === 'estudiante') {
-      const estudiante = new Estudiante({ user: user._id });
+      const estudiante = new Estudiante({ user: user._id, curso: cursoId });
+      await Curso.findByIdAndUpdate(cursoId, { $addToSet: { estudiantes: estudiante?._id } });
       await estudiante.save();
       res.json({ username, password, _id: user._id });
     } else if (user.tipo === 'apoderado') {
