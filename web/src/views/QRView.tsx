@@ -71,7 +71,7 @@ const QRView = () => {
         />
       </Stack>
       <Stack
-        direction="row"
+        direction={{ xs: 'column', sm: 'row' }}
         alignItems="center"
         spacing={2}
         justifyContent="space-between"

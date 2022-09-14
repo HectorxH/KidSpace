@@ -305,6 +305,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               )}
               contentStyle={{flexDirection: 'column'}}
               onPress={() => {
+                // testLogout();
                 AsyncStorage.clear();
               }}>
               <Text style={styles.subtitle}>Tienda</Text>
