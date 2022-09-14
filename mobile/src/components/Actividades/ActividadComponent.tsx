@@ -236,6 +236,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           setUpdateMaterial={setUpdateMaterial}
           modelMaterial={props.modelMaterial}
           selectedMaterial={props.selectedMaterial}
+          setMaterialSelectorToggle={setMaterialSelectorToggle}
         />
       </View>
     </View>
