@@ -58,6 +58,7 @@ const ActNavigation = (props: ActNavigationProps) => {
   const actividad = actividades[pageNumber];
 
   // Se bloquea la navegación cuando aparecen preguntas sin responder en el cuento/desafio
+  // Eliminar estas dos variables y cambiar por funcion checkAnswer, por ahora no trollea eso si
   var respuestasCorrectas =
     userAnswers
       .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))

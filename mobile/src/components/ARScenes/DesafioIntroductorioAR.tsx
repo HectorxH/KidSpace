@@ -111,10 +111,7 @@ const DesafioIntroductorioSceneAR = (
     //const temp = transform[index].rotation.map(x => x - rotation / 50);
     // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
 
-    //Giro en 1 eje
-    console.log(rotation, rotateState);
-    // const temp = transform[index].rotation[2] - rotation;
-
+    //Giro en eje y
     transform[index].rotation = [
       transform[index].rotation[0],
       transform[index].rotation[2] - rotation,
@@ -131,15 +128,36 @@ const DesafioIntroductorioSceneAR = (
     }
   }
   function updateScale(index: number, pinchState: number, scaleFactor: number) {
+    console.log('scale', pinchState, scaleFactor);
+
     let transform = [...transforms];
-    const MIN_SCALE = items[index].scale[0] * 0.8; // posible mejora: cambiar por valor default del json * 0.1
-    const MAX_SCALE = items[index].scale[0] * 1.3;
+    const MIN_SCALE = 0.8;
+    const MAX_SCALE = 1.3;
     const temp = transform[index].scale.map(x => x * scaleFactor);
     let temp2: Vec3 = [temp[0], temp[1], temp[2]];
-    if (temp2[0] >= MIN_SCALE && temp2[0] <= MAX_SCALE) {
+    if (temp2[0] < items[index].scale[0] * MIN_SCALE) {
+      temp2 = [
+        items[index].scale[0] * MIN_SCALE,
+        items[index].scale[1] * MIN_SCALE,
+        items[index].scale[2] * MIN_SCALE,
+      ];
       transform[index].scale = temp2;
-      setTransforms(transform);
+    } else if (temp2[0] > items[index].scale[0] * MAX_SCALE) {
+      temp2 = [
+        items[index].scale[0] * MAX_SCALE,
+        items[index].scale[1] * MAX_SCALE,
+        items[index].scale[2] * MAX_SCALE,
+      ];
+      transform[index].scale = temp2;
+    } else {
+      transform[index].scale = temp2;
     }
+
+    // if (temp2[0] >= MIN_SCALE && temp2[0] <= MAX_SCALE) {
+    //   transform[index].scale = temp2;
+    //   setTransforms(transform);
+    // }
+    setTransforms(transform);
   }
 
   function onInitialized(state: ViroTrackingStateConstants) {

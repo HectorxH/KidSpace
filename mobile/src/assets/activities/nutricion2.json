@@ -1496,7 +1496,7 @@
       "models": [
         {
           "model": "galletas",
-          "scale": [1.2, 1.2, 1.2],
+          "scale": [2, 2, 2],
           "rotation": [0, 0, 0]
         }
       ]
@@ -1549,7 +1549,7 @@
       "models": [
         {
           "model": "galletas",
-          "scale": [1.2, 1.2, 1.2],
+          "scale": [2, 2, 2],
           "rotation": [0, 0, 0]
         }
       ]
