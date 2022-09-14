@@ -158,6 +158,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
     await logout();
     console.log('!!!');
+    AsyncStorage.clear();
     navigation.navigate('InicioView');
   };
 
@@ -291,10 +292,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() => {
-                // testLogout();
-                AsyncStorage.clear();
-              }}>
+              onPress={testLogout}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
