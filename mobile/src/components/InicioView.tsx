@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
@@ -10,35 +10,49 @@ import {useAuth} from '../hooks/useAuth';
 import axios from 'axios';
 import Config from 'react-native-config';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import CargaView from './CargaView';
 
 const InicioView = ({navigation}: InicioViewProps) => {
   const {user, refresh, logout} = useAuth();
+  const [loading, setLoading] = useState(true);
+  const [firstLoad, setFirstLoad] = useState(true);
 
   const refreshUser = async () => {
     try {
       await refresh();
-      if (user) {
-        navigation.navigate('MainMap');
-      }
     } catch (e) {
       console.log(e);
-      await logout();
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        await logout();
+      }
     }
+    setLoading(false);
   };
 
   useEffect(() => {
     console.log('User: ', user);
     if (user) {
-      refreshUser;
+      refreshUser();
+    } else {
+      setLoading(false);
+    }
+    if (!loading && user) {
+      navigation.navigate('MainMap');
+    } else if (!loading) {
+      setFirstLoad(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user]);
+  }, [user, firstLoad]);
 
   const testLogout = async () => {
     await logout();
     await AsyncStorage.removeItem('@notification');
     await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
   };
+
+  if (loading || firstLoad) {
+    return <CargaView />;
+  }
 
   return (
     <View>

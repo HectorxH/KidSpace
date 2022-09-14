@@ -71,12 +71,12 @@ app.use((req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo, email, cursoId,
+      nombres, apellidos, tipo, email, cursoId, estudianteId,
     } = req.body;
     let { username, password } = req.body;
     if (_.some(req.body, _.isNil)) {
       console.log(req.body);
-      res.sendStatus(404);
+      return res.sendStatus(404);
     }
 
     if (tipo === 'estudiante') {
@@ -89,6 +89,20 @@ app.post('/register', async (req, res) => {
       } while (user);
       console.log({ username, password });
     } else if (tipo === 'apoderado') {
+      if (await User.count({ email }) > 0) {
+        const user = await User.findOne({ email });
+        const apoderado = await Apoderado.findOne({ user: user?._id });
+        await Estudiante.findByIdAndUpdate(
+          estudianteId,
+          { $addToSet: { apoderados: apoderado?._id } },
+        );
+        await Apoderado.findByIdAndUpdate(
+          apoderado?._id,
+          { $addToSet: { estudiantes: estudianteId } },
+        );
+        return res.json({ apoderado });
+      }
+
       password = crypto.randomBytes(8).toString('hex');
       const name = `${nombres.split(' ')[0]}.${apellidos.split(' ')[0]}`;
       let user;
@@ -112,21 +126,29 @@ app.post('/register', async (req, res) => {
     if (user.tipo === 'profesor') {
       const profesor = new Profesor({ user: user._id });
       await profesor.save();
-      res.sendStatus(200);
-    } else if (user.tipo === 'estudiante') {
+      return res.sendStatus(200);
+    } if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ user: user._id, curso: cursoId });
       await Curso.findByIdAndUpdate(cursoId, { $addToSet: { estudiantes: estudiante?._id } });
       await estudiante.save();
-      res.json({ username, password, _id: user._id });
-    } else if (user.tipo === 'apoderado') {
+      return res.json({ username, password, _id: user._id });
+    } if (user.tipo === 'apoderado') {
       const apoderado = new Apoderado({ user: user._id, password });
       await apoderado.save();
-      apoderado.populate('user');
-      res.json({ apoderado });
+      await Estudiante.findByIdAndUpdate(
+        estudianteId,
+        { $addToSet: { apoderados: apoderado?._id } },
+      );
+      await Apoderado.findByIdAndUpdate(
+        apoderado?._id,
+        { $addToSet: { estudiantes: estudianteId } },
+      );
+      return res.json({ apoderado: await Apoderado.findById(apoderado?._id).populate('user') });
     }
+    return res.sendStatus(200);
   } catch (e) {
     console.log(e);
-    res.sendStatus(500);
+    return res.sendStatus(500);
   }
 });
 

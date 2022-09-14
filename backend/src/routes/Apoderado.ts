@@ -1,18 +1,21 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable camelcase */
 import express from 'express';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv-safe';
 import { readFileSync } from 'fs';
 import path from 'path';
+import _ from 'lodash';
+import Estudiante, { IEstudiante } from '../models/Estudiante';
 import Apoderado from '../models/Apoderado';
-import Estudiante from '../models/Estudiante';
-import User from '../models/User';
+import User, { IUser } from '../models/User';
 
 dotenv.config();
 
 const router = express.Router();
 
 const emailTemplate = readFileSync(path.join(__dirname, '../../assets/email/index.html')).toString();
+const estudianteEmail = '<li>{0}</li>';
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -46,13 +49,21 @@ router.post('/:id', async (req, res) => {
 router.post('/:id/sendCredentials', async (req, res) => {
   try {
     const { id } = req.params;
-    const apoderado = await Apoderado.findById(id).populate('user');
+    const apoderado = await Apoderado.findById(id).populate([
+      'user',
+      { path: 'estudiantes', populate: { path: 'user' } },
+    ]);
+
+    const nombres = _.map(
+      apoderado?.estudiantes,
+      (e: IEstudiante) => estudianteEmail.format(`${e.user?.nombres} ${e.user?.apellidos}`),
+    );
 
     await transporter.sendMail({
       from: 'Kidspace.cl',
       to: apoderado?.user.email,
       subject: 'Credenciales de acceso Kidspace', // Subject
-      html: emailTemplate.format(apoderado?.user.username, apoderado?.password),
+      html: emailTemplate.format(apoderado?.user.username, apoderado?.password, nombres.join('')),
       attachments: [{
         filename: 'image-1.png',
         path: path.join(__dirname, '../../assets/email/images/image-1.png'),

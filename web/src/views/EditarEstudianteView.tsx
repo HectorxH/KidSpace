@@ -86,16 +86,10 @@ const EditarEstudiante = () => {
           const res = await axios.post(
             `${process.env.REACT_APP_BACKEND_URL}/register`,
             {
-              nombres, apellidos, email, tipo: 'apoderado',
+              nombres, apellidos, email, tipo: 'apoderado', estudianteId,
             },
           );
           apoderado._id = res.data.apoderado._id;
-          await axios.put(
-            `${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudiante._id}/apoderados`,
-            {
-              apoderadoId: apoderado._id,
-            },
-          );
           await getEstudiante();
         } else {
           const res = await axios.post(
