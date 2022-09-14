@@ -7,7 +7,7 @@ import {
   TouchableHighlight,
   Image,
 } from 'react-native';
-import {Button, Card, Chip} from 'react-native-paper';
+import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {mapImages} from '../../assets/map/handler/images';
 import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPersonajes';
@@ -94,21 +94,6 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                 }}
               />
               <Text style={styles.title2}>{story.title}</Text>
-              <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                <Chip style={styles.chip2}>
-                  <Text style={styles.textChip2}>
-                    Ganas{' '}
-                    <Image
-                      source={mapImages.moneda.uri}
-                      style={{
-                        width: RSize(0.06, 'h'),
-                        height: RSize(0.06, 'h'),
-                      }}
-                    />{' '}
-                    {story.coins}
-                  </Text>
-                </Chip>
-              </View>
             </Card>
           </TouchableHighlight>
         </View>
@@ -154,17 +139,6 @@ const styles = StyleSheet.create({
   scrollView: {
     marginHorizontal: RSize(0.01),
     marginVertical: RSize(0.01),
-  },
-  chip2: {
-    backgroundColor: '#EFEFEF',
-    marginBottom: RSize(0.02, 'h'),
-  },
-  textChip2: {
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(0.019),
-    textAlign: 'left',
-    marginBottom: RSize(0.001, 'h'),
   },
 });
 
