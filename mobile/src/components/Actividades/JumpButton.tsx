@@ -61,6 +61,18 @@ const JumpButton = (props: JumpButtonProps) => {
         props.pageNumber[1](pgNumber);
       }
     }
+    let defaulSelectedtMaterial = [...props.selectedMaterial[0]];
+    let defaultMaterial = [...props.modelMaterial[0]];
+    // for (let i = 0; i < requirements.length; i++) {
+    for (let j = 0; j < defaulSelectedtMaterial[pgNumber].length; j++) {
+      for (let k = 0; k < defaulSelectedtMaterial[pgNumber][j].length; k++) {
+        defaulSelectedtMaterial[pgNumber][j][k] = 'default';
+      }
+      defaultMaterial[pgNumber][j] = 'default';
+    }
+    // }
+    props.modelMaterial[1](defaultMaterial);
+    props.selectedMaterial[1](defaulSelectedtMaterial);
   };
 
   return (
