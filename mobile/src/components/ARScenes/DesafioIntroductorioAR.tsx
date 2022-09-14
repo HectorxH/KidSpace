@@ -100,7 +100,6 @@ const DesafioIntroductorioSceneAR = (
     position: [0, 0, 0],
   }));
   const [rotations, setRotations] = useState<number[]>(modelProps.map(() => 0));
-  const [scales, setScales] = useState<number[]>(modelProps.map(() => 0));
 
   function updateRotation(
     index: number,
