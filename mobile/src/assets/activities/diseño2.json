@@ -145,7 +145,7 @@
     ],
     "texts": [
       {
-        "text": "El diseño es simple y llamativo a la vez",
+        "text": "El diseño es simple y llamativo a la vez.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -565,21 +565,21 @@
           {
             "text": "1 estilo",
             "position": {
-              "start": [3, 11.5],
+              "start": [3, 10.5],
               "end": [10, 13.5]
             }
           },
           {
             "text": "2 estilos",
             "position": {
-              "start": [3, 14.5],
+              "start": [3, 13.5],
               "end": [10, 16.5]
             }
           },
           {
             "text": "3 estilos",
             "position": {
-              "start": [3, 17.5],
+              "start": [3, 16.5],
               "end": [10, 19.5]
             }
           }
@@ -629,16 +629,16 @@
       {
         "name": "ejemplo_contraste1",
         "position": {
-          "start": [12.5, 0.5],
-          "end": [19.5, 19.5]
+          "start": [12, 0.5],
+          "end": [18, 19.5]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -646,8 +646,8 @@
       {
         "text": "Cuanto menor sea el *contraste de claridad y oscuridad* entre las letras y el fondo",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -658,16 +658,16 @@
       {
         "name": "ejemplo_contraste1",
         "position": {
-          "start": [12.5, 0.5],
-          "end": [19.5, 19.5]
+          "start": [12, 0.5],
+          "end": [18, 19.5]
         }
       }
     ],
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [12, 16]
+          "start": [1, 4],
+          "end": [11, 16]
         }
       }
     ],
@@ -675,8 +675,8 @@
       {
         "text": "menos legible resulta el texto el mensaje.",
         "position": {
-          "start": [3, 5],
-          "end": [11, 15]
+          "start": [2, 5],
+          "end": [10, 15]
         }
       }
     ]
@@ -716,22 +716,22 @@
           {
             "text": "Azul con blanco",
             "position": {
-              "start": [10.5, 10.5],
-              "end": [16.5, 12.5]
+              "start": [10.5, 9.5],
+              "end": [16.5, 11.5]
             }
           },
           {
             "text": "Verde con rojo",
             "position": {
-              "start": [10.5, 13.5],
-              "end": [16.5, 15.5]
+              "start": [10.5, 12.5],
+              "end": [16.5, 14.5]
             }
           },
           {
             "text": "Naranjo con amarillo",
             "position": {
-              "start": [10.5, 16.5],
-              "end": [16.5, 18.5]
+              "start": [10.5, 15.5],
+              "end": [16.5, 17.5]
             }
           }
         ]
@@ -846,7 +846,7 @@
     ],
     "texts": [
       {
-        "text": "Él diseño siempre debe ser ordenado y simple.",
+        "text": "El diseño siempre debe ser ordenado y simple.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -966,8 +966,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -976,10 +976,10 @@
     ],
     "texts": [
       {
-        "text": "Layla te invita a ayudarle a diseñar una caja para guardar y vender tortas. Para esto, necesitas elegir *un material de cierto color*",
+        "text": "Layla te invita a ayudarle a diseñar una caja para guardar y vender tortas. Para esto, necesitas elegir *un material de cierto color*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1025,8 +1025,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1037,8 +1037,8 @@
       {
         "text": "Para esto, necesitas elegir de *qué color será el material de la caja*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1084,8 +1084,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1096,8 +1096,8 @@
       {
         "text": "Además, debes elegir *un logo* que refleje el mensaje de producto, y *una etiqueta* con su descripción.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1143,8 +1143,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1155,8 +1155,8 @@
       {
         "text": "Para esto, en el inventario encontrarás un objeto base. Una vez que lo coloques en la pantalla,",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1202,8 +1202,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1214,8 +1214,8 @@
       {
         "text": "podrás cambiar los elementos del objeto. Primero tienes que elegir *el material*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1261,8 +1261,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1273,8 +1273,8 @@
       {
         "text": "Después, *el logo*. Y,finalmente, *la etiqueta* de la caja para tortas.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1320,8 +1320,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1332,8 +1332,8 @@
       {
         "text": "Una vez listo el diseño, Layla diseñará *un poster para promocionar el producto*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],
@@ -1379,8 +1379,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 4],
-          "end": [16, 16]
+          "start": [2, 5],
+          "end": [16, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1391,8 +1391,8 @@
       {
         "text": "Para ver el poster de Layla, tienes que tocar el botón en la *esquina superior izquierda*.",
         "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
+          "start": [3, 5.5],
+          "end": [15, 16.5]
         }
       }
     ],

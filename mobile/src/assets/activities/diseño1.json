@@ -1020,7 +1020,7 @@
     ],
     "texts": [
       {
-        "text": "Los *colores secundarios* se pueden obtener *mezclando los colores primarios*",
+        "text": "Los *colores secundarios* se pueden obtener *mezclando los colores primarios*.",
         "position": {
           "start": [2, 5],
           "end": [10, 15]
@@ -1078,7 +1078,7 @@
     ],
     "texts": [
       {
-        "text": "Cuando Noah compra pinturas, siempre compra solamente témpera con los colores primarios",
+        "text": "Cuando Noah compra pinturas, siempre compra solamente témpera con los colores primarios.",
         "position": {
           "start": [2, 5],
           "end": [10, 15]
