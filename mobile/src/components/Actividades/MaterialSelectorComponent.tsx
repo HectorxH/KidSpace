@@ -98,7 +98,7 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
           <Layout
             position={{
               start: [15, 2],
-              end: [20, 3],
+              end: [20, 4],
             }}
             ObjectView={
               <Text style={styles.buttonText}>
@@ -116,15 +116,16 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                   position={{
                     start: [
                       15.25 + 2.375 * (index % 2),
-                      4 + 4.5 * (index / 2) * (1 - (index % 2)),
+                      5 + 4.5 * (index / 2) * (1 - (index % 2)),
                     ],
                     end: [
                       17.375 + 2.375 * (index % 2),
-                      8 + 4.5 * (index / 2) * (1 - (index % 2)),
+                      9 + 4.5 * (index / 2) * (1 - (index % 2)),
                     ],
                   }}
                   ObjectView={
                     <TouchableHighlight
+                      underlayColor={'gray'}
                       style={
                         props.selectedMaterial[0][props.pageNumber][
                           props.objectNumber
@@ -162,6 +163,7 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
             }}
             ObjectView={
               <TouchableHighlight
+                underlayColor={'gray'}
                 style={styles.continueButton}
                 onPress={() => changePage()}>
                 <Text style={styles.buttonText}>{'Listo'}</Text>
