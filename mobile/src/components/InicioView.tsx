@@ -38,11 +38,15 @@ const InicioView = ({navigation}: InicioViewProps) => {
     }
     if (!loading && user) {
       navigation.navigate('MainMap');
-    } else if (!loading) {
-      setFirstLoad(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, firstLoad]);
+
+  useEffect(() => {
+    if (!loading) {
+      setFirstLoad(false);
+    }
+  }, [loading]);
 
   const testLogout = async () => {
     await logout();

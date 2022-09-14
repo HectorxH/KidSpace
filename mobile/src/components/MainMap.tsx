@@ -274,18 +274,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() =>
-                navigation.navigate('Actividades', {
-                  // actividad: 'diagramas',
-                  // actividad: 'diseños',
-                  // actividad: 'nutricion1',
-                  actividad: 'diseño1',
-                  cantMonedas: 200,
-                  // actividad: 'nutricion2',
-                  // actividad: 'diseño2',
-                  // actividad: 'debug',
-                })
-              }>
+              onPress={testLogout}>
               <Text style={styles.subtitle}>Perfil</Text>
             </Button>
             <Button
