@@ -1994,5 +1994,53 @@
       "draggable": true,
       "answer": ""
     }
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Noah está muy feliz con su nueva obra, todo gracias a tu ayuda.",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [9, 13.5],
+          "end": [17, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ]
   }
 ]
