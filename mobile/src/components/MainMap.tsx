@@ -434,7 +434,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   monedaText: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
     alignSelf: 'center',
     fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
