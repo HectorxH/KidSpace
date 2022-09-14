@@ -20,7 +20,7 @@ export default [
     nunidad: 1,
     nactividad: 1,
     titulo: 'Actividad 1: Diagramas',
-    nombreActividad: 'diagrama',
+    nombreActividad: 'diagramas',
     descripcion: 'En esta actividad, vas a conocer cómo Diego, un florista, analiza las ventas en su tienda. Aprenderás a organizar y comunicar los resultados estadísticos para distintos propósitos, mediante el análisis  de los diagramas y la elaboración de estos, usando las hojas de cálculo para crear tablas de doble entrada y para diseñar gráficos de barra simple, gráficos de línea y gráficos circulares.',
     portada: portadaAct2Global,
     cuento1: 'En este cuento, los y las estudiantes conocerán a Diego, un florista, que trabaja diseñando y vendiendo arreglos florales. Se dará un contexto en el cual Diego debe crear un gráfico de barras, y para que este le sirva en su trabajo.',

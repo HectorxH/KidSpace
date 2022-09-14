@@ -7,11 +7,8 @@ import Activities from './assets/activities/activities';
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const nombreActividad = route.params.actividad;
   const cantMonedas = route.params.cantMonedas;
-
   const actividad = Activities[nombreActividad];
-
   const [pageNumber, setPageNumber] = useState(0);
-
   // Variables para controlar avance en preguntas de alternativas
   const [userAnswers, setUserAnswers] = useState<number[][][]>(
     actividad.map(s =>

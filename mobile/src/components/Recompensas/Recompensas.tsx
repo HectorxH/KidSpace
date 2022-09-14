@@ -10,6 +10,7 @@ import {RecompensasProps} from '../../types/navigation';
 import LottieRecompensaBadge from '../../assets/recompensa/badge.json';
 import LottieConfetti from '../../assets/recompensa/confetti.json';
 import {RSize} from '../../utils/responsive';
+import _ from 'lodash';
 
 const Recompensas = ({navigation, route}: RecompensasProps) => {
   const cantMonedas = route.params.cantMonedas;
@@ -70,6 +71,12 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
           JSON.stringify(newCompletadas),
         );
       }
+      await AsyncStorage.getItem('@message', async (_err, actividades) => {
+        let actividadesJson =
+          actividades != null ? JSON.parse(actividades) : [];
+        _.remove(actividadesJson, {nombreActividad: nombreActividad});
+        await AsyncStorage.setItem('@message', JSON.stringify(actividadesJson));
+      });
       navigation?.dispatch(
         CommonActions.reset({
           index: 0,

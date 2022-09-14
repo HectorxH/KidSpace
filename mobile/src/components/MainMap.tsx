@@ -25,6 +25,7 @@ import Carreras from '../assets/stories/carreras.json';
 import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
 import axios from 'axios';
+import _ from 'lodash';
 
 const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
   cluster: 'sa1',
@@ -65,15 +66,13 @@ const MainMap = ({navigation}: MainMapProps) => {
     try {
       let jsonAllMessages = await AsyncStorage.getItem('@message');
       //check if value previously stored
-      jsonAllMessages != null
-        ? (allMessages = JSON.parse(jsonAllMessages))
-        : [];
-      setMessage(JSON.parse(jsonAllMessages!));
+      allMessages = jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
+      allMessages = _.uniqWith(allMessages, _.isEqual);
+      setMessage(allMessages);
       if (userData) {
         setUser(userData?.nombres);
       }
-      const n = await AsyncStorage.getItem('@notification');
-      setNotification(n!);
+      setNotification(allMessages.length.toString());
       const m = await AsyncStorage.getItem('@monedas');
       m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
       const c = await AsyncStorage.getItem('@completadas');
@@ -89,10 +88,10 @@ const MainMap = ({navigation}: MainMapProps) => {
       channel.bind('message', async function (data: {message: IActivity}) {
         let jsonAllMessages = await AsyncStorage.getItem('@message');
         //check if value previously stored
-        jsonAllMessages != null
-          ? (allMessages = JSON.parse(jsonAllMessages))
-          : [];
+        allMessages =
+          jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
         allMessages.push(data.message);
+        allMessages = _.uniqWith(allMessages, _.isEqual);
         jsonAllMessages = JSON.stringify(allMessages);
         await AsyncStorage.setItem('@message', jsonAllMessages);
         const m = await AsyncStorage.getItem('@message');
@@ -137,7 +136,6 @@ const MainMap = ({navigation}: MainMapProps) => {
   };
 
   const HandleCarrera = (event: any) => {
-    console.log(completadas);
     navigation.push('Carrera', {
       carrera: event.unidadCarrera,
       completadas: completadas,
