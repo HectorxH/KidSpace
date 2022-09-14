@@ -67,8 +67,8 @@ const StoryComponent = (props: StoryComponentProps) => {
         <Items
           images={items}
           specialTexture={
-            props.pageNumber > 0
-              ? props.modelMaterial[props.pageNumber - 1][0]
+            props.pageNumber > 1
+              ? props.modelMaterial[props.pageNumber - 2][0]
               : ''
           }
         />
@@ -86,8 +86,8 @@ const StoryComponent = (props: StoryComponentProps) => {
         <Items
           images={bubbles}
           specialTexture={
-            props.pageNumber > 0
-              ? props.modelMaterial[props.pageNumber - 1][0]
+            props.pageNumber > 1
+              ? props.modelMaterial[props.pageNumber - 2][0]
               : ''
           }
         />

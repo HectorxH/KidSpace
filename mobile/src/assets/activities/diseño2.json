@@ -1436,23 +1436,6 @@
     },
 
     "background": "",
-    "toggleButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#FF8A00",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
-        },
-        "position" : {
-          "start": [1, 1],
-          "end": [7, 4]
-        },
-        "value": false
-      }
-    ],
     "jumpButton": [
       {
         "settings": {
@@ -1464,12 +1447,119 @@
           "buttonTextNormal": "Ver el poster"
         },
         "position" : {
-          "start": [13, 1],
-          "end": [19, 4]
+          "start": [1, 1],
+          "end": [7, 4]
         },
         "target": 39,
         "require": [],
-        "visible": false
+        "visible": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [4, 5],
+          "end": [16, 15]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "*¿Deseas terminar de editar?*",
+        "position": {
+          "start": [1, 1],
+          "end": [19, 4]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21
+        }
+      },
+      {
+        "text": "Una vez que presiones el botón de ver el poster, no podrás volver a hacer cambios en tu diseño. Puedes rehacer el diseño si quieres.",
+        "position": {
+          "start": [4.5, 5.5],
+          "end": [15.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Hacer de nuevo",
+          "buttonTextNormal": "Hacer de nuevo"
+        },
+        "position" : {
+          "start": [3, 16],
+          "end": [9.5, 19]
+        },
+        "target": 38,
+        "require": [],
+        "visible": true
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Ver el poster"
+        },
+        "position" : {
+          "start": [10.5, 16],
+          "end": [17, 19]
+        },
+        "target": 40,
+        "require": [],
+        "visible": true
       }
     ]
   },
@@ -1526,7 +1616,7 @@
           "start": [14.5, 1],
           "end": [19, 4]
         },
-        "target": 40,
+        "target": 41,
         "require": [],
         "visible": false
       }
