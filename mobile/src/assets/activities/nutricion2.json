@@ -935,7 +935,7 @@
     ],
     "texts": [
       {
-        "text": "¡Exacto!, tiene 20.1 gramos de azúcar por porción. ¿A cuántos cubitos de 5g equivale?",
+        "text": "¡Exacto!, tiene 20,1 gramos de azúcar por porción. ¿A cuántos cubitos de 5g equivale?",
         "position": {
           "start": [1.5, 2.5],
           "end": [11.5, 11]
@@ -1069,14 +1069,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1119,14 +1119,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1169,14 +1169,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1219,14 +1219,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1269,14 +1269,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1319,14 +1319,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1352,14 +1352,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": false
       }
@@ -1369,14 +1369,14 @@
         "settings": {
           "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
+          "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 39,
         "require": [38],
@@ -1413,7 +1413,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1427,7 +1426,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1529,14 +1527,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1562,14 +1560,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": false
       }
@@ -1581,12 +1579,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "cube",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 41,
         "require": [40],
@@ -1623,7 +1621,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1637,7 +1634,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1746,14 +1742,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": true
       }
@@ -1779,14 +1775,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
+          "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": "Preguntas",
-          "buttonTextNormal": "Volver"
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end":  [7, 3.5]
         },
         "value": false
       }
@@ -1798,12 +1794,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "cube",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [13, 1],
-          "end": [19, 4]
+          "end": [19, 3.5]
         },
         "target": 43,
         "require": [42],
@@ -1840,7 +1836,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1854,7 +1849,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

@@ -23,7 +23,7 @@ const CardComponent = (props: CardComponentProps) => {
       }
       onPress={onPressFunction}>
       <View style={styles.overlay}>
-        <Items images={jumpCard.items} resize="cover" />
+        <Items images={jumpCard.items} resize="cover" specialTexture={''} />
       </View>
       <View style={styles.overlay}>
         <Texts texts={jumpCard.texts} />

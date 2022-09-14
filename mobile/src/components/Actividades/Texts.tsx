@@ -20,7 +20,9 @@ const Texts = ({texts}: TextsProps) => {
       {texts.map((text: ITexts) => {
         const textStyles = getTextStyle(styles.baseText, text.settings);
         const message = (
-          <Text style={textStyles.settings}>
+          <Text
+            style={textStyles.settings}
+            key={text.position.start.toString()}>
             {typeof text.leftIcon !== 'undefined' && (
               <Icon
                 name={text.leftIcon.name}
@@ -38,7 +40,7 @@ const Texts = ({texts}: TextsProps) => {
                       ? styles.oddText
                       : styles.evenText
                   }
-                  key={word}>
+                  key={word + index.toString() + text.position.end.toString()}>
                   {word}
                 </Text>
               );
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
   baseText: {
     textAlign: 'center',
     fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.075, 'h'),
+    fontSize: RSize(0.06, 'h'),
     fontWeight: 'normal',
     elevation: 0,
   },

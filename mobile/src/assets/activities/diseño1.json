@@ -596,7 +596,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 16,
         "require": [],
@@ -604,12 +604,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [15, 1],
@@ -698,7 +698,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 17,
         "require": [],
@@ -710,8 +710,8 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [15, 1],
@@ -800,7 +800,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 18,
         "require": [],
@@ -812,8 +812,8 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [15, 1],
@@ -1492,7 +1492,7 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1546,7 +1546,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 40,
         "require": [],
@@ -1556,10 +1556,10 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Pintar",
-          "buttonTextNormal": "Pintar"
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
+          "buttonTextAlt": " Pintar",
+          "buttonTextNormal": " Pintar"
         },
         "position" : {
           "start": [2.2, 16.5],
@@ -1597,7 +1597,7 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1651,7 +1651,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 41,
         "require": [],
@@ -1661,8 +1661,8 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
           "buttonTextAlt": "Pintar",
           "buttonTextNormal": "Pintar"
         },
@@ -1702,7 +1702,7 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1756,7 +1756,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 42,
         "require": [],
@@ -1766,8 +1766,8 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
           "buttonTextAlt": "Pintar",
           "buttonTextNormal": "Pintar"
         },
@@ -1807,7 +1807,7 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1861,7 +1861,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 43,
         "require": [],
@@ -1871,8 +1871,8 @@
         "settings": {
           "buttonColorAlt": "#D9D9D9",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
           "buttonTextAlt": "Pintar",
           "buttonTextNormal": "Pintar"
         },
@@ -1912,7 +1912,7 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1966,7 +1966,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 44,
         "require": [],

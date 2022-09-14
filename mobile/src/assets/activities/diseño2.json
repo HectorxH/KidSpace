@@ -949,7 +949,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -988,14 +988,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1008,7 +1008,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1047,14 +1047,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1067,7 +1067,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1106,14 +1106,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1126,7 +1126,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1165,14 +1165,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1185,7 +1185,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1224,14 +1224,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1244,7 +1244,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1283,14 +1283,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1303,7 +1303,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1342,14 +1342,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1362,7 +1362,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1401,14 +1401,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "value": true
       }
@@ -1421,7 +1421,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1441,14 +1441,14 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "magnify",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Ver el poster"
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Ver el poster"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 4]
+          "end": [7, 3.5]
         },
         "target": 39,
         "require": [],
@@ -1463,7 +1463,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 90, 0],
+          "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
             "materialOrder": ["Material", "Logo", "Etiqueta"],
@@ -1550,8 +1550,8 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "",
           "buttonIconNormal": "",
-          "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Ver el poster"
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Ver el poster"
         },
         "position" : {
           "start": [10.5, 16],
@@ -1585,11 +1585,7 @@
           "end": [19.2, 17.2]
         },
         "settings": { 
-          "fontSize": 0.06,
-          "color": "black",
-          "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
+          "elevation": 21
         }
       }
     ],
@@ -1643,7 +1639,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Recuerda siempre las reglas que aprendiste sobre los diseños",
+        "text": "¡Muy bien! Recuerda siempre las reglas que aprendiste sobre los diseños.",
         "position": {
           "start": [7.5, 2.5],
           "end": [18.5, 15]
