@@ -49,16 +49,18 @@ export function checkAnswers(
       .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n =>
-        selectedMaterial[n].map(userAnswer =>
-          userAnswer
-            .map(v =>
-              (v !== 'default' ? [1] : [0]).reduce(
-                (x, y) => Number(x) + Number(y),
-                0,
-              ),
-            )
-            .reduce((x, y) => Number(x) + Number(y), 0),
-        ),
+        selectedMaterial[n]
+          .map(userAnswer =>
+            userAnswer
+              .map(v =>
+                (v !== 'default' ? [1] : [0]).reduce(
+                  (x, y) => Number(x) + Number(y),
+                  0,
+                ),
+              )
+              .reduce((x, y) => Number(x) + Number(y), 0),
+          )
+          .reduce((x, y) => Number(x) + Number(y), 0),
       )
       .reduce((x, y) => Number(x) + Number(y), 0);
 
@@ -100,19 +102,22 @@ export function checkAnswers(
     'textures correctas: ',
     requirements
       .map(n =>
-        selectedMaterial[n].map(userAnswer =>
-          userAnswer
-            .map(v =>
-              (v !== 'default' ? [1] : [0]).reduce(
-                (x, y) => Number(x) + Number(y),
-                0,
-              ),
-            )
-            .reduce((x, y) => Number(x) + Number(y), 0),
-        ),
+        selectedMaterial[n]
+          .map(userAnswer =>
+            userAnswer
+              .map(v =>
+                (v !== 'default' ? [1] : [0]).reduce(
+                  (x, y) => Number(x) + Number(y),
+                  0,
+                ),
+              )
+              .reduce((x, y) => Number(x) + Number(y), 0),
+          )
+          .reduce((x, y) => Number(x) + Number(y), 0),
       )
       .reduce((x, y) => Number(x) + Number(y), 0),
   );
+  console.log(respuestasCorrectas, cantidadRespuestas);
   return respuestasCorrectas === cantidadRespuestas;
 }
 
