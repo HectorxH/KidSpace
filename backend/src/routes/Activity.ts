@@ -18,7 +18,7 @@ const router = express.Router();
 
 router.post('/message', async (req, res) => {
   try {
-    console.log(`${req.body.nunidad}->${req.body.titulo}`);
+    console.log(`${req.body.msg.nunidad}->${req.body.msg.titulo}`);
     pusher.trigger('channel', 'message', {
       message: req.body.msg,
       curso: req.body.curso,

@@ -2,6 +2,7 @@ export interface IActividadDetail {
   nunidad: number,
   nactividad: number,
   titulo: string,
+  nombreActividad: string,
   descripcion: string,
   portada: string,
   cuento1: string,

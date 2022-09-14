@@ -15,38 +15,31 @@ import CargaView from './CargaView';
 const InicioView = ({navigation}: InicioViewProps) => {
   const {user, refresh, logout} = useAuth();
   const [loading, setLoading] = useState(true);
-  const [firstLoad, setFirstLoad] = useState(true);
 
   const refreshUser = async () => {
+    setLoading(true);
     try {
       await refresh();
+      navigation.navigate('MainMap');
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
         await logout();
       }
     }
-    setLoading(false);
   };
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1000);
+  }, []);
 
   useEffect(() => {
     console.log('User: ', user);
     if (user) {
       refreshUser();
-    } else {
-      setLoading(false);
-    }
-    if (!loading && user) {
-      navigation.navigate('MainMap');
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, firstLoad]);
-
-  useEffect(() => {
-    if (!loading) {
-      setFirstLoad(false);
-    }
-  }, [loading]);
+  }, [user]);
 
   const testLogout = async () => {
     await logout();
@@ -54,37 +47,37 @@ const InicioView = ({navigation}: InicioViewProps) => {
     await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
   };
 
-  if (loading || firstLoad) {
+  if (user || loading) {
     return <CargaView />;
-  }
-
-  return (
-    <View>
-      <LottieView
-        style={styles.viewBG}
-        source={LottieBackground}
-        autoPlay
-        loop
-      />
+  } else {
+    return (
       <View>
-        <Text style={styles.title}>¡Hola!</Text>
-        <Text style={styles.subtitle}>
-          Para iniciar tu viaje, necesitas escanear un código QR de invitación
-        </Text>
-        <Button
-          style={styles.button}
-          color="#8DB4E4"
-          mode="contained"
-          onPress={() => navigation.push('Qr')}>
-          <Text style={styles.buttonText}>
-            <Icon name="camera" size={RSize(0.07, 'h')} color="#FFFFFF" /> Abrir
-            la cámara
+        <LottieView
+          style={styles.viewBG}
+          source={LottieBackground}
+          autoPlay
+          loop
+        />
+        <View>
+          <Text style={styles.title}>¡Hola!</Text>
+          <Text style={styles.subtitle}>
+            Para iniciar tu viaje, necesitas escanear un código QR de invitación
           </Text>
-        </Button>
-        <Button onPress={testLogout}>!!!LOGOUT TEMPORAL!!!</Button>
+          <Button
+            style={styles.button}
+            color="#8DB4E4"
+            mode="contained"
+            onPress={() => navigation.push('Qr')}>
+            <Text style={styles.buttonText}>
+              <Icon name="camera" size={RSize(0.07, 'h')} color="#FFFFFF" />{' '}
+              Abrir la cámara
+            </Text>
+          </Button>
+          <Button onPress={testLogout}>!!!LOGOUT TEMPORAL!!!</Button>
+        </View>
       </View>
-    </View>
-  );
+    );
+  }
 };
 
 const styles = StyleSheet.create({
