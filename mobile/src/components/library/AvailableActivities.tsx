@@ -10,7 +10,6 @@ const windowHeight = Dimensions.get('window').height;
 const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   const activities = route.params.activities;
-  console.log(activities);
   return (
     <View>
       <View style={styles.view}>
