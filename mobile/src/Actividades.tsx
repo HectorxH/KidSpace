@@ -60,6 +60,19 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
     ),
   );
 
+  // Variables para controlar avance en preguntas de InputField [pageNumber][questionNumber] = input
+  const [userInputAnswers, setUserInputAnswer] = useState<number[][]>(
+    actividad.map(s =>
+      typeof s.textFieldQuestion !== 'undefined'
+        ? s.textFieldQuestion.map(() => 0)
+        : [0],
+    ),
+  );
+  const rightInputAnswer = actividad.map(s =>
+    typeof s.textFieldQuestion !== 'undefined'
+      ? s.textFieldQuestion.map(q => q.rightAnswer)
+      : [0],
+  );
   // Variables para controlar avance en preguntas de drag; [pageNumber] = pageAnswer
   const [userDragAnswer, setUserDragAnswer] = useState<string[]>(
     actividad.map(() => ''),
@@ -112,6 +125,8 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
           pickedAnswersQuiz={[pickedAnswersQuiz, setPickedAnswersQuiz]}
           dragAnswers={[userDragAnswer, setUserDragAnswer]}
           rightDragAnswer={rightDragAnswer}
+          userInputAnswers={[userInputAnswers, setUserInputAnswer]}
+          rightInputAnswer={rightInputAnswer}
           modelMaterial={[modelMaterial, setModelMaterial]}
           selectedMaterial={[selectedMaterial, setSelectedMaterial]}
           navigation={navigation}

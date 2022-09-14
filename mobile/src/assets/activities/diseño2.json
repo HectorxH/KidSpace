@@ -447,7 +447,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -476,7 +476,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -505,7 +505,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -534,7 +534,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "etiqueta_muffin",
+        "name": "chillona",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -591,7 +591,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja2",
+        "name": "chillona",
         "position": {
           "start": [12.5, 0.5],
           "end": [19.5, 19.5]
@@ -644,7 +644,7 @@
     ],
     "texts": [
       {
-        "text": "Cuanto menor sea el contraste de claridad y oscuridad entre las letras y el fondo",
+        "text": "Cuanto menor sea el *contraste de claridad y oscuridad* entre las letras y el fondo",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -742,7 +742,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -771,7 +771,7 @@
     "background": "bg_diseño2",
     "items": [
       {
-        "name": "caja1",
+        "name": "chillona",
         "position": {
           "start": [0.5, 0.5],
           "end": [7.5, 19.5]  
@@ -1003,7 +1003,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1062,7 +1062,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1121,7 +1121,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1180,7 +1180,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1239,7 +1239,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1298,7 +1298,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1357,7 +1357,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1436,7 +1436,7 @@
     },
 
     "background": "",
-    "toggleButton": [
+    "jumpButton": [
       {
         "settings": {
           "buttonColorAlt": "#FF8A00",
@@ -1444,31 +1444,228 @@
           "buttonIconAlt": "magnify",
           "buttonIconNormal": "cube",
           "buttonTextAlt": "Ver el poster",
-          "buttonTextNormal": "Volver"
+          "buttonTextNormal": "Ver el poster"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 4]
         },
-        "value": false
+        "target": 39,
+        "require": [],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 90, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [4, 5],
+          "end": [16, 15]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "*¿Deseas terminar de editar?*",
+        "position": {
+          "start": [1, 1],
+          "end": [19, 4]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21
+        }
+      },
+      {
+        "text": "Una vez que presiones el botón de ver el poster, no podrás volver a hacer cambios en tu diseño. Puedes rehacer el diseño si quieres.",
+        "position": {
+          "start": [4.5, 5.5],
+          "end": [15.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21
+        }
       }
     ],
     "jumpButton": [
       {
         "settings": {
-          "buttonColorAlt": "#BBBBBB",
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Hacer de nuevo",
+          "buttonTextNormal": "Hacer de nuevo"
+        },
+        "position" : {
+          "start": [3, 16],
+          "end": [9.5, 19]
+        },
+        "target": 38,
+        "require": [],
+        "visible": true
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Ver el poster"
+        },
+        "position" : {
+          "start": [10.5, 16],
+          "end": [17, 19]
+        },
+        "target": 40,
+        "require": [],
+        "visible": true
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [10.5, 4.5],
+          "end": [19.5, 17.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así se ve el poster final del producto que diseñaste. Layla espera que el producto sea popular con los clientes",
+        "position": {
+          "start": [10.7, 4.7],
+          "end": [19.2, 17.2]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "_diseño2_",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [9.5, 19.5]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
           "buttonTextAlt": "Avanzar",
           "buttonTextNormal": "Avanzar"
         },
         "position" : {
-          "start": [13, 1],
+          "start": [14.5, 1],
           "end": [19, 4]
         },
-        "target": 14,
-        "require": [13],
+        "target": 41,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Recuerda siempre las reglas que aprendiste sobre los diseños",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [9, 15.5],
+          "end": [17, 18.5]
+        },
+        "target": -1,
+        "require": [],
         "visible": false
       }
     ]

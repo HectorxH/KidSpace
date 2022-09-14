@@ -8,13 +8,13 @@ import {getImageStyle} from './utils';
 interface ItemsProps {
   images: IImages[] | never[];
   resize?: 'contain' | 'cover' | 'stretch' | 'repeat' | 'center';
+  specialTexture: string;
 }
 
-const Items = ({images, resize}: ItemsProps) => {
+const Items = ({images, resize, specialTexture}: ItemsProps) => {
   if (typeof images === 'undefined' || images.length === 0) {
     return null;
   }
-
   return (
     <View style={styles.container}>
       {images.map((item: IImages) => {
@@ -39,7 +39,11 @@ const Items = ({images, resize}: ItemsProps) => {
                   resizeMode={
                     typeof resize !== 'undefined' ? resize : 'contain'
                   }
-                  source={Images.items[item.name]}
+                  source={
+                    item.name !== '_diseño2_'
+                      ? Images.items[item.name]
+                      : Images.items[specialTexture]
+                  }
                 />
               }
             />

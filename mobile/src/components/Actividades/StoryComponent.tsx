@@ -9,17 +9,32 @@ import AlternativasDropdown from './AlternativasDropdown';
 import {ReactStateSetter} from '../../types/others';
 import {IActivityPage} from '../../types/activity';
 import Draggable from './Draggable';
+import TextInputAnswer from './TextInputAnswer';
 
 interface StoryComponentProps {
   story: IActivityPage;
   pageNumber: number;
+
+  // drag
   dragAnswers: [string[], ReactStateSetter<string[]>];
+
+  // alternativas
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+
+  // dropdown
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+
+  // quiz
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+
+  // input field
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+
+  // especial de modelo 3d con custom texture
+  modelMaterial: string[][];
 }
 
 const StoryComponent = (props: StoryComponentProps) => {
@@ -40,11 +55,23 @@ const StoryComponent = (props: StoryComponentProps) => {
       ? story.alternativasDropdown
       : [];
 
+  const inputFieldQuestions =
+    typeof story.textFieldQuestion !== 'undefined'
+      ? story.textFieldQuestion
+      : [];
+
   return (
     <View style={styles.container}>
       {/* Personajes/Imagenes */}
       <View style={styles.overlay}>
-        <Items images={items} />
+        <Items
+          images={items}
+          specialTexture={
+            props.pageNumber > 1
+              ? props.modelMaterial[props.pageNumber - 2][0]
+              : ''
+          }
+        />
       </View>
       {/* Cuadros de texto */}
       <View style={styles.overlay}>
@@ -56,7 +83,14 @@ const StoryComponent = (props: StoryComponentProps) => {
       </View>
       {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}
       <View style={styles.overlay}>
-        <Items images={bubbles} />
+        <Items
+          images={bubbles}
+          specialTexture={
+            props.pageNumber > 1
+              ? props.modelMaterial[props.pageNumber - 2][0]
+              : ''
+          }
+        />
       </View>
       {/* Preguntas / Alternativas */}
       <View style={styles.overlay}>
@@ -79,7 +113,14 @@ const StoryComponent = (props: StoryComponentProps) => {
           pageNumber={props.pageNumber}
         />
       </View>
-
+      {/* Preguntas / InputField */}
+      <View style={styles.overlay}>
+        <TextInputAnswer
+          textFieldQuestions={inputFieldQuestions}
+          userInputAnswers={props.userInputAnswers}
+          pageNumber={props.pageNumber}
+        />
+      </View>
       {/* Draggable / Seleccion colores */}
       {typeof story.draggable !== 'undefined' &&
         story.draggable.draggable === true && (

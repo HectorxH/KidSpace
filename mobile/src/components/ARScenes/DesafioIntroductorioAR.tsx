@@ -13,7 +13,7 @@ import Models from '../../assets/3d/models';
 import {IModels, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
-import {ViroMaterialDict} from '@viro-community/react-viro/dist/components/Material/ViroMaterials';
+// import {ViroMaterialDict} from '@viro-community/react-viro/dist/components/Material/ViroMaterials';
 
 type TSelectedMaterial = {
   materialOrder: string[];
@@ -31,6 +31,7 @@ interface DesafioIntroductorioSceneARProps {
       setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
       modelMaterial: string[];
       setActiveModelIndex: ReactStateSetter<number>;
+      updateMaterial: [boolean, ReactStateSetter<boolean>];
     };
   };
 }
@@ -61,14 +62,16 @@ const DesafioIntroductorioSceneAR = (
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const items = props.sceneNavigator.viroAppProps.items;
+  const [updateMaterial, setUpdateMaterial] =
+    props.sceneNavigator.viroAppProps.updateMaterial;
   const [positions] = props.sceneNavigator.viroAppProps.positions;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     props.sceneNavigator.viroAppProps.materialSelectorToggle;
   const setSelectedModelMaterials =
     props.sceneNavigator.viroAppProps.setSelectedModelMaterials;
   const modelsMaterials = props.sceneNavigator.viroAppProps.modelMaterial;
-  const setActiveModelIndex =
-    props.sceneNavigator.viroAppProps.setActiveModelIndex;
+  // const setActiveModelIndex =
+  //   props.sceneNavigator.viroAppProps.setActiveModelIndex;
 
   const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
@@ -135,25 +138,37 @@ const DesafioIntroductorioSceneAR = (
     }
   }
 
-  function makeMaterials(ItemMaterials: ViroMaterialDict | undefined) {
-    console.log('funcion llamada aaa');
-    if (typeof ItemMaterials !== 'undefined') {
-      ViroMaterials.createMaterials(ItemMaterials);
+  function makeMaterials() {
+    //ItemMaterials: ViroMaterialDict | undefined) {
+    if (updateMaterial === true) {
+      setUpdateMaterial(false);
+      let materials = modelProps.map(model =>
+        typeof model.materials !== 'undefined' ? model.materials : {},
+      );
+      for (let i = 0; i < materials.length; i++) {
+        ViroMaterials.createMaterials(materials[i]);
+      }
+      // if (typeof ItemMaterials !== 'undefined') {
+      //   ViroMaterials.createMaterials(ItemMaterials);
+      // }
     }
   }
 
+  // makeMaterials();
   function onModelClick(itemIndex: number) {
     if (
       modelProps[itemIndex].interactable.length === 0 ||
       materialSelectorToggle === 1
     ) {
+      setMaterialSelectorToggle(0);
       return;
     }
     for (let i = 0; i < modelProps[itemIndex].interactable.length; i++) {
       if (modelProps[itemIndex].interactable[i] === 'materials') {
-        makeMaterials(modelProps[itemIndex].materials);
+        // makeMaterials(modelProps[itemIndex].materials);
+        makeMaterials();
         setSelectedModelMaterials(modelProps[itemIndex].ARMaterials);
-        setActiveModelIndex(modelProps[itemIndex].modelIndex);
+        // setActiveModelIndex(modelProps[itemIndex].modelIndex);
         setMaterialSelectorToggle(1);
       }
     }

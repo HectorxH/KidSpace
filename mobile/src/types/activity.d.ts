@@ -178,7 +178,8 @@ export interface IJumpCard {
 }
 
 export interface ITextFieldQuestion {
-  backgroundColor?: string;
+  position: IPosition;
+  rightAnswer: number;
 }
 
 export interface IDraggable {
@@ -192,6 +193,7 @@ export interface IActivityPage {
   bubbles?: IImages[] | never[];
   textBoxes?: ITextBoxes[] | never[];
   texts?: ITexts[] | never[];
+  textFieldQuestion?: ITextFieldQuestion[];
   alternativas?: IAlternativas[] | never[];
   alternativasDropdown?: IAlternativasDropdown[] | never[];
   AR?: IAR;
@@ -200,7 +202,6 @@ export interface IActivityPage {
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
   draggable?: IDraggable;
-  textFieldQuestion?: ITextFieldQuestion[];
 }
 
 export type Actividad = IActivityPage[];

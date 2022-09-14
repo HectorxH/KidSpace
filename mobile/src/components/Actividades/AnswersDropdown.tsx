@@ -103,26 +103,28 @@ const Answers = (props: AnswersProps) => {
                   setIsFocus(false);
                   checkAnswer(item.value);
                 }}
-                renderLeftIcon={() => (
-                  <FontAwesome5
-                    style={styles.icon}
-                    color={
-                      answerIconColor[
-                        pickedAnswers[pageNumber][answerNumber][
-                          getAnswerIndex() !== -1 ? getAnswerIndex() : 0
+                renderLeftIcon={() =>
+                  getAnswerIndex() !== -1 ? (
+                    <FontAwesome5
+                      style={styles.icon}
+                      color={
+                        answerIconColor[
+                          pickedAnswers[pageNumber][answerNumber][
+                            getAnswerIndex() !== -1 ? getAnswerIndex() : 0
+                          ]
                         ]
-                      ]
-                    }
-                    name={
-                      answerIconName[
-                        pickedAnswers[pageNumber][answerNumber][
-                          getAnswerIndex() !== -1 ? getAnswerIndex() : 0
+                      }
+                      name={
+                        answerIconName[
+                          pickedAnswers[pageNumber][answerNumber][
+                            getAnswerIndex() !== -1 ? getAnswerIndex() : 0
+                          ]
                         ]
-                      ]
-                    }
-                    size={20}
-                  />
-                )}
+                      }
+                      size={20}
+                    />
+                  ) : null
+                }
               />
             </View>
           }

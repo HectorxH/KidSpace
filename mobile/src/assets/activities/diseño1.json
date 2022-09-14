@@ -534,7 +534,7 @@
       {
         "position": {
           "start": [2, 4],
-          "end": [9, 16]
+          "end": [9, 19.5]
         },
         "settings": {      
           "backgroundColor": "white",
@@ -548,14 +548,12 @@
         "text": "¿Son los colores de este helado fríos o cálidos?",
         "position": {
           "start": [2.5, 4.5],
-          "end": [8.5, 7.5]
+          "end": [8.5, 11]
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
+          "fontWeight": "normal"
         }
       }
     ],
@@ -566,8 +564,8 @@
           {
             "text": "Cálidos",
             "position": {
-              "start": [2.5, 9],
-              "end": [8.5, 12]
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
             },
             "settings": {
               "elevation": 10
@@ -576,14 +574,50 @@
           {
             "text": "Fríos",
             "position": {
-              "start": [2.5, 12.5],
-              "end": [8.5, 15.5]
+              "start": [2.5, 15],
+              "end": [8.5, 18]
             },
             "settings": {
               "elevation": 10
             }
           }
         ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 16,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 18,
+        "require": [17],
+        "visible": false
       }
     ]
   },
@@ -602,7 +636,7 @@
       {
         "position": {
           "start": [2, 4],
-          "end": [9, 16]
+          "end": [9, 19.5]
         },
         "settings": {      
           "backgroundColor": "white",
@@ -616,14 +650,12 @@
         "text": "¿Son los colores de esta bolsa fríos o cálidos?",
         "position": {
           "start": [2.5, 4.5],
-          "end": [8.5, 7.5]
+          "end": [8.5, 11]
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
-          "elevation": 11,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
+          "elevation": 21,
+          "fontWeight": "normal"
         }
       }
     ],
@@ -634,8 +666,8 @@
           {
             "text": "Cálidos",
             "position": {
-              "start": [2.5, 9],
-              "end": [8.5, 12]
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
             },
             "settings": {
               "elevation": 10
@@ -644,14 +676,50 @@
           {
             "text": "Fríos",
             "position": {
-              "start": [2.5, 12.5],
-              "end": [8.5, 15.5]
+              "start": [2.5, 15],
+              "end": [8.5, 18]
             },
             "settings": {
               "elevation": 10
             }
           }
         ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 17,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 19,
+        "require": [18],
+        "visible": false
       }
     ]
   },
@@ -670,7 +738,7 @@
       {
         "position": {
           "start": [2, 4],
-          "end": [9, 16]
+          "end": [9, 19.5]
         },
         "settings": {      
           "backgroundColor": "white",
@@ -684,14 +752,12 @@
         "text": "¿Son los colores de este libro fríos o cálidos?",
         "position": {
           "start": [2.5, 4.5],
-          "end": [8.5, 7.5]
+          "end": [8.5, 11]
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
-          "elevation": 11,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
+          "elevation": 21,
+          "fontWeight": "normal"
         }
       }
     ],
@@ -702,8 +768,8 @@
           {
             "text": "Cálidos",
             "position": {
-              "start": [2.5, 9],
-              "end": [8.5, 12]
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
             },
             "settings": {
               "elevation": 10
@@ -712,14 +778,50 @@
           {
             "text": "Fríos",
             "position": {
-              "start": [2.5, 12.5],
-              "end": [8.5, 15.5]
+              "start": [2.5, 15],
+              "end": [8.5, 18]
             },
             "settings": {
               "elevation": 10
             }
           }
         ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2, 3.5]
+        },
+        "target": 18,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 20,
+        "require": [19],
+        "visible": false
       }
     ]
   },
@@ -1391,7 +1493,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1405,7 +1506,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1419,7 +1519,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1499,7 +1598,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1513,7 +1611,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1527,7 +1624,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1607,7 +1703,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1621,7 +1716,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1635,7 +1729,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1715,7 +1808,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1729,7 +1821,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1743,7 +1834,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1823,7 +1913,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1837,7 +1926,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1851,7 +1939,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

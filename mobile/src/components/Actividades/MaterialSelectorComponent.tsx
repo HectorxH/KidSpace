@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, TouchableHighlight, Image} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
+import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
-import {Button, Text} from 'react-native-paper';
+import {Text} from 'react-native-paper';
 
 interface MaterialSelectorComponentProps {
   materialSelectorToggle: [number, ReactStateSetter<number>];
@@ -19,19 +20,6 @@ interface MaterialSelectorComponentProps {
 
 const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
   const [selectedPageOrder, setSelectedPageOrder] = useState<number>(0);
-  console.log();
-  console.log('aqui llego pt 1:');
-  console.log(
-    props.selectedModelMaterials.materialOrder.length,
-    props.selectedModelMaterials.materialChoices.length,
-  );
-  if (
-    props.selectedModelMaterials.materialOrder.length === 0 ||
-    props.selectedModelMaterials.materialChoices.length === 0
-  ) {
-    return null;
-  }
-  console.log('aqui llego :c');
   function buttonPressed(v: string) {
     console.log(v);
     let selectedMaterials = props.selectedMaterial[0];
@@ -136,13 +124,29 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                     ],
                   }}
                   ObjectView={
-                    <Button
-                      mode="contained"
-                      // color={'black'}
-                      style={styles.textureButton}
+                    <TouchableHighlight
+                      style={
+                        props.selectedMaterial[0][props.pageNumber][
+                          props.objectNumber
+                        ][index] === v
+                          ? styles.selectedTextureButton
+                          : styles.textureButton
+                      }
                       onPress={() => buttonPressed(v)}>
-                      <Text style={styles.buttonText}>{v}</Text>
-                    </Button>
+                      <Image
+                        style={styles.image}
+                        // style={imageStyles.settings}
+                        resizeMode="cover"
+                        source={Images.items[v]}
+                      />
+                    </TouchableHighlight>
+                    // <Button
+                    //   mode="contained"
+                    //   // color={'black'}
+                    //   style={styles.textureButton}
+                    //   onPress={() => buttonPressed(v)}>
+                    //   <Text style={styles.buttonText}>{v}</Text>
+                    // </Button>
                   }
                 />
               </View>
@@ -153,17 +157,22 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
         <View style={styles.overlay}>
           <Layout
             position={{
-              start: [16.25, 15],
-              end: [18.75, 18.5],
+              start: [15.75, 15],
+              end: [19.25, 18.2],
             }}
             ObjectView={
-              <Button
-                mode="contained"
-                // color={'black'}
-                style={styles.textureButton}
+              <TouchableHighlight
+                style={styles.continueButton}
                 onPress={() => changePage()}>
                 <Text style={styles.buttonText}>{'Listo'}</Text>
-              </Button>
+              </TouchableHighlight>
+              // <Button
+              //   mode="contained"
+              //   // color={'black'}
+              //   style={styles.textureButton}
+              //   onPress={() => changePage()}>
+              //   <Text style={styles.buttonText}>{'Listo'}</Text>
+              // </Button>
             }
           />
         </View>
@@ -220,10 +229,36 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
   },
+  image: {
+    height: '100%',
+    width: '100%',
+    borderRadius: RSize(0.03, 'h'),
+    alignSelf: 'center',
+    opacity: 1,
+  },
   textureButton: {
     borderWidth: 0,
+    borderRadius: RSize(0.03, 'h'),
     justifyContent: 'center',
-    backgroundColor: 'black',
+    // borderRadius: RSize(0.03, 'h'),
+    // backgroundColor: 'black',
+    width: '100%',
+    height: '100%',
+  },
+  selectedTextureButton: {
+    borderWidth: 3,
+    borderColor: '#5C9DEC',
+    justifyContent: 'center',
+    borderRadius: RSize(0.03, 'h'),
+    // backgroundColor: 'black',
+    width: '100%',
+    height: '100%',
+  },
+  continueButton: {
+    borderWidth: 0,
+    justifyContent: 'center',
+    borderRadius: RSize(0.03, 'h'),
+    backgroundColor: '#A1C96A',
     width: '100%',
     height: '100%',
   },

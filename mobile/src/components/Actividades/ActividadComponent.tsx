@@ -23,18 +23,30 @@ interface ActividadComponentProps {
   actividades: Actividad;
   nombreActividad: string;
   cantMonedas: number;
-  dragAnswers: [string[], ReactStateSetter<string[]>];
-  rightDragAnswer: string[];
   pageNumber: [number, ReactStateSetter<number>];
-  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
-  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
+
+  // drag
+  dragAnswers: [string[], ReactStateSetter<string[]>];
+  rightDragAnswer: string[];
+
+  // inputfield
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
+
+  // alternativas
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+
+  // dropdown
+  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+
+  // quiz
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
 }
 
 const ActividadComponent = (props: ActividadComponentProps) => {
@@ -44,6 +56,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     cantMonedas,
     dragAnswers,
     rightDragAnswer,
+    userInputAnswers,
+    rightInputAnswer,
     userAnswers,
     userAnswersDropdown,
     userAnswersQuiz,
@@ -90,6 +104,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     models3d.map((_item, index) => (models.includes(index) ? 1 : 0)),
   );
   const [nPlacedItems, setNPlacedItems] = useState<number>(models.length);
+  const [updateMaterial, setUpdateMaterial] = useState<boolean>(false);
 
   return (
     <View style={styles.container}>
@@ -120,6 +135,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   setSelectedModelMaterials: setSelectedModelMaterials,
                   modelMaterial: modelMaterial[0][pageNumber],
                   setActiveModelIndex: setActiveModelIndex,
+                  updateMaterial: [updateMaterial, setUpdateMaterial],
                 }}
               />
             </View>
@@ -129,6 +145,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               <StoryComponent
                 story={actividad}
                 pageNumber={pageNumber}
+                userInputAnswers={userInputAnswers}
                 dragAnswers={dragAnswers}
                 userAnswers={userAnswers}
                 pickedAnswers={pickedAnswers}
@@ -136,6 +153,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 pickedAnswersDropdown={pickedAnswersDropdown}
                 userAnswersQuiz={userAnswersQuiz}
                 pickedAnswersQuiz={pickedAnswersQuiz}
+                modelMaterial={props.modelMaterial[0]}
               />
             </View>
           )}
@@ -147,6 +165,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 positions={[positions, setPositions]}
                 placedItems={[placedItems, setPlacedItems]}
                 nPlacedItems={[nPlacedItems, setNPlacedItems]}
+                setMaterialSelectorToggle={setMaterialSelectorToggle}
                 visible={
                   !(toggleDefaultValue === true || toggleValues[0] === 1) ||
                   toggleDefaultValue === true
@@ -195,6 +214,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           cantMonedas={cantMonedas}
           storyLength={actividades.length}
           dragAnswers={dragAnswers}
+          userInputAnswers={userInputAnswers}
+          rightInputAnswer={rightInputAnswer}
           rightDragAnswer={rightDragAnswer}
           userAnswers={userAnswers[0]}
           userAnswersDropdown={userAnswersDropdown[0]}
@@ -207,6 +228,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           navigation={props.navigation}
           jumpVisibility={toggleDefaultValue === true || toggleValues[0] === 1}
           toggleValues={[toggleValues, setToggleValues]}
+          setUpdateMaterial={setUpdateMaterial}
         />
       </View>
     </View>

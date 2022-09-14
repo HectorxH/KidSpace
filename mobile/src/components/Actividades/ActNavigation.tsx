@@ -12,19 +12,36 @@ interface ActNavigationProps {
   nombreActividad: string;
   cantMonedas: number;
   storyLength: number;
+  pageNumber: [number, ReactStateSetter<number>];
+  navigation?: NativeStackNavigationProp<RootStackParamList>;
+
+  // drag
   dragAnswers: [string[], ReactStateSetter<string[]>];
   rightDragAnswer: string[];
+
+  // inputfield
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
+
+  // alternativas
   userAnswers: number[][][];
+
+  // dropdown
   userAnswersDropdown: number[][][];
+
+  // quiz
   userAnswersQuiz: number[][];
-  pageNumber: [number, ReactStateSetter<number>];
+
+  // botones
+  toggleValues: [number[], ReactStateSetter<number[]>];
   jumpVisibility: boolean;
+
+  // inventario / 3d
   models: [number[], ReactStateSetter<number[]>];
   placedItems: [number[], ReactStateSetter<number[]>];
   nPlacedItems: [number, ReactStateSetter<number>];
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
-  toggleValues: [number[], ReactStateSetter<number[]>];
-  navigation?: NativeStackNavigationProp<RootStackParamList>;
+  setUpdateMaterial: ReactStateSetter<boolean>;
 }
 
 const ActNavigation = (props: ActNavigationProps) => {
@@ -61,6 +78,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         typeof actividades[pageNumber + 1].AR !== 'undefined' &&
         actividades[pageNumber + 1].AR?.start === true
       ) {
+        props.setUpdateMaterial(true);
         props.toggleValues[1]([0]);
         props.placedItems[1](
           actividades[pageNumber + 1].AR!.models.map(() => 0),
@@ -116,6 +134,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswersQuiz={props.userAnswersQuiz}
             userDragAnswer={props.dragAnswers}
             rightDragAnswer={props.rightDragAnswer}
+            userInputAnswers={props.userInputAnswers}
+            rightInputAnswers={props.rightInputAnswer}
             pageNumber={props.pageNumber}
             toggleVisibility={props.jumpVisibility}
           />
@@ -130,6 +150,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswersQuiz={props.userAnswersQuiz}
             userDragAnswer={props.dragAnswers}
             rightDragAnswer={props.rightDragAnswer}
+            userInputAnswers={props.userInputAnswers}
+            rightInputAnswers={props.rightInputAnswer}
             pageNumber={props.pageNumber}
             nextPage={() => nextPageNumber()}
             toggleVisibility={props.jumpVisibility}

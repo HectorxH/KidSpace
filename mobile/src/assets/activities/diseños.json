@@ -648,8 +648,7 @@
           "end": [6.5, 10]
         },
         "settings": {
-          "fontSize": 0.05,
-          "color": "black"  
+          "fontSize": 0.05
         }
       }
       
@@ -661,8 +660,7 @@
           "end": [13.1, 10]
         },
         "settings": {
-          "fontSize": 0.05,
-          "color": "black"  
+          "fontSize": 0.05
         }
       },
       {
@@ -672,8 +670,7 @@
           "end": [19.7, 10]
         },
         "settings": {
-          "fontSize": 0.05,
-          "color": "black"  
+          "fontSize": 0.05
         }
       }
     ],
@@ -1468,7 +1465,6 @@
             },
             "settings": { 
               "fontSize": 0.06,
-              "color": "black",
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1503,7 +1499,6 @@
             },
             "settings": { 
               "fontSize": 0.06,
-              "color": "black",
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1539,7 +1534,8 @@
         },
         "settings": {      
           "backgroundColor": "white",
-          "elevation": 0
+          "elevation": 0,
+          "borderRadius": 0
         }
       }
     ],
@@ -1571,7 +1567,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1585,7 +1580,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1599,7 +1593,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1740,7 +1733,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1842,7 +1834,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1856,7 +1847,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1870,7 +1860,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2011,7 +2000,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
