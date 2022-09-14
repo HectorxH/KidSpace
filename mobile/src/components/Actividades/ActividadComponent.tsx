@@ -104,6 +104,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     models3d.map((_item, index) => (models.includes(index) ? 1 : 0)),
   );
   const [nPlacedItems, setNPlacedItems] = useState<number>(models.length);
+  const [updateMaterial, setUpdateMaterial] = useState<boolean>(false);
 
   return (
     <View style={styles.container}>
@@ -134,6 +135,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   setSelectedModelMaterials: setSelectedModelMaterials,
                   modelMaterial: modelMaterial[0][pageNumber],
                   setActiveModelIndex: setActiveModelIndex,
+                  updateMaterial: [updateMaterial, setUpdateMaterial],
                 }}
               />
             </View>
@@ -151,6 +153,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 pickedAnswersDropdown={pickedAnswersDropdown}
                 userAnswersQuiz={userAnswersQuiz}
                 pickedAnswersQuiz={pickedAnswersQuiz}
+                modelMaterial={props.modelMaterial[0]}
               />
             </View>
           )}
@@ -162,6 +165,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 positions={[positions, setPositions]}
                 placedItems={[placedItems, setPlacedItems]}
                 nPlacedItems={[nPlacedItems, setNPlacedItems]}
+                setMaterialSelectorToggle={setMaterialSelectorToggle}
                 visible={
                   !(toggleDefaultValue === true || toggleValues[0] === 1) ||
                   toggleDefaultValue === true
@@ -223,6 +227,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           navigation={props.navigation}
           jumpVisibility={toggleDefaultValue === true || toggleValues[0] === 1}
           toggleValues={[toggleValues, setToggleValues]}
+          setUpdateMaterial={setUpdateMaterial}
         />
       </View>
     </View>

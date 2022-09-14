@@ -32,6 +32,9 @@ interface StoryComponentProps {
 
   // input field
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+
+  // especial de modelo 3d con custom texture
+  modelMaterial: string[][];
 }
 
 const StoryComponent = (props: StoryComponentProps) => {
@@ -61,7 +64,14 @@ const StoryComponent = (props: StoryComponentProps) => {
     <View style={styles.container}>
       {/* Personajes/Imagenes */}
       <View style={styles.overlay}>
-        <Items images={items} />
+        <Items
+          images={items}
+          specialTexture={
+            props.pageNumber > 0
+              ? props.modelMaterial[props.pageNumber - 1][0]
+              : ''
+          }
+        />
       </View>
       {/* Cuadros de texto */}
       <View style={styles.overlay}>
@@ -73,7 +83,14 @@ const StoryComponent = (props: StoryComponentProps) => {
       </View>
       {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}
       <View style={styles.overlay}>
-        <Items images={bubbles} />
+        <Items
+          images={bubbles}
+          specialTexture={
+            props.pageNumber > 0
+              ? props.modelMaterial[props.pageNumber - 1][0]
+              : ''
+          }
+        />
       </View>
       {/* Preguntas / Alternativas */}
       <View style={styles.overlay}>

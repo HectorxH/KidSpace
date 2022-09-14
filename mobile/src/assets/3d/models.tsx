@@ -189,10 +189,6 @@ const Models: {
         ['et1', 'et2'],
       ],
       materials: {
-        default: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diseño2/caja_torta/default.png'),
-        },
         mat1_default_default: {
           lightingModel: 'PBR',
           diffuseTexture: require('../../assets/3d/diseño2/caja_torta/mat1++.png'),

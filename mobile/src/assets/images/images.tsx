@@ -88,6 +88,38 @@ const images: {
     ejemplo_contraste2: require('./extras/ejemplo_contraste2.png'),
     chillona: require('./extras/chillona.png'),
 
+    mat1: require('./icons/caja_torta/mat1.png'),
+    mat2: require('./icons/caja_torta/mat2.png'),
+    mat3: require('./icons/caja_torta/mat3.png'),
+    logo1: require('./icons/caja_torta/logo1.png'),
+    logo2: require('./icons/caja_torta/logo2.png'),
+    et1: require('./icons/caja_torta/etiqueta1.png'),
+    et2: require('./icons/caja_torta/etiqueta2.png'),
+
+    mat1_logo1_et1: require('./icons/caja_torta/mat1-logo1.png'),
+    mat1_logo1_et2: require('./icons/caja_torta/mat1-logo1.png'),
+    mat1_logo1_et3: require('./icons/caja_torta/mat1-logo1.png'),
+
+    mat1_logo2_et1: require('./icons/caja_torta/mat1-logo2.png'),
+    mat1_logo2_et2: require('./icons/caja_torta/mat1-logo2.png'),
+    mat1_logo2_et3: require('./icons/caja_torta/mat1-logo2.png'),
+
+    mat2_logo1_et1: require('./icons/caja_torta/mat2-logo1.png'),
+    mat2_logo1_et2: require('./icons/caja_torta/mat2-logo1.png'),
+    mat2_logo1_et3: require('./icons/caja_torta/mat2-logo1.png'),
+
+    mat2_logo2_et1: require('./icons/caja_torta/mat2-logo2.png'),
+    mat2_logo2_et2: require('./icons/caja_torta/mat2-logo2.png'),
+    mat2_logo2_et3: require('./icons/caja_torta/mat2-logo2.png'),
+
+    mat3_logo1_et1: require('./icons/caja_torta/mat3-logo1.png'),
+    mat3_logo1_et2: require('./icons/caja_torta/mat3-logo1.png'),
+    mat3_logo1_et3: require('./icons/caja_torta/mat3-logo1.png'),
+
+    mat3_logo2_et1: require('./icons/caja_torta/mat3-logo2.png'),
+    mat3_logo2_et2: require('./icons/caja_torta/mat3-logo2.png'),
+    mat3_logo2_et3: require('./icons/caja_torta/mat3-logo2.png'),
+
     tempera_roja: require('./extras/tempera_roja.png'),
     tempera_negra: require('./extras/tempera_negra.png'),
     tempera_blanca: require('./extras/tempera_blanca.png'),

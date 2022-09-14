@@ -40,6 +40,7 @@ interface ActNavigationProps {
   placedItems: [number[], ReactStateSetter<number[]>];
   nPlacedItems: [number, ReactStateSetter<number>];
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
+  setUpdateMaterial: ReactStateSetter<boolean>;
 }
 
 const ActNavigation = (props: ActNavigationProps) => {
@@ -75,6 +76,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         typeof actividades[pageNumber + 1].AR !== 'undefined' &&
         actividades[pageNumber + 1].AR?.start === true
       ) {
+        props.setUpdateMaterial(true);
         props.toggleValues[1]([0]);
         props.placedItems[1](
           actividades[pageNumber + 1].AR!.models.map(() => 0),

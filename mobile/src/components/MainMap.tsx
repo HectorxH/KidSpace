@@ -135,11 +135,11 @@ const MainMap = ({navigation}: MainMapProps) => {
               // actividad: 'diagramas',
               // actividad: 'diseños',
               // actividad: 'nutricion1',
-              actividad: 'diseño1',
-              cantMonedas: 200,
+              // actividad: 'diseño1',
               // actividad: 'nutricion2',
-              // actividad: 'diseño2',
+              actividad: 'diseño2',
               // actividad: 'debug',
+              cantMonedas: 200,
             })
           }>
           <Text style={styles.subtitle}>Perfil</Text>

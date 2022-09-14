@@ -1003,7 +1003,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1062,7 +1062,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1121,7 +1121,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1180,7 +1180,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1239,7 +1239,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1298,7 +1298,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1357,7 +1357,7 @@
   },
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "caja_torta",
@@ -1456,19 +1456,126 @@
     "jumpButton": [
       {
         "settings": {
-          "buttonColorAlt": "#BBBBBB",
-          "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
-          "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "magnify",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": "Ver el poster",
+          "buttonTextNormal": "Ver el poster"
         },
         "position" : {
           "start": [13, 1],
           "end": [19, 4]
         },
-        "target": 14,
-        "require": [13],
+        "target": 39,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [10.5, 4.5],
+          "end": [19.5, 17.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así se ve el poster final del producto que diseñaste. Layla espera que el producto sea popular con los clientes",
+        "position": {
+          "start": [10.7, 4.7],
+          "end": [19.2, 17.2]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "black",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "_diseño2_",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [9.5, 19.5]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": "Avanzar",
+          "buttonTextNormal": "Avanzar"
+        },
+        "position" : {
+          "start": [14.5, 1],
+          "end": [19, 4]
+        },
+        "target": 40,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño2",
+    "items": [
+      {
+        "name": "LaylaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Recuerda siempre las reglas que aprendiste sobre los diseños",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [9, 15.5],
+          "end": [17, 18.5]
+        },
+        "target": -1,
+        "require": [],
         "visible": false
       }
     ]

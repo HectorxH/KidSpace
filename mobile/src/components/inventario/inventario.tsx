@@ -24,6 +24,7 @@ interface InventarioProps {
   showInventory: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
   sceneNav: React.RefObject<ViroARSceneNavigator>;
+  setMaterialSelectorToggle: ReactStateSetter<number>;
 }
 
 const Inventario = (props: InventarioProps) => {
@@ -59,6 +60,7 @@ const Inventario = (props: InventarioProps) => {
     setNPlacedItems(0);
     props.models[1]([]);
     setPositions([]);
+    props.setMaterialSelectorToggle(0);
   }
 
   function updatePosition() {
