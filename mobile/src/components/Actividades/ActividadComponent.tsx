@@ -110,6 +110,9 @@ const ActividadComponent = (props: ActividadComponentProps) => {
   const [nPlacedItems, setNPlacedItems] = useState<number>(models.length);
   const [updateMaterial, setUpdateMaterial] = useState<boolean>(false);
 
+  // vars texturas
+  const [selectedPageOrder, setSelectedPageOrder] = useState<number>(0);
+
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -207,6 +210,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 selectedModelMaterials={selectedModelMaterials}
                 activeModelIndex={activeModelIndex}
                 models3d={models3d}
+                selectedPageOrder={[selectedPageOrder, setSelectedPageOrder]}
               />
             </View>
           )}

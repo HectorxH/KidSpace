@@ -40,10 +40,6 @@ const Inventario = (props: InventarioProps) => {
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
-  console.log('inventario: ', props.models[0]);
-  console.log('inventario - placedItems: ', placedItems);
-  console.log('inventario - NplacedItems: ', nPlacedItems);
-
   function modelHandler(index: number) {
     updatePosition();
     let aux = [...placedItems];

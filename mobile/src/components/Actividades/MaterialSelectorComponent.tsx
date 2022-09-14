@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, TouchableHighlight, Image} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
@@ -16,12 +16,12 @@ interface MaterialSelectorComponentProps {
     materialOrder: string[];
     materialChoices: string[][];
   };
+  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
 const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
-  const [selectedPageOrder, setSelectedPageOrder] = useState<number>(0);
+  const [selectedPageOrder, setSelectedPageOrder] = props.selectedPageOrder;
   function buttonPressed(v: string) {
-    console.log(v);
     let selectedMaterials = props.selectedMaterial[0];
     selectedMaterials[props.pageNumber][props.objectNumber][selectedPageOrder] =
       v;
@@ -128,7 +128,7 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                       style={
                         props.selectedMaterial[0][props.pageNumber][
                           props.objectNumber
-                        ][index] === v
+                        ][selectedPageOrder] === v
                           ? styles.selectedTextureButton
                           : styles.textureButton
                       }

@@ -15,6 +15,7 @@ interface MaterialSelectorProps {
   };
   activeModelIndex: number;
   models3d: IModels[];
+  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
 const MaterialSelector = (props: MaterialSelectorProps) => {
@@ -36,6 +37,7 @@ const MaterialSelector = (props: MaterialSelectorProps) => {
           modelMaterial={props.modelMaterial}
           selectedMaterial={props.selectedMaterial}
           selectedModelMaterials={props.selectedModelMaterials}
+          selectedPageOrder={props.selectedPageOrder}
         />
       </View>
     </View>
