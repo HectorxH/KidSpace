@@ -91,6 +91,18 @@ const JumpButton = (props: JumpButtonProps) => {
                             buttonText: jumpButton.settings.buttonTextAlt,
                           }
                     }
+                    disabled={
+                      checkAnswers(
+                        jumpButton.require,
+                        props.userAnswers,
+                        props.userAnswersDropdown,
+                        props.userAnswersQuiz,
+                        props.userDragAnswer[0],
+                        props.rightDragAnswer,
+                        props.userInputAnswers[0],
+                        props.rightInputAnswers,
+                      ) === false
+                    }
                   />
                 }
               />

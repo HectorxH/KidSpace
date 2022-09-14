@@ -27,7 +27,9 @@ const TextInputAnswer = (props: TextInputAnswerProps) => {
       {props.textFieldQuestions.length !== 0 &&
         props.textFieldQuestions.map((question: ITextFieldQuestion, index) => {
           return (
-            <View style={styles.overlay} key={index.toString()}>
+            <View
+              style={styles.overlay}
+              key={question.rightAnswer + (index + 9999).toString()}>
               <Layout
                 position={question.position}
                 ObjectView={

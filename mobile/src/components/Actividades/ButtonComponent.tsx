@@ -1,27 +1,38 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
-import {Button} from 'react-native-paper';
+import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {ButtonSetting} from '../../types/activity';
 import {RSize} from '../../utils/responsive';
 
 interface ButtonComponentProps {
   onPressFunction(): void;
   settings: ButtonSetting;
+  disabled: boolean;
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {
   const {onPressFunction, settings} = props;
   return (
     <View style={styles.container}>
-      <Button
-        icon={settings.buttonIcon}
-        labelStyle={styles.iconStyle}
-        mode="contained"
-        color={settings.buttonColor}
-        style={styles.buttonStyle}
+      <TouchableHighlight
+        // icon={settings.buttonIcon}
+        // labelStyle={styles.iconStyle}
+        // mode="contained"
+        // color={settings.buttonColor}
+        disabled={props.disabled}
+        style={[styles.buttonStyle, {backgroundColor: settings.buttonColor}]}
         onPress={onPressFunction}>
-        <Text style={styles.textStyle}>{settings.buttonText}</Text>
-      </Button>
+        <Text style={styles.textStyle}>
+          {settings.buttonIcon !== '' && (
+            <Icon
+              name={settings.buttonIcon}
+              size={RSize(0.05, 'h')}
+              color={styles.textStyle.color}
+            />
+          )}
+          {settings.buttonText}
+        </Text>
+      </TouchableHighlight>
     </View>
   );
 };
@@ -33,6 +44,10 @@ const styles = StyleSheet.create({
   buttonStyle: {
     borderRadius: RSize(0.05, 'h'),
     justifyContent: 'center',
+
+    height: '100%',
+    width: '100%',
+    // backgroundColor: 'gray',
   },
   textStyle: {
     alignSelf: 'center',

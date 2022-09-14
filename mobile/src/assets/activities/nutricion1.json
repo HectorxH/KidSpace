@@ -516,8 +516,8 @@
       {
         "name": "etiqueta_choco",
         "position": {
-          "start": [1, 0],
-          "end": [7, 20]
+          "start": [1, 4],
+          "end": [7, 18]
         }
       }
     ],
@@ -537,9 +537,8 @@
           "end": [14.7, 8.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -552,9 +551,8 @@
           "end": [14.7, 11.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -567,9 +565,8 @@
           "end": [14.7, 14.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -582,9 +579,8 @@
           "end": [14.7, 17.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -624,6 +620,42 @@
           "end": [19, 17.5]
         }
       }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 16,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 18,
+        "require": [17],
+        "visible": false
+      }
     ]
   },
   {
@@ -632,8 +664,8 @@
       {
         "name": "etiqueta_jugo",
         "position": {
-          "start": [1, 0],
-          "end": [7, 20]
+          "start": [1, 4],
+          "end": [7, 18]
         }
       }
     ],
@@ -653,9 +685,8 @@
           "end": [14.7, 8.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -668,9 +699,8 @@
           "end": [14.7, 11.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -683,9 +713,8 @@
           "end": [14.7, 14.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -698,9 +727,8 @@
           "end": [14.7, 17.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "textAlign": "left",
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -739,6 +767,42 @@
           "start": [15, 15],
           "end": [19, 17.5]
         }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 17,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 19,
+        "require": [18],
+        "visible": false
       }
     ]
   },
@@ -1240,7 +1304,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold"
@@ -1254,7 +1317,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1269,7 +1331,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1284,7 +1345,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1299,7 +1359,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1314,7 +1373,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1329,7 +1387,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1337,7 +1394,7 @@
         }
       },
       {
-        "text": "Calculadora de IMC",
+        "text": "*Calculadora de IMC*",
         "position": {
           "start": [10.5, 3],
           "end": [19.5, 6]
@@ -1354,7 +1411,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1369,7 +1425,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1405,7 +1460,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 33,
         "require": [],
@@ -1413,12 +1468,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Calcular IMC",
-          "buttonTextNormal": "Calcular IMC"
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
         },
         "position" : {
           "start": [12, 15],
@@ -1463,7 +1518,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1527,7 +1581,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 34,
         "require": [],
@@ -1535,12 +1589,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [14, 1],
@@ -1587,7 +1641,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold"
@@ -1601,7 +1654,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1616,7 +1668,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1631,7 +1682,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1646,7 +1696,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1661,7 +1710,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1676,7 +1724,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1684,7 +1731,7 @@
         }
       },
       {
-        "text": "Calculadora de IMC",
+        "text": "*Calculadora de IMC*",
         "position": {
           "start": [10.5, 3],
           "end": [19.5, 6]
@@ -1701,7 +1748,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1716,7 +1762,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1752,7 +1797,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 35,
         "require": [],
@@ -1760,12 +1805,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Calcular IMC",
-          "buttonTextNormal": "Calcular IMC"
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
         },
         "position" : {
           "start": [12, 15],
@@ -1810,7 +1855,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1874,7 +1918,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 36,
         "require": [],
@@ -1882,12 +1926,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [14, 1],
@@ -1934,7 +1978,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold"
@@ -1948,7 +1991,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1963,7 +2005,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1978,7 +2019,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -1993,7 +2033,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -2008,7 +2047,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -2023,7 +2061,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -2031,7 +2068,7 @@
         }
       },
       {
-        "text": "Calculadora de IMC",
+        "text": "*Calculadora de IMC*",
         "position": {
           "start": [10.5, 3],
           "end": [19.5, 6]
@@ -2048,7 +2085,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -2063,7 +2099,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
@@ -2099,7 +2134,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 37,
         "require": [],
@@ -2107,12 +2142,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "auto-fix",
-          "buttonIconNormal": "auto-fix",
-          "buttonTextAlt": "Calcular IMC",
-          "buttonTextNormal": "Calcular IMC"
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
         },
         "position" : {
           "start": [12, 15],
@@ -2157,7 +2192,6 @@
         },
         "settings": { 
           "fontSize": 0.06,
-          "color": "black",
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2221,7 +2255,7 @@
         },
         "position" : {
           "start": [1, 1],
-          "end": [2, 3.5]
+          "end": [2.5, 3.5]
         },
         "target": 38,
         "require": [],
@@ -2229,12 +2263,12 @@
       },
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": "Avanzar",
-          "buttonTextNormal": "Avanzar"
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
           "start": [14, 1],

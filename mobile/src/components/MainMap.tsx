@@ -133,8 +133,8 @@ const MainMap = ({navigation}: MainMapProps) => {
           onPress={() =>
             navigation.navigate('Actividades', {
               // actividad: 'diagramas',
-              actividad: 'diseños',
-              // actividad: 'nutricion1',
+              // actividad: 'diseños',
+              actividad: 'nutricion1',
               // actividad: 'diseño1',
               // actividad: 'nutricion2',
               // actividad: 'diseño2',
