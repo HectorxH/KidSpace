@@ -71,13 +71,13 @@ const QRView = () => {
         />
       </Stack>
       <Stack
-        direction="row"
+        direction={{ xs: 'column', sm: 'row' }}
         alignItems="center"
         spacing={2}
         justifyContent="space-between"
         sx={{ p: 4 }}
       >
-        <Box sx={{ width: 2 / 4, margin: 4 }}>
+        <Stack sx={{ width: 2 / 4, margin: 4 }}>
           <Typography variant="h4" sx={{ marginBottom: 3 }}>
             Modo de uso:
           </Typography>{' '}
@@ -95,10 +95,10 @@ const QRView = () => {
             Estos datos posteriormente pueden ser editados
             por el o la docente con acceso al curso.
           </Typography>
-        </Box>
-        <Box sx={{ width: 2 / 4, justifyContent: 'center' }}>
+        </Stack>
+        <Stack sx={{ width: 2 / 4, justifyContent: 'center' }}>
           <Card sx={{
-            alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5, paddingTop: 5,
+            alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5, paddingTop: 5, width: 400,
           }}
           >
             <Qr curso={curso} />
@@ -111,7 +111,7 @@ const QRView = () => {
               ¡Únete al curso {curso.nombre}!
             </Typography>
           </Card>
-        </Box>
+        </Stack>
       </Stack>
     </Stack>
   );

@@ -75,7 +75,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       const n = await AsyncStorage.getItem('@notification');
       setNotification(n!);
       const m = await AsyncStorage.getItem('@monedas');
-      setCantMonedas(parseInt(m!, 10));
+      m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
       const c = await AsyncStorage.getItem('@completadas');
       c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
@@ -206,7 +206,7 @@ const MainMap = ({navigation}: MainMapProps) => {
             </Chip>
             <Chip style={styles.monedaChip}>
               <Image style={styles.icon} source={images.moneda.uri} />
-              <Text style={styles.monedaText}>{cantMonedas}</Text>
+              <Text style={styles.monedaText}> {cantMonedas}</Text>
             </Chip>
           </View>
           <ScrollView
@@ -304,7 +304,10 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() => {
+                // testLogout();
+                AsyncStorage.clear();
+              }}>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
@@ -427,12 +430,13 @@ const styles = StyleSheet.create({
     margin: RSize(0.02, 'h'),
   },
   monedaChip: {
-    backgroundColor: '#F1F3F8',
+    backgroundColor: '#ededed',
     margin: RSize(0.02, 'h'),
     justifyContent: 'center',
   },
   monedaText: {
-    fontFamily: 'Poppins',
+    fontFamily: 'Poppins-Bold',
+    alignSelf: 'center',
     fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
     color: '#000000',

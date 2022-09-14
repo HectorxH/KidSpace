@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
   },
   chip: {
-    backgroundColor: '#efefef',
+    backgroundColor: '#ededed',
     flexDirection: 'row',
     width: RSize(0.5, 'w'),
   },
