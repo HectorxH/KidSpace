@@ -28,6 +28,11 @@ interface JumpButtonProps {
   // inputfield
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
   rightInputAnswers: number[][];
+
+  // 3d texturas
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  setMaterialSelectorToggle: ReactStateSetter<number>;
 }
 
 const JumpButton = (props: JumpButtonProps) => {
@@ -46,8 +51,10 @@ const JumpButton = (props: JumpButtonProps) => {
         props.rightDragAnswer,
         props.userInputAnswers[0],
         props.rightInputAnswers,
+        props.selectedMaterial[0],
       ) === true
     ) {
+      props.setMaterialSelectorToggle(0);
       if (pgNumber === -1) {
         props.nextPage();
       } else {
@@ -79,6 +86,7 @@ const JumpButton = (props: JumpButtonProps) => {
                         props.rightDragAnswer,
                         props.userInputAnswers[0],
                         props.rightInputAnswers,
+                        props.selectedMaterial[0],
                       ) === true
                         ? {
                             buttonIcon: jumpButton.settings.buttonIconNormal,
@@ -101,6 +109,7 @@ const JumpButton = (props: JumpButtonProps) => {
                         props.rightDragAnswer,
                         props.userInputAnswers[0],
                         props.rightInputAnswers,
+                        props.selectedMaterial[0],
                       ) === false
                     }
                   />

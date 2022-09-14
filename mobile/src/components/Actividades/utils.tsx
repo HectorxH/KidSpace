@@ -15,6 +15,7 @@ export function checkAnswers(
   rightDragAnswer: string[],
   userInputAnswers: number[][],
   rightInputsAnswers: number[][],
+  selectedMaterial: string[][][],
 ) {
   var respuestasCorrectas =
     requirements
@@ -45,6 +46,20 @@ export function checkAnswers(
           )
           .reduce((x, y) => Number(x) + Number(y), 0),
       )
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n =>
+        selectedMaterial[n].map(userAnswer =>
+          userAnswer
+            .map(v =>
+              (v !== 'default' ? [1] : [0]).reduce(
+                (x, y) => Number(x) + Number(y),
+                0,
+              ),
+            )
+            .reduce((x, y) => Number(x) + Number(y), 0),
+        ),
+      )
       .reduce((x, y) => Number(x) + Number(y), 0);
 
   var cantidadRespuestas =
@@ -68,12 +83,36 @@ export function checkAnswers(
     requirements.length + // este requirements.length es para los drag, siempre es 1 por página
     requirements
       .map(n => rightInputsAnswers[n].length)
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n => selectedMaterial[n][0].length)
       .reduce((x, y) => Number(x) + Number(y), 0);
 
   requirements.map(n => {
-    console.log('input field answers:', userInputAnswers[n]);
-    console.log('right field answers:', rightInputsAnswers[n]);
+    console.log('texture answers:', selectedMaterial[n]);
+    console.log(
+      'right texture answers:',
+      selectedMaterial[n][0].length,
+      selectedMaterial[n][0],
+    );
   });
+  console.log(
+    'textures correctas: ',
+    requirements
+      .map(n =>
+        selectedMaterial[n].map(userAnswer =>
+          userAnswer
+            .map(v =>
+              (v !== 'default' ? [1] : [0]).reduce(
+                (x, y) => Number(x) + Number(y),
+                0,
+              ),
+            )
+            .reduce((x, y) => Number(x) + Number(y), 0),
+        ),
+      )
+      .reduce((x, y) => Number(x) + Number(y), 0),
+  );
   return respuestasCorrectas === cantidadRespuestas;
 }
 

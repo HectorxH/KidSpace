@@ -27,6 +27,11 @@ interface JumpCardProps {
   // input field
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
   rightInputAnswers: number[][];
+
+  // 3d texturas
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  setMaterialSelectorToggle: ReactStateSetter<number>;
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
 }
 
 const JumpCard = (props: JumpCardProps) => {
@@ -45,8 +50,10 @@ const JumpCard = (props: JumpCardProps) => {
         props.rightDragAnswer,
         props.userInputAnswers[0],
         props.rightInputAnswers,
+        props.selectedMaterial[0],
       ) === true
     ) {
+      props.setMaterialSelectorToggle(0);
       props.pageNumber[1](pgNumber);
     }
   };
@@ -75,6 +82,7 @@ const JumpCard = (props: JumpCardProps) => {
                         props.rightDragAnswer,
                         props.userInputAnswers[0],
                         props.rightInputAnswers,
+                        props.selectedMaterial[0],
                       ) === true
                     }
                   />

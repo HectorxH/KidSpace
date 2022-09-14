@@ -1439,7 +1439,7 @@
     "jumpButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
           "buttonIconNormal": "eye",
@@ -1451,7 +1451,7 @@
           "end": [7, 3.5]
         },
         "target": 39,
-        "require": [],
+        "require": [38],
         "visible": true
       }
     ]
@@ -1558,7 +1558,7 @@
           "end": [17, 19]
         },
         "target": 40,
-        "require": [],
+        "require": [38],
         "visible": true
       }
     ]

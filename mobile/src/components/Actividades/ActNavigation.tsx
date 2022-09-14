@@ -44,6 +44,7 @@ interface ActNavigationProps {
   setUpdateMaterial: ReactStateSetter<boolean>;
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  setMaterialSelectorToggle: ReactStateSetter<number>;
 }
 
 const ActNavigation = (props: ActNavigationProps) => {
@@ -94,6 +95,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         // props.models[1]([]);
         // setPositions([]);
       }
+      props.setMaterialSelectorToggle(0);
       setPageNumber(pageNumber + 1);
     } else {
       navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
@@ -141,6 +143,9 @@ const ActNavigation = (props: ActNavigationProps) => {
             rightInputAnswers={props.rightInputAnswer}
             pageNumber={props.pageNumber}
             toggleVisibility={props.jumpVisibility}
+            modelMaterial={props.modelMaterial}
+            selectedMaterial={props.selectedMaterial}
+            setMaterialSelectorToggle={props.setMaterialSelectorToggle}
           />
         </View>
       )}
@@ -158,6 +163,9 @@ const ActNavigation = (props: ActNavigationProps) => {
             pageNumber={props.pageNumber}
             nextPage={() => nextPageNumber()}
             toggleVisibility={props.jumpVisibility}
+            modelMaterial={props.modelMaterial}
+            selectedMaterial={props.selectedMaterial}
+            setMaterialSelectorToggle={props.setMaterialSelectorToggle}
           />
         </View>
       )}
