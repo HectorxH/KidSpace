@@ -14,11 +14,22 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const InicioView = ({navigation}: InicioViewProps) => {
   const {user, refresh, logout} = useAuth();
 
+  const refreshUser = async () => {
+    try {
+      await refresh();
+      if (user) {
+        navigation.navigate('MainMap');
+      }
+    } catch (e) {
+      console.log(e);
+      await logout();
+    }
+  };
+
   useEffect(() => {
     console.log('User: ', user);
     if (user) {
-      refresh();
-      navigation.navigate('MainMap');
+      refreshUser;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);

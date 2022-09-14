@@ -152,12 +152,7 @@ app.post(
   async (req, res) => {
     try {
       const user = await User.findOne({ username: req.body.username });
-      return res.json({
-        username: user?.username,
-        tipo: user?.tipo,
-        nombres: user?.nombres,
-        apellidos: user?.apellidos,
-      });
+      return res.json(user);
     } catch (e) {
       console.log(e);
       return res.sendStatus(500);

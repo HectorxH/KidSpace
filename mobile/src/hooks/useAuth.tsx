@@ -4,6 +4,7 @@ import {IUser} from '../types/user';
 import {NavigationContext} from '@react-navigation/core';
 import axios from 'axios';
 import Config from 'react-native-config';
+import _ from 'lodash';
 
 interface IAuthContext {
   user: IUser | null;
@@ -65,13 +66,28 @@ export const AuthProvider = ({children}: {children: any}) => {
   const refresh = async () => {
     try {
       await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-      await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
+    } catch (e) {
+      console.log('Refresh: already loged out');
+    }
+    try {
+      const res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
         username: user?.username,
         password: user?.password,
       });
+      const {_id, nombres, apellidos, tipo} = res.data;
+      if (user) {
+        const {username, password} = user;
+        const newUser = {_id, username, password, nombres, apellidos, tipo};
+        if (!_.isEqual(user, newUser)) {
+          console.log('Refresh: login as new user', newUser);
+          await login(newUser);
+        }
+      } else {
+        await logout();
+      }
     } catch (e) {
-      console.log(e);
-      logout();
+      console.log(JSON.stringify(e));
+      await logout();
     }
   };
 

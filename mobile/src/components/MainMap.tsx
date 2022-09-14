@@ -121,7 +121,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     initialLoader();
     loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [userData]);
 
   const HandleAct = async () => {
     try {
