@@ -45,6 +45,7 @@ interface ActNavigationProps {
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   setMaterialSelectorToggle: ReactStateSetter<number>;
+  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
 const ActNavigation = (props: ActNavigationProps) => {
@@ -166,6 +167,7 @@ const ActNavigation = (props: ActNavigationProps) => {
             modelMaterial={props.modelMaterial}
             selectedMaterial={props.selectedMaterial}
             setMaterialSelectorToggle={props.setMaterialSelectorToggle}
+            selectedPageOrder={props.selectedPageOrder}
           />
         </View>
       )}
