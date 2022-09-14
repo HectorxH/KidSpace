@@ -164,7 +164,18 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
             ObjectView={
               <TouchableHighlight
                 underlayColor={'gray'}
-                style={styles.continueButton}
+                disabled={
+                  props.selectedMaterial[0][props.pageNumber][
+                    props.objectNumber
+                  ][selectedPageOrder] === 'default'
+                }
+                style={
+                  props.selectedMaterial[0][props.pageNumber][
+                    props.objectNumber
+                  ][selectedPageOrder] !== 'default'
+                    ? styles.continueButton
+                    : styles.continueButtonDisabled
+                }
                 onPress={() => changePage()}>
                 <Text style={styles.buttonText}>{'Listo'}</Text>
               </TouchableHighlight>
@@ -261,6 +272,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: RSize(0.03, 'h'),
     backgroundColor: '#A1C96A',
+    width: '100%',
+    height: '100%',
+  },
+  continueButtonDisabled: {
+    borderWidth: 0,
+    justifyContent: 'center',
+    borderRadius: RSize(0.03, 'h'),
+    backgroundColor: '#BBBBBB',
     width: '100%',
     height: '100%',
   },
