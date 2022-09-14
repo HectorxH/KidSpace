@@ -206,7 +206,7 @@ const MainMap = ({navigation}: MainMapProps) => {
             </Chip>
             <Chip style={styles.monedaChip}>
               <Image style={styles.icon} source={images.moneda.uri} />
-              <Text style={styles.monedaText}>{cantMonedas}</Text>
+              <Text style={styles.monedaText}>{' '}{cantMonedas}</Text>
             </Chip>
           </View>
           <ScrollView
@@ -429,12 +429,13 @@ const styles = StyleSheet.create({
     margin: RSize(0.02, 'h'),
   },
   monedaChip: {
-    backgroundColor: '#F1F3F8',
+    backgroundColor: '#d1d1d1',
     margin: RSize(0.02, 'h'),
     justifyContent: 'center',
   },
   monedaText: {
     fontFamily: 'Poppins',
+    alignSelf: 'center',
     fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
     color: '#000000',

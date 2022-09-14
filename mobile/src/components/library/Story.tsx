@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     margin: RSize(0.02, 'h'),
   },
   chip2: {
-    backgroundColor: '#EFEFEF',
+    backgroundColor: '#d1d1d1',
     margin: RSize(0.02, 'h'),
   },
   textChip1: {
