@@ -70,6 +70,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             <Card
               style={{
                 borderRadius: 20,
+                backgroundColor: '#F6F6F6',
               }}>
               <View
                 style={{

@@ -26,15 +26,20 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const navigation = useContext(NavigationContext);
 
-  useEffect(() => {
+  const getUser = async () => {
     console.log('Initial User:', user);
     if (!user) {
-      AsyncStorage.getItem('@user').then(u => {
-        if (u) {
-          setUser(JSON.parse(u));
-        }
-        console.log('Loaded User:', user);
-      });
+      const u = await AsyncStorage.getItem('@user');
+      if (u) {
+        setUser(JSON.parse(u));
+      }
+      console.log('Loaded User:', user);
+    }
+  };
+
+  useEffect(() => {
+    if (!user) {
+      getUser();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
