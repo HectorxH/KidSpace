@@ -9,6 +9,7 @@ import {RSize} from '../../utils/responsive';
 const Activity = ({navigation, route}: ActivityProps) => {
   const {activity} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+  console.log(activity);
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
