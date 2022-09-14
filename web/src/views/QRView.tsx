@@ -73,7 +73,7 @@ const QRView = () => {
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         alignItems="center"
-        spacing={2}
+        spacing={5}
         justifyContent="space-between"
         sx={{ p: 4 }}
       >
@@ -98,7 +98,7 @@ const QRView = () => {
         </Stack>
         <Stack sx={{ width: 2 / 4, justifyContent: 'center' }}>
           <Card sx={{
-            alignItems: 'center', justifyContent: 'center', margin: 4, borderRadius: '20px', paddingBottom: 5, paddingTop: 5, width: 400,
+            alignItems: 'center', justifyContent: 'center', borderRadius: '20px', paddingBottom: 5, paddingTop: 5, width: 400,
           }}
           >
             <Qr curso={curso} />

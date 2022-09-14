@@ -25,11 +25,14 @@ const AsignarView = () => {
 
   const { logout } = useAuth();
 
-  const currentDate = new Date().toISOString().slice(0, 10);
+  // eslint-disable-next-line max-len
+  const currentDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
   const [cursos, setCursos] = useState<ICursos>();
   const [cursoId, setCursoId] = useState('');
   const [fecha, setFecha] = useState(currentDate);
   const [fechaShow, setFechaShow] = useState(currentDate);
+  console.log(currentDate);
+  console.log(fechaShow);
   const [success, setSuccess] = useState(false);
   const handleFecha = (e : any) => {
     setFecha(e);
