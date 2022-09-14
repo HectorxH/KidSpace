@@ -163,7 +163,12 @@ const Draggable = (props: DraggableProps) => {
   const ReceivingZoneUIComponent = ({item, index}: any) => {
     return (
       <DraxView
-        style={[styles.receivingZone, {backgroundColor: item.background_color}]}
+        style={[
+          styles.receivingZone,
+          typeof item.background_color !== 'undefined'
+            ? {backgroundColor: item.background_color}
+            : {},
+        ]}
         receivingStyle={styles.receiving}
         key={index}
         onReceiveDragDrop={event => {
