@@ -11,7 +11,7 @@ import { IFavorita } from '../types/favoritas';
 import { IUnidadDetail } from '../types/unidad';
 
 interface FavoritasParams {
-  favoritas: string[]
+  favoritas: {nunidad: number, nactividad: number}[]
 }
 
 interface FavoritaParams {
@@ -56,11 +56,11 @@ const Favorita = ({ row } : FavoritaParams) => (
 
 const Favoritas = ({ favoritas } : FavoritasParams) => {
   const actividadesFavoritas : IActividadDetail[] = _.compact(favoritas.map(
-    (nactividad) => _.find(actividadesDetails, { nactividad }),
+    ({ nunidad, nactividad }) => actividadesDetails.find(_.matches({ nunidad, nactividad })),
   ));
 
   const unidadesFavoritas : IUnidadDetail[] = _.compact(favoritas.map(
-    (nactividad) => _.find(unidadesDetails, { actividades: [{ nactividad }] }),
+    ({ nunidad }) => _.find(unidadesDetails, { nunidad }),
   ));
 
   const rows : IFavorita[] = actividadesFavoritas.map(

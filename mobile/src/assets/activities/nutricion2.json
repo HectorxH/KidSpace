@@ -1,0 +1,1955 @@
+[
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Carlos es *nutriólogo*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La  nutriología se encarga de tratar las enfermedades asociadas a la nutrición.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, Carlos tiene que evaluar el estado de salud de sus pacientes",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y recomendar el mejor plan de acción.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p1",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En nutrición existe una herramienta especial, conocida como *pirámide nutricional*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Carlos recomienda aprenderla bien para crear una dieta sana y nutritiva.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleLike",
+        "position": {
+          "start": [5, 3],
+          "end": [9, 6]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p2",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La forma de la pirámide indica las cantidades que deberíamos consumir de cada alimento.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p2",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La pirámide se divide, además, en varios niveles.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p3",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el primer nivel están los alimentos ricos en hidratos de carbono complejo, como los cereales.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p4",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el segundo nivel encontramos frutas, verduras y hortalizas.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p4",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se recomienda consumir fruta fresca entre tres o cuatro veces al día.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p5",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el tercer nivel se incluyen alimentos altos en proteínas, como carnes, pescados, y legumbres.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p1",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el nivel superior se ubica la comida chatarra, como los dulces o las gaseosas.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p1",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa la cúspide de la pirámide. Es muy chica.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "p1",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su tamaño indica que se deben consumir cantidades muy bajas de los alimentos ubicados en este nivel.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Golosinas y comida rápida en exceso incrementan el riesgo de distintas enfermedades.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esto se debe a los altos niveles de azúcar y grasas saturadas que poseen este tipo de alimentos.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para una dieta sana, el consumo de azúcar *no debe* aportar más del *5%* de las calorías que consumimos durante el día.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esto equivale aproximadamente a 25 gramos de azúcar.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "azucar1",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podemos visualizar la cantidad de azúcar que podemos consumir usando cubitos.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [18, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿A cuántos *cubitos de 5g* equivalen  *25g* de azúcar?",
+        "position": {
+          "start": [8, 2.5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "questions",
+        "position": {
+          "start": [5, 1],
+          "end": [7.5, 8]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["5 cubitos"],
+        "answers": [
+          {
+            "text": "4 cubitos",
+            "position": {
+              "start": [9.5, 10.5],
+              "end": [15.5, 12.5]
+            }
+          },
+          {
+            "text": "5 cubitos",
+            "position": {
+              "start": [9.5, 13.5],
+              "end": [15.5, 15.5]
+            }
+          },
+          {
+            "text": "6 cubitos",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [15.5, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "azucar2",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien, son exactamente 5 cubitos!",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "No todo el azúcar que consumimos es visible.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "cocaAzucar",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, ¿sabías que una sola lata de gaseosa contiene casi *4 cubitos de azúcar*?",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "cocaAzucar",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Es casi el máximo consumo diario!",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para encontrar cuánta azúcar tiene un alimento,",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "tenemos que leer con cuidado la etiqueta de este.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "etiqueta_muffin",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa la siguiente etiqueta con información nutricional.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "etiqueta_muffin",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántos gramos de azúcar tiene este alimento por porción?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["20,1 gramos"],
+        "answers": [
+          {
+            "text": "20,1 gramos",
+            "position": {
+              "start": [3, 9.5],
+              "end": [10, 11.5]
+            }
+          },
+          {
+            "text": "2 gramos",
+            "position": {
+              "start": [3, 12.5],
+              "end": [10, 14.5]
+            }
+          },
+          {
+            "text": "190 gramos",
+            "position": {
+              "start": [3, 15.5],
+              "end": [10, 17.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "etiqueta_muffin",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Exacto!, tiene 20,1 gramos de azúcar por porción. ¿A cuántos cubitos de 5g equivale?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Aproximadamente 4"],
+        "answers": [
+          {
+            "text": "Aproximadamente 2",
+            "position": {
+              "start": [3, 9.5],
+              "end": [10, 11.5]
+            }
+          },
+          {
+            "text": "Aproximadamente 3",
+            "position": {
+              "start": [3, 12.5],
+              "end": [10, 14.5]
+            }
+          },
+          {
+            "text": "Aproximadamente 4",
+            "position": {
+              "start": [3, 15.5],
+              "end": [10, 17.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, no siempre es obvio que un alimento puede ser dañino para la salud.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Carlos te invita a analizar algunos alimentos, para ver cuánta azúcar tienen.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Puedes evitar los alimentos altos en azúcar a la hora de comprar en supermercado.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para esto, debes ser capaz de encontrar la *etiqueta con la información nutricional* en el alimento elegido",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y analizar *cuánta azucar tiene por porción*.  Si es demasiada, debes *evitar* consumir este alimento.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el inventario podrás encontrar un alimento. *¡Encuentra la etiqueta, y analiza si es un alimento sano!*",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si tocas el botón en la *esquina superior izquierda* de la pantalla, podrás registrar tu respuesta.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cuando termines de responder las preguntas, podrás avanzar al siguiente alimento.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "cereal",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 39,
+        "require": [38],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["9,5"],
+        "answers": [
+          {
+            "text": "9,5",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "115,2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "31,5",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "9",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "11",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "galletas",
+          "scale": [2, 2, 2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Seguiremos practicando. ¡Las reglas son las mismas!",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "galletas",
+          "scale": [2, 2, 2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 41,
+        "require": [40],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["10,4"],
+        "answers": [
+          {
+            "text": "29,7",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "10,4",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "8,3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "5",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "soda",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente!\n Carlos te tiene el último desafío para practicar.",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "soda",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 43,
+        "require": [42],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["37"],
+        "answers": [
+          {
+            "text": "11,1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "44",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "37",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["7"],
+        "answers": [
+          {
+            "text": "5",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "6",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "7",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion3",
+    "items": [
+      {
+        "name": "CarlosHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Genial! Carlos está seguro de que ahora podrás elegir los mejores alimentos para tu dieta.",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [9, 13.5],
+          "end": [17, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ]
+  }
+
+]

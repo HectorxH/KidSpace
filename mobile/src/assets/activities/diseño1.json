@@ -1,0 +1,2046 @@
+[
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Noah se desempeña como *artista*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las personas profesionales del arte son especialistas en comunicar ideas a través de distintos medios.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Noah se dedica principalmente a *la pintura*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [8, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para pintar cada uno de sus cuadros, Noah tiene que manejar bien los conceptos de la *teoría de color*.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [2, 2],
+          "end": [8, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La teoría de color es un grupo de reglas en la mezcla de colores",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_paleta",
+        "position": {
+          "start": [1, 10],
+          "end": [6, 19]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [2, 2],
+          "end": [8, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "para conseguir el efecto o tono deseado.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_paleta",
+        "position": {
+          "start": [1, 10],
+          "end": [6, 19]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda1",
+        "position": {
+          "start": [12, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para representar a los colores en el mundo artístico se utiliza la *rueda de colores*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda1",
+        "position": {
+          "start": [12, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Como dice su nombre, es un diagrama circular de colores.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda2",
+        "position": {
+          "start": [12, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podemos separar el círculo cromático en dos mitades: izquierda y derecha.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda2",
+        "position": {
+          "start": [12, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "De este modo descubriremos los colores denominados como *cálidos* y *fríos*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [2, 2],
+          "end": [8, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se llaman así porque dan una sensación de temperatura.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_color2",
+        "position": {
+          "start": [1, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, azul, verde y morado son *colores fríos*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_color1",
+        "position": {
+          "start": [1, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Rojo y naranjo, en cambio, son *colores cálidos*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahQuestion",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la pintura, es importante tomar en cuenta *las emociones* que generan los colores.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleExclamation",
+        "position": {
+          "start": [13,1],
+          "end": [15,5]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_cuadro2",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, los *colores fríos* se perciben como más *oscuros, tristes y lejanos*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_cuadro1",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Mientras que los *colores cálidos* se perciben como más *alegres y energéticos*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Noah te propone intentar analizar los colores de un par de objetos, para entrenar tu ojo.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "helado_naranjo",
+        "position": {
+          "start": [11, 5],
+          "end": [18, 18]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [9, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Son los colores de este helado fríos o cálidos?",
+        "position": {
+          "start": [2.5, 4.5],
+          "end": [8.5, 11]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Cálidos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 15],
+              "end": [8.5, 18]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 16,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 18,
+        "require": [17],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "bolsa_rosa",
+        "position": {
+          "start": [11, 5],
+          "end": [18, 17]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [9, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Son los colores de esta bolsa fríos o cálidos?",
+        "position": {
+          "start": [2.5, 4.5],
+          "end": [8.5, 11]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Fríos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 15],
+              "end": [8.5, 18]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 17,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 19,
+        "require": [18],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "libro_verdeazul",
+        "position": {
+          "start": [11, 6],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [9, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Son los colores de este libro fríos o cálidos?",
+        "position": {
+          "start": [2.5, 4.5],
+          "end": [8.5, 11]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Fríos"],
+        "answers": [
+          {
+            "text": "Cálidos",
+            "position": {
+              "start": [2.5, 11.5],
+              "end": [8.5, 14.5]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          },
+          {
+            "text": "Fríos",
+            "position": {
+              "start": [2.5, 15],
+              "end": [8.5, 18]
+            },
+            "settings": {
+              "elevation": 10
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 18,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 20,
+        "require": [19],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para pintar sus obras, Noah debe elegir los colores con cuidado.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ya sabes que los colores cálidos y fríos  se ubican en distintos lados de la rueda de colores. ",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda1",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pero además, la rueda esconde dos grandes grupos de colores: los *colores primarios* y los *colores secundarios*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda3",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Al centro de la rueda se ubican el rojo, el azul y el amarillo.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_colores_primarios1",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos colores no se pueden obtener mediante la mezcla de otros colores.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_colores_primarios1",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es por ello que estos tres colores se conocen como *colores primarios*.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda1",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los *colores secundarios* se pueden obtener *mezclando los colores primarios*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_rueda4",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El verde, el morado y el naranjo son *colores secundarios*.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "temperas",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cuando Noah compra pinturas, siempre compra solamente témpera con los colores primarios.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahSmile",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las reglas para obtener los colores secundarios faltantes son muy simples.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_paleta",
+        "position": {
+          "start": [12, 10],
+          "end": [17, 19]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_colores_primarios2",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa la siguiente imágen. Los tres grandes círculos representan a los tres colores primarios.",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "diseño1_colores_primarios2",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué pasaría si superponemos estos colores?",
+        "position": {
+          "start": [2, 5],
+          "end": [10, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "ryb",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa los nuevos colores obtenidos.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "ryb",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Rojo con amarillo da el naranjo.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_colores_suma1",
+        "position": {
+          "start": [0.5, 14],
+          "end": [7.5, 19]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "ryb",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Amarillo con azul da el verde.",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_colores_suma2",
+        "position": {
+          "start": [0.5, 14],
+          "end": [7.5, 19]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "ryb",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Azul con rojo da el morado. ",
+        "position": {
+          "start": [10, 5],
+          "end": [18, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_colores_suma3",
+        "position": {
+          "start": [0.5, 14],
+          "end": [7.5, 19]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para cambiar la *luminosidad* de un color, se puede utilizar los colores *blanco* y *negro*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El color blanco representa la abundancia de luz, y el color negro - su ausencia.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, al mezclar el blanco con rojo, obtenemos el rosado.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Al mezclar el negro con rojo, obtenemos un color rojo oscuro o marrón rojizo.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "diseño1_colores_suma4",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Noah necesita  mezclar los colores para su nueva obra. ¿Puedes ayudarle?",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz1",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 40,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
+          "buttonTextAlt": " Pintar",
+          "buttonTextNormal": " Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 42,
+        "require": [41],
+        "visible": false
+      }
+    ],
+    "draggable": {
+      "draggable": true,
+      "answer": "#31C852"
+    }
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora necesitas pintar la lombriz. Arrastra dos colores que, al mezclar, dan el rosado.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz2",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 41,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 43,
+        "require": [42],
+        "visible": false
+      }
+    ],
+    "draggable": {
+      "draggable": true,
+      "answer": "#FFAFAD"
+    }
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora necesitas pintar el cielo. Arrastra dos colores que, al mezclar, dan el azul claro.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz3",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 42,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 44,
+        "require": [43],
+        "visible": false
+      }
+    ],
+    "draggable": {
+      "draggable": true,
+      "answer": "#9EF3FF"
+    }
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz4",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 43,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "paint-brush",
+          "buttonIconNormal": "paint-brush",
+          "buttonTextAlt": "Pintar",
+          "buttonTextNormal": "Pintar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": 45,
+        "require": [44],
+        "visible": false
+      }
+    ],
+    "draggable": {
+      "draggable": true,
+      "answer": "#63313C"
+    }
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 1],
+          "end": [19.5, 7.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
+        "position": {
+          "start": [8.5, 1.5],
+          "end": [19, 7]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "+",
+        "position": {
+          "start": [11, 8],
+          "end": [12.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "=",
+        "position": {
+          "start": [15, 8],
+          "end": [16.5, 13.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "lombriz5",
+        "position": {
+          "start": [1, 4],
+          "end": [7.5, 14]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 44,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [2.2, 16.5],
+          "end": [6.3, 19]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ],
+    "draggable": {
+      "draggable": true,
+      "answer": ""
+    }
+  },
+  {
+    "background": "bg_diseño1",
+    "items": [
+      {
+        "name": "NoahHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Noah está muy feliz con su nueva obra, todo gracias a tu ayuda.",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [9, 13.5],
+          "end": [17, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ]
+  }
+]

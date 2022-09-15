@@ -10,7 +10,7 @@ import NotFoundView from './NotFoundView';
 import unidadesDetails from '../mock/unidadesDetails';
 
 interface IActividad {
-    nactividad: string,
+    nactividad: number,
     actividad: string,
     titulo: string,
     descripcion: string,
@@ -62,9 +62,8 @@ const Actividad = ({ actividad }:ActividadParam) => (
 
 const UnidadView = () => {
   const params = useParams();
-  const { nunidad } = params;
-
-  if (typeof nunidad === 'undefined') return (<NotFoundView />);
+  if (typeof params.nunidad === 'undefined') return (<NotFoundView />);
+  const nunidad = Number(params.nunidad);
 
   const unidad = _.find(unidadesDetails, { nunidad });
   if (typeof unidad === 'undefined') return (<NotFoundView />);

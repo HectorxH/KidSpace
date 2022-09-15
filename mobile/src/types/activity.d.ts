@@ -1,3 +1,5 @@
+import {FlexAlignType} from 'react-native';
+
 export interface IActivity {
   nunidad: string;
   nactividad: string;
@@ -16,38 +18,191 @@ export interface IActivity {
   img5: string;
   path: string;
   pathAsignar: string;
-}
-
-export type Vec3 = [number, number, number];
-
-export interface IItem {
-  model: string;
-  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
-  scale: Vec3;
-  rotation: Vec3;
-}
-
-export interface IDialogo {
-  message: string;
-  messagePosition: string;
-  spotlight: string;
-}
-
-export interface IPregunta {
-  question: string;
-  answers: [string, string, string];
-  rightAnswer: string;
+  nombreActividad: 'diagramas' | 'diseños';
 }
 
 export type ButtonSetting = {
-  [key: string]: string;
-  buttonIconPosNormal: 'row' | 'column' | 'row-reverse' | 'column-reverse';
+  buttonIcon: string;
+  buttonColor: string;
+  buttonText: string;
 };
 
-export interface ActividadDetail {
-  items: IItem[];
-  story: IDialogo[];
-  quiz: IPregunta[];
-  settings: ButtonSetting[];
+export type IToggleButtonSetting = {
+  buttonColorNormal: string;
+  buttonColorAlt: string;
+  buttonIconNormal: string;
+  buttonIconAlt: string;
+  buttonTextNormal: string;
+  buttonTextAlt: string;
+};
+
+export type IToggleButtonStyle = {
+  buttonTextAlt?: string;
+};
+
+export type Vec3 = [number, number, number];
+
+export interface IPosition {
+  start: number[];
+  end: number[];
 }
-export type DesafioEstado = 'story' | 'items' | 'quiz' | 'desafio';
+
+export interface ITextBoxes {
+  position: IPosition;
+  settings?: ITextBoxSettings;
+}
+
+export interface ITextBoxSettings {
+  backgroundColor?: string;
+  borderRadius?: number;
+  borderWidth?: number;
+  borderColor?: string;
+  elevation?: number;
+  paddingVertical?: number;
+  paddingHorizontal?: number;
+}
+
+export interface IImages {
+  name: string;
+  position: IPosition;
+  settings?: IImagesSettings;
+}
+
+export interface IImagesSettings {
+  opacity?: number;
+  height?: string;
+  width?: string;
+  alignSelf?: FlexAlignType | 'auto' | undefined;
+}
+
+export interface IAlternativas {
+  rightAnswer: string[];
+  answers: IAnswers[];
+}
+
+export interface IAnswers {
+  text: string;
+  position: IPosition;
+  settings?: IAlternativasSettings;
+}
+
+export interface IAlternativasSettings {
+  elevation?: number;
+}
+
+export interface IAlternativasDropdown {
+  rightAnswer: string[];
+  answers: string[];
+  position: IPosition;
+}
+
+export interface IQuiz {
+  answers: IAnswers[];
+}
+
+export interface IModels {
+  model: string;
+  // type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+  scale: Vec3;
+  rotation: Vec3;
+  interactable?: string[];
+  ARMaterials?: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+}
+
+export interface IAR {
+  start: boolean;
+  models: IModels[];
+}
+
+export interface ITexts {
+  text: string;
+  position: IPosition;
+  leftIcon?: ITextIcons;
+  rightIcon?: ITextIcons;
+  settings?: ITextSettings;
+}
+
+export interface ITextSettings {
+  textAlign?: 'center' | 'auto' | 'left' | 'right' | 'justify';
+  elevation?: number;
+  fontSize?: number;
+  color?: string;
+  fontFamily?: string;
+  fontWeight?:
+    | 'normal'
+    | 'bold'
+    | '100'
+    | '200'
+    | '300'
+    | '400'
+    | '500'
+    | '600'
+    | '700'
+    | '800'
+    | '900'
+    | undefined;
+}
+
+export interface ITextIcons {
+  name: string;
+  size: number;
+  color: string;
+}
+
+export interface IToggleButton {
+  value: boolean;
+  position: IPosition;
+  settings: IToggleButtonSetting;
+}
+
+export interface IJumpButton {
+  target: number;
+  require: number[];
+  position: IPosition;
+  settings: IToggleButtonSetting;
+  style: IToggleButtonStyle;
+  visible: boolean;
+}
+
+export interface IJumpCard {
+  items: IImages[];
+  texts: ITexts[];
+  position: IPosition;
+  target: number;
+  require: number[];
+  disableWhen: number[];
+  // settings: IToggleButtonSetting;
+  visible: boolean;
+}
+
+export interface ITextFieldQuestion {
+  position: IPosition;
+  rightAnswer: number;
+}
+
+export interface IDraggable {
+  draggable: boolean;
+  answer: string;
+}
+
+export interface IActivityPage {
+  background: string;
+  items?: IImages[] | never[];
+  bubbles?: IImages[] | never[];
+  textBoxes?: ITextBoxes[] | never[];
+  texts?: ITexts[] | never[];
+  textFieldQuestion?: ITextFieldQuestion[];
+  alternativas?: IAlternativas[] | never[];
+  alternativasDropdown?: IAlternativasDropdown[] | never[];
+  AR?: IAR;
+  toggleButton?: IToggleButton[] | never[];
+  jumpButton?: IJumpButton[] | never[];
+  jumpCard?: IJumpCard[] | never[];
+  quiz?: IQuiz[] | never[];
+  draggable?: IDraggable;
+}
+
+export type Actividad = IActivityPage[];

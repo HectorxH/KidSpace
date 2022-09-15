@@ -1,5 +1,5 @@
 import {ViroARSceneNavigator} from '@viro-community/react-viro';
-import React, {useState} from 'react';
+import React from 'react';
 import {
   View,
   StyleSheet,
@@ -11,24 +11,32 @@ import {
 } from 'react-native';
 import {IconButton} from 'react-native-paper';
 import Images from '../../assets/images/images';
-import {IItem, Vec3} from '../../types/activity';
+import {IModels, Vec3} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
-  items: IItem[];
+  items: IModels[];
   models: [number[], ReactStateSetter<number[]>];
+  placedItems: [number[], ReactStateSetter<number[]>];
+  nPlacedItems: [number, ReactStateSetter<number>];
   visible: boolean;
+  showInventory: boolean;
   positions: [Vec3[], ReactStateSetter<Vec3[]>];
   sceneNav: React.RefObject<ViroARSceneNavigator>;
+  setMaterialSelectorToggle: ReactStateSetter<number>;
 }
 
 const Inventario = (props: InventarioProps) => {
   const items = props.items;
-  const [placedItems, setPlacedItems] = useState(items.map(() => 0));
-  const [nPlacedItems, setNPlacedItems] = useState(0);
-  const [models, setModels] = props.models;
+  const [placedItems, setPlacedItems] = props.placedItems;
+  const [nPlacedItems, setNPlacedItems] = props.nPlacedItems;
+  // const [placedItems, setPlacedItems] = useState(
+  //   items.map((_item, index) => (props.models[0].includes(index) ? 1 : 0)),
+  // );
+  // const [nPlacedItems, setNPlacedItems] = useState(props.models[0].length);
   const visible = props.visible;
+  const showInventory = props.showInventory;
   const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
@@ -38,16 +46,17 @@ const Inventario = (props: InventarioProps) => {
     aux[index] = 1;
     setPlacedItems(aux);
     setNPlacedItems(nPlacedItems + 1);
-    let aux2 = [...models];
+    let aux2 = [...props.models[0]];
     aux2.push(index);
-    setModels(aux2);
+    props.models[1](aux2);
   }
 
   function handlePickUp() {
     setPlacedItems(items.map(() => 0));
     setNPlacedItems(0);
-    setModels([]);
+    props.models[1]([]);
     setPositions([]);
+    props.setMaterialSelectorToggle(0);
   }
 
   function updatePosition() {
@@ -59,8 +68,10 @@ const Inventario = (props: InventarioProps) => {
       .catch(console.log);
     // setPositions([...positions, [0, 0, -1]]);
   }
-
   if (!visible) {
+    return null;
+  }
+  if (items.length === 0) {
     return null;
   }
 
@@ -70,35 +81,38 @@ const Inventario = (props: InventarioProps) => {
         <IconButton
           icon="archive-refresh"
           size={RSize(0.075, 'h')}
+          color="white"
           onPress={handlePickUp}
         />
       </View>
-      <View style={styles.inventoryBox}>
-        <View style={styles.titleBox}>
-          <Text style={styles.text}>Inventario</Text>
+      {showInventory && (
+        <View style={styles.inventoryBox}>
+          <View style={styles.titleBox}>
+            <Text style={styles.text}>Inventario</Text>
+          </View>
+          <SafeAreaView style={styles.itemsBox}>
+            <ScrollView fadingEdgeLength={10} persistentScrollbar>
+              {items.map((item: IModels, index: number) => {
+                if (placedItems[index] !== 0) {
+                  return null;
+                }
+                return (
+                  <TouchableOpacity
+                    onPress={() => modelHandler(index)}
+                    style={styles.itemContainer}
+                    key={index + 100}>
+                    <Image
+                      style={styles.iconImage}
+                      resizeMode="contain"
+                      source={Images.icons[item.model].square}
+                    />
+                  </TouchableOpacity>
+                );
+              })}
+            </ScrollView>
+          </SafeAreaView>
         </View>
-        <SafeAreaView style={styles.itemsBox}>
-          <ScrollView fadingEdgeLength={10} persistentScrollbar>
-            {items.map((item: IItem, index: number) => {
-              if (placedItems[index] !== 0) {
-                return null;
-              }
-              return (
-                <TouchableOpacity
-                  onPress={() => modelHandler(index)}
-                  style={styles.itemContainer}
-                  key={index + 100}>
-                  <Image
-                    style={styles.iconImage}
-                    resizeMode="contain"
-                    source={Images.icons[item.model].square}
-                  />
-                </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
-        </SafeAreaView>
-      </View>
+      )}
     </View>
   );
 };

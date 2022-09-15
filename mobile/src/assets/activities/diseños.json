@@ -1,0 +1,2268 @@
+[
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Luca se dedica al *diseño de productos*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Él sabe que un producto bien diseñado facilita su uso,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleDesign",
+        "position": {
+          "start": [5, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "mientras que uno mal diseñado puede llegar a ser desagradable de utilizar.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleDesign",
+        "position": {
+          "start": [5, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por esto, cuando diseña, Luca elige los *colores* y las *texturas* con mucho cuidado.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleColors",
+        "position": {
+          "start": [16, 0],
+          "end": [20, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "colorwheel",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Percibimos los colores a través de la vista y estos nos hacen sentir distintas emociones.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "colorEmpotions",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Relacionamos el rojo con peligro o enojo, el amarillo con alegría y el negro con la tristeza.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Percibimos las texturas a través del *tacto*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHands",
+        "position": {
+          "start": [16, 0],
+          "end": [20, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "textureExample",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un objeto puede ser *liso*, *áspero*, *rugoso* o *suave*",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "textureExample",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y cada una de sus partes puede tener una textura diferente según su uso.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 135, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [90, 0, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la vida cotidiana usamos diversos objetos y cada uno tiene sus propias características.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 135, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [90, 0, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el menú de *inventario* podrás encontrar varios objetos. *Intenta dar click en sus imágenes*.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 135, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [90, 0, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa y analiza *las texturas* y *los colores* de los objetos.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 135, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [90, 0, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Responda las preguntas sobre los objetos tocando el botón en la *esquina superior izquierda de la pantalla*.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "pelota",
+          "scale": [0.01, 0.01, 0.01],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "peluche",
+          "scale": [0.05, 0.05, 0.05],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "phone",
+          "scale": [0.02, 0.02, 0.02],
+          "rotation": [0, 135, 0]
+        },
+        {
+          "model": "pluma",
+          "scale": [0.1, 0.1, 0.1],
+          "rotation": [90, 0, 0]
+        },
+        {
+          "model": "taza",
+          "scale": [5, 5, 5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0.2, 4],
+          "end": [6.6, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [6.8, 4],
+          "end": [13.2, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [13.4, 4],
+          "end": [19.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuáles de los objetos son suaves?",
+        "position": {
+          "start": [0.3, 4.5],
+          "end": [6.5, 10]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      }
+      
+      ,
+      {
+        "text": "¿Cuáles de los objetos son rojos?",
+        "position": {
+          "start": [6.9, 4.5],
+          "end": [13.1, 10]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "¿Cuáles de los objetos son lisos?",
+        "position": {
+          "start": [13.5, 4.5],
+          "end": [19.7, 10]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Peluche", "Pluma"],
+        "answers": [
+          {
+            "text": "Peluche",
+            "position": {
+              "start": [1, 10.5],
+              "end": [6, 13]
+            }
+          },
+          {
+            "text": "Taza",
+            "position": {
+              "start": [1, 13.5],
+              "end": [6, 16]
+            }
+          },
+          {
+            "text": "Pluma",
+            "position": {
+              "start": [1, 16.5],
+              "end": [6, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["Taza"],
+        "answers": [
+          {
+            "text": "Taza",
+            "position": {
+              "start": [7.5, 10.5],
+              "end": [12.5, 13]
+            }
+          },
+          {
+            "text": "Pluma",
+            "position": {
+              "start": [7.5, 13.5],
+              "end": [12.5, 16]
+            }
+          },
+          {
+            "text": "Pelota",
+            "position": {
+              "start": [7.5, 16.5],
+              "end": [12.5, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["Celular", "Taza"],
+        "answers": [
+          {
+            "text": "Pelota",
+            "position": {
+              "start": [14, 10.5],
+              "end": [19, 13]
+            }
+          },
+          {
+            "text": "Celular",
+            "position": {
+              "start": [14, 13.5],
+              "end": [19, 16]
+            }
+          },
+          {
+            "text": "Taza",
+            "position": {
+              "start": [14, 16.5],
+              "end": [19, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 14,
+        "require": [13],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Hace poco Luca recibió bastantes tareas en su trabajo.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaAngry",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La primera tarea consiste en mejorar el diseño de una regadera, la cual recibió muchos reclamos.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "regaderaMalDiseñada",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa la imagen de la regadera. ¿Cuál es el problema con su diseño?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Es difícil de usar"],
+        "answers": [
+          {
+            "text": "Es difícil de usar",
+            "position": {
+              "start": [3, 10.5],
+              "end": [10, 12.5]
+            }
+          },
+          {
+            "text": "El color no es adecuado",
+            "position": {
+              "start": [3, 13.5],
+              "end": [10, 15.5]
+            }
+          },
+          {
+            "text": "La regadera es muy chica",
+            "position": {
+              "start": [3, 16.5],
+              "end": [10, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "regaderaComparacion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Exacto!. El diseño de la regadera impide que cumpla con su función para regar.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "regaderaComparacion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El diseño siempre debe ser acorde a las funciones del objeto, evitando entorpecer su uso.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "fork",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La segunda tarea consiste en mejorar el diseño de un tenedor. ¿Qué llama la atención en el tenedor de la imagen?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Es demasiado grueso"],
+        "answers": [
+          {
+            "text": "Su color no es adecuado",
+            "position": {
+              "start": [3, 10.5],
+              "end": [10, 12.5]
+            }
+          },
+          {
+            "text": "Es demasiado grueso",
+            "position": {
+              "start": [3, 13.5],
+              "end": [10, 15.5]
+            }
+          },
+          {
+            "text": "Es poco resistente",
+            "position": {
+              "start": [3, 16.5],
+              "end": [10, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "fork",
+        "position": {
+          "start": [12.5, 0],
+          "end": [19.5, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Así es! Las proporciones de un objeto pueden hacer que este sea díficil de usar.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "A Luca todavía le quedan varios productos que revisar y mejorar. ¿Puedes ayudarle?",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Luca tiene *un cuaderno* especial, en el cual anota todas las observaciones sobre los diseños de productos.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Luca tiene que verificar que cada producto cumpla con 2 criterios: sus elementos deben tener *forma o proporciones* adecuadas",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y cada objeto debe ser *fácil de usar*. ¡Recuerda que el diseño siempre debe seguir la función!",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el inventario podrás encontrar los objetos. ¡Colócalos en tu pantalla y *observa sus diseños*!",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Rellena las observaciones en el cuaderno ,dando click en el boton en *la esquina superior izquierda*.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Seleccione un producto a analizar:",
+        "position": {
+          "start": [0, 3.8],
+          "end": [20, 6]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 32,
+        "require": [28, 30],
+        "visible": false
+      }
+    ],
+    "jumpCard": [
+      {
+        "position" : {
+          "start": [3.5, 6.5],
+          "end": [8, 19]
+        },
+        "target": 28,
+        "require": [],
+        "disableWhen": [28],
+        "visible": false,
+        "items": [
+          {
+            "name": "silla_chueca",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "Silla",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 0.05,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
+      },
+      {
+        "position" : {
+          "start": [12, 6.5],
+          "end": [16.5, 19]
+        },
+        "target": 30,
+        "require": [],
+        "disableWhen": [30],
+        "visible": false,
+        "items": [
+          {
+            "name": "taza_fail",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "Taza",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 0.05,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "silla_chueca",
+        "position" : {
+          "start": [13.5, 4],
+          "end": [19, 16]
+        }
+      },
+      {
+        "name": "notebook_paper",
+        "position": {
+          "start": [0, 0],
+          "end": [10, 20]
+        },
+        "settings": {
+          "opacity": 0.2
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Inclinación del asiento",
+        "position": {
+          "start": [1, 6],
+          "end": [8, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Tamaño del asiento",
+        "position": {
+          "start": [1, 9],
+          "end": [8, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Facilidad de uso",
+        "position": {
+          "start": [1, 12],
+          "end": [8, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+      "alternativasDropdown": [
+        {
+          "rightAnswer": ["Demasiada"],
+          "answers": ["Adecuada", "Demasiada"],
+          "position": {
+            "start": [8.5, 6],
+            "end": [13, 8.5]
+          }
+        },
+        {
+          "rightAnswer": ["Adecuado"],
+          "answers": ["Muy chico", "Adecuado", "Muy grande"],
+          "position": {
+            "start": [8.5, 9],
+            "end": [13, 11.5]
+          }
+        },
+        {
+          "rightAnswer": ["Difícil"],
+          "answers": ["Fácil", "Difícil"],
+          "position": {
+            "start": [8.5, 12],
+            "end": [13, 14.5]
+          }
+        }
+      ],
+      "toggleButton": [
+        {
+          "settings": {
+            "buttonColorAlt": "#B878EA",
+            "buttonColorNormal": "#B878EA",
+            "buttonIconAlt": "book",
+            "buttonIconNormal": "cube",
+            "buttonTextAlt": " Cuaderno",
+            "buttonTextNormal": " Volver"
+          },
+          "position" : {
+            "start": [0, 0],
+            "end": [0, 0]
+          },
+          "value": false
+        }
+      ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 27,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Mejorar el diseño",
+          "buttonTextNormal": " Mejorar el diseño"
+        },
+        "position" : {
+          "start": [13.5, 16.5],
+          "end": [19, 19]
+        },
+        "target": 29,
+        "require": [28],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "newsilla",
+        "position" : {
+          "start": [1, 4],
+          "end": [8, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Notas de Luca",
+        "position": {
+          "start": [9.5, 2],
+          "end": [19, 4.5]
+        }
+      },
+      {
+        "text": "El diseño final es una silla simple. La inclinación del asiento es paralela al piso, proporcionando la mayor comodidad de uso, sin el riesgo de caer al sentarse. El diseño asegura que la silla cumpla su función.",
+        "position": {
+          "start": [9.5, 5],
+          "end": [19, 15.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [12.5, 16.5],
+          "end": [16, 19]
+        },
+        "target": 27,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "taza_fail",
+        "position" : {
+          "start": [13.5, 4],
+          "end": [19, 16]
+        }
+      },
+      {
+        "name": "notebook_paper",
+        "position": {
+          "start": [0, 0],
+          "end": [10, 20]
+        },
+        "settings": {
+          "opacity": 0.2
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Comodidad del mango",
+        "position": {
+          "start": [1, 6],
+          "end": [8, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Tamaño del mango",
+        "position": {
+          "start": [1, 9],
+          "end": [8, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Facilidad de uso",
+        "position": {
+          "start": [1, 12],
+          "end": [8, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+      "alternativasDropdown": [
+        {
+          "rightAnswer": ["Incómodo"],
+          "answers": ["Cómodo", "Incómodo"],
+          "position": {
+            "start": [8.5, 6],
+            "end": [13, 8.5]
+          }
+        },
+        {
+          "rightAnswer": ["Muy chico"],
+          "answers": ["Muy chico", "Adecuado", "Muy grande"],
+          "position": {
+            "start": [8.5, 9],
+            "end": [13, 11.5]
+          }
+        },
+        {
+          "rightAnswer": ["Difícil"],
+          "answers": ["Fácil", "Difícil"],
+          "position": {
+            "start": [8.5, 12],
+            "end": [13, 14.5]
+          }
+        }
+      ],
+      "toggleButton": [
+        {
+          "settings": {
+            "buttonColorAlt": "#B878EA",
+            "buttonColorNormal": "#B878EA",
+            "buttonIconAlt": "book",
+            "buttonIconNormal": "cube",
+            "buttonTextAlt": " Cuaderno",
+            "buttonTextNormal": " Volver"
+          },
+          "position" : {
+            "start": [0, 0],
+            "end": [0, 0]
+          },
+          "value": false
+        }
+      ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 27,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Mejorar el diseño",
+          "buttonTextNormal": " Mejorar el diseño"
+        },
+        "position" : {
+          "start": [13.5, 16.5],
+          "end": [19, 19]
+        },
+        "target": 31,
+        "require": [30],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "silla",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "mug",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "taza_ok",
+        "position" : {
+          "start": [1, 4],
+          "end": [8, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Notas de Luca",
+        "position": {
+          "start": [9.5, 2],
+          "end": [19, 4.5]
+        }
+      },
+      {
+        "text": "El diseño final cumple con la funcionalidad esperada de una taza, proporcionando la comodidad total al tomar la taza usando su mango.",
+        "position": {
+          "start": [9.5, 5],
+          "end": [19, 15.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "book",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Cuaderno",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#B878EA",
+          "buttonColorNormal": "#B878EA",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [12.5, 16.5],
+          "end": [16, 19]
+        },
+        "target": 27,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "lucaOffice",
+    "items": [
+      {
+        "name": "LucaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Luca agradece tu ayuda y espera que aprendiste algo nuevo sobre la importancia del diseño.",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Responder el quiz",
+          "buttonTextNormal": "Responder el quiz"
+        },
+        "position" : {
+          "start": [9, 15.5],
+          "end": [17, 18.5]
+        },
+        "target": 33,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "white",
+          "elevation": 21
+        },
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El diseño siempre debe seguir la ______ del producto",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "answers": [
+          {
+            "text": "idea",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "función",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "creatividad",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "answers": [
+          {
+            "text": "color",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "tamaño",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "textura",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [33],
+        "visible": false
+      }
+    ]
+  }
+]

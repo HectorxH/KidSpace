@@ -1,0 +1,2331 @@
+[
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía es una *nutricionista*.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleNutricion",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su carrera se enfoca en la prevención de problemas de salud relacionados con la nutrición.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleNutricion",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para educar a sus pacientes, Sofía siempre les hace una clase ",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "sobre cómo elegir la comida saludable.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y para esto es importante saber leer las etiquetas de los alimentos.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En una etiqueta de un alimento podrás encontrar su aporte energético en calorías",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y cantidad de porciones.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si consumes más calorías de las que usa tu cuerpo, podrás aumentar de peso.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [13, 0],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En una etiqueta podrás encontrar los macronutrientes: la proteína, la grasa y los carbohidratos.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, estas galletas contienen *1,3 gramos de proteínas*, *10,5 gramos de grasa*",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_nutricion",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y *27,5 gramos de carbohidratos* en cada porción.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Son fuentes de energía para nuestro cuerpo,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "pero el exceso de cualquiera de los tres puede causar daños a tu salud.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cuando un alimento contiene altos índices de calorías, grasas y azúcares,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "extra_sellos",
+        "position": {
+          "start": [1, 0],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "estos tendrán un sello negro.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Se recomienda disminuir o incluso excluir estos alimentos de tu dieta.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía te propone analizar un par de alimentos y ver qué dicen sus etiquetas.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "etiqueta_choco",
+        "position": {
+          "start": [1, 4],
+          "end": [7, 18]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19.5, 19]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Calorías en una porción",
+        "position": {
+          "start": [8.5, 6],
+          "end": [14.7, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Proteínas en una porción",
+        "position": {
+          "start": [8.5, 9],
+          "end": [14.7, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en calorías?",
+        "position": {
+          "start": [8.5, 12],
+          "end": [14.7, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en azúcares?",
+        "position": {
+          "start": [8.5, 15],
+          "end": [14.7, 17.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativasDropdown": [
+      {
+        "rightAnswer": ["156"],
+        "answers": ["389", "40", "156"],
+        "position": {
+          "start": [15, 6],
+          "end": [19, 8.5]
+        }
+      },
+      {
+        "rightAnswer": ["2,2"],
+        "answers": ["2,2", "4,8", "9,6"],
+        "position": {
+          "start": [15, 9],
+          "end": [19, 11.5]
+        }
+      },
+      {
+        "rightAnswer": ["Sí"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 12],
+          "end": [19, 14.5]
+        }
+      },
+      {
+        "rightAnswer": ["Sí"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 15],
+          "end": [19, 17.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 16,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 18,
+        "require": [17],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion1",
+    "items": [
+      {
+        "name": "etiqueta_jugo",
+        "position": {
+          "start": [1, 4],
+          "end": [7, 18]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19.5, 19]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Calorías en una porción",
+        "position": {
+          "start": [8.5, 6],
+          "end": [14.7, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Cantidad de proteínas",
+        "position": {
+          "start": [8.5, 9],
+          "end": [14.7, 11.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en calorías?",
+        "position": {
+          "start": [8.5, 12],
+          "end": [14.7, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Alto en azúcares?",
+        "position": {
+          "start": [8.5, 15],
+          "end": [14.7, 17.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "textAlign": "left",
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativasDropdown": [
+      {
+        "rightAnswer": ["40"],
+        "answers": ["20", "40", "0"],
+        "position": {
+          "start": [15, 6],
+          "end": [19, 8.5]
+        }
+      },
+      {
+        "rightAnswer": ["0,0"],
+        "answers": ["0,0", "4,8", "9,6"],
+        "position": {
+          "start": [15, 9],
+          "end": [19, 11.5]
+        }
+      },
+      {
+        "rightAnswer": ["No"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 12],
+          "end": [19, 14.5]
+        }
+      },
+      {
+        "rightAnswer": ["No"],
+        "answers": ["Sí", "No"],
+        "position": {
+          "start": [15, 15],
+          "end": [19, 17.5]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 17,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 19,
+        "require": [18],
+        "visible": false
+      }
+    ]
+  },
+
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía, como *nutricionista*, además de mejorar la alimentación de sus pacientes",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHealth",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "tiene el gran trabajo de medir y evaluar su estado de salud.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleHealth",
+        "position": {
+          "start": [15.5, 0],
+          "end": [19, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "bubbleWeight",
+        "position": {
+          "start": [0.5, 0],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, el *peso* es un indicador del estado de salud de una persona.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaQuestion",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pero con tan solo peso resulta difícil hacer una evaluación precisa.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePerson",
+        "position": {
+          "start": [5.5, 0],
+          "end": [9.5, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc2",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para una persona de 1,9m y una de 1,6m *no será lo mismo* tener un peso de 90kg.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc2",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es por esto que los y las nutricionistas suelen medir *la estatura* de sus pacientes.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 3],
+          "end": [17, 17]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Existe una métrica, que relaciona la estatura con el peso. Esta se conoce como *IMC - Índice de Masa Corporal*.",
+        "position": {
+          "start": [3.5, 3.5],
+          "end": [16.5, 16.5]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Generalmente se utiliza para analizar la población adulta.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El IMC es una métrica simple y se resume con un diagrama.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePerson",
+        "position": {
+          "start": [5.5, 0],
+          "end": [9.5, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los números de la escala corresponden al valor de IMC calculado.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, si el IMC de una persona *es menor a 18*, tiene peso muy bajo",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si el IMC *es mayor a 25*, estamos ante el peso elevado o el sobrepeso.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La forma de calcular el IMC no varía en función del sexo ni de la edad de una persona.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "extra_weight",
+        "position": {
+          "start": [13, 0.5],
+          "end": [19, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La fórmula del IMC es *el peso en kg dividido por el cuadrado de la altura* en metros.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaSmile",
+        "position": {
+          "start": [11, 2],
+          "end": [17, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sofía tiene unos pacientes cuyo IMC todavía tiene que calcular. ¿Puedes ayudarle?",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 5],
+          "end": [9, 15]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "persona1",
+        "position": {
+          "start": [4, 0],
+          "end": [14, 20]
+        },
+        "settings": {
+          "opacity": 0.5
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ficha Médica",
+        "position": {
+          "start": [1.5, 5.5],
+          "end": [8.5, 7.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold"
+        }
+      },
+      {
+        "text": "Nombre:",
+        "position": {
+          "start": [2, 7.5],
+          "end": [4.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Altura:",
+        "position": {
+          "start": [2, 10],
+          "end": [4.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Peso:",
+        "position": {
+          "start": [2, 12.5],
+          "end": [4.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Patricia",
+        "position": {
+          "start": [5.5, 7.5],
+          "end": [8.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "174 [cm]",
+        "position": {
+          "start": [5.5, 10],
+          "end": [8.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "75 [kg]",
+        "position": {
+          "start": [5.5, 12.5],
+          "end": [8.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "*Calculadora de IMC*",
+        "position": {
+          "start": [10.5, 3],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 0.09
+        }
+      },
+      {
+        "text": "cm",
+        "position": {
+          "start": [17, 7],
+          "end": [19.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "kg",
+        "position": {
+          "start": [17, 10.5],
+          "end": [19.5, 13]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      }
+    ],
+    "textFieldQuestion": [
+      {
+        "position": {
+          "start": [12, 7],
+          "end": [16.5, 9.5]
+        },
+        "rightAnswer": 174
+      },
+      {
+        "position": {
+          "start": [12, 10.5],
+          "end": [16.5, 13]
+        },
+        "rightAnswer": 75
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 33,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
+        },
+        "position" : {
+          "start": [12, 15],
+          "end": [18, 18.5]
+        },
+        "target": 35,
+        "require": [34],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 7],
+          "end": [9.5, 19]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [11, 4],
+          "end": [19, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cómo clasificarías el peso de Patricia?",
+        "position": {
+          "start": [11.5, 4.2],
+          "end": [18.5, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "El IMC de Patricia es 24,5",
+        "position": {
+          "start": [0.5, 3.5],
+          "end": [9.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 0.06
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Normal"],
+        "answers": [
+          {
+            "text": "Bajo",
+            "position": {
+              "start": [12.5, 8.7],
+              "end": [17.5, 11.2]
+            }
+          },
+          {
+            "text": "Normal",
+            "position": {
+              "start": [12.5, 11.3],
+              "end": [17.5, 13.8]
+            }
+          },
+          {
+            "text": "Sobrepeso",
+            "position": {
+              "start": [12.5, 13.9],
+              "end": [17.5, 16.4]
+            }
+          },
+          {
+            "text": "Obesidad",
+            "position": {
+              "start": [12.5, 16.5],
+              "end": [17.5, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 34,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [14, 1],
+          "end": [19, 3.5]
+        },
+        "target": 36,
+        "require": [35],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 5],
+          "end": [9, 15]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "persona2",
+        "position": {
+          "start": [4, 0],
+          "end": [14, 20]
+        },
+        "settings": {
+          "opacity": 0.5
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ficha Médica",
+        "position": {
+          "start": [1.5, 5.5],
+          "end": [8.5, 7.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold"
+        }
+      },
+      {
+        "text": "Nombre:",
+        "position": {
+          "start": [2, 7.5],
+          "end": [4.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Altura:",
+        "position": {
+          "start": [2, 10],
+          "end": [4.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Peso:",
+        "position": {
+          "start": [2, 12.5],
+          "end": [4.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Joaquín",
+        "position": {
+          "start": [5.5, 7.5],
+          "end": [8.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "186 [cm]",
+        "position": {
+          "start": [5.5, 10],
+          "end": [8.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "105 [kg]",
+        "position": {
+          "start": [5.5, 12.5],
+          "end": [8.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "*Calculadora de IMC*",
+        "position": {
+          "start": [10.5, 3],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 0.09
+        }
+      },
+      {
+        "text": "cm",
+        "position": {
+          "start": [17, 7],
+          "end": [19.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "kg",
+        "position": {
+          "start": [17, 10.5],
+          "end": [19.5, 13]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      }
+    ],
+    "textFieldQuestion": [
+      {
+        "position": {
+          "start": [12, 7],
+          "end": [16.5, 9.5]
+        },
+        "rightAnswer": 186
+      },
+      {
+        "position": {
+          "start": [12, 10.5],
+          "end": [16.5, 13]
+        },
+        "rightAnswer": 105
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 35,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
+        },
+        "position" : {
+          "start": [12, 15],
+          "end": [18, 18.5]
+        },
+        "target": 37,
+        "require": [36],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 7],
+          "end": [9.5, 19]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [11, 4],
+          "end": [19, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cómo clasificarías el peso de Joaquín?",
+        "position": {
+          "start": [11.5, 4.2],
+          "end": [18.5, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "El IMC de Joaquín es 30,4",
+        "position": {
+          "start": [0.5, 3.5],
+          "end": [9.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 0.06
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Obesidad"],
+        "answers": [
+          {
+            "text": "Bajo",
+            "position": {
+              "start": [12.5, 8.7],
+              "end": [17.5, 11.2]
+            }
+          },
+          {
+            "text": "Normal",
+            "position": {
+              "start": [12.5, 11.3],
+              "end": [17.5, 13.8]
+            }
+          },
+          {
+            "text": "Sobrepeso",
+            "position": {
+              "start": [12.5, 13.9],
+              "end": [17.5, 16.4]
+            }
+          },
+          {
+            "text": "Obesidad",
+            "position": {
+              "start": [12.5, 16.5],
+              "end": [17.5, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 36,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [14, 1],
+          "end": [19, 3.5]
+        },
+        "target": 38,
+        "require": [37],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 5],
+          "end": [9, 15]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "persona3",
+        "position": {
+          "start": [4, 0],
+          "end": [14, 20]
+        },
+        "settings": {
+          "opacity": 0.5
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ficha Médica",
+        "position": {
+          "start": [1.5, 5.5],
+          "end": [8.5, 7.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold"
+        }
+      },
+      {
+        "text": "Nombre:",
+        "position": {
+          "start": [2, 7.5],
+          "end": [4.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Altura:",
+        "position": {
+          "start": [2, 10],
+          "end": [4.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Peso:",
+        "position": {
+          "start": [2, 12.5],
+          "end": [4.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "Alec",
+        "position": {
+          "start": [5.5, 7.5],
+          "end": [8.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "160 [cm]",
+        "position": {
+          "start": [5.5, 10],
+          "end": [8.5, 12]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "70 [kg]",
+        "position": {
+          "start": [5.5, 12.5],
+          "end": [8.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "*Calculadora de IMC*",
+        "position": {
+          "start": [10.5, 3],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 0.09
+        }
+      },
+      {
+        "text": "cm",
+        "position": {
+          "start": [17, 7],
+          "end": [19.5, 9.5]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      },
+      {
+        "text": "kg",
+        "position": {
+          "start": [17, 10.5],
+          "end": [19.5, 13]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "elevation": 21,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "textAlign": "left"
+        }
+      }
+    ],
+    "textFieldQuestion": [
+      {
+        "position": {
+          "start": [12, 7],
+          "end": [16.5, 9.5]
+        },
+        "rightAnswer": 160
+      },
+      {
+        "position": {
+          "start": [12, 10.5],
+          "end": [16.5, 13]
+        },
+        "rightAnswer": 70
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 37,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "magic",
+          "buttonIconNormal": "magic",
+          "buttonTextAlt": " Calcular IMC",
+          "buttonTextNormal": " Calcular IMC"
+        },
+        "position" : {
+          "start": [12, 15],
+          "end": [18, 18.5]
+        },
+        "target": 39,
+        "require": [38],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "items": [
+      {
+        "name": "extra_imc",
+        "position": {
+          "start": [0.5, 7],
+          "end": [9.5, 19]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [11, 4],
+          "end": [19, 19.5]
+        },
+        "settings": {      
+          "backgroundColor": "white",
+          "elevation": 10,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cómo clasificarías el peso de Alec?",
+        "position": {
+          "start": [11.5, 4.2],
+          "end": [18.5, 8.5]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "El IMC de Alec es 27,3",
+        "position": {
+          "start": [0.5, 3.5],
+          "end": [9.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 0.06
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Sobrepeso"],
+        "answers": [
+          {
+            "text": "Bajo",
+            "position": {
+              "start": [12.5, 8.7],
+              "end": [17.5, 11.2]
+            }
+          },
+          {
+            "text": "Normal",
+            "position": {
+              "start": [12.5, 11.3],
+              "end": [17.5, 13.8]
+            }
+          },
+          {
+            "text": "Sobrepeso",
+            "position": {
+              "start": [12.5, 13.9],
+              "end": [17.5, 16.4]
+            }
+          },
+          {
+            "text": "Obesidad",
+            "position": {
+              "start": [12.5, 16.5],
+              "end": [17.5, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [2.5, 3.5]
+        },
+        "target": 38,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [14, 1],
+          "end": [19, 3.5]
+        },
+        "target": 40,
+        "require": [39],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bg_nutricion2",
+    "items": [
+      {
+        "name": "SofiaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [13, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien!\nSofía espera que te haya gustado ayudarle en su labor de nutricionista.",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [12.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [3, 13.5],
+          "end": [11, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ]
+  }
+]

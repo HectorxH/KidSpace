@@ -6,9 +6,10 @@ import {images} from '../../assets/imgs/handler/images';
 import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const Actitity = ({navigation, route}: ActivityProps) => {
+const Activity = ({navigation, route}: ActivityProps) => {
   const {activity} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+  // console.log(activity);
   return (
     <View style={styles.container}>
       <View style={styles.viewLeft}>
@@ -41,8 +42,9 @@ const Actitity = ({navigation, route}: ActivityProps) => {
                 color="#FF8A01"
                 mode="contained"
                 onPress={() =>
-                  navigation.push('CuentoIntroductorio', {
-                    actividad: 'diagramas',
+                  navigation.push('Actividades', {
+                    actividad: activity.nombreActividad,
+                    cantMonedas: 0,
                   })
                 }>
                 {/* onPress={() => console.log('Pressed')}> */}
@@ -110,4 +112,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Actitity;
+export default Activity;

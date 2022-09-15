@@ -1,7 +1,9 @@
+import { ICurso } from './cursos';
+
 export interface IPlanificada {
-  nactividad: string,
-  nunidad: string,
-  curso: string,
+  nactividad: number,
+  nunidad: number,
+  curso: ICurso,
   fecha: string,
 }
 

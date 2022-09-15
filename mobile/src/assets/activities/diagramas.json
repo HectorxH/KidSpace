@@ -1,0 +1,2708 @@
+[
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego es un *florista*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flower",
+        "position": {
+          "start": [6, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoSmile",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Desde chico le han gustado las flores,",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flower",
+        "position": {
+          "start": [6, 0],
+          "end": [10, 7]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y ahora Diego usa su creatividad para diseñar y vender arreglos florales.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "idea",
+        "position": {
+          "start": [10, 0],
+          "end": [15, 7]  
+        }
+      },
+      {
+        "name": "bouquet",
+        "position": {
+          "start": [11, 9],
+          "end": [16, 18]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego abre su tienda de flores todos los días de la semana",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "money",
+        "position": {
+          "start": [10, 0.5],
+          "end": [15, 7.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y el día domingo analiza cuántas flores logró vender.",
+        "position": {
+          "start": [3, 5],
+          "end": [11, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "money",
+        "position": {
+          "start": [10, 0.5],
+          "end": [15, 7.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "chart",
+        "position": {
+          "start": [0, 0],
+          "end": [8, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para esto Diego elabora un diagrama conocido como *gráfico de barras*.",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Puedes ayudar a Diego a *analizarlo*?",
+        "position": {
+          "start": [9, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "question_mark",
+        "position": {
+          "start": [6, 0.5],
+          "end": [9, 6] 
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "barras",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ayuda a Diego a *analizar el gráfico de las ventas*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el menu de *inventario* podrás encontrar el gráfico. *Intenta dar click en su imágen*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Responda las preguntas sobre el gráfico, dando click en el botón en la *esquina superior izquierda*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "barras",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        }
+      },
+      {
+        "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["25"],
+        "answers": [
+          {
+            "text": "25",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "5",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "35",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["Girasoles"],
+        "answers": [
+          {
+            "text": "Margaritas",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "Ninguna",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "Girasoles",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 11,
+        "require": [10],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+
+  {
+    "background": "flowershop",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 2],
+          "end": [18, 18]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Antes de hacer el gráfico, Diego tiene que crear *una tabla* con la información sobre las ventas.",
+        "position": {
+          "start": [3, 5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "calendar",
+        "position": {
+          "start": [7, 11],
+          "end": [13, 16]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [13, 2],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [5, 2],
+          "end": [15, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Con qué *software* le recomendaría a Diego crear la tabla?",
+        "position": {
+          "start": [6, 2.5],
+          "end": [14, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Excel"],
+        "answers": [
+          {
+            "text": "Excel",
+            "position": {
+              "start": [7, 10.5],
+              "end": [13, 12.5]
+            }
+          },
+          {
+            "text": "Paint",
+            "position": {
+              "start": [7,13.5],
+              "end": [13, 15.5]
+            }
+          },
+          {
+            "text": "Word",
+            "position": {
+              "start": [7, 16.5],
+              "end": [13, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 3.5],
+          "end": [18, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para el reporte semanal, Diego debe calcular el total de las flores vendidas.",
+        "position": {
+          "start": [8, 5],
+          "end": [17, 15]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "flowers",
+        "position": {
+          "start": [4, 11],
+          "end": [9, 19]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "DiegoTroubled",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [18, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué *función* le recomiendas a Diego para esto?",
+        "position": {
+          "start": [8, 2.5],
+          "end": [17, 10]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "questions",
+        "position": {
+          "start": [5, 1],
+          "end": [7.5, 8]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["SUMA()"],
+        "answers": [
+          {
+            "text": "SUMA()",
+            "position": {
+              "start": [9.5, 10.5],
+              "end": [15.5, 12.5]
+            }
+          },
+          {
+            "text": "CONTAR()",
+            "position": {
+              "start": [9.5, 13.5],
+              "end": [15.5, 15.5]
+            }
+          },
+          {
+            "text": "PROMEDIO()",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [15.5, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "paper",
+        "position": {
+          "start": [12.5, 0],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [13, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego obtuvo que los girasoles constituyen *1/5* de las ventas totales.",
+        "position": {
+          "start": [2, 5],
+          "end": [12, 15]
+        }
+      }
+    ]
+  },
+  {
+    "background": "flowershop",
+    "items": [
+      {
+        "name": "paper",
+        "position": {
+          "start": [12.5, 0],
+          "end": [20, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [13, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué tipo de dato debe tener una celda de la tabla para mostrar el resultado como *“20%”*?",
+        "position": {
+          "start": [2, 2.5],
+          "end": [12, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Porcentaje"],
+        "answers": [
+          {
+            "text": "Número",
+            "position": {
+              "start": [4, 10.5],
+              "end": [10, 12.5]
+            }
+          },
+          {
+            "text": "Porcentaje",
+            "position": {
+              "start": [4, 13.5],
+              "end": [10, 15.5]
+            }
+          },
+          {
+            "text": "Moneda",
+            "position": {
+              "start": [4, 16.5],
+              "end": [10, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la bodega de la tienda de Diego quedan un *total de 20 flores* de distintos tipos: *margaritas, girasoles e iris*.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Diego guarda *cada una de las flores en su propia caja*. Cada caja tiene un sticker con la imágen de la flor que está dentro.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el inventario encontrarás todas las cajas. ¡Colócalas en tu pantalla y *cuenta cuántas cajas de cada tipo hay*!",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Rellena la tabla de Excel sobre las flores, tocando el botón en la *esquina superior izquierda* de la pantalla.",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_margarita",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_girasol",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "caja_iris",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [5, 4.5],
+          "end": [7.5, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 7],
+          "end": [7.5, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 9.5],
+          "end": [7.5, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 12],
+          "end": [7.5, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [5, 14.5],
+          "end": [7.5, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 4.5],
+          "end": [11.25, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 7],
+          "end": [11.25, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 9.5],
+          "end": [11.25, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 12],
+          "end": [11.25, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.5, 14.5],
+          "end": [11.25, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 4.5],
+          "end": [15, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 7],
+          "end": [15, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 9.5],
+          "end": [15, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 12],
+          "end": [15, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.25, 14.5],
+          "end": [15, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "1",
+        "position": {
+          "start": [5, 7],
+          "end": [7.5, 9.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "2",
+        "position": {
+          "start": [5, 9.5],
+          "end": [7.5, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "3",
+        "position": {
+          "start": [5, 12],
+          "end": [7.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [5, 14.5],
+          "end": [7.5, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "A",
+        "position": {
+          "start": [7.5, 4.5],
+          "end": [11.25, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Flores",
+        "position": {
+          "start": [7.5, 7],
+          "end": [11.25, 9.5]
+        },
+        "settings": {
+          "color": "#FFFFFF",
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Margarita",
+        "position": {
+          "start": [7.5, 9.5],
+          "end": [11.25, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Girasol",
+        "position": {
+          "start": [7.5, 12],
+          "end": [11.25, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Iris",
+        "position": {
+          "start": [7.5, 14.5],
+          "end": [11.25, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "B",
+        "position": {
+          "start": [11.25, 4.5],
+          "end": [15, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Cantidades",
+        "position": {
+          "start": [11.25, 7],
+          "end": [15, 9.5]
+        }, 
+        "settings": {
+          "fontSize": 0.05,
+          "color": "#FFFFFF"
+        }
+      }
+    ],
+      "alternativasDropdown": [
+        {
+          "rightAnswer": ["9"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [11.25, 9.5],
+            "end": [15, 12]
+          }
+        },
+        {
+          "rightAnswer": ["7"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [11.25, 12],
+            "end": [15, 14.5]
+          }
+        },
+        {
+          "rightAnswer": ["4"],
+          "answers": ["9", "4", "7"],
+          "position": {
+            "start": [11.25, 14.5],
+            "end": [15, 17]
+          }
+        }
+      ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#169C34",
+          "buttonColorAlt": "#169C34",
+          "buttonIconNormal": "cube",
+          "buttonIconAlt": "table",
+          "buttonTextNormal": " Volver",
+          "buttonTextAlt": " Hoja de cálculo"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 22,
+        "require": [21],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4.5],
+          "end": [3.5, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [11.5, 4.5],
+          "end": [19.5, 19.5]
+        }, 
+        "settings": {
+          "borderWidth" : 0,
+          "backgroundColor": "#FFFFFF",
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "1",
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "2",
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "3",
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "5",
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "A",
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Flores",
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        },
+        "settings": {
+          "color": "#FFFFFF",
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Margarita",
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Girasol",
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Iris",
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Total",
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "B",
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Cantidades",
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "fontSize": 0.05,
+          "color": "#FFFFFF"
+        }
+      },
+      {
+        "text": "9",
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "7",
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "20",
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Para calcular el total de las flores, en la celda B5 debemos poner *=SUMA(B2:B4)*",
+        "position": {
+          "start": [12, 5],
+          "end": [19, 19]
+        },
+        "settings": {
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 23,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4.5],
+          "end": [3.5, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#FFFFFF"
+        }
+      },
+      {
+        "position": {
+          "start": [13.5, 4.5],
+          "end": [19.5, 19.5]
+        }, 
+        "settings": {
+          "borderWidth" : 0,
+          "backgroundColor": "#FFFFFF",
+          "elevation": 10
+        }
+      },
+      {
+        "position": {
+          "start": [11, 4.5],
+          "end": [13, 7]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11, 7],
+          "end": [13, 9.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#A1C96A"
+        }
+      },
+      {
+        "position": {
+          "start": [11, 9.5],
+          "end": [13, 12]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11, 12],
+          "end": [13, 14.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11, 14.5],
+          "end": [13, 17]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      },
+      {
+        "position": {
+          "start": [11, 17],
+          "end": [13, 19.5]
+        }, 
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth" : 0.01,
+          "borderColor": "#169C34",
+          "backgroundColor": "#F1F3F8"
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "1",
+        "position": {
+          "start": [1, 7],
+          "end": [3.5, 9.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "2",
+        "position": {
+          "start": [1, 9.5],
+          "end": [3.5, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "3",
+        "position": {
+          "start": [1, 12],
+          "end": [3.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [1, 14.5],
+          "end": [3.5, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "5",
+        "position": {
+          "start": [1, 17],
+          "end": [3.5, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "A",
+        "position": {
+          "start": [3.5, 4.5],
+          "end": [7.25, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Flores",
+        "position": {
+          "start": [3.5, 7],
+          "end": [7.25, 9.5]
+        },
+        "settings": {
+          "color": "#FFFFFF",
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Margarita",
+        "position": {
+          "start": [3.5, 9.5],
+          "end": [7.25, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Girasol",
+        "position": {
+          "start": [3.5, 12],
+          "end": [7.25, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Iris",
+        "position": {
+          "start": [3.5, 14.5],
+          "end": [7.25, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Total",
+        "position": {
+          "start": [3.5, 17],
+          "end": [7.25, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "B",
+        "position": {
+          "start": [7.25, 4.5],
+          "end": [11, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Cantidades",
+        "position": {
+          "start": [7.25, 7],
+          "end": [11, 9.5]
+        }, 
+        "settings": {
+          "fontSize": 0.05,
+          "color": "#FFFFFF"
+        }
+      },
+      {
+        "text": "9",
+        "position": {
+          "start": [7.25, 9.5],
+          "end": [11, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "7",
+        "position": {
+          "start": [7.25, 12],
+          "end": [11, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "4",
+        "position": {
+          "start": [7.25, 14.5],
+          "end": [11, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "20",
+        "position": {
+          "start": [7.25, 17],
+          "end": [11, 19.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "Para calcular el porcentaje de cada flor, tenemos que *dividir la cantidad de una flor entre el total de flores*.",
+        "position": {
+          "start": [14, 5],
+          "end": [19, 19]
+        },
+        "settings": {
+          "elevation": 11
+        }
+      },
+      {
+        "text": "C",
+        "position": {
+          "start": [11, 4.5],
+          "end": [13, 7]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "45%",
+        "position": {
+          "start": [11, 9.5],
+          "end": [13, 12]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "35%",
+        "position": {
+          "start": [11, 12],
+          "end": [13, 14.5]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      },
+      {
+        "text": "20%",
+        "position": {
+          "start": [11, 14.5],
+          "end": [13, 17]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 24,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "bodega",
+    "items": [
+      {
+        "name": "DiegoHappy",
+        "position": {
+          "start": [1, 2],
+          "end": [7, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [7, 2],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Con la tabla que creaste Diego puede hacer varios gráficos - por ejemplo, gráfico de barras y gráfico circular.",
+        "position": {
+          "start": [7.5, 2.5],
+          "end": [18.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "pie-chart",
+          "buttonIconNormal": "pie-chart",
+          "buttonTextAlt": " Ver los gráficos",
+          "buttonTextNormal": " Ver los gráficos"
+        },
+        "position" : {
+          "start": [9, 15.5],
+          "end": [17, 18.5]
+        },
+        "target": 25,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#FF8A00",
+          "elevation": 20,
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Resultado final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "color": "white",
+          "elevation": 21
+        },     
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "grafico_circular",
+        "position": {
+          "start": [0.5, 4],
+          "end": [9.75, 16]  
+        }
+      },
+      {
+        "name": "grafico_barras",
+        "position": {
+          "start": [10.25, 4],
+          "end": [19.5, 16]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Responder el Quiz",
+          "buttonTextNormal": "Responder el Quiz"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [6.5, 16.5],
+          "end": [13.5, 19.5]
+        },
+        "target": 26,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "white",
+          "elevation": 21
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El software Excel permite crear tablas y ______",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "Para elaborar un gráfico, debemos usar valores guardados en ______",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "answers": [
+          {
+            "text": "imágenes",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "gráficos",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "celdas",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "answers": [
+          {
+            "text": "una lista",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "una celda",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "una tabla",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [26],
+        "visible": false
+      }
+    ]
+  }
+]
+
+
