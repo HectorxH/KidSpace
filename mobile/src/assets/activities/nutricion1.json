@@ -1517,7 +1517,7 @@
           "end": [18.5, 8.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1530,7 +1530,7 @@
           "end": [9.5, 6.5]
         },
         "settings": {
-          "fontSize": 0.07
+          "fontSize": 0.06
         }
       }
     ],
@@ -1854,7 +1854,7 @@
           "end": [18.5, 8.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1867,7 +1867,7 @@
           "end": [9.5, 6.5]
         },
         "settings": {
-          "fontSize": 0.07
+          "fontSize": 0.06
         }
       }
     ],
@@ -2191,7 +2191,7 @@
           "end": [18.5, 8.5]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2204,7 +2204,7 @@
           "end": [9.5, 6.5]
         },
         "settings": {
-          "fontSize": 0.07
+          "fontSize": 0.06
         }
       }
     ],
