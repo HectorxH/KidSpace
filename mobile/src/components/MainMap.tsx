@@ -71,6 +71,8 @@ const MainMap = ({navigation}: MainMapProps) => {
       setMessage(allMessages);
       if (userData) {
         setUser(userData?.nombres);
+      } else {
+        navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
       const m = await AsyncStorage.getItem('@monedas');
