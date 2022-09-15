@@ -8,7 +8,7 @@ export default [
     actividades: [
       {
         nactividad: 1,
-        actividad: 'Actividad 1',
+        actividad: 'Actividad',
         titulo: 'Diagramas',
         descripcion: 'En esta actividad, vas a conocer cómo Diego, un florista, analiza las ventas en su tienda. Aprenderás a organizar y comunicar los resultados estadísticos para distintos propósitos, mediante el análisis  de los diagramas y la elaboración de estos, usando las hojas de cálculo para crear tablas de doble entrada y para diseñar gráficos de barra simple, gráficos de línea y gráficos circulares.',
         path: '/actividades/unidad/1/actividad/1',
