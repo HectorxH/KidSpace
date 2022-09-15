@@ -12,73 +12,6 @@ const Models: {
     };
   };
 } = {
-  debug: {
-    barras: {
-      model: require('./diagrama/libro/modelo-libro.obj'),
-      type: 'OBJ',
-      resources: [require('./diagrama/libro/modelo-libro.mtl')],
-      materialsOrder: ['color', 'cover'],
-      materialChoices: [
-        ['azul', 'rosado'],
-        ['quijote', 'rayuela', 'tensura'],
-      ],
-      materials: {
-        default: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/default/default.png'),
-        },
-        default_quijote: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/default/default_quijote.png'),
-        },
-        default_rayuela: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/default/default_rayuela.png'),
-        },
-        default_tensura: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/default/default_tensura.png'),
-        },
-        azul_default: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/azul/azul.png'),
-        },
-        rosado_default: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/rosado/rosado.png'),
-        },
-        azul_quijote: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/azul/azul_quijote.png'),
-        },
-        azul_tensura: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/azul/azul_tensura.png'),
-        },
-        azul_rayuela: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/azul/azul_rayuela.png'),
-        },
-        rosado_quijote: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/rosado/rosado_quijote.png'),
-        },
-        rosado_rayuela: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/rosado/rosado_rayuela.png'),
-        },
-        rosado_tensura: {
-          lightingModel: 'PBR',
-          diffuseTexture: require('../../assets/3d/diagrama/libro/rosado/rosado_tensura.png'),
-        },
-      },
-    },
-    barras_: {
-      model: require('./diagrama/barras/barras.glb'),
-      type: 'GLB',
-      resources: [],
-    },
-  },
   diagramas: {
     barras: {
       model: require('./diagrama/barras/barras.glb'),
@@ -180,7 +113,8 @@ const Models: {
   diseño2: {
     caja_torta: {
       model: require('./diseño2/caja_torta/caja-torta.obj'),
-      resources: [require('./diseño2/caja_torta/caja-torta.mtl')],
+      resources: [],
+      // resources: [require('./diseño2/caja_torta/caja-torta.mtl')],
       type: 'OBJ',
       materialsOrder: ['Material', 'Logo', 'Etiqueta'],
       materialChoices: [

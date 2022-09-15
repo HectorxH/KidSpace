@@ -3,8 +3,6 @@ import {ImageSourcePropType} from 'react-native';
 const images: {
   background: {[key: string]: ImageSourcePropType};
   items: {[key: string]: ImageSourcePropType};
-  character: {[character: string]: {[mood: string]: ImageSourcePropType}};
-  bubbles: {[key: string]: ImageSourcePropType};
   icons: {
     [model: string]: {
       circular?: ImageSourcePropType;
@@ -237,37 +235,6 @@ const images: {
     caja_torta: {
       square: require('./icons/caja_torta/caja_torta.png'),
     },
-  },
-  // old, borrar despues de mover
-  character: {
-    Diego: {
-      happy: require('./character/diego/diego_happy.png'),
-      troubled: require('./character/diego/diego_troubled.png'),
-      smile: require('./character/diego/diego_smile.png'),
-      bouquet: require('./character/diego/diego_happy.png'),
-      chart: require('./extras/chart.png'),
-    },
-    Menhera: {
-      normal: require('./character/menhera/menhera_normal.png'),
-      cry: require('./character/menhera/menhera_cry.png'),
-    },
-    extras: {
-      chart: require('./extras/chart_old.png'),
-      paper: require('./extras/paper.png'),
-      grafico_barras: require('./extras/grafico_barras.png'),
-      grafico_circular: require('./extras/grafico_circular.png'),
-    },
-  },
-  bubbles: {
-    flower: require('./bubbles/flower.png'),
-    bouquet: require('./bubbles/bouquet.png'),
-    idea: require('./bubbles/idea.png'),
-    money: require('./bubbles/money.png'),
-    question_mark: require('./bubbles/question_mark.png'),
-    calendar: require('./bubbles/calendar.png'),
-    flowers: require('./bubbles/flowers.png'),
-    fraction: require('./bubbles/fraction.png'),
-    questions: require('./bubbles/questions.png'),
   },
 };
 
