@@ -8,8 +8,8 @@ import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
 import axios from 'axios';
-import Config from 'react-native-config';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import Config from 'react-native-config';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 import CargaView from './CargaView';
 
 const InicioView = ({navigation}: InicioViewProps) => {
