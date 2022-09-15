@@ -41,11 +41,13 @@ const InicioView = ({navigation}: InicioViewProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
+  /*
   const testLogout = async () => {
     await logout();
     await AsyncStorage.removeItem('@notification');
     await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
   };
+  */
 
   if (user || loading) {
     return <CargaView />;
@@ -73,7 +75,7 @@ const InicioView = ({navigation}: InicioViewProps) => {
               Abrir la cámara
             </Text>
           </Button>
-          <Button onPress={testLogout}>!!!LOGOUT TEMPORAL!!!</Button>
+          {/*<Button onPress={testLogout}>!!!LOGOUT TEMPORAL!!!</Button>*/}
         </View>
       </View>
     );
