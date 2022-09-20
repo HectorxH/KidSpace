@@ -15,7 +15,7 @@ export const userSchema = new Schema<IUser>({
   nombres: String,
   apellidos: String,
   password: String,
-  email: { type: String, unique: true, index: true },
+  email: { type: String },
   tipo: { type: String, enum: ['profesor', 'representante', 'apoderado', 'estudiante'] },
 });
 
