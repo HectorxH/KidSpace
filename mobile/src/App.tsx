@@ -24,6 +24,7 @@ import InicioView from './components/InicioView';
 import CargaView from './components/CargaView';
 import ErrorView from './components/library/ErrorView';
 import FormularioView from './components/FormularioView';
+import ProfileView from './components/ProfileView';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/navigation';
@@ -39,6 +40,11 @@ const App = () => {
     <AuthProvider>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="ProfileView"
+            component={ProfileView}
+            options={{headerShown: false}}
+          />
           <Stack.Screen
             name="InicioView"
             component={InicioView}

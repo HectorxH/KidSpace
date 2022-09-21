@@ -1,6 +1,7 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {IActivity} from './activity';
 import {ICarrera, IInfo} from './carrera';
+import {IProfile} from './profile';
 
 export type desafioTipo =
   | 'CuentoIntroductorio'
@@ -22,7 +23,8 @@ export type RootStackParamList = {
   InicioView: undefined;
   ErrorView: undefined;
   CargaView: undefined;
-  FormularioView: {event: any};
+  ProfileView: {event: any};
+  FormularioView: {data: IProfile};
   MainMap: undefined;
   Activity: {activity: IActivity};
   Carrera: {carrera: ICarrera; completadas: string};
@@ -62,6 +64,10 @@ export type CargaViewProps = NativeStackScreenProps<
 export type MainMapProps = NativeStackScreenProps<
   RootStackParamList,
   'MainMap'
+>;
+export type ProfileProps = NativeStackScreenProps<
+  RootStackParamList,
+  'ProfileView'
 >;
 export type ActivityProps = NativeStackScreenProps<
   RootStackParamList,
