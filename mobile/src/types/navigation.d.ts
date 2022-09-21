@@ -24,6 +24,7 @@ export type RootStackParamList = {
   ErrorView: undefined;
   CargaView: undefined;
   ProfileView: {event: any};
+  EditCharacter: undefined;
   FormularioView: {data: IProfile};
   MainMap: undefined;
   Activity: {activity: IActivity};
@@ -68,6 +69,10 @@ export type MainMapProps = NativeStackScreenProps<
 export type ProfileProps = NativeStackScreenProps<
   RootStackParamList,
   'ProfileView'
+>;
+export type EditCharacterProps = NativeStackScreenProps<
+  RootStackParamList,
+  'EditCharacter'
 >;
 export type ActivityProps = NativeStackScreenProps<
   RootStackParamList,

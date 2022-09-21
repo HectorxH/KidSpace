@@ -18,7 +18,7 @@ const medallas = {
   nutri2: 1,
 };
 
-const Profile = ({navigation, route}: ProfileProps) => {
+const Profile = ({navigation}: ProfileProps) => {
   // const {data} = route.params;
   const data = {
     nombres: 'Skylar',
