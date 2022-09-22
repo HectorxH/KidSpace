@@ -6,6 +6,7 @@ import {images} from '../assets/imgs/handler/images';
 import {medallasImages} from '../assets/medallas/handler/medallasImages';
 import {ProfileProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
+import Character from './library/Character';
 
 const medallas = {
   astronomia1: 1,
@@ -40,18 +41,16 @@ const Profile = ({navigation}: ProfileProps) => {
               {back}
             </Button>
           </View>
-          <View>
-            <Image
-              source={images.portadaAct1.uri}
-              style={{
-                height: RSize(0.32, 'h'),
-                width: RSize(0.32, 'h'),
-                borderRadius: 100,
-                alignSelf: 'center',
-                borderWidth: 4,
-                borderColor: 'white',
-              }}
-            />
+          <View
+            style={{
+              height: RSize(0.32, 'h'),
+              width: RSize(0.32, 'h'),
+              borderRadius: 100,
+              alignSelf: 'center',
+              borderWidth: 4,
+              borderColor: 'white',
+            }}>
+            <Character />
           </View>
         </View>
         <View style={{flex: 2.1 / 4}}>
@@ -81,7 +80,7 @@ const Profile = ({navigation}: ProfileProps) => {
                 color="#FFFFFF"
               />
             )}
-            onPress={() => console.log('hi')}>
+            onPress={() => navigation.navigate('EditCharacter')}>
             <Text style={styles.textButton}>Editar la apariencia</Text>
           </Button>
         </View>

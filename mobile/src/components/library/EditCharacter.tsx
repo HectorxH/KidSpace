@@ -116,7 +116,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         break;
     }
   };
-  
+
   // console.log(len[1]);
   // console.log(partes[0][srcNames[0]].i0.uri);
   // console.log(partes[parte].src.i1);
@@ -213,8 +213,11 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         </Button>
       </View>
       <View style={{flex: 2.5 / 4, flexDirection: 'column'}}>
-        <View style={{flex: 1 / 4, flexDirection: 'column'}}>
-          <ScrollView horizontal={true} style={styles.scrollView}>
+        <View style={{flex: 1.15 / 4, flexDirection: 'column'}}>
+          <ScrollView
+            horizontal={true}
+            persistentScrollbar={true}
+            style={styles.scrollView}>
             <View style={{flexDirection: 'row'}}>
               {Array(12)
                 .fill(1)
@@ -226,6 +229,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                         style={{
                           width: RSize(0.2, 'h'),
                           height: RSize(0.2, 'h'),
+                          borderRadius: 10,
                         }}
                         source={opcionesImages[`i${id}`].uri}
                       />
@@ -236,9 +240,9 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
           </ScrollView>
         </View>
         <View
-          style={{flex: 3 / 4, flexDirection: 'column'}}
+          style={{flex: 2.85 / 4, flexDirection: 'column'}}
           onStartShouldSetResponder={() => true}>
-          <ScrollView style={styles.scrollView}>
+          <ScrollView style={styles.scrollView} persistentScrollbar={true}>
             <View
               style={{
                 flexDirection: 'row',

@@ -42,13 +42,13 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="EditCharacter"
-            component={EditCharacter}
+            name="ProfileView"
+            component={ProfileView}
             options={{headerShown: false}}
           />
           <Stack.Screen
-            name="ProfileView"
-            component={ProfileView}
+            name="EditCharacter"
+            component={EditCharacter}
             options={{headerShown: false}}
           />
           <Stack.Screen
