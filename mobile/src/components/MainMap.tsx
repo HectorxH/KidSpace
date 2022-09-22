@@ -337,11 +337,6 @@ const styles = StyleSheet.create({
     marginHorizontal: RSize(0.01),
     marginVertical: RSize(0.01),
   },
-  titleModal: {
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.035),
-  },
   paragraph: {
     marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Regular',
@@ -349,6 +344,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: RSize(0.001, 'h'),
     marginBottom: RSize(0.001, 'h'),
+  },
+  titleModal: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.035),
   },
   textModalButton: {
     textAlign: 'center',

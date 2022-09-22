@@ -190,6 +190,33 @@ const styles = StyleSheet.create({
     height: RSize(0.045, 'h'),
     width: RSize(0.045, 'h'),
   },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: RSize(0.02, 'h'),
+  },
+  modalView: {
+    margin: RSize(0.15, 'w'),
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: RSize(0.03, 'w'),
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  buttonModal: {
+    borderRadius: 10,
+    marginTop: RSize(0.05, 'h'),
+    height: RSize(0.1, 'h'),
+    width: RSize(0.38, 'h'),
+  },
 });
 
 export default Profile;

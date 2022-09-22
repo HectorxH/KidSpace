@@ -7,6 +7,8 @@ import {
   Image,
   TouchableOpacity,
   ImageBackground,
+  Pressable,
+  Modal,
 } from 'react-native';
 import {Button} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -75,8 +77,12 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   const [accesories, setAccesories] = useState(35);
   const [background, setBackground] = useState(1);
 
+  const [modalVisible, setModalVisible] = useState(false);
+  const [saved, setSaved] = useState(true);
+
   const handlePartes = (p: number, id: number) => {
     console.log(id, p);
+    setSaved(false);
     switch (p) {
       case 0:
         setBase(id);
@@ -116,10 +122,58 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         break;
     }
   };
-
+  const handleBack = () => {
+    if (saved === true) {
+      navigation.goBack();
+    } else {
+      setModalVisible(true);
+    }
+  };
+  const handleSave = () => {
+    setSaved(true);
+    console.log('hi');
+  };
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
     <View style={styles.container}>
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}>
+        <Pressable
+          onPress={() => {
+            setModalVisible(!modalVisible);
+          }}
+          style={styles.background}>
+          <View style={styles.centeredView}>
+            <View style={styles.modalView}>
+              <Text style={styles.titleModal}>¿Salir del editor?</Text>
+              <Text style={styles.paragraph}>
+                Si sales del editor, tus cambios no se guardarán.
+              </Text>
+              <View style={{flexDirection: 'row'}}>
+                <Button
+                  style={styles.buttonModal}
+                  color="#EC87C0"
+                  mode="contained"
+                  onPress={() => navigation.goBack()}>
+                  <Text style={styles.textModalButton}>Salir</Text>
+                </Button>
+                <Button
+                  style={styles.buttonModal}
+                  color="#A1C96A"
+                  mode="contained"
+                  onPress={() => setModalVisible(false)}>
+                  <Text style={styles.textModalButton}>Volver al editor</Text>
+                </Button>
+              </View>
+            </View>
+          </View>
+        </Pressable>
+      </Modal>
       <View
         style={{
           flex: 1.5 / 4,
@@ -127,10 +181,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
           marginLeft: RSize(0.01),
         }}>
         <View style={styles.view}>
-          <Button
-            color="#EC87C0"
-            mode="contained"
-            onPress={() => navigation.goBack()}>
+          <Button color="#EC87C0" mode="contained" onPress={() => handleBack()}>
             {back}
           </Button>
         </View>
@@ -205,7 +256,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
           icon={() => (
             <Icon name="content-save" size={RSize(0.06, 'h')} color="#FFFFFF" />
           )}
-          onPress={() => console.log('hi')}>
+          onPress={() => handleSave()}>
           <Text style={styles.textButton}>Guardar</Text>
         </Button>
       </View>
@@ -350,6 +401,48 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     marginTop: RSize(0.001, 'h'),
     marginBottom: RSize(0.001, 'h'),
+  },
+  titleModal: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.035),
+  },
+  textModalButton: {
+    textAlign: 'center',
+    color: '#ffffff',
+    fontSize: RSize(0.02),
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: RSize(0.02, 'h'),
+  },
+  modalView: {
+    margin: RSize(0.15, 'w'),
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: RSize(0.03, 'w'),
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  buttonModal: {
+    borderRadius: 10,
+    marginTop: RSize(0.05, 'h'),
+    marginRight: RSize(0.02, 'h'),
+    marginLeft: RSize(0.02, 'h'),
+    height: RSize(0.1, 'h'),
+  },
+  background: {
+    flex: 1,
+    resizeMode: 'cover',
   },
 });
 
