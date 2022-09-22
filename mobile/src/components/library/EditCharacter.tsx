@@ -117,9 +117,6 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
     }
   };
 
-  // console.log(len[1]);
-  // console.log(partes[0][srcNames[0]].i0.uri);
-  // console.log(partes[parte].src.i1);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
     <View style={styles.container}>
@@ -261,8 +258,6 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                           width: RSize(0.2, 'h'),
                           height: RSize(0.2, 'h'),
                         }}
-                        // source={baseImages.i1.uri}
-                        source={baseImages[`i${id}`].uri}
                         source={partes[parte][srcNames[parte]][`i${id}`].uri}
                       />
                     </TouchableOpacity>
