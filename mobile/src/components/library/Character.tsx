@@ -15,7 +15,7 @@ import {accesoriesImages} from '../../assets/perfil/11accesories/handler/accesor
 import {backgroundImages} from '../../assets/perfil/12background/handler/backgroundImages';
 
 const Character = () => {
-  const initialState = [5, 5, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
   const [parteArray, setParteArray] = useState(initialState);
   return (
     <View style={styles.container}>
@@ -37,6 +37,7 @@ const Character = () => {
             <ImageBackground
               key="vitiligo"
               style={{flex: 1}}
+              imageStyle={[parteArray[1] !== 0 ? {opacity: 1} : {opacity: 0}]}
               source={vitiligoImages[`i${parteArray[1]}`].uri}>
               <ImageBackground
                 key="lefteye"
