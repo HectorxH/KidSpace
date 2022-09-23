@@ -266,17 +266,24 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
             horizontal={true}
             persistentScrollbar={true}
             style={styles.scrollView}>
-            <View style={{flexDirection: 'row'}}>
+            <View style={{flexDirection: 'row', backgroundColor: '#ECECEC'}}>
               {Array(12)
                 .fill(1)
                 .map((i, id) => (
-                  <View key={id}>
+                  <View
+                    key={id}
+                    style={{
+                      borderRadius: 10,
+                      alignSelf: 'center',
+                      margin: RSize(0.005, 'h'),
+                      padding: RSize(0.005, 'h'),
+                    }}>
                     <TouchableOpacity key={id} onPress={() => setParte(id)}>
                       <Image
                         key={id}
                         style={{
-                          width: RSize(0.2, 'h'),
-                          height: RSize(0.2, 'h'),
+                          width: RSize(0.19, 'h'),
+                          height: RSize(0.19, 'h'),
                           borderRadius: 10,
                         }}
                         source={opcionesImages[`i${id}`].uri}
@@ -288,7 +295,11 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
           </ScrollView>
         </View>
         <View
-          style={{flex: 2.85 / 4, flexDirection: 'column'}}
+          style={{
+            flex: 2.85 / 4,
+            flexDirection: 'column',
+            backgroundColor: '#ECECEC',
+          }}
           onStartShouldSetResponder={() => true}>
           <ScrollView style={styles.scrollView} persistentScrollbar={true}>
             <View
@@ -299,7 +310,15 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
               {Array(len[parte])
                 .fill(1)
                 .map((i, id) => (
-                  <View key={id}>
+                  <View
+                    key={id}
+                    style={{
+                      borderRadius: 10,
+                      alignSelf: 'center',
+                      borderWidth: 2,
+                      borderColor: '#B5B5B5',
+                      margin: RSize(0.005, 'h'),
+                    }}>
                     <TouchableOpacity
                       key={id}
                       onPress={() => handlePartes(parte, id)}>
