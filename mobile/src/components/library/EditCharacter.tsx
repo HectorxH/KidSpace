@@ -30,7 +30,11 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 import {EditCharacterProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const backgrounds = [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+const compras = {
+  9: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31
+  10: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], //40
+  11: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+};
 
 const len = [28, 8, 15, 19, 7, 14, 56, 281, 198, 31, 40, 11];
 const srcNames = [
@@ -72,7 +76,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   const [saved, setSaved] = useState(true);
 
   const handlePartes = (p: number, id: number) => {
-    if (!(p === 11 && backgrounds[id] === 0)) {
+    if (!(compras[p][id] === 0)) {
       console.log(id, p);
       setSaved(false);
       parteArray.splice(p, 1, id);
@@ -286,9 +290,9 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                         key={id}
                         style={[
                           styles.opcion,
-                          backgrounds[id] === 1
-                            ? styles.opcionDisponible
-                            : styles.opcionNoDisponible,
+                          parte > 8 && compras[parte][id] === 0
+                            ? styles.opcionNoDisponible
+                            : styles.opcionDisponible,
                         ]}
                         source={partes[parte][srcNames[parte]][`i${id}`].uri}
                       />
