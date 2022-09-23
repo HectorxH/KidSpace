@@ -217,7 +217,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         </Button>
       </View>
       <View style={{flex: 2.5 / 4, flexDirection: 'column'}}>
-        <View style={{flex: 1.15 / 4, flexDirection: 'column'}}>
+        <View style={{flex: 1.17 / 4, flexDirection: 'column'}}>
           <ScrollView
             horizontal={true}
             persistentScrollbar={true}
@@ -228,12 +228,12 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                 .map((i, id) => (
                   <View
                     key={id}
-                    style={{
-                      borderRadius: 10,
-                      alignSelf: 'center',
-                      margin: RSize(0.005, 'h'),
-                      padding: RSize(0.005, 'h'),
-                    }}>
+                    style={[
+                      styles.part,
+                      id !== parte
+                        ? styles.partNoSelected
+                        : styles.partSelected,
+                    ]}>
                     <TouchableOpacity key={id} onPress={() => setParte(id)}>
                       <Image
                         key={id}
@@ -252,7 +252,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         </View>
         <View
           style={{
-            flex: 2.85 / 4,
+            flex: 2.83 / 4,
             flexDirection: 'column',
             backgroundColor: '#ECECEC',
           }}
@@ -270,7 +270,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                     key={id}
                     style={[
                       styles.part,
-                      id != parteArray[parte]
+                      id !== parteArray[parte]
                         ? styles.partNoSelected
                         : styles.partSelected,
                     ]}>
