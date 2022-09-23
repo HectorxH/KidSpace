@@ -64,63 +64,17 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   // const {Info} = route.params;
   const [parte, setParte] = useState(0);
 
-  const [base, setBase] = useState(5);
-  const [vitiligo, setVitiligo] = useState(5);
-  const [lefteye, setLefteye] = useState(1);
-  const [righteye, setRighteye] = useState(1);
-  const [nose, setNose] = useState(1);
-  const [mouth, setMouth] = useState(1);
-  const [eyebrown, setEyebrown] = useState(1);
-  const [bangs, setBangs] = useState(110);
-  const [hair, setHair] = useState(1);
-  const [clothes, setClothes] = useState(6);
-  const [accesories, setAccesories] = useState(35);
-  const [background, setBackground] = useState(1);
-
+  const initialState = [5, 5, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const [parteArray, setParteArray] = useState(initialState);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
 
   const handlePartes = (p: number, id: number) => {
     console.log(id, p);
     setSaved(false);
-    switch (p) {
-      case 0:
-        setBase(id);
-        break;
-      case 1:
-        setVitiligo(id);
-        break;
-      case 2:
-        setLefteye(id);
-        break;
-      case 3:
-        setRighteye(id);
-        break;
-      case 4:
-        setNose(id);
-        break;
-      case 5:
-        setMouth(id);
-        break;
-      case 6:
-        setEyebrown(id);
-        break;
-      case 7:
-        setBangs(id);
-        break;
-      case 8:
-        setHair(id);
-        break;
-      case 9:
-        setClothes(id);
-        break;
-      case 10:
-        setAccesories(id);
-        break;
-      case 11:
-        setBackground(id);
-        break;
-    }
+    parteArray.splice(p, 1, id);
+    setParteArray(Array.from(parteArray));
+    console.log(parteArray);
   };
   const handleBack = () => {
     if (saved === true) {
@@ -188,51 +142,53 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         <ImageBackground
           key="background"
           style={{flex: 1}}
-          source={backgroundImages[`i${background}`].uri}>
+          source={backgroundImages[`i${parteArray[11]}`].uri}>
           <ImageBackground
             key="hair"
             style={{flex: 1}}
-            source={hairImages[`i${hair}`].uri}>
+            source={hairImages[`i${parteArray[8]}`].uri}>
             <ImageBackground
               key="base"
               style={{flex: 1}}
-              source={baseImages[`i${base}`].uri}>
+              source={baseImages[`i${parteArray[0]}`].uri}>
               <ImageBackground
                 key="vitiligo"
                 style={{flex: 1}}
-                source={vitiligoImages[`i${vitiligo}`].uri}>
+                source={vitiligoImages[`i${parteArray[1]}`].uri}>
                 <ImageBackground
                   key="lefteye"
                   style={{flex: 1}}
-                  source={lefteyeImages[`i${lefteye}`].uri}>
+                  source={lefteyeImages[`i${parteArray[2]}`].uri}>
                   <ImageBackground
                     key="righteye"
                     style={{flex: 1}}
-                    source={righteyeImages[`i${righteye}`].uri}>
+                    source={righteyeImages[`i${parteArray[3]}`].uri}>
                     <ImageBackground
                       key="nose"
                       style={{flex: 1}}
-                      source={noseImages[`i${nose}`].uri}>
+                      source={noseImages[`i${parteArray[4]}`].uri}>
                       <ImageBackground
                         key="mouth"
                         style={{flex: 1}}
-                        source={mouthImages[`i${mouth}`].uri}>
+                        source={mouthImages[`i${parteArray[5]}`].uri}>
                         <ImageBackground
                           key="eyebrown"
                           style={{flex: 1}}
-                          source={eyebrownImages[`i${eyebrown}`].uri}>
+                          source={eyebrownImages[`i${parteArray[6]}`].uri}>
                           <ImageBackground
                             key="clothes"
                             style={{flex: 1}}
-                            source={clothesImages[`i${clothes}`].uri}>
+                            source={clothesImages[`i${parteArray[9]}`].uri}>
                             <ImageBackground
                               key="bangs"
                               style={{flex: 1}}
-                              source={bangsImages[`i${bangs}`].uri}>
+                              source={bangsImages[`i${parteArray[7]}`].uri}>
                               <ImageBackground
                                 key="accesories"
                                 style={{flex: 1}}
-                                source={accesoriesImages[`i${accesories}`].uri}
+                                source={
+                                  accesoriesImages[`i${parteArray[10]}`].uri
+                                }
                               />
                             </ImageBackground>
                           </ImageBackground>
@@ -312,13 +268,12 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                 .map((i, id) => (
                   <View
                     key={id}
-                    style={{
-                      borderRadius: 10,
-                      alignSelf: 'center',
-                      borderWidth: 2,
-                      borderColor: '#B5B5B5',
-                      margin: RSize(0.005, 'h'),
-                    }}>
+                    style={[
+                      styles.part,
+                      id === parteArray[id]
+                        ? styles.partNoSelected
+                        : styles.partSelected,
+                    ]}>
                     <TouchableOpacity
                       key={id}
                       onPress={() => handlePartes(parte, id)}>
@@ -342,6 +297,18 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
 };
 
 const styles = StyleSheet.create({
+  part: {
+    borderRadius: 10,
+    alignSelf: 'center',
+    borderWidth: 2,
+    margin: RSize(0.005, 'h'),
+  },
+  partNoSelected: {
+    borderColor: '#B5B5B5',
+  },
+  partSelected: {
+    borderColor: '#5C9DEC',
+  },
   container: {
     flex: 1,
     flexDirection: 'row',

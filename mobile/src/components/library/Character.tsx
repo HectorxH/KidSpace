@@ -15,74 +15,66 @@ import {accesoriesImages} from '../../assets/perfil/11accesories/handler/accesor
 import {backgroundImages} from '../../assets/perfil/12background/handler/backgroundImages';
 
 const Character = () => {
-  const [base, setBase] = useState(5);
-  const [vitiligo, setVitiligo] = useState(5);
-  const [lefteye, setLefteye] = useState(1);
-  const [righteye, setRighteye] = useState(1);
-  const [nose, setNose] = useState(1);
-  const [mouth, setMouth] = useState(1);
-  const [eyebrown, setEyebrown] = useState(1);
-  const [bangs, setBangs] = useState(110);
-  const [hair, setHair] = useState(1);
-  const [clothes, setClothes] = useState(6);
-  const [accesories, setAccesories] = useState(35);
-  const [background, setBackground] = useState(1);
-
+  const initialState = [5, 5, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const [parteArray, setParteArray] = useState(initialState);
   return (
     <View style={styles.container}>
       <ImageBackground
         key="background"
+        style={{flex: 1}}
         imageStyle={{borderRadius: 80}}
-        style={styles.container}
-        source={backgroundImages[`i${background}`].uri}>
+        source={backgroundImages[`i${parteArray[11]}`].uri}>
         <ImageBackground
           key="hair"
-          style={styles.container}
+          style={{flex: 1}}
           imageStyle={{borderRadius: 80}}
-          source={hairImages[`i${hair}`].uri}>
+          source={hairImages[`i${parteArray[8]}`].uri}>
           <ImageBackground
             key="base"
-            style={styles.container}
+            style={{flex: 1}}
             imageStyle={{borderRadius: 80}}
-            source={baseImages[`i${base}`].uri}>
+            source={baseImages[`i${parteArray[0]}`].uri}>
             <ImageBackground
               key="vitiligo"
-              style={styles.container}
-              source={vitiligoImages[`i${vitiligo}`].uri}>
+              style={{flex: 1}}
+              source={vitiligoImages[`i${parteArray[1]}`].uri}>
               <ImageBackground
                 key="lefteye"
-                style={styles.container}
-                source={lefteyeImages[`i${lefteye}`].uri}>
+                style={{flex: 1}}
+                source={lefteyeImages[`i${parteArray[2]}`].uri}>
                 <ImageBackground
                   key="righteye"
-                  style={styles.container}
-                  source={righteyeImages[`i${righteye}`].uri}>
+                  style={{flex: 1}}
+                  source={righteyeImages[`i${parteArray[3]}`].uri}>
                   <ImageBackground
                     key="nose"
-                    style={styles.container}
-                    source={noseImages[`i${nose}`].uri}>
+                    style={{flex: 1}}
+                    source={noseImages[`i${parteArray[4]}`].uri}>
                     <ImageBackground
                       key="mouth"
-                      style={styles.container}
-                      source={mouthImages[`i${mouth}`].uri}>
+                      style={{flex: 1}}
+                      source={mouthImages[`i${parteArray[5]}`].uri}>
                       <ImageBackground
                         key="eyebrown"
-                        style={styles.container}
-                        source={eyebrownImages[`i${eyebrown}`].uri}>
+                        style={{flex: 1}}
+                        source={eyebrownImages[`i${parteArray[6]}`].uri}>
                         <ImageBackground
                           key="clothes"
-                          style={styles.container}
                           imageStyle={{borderRadius: 80}}
-                          source={clothesImages[`i${clothes}`].uri}>
+                          style={{flex: 1}}
+                          source={clothesImages[`i${parteArray[9]}`].uri}>
                           <ImageBackground
                             key="bangs"
-                            style={styles.container}
-                            source={bangsImages[`i${bangs}`].uri}>
+                            imageStyle={{borderRadius: 80}}
+                            style={{flex: 1}}
+                            source={bangsImages[`i${parteArray[7]}`].uri}>
                             <ImageBackground
                               key="accesories"
                               imageStyle={{borderRadius: 80}}
-                              style={styles.container}
-                              source={accesoriesImages[`i${accesories}`].uri}
+                              style={{flex: 1}}
+                              source={
+                                accesoriesImages[`i${parteArray[10]}`].uri
+                              }
                             />
                           </ImageBackground>
                         </ImageBackground>
