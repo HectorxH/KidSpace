@@ -30,6 +30,8 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 import {EditCharacterProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
+const backgrounds = [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0];
+
 const len = [28, 8, 15, 19, 7, 14, 56, 281, 198, 31, 40, 11];
 const srcNames = [
   'baseImages',
@@ -70,11 +72,13 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   const [saved, setSaved] = useState(true);
 
   const handlePartes = (p: number, id: number) => {
-    console.log(id, p);
-    setSaved(false);
-    parteArray.splice(p, 1, id);
-    setParteArray(Array.from(parteArray));
-    console.log(parteArray);
+    if (!(p === 11 && backgrounds[id] === 0)) {
+      console.log(id, p);
+      setSaved(false);
+      parteArray.splice(p, 1, id);
+      setParteArray(Array.from(parteArray));
+      console.log(parteArray);
+    }
   };
   const handleBack = () => {
     if (saved === true) {
@@ -142,6 +146,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
         <ImageBackground
           key="background"
           style={{flex: 1}}
+          imageStyle={{borderRadius: 10}}
           source={backgroundImages[`i${parteArray[11]}`].uri}>
           <ImageBackground
             key="hair"
@@ -279,10 +284,12 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                       onPress={() => handlePartes(parte, id)}>
                       <Image
                         key={id}
-                        style={{
-                          width: RSize(0.2, 'h'),
-                          height: RSize(0.2, 'h'),
-                        }}
+                        style={[
+                          styles.opcion,
+                          backgrounds[id] === 1
+                            ? styles.opcionDisponible
+                            : styles.opcionNoDisponible,
+                        ]}
                         source={partes[parte][srcNames[parte]][`i${id}`].uri}
                       />
                     </TouchableOpacity>
@@ -308,6 +315,17 @@ const styles = StyleSheet.create({
   },
   partSelected: {
     borderColor: '#5C9DEC',
+  },
+  opcion: {
+    width: RSize(0.2, 'h'),
+    height: RSize(0.2, 'h'),
+    borderRadius: 8,
+  },
+  opcionDisponible: {
+    opacity: 1,
+  },
+  opcionNoDisponible: {
+    opacity: 0.2,
   },
   container: {
     flex: 1,
