@@ -36,7 +36,7 @@ const disponibles = {
   11: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
 };
 
-const len = [28, 8, 15, 19, 7, 14, 56, 281, 198, 31, 40, 11];
+const len = [28, 9, 15, 19, 7, 14, 56, 281, 198, 31, 40, 11];
 const srcNames = [
   'baseImages',
   'vitiligoImages',
@@ -70,7 +70,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   // const {Info} = route.params;
   const [parte, setParte] = useState(0);
 
-  const initialState = [5, 5, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
   const [parteArray, setParteArray] = useState(initialState);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
@@ -163,6 +163,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
               <ImageBackground
                 key="vitiligo"
                 style={{flex: 1}}
+                imageStyle={[parteArray[1] !== 0 ? {opacity: 1} : {opacity: 0}]}
                 source={vitiligoImages[`i${parteArray[1]}`].uri}>
                 <ImageBackground
                   key="lefteye"

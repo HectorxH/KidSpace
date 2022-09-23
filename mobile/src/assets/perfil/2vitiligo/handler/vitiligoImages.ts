@@ -25,6 +25,9 @@ const vitiligoImages: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   i7: {
     uri: require('../7.png'),
   },
+  i8: {
+    uri: require('../8.png'),
+  },
 };
 
 export {vitiligoImages};
