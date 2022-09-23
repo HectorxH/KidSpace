@@ -8,18 +8,9 @@ import {ProfileProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import Character from './library/Character';
 
-const medallas = {
-  astronomia1: 1,
-  astronomia2: 0,
-  diseno1: 1,
-  diseno2: 0,
-  info1: 1,
-  info2: 1,
-  nutri1: 1,
-  nutri2: 1,
-};
+const medallas = [1, 0, 1, 0, 1, 1, 1, 1];
 
-const Profile = ({navigation}: ProfileProps) => {
+const ProfileView = ({navigation}: ProfileProps) => {
   // const {data} = route.params;
   const data = {
     nombres: 'Skylar',
@@ -99,7 +90,7 @@ const Profile = ({navigation}: ProfileProps) => {
               key={id}
               style={[
                 styles.viewMedalla,
-                medallas[`${medalla}`] !== 1
+                medallas[id] !== 1
                   ? styles.medallaColor
                   : styles.medallaColorGanada,
               ]}
@@ -203,4 +194,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profile;
+export default ProfileView;

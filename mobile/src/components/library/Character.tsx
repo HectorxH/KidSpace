@@ -16,7 +16,7 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 
 const Character = () => {
   const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
-  const [parteArray, setParteArray] = useState(initialState);
+  const [parteArray] = useState(initialState);
   return (
     <View style={styles.container}>
       <ImageBackground

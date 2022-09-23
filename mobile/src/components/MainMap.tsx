@@ -163,8 +163,6 @@ const MainMap = ({navigation}: MainMapProps) => {
     AsyncStorage.clear();
     navigation.navigate('InicioView');
   };
-  console.log(userData.nombres);
-  console.log(userData.apellidos);
   return (
     <View style={styles.topView}>
       <Modal
@@ -276,11 +274,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() =>
-                navigation.push('ProfileView', {
-                  data: userData,
-                })
-              }>
+              onPress={() => navigation.push('ProfileView')}>
               <Text style={styles.subtitle}>Perfil</Text>
             </Button>
             <Button
