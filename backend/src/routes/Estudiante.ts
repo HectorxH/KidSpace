@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import express from 'express';
+import ActividadLog from '../models/ActividadLog';
 import Apoderado from '../models/Apoderado';
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -71,6 +72,65 @@ router.put('/:id/apoderados', async (req, res) => {
     const { id } = req.params;
     const { apoderadoId } = req.body;
     await Estudiante.findByIdAndUpdate(id, { $addToSet: { apoderados: apoderadoId } });
+  } catch (e) {
+    console.log(e);
+    res.send(500);
+  }
+});
+
+router.post('/log', async (req, res) => {
+  try {
+    const {
+      tipo, actividad, unidad, categoria, estudiante, curso, quizFinal, duracion, fecha,
+    } = req.body;
+    const log = new ActividadLog({
+      tipo, actividad, unidad, categoria, estudiante, curso, quizFinal, duracion, fecha,
+    });
+    log.save();
+  } catch (e) {
+    console.log(e);
+    res.send(500);
+  }
+});
+
+router.get('/:id/monedas', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const estudiante = await Estudiante.findById(id);
+    res.json(estudiante?.monedas);
+  } catch (e) {
+    console.log(e);
+    res.send(500);
+  }
+});
+
+router.post('/:id/monedas', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { monedas } = req.body;
+    await Estudiante.findByIdAndUpdate(id, { monedas });
+  } catch (e) {
+    console.log(e);
+    res.send(500);
+  }
+});
+
+router.get('/:id/personaje', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const estudiante = await Estudiante.findById(id);
+    res.json(estudiante?.personaje);
+  } catch (e) {
+    console.log(e);
+    res.send(500);
+  }
+});
+
+router.post('/:id/personaje', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { personaje } = req.body;
+    await Estudiante.findByIdAndUpdate(id, { personaje });
   } catch (e) {
     console.log(e);
     res.send(500);
