@@ -270,7 +270,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                     key={id}
                     style={[
                       styles.part,
-                      id === parteArray[id]
+                      id != parteArray[parte]
                         ? styles.partNoSelected
                         : styles.partSelected,
                     ]}>
