@@ -36,7 +36,7 @@ const disponibles = {
   11: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
 };
 
-const len = [28, 9, 15, 19, 7, 14, 56, 281, 198, 31, 40, 11];
+const len = [28, 9, 15, 19, 7, 14, 56, 281, 198, 31, 39, 11];
 const srcNames = [
   'baseImages',
   'vitiligoImages',
@@ -70,11 +70,11 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
   // const {Info} = route.params;
   const [parte, setParte] = useState(0);
 
-  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
   const [parteArray, setParteArray] = useState(initialState);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
-
+  console.log(parteArray[7], bangsImages[`i${parteArray[7]}`].uri);
   const handlePartes = (p: number, id: number) => {
     if (!(p > 8 && disponibles[p][id] === 0)) {
       console.log(id, p);
@@ -195,7 +195,19 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                               source={bangsImages[`i${parteArray[7]}`].uri}>
                               <ImageBackground
                                 key="accesories"
-                                style={{flex: 1}}
+                                style={[
+                                  styles.container,
+                                  parteArray[10] > 27 && parteArray[10] < 35
+                                    ? {marginTop: RSize(0.05, 'h')}
+                                    : parteArray[10] > 35
+                                    ? {marginTop: RSize(0.1, 'h')}
+                                    : {opacity: 1},
+                                ]}
+                                imageStyle={[
+                                  parteArray[10] !== 0
+                                    ? {opacity: 1}
+                                    : {opacity: 0},
+                                ]}
                                 source={
                                   accesoriesImages[`i${parteArray[10]}`].uri
                                 }

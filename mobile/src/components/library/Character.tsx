@@ -13,9 +13,10 @@ import {hairImages} from '../../assets/perfil/9hair/handler/hairImages';
 import {clothesImages} from '../../assets/perfil/10clothes/handler/clothesImages';
 import {accesoriesImages} from '../../assets/perfil/11accesories/handler/accesoriesImages';
 import {backgroundImages} from '../../assets/perfil/12background/handler/backgroundImages';
+import {RSize} from '../../utils/responsive';
 
 const Character = () => {
-  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 35, 1];
+  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
   const [parteArray] = useState(initialState);
   return (
     <View style={styles.container}>
@@ -71,8 +72,17 @@ const Character = () => {
                             source={bangsImages[`i${parteArray[7]}`].uri}>
                             <ImageBackground
                               key="accesories"
-                              imageStyle={{borderRadius: 80}}
-                              style={{flex: 1}}
+                              style={[
+                                styles.container,
+                                parteArray[10] > 30
+                                  ? {marginTop: RSize(0.05, 'h')}
+                                  : {opacity: 1},
+                              ]}
+                              imageStyle={[
+                                parteArray[10] !== 0
+                                  ? {opacity: 1, borderRadius: 80}
+                                  : {opacity: 0},
+                              ]}
                               source={
                                 accesoriesImages[`i${parteArray[10]}`].uri
                               }

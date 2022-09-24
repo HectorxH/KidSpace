@@ -119,9 +119,6 @@ const accesoriesImages: {[key: string]: {[key: string]: ImageSourcePropType}} =
     i38: {
       uri: require('../38.png'),
     },
-    i39: {
-      uri: require('../39.png'),
-    },
   };
 
 export {accesoriesImages};

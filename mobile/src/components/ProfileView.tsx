@@ -85,7 +85,7 @@ const ProfileView = ({navigation}: ProfileProps) => {
             flexWrap: 'wrap',
             justifyContent: 'center',
           }}>
-          {Object.keys(medallas).map((medalla, id) => (
+          {medallas.map((medalla, id) => (
             <Image
               key={id}
               style={[
@@ -94,7 +94,7 @@ const ProfileView = ({navigation}: ProfileProps) => {
                   ? styles.medallaColor
                   : styles.medallaColorGanada,
               ]}
-              source={medallasImages[`${medalla}`].uri}
+              source={medallasImages[`i${id}`].uri}
             />
           ))}
         </View>
