@@ -1,31 +1,36 @@
 import React, { useState } from 'react';
 import {
-  Checkbox,
   Grid,
   TextField,
-  FormControlLabel,
   Paper,
   Button,
   Alert,
+  Stack,
+  Typography,
+  Select,
+  MenuItem,
+  SelectChangeEvent,
+  FormControl,
+  InputLabel,
 } from '@mui/material';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { IUser } from '../types/user';
+import logo from '../assets/logo-horizontal.png';
 
 const LoginView = () => {
-  const [checked, setChecked] = useState(true);
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
+  const [tipo, setTipo] = useState('profesor');
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
   const { login } = useAuth();
+  const navigate = useNavigate();
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked);
-  };
-
-  const handleClick = async () => {
+  const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     try {
       const res = await axios.post<any, {data: IUser}>(
         `${process.env.REACT_APP_BACKEND_URL}/login`,
@@ -50,38 +55,42 @@ const LoginView = () => {
     setPassword(event.target.value);
   };
 
+  const handleTipoChange = (event: SelectChangeEvent<string>) => {
+    setTipo(event.target.value);
+  };
+
   return (
-    <div style={{ padding: 30 }}>
-      <Paper>
-        <Grid
-          container
-          spacing={3}
-          direction="column"
-          alignItems="center"
-          justifyContent="center"
-        >
-          <Grid item xs={12}>
-            <TextField label="Username" onChange={handleUsernameChange} />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField label="Password" type="password" onChange={handlePasswordChange} />
-          </Grid>
-          <Grid item xs={12}>
-            <FormControlLabel
-              control={(
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  inputProps={{ 'aria-label': 'primary checkbox' }}
-                />
-              )}
-              label="Keep me logged in"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <Button fullWidth onClick={handleClick}> Login </Button>
-          </Grid>
-          <Grid item xs={12}>
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      style={{ minHeight: '100vh', backgroundColor: '#5c9dec' }}
+    >
+      <Paper
+        sx={{
+          px: 5, pb: 5, pt: 2, width: '40vw', my: 5,
+        }}
+        elevation={3}
+      >
+        <form onSubmit={handleClick}>
+          <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
+            <Stack alignItems="center">
+              <img src={logo} alt="Logo Kidspace" width="60%" />
+              <Typography variant="h5">Iniciar sesion</Typography>
+            </Stack>
+            <FormControl fullWidth>
+              <InputLabel id="select-label">Tipo de cuenta</InputLabel>
+              <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
+                <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
+                <MenuItem value="apoderado"><Typography>Apoderado</Typography></MenuItem>
+              </Select>
+            </FormControl>
+            <Stack spacing={2}>
+              <TextField required label="Nombre de Usuario" onChange={handleUsernameChange} />
+              <TextField required type="password" label="Contraseña" onChange={handlePasswordChange} />
+            </Stack>
             {correct && (
               <Alert severity="success">
                 Sesión Iniciada
@@ -92,11 +101,64 @@ const LoginView = () => {
                 Usuario o Contraseña Incorrecta
               </Alert>
             )}
-          </Grid>
-        </Grid>
+            <Stack spacing={1}>
+              <Button type="submit" variant="contained">Iniciar sesion</Button>
+              <Button variant="outlined" onClick={() => navigate('/registro')}>Registrar  </Button>
+            </Stack>
+          </Stack>
+        </form>
       </Paper>
-    </div>
+    </Grid>
   );
+
+  // return (
+  //   <div style={{ padding: 30 }}>
+  //     <Paper>
+  //       <Grid
+  //         container
+  //         spacing={3}
+  //         direction="column"
+  //         alignItems="center"
+  //         justifyContent="center"
+  //       >
+  //         <Grid item xs={12}>
+  //           <TextField label="Username" onChange={handleUsernameChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <TextField label="Password" type="password" onChange={handlePasswordChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <FormControlLabel
+  //             control={(
+  //               <Checkbox
+  //                 checked={checked}
+  //                 onChange={handleChange}
+  //                 inputProps={{ 'aria-label': 'primary checkbox' }}
+  //               />
+  //             )}
+  //             label="Keep me logged in"
+  //           />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <Button fullWidth onClick={handleClick}> Login </Button>
+  //           <Button fullWidth onClick={() => navigate('/registrar')}> Registrar </Button>
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           {correct && (
+  //             <Alert severity="success">
+  //               Sesión Iniciada
+  //             </Alert>
+  //           )}
+  //           {error && (
+  //             <Alert severity="error">
+  //               Usuario o Contraseña Incorrecta
+  //             </Alert>
+  //           )}
+  //         </Grid>
+  //       </Grid>
+  //     </Paper>
+  //   </div>
+  // );
 };
 
 export default LoginView;

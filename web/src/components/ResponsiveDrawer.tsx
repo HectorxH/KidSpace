@@ -22,11 +22,11 @@ import {
 } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { Button, Menu, MenuItem } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
 import axios from 'axios';
 import { useAuth } from '../hooks/useAuth';
 
-const logo = require('../assets/logo.png');
+import logo from '../assets/logo.png';
 
 interface DrawerProps {
   drawerWidth : any,
@@ -71,20 +71,6 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <BarChartIcon />,
       path: '/estadisticas',
       visible: true,
-    },
-    {
-      uid: 5,
-      text: 'Login',
-      icon: <HomeIcon />,
-      path: '/login',
-      visible: false,
-    },
-    {
-      uid: 6,
-      text: 'Registro',
-      icon: <HomeIcon />,
-      path: '/registro',
-      visible: false,
     },
   ];
 
@@ -200,23 +186,14 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {seccionActual}
           </Typography>
-          { user
-          && (
-            <>
-              <Typography>
-                {`${user.nombres} ${user.apellidos}`}
-              </Typography>
-              <IconButton onClick={handleClick}>
-                <AccountCircle />
-              </IconButton>
-            </>
-          )}
-          {!user && (
-            <>
-              <Button component={Link} to="/login">Login</Button>
-              <Button component={Link} to="/registro">Registrate</Button>
-            </>
-          )}
+          <>
+            <Typography>
+              {`${user?.nombres} ${user?.apellidos}`}
+            </Typography>
+            <IconButton onClick={handleClick}>
+              <AccountCircle />
+            </IconButton>
+          </>
           <Menu
             id="demo-positioned-menu"
             aria-labelledby="demo-positioned-button"

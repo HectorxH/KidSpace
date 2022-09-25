@@ -23,6 +23,7 @@
     "axios": "^0.27.2",
     "date-fns": "^2.29.2",
     "lodash": "^4.17.21",
+    "lottie-react": "^2.3.1",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.34",
     "pusher-js": "^7.1.1-beta",

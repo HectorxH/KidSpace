@@ -1,26 +1,33 @@
 /* eslint-disable react/require-default-props */
-import React from 'react';
-import { Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import LoadingView from '../views/LoadingView';
 
 interface IProtectedRouteProps {
-  children: any,
   loggedin?: boolean,
   loggedout?: boolean
 }
 
 const ProtectedRoute : React.FC<IProtectedRouteProps> = ({
-  children,
   loggedin = false,
   loggedout = false,
 }) => {
   const { user } = useAuth();
-  console.log(user);
-  if ((loggedout && user) || (loggedin && !user)) {
-    // user is not authentprofileicated
-    return <Navigate to="/" />;
-  }
-  return children;
+  const [lodaing, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(`user: ${user}`);
+    if (((loggedout && user) || (loggedin && !user))) {
+      // user is not authentprofileicated
+      navigate('/login');
+    }
+    setLoading(false);
+  }, []);
+
+  if (lodaing) return <LoadingView />;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

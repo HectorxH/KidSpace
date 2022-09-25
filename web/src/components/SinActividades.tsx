@@ -13,9 +13,10 @@ const SinActividades = ({ mainmsg, submsg }: NotFoundProps) => (
     <Box
       component="img"
       sx={{
-        maxHeight: { xs: 100, md: 300 },
-        maxWidth: { xs: 100, md: 300 },
+        maxHeight: { xs: 100, md: 250 },
+        maxWidth: { xs: 100, md: 250 },
         alignSelf: 'center',
+        m: 2,
       }}
       alt="Registros no encontrados"
       src={notfound}
