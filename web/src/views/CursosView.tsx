@@ -48,14 +48,24 @@ const CursosView = () => {
       {!loading
         && (
         // <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
-          <Grid container spacing={4}>
+          <Box
+            // direction="row"
+            // spacing={2}
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              margin: 5,
+              p: 1,
+              m: 1,
+            }}
+          >
             {cursos.map(({
               nombre, _id,
             }) => (
-              <Grid item key={_id} xs={12} sm={6} md={4}>
+              <Grid>
                 <Card
                   sx={{
-                    borderRadius: '20px', alignItems: 'center', width: '25vw', minWidth: 250,
+                    borderRadius: '20px', alignItems: 'center', width: '25vw', minWidth: 250, margin: 1,
                   }}
                   className="MuiCard-root"
                   key={_id}
@@ -95,10 +105,10 @@ const CursosView = () => {
                 </Card>
               </Grid>
             ))}
-            <Grid item key={1} xs={12} sm={6} md={4}>
+            <Stack>
               <Card
                 sx={{
-                  borderRadius: '20px', width: '25vw', minWidth: 250, height: '100%',
+                  borderRadius: '20px', width: '25vw', minWidth: 250, height: '100%', margin: 1,
                 }}
                 className="MuiCard-root"
               >
@@ -122,8 +132,8 @@ const CursosView = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </Grid>
-          </Grid>
+            </Stack>
+          </Box>
         // </Stack>
         )}
     </Stack>
