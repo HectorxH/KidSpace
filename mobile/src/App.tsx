@@ -42,16 +42,6 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="ProfileView"
-            component={ProfileView}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="EditCharacter"
-            component={EditCharacter}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
             name="InicioView"
             component={InicioView}
             options={{headerShown: false}}
@@ -74,6 +64,16 @@ const App = () => {
           <Stack.Screen
             name="MainMap"
             component={MainMap}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProfileView"
+            component={ProfileView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="EditCharacter"
+            component={EditCharacter}
             options={{headerShown: false}}
           />
           <Stack.Screen

@@ -41,6 +41,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
   const [user, setUser] = useState('');
+  const [apellidos, setApellidos] = useState('');
   const [cantMonedas, setCantMonedas] = useState(0);
   const [completadas, setCompletadas] = useState('[]');
 
@@ -71,6 +72,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       setMessage(allMessages);
       if (userData) {
         setUser(userData?.nombres);
+        setApellidos(userData?.apellidos);
       } else {
         navigation.navigate('InicioView');
       }
@@ -123,7 +125,8 @@ const MainMap = ({navigation}: MainMapProps) => {
     loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
-
+  // console.log(userData?.apellidos);
+  console.log(user);
   const HandleAct = async () => {
     try {
       //const jsonMessages = await AsyncStorage.getItem('@message');
@@ -274,7 +277,15 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={() => navigation.push('ProfileView')}>
+              onPress={() =>
+                navigation.push('ProfileView', {
+                  Info: {
+                    nombres: user,
+                    apellidos: apellidos,
+                    monedas: cantMonedas,
+                  },
+                })
+              }>
               <Text style={styles.subtitle}>Perfil</Text>
             </Button>
             <Button

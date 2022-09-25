@@ -10,13 +10,10 @@ import Character from './library/Character';
 
 const medallas = [1, 0, 1, 0, 1, 1, 1, 1];
 
-const ProfileView = ({navigation}: ProfileProps) => {
-  // const {data} = route.params;
+const ProfileView = ({navigation, route}: ProfileProps) => {
+  const {Info} = route.params;
   const data = {
-    nombres: 'Skylar',
-    apellidos: 'Cirrus',
     curso: 'Lost in the cloud',
-    monedas: 200,
   };
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   console.log(Object.keys(medallas));
@@ -46,14 +43,14 @@ const ProfileView = ({navigation}: ProfileProps) => {
         </View>
         <View style={{flex: 2.1 / 4}}>
           <Text style={styles.name}>
-            {data.nombres} {data.apellidos}
+            {Info.nombres} {Info.apellidos}
           </Text>
           <Chip style={styles.chip}>
             <Text style={styles.textChip}>Curso: {data.curso}</Text>
           </Chip>
           <Chip style={styles.chip}>
             <Image style={styles.icon} source={images.moneda.uri} />
-            <Text style={styles.textChip}> {data.monedas}</Text>
+            <Text style={styles.textChip}> {Info.monedas}</Text>
           </Chip>
           <Button
             color="#FF8A00"
