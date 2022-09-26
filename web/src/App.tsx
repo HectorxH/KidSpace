@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import Layout from './layout/Layout';
+import LayoutApoderado from './layout/LayoutApoderado';
 import NotFoundView from './views/NotFoundView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
 import UnidadView from './views/UnidadView';
@@ -23,6 +24,9 @@ import AgregarCursoView from './views/AgregarCursoView';
 import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
+import PupilosView from './views/PupilosView';
+import EstadisticasApoderadoView from './views/EstadisticasApoderadoView';
+
 import QRView from './views/QRView';
 // import CursoView from './views/CursoView';
 import EditarEstudianteView from './views/EditarEstudianteView';
@@ -80,6 +84,10 @@ const App = () => (
               <Route path="/registro" element={<RegistroView />} />
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
+              <Route element={<LayoutApoderado />}>
+                <Route path="/pupilos" element={<PupilosView />} />
+                <Route path="/pupilos/:pupiloId/estadisticas" element={<EstadisticasApoderadoView />} />
+              </Route>
               <Route element={<Layout />}>
                 <Route path="/" element={<PanelControlView />} />
                 <Route path="/cursos" element={<CursosView />} />
