@@ -30,12 +30,18 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 import {EditCharacterProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-const disponibles = {
-  9: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31
-  10: [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], //39
-  11: [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
-};
 
+const Arraydisponibles = [
+  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31 de largo
+  [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], //39
+  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+];
+
+interface IDisponibles {
+  9: number[];
+  10: number[];
+  11: number[];
+}
 const len = [28, 9, 15, 19, 7, 14, 56, 281, 198, 31, 39, 11];
 const srcNames = [
   'baseImages',
@@ -69,14 +75,14 @@ const partes = [
 const EditCharacter = ({navigation}: EditCharacterProps) => {
   // const {Info} = route.params;
   const [parte, setParte] = useState(0);
-
+  const [disponibles, setDisponibles] = useState(Arraydisponibles);
   const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
   const [parteArray, setParteArray] = useState(initialState);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
   console.log(parteArray[7], bangsImages[`i${parteArray[7]}`].uri);
   const handlePartes = (p: number, id: number) => {
-    if (!(p > 8 && disponibles[p][id] === 0)) {
+    if (!(p > 8 && disponibles[p - 9][id] === 0)) {
       console.log(id, p);
       setSaved(false);
       parteArray.splice(p, 1, id);
@@ -303,7 +309,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
                         key={id}
                         style={[
                           styles.opcion,
-                          parte > 8 && disponibles[parte][id] === 0
+                          parte > 8 && disponibles[parte - 9][id] === 0
                             ? styles.opcionNoDisponible
                             : styles.opcionDisponible,
                         ]}
