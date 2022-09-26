@@ -11,7 +11,13 @@ const router = express.Router();
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const estudiante = await Estudiante.findById(id).populate(['user', { path: 'apoderados', populate: { path: 'user' } }]);
+    const estudiante = await Estudiante
+      .findById(id)
+      .populate([
+        'user',
+        { path: 'apoderados', populate: { path: 'user' } },
+        { path: 'curso', select: '_id nombre' },
+      ]);
     res.json({ estudiante });
   } catch (e) {
     console.log(e);

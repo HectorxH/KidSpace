@@ -73,7 +73,7 @@ app.post('/register', async (req, res) => {
     const {
       nombres, apellidos, tipo, email, cursoId, estudianteId,
     } = req.body;
-    let { username, password } = req.body;
+    let { username, password } : {username: string, password: string} = req.body;
     if (_.some(req.body, _.isNil)) {
       console.log(req.body);
       return res.sendStatus(404);
@@ -173,8 +173,10 @@ app.post(
   },
   async (req, res) => {
     try {
+      const { tipo } = req.body;
       const user = await User.findOne({ username: req.body.username });
-      return res.json(user);
+      if (tipo === user?.tipo) { return res.json(user); }
+      throw Error('El usuario no existe');
     } catch (e) {
       console.log(e);
       return res.sendStatus(500);

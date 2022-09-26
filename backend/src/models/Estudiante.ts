@@ -22,7 +22,7 @@ export const estudianteSchema = new Schema<IEstudiante>({
   profesor: { type: Types.ObjectId, ref: 'Profesor' },
   apoderados: [{ type: Types.ObjectId, ref: 'Apoderado', default: [] }],
   monedas: { type: Number, default: 0, min: 0 },
-  personaje: { type: [Number], validate: [lenghtLimit, 'Lenght should be 12'] },
+  personaje: { type: [Number], validate: [lenghtLimit, 'Lenght should be 12'], default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
   progreso: Object,
   compras: [[Number]],
 });

@@ -34,7 +34,7 @@ const LoginView = () => {
     try {
       const res = await axios.post<any, {data: IUser}>(
         `${process.env.REACT_APP_BACKEND_URL}/login`,
-        { username, password },
+        { username, password, tipo },
       );
       login(res.data);
       console.log(res);
