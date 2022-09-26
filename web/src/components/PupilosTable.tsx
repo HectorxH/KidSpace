@@ -31,7 +31,7 @@ const Row = ({ row }:RowParams) => {
   const navigate = useNavigate();
 
   const handleVerStats = () => {
-    navigate('/pupilos');
+    navigate(`/pupilos/${_id}/estadisticas`);
   };
   console.log(user);
   return (
