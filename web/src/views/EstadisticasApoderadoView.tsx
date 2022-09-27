@@ -44,6 +44,7 @@ ChartJS.register(
   Tooltip,
   Legend,
 );
+
 ChartJS.register(ArcElement, Tooltip, Legend);
 const data = {
   labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
@@ -67,7 +68,7 @@ const options = {
 };
 
 const letras = ['S', 'T', 'E', 'A', 'M'];
-
+const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 const EstadisticasApoderadoView = () => {
   const params = useParams();
   const [curso, setCurso] = useState<ICurso>();
@@ -178,7 +179,7 @@ const EstadisticasApoderadoView = () => {
                 >
                   {(letras.map((letra, id) => (
                     <Typography sx={{
-                      color: row.steam[id] !== 0 ? row.steam[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 50, margin: 0.5,
+                      color: row.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 50, margin: 0.5,
                     }}
                     ><b>{letra}</b>
                     </Typography>
@@ -223,7 +224,7 @@ const EstadisticasApoderadoView = () => {
                   {(letras.map((letra, i) => (
                     <Typography
                       sx={{
-                        color: act.steam[i] !== 0 ? act.steam[i] : '#B5B5B5', fontSize: 50, margin: 0.5,
+                        color: act.steam[i] !== 0 ? colores[i] : '#B5B5B5', fontSize: 50, margin: 0.5,
                       }}
                     ><b>{letra}</b>
                     </Typography>

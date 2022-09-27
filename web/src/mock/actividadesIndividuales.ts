@@ -14,7 +14,7 @@ export default [
     title: 'Informática y algoritmos en nuestra vida',
     estado: 'Completada',
     repeticiones: 0,
-    steam: ['#5C9DEC', '#B878EA', 0, 0, 0],
+    steam: [1, 1, 0, 0, 0],
   },
   {
     id: 1,
@@ -22,7 +22,7 @@ export default [
     title: '¿Qué es un computador?',
     estado: 'Sin completar',
     repeticiones: 0,
-    steam: [0, '#B878EA', '#FF8A00', 0, 0],
+    steam: [0, 1, 1, 0, 0],
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export default [
     title: 'Tierra, Luna y Sol',
     estado: 'Completada',
     repeticiones: 0,
-    steam: ['#5C9DEC', 0, 0, 0, '#A1C96A'],
+    steam: [1, 0, 0, 0, 1],
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ export default [
     title: '¿Qué vemos en el cielo nocturno?',
     estado: 'Sin completar',
     repeticiones: 0,
-    steam: ['#5C9DEC', 0, '#FF8A00', 0, '#A1C96A'],
+    steam: [1, 0, 1, 0, 1],
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ export default [
     title: 'Interpretando etiquetas de los alimentos',
     estado: 'Completada',
     repeticiones: 0,
-    steam: ['#5C9DEC', 0, 0, 0, '#A1C96A'],
+    steam: [1, 0, 0, 0, 1],
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ export default [
     title: 'Analizando nuestra dieta',
     estado: 'Completada',
     repeticiones: 1,
-    steam: ['#5C9DEC', 0, 0, 0, '#A1C96A'],
+    steam: [1, 0, 0, 0, 1],
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ export default [
     title: 'Teoría de colores',
     estado: 'Sin completar',
     repeticiones: 0,
-    steam: ['#5C9DEC', 0, 0, '#F3C550', 0],
+    steam: [1, 0, 0, 1, 0],
   },
   {
     id: 7,
@@ -70,6 +70,6 @@ export default [
     title: 'Diseño gráfico en nuestro alrededor',
     estado: 'Completada',
     repeticiones: 0,
-    steam: [0, 0, '#FF8A00', '#F3C550', 0],
+    steam: [0, 0, 1, 1, 0],
   },
 ];
