@@ -49,27 +49,44 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       text: 'Panel de control',
       icon: <HomeIcon />,
       path: '/',
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
     },
     {
       uid: 2,
-      text: 'Cursos que dicto',
-      icon: <HistoryEduIcon />,
-      path: '/cursos',
+      text: 'Pagina principal',
+      icon: <HomeIcon />,
+      path: '/',
+      restricted: true,
+      tipo: ['apoderado'],
       visible: true,
     },
     {
       uid: 3,
-      text: 'Actividades',
-      icon: <MenuBookIcon />,
-      path: '/actividades',
+      text: 'Cursos que dicto',
+      icon: <HistoryEduIcon />,
+      path: '/cursos',
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
     },
     {
       uid: 4,
+      text: 'Actividades',
+      icon: <MenuBookIcon />,
+      path: '/actividades',
+      restricted: true,
+      tipo: ['profesor'],
+      visible: true,
+    },
+    {
+      uid: 5,
       text: 'Estadisticas',
       icon: <BarChartIcon />,
       path: '/estadisticas',
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
     },
   ];
@@ -98,11 +115,16 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({
-          uid, text, icon, path, visible,
+          uid, text, icon, path, restricted, tipo, visible,
         }) => {
           const active = useMatch({ path: `${path}/*` }) !== null;
+          if (restricted && user && tipo && !tipo.includes(user.tipo)) {
+            return null;
+          }
           if (active) seccionActual = text;
-          if (!visible) return '';
+          if (!visible) {
+            return null;
+          }
           return (
             <ListItem
               disablePadding

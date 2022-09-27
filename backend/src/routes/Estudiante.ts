@@ -11,7 +11,13 @@ const router = express.Router();
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const estudiante = await Estudiante.findById(id).populate(['user', { path: 'apoderados', populate: { path: 'user' } }]);
+    const estudiante = await Estudiante
+      .findById(id)
+      .populate([
+        'user',
+        { path: 'apoderados', populate: { path: 'user' } },
+        { path: 'curso', select: '_id nombre' },
+      ]);
     res.json({ estudiante });
   } catch (e) {
     console.log(e);
@@ -63,7 +69,7 @@ router.get('/:id/apoderados', async (req, res) => {
     res.json({ apoderados: estudiante?.apoderados });
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
@@ -72,24 +78,25 @@ router.put('/:id/apoderados', async (req, res) => {
     const { id } = req.params;
     const { apoderadoId } = req.body;
     await Estudiante.findByIdAndUpdate(id, { $addToSet: { apoderados: apoderadoId } });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
 router.post('/log', async (req, res) => {
   try {
     const {
-      tipo, actividad, unidad, categoria, estudiante, curso, quizFinal, duracion, fecha,
+      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
     } = req.body;
     const log = new ActividadLog({
-      tipo, actividad, unidad, categoria, estudiante, curso, quizFinal, duracion, fecha,
+      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
     });
     log.save();
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
@@ -100,7 +107,7 @@ router.get('/:id/monedas', async (req, res) => {
     res.json(estudiante?.monedas);
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
@@ -109,9 +116,10 @@ router.post('/:id/monedas', async (req, res) => {
     const { id } = req.params;
     const { monedas } = req.body;
     await Estudiante.findByIdAndUpdate(id, { monedas });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
@@ -122,7 +130,7 @@ router.get('/:id/personaje', async (req, res) => {
     res.json(estudiante?.personaje);
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
   }
 });
 
@@ -131,9 +139,33 @@ router.post('/:id/personaje', async (req, res) => {
     const { id } = req.params;
     const { personaje } = req.body;
     await Estudiante.findByIdAndUpdate(id, { personaje });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
-    res.send(500);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/:id/compras', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const estudiante = await Estudiante.findById(id);
+    res.json(estudiante?.personaje);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/:id/compras', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { compras } = req.body;
+    await Estudiante.findByIdAndUpdate(id, { compras });
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
   }
 });
 

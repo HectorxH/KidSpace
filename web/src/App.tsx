@@ -79,8 +79,8 @@ const App = () => (
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
             </Route>
-            <Route element={<ProtectedRoute loggedin />}>
-              <Route element={<Layout />}>
+            <Route element={<Layout />}>
+              <Route element={<ProtectedRoute loggedin noApoderado />}>
                 <Route path="/" element={<PanelControlView />} />
                 <Route path="/cursos" element={<CursosView />} />
                 <Route path="/cursos/:cursoId/:estudianteId" element={<EditarEstudianteView />} />
@@ -93,8 +93,8 @@ const App = () => (
                 <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
                 <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
                 <Route path="/estadisticas" />
-                <Route path="/*" element={<NotFoundView />} />
               </Route>
+              <Route path="/*" element={<NotFoundView />} />
             </Route>
           </Routes>
         </AuthProvider>

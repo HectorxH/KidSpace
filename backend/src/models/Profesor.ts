@@ -18,6 +18,7 @@ export interface IProfesor {
   favoritas?: Types.Array<IFavorita>,
   planificadas?: Types.Array<IPlanificada>,
   cursos?: Types.Array<ICurso>,
+  actividades: {[key: string]: Boolean}
 }
 
 export const profesorSchema = new Schema<IProfesor>({
@@ -38,6 +39,7 @@ export const profesorSchema = new Schema<IProfesor>({
     default: [],
   },
   cursos: [{ type: Types.ObjectId, ref: 'Curso' }],
+  actividades: { type: Object, default: {} },
 });
 
 export default model<IProfesor>('Profesor', profesorSchema);
