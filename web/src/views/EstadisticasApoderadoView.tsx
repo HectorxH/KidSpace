@@ -9,7 +9,14 @@ import {
 } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-// import { Doughnut } from 'chart.js';
+import {
+  Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+} from 'chart.js';
+import { Doughnut, Line } from 'react-chartjs-2';
 import NotFoundView from './NotFoundView';
 import '../App.css';
 import PupilosTable from '../components/PupilosTable';
@@ -28,29 +35,33 @@ const info = [{
   tipo: 'Docente',
   fecha: '2022/09/26',
 }];
-
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+);
+ChartJS.register(ArcElement, Tooltip, Legend);
 const data = {
   labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
   datasets: [
     {
       label: 'Dataset 1',
-      data: [300, 50, 100, 5, 250], // Utils.numbers(NUMBER_CFG),
+      data: [12, 19, 3, 5, 3], // Utils.numbers(NUMBER_CFG),
       backgroundColor: ['#5C9DEC', '#B878EA', '#FF8A00', '#F2C144', '#A1C96A'],
     },
   ],
 };
-const letras = ['S', 'T', 'E', 'A', 'M'];
+
 const options = {
-  legend: {
-    display: true,
-    position: 'center',
-  },
-  elements: {
-    arc: {
-      borderWidth: 0,
-    },
-  },
+  responsive: true,
+  maintainAspectRatio: false,
 };
+
+const letras = ['S', 'T', 'E', 'A', 'M'];
 
 const EstadisticasApoderadoView = () => {
   const params = useParams();
@@ -88,39 +99,36 @@ const EstadisticasApoderadoView = () => {
           <b>Estadísticas por pupilo</b>
         </Typography>
       </Box>
-      <Stack direction="row" spacing={3} sx={{ px: 5 }}>
-        <Stack spacing={2} sx={{ justifyContent: 'center', alingContent: 'center' }}>
-          <Card sx={{
-            padding: 4, width: 1, borderRadius: 5, alignItems: 'center',
-          }}
-          >
-            <CardMedia
-              component="img"
-              sx={{
-                heigth: 100, width: 100, borderRadius: 100, margin: 3,
-              }}
-              image={imgStudent}
-            />
-            <Typography>
-              nombre apellido
-              {/* {nombre} {apellido} */}
-            </Typography>
-            <Typography>
-              <br />curso
-            </Typography>
-          </Card>
-        </Stack>
-        <Card sx={{ padding: 4, width: 1, borderRadius: 5 }}>
-          {/* <Doughnut data={data} options={options} /> */}
+      <Stack direction="row" spacing={3} sx={{ px: 5, justifyContent: 'center', alingContent: 'center' }}>
+        <Card sx={{
+          padding: 4, width: 2 / 5, borderRadius: 5, alignItems: 'center',
+        }}
+        >
+          <CardMedia
+            component="img"
+            sx={{
+              heigth: 100, width: 100, borderRadius: 100, margin: 3,
+            }}
+            image={imgStudent}
+          />
+          <Typography>
+            nombre apellido
+            {/* {nombre} {apellido} */}
+          </Typography>
+          <Typography>
+            <br />curso
+          </Typography>
+        </Card>
+        <Card sx={{ padding: 4, width: 3 / 5, borderRadius: 5 }}>
+          <Doughnut data={data} options={options} />
         </Card>
       </Stack>
       <Stack spacing={3} sx={{ px: 5 }}>
-        <Card sx={{ padding: 4, width: 1, borderRadius: 5 }}>
-          <CardMedia
-            component="img"
-            sx={{ heigth: 100, width: 100 }}
-            image={img}
-          />
+        <Card sx={{
+          padding: 4, width: 1, borderRadius: 5, heigth: '15vh',
+        }}
+        >
+          <Line options={options} data={data} />
         </Card>
       </Stack>
       <Stack spacing={3} sx={{ px: 5, py: 1 }}>
