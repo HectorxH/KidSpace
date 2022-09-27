@@ -59,6 +59,11 @@ const data = {
 const options = {
   responsive: true,
   maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      position: 'right' as const,
+    },
+  },
 };
 
 const letras = ['S', 'T', 'E', 'A', 'M'];
@@ -99,36 +104,45 @@ const EstadisticasApoderadoView = () => {
           <b>Estadísticas por pupilo</b>
         </Typography>
       </Box>
-      <Stack direction="row" spacing={3} sx={{ px: 5, justifyContent: 'center', alingContent: 'center' }}>
+      <Stack
+        direction="row"
+        spacing={3}
+        sx={{
+          px: 5, justifyContent: 'center', alingContent: 'center', height: '400px',
+        }}
+      >
         <Card sx={{
-          padding: 4, width: 2 / 5, borderRadius: 5, alignItems: 'center',
+          padding: 3, width: 2 / 6, borderRadius: 5, alignItems: 'center',
         }}
         >
           <CardMedia
             component="img"
             sx={{
-              heigth: 100, width: 100, borderRadius: 100, margin: 3,
+              heigth: 150, width: 150, borderRadius: 100, marginTop: 3,
             }}
             image={imgStudent}
           />
           <Typography>
-            nombre apellido
-            {/* {nombre} {apellido} */}
+            nombre apellido apellido {/* {nombre} {apellido} */}
           </Typography>
           <Typography>
-            <br />curso
+            Curso: why feria
           </Typography>
         </Card>
-        <Card sx={{ padding: 4, width: 3 / 5, borderRadius: 5 }}>
+        <Card sx={{ padding: 1, width: 4 / 6, borderRadius: 5 }}>
           <Doughnut data={data} options={options} />
         </Card>
       </Stack>
-      <Stack spacing={3} sx={{ px: 5 }}>
+      <Stack spacing={2} sx={{ px: 5 }}>
         <Card sx={{
-          padding: 4, width: 1, borderRadius: 5, heigth: '15vh',
+          padding: 4, width: 1, borderRadius: 5,
         }}
         >
-          <Line options={options} data={data} />
+          <Line
+            height="100px"
+            options={{ maintainAspectRatio: false }}
+            data={data}
+          />
         </Card>
       </Stack>
       <Stack spacing={3} sx={{ px: 5, py: 1 }}>
