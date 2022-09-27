@@ -18,8 +18,16 @@ import { useAuth } from '../hooks/useAuth';
 
 import actividades from '../mock/actividades';
 import actividadesIndividuales from '../mock/actividadesIndividuales';
+import HistorialTable from '../components/HistorialTable';
 
 const img = require('../assets/statistics.png');
+const imgStudent = require('../assets/webApoderados/student.png');
+
+const info = [{
+  titulo: 'NombreActividad',
+  tipo: 'Docente',
+  fecha: '2022/09/26',
+}];
 
 const data = {
   labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
@@ -91,10 +99,10 @@ const EstadisticasApoderadoView = () => {
               sx={{
                 heigth: 100, width: 100, borderRadius: 100, margin: 3,
               }}
-              image={img}
+              image={imgStudent}
             />
             <Typography>
-              nombre
+              nombre apellido
               {/* {nombre} {apellido} */}
             </Typography>
             <Typography>
@@ -166,13 +174,10 @@ const EstadisticasApoderadoView = () => {
           sx={{
             display: 'flex',
             flexWrap: 'wrap',
-            margin: 5,
-            p: 1,
-            m: 1,
           }}
         >
           {(actividadesIndividuales.map((act, id) => (
-            <Card key={act.id} sx={{ borderRadius: 5, width: 350, margin: 2 }}>
+            <Card key={act.id} sx={{ borderRadius: 5, width: '18vw', margin: 2 }}>
               <CardMedia
                 component="img"
                 image={act.img}
@@ -209,6 +214,7 @@ const EstadisticasApoderadoView = () => {
         <Typography variant="h4">
           Historial de actividades
         </Typography>
+        <HistorialTable rows={info} />
       </Stack>
     </Stack>
   );

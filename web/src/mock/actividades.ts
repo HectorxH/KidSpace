@@ -1,5 +1,5 @@
 const unidad1ImgDiagramas : string = require('../assets/webApoderados/diagramas.png');
-const unidad2ImgSolucionesTecnologicas : string = require('../assets/webApoderados/materiales.png');
+const unidad2ImgSolucionesTecnologicas : string = require('../assets/webApoderados/solucionesTecnologicas.png');
 const unidad3ImgMateriales : string = require('../assets/webApoderados/materiales.png');
 const unidad2ImgReciclaje : string = require('../assets/webApoderados/reciclaje.png');
 const unidad3ImgDiseños : string = require('../assets/webApoderados/diseños.png');

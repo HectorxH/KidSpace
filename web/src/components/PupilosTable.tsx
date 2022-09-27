@@ -13,7 +13,7 @@ import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
 
-const img = require('../assets/statistics.png');
+const imgStudent = require('../assets/webApoderados/student.png');
 
 interface RowParams {
   row: IEstudiante,
@@ -51,9 +51,10 @@ const Row = ({ row }:RowParams) => {
             component="img"
             sx={{
               alignSelf: 'left',
-              maxHeight: 100,
+              maxHeight: 50,
+              margin: 1,
             }}
-            src={img}
+            src={imgStudent}
           />
           <Stack direction="column" sx={{ marginLeft: 1 }}>
             <Typography>
