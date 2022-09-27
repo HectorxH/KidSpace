@@ -12,6 +12,7 @@ import CursoRouter from './routes/Curso';
 import EstudianteRouter from './routes/Estudiante';
 import ApoderadoRouter from './routes/Apoderado';
 import ActivityRouter from './routes/Activity';
+import EstadisticasRouter from './routes/Estadisticas';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
@@ -198,10 +199,7 @@ app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
-
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use('/Estadistivas', checkAuth, EstadisticasRouter);
 
 app.listen(port, () => {
   console.log(`App listening on http://localhost:${port}`);
