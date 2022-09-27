@@ -32,11 +32,7 @@ const Row = ({ row }:RowParams) => {
     <TableRow
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
     >
-      <TableCell
-        sx={{ cursor: 'pointer', '&:hover': { bgcolor: 'WhiteSmoke' } }}
-        component="th"
-        scope="row"
-      >
+      <TableCell>
         {titulo}
       </TableCell>
       <TableCell>{tipo}</TableCell>
