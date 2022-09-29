@@ -18,7 +18,12 @@ import {
   LineElement,
   Title,
 } from 'chart.js';
-import { Doughnut, Line, Bar } from 'react-chartjs-2';
+import {
+  Doughnut, Line, Bar, Pie,
+} from 'react-chartjs-2';
+import CheckIcon from '@mui/icons-material/Check';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ClearIcon from '@mui/icons-material/Clear';
 import NotFoundView from './NotFoundView';
 import '../App.css';
 // import PupilosTable from '../components/PupilosTable';
@@ -111,6 +116,7 @@ const preguntas = [
     enunciado: 'El software Excel permite crear tablas y ______',
     alternativas: ['imágenes', 'gráficos', 'celdas'],
     respuestaCorrecta: 'gráficos',
+    data: [10, 5, 2],
   },
   {
     id: 1,
@@ -118,8 +124,41 @@ const preguntas = [
     enunciado: 'Para elaborar un gráfico, debemos usar valores guardados en ______',
     alternativas: ['una lista', 'una celda', 'una tabla'],
     respuestaCorrecta: 'una tabla',
+    data: [9, 6, 2],
   },
 ];
+
+const dataGrafico = (d:number[]) => {
+  console.log(d);
+  const datosDona = {
+    labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
+    datasets: [
+      {
+        label: 'Pregunta',
+        data: d,
+        backgroundColor: ['#A1C96A', '#EA6A6A', 'gray'],
+      },
+    ],
+  };
+
+  return datosDona;
+};
+
+// const dataGrafico = (d:number[]) => {
+//   console.log(d);
+//   const datosDona = {
+//     labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
+//     datasets: [
+//       {
+//         label: 'Pregunta',
+//         data: d,
+//         backgroundColor: ['#A1C96A', '#EA6A6A', 'gray'],
+//       },
+//     ],
+//   };
+
+//   return datosDona;
+// };
 
 const ActividadDocenteView = () => {
   const params = useParams();
@@ -154,7 +193,7 @@ const ActividadDocenteView = () => {
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-          <b>Estadísticas por pupilo</b>
+          <b>Estadísticas por actividad docente</b>
         </Typography>
       </Box>
       <Stack
@@ -218,15 +257,15 @@ const ActividadDocenteView = () => {
         {(preguntas.map((pregunta, id) => (
           <Stack direction="row" spacing={2}>
             <Card sx={{
-              width: 1.2 / 2, borderRadius: 5,
+              width: 1.2 / 2, borderRadius: 5, backgroundColor: '#F1F3F8',
             }}
             >
               <Stack sx={{ m: 3 }}>
                 <Typography variant="h6">
-                  Pregunta {id + 1}
+                  <b>Pregunta {id + 1}</b>
                 </Typography>
                 <Typography variant="h6" sx={{ mb: 2 }}>
-                  Tipo: Selección Multiple
+                  <b>Tipo: {pregunta.tipo}</b>
                 </Typography>
                 <Typography>
                   {pregunta.enunciado}
@@ -237,7 +276,7 @@ const ActividadDocenteView = () => {
               </Stack>
             </Card>
             <Card sx={{ width: 0.8 / 2, borderRadius: 5 }}>
-              <Doughnut data={data} options={options} />
+              <Pie data={dataGrafico(pregunta.data)} options={options} />
             </Card>
           </Stack>
         )))}
@@ -255,7 +294,8 @@ const ActividadDocenteView = () => {
               <Stack direction="row" spacing={2}>
                 <Stack direction="row" spacing={2} sx={{ width: 3 / 5 }}>
                   <CardMedia
-                    component="img"
+                    component="
+                    img"
                     sx={{
                       heigth: 100, width: 100, borderRadius: 100, margin: 3,
                     }}

@@ -18,9 +18,10 @@ import {
   Title,
 } from 'chart.js';
 import { Doughnut, Line } from 'react-chartjs-2';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import NotFoundView from './NotFoundView';
 import '../App.css';
-// import PupilosTable from '../components/PupilosTable';
+import ActividadIndividualAlumnosTable from '../components/ActividadIndividualAlumnosTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
 
@@ -29,13 +30,7 @@ import { useAuth } from '../hooks/useAuth';
 // import HistorialTable from '../components/HistorialTable';
 
 const img = require('../assets/quiz.png');
-// const imgStudent = require('../assets/webApoderados/student.png');
 
-const info = [{
-  titulo: 'NombreActividad',
-  tipo: 'Docente',
-  fecha: '2022/09/26',
-}];
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -57,7 +52,26 @@ const data = {
     },
   ],
 };
-
+const infoActividadIndividualAlumnosTable = [
+  {
+    _id: 0,
+    nombre: 'Soohyun',
+    estado: 'Completada',
+    tiempo: '3min 20 s',
+  },
+  {
+    _id: 0,
+    nombre: 'Soohyeong',
+    estado: 'Completada',
+    tiempo: '1min 50 s',
+  },
+  {
+    _id: 0,
+    nombre: 'Jihwa',
+    estado: 'Sin completar',
+    tiempo: '-',
+  },
+];
 const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -103,143 +117,71 @@ const ActividadIndividualView = () => {
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-          <b>Estadísticas por pupilo</b>
+          <b>Estadísticas por actividad individual</b>
         </Typography>
       </Box>
-      {/* <Stack
+      <Stack
         direction="row"
         spacing={3}
         sx={{
           px: 5, justifyContent: 'center', alingContent: 'center', height: '400px',
         }}
       >
-        <Card sx={{
-          padding: 3, width: 2 / 6, borderRadius: 5, alignItems: 'center',
-        }}
-        >
-          <CardMedia
-            component="img"
-            sx={{
-              heigth: 150, width: 150, borderRadius: 100, marginTop: 3,
-            }}
-            image={imgStudent}
-          />
-          <Typography>
-            nombre apellido apellido
-          </Typography>
-          <Typography>
-            Curso: why feria
-          </Typography>
-        </Card>
-        <Card sx={{ padding: 1, width: 4 / 6, borderRadius: 5 }}>
+        <Stack direction="column" spacing={2} sx={{ width: 0.7 / 2 }}>
+          <Card sx={{
+            padding: 3, width: 1, borderRadius: 5, alignItems: 'center',
+          }}
+          >
+            <CardMedia
+              component="img"
+              sx={{ height: '20vh' }}
+              image={img}
+            />
+            <Typography>
+              Nombre:
+            </Typography>
+            <Typography>
+              Carrera Asociada:
+            </Typography>
+            <Divider style={{ width: '90%', alignSelf: 'center' }} />
+            <Stack
+              direction="row"
+              sx={{
+                width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+              }}
+            >
+              {(letras.map((letra, i) => (
+                <Typography
+                  sx={{
+                    color: '#B5B5B5', fontSize: 30, margin: 0.5,
+                  }}
+                ><b>{letra}</b>
+                </Typography>
+              )))}
+            </Stack>
+          </Card>
+          <Card sx={{
+            padding: 3, borderRadius: 5, alignItems: 'center',
+          }}
+          >
+            <Stack
+              direction="row"
+              sx={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}
+            ><CheckCircleIcon sx={{ color: '#A1C96A', mr: 1 }} />
+              <Typography>
+                La actividad se realizó un total de  25 veces por los y las estudiantes del curso
+              </Typography>
+            </Stack>
+          </Card>
+
+        </Stack>
+        <Card sx={{ padding: 1, width: 1.3 / 2, borderRadius: 5 }}>
           <Doughnut data={data} options={options} />
         </Card>
       </Stack>
-      <Stack spacing={2} sx={{ px: 5 }}>
-        <Card sx={{
-          padding: 4, width: 1, borderRadius: 5,
-        }}
-        >
-          <Line
-            height="100px"
-            options={{ maintainAspectRatio: false }}
-            data={data}
-          />
-        </Card>
+      <Stack sx={{ px: 5, py: 2 }}>
+        <ActividadIndividualAlumnosTable rows={infoActividadIndividualAlumnosTable} />
       </Stack>
-      <Stack spacing={3} sx={{ px: 5, py: 1 }}>
-        <Typography variant="h4">
-          Actividades en la sala de clases (docentes)
-        </Typography>
-        <Typography>
-          STEAM es un enfoque educativo, que incluye ciencia, tecnología, ingeniería y matemáticas.
-          Cada actividad se enfoca en uno o más áreas STEAM.
-        </Typography>
-        <Stack direction="column" spacing={2}>
-          {(actividades.map((row) => (
-            <Card key={row.id} sx={{ borderRadius: 5 }}>
-              <Stack direction="row" spacing={2}>
-                <Stack direction="row" spacing={2} sx={{ width: 3 / 5 }}>
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      heigth: 100, width: 100, borderRadius: 100, margin: 3,
-                    }}
-                    image={row.img}
-                  />
-                  <Stack direction="column" sx={{ justifyContent: 'center', alignContent: 'center' }}>
-                    <Typography>{row.title}</Typography>
-                    <Typography sx={{ color: row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>{row.estado}</Typography>
-                  </Stack>
-                </Stack>
-                <Stack
-                  direction="row"
-                  sx={{
-                    width: 2 / 5, justifyContent: 'center', alignItems: 'center', alignSelf: 'right',
-                  }}
-                >
-                  {(letras.map((letra, id) => (
-                    <Typography sx={{
-                      color: row.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 50, margin: 0.5,
-                    }}
-                    ><b>{letra}</b>
-                    </Typography>
-                  )))}
-                </Stack>
-              </Stack>
-            </Card>
-          ))
-          )}
-        </Stack>
-        <Typography variant="h4">
-          Actividades Individuales
-        </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            flexWrap: 'wrap',
-          }}
-        >
-          {(actividadesIndividuales.map((act, id) => (
-            <Card key={act.id} sx={{ borderRadius: 5, width: '18vw', margin: 2 }}>
-              <CardMedia
-                component="img"
-                image={act.img}
-              />
-              <CardHeader
-                title={act.title}
-                sx={{ fontSize: 1 }}
-              />
-              <CardContent>
-                <Typography sx={{ color: act.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>{act.estado}</Typography>
-                <Typography>
-                  Repeticiones: {act.repeticiones}
-                </Typography>
-                <Divider style={{ width: '100%', alignSelf: 'center', marginTop: 15 }} />
-                <Stack
-                  direction="row"
-                  sx={{
-                    width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-                  }}
-                >
-                  {(letras.map((letra, i) => (
-                    <Typography
-                      sx={{
-                        color: act.steam[i] !== 0 ? colores[i] : '#B5B5B5', fontSize: 50, margin: 0.5,
-                      }}
-                    ><b>{letra}</b>
-                    </Typography>
-                  )))}
-                </Stack>
-              </CardContent>
-            </Card>
-          )))}
-        </Box>
-        <Typography variant="h4">
-          Historial de actividades
-        </Typography>
-        <HistorialTable rows={info} />
-      </Stack> */}
     </Stack>
   );
 };
