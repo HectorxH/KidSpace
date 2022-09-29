@@ -1,11 +1,12 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
-import {Actividad, Vec3} from '../../types/activity';
+import {Actividad, IActividadLog, Vec3} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
 import {ReactStateSetter} from '../../types/others';
 import JumpButton from './JumpButton';
 import JumpCard from './JumpCard';
+import _ from 'lodash';
 
 interface ActNavigationProps {
   actividades: Actividad;
@@ -15,19 +16,24 @@ interface ActNavigationProps {
   pageNumber: [number, ReactStateSetter<number>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 
-  // drag
-  dragAnswers: [string[], ReactStateSetter<string[]>];
-  rightDragAnswer: string[];
-
-  // inputfield
-  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
-  rightInputAnswer: number[][];
+  // outputs para servidor
+  actividadLog: [IActividadLog, ReactStateSetter<IActividadLog>];
+  tiempoInicio: number;
+  preguntasRespuestasQuiz: [string[][], string[][][]];
 
   // alternativas
   userAnswers: number[][][];
 
   // dropdown
   userAnswersDropdown: number[][][];
+
+  // drag
+  userDragAnswers: string[][][];
+  rightDragAnswers: string[][][];
+
+  // inputfield
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
 
   // quiz
   userAnswersQuiz: number[][];
@@ -50,9 +56,10 @@ interface ActNavigationProps {
 
 const ActNavigation = (props: ActNavigationProps) => {
   const {actividades, storyLength, navigation} = props;
+  const [pageNumber, setPageNumber] = props.pageNumber;
+  const [actividadLog, setActividadLog] = props.actividadLog;
   const cantMonedas = props.cantMonedas;
   const nombreActividad = props.nombreActividad;
-  const [pageNumber, setPageNumber] = props.pageNumber;
   const userAnswers = props.userAnswers[pageNumber];
   const userAnswersDropdown = props.userAnswersDropdown[pageNumber];
   const userAnswersQuiz = props.userAnswersQuiz[pageNumber];
@@ -60,7 +67,7 @@ const ActNavigation = (props: ActNavigationProps) => {
   const actividad = actividades[pageNumber];
 
   // Se bloquea la navegación cuando aparecen preguntas sin responder en el cuento/desafio
-  // Eliminar estas dos variables y cambiar por funcion checkAnswer, por ahora no trollea eso si
+  // Eliminar estas dos variables y cambiar por funcion checkAnswer, por ahora ayudan para avanzar rapido cuando no hay jumpbuttons
   var respuestasCorrectas =
     userAnswers
       .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
@@ -91,14 +98,44 @@ const ActNavigation = (props: ActNavigationProps) => {
         props.nPlacedItems[1](0);
         props.models[1]([]);
         props.positions[1]([]);
-        // setPlacedItems(items.map(() => 0));
-        // setNPlacedItems(0);
-        // props.models[1]([]);
-        // setPositions([]);
       }
       props.setMaterialSelectorToggle(0);
       setPageNumber(pageNumber + 1);
     } else {
+      let preguntasQuiz = _.flattenDeep(props.preguntasRespuestasQuiz[0]);
+
+      let respuestasQuiz = _.flattenDeep(
+        props.preguntasRespuestasQuiz[1]
+          .map((pagina, numeroPagina) =>
+            pagina[0].length > 0
+              ? pagina.map(
+                  (pregunta, numeroPregunta) =>
+                    pregunta[
+                      props.userAnswersQuiz[numeroPagina][numeroPregunta]
+                    ],
+                )
+              : [],
+          )
+          .filter(pagina => pagina.length > 0),
+      );
+      let actLog: IActividadLog = {
+        tipo: actividadLog.tipo,
+        actividad: actividadLog.actividad,
+        unidad: actividadLog.unidad,
+        steam: actividadLog.steam,
+        estudiante: actividadLog.estudiante,
+        curso: actividadLog.curso,
+        quizFinal: preguntasQuiz.map(function (pregunta, numeroPregunta) {
+          return {
+            pregunta: pregunta,
+            respuesta: respuestasQuiz[numeroPregunta],
+          };
+        }),
+        duracion: ((Date.now() - props.tiempoInicio) / 1000).toString(),
+        fecha: actividadLog.fecha,
+      };
+      console.log(actLog);
+      setActividadLog(actLog);
       navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
     }
   };
@@ -138,8 +175,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
             userAnswersQuiz={props.userAnswersQuiz}
-            userDragAnswer={props.dragAnswers}
-            rightDragAnswer={props.rightDragAnswer}
+            userDragAnswers={props.userDragAnswers}
+            rightDragAnswers={props.rightDragAnswers}
             userInputAnswers={props.userInputAnswers}
             rightInputAnswers={props.rightInputAnswer}
             pageNumber={props.pageNumber}
@@ -157,8 +194,8 @@ const ActNavigation = (props: ActNavigationProps) => {
             userAnswers={props.userAnswers}
             userAnswersDropdown={props.userAnswersDropdown}
             userAnswersQuiz={props.userAnswersQuiz}
-            userDragAnswer={props.dragAnswers}
-            rightDragAnswer={props.rightDragAnswer}
+            userDragAnswers={props.userDragAnswers}
+            rightDragAnswers={props.rightDragAnswers}
             userInputAnswers={props.userInputAnswers}
             rightInputAnswers={props.rightInputAnswer}
             pageNumber={props.pageNumber}

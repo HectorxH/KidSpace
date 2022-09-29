@@ -2630,6 +2630,7 @@
     ],
     "quiz": [
       {
+        "pregunta": "El software Excel permite crear tablas y ______",
         "answers": [
           {
             "text": "imágenes",
@@ -2655,7 +2656,8 @@
         ]
       },
       {
-        "answers": [
+          "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
+          "answers": [
           {
             "text": "una lista",
             "position": {

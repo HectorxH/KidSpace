@@ -83,12 +83,12 @@ const DesafioIntroductorioSceneAR = (
     })),
   );
   const modelProps = items.map((item, index) => ({
-    model: Models[actividad][item.model].model,
+    model: Models[item.model].model,
     modelName: item.model,
     modelIndex: index,
-    resources: Models[actividad][item.model].resources,
-    materials: Models[actividad][item.model].materials,
-    type: Models[actividad][item.model].type,
+    resources: Models[item.model].resources,
+    materials: Models[item.model].materials,
+    type: Models[item.model].type,
     interactable:
       typeof item.interactable !== 'undefined' ? item.interactable : [],
     ARMaterials:

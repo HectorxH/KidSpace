@@ -37,6 +37,14 @@ const images: {
     LaylaHappy: require('./character/layla/layla-happy.png'),
     LaylaSmile: require('./character/layla/layla-smile.png'),
 
+    VictoriaSmile: require('./character/victoria/victoria_smile.png'),
+    VictoriaHappy: require('./character/victoria/victoria_happy.png'),
+    VictoriaQuestion: require('./character/victoria/victoria_question.png'),
+
+    NatySmile: require('./character/naty/naty-smile.png'),
+    NatyHappy: require('./character/naty/naty-happy.png'),
+    NatyQuestion: require('./character/naty/naty-question.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
 
@@ -119,11 +127,11 @@ const images: {
     mat3_logo2_et2: require('./icons/caja_torta/mat3-logo2.png'),
     mat3_logo2_et3: require('./icons/caja_torta/mat3-logo2.png'),
 
-    tempera_roja: require('./extras/tempera_roja.png'),
     tempera_negra: require('./extras/tempera_negra.png'),
     tempera_blanca: require('./extras/tempera_blanca.png'),
-    tempera_amarilla: require('./extras/tempera_amarilla.png'),
+    tempera_roja: require('./extras/tempera_roja.png'),
     tempera_azul: require('./extras/tempera_azul.png'),
+    tempera_amarilla: require('./extras/tempera_amarilla.png'),
 
     lombriz1: require('./extras/lombriz1.png'),
     lombriz2: require('./extras/lombriz2.png'),
@@ -153,6 +161,47 @@ const images: {
     p4: require('./extras/p4.png'),
     p5: require('./extras/p5.png'),
 
+    materias_primas_1: require('./extras/materiales/materias_primas_1.png'),
+    materias_primas_2: require('./extras/materiales/materias_primas_2.png'),
+    materias_primas_3: require('./extras/materiales/materias_primas_3.png'),
+    norte_chile: require('./extras/materiales/norte_chile.png'),
+    norte_sur: require('./extras/materiales/norte_sur.png'),
+    ojo_man: require('./extras/materiales/ojo_man.png'),
+    unnecessary_cheering: require('./extras/materiales/unnecessary_cheering.png'),
+    forestnt_1: require('./extras/materiales/forestnt_1.png'),
+    forestnt_2: require('./extras/materiales/forestnt_2.png'),
+    materiales_1: require('./extras/materiales/materiales_1.png'),
+    materiales_2: require('./extras/materiales/materiales_2.png'),
+    materiales_3: require('./extras/materiales/materiales_3.png'),
+
+    // informatica1
+    informatica_1_1: require('./extras/informatica1/34.png'),
+    informatica_1_2: require('./extras/informatica1/33.png'),
+    informatica_1_3: require('./extras/informatica1/32.png'),
+    informatica_1_4: require('./extras/informatica1/30.png'),
+    informatica_1_5: require('./extras/informatica1/31.png'),
+    informatica_1_6: require('./extras/informatica1/29.png'),
+    informatica_1_7: require('./extras/informatica1/28.png'),
+    informatica_1_8: require('./extras/informatica1/27.png'),
+    informatica_1_9: require('./extras/informatica1/26.png'),
+    informatica_1_10: require('./extras/informatica1/25.png'),
+    informatica_1_11: require('./extras/informatica1/24.png'),
+    informatica_1_12: require('./extras/informatica1/58.png'),
+    informatica_1_13: require('./extras/informatica1/59.png'),
+    informatica_1_14: require('./extras/informatica1/60.png'),
+    informatica_1_15: require('./extras/informatica1/61.png'),
+    informatica_1_16: require('./extras/informatica1/62.png'),
+    informatica_1_17: require('./extras/informatica1/63.png'),
+    informatica_1_18: require('./extras/informatica1/64.png'),
+    informatica_1_19: require('./extras/informatica1/65.png'),
+    informatica_1_20: require('./extras/informatica1/66.png'),
+    informatica_1_21: require('./extras/informatica1/67.png'),
+    informatica_1_22: require('./extras/informatica1/68.png'),
+    informatica_1_23: require('./extras/informatica1/69.png'),
+    informatica_1_24: require('./extras/informatica1/70.png'),
+    informatica_1_25: require('./extras/informatica1/71.png'),
+    informatica_1_26: require('./extras/informatica1/72.png'),
+
     // bubbles
     flower: require('./bubbles/flower.png'),
     bouquet: require('./bubbles/bouquet.png'),
@@ -175,6 +224,9 @@ const images: {
     bubbleWeight: require('./bubbles/bb_weight.png'),
 
     bubbleLike: require('./bubbles/bubble-like.png'),
+
+    bubbleOk: require('./bubbles/bb_ok.png'),
+    bubblePhoneParts: require('./bubbles/bb_phone_parts.png'),
   },
 
   background: {
@@ -186,6 +238,8 @@ const images: {
     bg_nutricion3: require('./background/bg_nutricion3.png'),
     bg_diseño1: require('./background/diseño1_introductorio.png'),
     bg_diseño2: require('./background/bg_diseño2.png'),
+    bg_materiales: require('./background/bg_materiales.png'),
+    bg_informatica1: require('./background/bg_informatica1.png'),
   },
 
   icons: {

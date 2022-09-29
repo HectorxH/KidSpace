@@ -10,20 +10,20 @@
     "stories":[
       {
         "carrera":"Carrera: Informática",
-        "actividad":"informatica2",
-        "img":"portada_inf2",
+        "actividad":"informatica1",
+        "img":"portada_inf1",
         "title":"Historia de Naty",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":350,
+        "coins":200,
         "estado":"estrellagris"
       },
       {
         "carrera":"Carrera: Informática",
-        "actividad":"informatica1",
-        "img":"portada_inf1",
+        "actividad":"informatica2",
+        "img":"portada_inf2",
         "title":"Historia de Abel",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
+        "coins":350,
         "estado":"estrelladorada"
       }
     ]

@@ -10,7 +10,7 @@ import ActNavigation from './ActNavigation';
 
 import Images from '../../assets/images/images';
 
-import {Actividad} from '../../types/activity';
+import {Actividad, IActividadLog} from '../../types/activity';
 import {Vec3} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
 import {RootStackParamList} from '../../types/navigation';
@@ -26,14 +26,19 @@ interface ActividadComponentProps {
   pageNumber: [number, ReactStateSetter<number>];
   navigation?: NativeStackNavigationProp<RootStackParamList>;
 
+  // outputs para servidor
+  actividadLog: [IActividadLog, ReactStateSetter<IActividadLog>];
+  tiempoInicio: [number, ReactStateSetter<number>];
+  preguntasRespuestasQuiz: [string[][], string[][][]];
   // 3d
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
-  // rotations: [Vec3[], ReactStateSetter<Vec3[]>];
 
   // drag
-  dragAnswers: [string[], ReactStateSetter<string[]>];
-  rightDragAnswer: string[];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  rightDragAnswers: string[][][];
+  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
 
   // inputfield
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
@@ -57,8 +62,8 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     actividades,
     nombreActividad,
     cantMonedas,
-    dragAnswers,
-    rightDragAnswer,
+    userDragAnswers,
+    pickedDragAnswers,
     userInputAnswers,
     rightInputAnswer,
     userAnswers,
@@ -68,7 +73,6 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     pickedAnswersDropdown,
     pickedAnswersQuiz,
     modelMaterial,
-    // rotations,
   } = props;
   const [pageNumber, setPageNumber] = props.pageNumber;
 
@@ -84,6 +88,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
 
   const toggleButtons =
     typeof actividad.toggleButton !== 'undefined' ? actividad.toggleButton : [];
+
   const toggleDefaultValue =
     typeof actividad.toggleButton !== 'undefined'
       ? actividad.toggleButton[0].value
@@ -154,11 +159,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 story={actividad}
                 pageNumber={pageNumber}
                 userInputAnswers={userInputAnswers}
-                dragAnswers={dragAnswers}
                 userAnswers={userAnswers}
                 pickedAnswers={pickedAnswers}
                 userAnswersDropdown={userAnswersDropdown}
                 pickedAnswersDropdown={pickedAnswersDropdown}
+                userDragAnswers={userDragAnswers}
+                receivingNames={props.receivingNames}
+                pickedDragAnswers={pickedDragAnswers}
                 userAnswersQuiz={userAnswersQuiz}
                 pickedAnswersQuiz={pickedAnswersQuiz}
                 modelMaterial={props.modelMaterial[0]}
@@ -218,14 +225,17 @@ const ActividadComponent = (props: ActividadComponentProps) => {
       </ImageBackground>
       <View style={styles.overlay}>
         <ActNavigation
+          actividadLog={props.actividadLog}
+          tiempoInicio={props.tiempoInicio[0]}
+          preguntasRespuestasQuiz={props.preguntasRespuestasQuiz}
           actividades={actividades}
           nombreActividad={nombreActividad}
           cantMonedas={cantMonedas}
           storyLength={actividades.length}
-          dragAnswers={dragAnswers}
+          userDragAnswers={userDragAnswers[0]}
+          rightDragAnswers={props.rightDragAnswers}
           userInputAnswers={userInputAnswers}
           rightInputAnswer={rightInputAnswer}
-          rightDragAnswer={rightDragAnswer}
           userAnswers={userAnswers[0]}
           userAnswersDropdown={userAnswersDropdown[0]}
           userAnswersQuiz={userAnswersQuiz[0]}

@@ -3,13 +3,57 @@ import {View, StyleSheet, StatusBar} from 'react-native';
 import {ActividadesProps} from './types/navigation';
 import ActividadComponent from './components/Actividades/ActividadComponent';
 import Activities from './assets/activities/activities';
+import {IActividadLog} from './types/activity';
+import {
+  getNombreActividad,
+  getNombreUnidad,
+  getSteam,
+  getTipoActividad,
+} from './components/Actividades/utils';
 
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const nombreActividad = route.params.actividad;
   const cantMonedas = route.params.cantMonedas;
   const actividad = Activities[nombreActividad];
   const [pageNumber, setPageNumber] = useState(0);
+
+  // Outputs para el servidor al final de la actividad
+  const [actividadLog, setActividadLog] = useState<IActividadLog>({
+    tipo: getTipoActividad(nombreActividad),
+    actividad: getNombreActividad(nombreActividad),
+    unidad: getNombreUnidad(nombreActividad),
+    steam: getSteam(nombreActividad),
+    estudiante: 'estudiantenombre',
+    curso: 'nombreCurso',
+    quizFinal: [
+      {
+        pregunta: 'pregunta',
+        respuesta: 'respuesta',
+      },
+      {
+        pregunta: 'pregunta',
+        respuesta: 'respuesta',
+      },
+    ],
+    duracion: '0',
+    fecha: new Date(Date.now()),
+  });
+  const [tiempoInicio, setTiempoInicio] = useState<number>(Date.now());
+
+  // string de preguntas para output
+  // [pageNumber][preguntaNumber] = preguntaText
+  const preguntasQuiz = actividad.map(s =>
+    typeof s.quiz !== 'undefined' ? s.quiz.map(q => q.pregunta) : [],
+  );
+
+  // string de respuestas para output
+  const respuestasQuiz = actividad.map(s =>
+    typeof s.quiz !== 'undefined'
+      ? s.quiz.map(q => q.answers.map(answer => answer.text))
+      : [[]],
+  );
   // Variables para controlar avance en preguntas de alternativas
+  // [pageNumber][preguntaNumber][rightAnswerNumber] = dragAnswer = 0 (mal) | 1 (bien)
   const [userAnswers, setUserAnswers] = useState<number[][][]>(
     actividad.map(s =>
       typeof s.alternativas !== 'undefined'
@@ -17,6 +61,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
         : [[]],
     ),
   );
+  // [pageNumber][preguntaNumber][answerFieldNumber] = dragAnswer = 0 (no responde) | 1 (bien) | (mal), se usa para estilos
   const [pickedAnswers, setPickedAnswers] = useState<number[][][]>(
     actividad.map(s =>
       typeof s.alternativas !== 'undefined'
@@ -25,7 +70,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
     ),
   );
 
-  // Variables para controlar avance en preguntas de alternativasDropdown
+  // Variables para controlar avance en preguntas de alternativasDropdown, mismo criterio de indices que alternativas
   const [userAnswersDropdown, setUserAnswersDropdown] = useState<number[][][]>(
     actividad.map(s =>
       typeof s.alternativasDropdown !== 'undefined'
@@ -44,11 +89,13 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
   );
 
   // Variables para controlar avance en preguntas de Quiz
+  // [pageNumber][questionNumber] = answerNumber
   const [userAnswersQuiz, setUserAnswersQuiz] = useState<number[][]>(
     actividad.map(s =>
       typeof s.quiz !== 'undefined' ? s.quiz.map(() => 0) : [],
     ),
   );
+  // [pageNumber][questionNumber][answerNumber] = 0 | 1, mismo de alternativas
   const [pickedAnswersQuiz, setPickedAnswersQuiz] = useState<number[][][]>(
     actividad.map(s =>
       typeof s.quiz !== 'undefined'
@@ -71,11 +118,42 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       : [0],
   );
   // Variables para controlar avance en preguntas de drag; [pageNumber] = pageAnswer
-  const [userDragAnswer, setUserDragAnswer] = useState<string[]>(
-    actividad.map(() => ''),
+  // const [userDragAnswer, setUserDragAnswer] = useState<string[]>(
+  //   actividad.map(() => ''),
+  // );
+  // const rightDragAnswer = actividad.map(s =>
+  //   typeof s.draggable !== 'undefined' ? s.draggable.answer : '',
+  // );
+
+  // Variables para controlar avance en preguntas de drag; [pageNumber][dragNumber][answerNumber] = string con answer de drag
+  const [userDragAnswers, setUserDragAnswers] = useState<string[][][]>(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.answer.map(() => ''))
+        : [[]],
+    ),
   );
-  const rightDragAnswer = actividad.map(s =>
-    typeof s.draggable !== 'undefined' ? s.draggable.answer : '',
+  // [pageNumber][dragNumber][receivingItemNumber] = dragAnswer = 0 (no responde) | 1 (bien) | (mal), se usa para estilos
+  const [pickedDragAnswers, setPickedDragAnswers] = useState<number[][][]>(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.receivingItems.map(() => 0))
+        : [[]],
+    ),
+  );
+  // [pageNumber][dragNumber][answerNumber] = rightAnswer
+  const rightDragAnswers = actividad.map(s =>
+    typeof s.draggable !== 'undefined' ? s.draggable.map(q => q.answer) : [],
+  );
+
+  // [pageNumber][dragNumber][itemNumber] = itemName
+  // se usa para controlar estilos en bloques de codigo
+  const [receivingNames, setReceivingNames] = useState<string[][][]>(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.receivingItems.map(item => item.name))
+        : [[]],
+    ),
   );
 
   // Variables para controlar las texturas del modelo 3d en caso de que aplique
@@ -120,13 +198,18 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
           ]}
           userAnswersQuiz={[userAnswersQuiz, setUserAnswersQuiz]}
           pickedAnswersQuiz={[pickedAnswersQuiz, setPickedAnswersQuiz]}
-          dragAnswers={[userDragAnswer, setUserDragAnswer]}
-          rightDragAnswer={rightDragAnswer}
+          userDragAnswers={[userDragAnswers, setUserDragAnswers]}
+          pickedDragAnswers={[pickedDragAnswers, setPickedDragAnswers]}
+          rightDragAnswers={rightDragAnswers}
+          receivingNames={[receivingNames, setReceivingNames]}
           userInputAnswers={[userInputAnswers, setUserInputAnswer]}
           rightInputAnswer={rightInputAnswer}
           modelMaterial={[modelMaterial, setModelMaterial]}
           selectedMaterial={[selectedMaterial, setSelectedMaterial]}
           navigation={navigation}
+          actividadLog={[actividadLog, setActividadLog]}
+          tiempoInicio={[tiempoInicio, setTiempoInicio]}
+          preguntasRespuestasQuiz={[preguntasQuiz, respuestasQuiz]}
         />
       </View>
     </View>
@@ -144,11 +227,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     flexDirection: 'column',
-  },
-  backgroundImage: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });
 

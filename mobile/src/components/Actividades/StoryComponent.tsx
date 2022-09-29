@@ -8,15 +8,12 @@ import Alternativas from './Alternativas';
 import AlternativasDropdown from './AlternativasDropdown';
 import {ReactStateSetter} from '../../types/others';
 import {IActivityPage} from '../../types/activity';
-import Draggable from './Draggable';
 import TextInputAnswer from './TextInputAnswer';
+import Draggable from './Draggable';
 
 interface StoryComponentProps {
   story: IActivityPage;
   pageNumber: number;
-
-  // drag
-  dragAnswers: [string[], ReactStateSetter<string[]>];
 
   // alternativas
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
@@ -25,6 +22,11 @@ interface StoryComponentProps {
   // dropdown
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+
+  // drag
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
 
   // quiz
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
@@ -59,6 +61,9 @@ const StoryComponent = (props: StoryComponentProps) => {
     typeof story.textFieldQuestion !== 'undefined'
       ? story.textFieldQuestion
       : [];
+
+  const dragQuestions =
+    typeof story.draggable !== 'undefined' ? story.draggable : [];
 
   return (
     <View style={styles.container}>
@@ -122,15 +127,17 @@ const StoryComponent = (props: StoryComponentProps) => {
         />
       </View>
       {/* Draggable / Seleccion colores */}
-      {typeof story.draggable !== 'undefined' &&
-        story.draggable.draggable === true && (
-          <View style={styles.overlay}>
-            <Draggable
-              pageNumber={props.pageNumber}
-              userDragAnswers={props.dragAnswers}
-            />
-          </View>
-        )}
+      {typeof story.draggable !== 'undefined' && (
+        <View style={styles.overlay}>
+          <Draggable
+            pageNumber={props.pageNumber}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            receivingNames={props.receivingNames}
+            draggable={dragQuestions}
+          />
+        </View>
+      )}
     </View>
   );
 };
