@@ -23,7 +23,10 @@ import AgregarCursoView from './views/AgregarCursoView';
 import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
+import EstadisticasProfesorView from './views/EstadisticasProfesorView';
 import QRView from './views/QRView';
+import ActividadIndividualView from './views/ActividadIndividualView';
+import ActividadDocenteView from './views/ActividadDocenteView';
 // import CursoView from './views/CursoView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
@@ -88,6 +91,9 @@ const App = () => (
                 <Route path="/cursos/:cursoId" element={<ParticipantesView />} />
                 <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
                 <Route path="/cursos/:cursoId/qr" element={<QRView />} />
+                <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView />} />
+                <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:nactividad" element={<ActividadDocenteView />} />
+                <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:nactividad" element={<ActividadIndividualView />} />
                 <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
                 <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
                 <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
