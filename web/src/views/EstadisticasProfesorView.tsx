@@ -40,6 +40,24 @@ const infoActividadDocenteTable = [
     estado: 'Sin completar',
     porcentaje: 30,
   },
+  {
+    _id: 2,
+    actividad: 'Materiales',
+    estado: 'Sin completar',
+    porcentaje: 30,
+  },
+  {
+    _id: 3,
+    actividad: 'Reciclaje',
+    estado: 'Sin completar',
+    porcentaje: 30,
+  },
+  {
+    _id: 3,
+    actividad: 'Diseño',
+    estado: 'Completada',
+    porcentaje: 30,
+  },
 ];
 
 const infoActividadIndividualTable = [
@@ -53,29 +71,59 @@ const infoActividadIndividualTable = [
     actividad: '¿Qué es un computador?',
     porcentaje: 30,
   },
+  {
+    _id: 2,
+    actividad: 'Tierra, Luna y Sol',
+    porcentaje: 30,
+  },
+  {
+    _id: 3,
+    actividad: '¿Qué vemos en el cielo nocturno?',
+    porcentaje: 30,
+  },
+  {
+    _id: 4,
+    actividad: 'Interpretando etiquetas de los alimentos',
+    porcentaje: 30,
+  },
+  {
+    _id: 5,
+    actividad: 'Analizando nuestro dieta',
+    porcentaje: 30,
+  },
+  {
+    _id: 6,
+    actividad: 'Teoría de colores',
+    porcentaje: 30,
+  },
+  {
+    _id: 7,
+    actividad: 'Diseño gráfico en nuestro alrededor',
+    porcentaje: 30,
+  },
 ];
 
 const infoRankingTable = [
   {
-    _id: 0,
+    _id: '0',
     lugar: 1,
     nombre: 'Skylar',
     actividades: 70,
   },
   {
-    _id: 1,
+    _id: '1',
     lugar: 2,
     nombre: 'Cirrus',
     actividades: 30,
   },
   {
-    _id: 2,
+    _id: '2',
     lugar: 4,
     nombre: 'Kai',
     actividades: 10,
   },
   {
-    _id: 3,
+    _id: '3',
     lugar: 3,
     nombre: 'Soo',
     actividades: 20,

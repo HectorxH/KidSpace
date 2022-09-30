@@ -16,34 +16,29 @@ import { faCrown } from '@fortawesome/free-solid-svg-icons';
 // import axios from 'axios';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
-import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
 
 const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
-  _id: number,
+  _id: string,
   lugar: number,
   nombre: string,
   actividades: number
 }
 
-interface ICursoTableParams {
+interface ITableParams {
   rows: IRow[],
   // updateEstudiantes: Function
 }
 
-interface IParams {
-  rows: [number, string, number],
-}
-
 const RankingTable = (
-  { rows }: ICursoTableParams,
+  { rows }: ITableParams,
 ) => {
   const { logout } = useAuth();
   const navigate = useNavigate();
-  const handleVerStats = (id:number) => {
-    navigate(`/${id}/estadisticasEstudiante`);
+  const handleVerStats = (i:string) => {
+    navigate(`/estadisticasEstudiante/${i}`);
   };
   const cols: GridColDef[] = [
     {
@@ -62,7 +57,7 @@ const RankingTable = (
                   ? '#C1C1C1'
                   : params.row.lugar === 3
                     ? '#DF8366'
-                    : '#FFF',
+                    : '#FFFFFF',
               opacity: params.row.lugar > 3 ? 0 : 1,
             }}
           /> {params.row.lugar}
@@ -86,7 +81,7 @@ const RankingTable = (
       sortable: false,
       renderCell: (params) => {
         const onClick = (e:any) => {
-          handleVerStats(params.row.id);
+          handleVerStats(params.row._id);
         };
         return (
           <div>
@@ -108,24 +103,22 @@ const RankingTable = (
     },
   ];
   return (
-    <Box sx={{ height: 400, width: '100%' }}>
-      <DataGrid
-        density="comfortable"
-        autoHeight
-        columns={cols}
-        rows={Object.values(rows)}
-        getRowId={(row: any) => row._id}
-        disableSelectionOnClick
-        components={{
-          Toolbar: GridToolbar,
-        }}
-        sx={{ borderRadius: 5 }}
-      />
+    <Box sx={{ width: '100%' }}>
+      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+        : (
+          <DataGrid
+            density="comfortable"
+            autoHeight
+            hideFooterPagination
+            hideFooterSelectedRowCount
+            columns={cols}
+            rows={Object.values(rows)}
+            getRowId={(row: any) => row._id}
+            disableSelectionOnClick
+            sx={{ borderRadius: 5 }}
+          />
+        )}
     </Box>
-  //   {(rows.length === 0)
-  //     ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
-  //     : ''}
-  // </TableContainer>
   );
 };
 
