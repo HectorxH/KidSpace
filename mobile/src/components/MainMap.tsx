@@ -122,7 +122,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     initialLoader();
     loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [userData]);
+  }, []);
 
   const HandleAct = async () => {
     try {
@@ -294,7 +294,12 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() =>
+                navigation.push('Tienda', {
+                  setCantMonedas: setCantMonedas,
+                  cantMonedas: cantMonedas,
+                })
+              }>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>

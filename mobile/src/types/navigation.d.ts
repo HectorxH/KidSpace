@@ -41,6 +41,17 @@ export type RootStackParamList = {
   DynamicTable: undefined;
   Qr: undefined;
   Recompensas: {cantMonedas: number; nombreActividad: string};
+  Tienda: {
+    setCantMonedas: React.Dispatch<React.SetStateAction<number>>;
+    cantMonedas: number;
+  };
+  Ropa: undefined;
+  Accesorios: undefined;
+  TiendaItems: {
+    tipo: string;
+    setCantMonedas: React.Dispatch<React.SetStateAction<number>>;
+    cantMonedas: number;
+  };
 };
 
 export type InicioViewProps = NativeStackScreenProps<
@@ -110,4 +121,15 @@ export type ConclusionStoryProps = NativeStackScreenProps<
 export type RecompensasProps = NativeStackScreenProps<
   RootStackParamList,
   'Recompensas'
+>;
+export type TiendaProps = NativeStackScreenProps<RootStackParamList, 'Tienda'>;
+
+export type RopaProps = NativeStackScreenProps<RootStackParamList, 'Ropa'>;
+export type AccesoriosProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Accesorios'
+>;
+export type TiendaItemsProps = NativeStackScreenProps<
+  RootStackParamList,
+  'TiendaItems'
 >;
