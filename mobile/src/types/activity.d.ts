@@ -130,9 +130,10 @@ export interface IQuiz {
 
 export interface IModels {
   model: string;
-  // type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
   scale: Vec3;
   rotation: Vec3;
+  type?: string;
+  image360?: string;
   interactable?: string[];
   ARMaterials?: {
     materialOrder: string[];
@@ -142,7 +143,7 @@ export interface IModels {
 
 export interface IAR {
   start: boolean;
-  models: IModels[];
+  models?: IModels[];
 }
 
 export interface ITexts {

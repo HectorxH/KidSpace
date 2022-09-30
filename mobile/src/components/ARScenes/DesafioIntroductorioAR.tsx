@@ -7,8 +7,12 @@ import {
   Viro3DObject,
   ViroMaterials,
   ViroNode,
+  ViroPortalScene,
+  ViroPortal,
+  Viro360Image,
   // @ts-ignore
 } from '@viro-community/react-viro';
+import Images from '../../assets/images/images';
 import Models from '../../assets/3d/models';
 import {IModels, Vec3} from '../../types/activity';
 import {ImageSourcePropType} from 'react-native';
@@ -25,7 +29,7 @@ interface DesafioIntroductorioSceneARProps {
     viroAppProps: {
       models: number[];
       actividad: string;
-      items: IModels[];
+      models3d: IModels[];
       positions: [Vec3[], ReactStateSetter<Vec3[]>];
       // rotations: [Vec3[], ReactStateSetter<Vec3[]>];
       materialSelectorToggle: [number, ReactStateSetter<number>];
@@ -43,26 +47,12 @@ interface ITransform {
   position?: Vec3;
 }
 
-// interface ITransform {
-//   model: ImageSourcePropType;
-//   modelName: string;
-//   modelIndex: number;
-//   resources: ImageSourcePropType[];
-//   materials?: ViroMaterialDict;
-//   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
-//   interactable: string[];
-//   ARMaterials: TSelectedMaterial;
-//   scale: Vec3;
-//   rotation: Vec3;
-//   position?: Vec3;
-// }
-
 const DesafioIntroductorioSceneAR = (
   props: DesafioIntroductorioSceneARProps,
 ) => {
   const models = props.sceneNavigator.viroAppProps.models;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
-  const items = props.sceneNavigator.viroAppProps.items;
+  const models3d = props.sceneNavigator.viroAppProps.models3d;
   const [updateMaterial, setUpdateMaterial] =
     props.sceneNavigator.viroAppProps.updateMaterial;
   const [positions] = props.sceneNavigator.viroAppProps.positions;
@@ -76,16 +66,18 @@ const DesafioIntroductorioSceneAR = (
 
   const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
-    items.map(item => ({
+    models3d.map(item => ({
       scale: item.scale,
       rotation: item.rotation,
       position: [0, 0, 0],
     })),
   );
-  const modelProps = items.map((item, index) => ({
+  const modelProps = models3d.map((item, index) => ({
     model: Models[item.model].model,
     modelName: item.model,
     modelIndex: index,
+    modelType: typeof item.type !== 'undefined' ? item.type : 'object',
+    modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
     resources: Models[item.model].resources,
     materials: Models[item.model].materials,
     type: Models[item.model].type,
@@ -128,25 +120,23 @@ const DesafioIntroductorioSceneAR = (
     }
   }
   function updateScale(index: number, pinchState: number, scaleFactor: number) {
-    console.log('scale', pinchState, scaleFactor);
-
     let transform = [...transforms];
     const MIN_SCALE = 0.8;
     const MAX_SCALE = 1.3;
     const temp = transform[index].scale.map(x => x * scaleFactor);
     let temp2: Vec3 = [temp[0], temp[1], temp[2]];
-    if (temp2[0] < items[index].scale[0] * MIN_SCALE) {
+    if (temp2[0] < models3d[index].scale[0] * MIN_SCALE) {
       temp2 = [
-        items[index].scale[0] * MIN_SCALE,
-        items[index].scale[1] * MIN_SCALE,
-        items[index].scale[2] * MIN_SCALE,
+        models3d[index].scale[0] * MIN_SCALE,
+        models3d[index].scale[1] * MIN_SCALE,
+        models3d[index].scale[2] * MIN_SCALE,
       ];
       transform[index].scale = temp2;
-    } else if (temp2[0] > items[index].scale[0] * MAX_SCALE) {
+    } else if (temp2[0] > models3d[index].scale[0] * MAX_SCALE) {
       temp2 = [
-        items[index].scale[0] * MAX_SCALE,
-        items[index].scale[1] * MAX_SCALE,
-        items[index].scale[2] * MAX_SCALE,
+        models3d[index].scale[0] * MAX_SCALE,
+        models3d[index].scale[1] * MAX_SCALE,
+        models3d[index].scale[2] * MAX_SCALE,
       ];
       transform[index].scale = temp2;
     } else {
@@ -168,7 +158,6 @@ const DesafioIntroductorioSceneAR = (
   }
 
   function makeMaterials() {
-    //ItemMaterials: ViroMaterialDict | undefined) {
     if (updateMaterial === true) {
       setUpdateMaterial(false);
       let materials = modelProps.map(model =>
@@ -177,9 +166,6 @@ const DesafioIntroductorioSceneAR = (
       for (let i = 0; i < materials.length; i++) {
         ViroMaterials.createMaterials(materials[i]);
       }
-      // if (typeof ItemMaterials !== 'undefined') {
-      //   ViroMaterials.createMaterials(ItemMaterials);
-      // }
     }
   }
 
@@ -211,28 +197,66 @@ const DesafioIntroductorioSceneAR = (
         castsShadow={true}
       />
       <ViroAmbientLight color="#FFFFFF" intensity={150} />
-      {models.map((item: number, index: number) => {
+      {models.map((itemNumber: number, modelIndex: number) => {
         return (
-          <ViroNode key={actividad + '_3dobj_' + index.toString()}>
-            <Viro3DObject
-              source={modelProps[item].model as ImageSourcePropType}
-              resources={modelProps[item].resources}
-              materials={modelsMaterials[index]}
-              // resources={modelProps[item].resources as ImageSourcePropType[]}
-              position={positions[index]}
-              scale={transforms[item].scale}
-              rotation={transforms[item].rotation}
-              type={modelProps[item].type}
-              onDrag={() => {}}
-              dragType={'FixedToWorld'}
-              onPinch={(pinchState, scaleFactor) =>
-                updateScale(index, pinchState, scaleFactor)
-              }
-              onRotate={(rotateState, rotation) =>
-                updateRotation(index, rotateState, rotation + rotations[index])
-              }
-              onClick={() => onModelClick(item)}
-            />
+          <ViroNode key={actividad + '_3dobj_' + modelIndex.toString()}>
+            {modelProps[itemNumber].modelType === 'object' && (
+              <Viro3DObject
+                source={modelProps[itemNumber].model as ImageSourcePropType}
+                resources={modelProps[itemNumber].resources}
+                materials={modelsMaterials[modelIndex]}
+                position={positions[modelIndex]}
+                scale={transforms[itemNumber].scale}
+                rotation={transforms[itemNumber].rotation}
+                type={modelProps[itemNumber].type}
+                onDrag={() => {}}
+                dragType={'FixedToWorld'}
+                onPinch={(pinchState, scaleFactor) =>
+                  updateScale(modelIndex, pinchState, scaleFactor)
+                }
+                onRotate={(rotateState, rotation) =>
+                  updateRotation(
+                    modelIndex,
+                    rotateState,
+                    rotation + rotations[modelIndex],
+                  )
+                }
+                onClick={() => onModelClick(itemNumber)}
+              />
+            )}
+            {modelProps[itemNumber].modelType === 'portal' && (
+              <ViroPortalScene passable={true}>
+                <ViroPortal
+                  position={positions[modelIndex]}
+                  scale={transforms[itemNumber].scale}
+                  rotation={transforms[itemNumber].rotation}>
+                  <Viro3DObject
+                    source={modelProps[itemNumber].model as ImageSourcePropType}
+                    resources={modelProps[itemNumber].resources}
+                    materials={modelsMaterials[modelIndex]}
+                    type={modelProps[itemNumber].type}
+                    onDrag={() => {}}
+                    dragType={'FixedToWorld'}
+                    onPinch={(pinchState, scaleFactor) =>
+                      updateScale(modelIndex, pinchState, scaleFactor)
+                    }
+                    onRotate={(rotateState, rotation) =>
+                      updateRotation(
+                        modelIndex,
+                        rotateState,
+                        rotation + rotations[modelIndex],
+                      )
+                    }
+                    onClick={() => onModelClick(itemNumber)}
+                  />
+                </ViroPortal>
+                <Viro360Image
+                  source={
+                    Images.images360[modelProps[itemNumber].modelImage360]
+                  }
+                />
+              </ViroPortalScene>
+            )}
           </ViroNode>
         );
       })}

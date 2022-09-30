@@ -16,7 +16,7 @@ import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
-  items: IModels[];
+  models3d: IModels[];
   models: [number[], ReactStateSetter<number[]>];
   placedItems: [number[], ReactStateSetter<number[]>];
   nPlacedItems: [number, ReactStateSetter<number>];
@@ -28,16 +28,9 @@ interface InventarioProps {
 }
 
 const Inventario = (props: InventarioProps) => {
-  const items = props.items;
+  const {models3d, visible, showInventory, sceneNav} = props;
   const [placedItems, setPlacedItems] = props.placedItems;
   const [nPlacedItems, setNPlacedItems] = props.nPlacedItems;
-  // const [placedItems, setPlacedItems] = useState(
-  //   items.map((_item, index) => (props.models[0].includes(index) ? 1 : 0)),
-  // );
-  // const [nPlacedItems, setNPlacedItems] = useState(props.models[0].length);
-  const visible = props.visible;
-  const showInventory = props.showInventory;
-  const sceneNav = props.sceneNav;
   const [positions, setPositions] = props.positions;
 
   function modelHandler(index: number) {
@@ -52,7 +45,7 @@ const Inventario = (props: InventarioProps) => {
   }
 
   function handlePickUp() {
-    setPlacedItems(items.map(() => 0));
+    setPlacedItems(models3d.map(() => 0));
     setNPlacedItems(0);
     props.models[1]([]);
     setPositions([]);
@@ -71,7 +64,7 @@ const Inventario = (props: InventarioProps) => {
   if (!visible) {
     return null;
   }
-  if (items.length === 0) {
+  if (models3d.length === 0) {
     return null;
   }
 
@@ -92,7 +85,7 @@ const Inventario = (props: InventarioProps) => {
           </View>
           <SafeAreaView style={styles.itemsBox}>
             <ScrollView fadingEdgeLength={10} persistentScrollbar>
-              {items.map((item: IModels, index: number) => {
+              {models3d.map((item: IModels, index: number) => {
                 if (placedItems[index] !== 0) {
                   return null;
                 }

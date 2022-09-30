@@ -11,6 +11,7 @@ module.exports = {
       'obj',
       'OBJ',
       'vrx',
+      'VRX',
       'mtl',
       'jpg',
       'JPG',

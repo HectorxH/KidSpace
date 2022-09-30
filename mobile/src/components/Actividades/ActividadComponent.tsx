@@ -79,13 +79,17 @@ const ActividadComponent = (props: ActividadComponentProps) => {
 
   const actividad = actividades[pageNumber];
   const [models, setModels] = useState<number[]>([]);
+
   const [positions, setPositions] = useState<Vec3[]>([]);
   let sceneNav = useRef<ViroARSceneNavigator>(null);
 
   const useAR = typeof actividad.AR !== 'undefined' ? true : false;
 
   const models3d =
-    typeof actividad.AR !== 'undefined' ? actividad.AR.models : [];
+    typeof actividad.AR !== 'undefined' &&
+    typeof actividad.AR.models !== 'undefined'
+      ? actividad.AR.models
+      : [];
 
   const toggleButtons =
     typeof actividad.toggleButton !== 'undefined' ? actividad.toggleButton : [];
@@ -137,7 +141,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                   scene: DesafioIntroductorioSceneAR,
                 }}
                 viroAppProps={{
-                  items: models3d,
+                  models3d: models3d,
                   models: [...models],
                   actividad: nombreActividad,
                   positions: [positions, setPositions],
@@ -177,7 +181,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           {useAR === true && (
             <View style={styles.overlay}>
               <Inventario
-                items={models3d}
+                models3d={models3d}
                 models={[models, setModels]}
                 positions={[positions, setPositions]}
                 placedItems={[placedItems, setPlacedItems]}

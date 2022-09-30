@@ -9,6 +9,7 @@ const images: {
       square: ImageSourcePropType;
     };
   };
+  images360: {[key: string]: ImageSourcePropType};
 } = {
   items: {
     // characters
@@ -294,6 +295,16 @@ const images: {
     caja_torta: {
       square: require('./icons/caja_torta/caja_torta.png'),
     },
+    portal_window_frame: {
+      square: require('./icons/portal_window_frame/square.png'),
+    },
+  },
+
+  images360: {
+    antofagasta: require('../360/materiales/antofagasta.jpg'),
+    lagos: require('../360/materiales/lagos.jpg'),
+    rancagua: require('../360/materiales/rancagua.jpg'),
+    valdivia: require('../360/materiales/valdivia.jpg'),
   },
 };
 
