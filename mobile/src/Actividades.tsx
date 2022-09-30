@@ -14,6 +14,9 @@ import {
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const nombreActividad = route.params.actividad;
   const cantMonedas = route.params.cantMonedas;
+  const userName = route.params.userName;
+  const userLastName = route.params.userLastName;
+  const curso = route.params.curso;
   const actividad = Activities[nombreActividad];
   const [pageNumber, setPageNumber] = useState(0);
 
@@ -23,8 +26,8 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
     actividad: getNombreActividad(nombreActividad),
     unidad: getNombreUnidad(nombreActividad),
     steam: getSteam(nombreActividad),
-    estudiante: 'estudiantenombre',
-    curso: 'nombreCurso',
+    estudiante: userName + ' ' + userLastName,
+    curso: curso,
     quizFinal: [
       {
         pregunta: 'pregunta',

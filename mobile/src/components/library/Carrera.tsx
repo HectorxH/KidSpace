@@ -15,7 +15,7 @@ import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Carrera = ({navigation, route}: CarreraProps) => {
-  const {carrera} = route.params;
+  const {carrera, curso, userName, userLastName} = route.params;
   const oldCompletadas = route.params.completadas;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
@@ -65,6 +65,9 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             onPress={() =>
               navigation.push('Story', {
                 Info: story,
+                curso: curso,
+                userName: userName,
+                userLastName: userLastName,
               })
             }>
             <Card

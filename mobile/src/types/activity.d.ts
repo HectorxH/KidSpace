@@ -1,4 +1,5 @@
 import {FlexAlignType} from 'react-native';
+import {actividadNombre} from './navigation';
 
 export interface IActividadLog {
   tipo: 'individual' | 'clase';
@@ -30,7 +31,8 @@ export interface IActivity {
   img5: string;
   path: string;
   pathAsignar: string;
-  nombreActividad: 'diagramas' | 'diseños';
+  nombreActividad: actividadNombre;
+  // nombreActividad: 'diagramas' | 'diseños' | 'materiales';
 }
 
 export type ButtonSetting = {

@@ -12,10 +12,13 @@ export type desafioTipo =
 export type actividadNombre =
   | 'diagramas'
   | 'diseños'
+  | 'materiales'
   | 'diseño1'
   | 'diseño2'
   | 'nutricion1'
   | 'nutricion2'
+  | 'informatica1'
+  | 'informatica2'
   | 'debug';
 
 export type RootStackParamList = {
@@ -24,15 +27,37 @@ export type RootStackParamList = {
   CargaView: undefined;
   FormularioView: {event: any};
   MainMap: undefined;
-  Activity: {activity: IActivity};
-  Carrera: {carrera: ICarrera; completadas: string};
-  Story: {Info: IInfo};
+  Activity: {
+    activity: IActivity;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
+  Carrera: {
+    carrera: ICarrera;
+    completadas: string;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
+  Story: {Info: IInfo; curso: string; userName: string; userLastName: string};
   NoAvailableActivities: undefined;
-  AvailableActivities: {activities: IActivity[]};
+  AvailableActivities: {
+    activities: IActivity[];
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
 
-  Actividades: {actividad: actividadNombre; cantMonedas: number};
+  Actividades: {
+    actividad: actividadNombre;
+    cantMonedas: number;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;

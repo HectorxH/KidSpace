@@ -136,6 +136,10 @@ const ActNavigation = (props: ActNavigationProps) => {
       };
       console.log(actLog);
       setActividadLog(actLog);
+      if (actLog.tipo === 'clase') {
+        console.log('aqui deberia mandar actLog al backend');
+      }
+
       navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
     }
   };
