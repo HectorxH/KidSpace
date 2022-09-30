@@ -129,7 +129,6 @@ const preguntas = [
 ];
 
 const dataGrafico = (d:number[]) => {
-  console.log(d);
   const datosDona = {
     labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
     datasets: [
@@ -143,22 +142,6 @@ const dataGrafico = (d:number[]) => {
 
   return datosDona;
 };
-
-// const dataGrafico = (d:number[]) => {
-//   console.log(d);
-//   const datosDona = {
-//     labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
-//     datasets: [
-//       {
-//         label: 'Pregunta',
-//         data: d,
-//         backgroundColor: ['#A1C96A', '#EA6A6A', 'gray'],
-//       },
-//     ],
-//   };
-
-//   return datosDona;
-// };
 
 const ActividadDocenteView = () => {
   const params = useParams();

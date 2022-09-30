@@ -5,15 +5,15 @@ import {
   TableCell, TableRow, Stack, Card, Box, TableHead,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ClearIcon from '@mui/icons-material/Clear';
+import CheckIcon from '@mui/icons-material/Check';
 // import axios from 'axios';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
-
-const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
   _id: number,
@@ -42,8 +42,8 @@ const Row = ({ row }:RowParams) => {
           {estado}
         </Typography>
       </TableCell>
-      <TableCell>{pregunta1}</TableCell>
-      <TableCell>{pregunta2}</TableCell>
+      <TableCell>{pregunta1}{pregunta1 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) }</TableCell>
+      <TableCell>{pregunta2}{pregunta2 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) }</TableCell>
     </TableRow>
   );
 };

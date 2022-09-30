@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
@@ -6,10 +7,13 @@ import {
   TableCell, TableRow, Stack, Card, Box, TableHead,
   Typography,
 } from '@mui/material';
+import CheckIcon from '@mui/icons-material/Check';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { DataGrid, GridColDef, GridToolbar } from '@mui/x-data-grid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCrown } from '@fortawesome/free-solid-svg-icons';
 // import axios from 'axios';
-import StarRateIcon from '@mui/icons-material/StarRate';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
@@ -18,7 +22,7 @@ import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
-  _id: number,
+  id: number,
   lugar: number,
   nombre: string,
   actividades: number
@@ -28,111 +32,109 @@ interface RowParams {
   row: IRow,
 }
 
-interface EditarButtonParams {
-  estudiante: IEstudiante,
-}
-
-const Row = ({ row }:RowParams) => {
-  const {
-    _id, lugar, nombre, actividades,
-  } = row;
-
-  const navigate = useNavigate();
-
-  const handleVerStats = () => {
-    navigate(`/${_id}/estadisticasEstudiante`);
-  };
-
-  return (
-    <TableRow
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell>
-        <Stack direction="row" spacing={1} sx={{ alignContent: 'center' }}>
-          <StarRateIcon sx={{
-            color: lugar === 1
-              ? '#F2C144'
-              : lugar === 2
-                ? '#C1C1C1'
-                : lugar === 3
-                  ? '#DF8366'
-                  : null,
-            opacity: lugar > 3 ? 0 : 1,
-          }}
-
-          />
-          <Stack direction="column" spacing={1} sx={{ justifyContent: 'center' }}>
-            {lugar}
-          </Stack>
-        </Stack>
-      </TableCell>
-      <TableCell>{nombre}</TableCell>
-      <TableCell>{actividades}</TableCell>
-      <TableCell>
-        <Stack direction="row">
-          <Button
-            variant="contained"
-            color="quaternary"
-            onClick={handleVerStats}
-            sx={{ alignSelf: 'right' }}
-          >
-            <Typography
-              variant="button"
-              color={(theme: Theme) => theme.palette.primary.contrastText}
-            >
-              Ver estadísticas
-            </Typography>
-          </Button>
-        </Stack>
-      </TableCell>
-    </TableRow>
-  );
-};
-
 interface ICursoTableParams {
   rows: IRow[],
   // updateEstudiantes: Function
+}
+
+interface IParams {
+  rows: [number, string, number],
 }
 
 const RankingTable = (
   { rows }: ICursoTableParams,
 ) => {
   const { logout } = useAuth();
-
+  const navigate = useNavigate();
+  const handleVerStats = (id:number) => {
+    navigate(`/${id}/estadisticasEstudiante`);
+  };
+  const cols: GridColDef[] = [
+    {
+      field: 'id',
+      headerName: 'id',
+      hide: true,
+      flex: 0.1,
+    },
+    {
+      field: 'lugar',
+      headerName: 'Lugar',
+      width: 150,
+      editable: true,
+      renderCell: ((params) => (
+        <div>
+          <FontAwesomeIcon
+            icon={faCrown}
+            style={{
+              color: params.row.lugar === 1
+                ? '#F2C144'
+                : params.row.lugar === 2
+                  ? '#C1C1C1'
+                  : params.row.lugar === 3
+                    ? '#DF8366'
+                    : '#FFF',
+              opacity: params.row.lugar > 3 ? 0 : 1,
+            }}
+          /> {params.row.lugar}
+        </div>
+      )),
+    },
+    {
+      field: 'nombre',
+      headerName: 'Nombre',
+      flex: 1,
+    },
+    {
+      field: 'actividades',
+      headerName: 'Actividades completadas',
+      flex: 1,
+    },
+    {
+      field: 'accion',
+      headerName: 'Acción',
+      flex: 1,
+      sortable: false,
+      renderCell: (params) => {
+        const onClick = (e:any) => {
+          handleVerStats(params.row.id);
+        };
+        return (
+          <div>
+            <Button
+              variant="contained"
+              color="quaternary"
+              onClick={() => onClick(params)}
+            >
+              <Typography
+                variant="button"
+                color={(theme: Theme) => theme.palette.primary.contrastText}
+              >
+                Ver estadísticas
+              </Typography>
+            </Button>
+          </div>
+        );
+      },
+    },
+  ];
   return (
-    <TableContainer
-      component={Card}
-      elevation={4}
-      sx={{ borderRadius: '20px' }}
-    >
-      <Table
-        sx={{ overflowX: 'scroll' }}
-        aria-label="simple table"
-      >
-        <TableHead>
-          <TableRow>
-            <TableCell>Lugar</TableCell>
-            <TableCell>Nombre</TableCell>
-            <TableCell>Actividades completadas</TableCell>
-            <TableCell>Acción</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody sx={{ justifyContent: 'center' }}>
-          {(rows.length === 0
-            ? ''
-            : rows.map((row) => (
-              <Row
-                key={row._id}
-                row={row}
-              />
-            ))
-          )}
-        </TableBody>
-      </Table>
-      {(rows.length === 0)
-        ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
-        : ''}
-    </TableContainer>
+    <Box sx={{ height: 400, width: '100%' }}>
+      <DataGrid
+        density="comfortable"
+        autoHeight
+        columns={cols}
+        rows={Object.values(rows)}
+        disableSelectionOnClick
+        components={{
+          Toolbar: GridToolbar,
+        }}
+        sx={{ borderRadius: 5 }}
+      />
+    </Box>
+  //   {(rows.length === 0)
+  //     ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
+  //     : ''}
+  // </TableContainer>
   );
 };
 

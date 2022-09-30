@@ -9,6 +9,9 @@ import { Helmet } from 'react-helmet';
 import {
   createTheme, CssBaseline, ThemeProvider,
 } from '@mui/material';
+import { esES } from '@mui/x-data-grid';
+import { esES as pickersesES } from '@mui/x-date-pickers';
+import { esES as coreesES } from '@mui/material/locale';
 import axios from 'axios';
 import Layout from './layout/Layout';
 import NotFoundView from './views/NotFoundView';
@@ -36,30 +39,35 @@ import LoadingView from './views/LoadingView';
 axios.defaults.withCredentials = true;
 
 const { palette } = createTheme();
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#5c9dec',
-      contrastText: 'rgb(255, 255, 255)',
+const theme = createTheme(
+  {
+    palette: {
+      primary: {
+        main: '#5c9dec',
+        contrastText: 'rgb(255, 255, 255)',
+      },
+      secondary: {
+        main: '#f57c00',
+      },
+      tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
+      quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
+      textcol: {
+        ...palette.augmentColor({ color: { main: '#063d69' } }),
+        light: '#5C9DEC',
+      },
+      extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
     },
-    secondary: {
-      main: '#f57c00',
+    typography: {
+      fontFamily: 'Poppins',
+      allVariants: {
+        color: '#063d69',
+      },
     },
-    tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
-    quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
-    textcol: {
-      ...palette.augmentColor({ color: { main: '#063d69' } }),
-      light: '#5C9DEC',
-    },
-    extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
   },
-  typography: {
-    fontFamily: 'Poppins',
-    allVariants: {
-      color: '#063d69',
-    },
-  },
-});
+  esES, // x-data-grid translations
+  pickersesES, // x-date-pickers translations
+  coreesES, // core translations
+);
 
 const App = () => (
   <>
