@@ -1,44 +1,35 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
 import {ReactStateSetter} from '../../../../types/others';
 import {RSize} from '../../../../utils/responsive';
 import Layout from '../../../Utils/Layout';
-import {getColor} from '../../utils';
+import Images from '../../../../assets/images/images';
 
-interface ReceivingColorCircleProps {
+interface ReceivingImageProps {
   pageNumber: number;
   dragNumber: number;
   itemNumber: number;
+  draggable: IDraggable;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
-  setResultColor: ReactStateSetter<string>;
-  draggable: IDraggable;
 }
 
-const ReceivingColorCircle = (props: ReceivingColorCircleProps) => {
-  const {pageNumber, dragNumber, itemNumber, draggable, setResultColor} = props;
+const ReceivingImage = (props: ReceivingImageProps) => {
+  const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [receivingValues, setReceivingValues] = props.receivingValues;
 
-  const dragStyle = [
-    styles.receivingBase,
-    {backgroundColor: receivingValues[pageNumber][dragNumber][itemNumber]},
-  ];
-  const colorResult = (payload: number) => {
+  const dragStyle = [styles.receivingBase];
+  const updateImage = (payload: number) => {
     let newReceivingValues = [...receivingValues];
     let newUserDragAnswers = [...userDragAnswers];
-    const receivedColor = draggable.draggableItems[payload].value;
+    const receivedImageName = draggable.draggableItems[payload].value;
 
-    newReceivingValues[pageNumber][dragNumber][itemNumber] = receivedColor;
+    newReceivingValues[pageNumber][dragNumber][itemNumber] = receivedImageName;
+    newUserDragAnswers[pageNumber][dragNumber][itemNumber] = receivedImageName;
 
-    let newColor = getColor(
-      newReceivingValues[pageNumber][dragNumber].reduce((x, y) => x + y, ''),
-    );
-    newUserDragAnswers[pageNumber][dragNumber][0] = newColor;
-
-    setResultColor(newColor);
     setReceivingValues(newReceivingValues);
     setUserDragAnswers(newUserDragAnswers);
   };
@@ -56,9 +47,18 @@ const ReceivingColorCircle = (props: ReceivingColorCircleProps) => {
               resetAnswer();
             }}
             onReceiveDragDrop={event => {
-              colorResult(event.dragged.payload);
-            }}
-          />
+              updateImage(event.dragged.payload);
+            }}>
+            <Image
+              style={styles.image}
+              resizeMode={'contain'}
+              source={
+                Images.items[
+                  receivingValues[pageNumber][dragNumber][itemNumber]
+                ]
+              }
+            />
+          </DraxView>
         }
       />
     </View>
@@ -70,18 +70,25 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   receivingBase: {
-    height: RSize(0.1, 'w'),
-    width: RSize(0.1, 'w'),
-    borderRadius: RSize(0.1, 'w') / 2,
+    height: '100%',
+    width: '100%',
+    borderRadius: RSize(0.015, 'h'),
     justifyContent: 'center',
     alignItems: 'center',
     borderColor: '#B5B5B5',
     borderWidth: 3,
+    backgroundColor: '#FFFFFF',
   },
   receivingHover: {
     borderColor: 'red',
     borderWidth: 2,
   },
+  image: {
+    height: '100%',
+    width: '100%',
+    alignSelf: 'center',
+    opacity: 1,
+  },
 });
 
-export default ReceivingColorCircle;
+export default ReceivingImage;

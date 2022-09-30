@@ -919,10 +919,19 @@
       {
         "position": {
           "start": [0.5, 4],
-          "end": [10, 10]
+          "end": [10, 9.5]
         },
         "settings": {
           "borderWidth": 0
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "chile",
+        "position": {
+          "start": [10.5, 4],
+          "end": [19.5, 19.5]
         }
       }
     ],
@@ -931,7 +940,7 @@
         "text": "Arrastra cada materia prima a su región correspondiente según tus observaciones.",
         "position": {
           "start": [1, 4.5],
-          "end": [9.5, 9.5]
+          "end": [9.5, 9]
         },
         "settings": {
           "fontSize": 0.05
@@ -941,80 +950,80 @@
     "draggable": [
       {
         "type": "order",
-        "answer": ["Cobre", "Hortalizas", "Madera", "Leche de vaca"],
+        "answer": ["cobre", "hortalizas", "madera", "leche_de_vaca"],
         "draggableItems": [
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "Madera",
+            "type": "image",
+            "name": "madera",
+            "value": "madera",
             "position": {
-              "start": [1, 11],
-              "end": [5, 13]
+              "start": [2.5, 10.5],
+              "end": [4.5, 14.5]
             }
           },
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "Leche de vaca",
+            "type": "image",
+            "name": "leche_de_vaca",
+            "value": "leche_de_vaca",
             "position": {
-              "start": [5.5, 11],
-              "end": [9.5, 13]
+              "start": [5.5, 10.5],
+              "end": [7.5, 14.5]
             }
           },
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "Hortalizas",
+            "type": "image",
+            "name": "hortalizas",
+            "value": "hortalizas",
             "position": {
-              "start": [1, 13.5],
-              "end": [5, 15.5]
+              "start": [2.5, 15],
+              "end": [4.5, 19]
             }
           },
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "Cobre",
+            "type": "image",
+            "name": "cobre",
+            "value": "cobre",
             "position": {
-              "start": [5.5, 13.5],
-              "end": [9.5, 15.5]
+              "start": [5.5, 15],
+              "end": [7.5, 19]
             }
           }
         ],
         "receivingItems": [
           {
-            "type": "rectangle",
+            "type": "image",
             "name": "",
             "value": "",
             "position": {
-              "start": [13, 4.5],
-              "end": [19.5, 6.5]
+              "start": [11.7, 4],
+              "end": [13.7, 8]
             }
           },
           {
-            "type": "rectangle",
+            "type": "image",
             "name": "",
             "value": "",
             "position": {
-              "start": [13, 7],
-              "end": [19.5, 9]
+              "start": [11.7, 8.5],
+              "end": [13.7, 12.5]
             }
           },
           {
-            "type": "rectangle",
+            "type": "image",
             "name": "",
             "value": "",
             "position": {
-              "start": [13, 9.5],
-              "end": [19.5, 11.5]
+              "start": [11.7, 13],
+              "end": [13.7, 17]
             }
           },
           {
-            "type": "rectangle",
+            "type": "image",
             "name": "",
             "value": "",
             "position": {
-              "start": [13, 12],
-              "end": [19.5, 14]
+              "start": [16, 14],
+              "end": [18, 18]
             }
           }
         ]

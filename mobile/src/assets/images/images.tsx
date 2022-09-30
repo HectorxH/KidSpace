@@ -173,6 +173,11 @@ const images: {
     materiales_1: require('./extras/materiales/materiales_1.png'),
     materiales_2: require('./extras/materiales/materiales_2.png'),
     materiales_3: require('./extras/materiales/materiales_3.png'),
+    leche_de_vaca: require('./extras/materiales/leche_de_vaca.png'),
+    cobre: require('./extras/materiales/cobre.png'),
+    hortalizas: require('./extras/materiales/hortalizas.png'),
+    madera: require('./extras/materiales/madera.png'),
+    chile: require('./extras/materiales/chile.png'),
 
     // informatica1
     informatica_1_1: require('./extras/informatica1/34.png'),

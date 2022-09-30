@@ -5,6 +5,7 @@ import {ReactStateSetter} from '../../../types/others';
 import {RSize} from '../../../utils/responsive';
 import ReceivingCodeBlock from './ReceivingItems/ReceivingCodeBlock';
 import ReceivingColorCircle from './ReceivingItems/ReceivingColorCircle';
+import ReceivingImage from './ReceivingItems/ReceivingImage';
 import ReceivingRectangle from './ReceivingItems/ReceivingRectangle';
 
 interface ReceivingItemProps {
@@ -35,6 +36,19 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             userDragAnswers={props.userDragAnswers}
             receivingValues={props.receivingValues}
             setResultColor={props.setResultColor}
+          />
+        </View>
+      )}
+      {/* image  */}
+      {draggable.receivingItems[itemNumber].type === 'image' && (
+        <View style={styles.container}>
+          <ReceivingImage
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            receivingValues={props.receivingValues}
           />
         </View>
       )}
