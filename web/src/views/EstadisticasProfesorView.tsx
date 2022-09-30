@@ -57,25 +57,25 @@ const infoActividadIndividualTable = [
 
 const infoRankingTable = [
   {
-    id: 0,
+    _id: 0,
     lugar: 1,
     nombre: 'Skylar',
     actividades: 70,
   },
   {
-    id: 1,
+    _id: 1,
     lugar: 2,
     nombre: 'Cirrus',
     actividades: 30,
   },
   {
-    id: 2,
+    _id: 2,
     lugar: 4,
     nombre: 'Kai',
     actividades: 10,
   },
   {
-    id: 3,
+    _id: 3,
     lugar: 3,
     nombre: 'Soo',
     actividades: 20,

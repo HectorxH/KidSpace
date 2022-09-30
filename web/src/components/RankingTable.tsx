@@ -22,14 +22,10 @@ import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
-  id: number,
+  _id: number,
   lugar: number,
   nombre: string,
   actividades: number
-}
-
-interface RowParams {
-  row: IRow,
 }
 
 interface ICursoTableParams {
@@ -50,12 +46,6 @@ const RankingTable = (
     navigate(`/${id}/estadisticasEstudiante`);
   };
   const cols: GridColDef[] = [
-    {
-      field: 'id',
-      headerName: 'id',
-      hide: true,
-      flex: 0.1,
-    },
     {
       field: 'lugar',
       headerName: 'Lugar',
@@ -124,6 +114,7 @@ const RankingTable = (
         autoHeight
         columns={cols}
         rows={Object.values(rows)}
+        getRowId={(row: any) => row._id}
         disableSelectionOnClick
         components={{
           Toolbar: GridToolbar,
