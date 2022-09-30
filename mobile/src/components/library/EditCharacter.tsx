@@ -9,6 +9,8 @@ import {
   ImageBackground,
   Pressable,
   Modal,
+  FlatList,
+  SafeAreaView,
 } from 'react-native';
 import {Button} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -96,6 +98,7 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
     console.log('hi');
   };
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
+
   return (
     <View style={styles.container}>
       <Modal
@@ -279,41 +282,37 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
             backgroundColor: '#ECECEC',
           }}
           onStartShouldSetResponder={() => true}>
-          <ScrollView style={styles.scrollView} persistentScrollbar={true}>
-            <View
-              style={{
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-              }}>
-              {Array(len[parte])
-                .fill(1)
-                .map((i, id) => (
-                  <View
-                    key={id}
+          <FlatList
+            style={styles.scrollView}
+            persistentScrollbar={true}
+            numColumns={6}
+            data={Array(len[parte]).fill(1)}
+            renderItem={({item, index}) => (
+              <View
+                key={index}
+                style={[
+                  styles.part,
+                  index !== parteArray[parte]
+                    ? styles.partNoSelected
+                    : styles.partSelected,
+                ]}>
+                <TouchableOpacity
+                  key={index}
+                  onPress={() => handlePartes(parte, index)}>
+                  <Image
+                    key={index}
                     style={[
-                      styles.part,
-                      id !== parteArray[parte]
-                        ? styles.partNoSelected
-                        : styles.partSelected,
-                    ]}>
-                    <TouchableOpacity
-                      key={id}
-                      onPress={() => handlePartes(parte, id)}>
-                      <Image
-                        key={id}
-                        style={[
-                          styles.opcion,
-                          parte > 8 && disponibles[parte][id] === 0
-                            ? styles.opcionNoDisponible
-                            : styles.opcionDisponible,
-                        ]}
-                        source={partes[parte][srcNames[parte]][`i${id}`].uri}
-                      />
-                    </TouchableOpacity>
-                  </View>
-                ))}
-            </View>
-          </ScrollView>
+                      styles.opcion,
+                      parte > 8 && disponibles[parte][index] === 0
+                        ? styles.opcionNoDisponible
+                        : styles.opcionDisponible,
+                    ]}
+                    source={partes[parte][srcNames[parte]][`i${index}`].uri}
+                  />
+                </TouchableOpacity>
+              </View>
+            )}
+          />
         </View>
       </View>
     </View>
