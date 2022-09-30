@@ -109,8 +109,8 @@
       {
         "text": "Para pintar cada uno de sus cuadros, Noah tiene que manejar bien los conceptos de la *teoría de color*.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15]
         }
       }
     ]
@@ -138,8 +138,8 @@
       {
         "text": "La teoría de color es un grupo de reglas en la mezcla de colores",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -176,8 +176,8 @@
       {
         "text": "para conseguir el efecto o tono deseado.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -935,8 +935,8 @@
       {
         "text": "Al centro de la rueda se ubican el rojo, el azul y el amarillo.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ]
@@ -964,8 +964,8 @@
       {
         "text": "Estos colores no se pueden obtener mediante la mezcla de otros colores.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ]
@@ -993,8 +993,8 @@
       {
         "text": "Es por ello que estos tres colores se conocen como *colores primarios*.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ]
@@ -1205,8 +1205,8 @@
       {
         "text": "Observa los nuevos colores obtenidos.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ]
@@ -1232,10 +1232,10 @@
     ],
     "texts": [
       {
-        "text": "Rojo con amarillo da el naranjo.",
+        "text": "Rojo con amarillo dan el color naranjo.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -1270,10 +1270,10 @@
     ],
     "texts": [
       {
-        "text": "Amarillo con azul da el verde.",
+        "text": "Amarillo con azul dan el color verde.",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -1294,7 +1294,7 @@
         "name": "ryb",
         "position": {
           "start": [0.5, 0],
-          "end": [7.5, 20]  
+          "end": [7.5, 20]
         }
       }
     ],
@@ -1308,10 +1308,10 @@
     ],
     "texts": [
       {
-        "text": "Azul con rojo da el morado. ",
+        "text": "Azul con rojo dan el color morado. ",
         "position": {
-          "start": [10, 5],
-          "end": [18, 15]
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -1570,10 +1570,79 @@
         "visible": false
       }
     ],
-    "draggable": {
-      "draggable": true,
-      "answer": "#31C852"
-    }
+    "draggable": [
+      {
+        "type": "color",
+        "answer": ["#31C852"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "tempera_negra",
+            "value": "#000000",
+            "position": {
+              "start": [7, 15],
+              "end": [9, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "tempera_blanca",
+            "value": "#FFFFFF",
+            "position": {
+              "start": [9.5, 15],
+              "end": [11.5, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "tempera_roja",
+            "value": "#FF1616",
+            "position": {
+              "start": [12, 15],
+              "end": [14, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "tempera_azul",
+            "value": "#0098D5",
+            "position": {
+              "start": [14.5, 15],
+              "end": [16.5, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "tempera_amarilla",
+            "value": "#FFE700",
+            "position": {
+              "start": [17, 15],
+              "end": [19, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "colorCircle",
+            "name": "",
+            "value": "#FFFFFF",
+            "position": { 
+              "start": [8.75, 9],
+              "end": [10.75, 13]
+            }
+          },
+          {
+            "type": "colorCircle",
+            "name": "",
+            "value": "#FFFFFF",
+            "position": {
+              "start": [12.75, 9],
+              "end": [14.75, 13]
+            }
+          }
+        ]
+      }
+    ]
   },
   {
     "background": "",
@@ -1675,10 +1744,79 @@
         "visible": false
       }
     ],
-    "draggable": {
-      "draggable": true,
-      "answer": "#FFAFAD"
+    "draggable": [
+      {
+        "type": "color",
+        "answer": ["#FFAFAD"],
+        "draggableItems": [
+        {
+          "type": "image",
+          "name": "tempera_negra",
+          "value": "#000000",
+          "position": {
+            "start": [7, 15],
+            "end": [9, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_blanca",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [9.5, 15],
+            "end": [11.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_roja",
+          "value": "#FF1616",
+          "position": {
+            "start": [12, 15],
+            "end": [14, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_azul",
+          "value": "#0098D5",
+          "position": {
+            "start": [14.5, 15],
+            "end": [16.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_amarilla",
+          "value": "#FFE700",
+          "position": {
+            "start": [17, 15],
+            "end": [19, 19.5]
+          }
+        }
+      ],
+      "receivingItems": [
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [8.75, 9],
+            "end": [10.75, 13]
+          }
+        },
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [12.75, 9],
+            "end": [14.75, 13]
+          }
+        }
+      ]
     }
+  ]
   },
   {
     "background": "",
@@ -1780,10 +1918,79 @@
         "visible": false
       }
     ],
-    "draggable": {
-      "draggable": true,
-      "answer": "#9EF3FF"
+    "draggable": [
+      {
+        "type": "color",
+        "answer": ["#9EF3FF"],
+        "draggableItems": [
+        {
+          "type": "image",
+          "name": "tempera_negra",
+          "value": "#000000",
+          "position": {
+            "start": [7, 15],
+            "end": [9, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_blanca",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [9.5, 15],
+            "end": [11.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_roja",
+          "value": "#FF1616",
+          "position": {
+            "start": [12, 15],
+            "end": [14, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_azul",
+          "value": "#0098D5",
+          "position": {
+            "start": [14.5, 15],
+            "end": [16.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_amarilla",
+          "value": "#FFE700",
+          "position": {
+            "start": [17, 15],
+            "end": [19, 19.5]
+          }
+        }
+      ],
+      "receivingItems": [
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [8.75, 9],
+            "end": [10.75, 13]
+          }
+        },
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [12.75, 9],
+            "end": [14.75, 13]
+          }
+        }
+      ]
     }
+  ]
   },
   {
     "background": "",
@@ -1885,18 +2092,87 @@
         "visible": false
       }
     ],
-    "draggable": {
-      "draggable": true,
-      "answer": "#63313C"
+    "draggable": [
+      {
+        "type": "color",
+        "answer": ["#63313C"],
+        "draggableItems": [
+        {
+          "type": "image",
+          "name": "tempera_negra",
+          "value": "#000000",
+          "position": {
+            "start": [7, 15],
+            "end": [9, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_blanca",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [9.5, 15],
+            "end": [11.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_roja",
+          "value": "#FF1616",
+          "position": {
+            "start": [12, 15],
+            "end": [14, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_azul",
+          "value": "#0098D5",
+          "position": {
+            "start": [14.5, 15],
+            "end": [16.5, 19.5]
+          }
+        },
+        {
+          "type": "image",
+          "name": "tempera_amarilla",
+          "value": "#FFE700",
+          "position": {
+            "start": [17, 15],
+            "end": [19, 19.5]
+          }
+        }
+      ],
+      "receivingItems": [
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [8.75, 9],
+            "end": [10.75, 13]
+          }
+        },
+        {
+          "type": "colorCircle",
+          "name": "",
+          "value": "#FFFFFF",
+          "position": {
+            "start": [12.75, 9],
+            "end": [14.75, 13]
+          }
+        }
+      ]
     }
+  ]
   },
   {
     "background": "",
     "textBoxes": [
       {
         "position": {
-          "start": [8, 1],
-          "end": [19.5, 7.5]
+          "start": [9, 5],
+          "end": [18.5, 13]
         },
         "settings": {
           "borderWidth": 0,
@@ -1906,39 +2182,13 @@
     ],
     "texts": [
       {
-        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
+        "text": "¡Listo!\nCon unos pocos colores podemos formar todos los que necesitemos para nuestras pinturas.",
         "position": {
-          "start": [8.5, 1.5],
-          "end": [19, 7]
+          "start": [9.5, 5.5],
+          "end": [18, 12.5]
         },
         "settings": { 
           "fontSize": 0.05,
-          "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
-        }
-      },
-      {
-        "text": "+",
-        "position": {
-          "start": [11, 8],
-          "end": [12.5, 13.5]
-        },
-        "settings": { 
-          "fontSize": 0.06,
-          "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
-        }
-      },
-      {
-        "text": "=",
-        "position": {
-          "start": [15, 8],
-          "end": [16.5, 13.5]
-        },
-        "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1990,10 +2240,43 @@
         "visible": false
       }
     ],
-    "draggable": {
-      "draggable": true,
-      "answer": ""
-    }
+    "items": [
+      {
+        "name": "tempera_negra",
+        "position": {
+          "start": [7, 15],
+          "end": [9, 19.5]
+        }
+      },
+      {
+        "name": "tempera_blanca",
+        "position": {
+          "start": [9.5, 15],
+          "end": [11.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_roja",
+        "position": {
+          "start": [12, 15],
+          "end": [14, 19.5]
+        }
+      },
+      {
+        "name": "tempera_azul",
+        "position": {
+          "start": [14.5, 15],
+          "end": [16.5, 19.5]
+        }
+      },
+      {
+        "name": "tempera_amarilla",
+        "position": {
+          "start": [17, 15],
+          "end": [19, 19.5]
+        }
+      }
+      ]
   },
   {
     "background": "bg_diseño1",

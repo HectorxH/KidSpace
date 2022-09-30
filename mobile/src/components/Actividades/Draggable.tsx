@@ -13,6 +13,7 @@ interface DraggableProps {
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   draggable: IDraggable[] | never[];
 }
 
@@ -50,6 +51,7 @@ const Draggable = (props: DraggableProps) => {
                           userDragAnswers={props.userDragAnswers}
                           pickedDragAnswers={props.pickedDragAnswers}
                           receivingNames={props.receivingNames}
+                          receivingValues={props.receivingValues}
                           setResultColor={setResultColor}
                           draggable={draggable}
                         />

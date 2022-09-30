@@ -27,6 +27,7 @@ interface StoryComponentProps {
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
 
   // quiz
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
@@ -134,6 +135,7 @@ const StoryComponent = (props: StoryComponentProps) => {
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
             receivingNames={props.receivingNames}
+            receivingValues={props.receivingValues}
             draggable={dragQuestions}
           />
         </View>

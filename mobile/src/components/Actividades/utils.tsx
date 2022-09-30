@@ -113,6 +113,7 @@ export function checkAnswers(
   rightInputsAnswers: number[][],
   selectedMaterial: string[][][],
 ) {
+  // return true;
   var respuestasCorrectas =
     requirements
       .map(n =>
@@ -131,19 +132,19 @@ export function checkAnswers(
     requirements
       .map(n => userAnswersQuiz[n].reduce((x, y) => Number(x) + Number(y), 0))
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    // requirements
-    //   .map(n =>
-    //     userDragAnswer[n].map((draggableItems, draggableNumber) =>
-    //       draggableItems
-    //         .map((userAnswer, anserNumber) =>
-    //           userAnswer === rightDragAnswer[n][draggableNumber][anserNumber]
-    //             ? [1]
-    //             : [0],
-    //         )
-    //         .reduce((x, y) => Number(x) + Number(y), 0),
-    //     ),
-    //   )
-    //   .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n =>
+        userDragAnswer[n].map((draggableItems, draggableNumber) =>
+          draggableItems
+            .map((userAnswer, anserNumber) =>
+              userAnswer === rightDragAnswer[n][draggableNumber][anserNumber]
+                ? [1]
+                : [0],
+            )
+            .reduce((x, y) => Number(x) + Number(y), 0),
+        ),
+      )
+      .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n =>
         userInputAnswers[n]
@@ -188,9 +189,9 @@ export function checkAnswers(
     requirements
       .map(n => userAnswersQuiz[n].length)
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    // requirements
-    //   .map(n => rightDragAnswer[n].map(draggableItems => draggableItems.length))
-    //   .reduce((x, y) => Number(x) + Number(y), 0) +
+    requirements
+      .map(n => rightDragAnswer[n].map(draggableItems => draggableItems.length))
+      .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
       .map(n => rightInputsAnswers[n].length)
       .reduce((x, y) => Number(x) + Number(y), 0) +

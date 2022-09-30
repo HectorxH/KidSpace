@@ -4,6 +4,7 @@ import {IDraggable} from '../../../types/activity';
 import {ReactStateSetter} from '../../../types/others';
 import {RSize} from '../../../utils/responsive';
 import ReceivingCodeBlock from './ReceivingItems/ReceivingCodeBlock';
+import ReceivingColorCircle from './ReceivingItems/ReceivingColorCircle';
 import ReceivingRectangle from './ReceivingItems/ReceivingRectangle';
 
 interface ReceivingItemProps {
@@ -13,6 +14,7 @@ interface ReceivingItemProps {
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   setResultColor: ReactStateSetter<string>;
   draggable: IDraggable;
 }
@@ -22,6 +24,21 @@ const ReceivingItem = (props: ReceivingItemProps) => {
   // console.log(draggable.receivingItems[itemNumber].type);
   return (
     <View style={styles.overlay}>
+      {/* color circle  */}
+      {draggable.receivingItems[itemNumber].type === 'colorCircle' && (
+        <View style={styles.container}>
+          <ReceivingColorCircle
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            receivingValues={props.receivingValues}
+            setResultColor={props.setResultColor}
+          />
+        </View>
+      )}
+
       {/* rectangle  */}
       {draggable.receivingItems[itemNumber].type === 'rectangle' && (
         <View style={styles.container}>
@@ -29,10 +46,9 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             pageNumber={pageNumber}
             dragNumber={dragNumber}
             itemNumber={itemNumber}
+            draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
-            receivingNames={props.receivingNames}
-            draggable={draggable}
           />
         </View>
       )}
@@ -44,10 +60,10 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             pageNumber={pageNumber}
             dragNumber={dragNumber}
             itemNumber={itemNumber}
+            draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
             receivingNames={props.receivingNames}
-            draggable={draggable}
           />
         </View>
       )}

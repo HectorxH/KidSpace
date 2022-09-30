@@ -117,15 +117,10 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       ? s.textFieldQuestion.map(q => q.rightAnswer)
       : [0],
   );
-  // Variables para controlar avance en preguntas de drag; [pageNumber] = pageAnswer
-  // const [userDragAnswer, setUserDragAnswer] = useState<string[]>(
-  //   actividad.map(() => ''),
-  // );
-  // const rightDragAnswer = actividad.map(s =>
-  //   typeof s.draggable !== 'undefined' ? s.draggable.answer : '',
-  // );
-
-  // Variables para controlar avance en preguntas de drag; [pageNumber][dragNumber][answerNumber] = string con answer de drag
+  // Variables para controlar avance en preguntas de drag;
+  // Esta variable revisa que la cant de respuestas del usuario
+  // sea igual a la cant de respuestas que necesita la pregunta
+  // [pageNumber][dragNumber][answerNumber] = string con answer de drag
   const [userDragAnswers, setUserDragAnswers] = useState<string[][][]>(
     actividad.map(s =>
       typeof s.draggable !== 'undefined'
@@ -133,7 +128,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
         : [[]],
     ),
   );
-  // [pageNumber][dragNumber][receivingItemNumber] = dragAnswer = 0 (no responde) | 1 (bien) | (mal), se usa para estilos
+  // [pageNumber][dragNumber][receivingItemNumber] = dragAnswer = 0 (no responde) | 1 (bien) | 2 (mal), se usa para estilos
   const [pickedDragAnswers, setPickedDragAnswers] = useState<number[][][]>(
     actividad.map(s =>
       typeof s.draggable !== 'undefined'
@@ -153,6 +148,16 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       typeof s.draggable !== 'undefined'
         ? s.draggable.map(q => q.receivingItems.map(item => item.name))
         : [[]],
+    ),
+  );
+
+  // [pageNumber][dragNumber][itemNumber] = itemValue
+  // se usa para controlar valores en campos de drag-receive
+  const [receivingValues, setReceivingValues] = useState<string[][][]>(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.receivingItems.map(item => item.value))
+        : [['']],
     ),
   );
 
@@ -202,6 +207,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
           pickedDragAnswers={[pickedDragAnswers, setPickedDragAnswers]}
           rightDragAnswers={rightDragAnswers}
           receivingNames={[receivingNames, setReceivingNames]}
+          receivingValues={[receivingValues, setReceivingValues]}
           userInputAnswers={[userInputAnswers, setUserInputAnswer]}
           rightInputAnswer={rightInputAnswer}
           modelMaterial={[modelMaterial, setModelMaterial]}

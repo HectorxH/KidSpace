@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import {DraxView} from 'react-native-drax';
-import {IReceivingItems} from '../../../../types/activity';
+import {IDraggableItems} from '../../../../types/activity';
 import {RSize} from '../../../../utils/responsive';
 import Layout from '../../../Utils/Layout';
 
 interface DraggableRectangleProps {
-  item: IReceivingItems;
+  item: IDraggableItems;
   itemNumber: number;
 }
 

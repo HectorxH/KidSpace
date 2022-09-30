@@ -12,7 +12,6 @@ interface ReceivingRectangleProps {
   itemNumber: number;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   draggable: IDraggable;
 }
 
@@ -20,7 +19,6 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
-  const [receivingNames, setReceivingNames] = props.receivingNames;
 
   const answerRectangleStyles = [
     styles.receivingRectangleBase,
@@ -36,10 +34,8 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
   ];
 
   function checkAnswer(payload: number) {
-    console.log('aaa', payload);
     let newUserAnswers = [...userDragAnswers];
     let newPickedAnswers = [...pickedDragAnswers];
-    let newReceivingNames = [...receivingNames];
 
     const answer = draggable.draggableItems[payload].value;
 
@@ -54,29 +50,19 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
       newPickedAnswers[pageNumber][dragNumber][itemNumber] = 2;
     }
 
-    if (draggable.receivingItems[itemNumber].name === '') {
-      newReceivingNames[pageNumber][dragNumber][itemNumber] =
-        draggable.draggableItems[payload].name;
-    }
-
     setUserDragAnswers(newUserAnswers);
     setPickedDragAnswers(newPickedAnswers);
-    setReceivingNames(newReceivingNames);
   }
 
   function resetAnswer() {
     let newUserAnswers = [...userDragAnswers];
     let newPickedAnswers = [...pickedDragAnswers];
-    let newReceivingNames = [...receivingNames];
 
     newUserAnswers[pageNumber][dragNumber][itemNumber] = '';
     newPickedAnswers[pageNumber][dragNumber][itemNumber] = 0;
-    newReceivingNames[pageNumber][dragNumber][itemNumber] =
-      draggable.receivingItems[itemNumber].name;
 
     setUserDragAnswers(newUserAnswers);
     setPickedDragAnswers(newPickedAnswers);
-    setReceivingNames(newReceivingNames);
   }
 
   return (

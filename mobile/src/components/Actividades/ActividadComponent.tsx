@@ -39,6 +39,7 @@ interface ActividadComponentProps {
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
   rightDragAnswers: string[][][];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
 
   // inputfield
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
@@ -165,6 +166,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 pickedAnswersDropdown={pickedAnswersDropdown}
                 userDragAnswers={userDragAnswers}
                 receivingNames={props.receivingNames}
+                receivingValues={props.receivingValues}
                 pickedDragAnswers={pickedDragAnswers}
                 userAnswersQuiz={userAnswersQuiz}
                 pickedAnswersQuiz={pickedAnswersQuiz}
