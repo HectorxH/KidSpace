@@ -10,6 +10,10 @@ import {
   ViroPortalScene,
   ViroPortal,
   Viro360Image,
+  ViroARTrackingTargets,
+  ViroARImageMarker,
+  ViroImage,
+  ViroVideo,
   // @ts-ignore
 } from '@viro-community/react-viro';
 import Images from '../../assets/images/images';
@@ -28,6 +32,10 @@ interface DesafioIntroductorioSceneARProps {
   sceneNavigator: {
     viroAppProps: {
       models: number[];
+      imageTargets: string[];
+      videoTargets: string[];
+      imageTargetsDisplay: string[];
+      videoTargetsDisplay: string[];
       actividad: string;
       models3d: IModels[];
       positions: [Vec3[], ReactStateSetter<Vec3[]>];
@@ -51,6 +59,12 @@ const DesafioIntroductorioSceneAR = (
   props: DesafioIntroductorioSceneARProps,
 ) => {
   const models = props.sceneNavigator.viroAppProps.models;
+  const imageTargets = props.sceneNavigator.viroAppProps.imageTargets;
+  const videoTargets = props.sceneNavigator.viroAppProps.videoTargets;
+  const imageTargetsDisplay =
+    props.sceneNavigator.viroAppProps.imageTargetsDisplay;
+  const videoTargetsDisplay =
+    props.sceneNavigator.viroAppProps.videoTargetsDisplay;
   const actividad = props.sceneNavigator.viroAppProps.actividad;
   const models3d = props.sceneNavigator.viroAppProps.models3d;
   const [updateMaterial, setUpdateMaterial] =
@@ -197,6 +211,59 @@ const DesafioIntroductorioSceneAR = (
         castsShadow={true}
       />
       <ViroAmbientLight color="#FFFFFF" intensity={150} />
+      {imageTargets.map((target: string, targetIndex: number) => {
+        return (
+          <ViroARImageMarker
+            key={
+              actividad + target + '_imageTracking_' + targetIndex.toString()
+            }
+            target={target}
+            onAnchorFound={() => {
+              console.log('target detectado:', target);
+            }}>
+            <ViroNode>
+              <ViroImage
+                height={0.5}
+                width={0.5}
+                position={[0, -1, 0]}
+                rotation={[-90, 0, 0]}
+                source={
+                  Images.imageTargetsDisplay[imageTargetsDisplay[targetIndex]]
+                }
+              />
+            </ViroNode>
+          </ViroARImageMarker>
+        );
+      })}
+      {videoTargets.map((target: string, targetIndex: number) => {
+        return (
+          <ViroARImageMarker
+            key={
+              actividad + target + '_videoTracking_' + targetIndex.toString()
+            }
+            target={target}
+            // target={'pipe1'}
+            onAnchorFound={() => {
+              console.log('target detectado:', target);
+            }}>
+            <ViroNode>
+              <ViroVideo
+                height={1}
+                width={0.5}
+                // source={Images.videoTargetsDisplay.test}
+                position={[0, -1, 0]}
+                rotation={[-90, 0, 0]}
+                loop={true}
+                // onDrag={() => {}}
+                // dragType={'FixedToWorld'}
+                source={
+                  Images.videoTargetsDisplay[videoTargetsDisplay[targetIndex]]
+                }
+              />
+            </ViroNode>
+          </ViroARImageMarker>
+        );
+      })}
       {models.map((itemNumber: number, modelIndex: number) => {
         return (
           <ViroNode key={actividad + '_3dobj_' + modelIndex.toString()}>
@@ -265,6 +332,27 @@ const DesafioIntroductorioSceneAR = (
 };
 
 export default DesafioIntroductorioSceneAR;
+
+ViroARTrackingTargets.createTargets({
+  menhera: {
+    source: Images.trackingTargets.menhera,
+    orientation: 'Up',
+    physicalWidth: 0.05,
+    type: 'Image',
+  },
+  pipe1: {
+    source: Images.trackingTargets.pipe1,
+    orientation: 'Up',
+    physicalWidth: 0.05,
+    type: 'Image',
+  },
+  pipe2: {
+    source: Images.trackingTargets.pipe2,
+    orientation: 'Up',
+    physicalWidth: 0.05,
+    type: 'Image',
+  },
+});
 
 ViroMaterials.createMaterials({
   white_sphere: {

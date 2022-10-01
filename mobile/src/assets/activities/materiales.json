@@ -1250,6 +1250,9 @@
       }
     ]
   },
+
+
+
   {
     "background": "bg_materiales",
     "textBoxes": [
@@ -1847,35 +1850,172 @@
       }
     ]
   },
+
+
+
+
   {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
+      "imageTargets": ["pipe1", "pipe2"],
+      "imageTargetsDisplay": ["menhera", "menhera_cry"],
+      "videoTargets": ["pipe1"],
+      "videoTargetsDisplay": ["test"]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 45,
+        "require": [44],
+        "visible": false
+      }
+    ],
     "background": "",
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
-          "end": [19, 16]
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
         }
       }
     ],
     "texts": [
       {
-        "text": "TODO cambiar por ar con tarjetas",
+        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [18.5, 15.5]
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
-    "items": [
+    "alternativas": [
       {
-        "name": "cry",
-        "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
-        }
+        "rightAnswer": ["37"],
+        "answers": [
+          {
+            "text": "11,1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "44",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "37",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["7"],
+        "answers": [
+          {
+            "text": "5",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "6",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "7",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
       }
     ]
   },
+
+
+
+
+
   {
     "background": "bg_materiales",
     "items": [

@@ -10,8 +10,8 @@ const activities: {[key: string]: Actividad} = {
   nutricion2: require('./nutricion2.json'),
   informatica1: require('./informatica1.json'),
   // informatica2: require('./informatica2.json'),
-  // informatica2: require('./debug.json'),
-  informatica2: require('./materiales.json'),
+  informatica2: require('./debug.json'),
+  // informatica2: require('./materiales.json'),
 };
 
 export default activities;

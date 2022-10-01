@@ -168,7 +168,9 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
   // [pageNumber][models_number] = "nombre_textura", ejemplo: modelMaterial[0][0] = "azul_quijote"
   const [modelMaterial, setModelMaterial] = useState<string[][]>(
     actividad.map(s =>
-      typeof s.AR !== 'undefined' ? s.AR.models.map(() => 'default') : [],
+      typeof s.AR !== 'undefined' && typeof s.AR.models !== 'undefined'
+        ? s.AR.models.map(() => 'default')
+        : [],
     ),
   );
 
@@ -178,7 +180,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
   // ejemplo: selectedModelMaterialFields[0][0][1] = "quijote"  // modelo 0 en página 0 tiene valor quijote en textura 1
   const [selectedMaterial, setSelectedMaterial] = useState<string[][][]>(
     actividad.map(s =>
-      typeof s.AR !== 'undefined'
+      typeof s.AR !== 'undefined' && typeof s.AR.models !== 'undefined'
         ? s.AR.models.map(model =>
             typeof model.ARMaterials !== 'undefined'
               ? model.ARMaterials.materialOrder.map(() => 'default')

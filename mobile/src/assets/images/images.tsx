@@ -10,6 +10,9 @@ const images: {
     };
   };
   images360: {[key: string]: ImageSourcePropType};
+  trackingTargets: {[key: string]: ImageSourcePropType};
+  imageTargetsDisplay: {[key: string]: ImageSourcePropType};
+  videoTargetsDisplay: {[key: string]: ImageSourcePropType};
 } = {
   items: {
     // characters
@@ -305,6 +308,21 @@ const images: {
     lagos: require('../360/materiales/lagos.jpg'),
     rancagua: require('../360/materiales/rancagua.jpg'),
     valdivia: require('../360/materiales/valdivia.jpg'),
+  },
+
+  trackingTargets: {
+    menhera: require('./trackingTargets/menhera.png'),
+    pipe1: require('./trackingTargets/pipe1.png'),
+    pipe2: require('./trackingTargets/pipe2.png'),
+  },
+
+  imageTargetsDisplay: {
+    menhera: require('./character/menhera/menhera_normal.png'),
+    menhera_cry: require('./character/menhera/menhera_cry.png'),
+  },
+
+  videoTargetsDisplay: {
+    test: require('../videos/test.mp4'),
   },
 };
 

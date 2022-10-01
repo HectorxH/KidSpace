@@ -143,6 +143,10 @@ export interface IModels {
 
 export interface IAR {
   start: boolean;
+  imageTargets?: string[];
+  videoTargets?: string[];
+  imageTargetsDisplay?: string[];
+  videoTargetsDisplay?: string[];
   models?: IModels[];
 }
 

@@ -113,7 +113,7 @@ export function checkAnswers(
   rightInputsAnswers: number[][],
   selectedMaterial: string[][][],
 ) {
-  // return true;
+  return true;
   var respuestasCorrectas =
     requirements
       .map(n =>
