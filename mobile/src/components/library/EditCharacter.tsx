@@ -30,7 +30,6 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 import {EditCharacterProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
-
 const Arraydisponibles = [
   [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31 de largo
   [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], //39

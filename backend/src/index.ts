@@ -199,7 +199,7 @@ app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
-app.use('/Estadistivas', checkAuth, EstadisticasRouter);
+app.use('/Estadisticas', checkAuth, EstadisticasRouter);
 
 app.listen(port, () => {
   console.log(`App listening on http://localhost:${port}`);

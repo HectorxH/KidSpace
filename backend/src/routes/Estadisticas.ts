@@ -1,10 +1,11 @@
 import express from 'express';
 import _ from 'lodash';
 import ActividadLog, { IActividadLog } from '../models/ActividadLog';
+import Estudiante from '../models/Estudiante';
 
 const router = express.Router();
 
-router.get('estudiante/:id/steam', async (req, res) => {
+router.get('/estudiante/:id/steam', async (req, res) => {
   try {
     const { id } = req.params;
     const logs : IActividadLog[] = await ActividadLog.find({ estudiante: id });
@@ -21,15 +22,15 @@ router.get('estudiante/:id/steam', async (req, res) => {
   }
 });
 
-router.get('estudiante/:id/timeline', async (req, res) => {
+router.get('/estudiante/:id/timeline', async (req, res) => {
   try {
     const { id } = req.params;
     const logs : IActividadLog[] = await ActividadLog.find({ estudiante: id });
     if (logs) {
-      const data = _.map(logs, (log) => ({ x: 1, y: new Date(log.fecha) }));
-      res.json({ data });
+      const timeline = _.map(logs, (log) => ({ x: 1, y: new Date(log.fecha) }));
+      res.json({ timeline });
     } else {
-      res.json({ data: [] });
+      res.json({ timeline: [] });
     }
   } catch (e) {
     console.log(e);
@@ -37,15 +38,29 @@ router.get('estudiante/:id/timeline', async (req, res) => {
   }
 });
 
-router.get('estudiante/:id/historial', async (req, res) => {
+router.get('/estudiante/:id/historial', async (req, res) => {
   try {
     const { id } = req.params;
-    const logs : IActividadLog[] = await ActividadLog.find({ estudiante: id });
-    if (logs) {
-      res.json({ logs });
+    const historial : IActividadLog[] = await ActividadLog.find({ estudiante: id });
+    if (historial) {
+      res.json({ historial });
     } else {
-      res.json({ logs: [] });
+      res.json({ historial: [] });
     }
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/estudiante/:id/actividades', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const estudiante = await Estudiante.findById(id);
+    res.json({
+      actividadesIndividuales: estudiante?.actividadesIndividuales,
+      actividadesClase: estudiante?.actividadesClase,
+    });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
