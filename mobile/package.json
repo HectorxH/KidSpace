@@ -19,10 +19,8 @@
     "axios": "^0.27.2",
     "babel-plugin-optional-require": "^0.3.1",
     "dotenv": "^16.0.2",
-    "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "lottie-react-native": "^5.1.4",
-    "path": "^0.12.7",
     "pusher-js": "^7.1.1-beta",
     "react": "17.0.2",
     "react-native": "0.65.1",
@@ -40,8 +38,7 @@
     "react-native-table-component": "https://github.com/slice312/react-native-table-component.git",
     "react-native-vector-icons": "^9.1.0",
     "react-redux": "^8.0.2",
-    "redux": "^4.2.0",
-    "utils": "^0.3.1"
+    "redux": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
