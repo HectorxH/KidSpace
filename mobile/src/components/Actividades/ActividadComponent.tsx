@@ -15,7 +15,7 @@ import {Vec3} from '../../types/activity';
 import {ReactStateSetter} from '../../types/others';
 import {RootStackParamList} from '../../types/navigation';
 
-import DesafioIntroductorioSceneAR from '../ARScenes/DesafioIntroductorioAR';
+import ARMainComponent from '../ARScenes/ARMainComponent';
 import Inventario from '../inventario/inventario';
 import MaterialSelector from './MaterialSelector';
 
@@ -90,25 +90,10 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     typeof actividad.AR.models !== 'undefined'
       ? actividad.AR.models
       : [];
-  const imageTargets =
+  const imageTrackers =
     typeof actividad.AR !== 'undefined' &&
-    typeof actividad.AR.imageTargets !== 'undefined'
-      ? actividad.AR.imageTargets
-      : [];
-  const videoTargets =
-    typeof actividad.AR !== 'undefined' &&
-    typeof actividad.AR.videoTargets !== 'undefined'
-      ? actividad.AR.videoTargets
-      : [];
-  const imageTargetsDisplay =
-    typeof actividad.AR !== 'undefined' &&
-    typeof actividad.AR.imageTargetsDisplay !== 'undefined'
-      ? actividad.AR.imageTargetsDisplay
-      : [];
-  const videoTargetsDisplay =
-    typeof actividad.AR !== 'undefined' &&
-    typeof actividad.AR.videoTargetsDisplay !== 'undefined'
-      ? actividad.AR.videoTargetsDisplay
+    typeof actividad.AR.imageTrackers !== 'undefined'
+      ? actividad.AR.imageTrackers
       : [];
 
   const toggleButtons =
@@ -159,18 +144,14 @@ const ActividadComponent = (props: ActividadComponentProps) => {
                 autofocus={true}
                 initialScene={{
                   // @ts-ignore
-                  scene: DesafioIntroductorioSceneAR,
+                  scene: ARMainComponent,
                 }}
                 viroAppProps={{
-                  models3d: models3d,
-                  imageTargets: imageTargets,
-                  videoTargets: videoTargets,
-                  imageTargetsDisplay: imageTargetsDisplay,
-                  videoTargetsDisplay: videoTargetsDisplay,
                   models: [...models],
                   actividad: nombreActividad,
-                  positions: [positions, setPositions],
-                  // rotations: rotations,
+                  positions: positions,
+                  models3d: models3d,
+                  imageTrackers: imageTrackers,
                   materialSelectorToggle: [
                     materialSelectorToggle,
                     setMaterialSelectorToggle,

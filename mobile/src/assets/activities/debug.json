@@ -35,19 +35,14 @@
   {
     "AR": {
       "start": true,
-      "models": [
+      "models": [],
+      "imageTrackers": [
         {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
+          "target": "pipe1",
+          "display": "test",
+          "displayType": "video"
         }
-      ],
-      "imageTargets": ["menhera"],
-      "imageTargetsDisplay": ["menhera_cry"],
-      "videoTargets": ["pipe1"],
-      "videoTargetsDisplay": ["test"]
+      ]
     },
     "toggleButton": [
       {

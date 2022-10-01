@@ -11,8 +11,6 @@ const images: {
   };
   images360: {[key: string]: ImageSourcePropType};
   trackingTargets: {[key: string]: ImageSourcePropType};
-  imageTargetsDisplay: {[key: string]: ImageSourcePropType};
-  videoTargetsDisplay: {[key: string]: ImageSourcePropType};
 } = {
   items: {
     // characters
@@ -51,6 +49,7 @@ const images: {
 
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
+    fbk: require('./trackingTargets/fbk.jpg'),
 
     // extras
     chart: require('./extras/chart.png'),
@@ -312,17 +311,9 @@ const images: {
 
   trackingTargets: {
     menhera: require('./trackingTargets/menhera.png'),
+    fbk: require('./trackingTargets/fbk.jpg'),
     pipe1: require('./trackingTargets/pipe1.png'),
     pipe2: require('./trackingTargets/pipe2.png'),
-  },
-
-  imageTargetsDisplay: {
-    menhera: require('./character/menhera/menhera_normal.png'),
-    menhera_cry: require('./character/menhera/menhera_cry.png'),
-  },
-
-  videoTargetsDisplay: {
-    test: require('../videos/test.mp4'),
   },
 };
 

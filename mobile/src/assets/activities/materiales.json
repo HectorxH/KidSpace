@@ -1853,23 +1853,325 @@
 
 
 
-
   {
     "AR": {
       "start": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
         }
-      ],
-      "imageTargets": ["pipe1", "pipe2"],
-      "imageTargetsDisplay": ["menhera", "menhera_cry"],
-      "videoTargets": ["pipe1"],
-      "videoTargetsDisplay": ["test"]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando *las tarjetas* podrás aprender sobre distintos materiales y",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como estos se utilizan en la elaboración de diversos productos tecnológicos.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Dada una materia prima, que aparecerá en tu pantalla, tienes que *encontrar una tarjeta*",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "con el *material* que se elabora con esta. Por ejemplo, si en la pantalla aparecen la palabra \"*árbol*\",",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*.\nEscanea la tarjeta con tu celular.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si la tarjeta fue correcta, podrás ver un video corto. Para verificar lo aprendido tienes que",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "responder las preguntas, que podrás encontrar en el botón de la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "pipe1",
+          "display": "test",
+          "displayType": "video"
+        }
+      ]
     },
     "toggleButton": [
       {
@@ -1902,8 +2204,8 @@
           "start": [13, 1],
           "end": [19, 3.5]
         },
-        "target": 45,
-        "require": [44],
+        "target": 52,
+        "require": [51],
         "visible": false
       }
     ],
@@ -1930,7 +2232,7 @@
     ],
     "texts": [
       {
-        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
+        "text": "Pregunta 1",
         "position": {
           "start": [2, 4.5],
           "end": [9.3, 10]
@@ -1943,7 +2245,7 @@
         }
       },
       {
-        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
+        "text": "Pregunta 2",
         "position": {
           "start": [10.7, 4.5],
           "end": [18, 10]
@@ -1958,24 +2260,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["37"],
+        "rightAnswer": ["3"],
         "answers": [
           {
-            "text": "11,1",
+            "text": "1",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "44",
+            "text": "2",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "37",
+            "text": "3",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -1984,24 +2286,24 @@
         ]
       },
       {
-        "rightAnswer": ["7"],
+        "rightAnswer": ["2"],
         "answers": [
           {
-            "text": "5",
+            "text": "1",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "6",
+            "text": "2",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "7",
+            "text": "3",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -2011,9 +2313,398 @@
       }
     ]
   },
-
-
-
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien!\n¿Podrás encontrar la tarjeta que corresponde a  “X”?",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "menhera",
+          "display": "cry",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 54,
+        "require": [53],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente!\nAhora necesitas encontrar la tarjeta correspondiente a X.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "fbk",
+          "display": "fbk",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 56,
+        "require": [55],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
 
 
   {
@@ -2058,7 +2749,7 @@
           "start": [3, 13.5],
           "end": [11, 16.5]
         },
-        "target": 46,
+        "target": 57,
         "require": [],
         "visible": false
       }

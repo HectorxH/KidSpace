@@ -143,11 +143,14 @@ export interface IModels {
 
 export interface IAR {
   start: boolean;
-  imageTargets?: string[];
-  videoTargets?: string[];
-  imageTargetsDisplay?: string[];
-  videoTargetsDisplay?: string[];
+  imageTrackers?: IImageTracker[];
   models?: IModels[];
+}
+
+export interface IImageTracker {
+  target: string;
+  display: string;
+  displayType: 'image' | 'video' | '3dobject';
 }
 
 export interface ITexts {
