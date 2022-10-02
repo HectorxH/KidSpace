@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IActivity} from './activity';
+import {IActividadLog, IActivity} from './activity';
 import {ICarrera, IInfo} from './carrera';
 
 export type desafioTipo =
@@ -65,7 +65,11 @@ export type RootStackParamList = {
   ResultadoFinal: undefined;
   DynamicTable: undefined;
   Qr: undefined;
-  Recompensas: {cantMonedas: number; nombreActividad: string};
+  Recompensas: {
+    cantMonedas: number;
+    nombreActividad: string;
+    actLog: IActividadLog;
+  };
 };
 
 export type InicioViewProps = NativeStackScreenProps<

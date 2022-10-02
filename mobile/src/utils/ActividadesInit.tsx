@@ -164,6 +164,17 @@ const ActividadesParams = (
     ),
   );
 
+  // variables para controlar bloques de código (drag)
+  // [pageNumber][dragNumber][itemNumber][top/bottom] = true | false;
+  // const [itemFlaps, setItemFlaps] = useState<boolean[][][][]>(
+  //   actividad.map(s)
+  //   draggable.receivingItems.map(item => {
+  //     let top = typeof item.top !== 'undefined' ? item.top : false;
+  //     let bottom = typeof item.bottom !== 'undefined' ? item.bottom : false;
+  //     return [top, bottom];
+  //   }),
+  // );
+
   // Variables para controlar las texturas del modelo 3d en caso de que aplique
   // [pageNumber][models_number] = "nombre_textura", ejemplo: modelMaterial[0][0] = "azul_quijote"
   const [modelMaterial, setModelMaterial] = useState<string[][]>(

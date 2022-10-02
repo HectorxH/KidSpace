@@ -1,7 +1,5 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
-import axios from 'axios';
-import Config from 'react-native-config';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {IActividadLog} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
@@ -140,19 +138,12 @@ const ActNavigation = (props: ActNavigationProps) => {
         duracion: ((Date.now() - tiempoInicio) / 1000).toString(),
         fecha: actividadLog.fecha,
       };
-      console.log(actLog);
       setActividadLog(actLog);
-      if (actLog.tipo === 'clase') {
-        //try {
-        //  await axios.post(`${Config.REACT_APP_BACKEND_URL}/log`, {
-        //    actLog,
-        //  });
-        //} catch (e) {
-        //  console.log(e);
-        //}
-        console.log('aqui deberia mandar actLog al backend');
-      }
-      navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
+      navigation?.navigate('Recompensas', {
+        cantMonedas,
+        nombreActividad,
+        actLog,
+      });
     }
   };
 
