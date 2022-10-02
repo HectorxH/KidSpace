@@ -101,6 +101,7 @@ export const AuthProvider = ({children}: {children: any}) => {
       const res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
         username: user?.username,
         password: user?.password,
+        tipo: 'estudiante',
       });
       const {_id, nombres, apellidos, tipo} = res.data;
       if (user) {

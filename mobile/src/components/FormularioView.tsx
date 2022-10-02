@@ -35,6 +35,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
       await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
         username,
         password,
+        tipo: 'estudiante',
       });
       await login({
         _id,

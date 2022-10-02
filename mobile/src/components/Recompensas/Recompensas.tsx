@@ -18,6 +18,7 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
   const cantMonedas = route.params.cantMonedas;
   const nombreActividad = route.params.nombreActividad;
   const actividadesLog = route.params.actLog;
+
   let animationBadge: any = React.createRef();
   let animationConfetti: any = React.createRef();
   let loadingButton = false;
@@ -82,11 +83,19 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       });
       if (actividadesLog.tipo === 'clase') {
         try {
-          await axios.post(`${Config.REACT_APP_BACKEND_URL}/log`, {
-            actividadesLog,
+          await axios.post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/log`, {
+            tipo: actividadesLog.tipo,
+            actividad: actividadesLog.actividad,
+            unidad: actividadesLog.unidad,
+            steam: actividadesLog.steam,
+            estudiante: actividadesLog.estudiante,
+            curso: actividadesLog.curso,
+            quizFinal: actividadesLog.quizFinal,
+            duracion: actividadesLog.duracion,
+            fecha: new Date(actividadesLog.fecha),
           });
         } catch (e) {
-          console.log(e);
+          console.log(JSON.stringify(e));
         }
       }
       navigation?.dispatch(

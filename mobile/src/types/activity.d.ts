@@ -10,6 +10,18 @@ export interface IActividadLog {
   curso: string;
   quizFinal?: {pregunta: string; respuesta: string}[];
   duracion: string;
+  fecha: Date | string;
+}
+
+export interface IActividadLogBueno {
+  tipo: 'individual' | 'clase';
+  actividad: string;
+  unidad: string;
+  steam: number[];
+  estudiante: string;
+  curso: string;
+  quizFinal?: {pregunta: string; respuesta: string}[];
+  duracion: string;
   fecha: Date;
 }
 

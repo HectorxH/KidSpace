@@ -136,7 +136,7 @@ const ActNavigation = (props: ActNavigationProps) => {
           };
         }),
         duracion: ((Date.now() - tiempoInicio) / 1000).toString(),
-        fecha: actividadLog.fecha,
+        fecha: actividadLog.fecha.toString(),
       };
       setActividadLog(actLog);
       navigation?.navigate('Recompensas', {

@@ -1,196 +1,6 @@
 [
   {
     "background": "bg_materiales",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [9, 4],
-          "end": [19, 16]
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": "para aprender sobre cómo estos se elaboran.",
-        "position": {
-          "start": [9.5, 4.5],
-          "end": [18.5, 15.5]
-        }
-      }
-    ],
-    "items": [
-      {
-        "name": "VictoriaHappy",
-        "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
-        }
-      }
-    ]
-  },
-
-
-
-
-  {
-    "AR": {
-      "start": true,
-      "models": [],
-      "imageTrackers": [
-        {
-          "target": "pipe1",
-          "display": "test",
-          "displayType": "video"
-        }
-      ]
-    },
-    "toggleButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#FF8A00",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
-        },
-        "position" : {
-          "start": [1, 1],
-          "end":  [7, 3.5]
-        },
-        "value": false
-      }
-    ],
-    "jumpButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#BBBBBB",
-          "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
-          "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": " Avanzar",
-          "buttonTextNormal": " Avanzar"
-        },
-        "position" : {
-          "start": [13, 1],
-          "end": [19, 3.5]
-        },
-        "target": 45,
-        "require": [44],
-        "visible": false
-      }
-    ],
-    "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [1.5, 4],
-          "end": [9.8, 19.5]
-        },
-        "settings": {
-          "borderWidth": 0
-        }
-      },
-      {
-        "position": {
-          "start": [10.2, 4],
-          "end": [18.5, 19.5]
-        },
-        "settings": {
-          "borderWidth": 0
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": "¿Cuántos gramos de azúcar tiene el alimento analizado por porción?",
-        "position": {
-          "start": [2, 4.5],
-          "end": [9.3, 10]
-        },
-        "settings": { 
-          "fontSize": 0.05,
-          "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
-        }
-      },
-      {
-        "text": "Si un cubito de azúcar es de 5g, ¿cuántos cubitos tiene el alimento por porción?",
-        "position": {
-          "start": [10.7, 4.5],
-          "end": [18, 10]
-        },
-        "settings": { 
-          "fontSize": 0.05,
-          "elevation": 21,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular"
-        }
-      }
-    ],
-    "alternativas": [
-      {
-        "rightAnswer": ["37"],
-        "answers": [
-          {
-            "text": "11,1",
-            "position": {
-              "start": [2, 10.5],
-              "end": [9.3, 13]
-            }
-          },
-          {
-            "text": "44",
-            "position": {
-              "start": [2, 13.5],
-              "end": [9.3, 16]
-            }
-          },
-          {
-            "text": "37",
-            "position": {
-              "start": [2, 16.5],
-              "end": [9.3, 19]
-            }
-          }
-        ]
-      },
-      {
-        "rightAnswer": ["7"],
-        "answers": [
-          {
-            "text": "5",
-            "position": {
-              "start": [10.7, 10.5],
-              "end": [18, 13]
-            }
-          },
-          {
-            "text": "6",
-            "position": {
-              "start": [10.7, 13.5],
-              "end": [18, 16]
-            }
-          },
-          {
-            "text": "7",
-            "position": {
-              "start": [10.7, 16.5],
-              "end": [18, 19]
-            }
-          }
-        ]
-      }
-    ]
-  },
-
-
-
-
-
-  {
-    "background": "bg_materiales",
     "items": [
       {
         "name": "VictoriaHappy",
@@ -231,7 +41,7 @@
           "start": [3, 13.5],
           "end": [11, 16.5]
         },
-        "target": 46,
+        "target": 1,
         "require": [],
         "visible": false
       }
@@ -405,7 +215,7 @@
           "end": [13, 19.5]
         },
         "target": -1,
-        "require": [46],
+        "require": [1],
         "visible": false
       }
     ]
