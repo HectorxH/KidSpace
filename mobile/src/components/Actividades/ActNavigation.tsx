@@ -1,5 +1,7 @@
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
+import axios from 'axios';
+import Config from 'react-native-config';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 import {Actividad, IActividadLog, Vec3} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
@@ -84,7 +86,7 @@ const ActNavigation = (props: ActNavigationProps) => {
       .reduce((x, y) => Number(x) + Number(y), 0) +
     userAnswersQuiz.length;
 
-  const nextPageNumber = () => {
+  const nextPageNumber = async () => {
     if (pageNumber !== storyLength - 1) {
       if (
         typeof actividades[pageNumber + 1].AR !== 'undefined' &&
@@ -137,9 +139,15 @@ const ActNavigation = (props: ActNavigationProps) => {
       console.log(actLog);
       setActividadLog(actLog);
       if (actLog.tipo === 'clase') {
+        //try {
+        //  await axios.post(`${Config.REACT_APP_BACKEND_URL}/log`, {
+        //    actLog,
+        //  });
+        //} catch (e) {
+        //  console.log(e);
+        //}
         console.log('aqui deberia mandar actLog al backend');
       }
-
       navigation?.navigate('Recompensas', {cantMonedas, nombreActividad});
     }
   };
