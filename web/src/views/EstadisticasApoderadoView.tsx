@@ -239,7 +239,7 @@ const EstadisticasApoderadoView = () => {
         </Typography>
         <Grid container>
           {(actividadesIndividuales.map((act) => {
-            const completada = actividadesC[act.title] > 0;
+            const completada = actividadesI[act.title] > 0;
             return (
               <Grid key={`${pupilo._id}-${act.id}`} item xs={4} p={1}>
                 <Card key={act.id} sx={{ borderRadius: 5, height: '100%' }}>
@@ -254,7 +254,7 @@ const EstadisticasApoderadoView = () => {
                   <CardContent>
                     <Typography sx={{ color: completada ? '#A1C96A' : '#EA6A6A' }}>{completada ? 'Completada' : 'Sin completar'}</Typography>
                     <Typography>
-                      Repeticiones: {actividadesC[act.title]}
+                      Repeticiones: {actividadesI[act.title]}
                     </Typography>
                     <Divider style={{ width: '100%', alignSelf: 'center', marginTop: 15 }} />
                     <Stack
