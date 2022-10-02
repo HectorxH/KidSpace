@@ -13,8 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   NavLink, Link, useMatch, useNavigate,
@@ -32,7 +30,7 @@ interface DrawerProps {
   children : React.ReactNode
 }
 
-const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
+const ResponsiveDrawerApoderado = ({ drawerWidth, children } : DrawerProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -45,23 +43,9 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   const items = [
     {
       uid: 1,
-      text: 'Panel de control',
+      text: 'Página principal',
       icon: <HomeIcon />,
       path: '/',
-      visible: true,
-    },
-    {
-      uid: 2,
-      text: 'Cursos que dicto',
-      icon: <HistoryEduIcon />,
-      path: '/cursos',
-      visible: true,
-    },
-    {
-      uid: 3,
-      text: 'Actividades',
-      icon: <MenuBookIcon />,
-      path: '/actividades',
       visible: true,
     },
   ];
@@ -259,4 +243,4 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   );
 };
 
-export default ResponsiveDrawer;
+export default ResponsiveDrawerApoderado;

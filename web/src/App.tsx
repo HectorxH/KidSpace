@@ -14,6 +14,7 @@ import { esES as pickersesES } from '@mui/x-date-pickers';
 import { esES as coreesES } from '@mui/material/locale';
 import axios from 'axios';
 import Layout from './layout/Layout';
+import LayoutApoderado from './layout/LayoutApoderado';
 import NotFoundView from './views/NotFoundView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
 import UnidadView from './views/UnidadView';
@@ -27,10 +28,11 @@ import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
 import EstadisticasProfesorView from './views/EstadisticasProfesorView';
+import PupilosView from './views/PupilosView';
+import EstadisticasApoderadoView from './views/EstadisticasApoderadoView';
 import QRView from './views/QRView';
 import ActividadIndividualView from './views/ActividadIndividualView';
 import ActividadDocenteView from './views/ActividadDocenteView';
-// import CursoView from './views/CursoView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
@@ -91,6 +93,10 @@ const App = () => (
               <Route path="/registro" element={<RegistroView />} />
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
+              <Route element={<LayoutApoderado />}>
+                <Route path="/pupilos" element={<PupilosView />} />
+                <Route path="/cursos/:cursoId/estadisticasEstudiante" element={<EstadisticasApoderadoView />} />
+              </Route>
               <Route element={<Layout />}>
                 <Route path="/" element={<PanelControlView />} />
                 <Route path="/cursos" element={<CursosView />} />

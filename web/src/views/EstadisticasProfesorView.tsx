@@ -210,7 +210,7 @@ const EstadisticasProfesorView = () => {
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-          <b>Estadísticas por actividad docente</b>
+          <b>Estadísticas del curso: {curso.nombre}</b>
         </Typography>
       </Box>
       <Stack spacing={3} sx={{ px: 5, py: 1 }}>

@@ -110,7 +110,7 @@ const RankingTable = (
             density="comfortable"
             autoHeight
             hideFooterPagination
-            hideFooterSelectedRowCount
+            // hideFooterSelectedRowCount
             columns={cols}
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}
