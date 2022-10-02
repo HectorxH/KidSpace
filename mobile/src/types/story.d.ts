@@ -1,40 +1,187 @@
-export type Vec3 = [number, number, number];
+import {
+  Actividad,
+  IActividadLog,
+  IImageTracker,
+  IModels,
+  IToggleButton,
+  Vec3,
+} from './activity';
+import {ReactStateSetter} from './others';
 
-export interface IPosition {
-  start: number[];
-  end: number[];
+export interface IActividadesParams {
+  actividades: Actividad;
+  pageNumber: [number, ReactStateSetter<number>];
+  nombreActividad: string;
+  cantMonedas: number;
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  rightDragAnswers: string[][][];
+  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  actividadLog: [IActividadLog, ReactStateSetter<IActividadLog>];
+  tiempoInicio: [number, ReactStateSetter<number>];
+  preguntasRespuestasQuiz: [string[][], string[][][]];
 }
 
-export interface IImages {
-  name: string;
-  position: IPosition;
+export interface IViroAppParams {
+  pageNumber: number;
+  models3d: IModels[][];
+  models: number[][];
+  actividad: string;
+  positions: Vec3[][];
+  imageTrackers: IImageTracker[][];
+  materialSelectorToggle: [number, ReactStateSetter<number>];
+  setSelectedModelMaterials: ReactStateSetter<{
+    materialOrder: string[];
+    materialChoices: string[][];
+  }>;
+  modelMaterial: string[][];
+  setActiveModelIndex: ReactStateSetter<number>;
+  updateMaterial: [boolean, ReactStateSetter<boolean>];
 }
 
-export interface IAlternativas {
-  rightAnswer: string[];
-  answers: [{text: string; position: IPosition}];
+export interface IInventarioParams {
+  pageNumber: number;
+  models3d: IModels[][];
+  models: [number[][], ReactStateSetter<number[][]>];
+  positions: [Vec3[][], ReactStateSetter<Vec3[][]>];
+  placedItems: [number[][], ReactStateSetter<number[][]>];
+  nPlacedItems: [number[], ReactStateSetter<number[]>];
+  setMaterialSelectorToggle: ReactStateSetter<number>;
+  visible: boolean[];
+  showInventory: boolean[];
 }
 
-export interface IModels {
-  model: string;
-  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
-  scale: Vec3;
-  rotation: Vec3;
+export interface IMaterialSelectorParams {
+  pageNumber: number;
+  materialSelectorToggle: [number, ReactStateSetter<number>];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  selectedModelMaterials: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+  activeModelIndex: number;
+  models3d: IModels[][];
+  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
-export interface IAR {
-  state: string;
-  models: IModels[] | never[];
+export interface IStoryComponentParams {
+  pageNumber: number;
+  story: Actividad;
+  toggleDefaultValue: boolean[];
+  toggleValues: number[][];
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
+  modelMaterial: string[][];
 }
 
-export interface IPagina {
-  background: string;
-  items?: IImages[] | never[];
-  bubbles?: IImages[] | never[];
-  textBoxes?: [{position: IPosition}] | never[];
-  texts?: [{text: string; position: IPosition}] | never[];
-  alternativas?: IAlternativas[] | never[];
-  AR?: IAR;
+export interface IToggleButtonParams {
+  pageNumber: number;
+  toggleDefaultValue: boolean[];
+  models3d: IModels[][];
+  models: number[][];
+  hideInventory: boolean[];
+  toggleButtons: IToggleButton[][];
+  toggleQuestions: [number[][], ReactStateSetter<number[][]>];
 }
 
-export type Story = IPagina[];
+export interface IActNavigationParams {
+  pageNumber: [number, ReactStateSetter<number>];
+  actividadLog: [IActividadLog, ReactStateSetter<IActividadLog>];
+  tiempoInicio: number;
+  preguntasRespuestasQuiz: [string[][], string[][][]];
+  actividades: Actividad;
+  nombreActividad: string;
+  cantMonedas: number;
+  storyLength: number;
+  userDragAnswers: string[][][];
+  rightDragAnswers: string[][][];
+  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
+  rightInputAnswer: number[][];
+  userAnswers: number[][][];
+  userAnswersDropdown: number[][][];
+  userAnswersQuiz: number[][];
+  models: [number[][], ReactStateSetter<number[][]>];
+  placedItems: [number[][], ReactStateSetter<number[][]>];
+  nPlacedItems: [number[], ReactStateSetter<number[]>];
+  positions: [Vec3[][], ReactStateSetter<Vec3[][]>];
+  jumpVisibility: boolean[];
+  toggleValues: [number[][], ReactStateSetter<number[][]>];
+  setUpdateMaterial: ReactStateSetter<boolean>;
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  setMaterialSelectorToggle: ReactStateSetter<number>;
+  selectedPageOrder: [number, ReactStateSetter<number>];
+}
+
+export interface IActividadesComponentParams {
+  pageNumber: number;
+  actividades: Actividad;
+  viroAppParams: IViroAppParams;
+  inventarioParams: IInventarioParams;
+  materialSelectorParams: IMaterialSelectorParams;
+  storyComponentParams: IStoryComponentParams;
+  toggleButtonParams: IToggleButtonParams;
+  actNavigationParams: IActNavigationParams;
+}
+
+// export type Vec3 = [number, number, number];
+
+// export interface IPosition {
+//   start: number[];
+//   end: number[];
+// }
+
+// export interface IImages {
+//   name: string;
+//   position: IPosition;
+// }
+
+// export interface IAlternativas {
+//   rightAnswer: string[];
+//   answers: [{text: string; position: IPosition}];
+// }
+
+// export interface IModels {
+//   model: string;
+//   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+//   scale: Vec3;
+//   rotation: Vec3;
+// }
+
+// export interface IAR {
+//   state: string;
+//   models: IModels[] | never[];
+// }
+
+// export interface IPagina {
+//   background: string;
+//   items?: IImages[] | never[];
+//   bubbles?: IImages[] | never[];
+//   textBoxes?: [{position: IPosition}] | never[];
+//   texts?: [{text: string; position: IPosition}] | never[];
+//   alternativas?: IAlternativas[] | never[];
+//   AR?: IAR;
+// }
+
+// export type Story = IPagina[];

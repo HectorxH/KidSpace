@@ -1,5 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
+import axios from 'axios';
+import Config from 'react-native-config';
 import {View, Text, StyleSheet, Animated, Image} from 'react-native';
 import {CommonActions} from '@react-navigation/native';
 import {Button, Chip} from 'react-native-paper';
@@ -15,6 +17,8 @@ import _ from 'lodash';
 const Recompensas = ({navigation, route}: RecompensasProps) => {
   const cantMonedas = route.params.cantMonedas;
   const nombreActividad = route.params.nombreActividad;
+  const actividadesLog = route.params.actLog;
+
   let animationBadge: any = React.createRef();
   let animationConfetti: any = React.createRef();
   let loadingButton = false;
@@ -77,6 +81,23 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
         _.remove(actividadesJson, {nombreActividad: nombreActividad});
         await AsyncStorage.setItem('@message', JSON.stringify(actividadesJson));
       });
+      if (actividadesLog.tipo === 'clase') {
+        try {
+          await axios.post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/log`, {
+            tipo: actividadesLog.tipo,
+            actividad: actividadesLog.actividad,
+            unidad: actividadesLog.unidad,
+            steam: actividadesLog.steam,
+            estudiante: actividadesLog.estudiante,
+            curso: actividadesLog.curso,
+            quizFinal: actividadesLog.quizFinal,
+            duracion: actividadesLog.duracion,
+            fecha: new Date(actividadesLog.fecha),
+          });
+        } catch (e) {
+          console.log(JSON.stringify(e));
+        }
+      }
       navigation?.dispatch(
         CommonActions.reset({
           index: 0,

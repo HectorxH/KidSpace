@@ -21,8 +21,8 @@ interface JumpCardProps {
   userAnswersQuiz: number[][];
 
   // drag
-  userDragAnswer: [string[], ReactStateSetter<string[]>];
-  rightDragAnswer: string[];
+  userDragAnswers: string[][][];
+  rightDragAnswers: string[][][];
 
   // input field
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
@@ -46,8 +46,8 @@ const JumpCard = (props: JumpCardProps) => {
         props.userAnswers,
         props.userAnswersDropdown,
         props.userAnswersQuiz,
-        props.userDragAnswer[0],
-        props.rightDragAnswer,
+        props.userDragAnswers,
+        props.rightDragAnswers,
         props.userInputAnswers[0],
         props.rightInputAnswers,
         props.selectedMaterial[0],
@@ -78,8 +78,8 @@ const JumpCard = (props: JumpCardProps) => {
                         props.userAnswers,
                         props.userAnswersDropdown,
                         props.userAnswersQuiz,
-                        props.userDragAnswer[0],
-                        props.rightDragAnswer,
+                        props.userDragAnswers,
+                        props.rightDragAnswers,
                         props.userInputAnswers[0],
                         props.rightInputAnswers,
                         props.selectedMaterial[0],

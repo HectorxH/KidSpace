@@ -1,33 +1,50 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import {IToggleButton} from '../../types/activity';
-import {ReactStateSetter} from '../../types/others';
+import {IToggleButtonParams} from '../../types/story';
 import Layout from '../Utils/Layout';
 import ButtonComponent from './ButtonComponent';
 
 interface ToggleButtonProps {
-  toggleButtons: IToggleButton[] | never[];
-  toggleQuestions: [number[], ReactStateSetter<number[]>];
+  toggleButtonParams: IToggleButtonParams;
 }
 
 const ToggleButton = (props: ToggleButtonProps) => {
-  if (props.toggleButtons.length === 0) {
+  const {
+    pageNumber,
+    toggleButtons,
+    toggleQuestions,
+    toggleDefaultValue,
+    models3d,
+    models,
+    hideInventory,
+  } = props.toggleButtonParams;
+  if (toggleButtons[pageNumber].length === 0) {
+    return null;
+  }
+  if (
+    toggleDefaultValue[pageNumber] === false &&
+    models3d[pageNumber].length !== models[pageNumber].length &&
+    hideInventory[pageNumber]
+  ) {
     return null;
   }
 
   const toggle = (index: number) => {
-    let tgValues = [...props.toggleQuestions[0]];
-    if (tgValues[index] === 1) {
-      tgValues[index] = 0;
+    let tgValues = [...toggleQuestions[0]];
+
+    if (tgValues[pageNumber][index] === 1) {
+      tgValues[pageNumber][index] = 0;
     } else {
-      tgValues[index] = 1;
+      tgValues[pageNumber][index] = 1;
     }
-    props.toggleQuestions[1](tgValues);
+
+    toggleQuestions[1](tgValues);
   };
 
   return (
     <View style={styles.container}>
-      {props.toggleButtons.map((toggleButton: IToggleButton, index) => {
+      {toggleButtons[pageNumber].map((toggleButton: IToggleButton, index) => {
         return (
           <View style={styles.overlay} key={index.toString()}>
             <Layout
@@ -36,7 +53,7 @@ const ToggleButton = (props: ToggleButtonProps) => {
                 <ButtonComponent
                   onPressFunction={() => toggle(index)}
                   settings={
-                    props.toggleQuestions[0][index] === 1
+                    toggleQuestions[0][pageNumber][index] === 1
                       ? {
                           buttonIcon: toggleButton.settings.buttonIconNormal,
                           buttonColor: toggleButton.settings.buttonColorNormal,

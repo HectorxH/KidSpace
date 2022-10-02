@@ -3,7 +3,7 @@ import {View, StyleSheet} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 import {ITextBoxes} from '../../types/activity';
-import {getTextBoxStyle} from './utils';
+// import {getTextBoxStyle} from './utils';
 
 interface TextBoxProps {
   boxes: ITextBoxes[] | never[];
@@ -17,7 +17,7 @@ const TextBoxes = ({boxes}: TextBoxProps) => {
   return (
     <View style={styles.container}>
       {boxes.map((box: ITextBoxes) => {
-        const boxStyles = getTextBoxStyle(styles.storyBoxDefault, box.settings);
+        // const boxStyles = getTextBoxStyle(styles.storyBoxDefault, box.settings);
         return (
           <View
             style={styles.overlay}
@@ -29,7 +29,10 @@ const TextBoxes = ({boxes}: TextBoxProps) => {
             }>
             <Layout
               position={box.position}
-              ObjectView={<View style={boxStyles.settings} />}
+              ObjectView={
+                <View style={[styles.storyBoxDefault, box.settings]} />
+              }
+              // ObjectView={<View style={boxStyles.settings} />}
             />
           </View>
         );

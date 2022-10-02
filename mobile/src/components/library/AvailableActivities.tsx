@@ -9,7 +9,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  const activities = route.params.activities;
+  const {activities, curso, userName, userLastName} = route.params;
   return (
     <View>
       <View style={styles.view}>
@@ -29,6 +29,9 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
             <ActivityCard
               key={index}
               activity={activity}
+              curso={curso}
+              userName={userName}
+              userLastName={userLastName}
               navigation={navigation}
             />
           ))}

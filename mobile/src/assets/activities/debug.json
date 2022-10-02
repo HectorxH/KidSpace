@@ -1,0 +1,223 @@
+[
+  {
+    "background": "bg_materiales",
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [13, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Increible trabajo!\nVictoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [12.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Ir al Quiz",
+          "buttonTextNormal": "Ir al Quiz"
+        },
+        "position" : {
+          "start": [3, 13.5],
+          "end": [11, 16.5]
+        },
+        "target": 1,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "white",
+          "elevation": 21
+        },
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El diseño siempre debe seguir la ______ del producto",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "pregunta": "El diseño siempre debe seguir la ______ del producto",
+        "answers": [
+          {
+            "text": "idea",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "función",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "creatividad",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "answers": [
+          {
+            "text": "color",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "tamaño",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "textura",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [1],
+        "visible": false
+      }
+    ]
+  }
+]
