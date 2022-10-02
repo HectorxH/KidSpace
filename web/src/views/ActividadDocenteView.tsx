@@ -33,6 +33,8 @@ import ResultadosQuizTable from '../components/ResultadosQuizTable';
 // import actividades from '../mock/actividades';
 // import actividadesIndividuales from '../mock/actividadesIndividuales';
 // import HistorialTable from '../components/HistorialTable';
+import actividadesDocentes from '../mock/actividadesDocentes';
+
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 const infoResultadosQuizTable = [
@@ -109,25 +111,6 @@ const options = {
   },
 };
 
-const preguntas = [
-  {
-    id: 0,
-    tipo: 'Selección simple',
-    enunciado: 'El software Excel permite crear tablas y ______',
-    alternativas: ['imágenes', 'gráficos', 'celdas'],
-    respuestaCorrecta: 'gráficos',
-    data: [10, 5, 2],
-  },
-  {
-    id: 1,
-    tipo: 'Selección simple',
-    enunciado: 'Para elaborar un gráfico, debemos usar valores guardados en ______',
-    alternativas: ['una lista', 'una celda', 'una tabla'],
-    respuestaCorrecta: 'una tabla',
-    data: [9, 6, 2],
-  },
-];
-
 const dataGrafico = (d:number[]) => {
   const datosDona = {
     labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
@@ -148,6 +131,9 @@ const ActividadDocenteView = () => {
   const [curso, setCurso] = useState<ICurso>();
   const [loading, setLoading] = useState(true);
   const { cursoId } = params;
+  const { nactividad } = params;
+  const index:number = +nactividad!;
+  console.log(index);
   const navigate = useNavigate();
 
   const { logout } = useAuth();
@@ -196,7 +182,7 @@ const ActividadDocenteView = () => {
             image={img}
           />
           <Typography>
-            Nombre:
+            Nombre: {actividadesDocentes[index].actividad}
           </Typography>
           <Typography>
             Estado:
@@ -208,14 +194,20 @@ const ActividadDocenteView = () => {
               width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
             }}
           >
-            {(letras.map((letra, i) => (
-              <Typography
-                sx={{
-                  color: '#B5B5B5', fontSize: 30, margin: 0.5,
+            <Stack
+              direction="row"
+              sx={{
+                width: 2 / 5, justifyContent: 'center', alignItems: 'center', alignSelf: 'right',
+              }}
+            >
+              {(letras.map((letra, id) => (
+                <Typography sx={{
+                  color: actividadesDocentes[index].steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
                 }}
-              ><b>{letra}</b>
-              </Typography>
-            )))}
+                ><b>{letra}</b>
+                </Typography>
+              )))}
+            </Stack>
           </Stack>
         </Card>
         <Card sx={{
@@ -237,7 +229,7 @@ const ActividadDocenteView = () => {
         <Typography variant="h5">
           Preguntas del Quiz
         </Typography>
-        {(preguntas.map((pregunta, id) => (
+        {(actividadesDocentes[index].preguntas.map((pregunta, id) => (
           <Stack direction="row" spacing={2}>
             <Card sx={{
               width: 1.2 / 2, borderRadius: 5, backgroundColor: '#F1F3F8',
@@ -246,9 +238,6 @@ const ActividadDocenteView = () => {
               <Stack sx={{ m: 3 }}>
                 <Typography variant="h6">
                   <b>Pregunta {id + 1}</b>
-                </Typography>
-                <Typography variant="h6" sx={{ mb: 2 }}>
-                  <b>Tipo: {pregunta.tipo}</b>
                 </Typography>
                 <Typography>
                   {pregunta.enunciado}

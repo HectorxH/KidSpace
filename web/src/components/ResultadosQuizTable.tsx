@@ -13,7 +13,6 @@ import CheckIcon from '@mui/icons-material/Check';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
-import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
 
 interface IRow {
@@ -22,10 +21,6 @@ interface IRow {
   nombre: string,
   pregunta1: string,
   pregunta2: string,
-}
-
-interface RowParams {
-  row: IRow,
 }
 
 interface ITableParams {

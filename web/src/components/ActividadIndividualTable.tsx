@@ -1,10 +1,9 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  TableContainer, Button, Table, TableBody, Theme,
-  TableCell, TableRow, Stack, Card, Box, TableHead,
+  Button, Theme,
+  Box,
   Typography,
-  TextField,
 } from '@mui/material';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -12,17 +11,12 @@ import { useNavigate } from 'react-router-dom';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
-import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
 
 interface IRow {
   _id: number,
   actividad: string,
   porcentaje: number
-}
-
-interface RowParams {
-  row: IRow,
 }
 
 interface ITableParams {

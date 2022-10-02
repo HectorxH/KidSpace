@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
@@ -19,11 +20,10 @@ import {
 import { Doughnut, Line } from 'react-chartjs-2';
 import NotFoundView from './NotFoundView';
 import '../App.css';
-import PupilosTable from '../components/PupilosTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
 
-import actividades from '../mock/actividades';
+import actividadesDocentes from '../mock/actividadesDocentes';
 import actividadesIndividuales from '../mock/actividadesIndividuales';
 import HistorialTable from '../components/HistorialTable';
 
@@ -77,27 +77,27 @@ const EstadisticasApoderadoView = () => {
   const navigate = useNavigate();
 
   const { logout } = useAuth();
-  const getCurso = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-      setCurso(res.data.curso);
-      console.log(res.data);
-      setLoading(false);
-    } catch (e) {
-      console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        logout();
-      }
-      setLoading(false);
-    }
-  };
+  // const getCurso = async () => {
+  //   try {
+  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
+  //     setCurso(res.data.curso);
+  //     console.log(res.data);
+  //     setLoading(false);
+  //   } catch (e) {
+  //     console.log(e);
+  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
+  //       logout();
+  //     }
+  //     setLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (!curso) getCurso();
-  }, []);
+  // useEffect(() => {
+  //   if (!curso) getCurso();
+  // }, []);
 
-  if (loading) return (<Box />);
-  if (!curso) return (<NotFoundView />);
+  // if (loading) return (<Box />);
+  // if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -155,7 +155,7 @@ const EstadisticasApoderadoView = () => {
           Cada actividad se enfoca en uno o más áreas STEAM.
         </Typography>
         <Stack direction="column" spacing={2}>
-          {(actividades.map((row) => (
+          {(actividadesDocentes.map((row) => (
             <Card key={row.id} sx={{ borderRadius: 5 }}>
               <Stack direction="row" spacing={2}>
                 <Stack direction="row" spacing={2} sx={{ width: 3 / 5 }}>
@@ -167,7 +167,7 @@ const EstadisticasApoderadoView = () => {
                     image={row.img}
                   />
                   <Stack direction="column" sx={{ justifyContent: 'center', alignContent: 'center' }}>
-                    <Typography>{row.title}</Typography>
+                    <Typography>{row.unidad}: {row.actividad}</Typography>
                     <Typography sx={{ color: row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>{row.estado}</Typography>
                   </Stack>
                 </Stack>

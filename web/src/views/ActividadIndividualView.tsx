@@ -21,13 +21,10 @@ import { Doughnut, Line } from 'react-chartjs-2';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import NotFoundView from './NotFoundView';
 import '../App.css';
+import actividadesIndividuales from '../mock/actividadesIndividuales';
 import ActividadIndividualAlumnosTable from '../components/ActividadIndividualAlumnosTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
-
-// import actividades from '../mock/actividades';
-// import actividadesIndividuales from '../mock/actividadesIndividuales';
-// import HistorialTable from '../components/HistorialTable';
 
 const img = require('../assets/quiz.png');
 
@@ -90,29 +87,31 @@ const ActividadIndividualView = () => {
   const [loading, setLoading] = useState(true);
   const { cursoId } = params;
   const navigate = useNavigate();
-
+  const { nactividad } = params;
+  const index:number = +nactividad!;
+  console.log(actividadesIndividuales[index].steam);
   const { logout } = useAuth();
-  const getCurso = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-      setCurso(res.data.curso);
-      console.log(res.data);
-      setLoading(false);
-    } catch (e) {
-      console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        logout();
-      }
-      setLoading(false);
-    }
-  };
+  // const getCurso = async () => {
+  //   try {
+  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
+  //     setCurso(res.data.curso);
+  //     console.log(res.data);
+  //     setLoading(false);
+  //   } catch (e) {
+  //     console.log(e);
+  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
+  //       logout();
+  //     }
+  //     setLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (!curso) getCurso();
-  }, []);
+  // useEffect(() => {
+  //   if (!curso) getCurso();
+  // }, []);
 
-  if (loading) return (<Box />);
-  if (!curso) return (<NotFoundView />);
+  // if (loading) return (<Box />);
+  // if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -127,21 +126,20 @@ const ActividadIndividualView = () => {
           px: 5, justifyContent: 'center', alingContent: 'center', height: '400px',
         }}
       >
-        <Stack direction="column" spacing={2} sx={{ width: 0.7 / 2 }}>
+        <Stack direction="column" spacing={1} sx={{ width: 0.9 / 2 }}>
           <Card sx={{
-            padding: 3, width: 1, borderRadius: 5, alignItems: 'center',
+            width: 1, borderRadius: 5, alignItems: 'center',
           }}
           >
             <CardMedia
               component="img"
-              sx={{ height: '20vh' }}
-              image={img}
+              // sx={{ height: '20vh' }}
+              image={actividadesIndividuales[index].img}
             />
-            <Typography>
-              Nombre:
-            </Typography>
-            <Typography>
-              Carrera Asociada:
+            <Typography sx={{ m: 1 }}>
+              <b>Nombre:</b> {actividadesIndividuales[index].title}
+              <br />
+              <b>Carrera Asociada:</b> {actividadesIndividuales[index].carrera}
             </Typography>
             <Divider style={{ width: '90%', alignSelf: 'center' }} />
             <Stack
@@ -150,32 +148,31 @@ const ActividadIndividualView = () => {
                 width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
               }}
             >
-              {(letras.map((letra, i) => (
-                <Typography
-                  sx={{
-                    color: '#B5B5B5', fontSize: 30, margin: 0.5,
-                  }}
+              {(letras.map((letra, id) => (
+                <Typography sx={{
+                  color: actividadesIndividuales[index].steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                }}
                 ><b>{letra}</b>
                 </Typography>
               )))}
             </Stack>
           </Card>
           <Card sx={{
-            padding: 3, borderRadius: 5, alignItems: 'center',
+            padding: 2, borderRadius: 5, alignItems: 'center',
           }}
           >
             <Stack
               direction="row"
               sx={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}
             ><CheckCircleIcon sx={{ color: '#A1C96A', mr: 1 }} />
-              <Typography>
+              <Typography sx={{ fontSize: 14 }}>
                 La actividad se realizó un total de  25 veces por los y las estudiantes del curso
               </Typography>
             </Stack>
           </Card>
 
         </Stack>
-        <Card sx={{ padding: 1, width: 1.3 / 2, borderRadius: 5 }}>
+        <Card sx={{ padding: 1, width: 1.1 / 2, borderRadius: 5 }}>
           <Doughnut data={data} options={options} />
         </Card>
       </Stack>
