@@ -224,12 +224,10 @@ const EstadisticasProfesorView = () => {
           sx={{
             justifyContent: 'center',
             alingContent: 'center',
-            display: 'flex',
-            flexWrap: 'wrap',
           }}
         >
           <Card sx={{
-            p: 3, mb: 2, width: 3.4 / 6, borderRadius: 5, alignItems: 'center',
+            p: 3, width: 3.5 / 6, borderRadius: 5, alignItems: 'center',
           }}
           >
             <Bar

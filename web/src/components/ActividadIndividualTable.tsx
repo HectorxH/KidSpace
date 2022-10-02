@@ -41,17 +41,49 @@ const ActividadIndividualTable = (
   const cols: GridColDef[] = [
     {
       field: 'actividad',
-      headerName: 'Nombre',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>Actividad</b>
+          </Typography>
+        </span>
+      ),
       flex: 1,
+      renderCell: (params) => (
+        <div>
+          <Typography>
+            {params.row.actividad}
+          </Typography>
+        </div>
+      ),
     },
     {
       field: 'porcentaje',
-      headerName: '% del curso que completó la actividad',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>% del curso</b>
+          </Typography>
+        </span>
+      ),
       flex: 1,
+      renderCell: (params) => (
+        <div>
+          <Typography>
+            {params.row.porcentaje} %
+          </Typography>
+        </div>
+      ),
     },
     {
       field: 'accion',
-      headerName: 'Acción',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>Acción</b>
+          </Typography>
+        </span>
+      ),
       flex: 1,
       sortable: false,
       renderCell: (params) => {

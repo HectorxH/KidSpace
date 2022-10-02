@@ -43,12 +43,31 @@ const ActividadDocenteTable = (
   const cols: GridColDef[] = [
     {
       field: 'actividad',
-      headerName: 'Actividad',
       flex: 1,
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>Actividad</b>
+          </Typography>
+        </span>
+      ),
+      renderCell: (params) => (
+        <div>
+          <Typography>
+            {params.row.actividad}
+          </Typography>
+        </div>
+      ),
     },
     {
       field: 'estado',
-      headerName: 'Estado',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>Estado</b>
+          </Typography>
+        </span>
+      ),
       width: 150,
       editable: true,
       renderCell: ((params) => (
@@ -62,11 +81,31 @@ const ActividadDocenteTable = (
     {
       field: 'porcentaje',
       headerName: '% del curso que completó la actividad',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>% del curso</b>
+          </Typography>
+        </span>
+      ),
       flex: 1,
+      renderCell: (params) => (
+        <div>
+          <Typography>
+            {params.row.porcentaje} %
+          </Typography>
+        </div>
+      ),
     },
     {
       field: 'accion',
-      headerName: 'Acción',
+      renderHeader: (params) => (
+        <span data-testid="header-test-id">
+          <Typography>
+            <b>Acción</b>
+          </Typography>
+        </span>
+      ),
       flex: 1,
       sortable: false,
       renderCell: (params) => {
