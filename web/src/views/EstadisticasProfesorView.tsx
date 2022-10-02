@@ -184,33 +184,34 @@ const EstadisticasProfesorView = () => {
   const { cursoId } = params;
   const navigate = useNavigate();
 
-  const { logout } = useAuth();
-  const getCurso = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-      setCurso(res.data.curso);
-      console.log(res.data);
-      setLoading(false);
-    } catch (e) {
-      console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        logout();
-      }
-      setLoading(false);
-    }
-  };
+  // const { logout } = useAuth();
+  // const getCurso = async () => {
+  //   try {
+  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
+  //     setCurso(res.data.curso);
+  //     console.log(res.data);
+  //     setLoading(false);
+  //   } catch (e) {
+  //     console.log(e);
+  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
+  //       logout();
+  //     }
+  //     setLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (!curso) getCurso();
-  }, []);
+  // useEffect(() => {
+  //   if (!curso) getCurso();
+  // }, []);
 
-  if (loading) return (<Box />);
-  if (!curso) return (<NotFoundView />);
+  // if (loading) return (<Box />);
+  // if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-          <b>Estadísticas del curso: {curso.nombre}</b>
+          <b>Estadísticas del curso: </b>
+          {/* {curso.nombre} */}
         </Typography>
       </Box>
       <Stack spacing={3} sx={{ px: 5, py: 1 }}>
@@ -221,18 +222,24 @@ const EstadisticasProfesorView = () => {
           direction="row"
           spacing={3}
           sx={{
-            justifyContent: 'center', alingContent: 'center',
+            justifyContent: 'center',
+            alingContent: 'center',
+            display: 'flex',
+            flexWrap: 'wrap',
           }}
         >
           <Card sx={{
-            p: 3, width: 3.5 / 6, borderRadius: 5, alignItems: 'center',
+            p: 3, mb: 2, width: 3.4 / 6, borderRadius: 5, alignItems: 'center',
           }}
           >
             <Bar
               data={data}
             />
           </Card>
-          <Card sx={{ p: 1, width: 2.5 / 6, borderRadius: 5 }}>
+          <Card sx={{
+            p: 1, width: 2.5 / 6, borderRadius: 5,
+          }}
+          >
             <Doughnut data={data} options={options} />
           </Card>
         </Stack>

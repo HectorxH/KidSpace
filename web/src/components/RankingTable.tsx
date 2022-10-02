@@ -10,7 +10,7 @@ import {
 import CheckIcon from '@mui/icons-material/Check';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DataGrid, GridColDef, GridToolbar } from '@mui/x-data-grid';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown } from '@fortawesome/free-solid-svg-icons';
 // import axios from 'axios';
@@ -44,7 +44,7 @@ const RankingTable = (
     {
       field: 'lugar',
       headerName: 'Lugar',
-      width: 150,
+      flex: 1,
       editable: true,
       renderCell: ((params) => (
         <div>
@@ -89,6 +89,7 @@ const RankingTable = (
               variant="contained"
               color="quaternary"
               onClick={() => onClick(params)}
+              sx={{ m: 1 }}
             >
               <Typography
                 variant="button"
@@ -108,9 +109,9 @@ const RankingTable = (
         : (
           <DataGrid
             density="comfortable"
+            getRowHeight={() => 'auto'}
             autoHeight
-            hideFooterPagination
-            // hideFooterSelectedRowCount
+            hideFooter
             columns={cols}
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}

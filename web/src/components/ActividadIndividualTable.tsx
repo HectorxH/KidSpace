@@ -4,16 +4,16 @@ import {
   TableContainer, Button, Table, TableBody, Theme,
   TableCell, TableRow, Stack, Card, Box, TableHead,
   Typography,
+  TextField,
 } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
-
-const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
   _id: number,
@@ -25,91 +25,76 @@ interface RowParams {
   row: IRow,
 }
 
-interface EditarButtonParams {
-  estudiante: IEstudiante,
-}
-
-const Row = ({ row }:RowParams) => {
-  const {
-    _id, actividad, porcentaje,
-  } = row;
-
-  const navigate = useNavigate();
-
-  const handleVerStats = () => {
-    navigate(`/cursos/63352374912a82092e1799f9/estadisticas/actividadIndividual/${_id}`);
-  };
-
-  return (
-    <TableRow
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell>{actividad}</TableCell>
-      <TableCell>{porcentaje}%</TableCell>
-      <TableCell>
-        <Stack direction="row">
-          <Button
-            variant="contained"
-            color="quaternary"
-            onClick={handleVerStats}
-            sx={{ alignSelf: 'right' }}
-          >
-            <Typography
-              variant="button"
-              color={(theme: Theme) => theme.palette.primary.contrastText}
-            >
-              Ver estadísticas
-            </Typography>
-          </Button>
-        </Stack>
-      </TableCell>
-    </TableRow>
-  );
-};
-
-interface ICursoTableParams {
+interface ITableParams {
   rows: IRow[],
   // updateEstudiantes: Function
 }
 
 const ActividadIndividualTable = (
-  { rows }: ICursoTableParams,
+  { rows }: ITableParams,
 ) => {
   const { logout } = useAuth();
-
+  const navigate = useNavigate();
+  const handleVerStats = (i:string) => {
+    navigate(`/cursos/63352374912a82092e1799f9/estadisticas/actividadIndividual/${i}`);
+  };
+  const cols: GridColDef[] = [
+    {
+      field: 'actividad',
+      headerName: 'Nombre',
+      flex: 1,
+    },
+    {
+      field: 'porcentaje',
+      headerName: '% del curso que completó la actividad',
+      flex: 1,
+    },
+    {
+      field: 'accion',
+      headerName: 'Acción',
+      flex: 1,
+      sortable: false,
+      renderCell: (params) => {
+        const onClick = (e:any) => {
+          handleVerStats(params.row._id);
+        };
+        return (
+          <div>
+            <Button
+              variant="contained"
+              color="quaternary"
+              onClick={() => onClick(params)}
+              sx={{ m: 1 }}
+            >
+              <Typography
+                variant="button"
+                color={(theme: Theme) => theme.palette.primary.contrastText}
+              >
+                Ver estadísticas
+              </Typography>
+            </Button>
+          </div>
+        );
+      },
+    },
+  ];
   return (
-    <TableContainer
-      component={Card}
-      elevation={4}
-      sx={{ borderRadius: '20px' }}
-    >
-      <Table
-        sx={{ overflowX: 'scroll' }}
-        aria-label="simple table"
-      >
-        <TableHead>
-          <TableRow>
-            <TableCell>Actividad</TableCell>
-            <TableCell>% del curso que completó la actividad</TableCell>
-            <TableCell>Acción</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody sx={{ justifyContent: 'center' }}>
-          {(rows.length === 0
-            ? ''
-            : rows.map((row) => (
-              <Row
-                key={row._id}
-                row={row}
-              />
-            ))
-          )}
-        </TableBody>
-      </Table>
-      {(rows.length === 0)
-        ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
-        : ''}
-    </TableContainer>
+    <Box sx={{ width: '100%' }}>
+      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+        : (
+          <DataGrid
+            density="comfortable"
+            getRowHeight={() => 'auto'}
+            autoHeight
+            hideFooter
+            columns={cols}
+            rows={Object.values(rows)}
+            getRowId={(row: any) => row._id}
+            disableSelectionOnClick
+            sx={{ borderRadius: 5 }}
+          />
+        )}
+    </Box>
   );
 };
 
