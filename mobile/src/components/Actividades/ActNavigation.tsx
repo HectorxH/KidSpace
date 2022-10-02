@@ -3,88 +3,80 @@ import React from 'react';
 import axios from 'axios';
 import Config from 'react-native-config';
 import {View, StyleSheet, TouchableWithoutFeedback} from 'react-native';
-import {Actividad, IActividadLog, Vec3} from '../../types/activity';
+import {IActividadLog} from '../../types/activity';
 import {RootStackParamList} from '../../types/navigation';
-import {ReactStateSetter} from '../../types/others';
 import JumpButton from './JumpButton';
 import JumpCard from './JumpCard';
 import _ from 'lodash';
+import {IActNavigationParams} from '../../types/story';
 
 interface ActNavigationProps {
-  actividades: Actividad;
-  nombreActividad: string;
-  cantMonedas: number;
-  storyLength: number;
-  pageNumber: [number, ReactStateSetter<number>];
+  actNavigationParams: IActNavigationParams;
   navigation?: NativeStackNavigationProp<RootStackParamList>;
-
-  // outputs para servidor
-  actividadLog: [IActividadLog, ReactStateSetter<IActividadLog>];
-  tiempoInicio: number;
-  preguntasRespuestasQuiz: [string[][], string[][][]];
-
-  // alternativas
-  userAnswers: number[][][];
-
-  // dropdown
-  userAnswersDropdown: number[][][];
-
-  // drag
-  userDragAnswers: string[][][];
-  rightDragAnswers: string[][][];
-
-  // inputfield
-  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
-  rightInputAnswer: number[][];
-
-  // quiz
-  userAnswersQuiz: number[][];
-
-  // botones
-  toggleValues: [number[], ReactStateSetter<number[]>];
-  jumpVisibility: boolean;
-
-  // inventario / 3d
-  models: [number[], ReactStateSetter<number[]>];
-  placedItems: [number[], ReactStateSetter<number[]>];
-  nPlacedItems: [number, ReactStateSetter<number>];
-  positions: [Vec3[], ReactStateSetter<Vec3[]>];
-  setUpdateMaterial: ReactStateSetter<boolean>;
-  modelMaterial: [string[][], ReactStateSetter<string[][]>];
-  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
-  setMaterialSelectorToggle: ReactStateSetter<number>;
-  selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
 const ActNavigation = (props: ActNavigationProps) => {
-  const {actividades, storyLength, navigation} = props;
-  const [pageNumber, setPageNumber] = props.pageNumber;
-  const [actividadLog, setActividadLog] = props.actividadLog;
-  const cantMonedas = props.cantMonedas;
-  const nombreActividad = props.nombreActividad;
-  const userAnswers = props.userAnswers[pageNumber];
-  const userAnswersDropdown = props.userAnswersDropdown[pageNumber];
-  const userAnswersQuiz = props.userAnswersQuiz[pageNumber];
+  const {
+    actividades,
+    storyLength,
+    cantMonedas,
+    nombreActividad,
+    setUpdateMaterial,
+    setMaterialSelectorToggle,
+    preguntasRespuestasQuiz,
+    userAnswers,
+    userAnswersDropdown,
+    userAnswersQuiz,
+    userDragAnswers,
+    rightDragAnswers,
+    userInputAnswers,
+    rightInputAnswer,
+    jumpVisibility,
+    modelMaterial,
+    selectedMaterial,
+    selectedPageOrder,
+    tiempoInicio,
+  } = props.actNavigationParams;
+  const navigation = props.navigation;
+
+  const [pageNumber, setPageNumber] = props.actNavigationParams.pageNumber;
+  const [actividadLog, setActividadLog] =
+    props.actNavigationParams.actividadLog;
+
+  const userAnswersPage = userAnswers[pageNumber];
+  const userAnswersDropdownPage = userAnswersDropdown[pageNumber];
+  const userAnswersQuizPage = userAnswersQuiz[pageNumber];
+
+  const [toggleValues, setToggleValues] =
+    props.actNavigationParams.toggleValues;
+
+  const [placedItems, setPlacedItems] = props.actNavigationParams.placedItems;
+  const [nPlacedItems, setNPlacedItems] =
+    props.actNavigationParams.nPlacedItems;
+  const [models, setModels] = props.actNavigationParams.models;
+  const [positions, setPositions] = props.actNavigationParams.positions;
 
   const actividad = actividades[pageNumber];
 
   // Se bloquea la navegación cuando aparecen preguntas sin responder en el cuento/desafio
   // Eliminar estas dos variables y cambiar por funcion checkAnswer, por ahora ayudan para avanzar rapido cuando no hay jumpbuttons
   var respuestasCorrectas =
-    userAnswers
+    userAnswersPage
       .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    userAnswersDropdown
+    userAnswersDropdownPage
       .map(b => b.reduce((x, y) => Number(x) + Number(y), 0))
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    userAnswersQuiz.reduce((x, y) => Number(x) + Number(y), 0);
+    userAnswersQuizPage.reduce((x, y) => Number(x) + Number(y), 0);
 
   var cantidadRespuestas =
-    userAnswers.map(b => b.length).reduce((x, y) => Number(x) + Number(y), 0) +
-    userAnswersDropdown
+    userAnswersPage
       .map(b => b.length)
       .reduce((x, y) => Number(x) + Number(y), 0) +
-    userAnswersQuiz.length;
+    userAnswersDropdownPage
+      .map(b => b.length)
+      .reduce((x, y) => Number(x) + Number(y), 0) +
+    userAnswersQuizPage.length;
 
   const nextPageNumber = async () => {
     if (pageNumber !== storyLength - 1) {
@@ -92,29 +84,41 @@ const ActNavigation = (props: ActNavigationProps) => {
         typeof actividades[pageNumber + 1].AR !== 'undefined' &&
         actividades[pageNumber + 1].AR?.start === true
       ) {
-        props.setUpdateMaterial(true);
-        props.toggleValues[1]([0]);
-        props.placedItems[1](
-          actividades[pageNumber + 1].AR!.models.map(() => 0),
-        );
-        props.nPlacedItems[1](0);
-        props.models[1]([]);
-        props.positions[1]([]);
+        setUpdateMaterial(true);
+        let newToggleValues = [...toggleValues];
+        let newPlacedItems = [...placedItems];
+        let newNPlacedItems = [...nPlacedItems];
+        let newModels = [...models];
+        let newPositions = [...positions];
+
+        newToggleValues[pageNumber] = [0];
+        newPlacedItems[pageNumber] =
+          typeof actividades[pageNumber + 1].AR !== 'undefined' &&
+          typeof actividades[pageNumber + 1].AR?.models !== 'undefined'
+            ? actividades[pageNumber + 1].AR!.models!.map(() => 0)
+            : [];
+        newNPlacedItems[pageNumber] = 0;
+        newModels[pageNumber] = [];
+        newPositions[pageNumber] = [];
+
+        setToggleValues(newToggleValues);
+        setPlacedItems(newPlacedItems);
+        setNPlacedItems(newNPlacedItems);
+        setModels(newModels);
+        setPositions(newPositions);
       }
-      props.setMaterialSelectorToggle(0);
+      setMaterialSelectorToggle(0);
       setPageNumber(pageNumber + 1);
     } else {
-      let preguntasQuiz = _.flattenDeep(props.preguntasRespuestasQuiz[0]);
+      let preguntasQuiz = _.flattenDeep(preguntasRespuestasQuiz[0]);
 
       let respuestasQuiz = _.flattenDeep(
-        props.preguntasRespuestasQuiz[1]
+        preguntasRespuestasQuiz[1]
           .map((pagina, numeroPagina) =>
             pagina[0].length > 0
               ? pagina.map(
                   (pregunta, numeroPregunta) =>
-                    pregunta[
-                      props.userAnswersQuiz[numeroPagina][numeroPregunta]
-                    ],
+                    pregunta[userAnswersQuiz[numeroPagina][numeroPregunta]],
                 )
               : [],
           )
@@ -133,7 +137,7 @@ const ActNavigation = (props: ActNavigationProps) => {
             respuesta: respuestasQuiz[numeroPregunta],
           };
         }),
-        duracion: ((Date.now() - props.tiempoInicio) / 1000).toString(),
+        duracion: ((Date.now() - tiempoInicio) / 1000).toString(),
         fecha: actividadLog.fecha,
       };
       console.log(actLog);
@@ -184,18 +188,18 @@ const ActNavigation = (props: ActNavigationProps) => {
         <View style={styles.overlay}>
           <JumpCard
             jumpCards={jumpCards}
-            userAnswers={props.userAnswers}
-            userAnswersDropdown={props.userAnswersDropdown}
-            userAnswersQuiz={props.userAnswersQuiz}
-            userDragAnswers={props.userDragAnswers}
-            rightDragAnswers={props.rightDragAnswers}
-            userInputAnswers={props.userInputAnswers}
-            rightInputAnswers={props.rightInputAnswer}
-            pageNumber={props.pageNumber}
-            toggleVisibility={props.jumpVisibility}
-            modelMaterial={props.modelMaterial}
-            selectedMaterial={props.selectedMaterial}
-            setMaterialSelectorToggle={props.setMaterialSelectorToggle}
+            userAnswers={userAnswers}
+            userAnswersDropdown={userAnswersDropdown}
+            userAnswersQuiz={userAnswersQuiz}
+            userDragAnswers={userDragAnswers}
+            rightDragAnswers={rightDragAnswers}
+            userInputAnswers={userInputAnswers}
+            rightInputAnswers={rightInputAnswer}
+            pageNumber={[pageNumber, setPageNumber]}
+            toggleVisibility={jumpVisibility[pageNumber]}
+            modelMaterial={modelMaterial}
+            selectedMaterial={selectedMaterial}
+            setMaterialSelectorToggle={setMaterialSelectorToggle}
           />
         </View>
       )}
@@ -203,20 +207,20 @@ const ActNavigation = (props: ActNavigationProps) => {
         <View style={styles.overlay}>
           <JumpButton
             jumpButtons={jumpButtons}
-            userAnswers={props.userAnswers}
-            userAnswersDropdown={props.userAnswersDropdown}
-            userAnswersQuiz={props.userAnswersQuiz}
-            userDragAnswers={props.userDragAnswers}
-            rightDragAnswers={props.rightDragAnswers}
-            userInputAnswers={props.userInputAnswers}
-            rightInputAnswers={props.rightInputAnswer}
-            pageNumber={props.pageNumber}
+            userAnswers={userAnswers}
+            userAnswersDropdown={userAnswersDropdown}
+            userAnswersQuiz={userAnswersQuiz}
+            userDragAnswers={userDragAnswers}
+            rightDragAnswers={rightDragAnswers}
+            userInputAnswers={userInputAnswers}
+            rightInputAnswers={rightInputAnswer}
+            pageNumber={[pageNumber, setPageNumber]}
             nextPage={() => nextPageNumber()}
-            toggleVisibility={props.jumpVisibility}
-            modelMaterial={props.modelMaterial}
-            selectedMaterial={props.selectedMaterial}
-            setMaterialSelectorToggle={props.setMaterialSelectorToggle}
-            selectedPageOrder={props.selectedPageOrder}
+            toggleVisibility={jumpVisibility[pageNumber]}
+            modelMaterial={modelMaterial}
+            selectedMaterial={selectedMaterial}
+            setMaterialSelectorToggle={setMaterialSelectorToggle}
+            selectedPageOrder={selectedPageOrder}
           />
         </View>
       )}

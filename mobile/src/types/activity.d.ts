@@ -144,6 +144,7 @@ export interface IModels {
 export interface IAR {
   start: boolean;
   imageTrackers?: IImageTracker[];
+  hideInventory?: boolean;
   models?: IModels[];
 }
 

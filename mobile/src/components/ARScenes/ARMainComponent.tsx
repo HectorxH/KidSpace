@@ -8,33 +8,24 @@ import {
   ViroNode,
 } from '@viro-community/react-viro';
 import Models from '../../assets/3d/models';
-import {IImageTracker, IModels, Vec3} from '../../types/activity';
-import {ReactStateSetter} from '../../types/others';
+import {IImageTracker} from '../../types/activity';
 import TargetTracker from './ARcomponents/TargetTracker';
 import Objects3d from './ARcomponents/Object3d';
 import Portals from './ARcomponents/Portals';
-import {IModelProps, ITransform, TSelectedMaterial} from './ARcomponents/utils';
-// import {ViroMaterialDict} from '@viro-community/react-viro/dist/components/Material/ViroMaterials';
+import {IModelProps, ITransform} from './ARcomponents/utils';
+import {IViroAppParams} from '../../types/story';
 
 interface ARMainComponentProps {
   sceneNavigator: {
     viroAppProps: {
-      models: number[];
-      actividad: string;
-      positions: Vec3[];
-      models3d: IModels[];
-      imageTrackers: IImageTracker[];
-      materialSelectorToggle: [number, ReactStateSetter<number>];
-      setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
-      modelMaterial: string[];
-      setActiveModelIndex: ReactStateSetter<number>;
-      updateMaterial: [boolean, ReactStateSetter<boolean>];
+      viroAppParams: IViroAppParams;
     };
   };
 }
 
 const ARMainComponent = (props: ARMainComponentProps) => {
   const {
+    pageNumber,
     models,
     imageTrackers,
     actividad,
@@ -42,22 +33,27 @@ const ARMainComponent = (props: ARMainComponentProps) => {
     positions,
     setSelectedModelMaterials,
     modelMaterial,
-  } = props.sceneNavigator.viroAppProps;
+  } = props.sceneNavigator.viroAppProps.viroAppParams;
 
   const [updateMaterial, setUpdateMaterial] =
-    props.sceneNavigator.viroAppProps.updateMaterial;
+    props.sceneNavigator.viroAppProps.viroAppParams.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
-    props.sceneNavigator.viroAppProps.materialSelectorToggle;
+    props.sceneNavigator.viroAppProps.viroAppParams.materialSelectorToggle;
+  // const modelProps = props.sceneNavigator.viroAppProps.modelProps;
+  // const [transforms, setTransforms] =
+  //   props.sceneNavigator.viroAppProps.transforms;
+  // const [rotations, setRotations] = props.sceneNavigator.viroAppProps.rotations;
 
   const [, setTracking] = useState(false);
   const [transforms, setTransforms] = useState<ITransform[]>(
-    models3d.map(item => ({
+    models3d[pageNumber].map(item => ({
       scale: item.scale,
       rotation: item.rotation,
       position: [0, 0, 0],
     })),
   );
-  const modelProps: IModelProps[] = models3d.map(item => ({
+
+  const modelProps: IModelProps[] = models3d[pageNumber].map(item => ({
     model: Models[item.model].model,
     modelType: typeof item.type !== 'undefined' ? item.type : 'object',
     modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
@@ -87,26 +83,31 @@ const ARMainComponent = (props: ARMainComponentProps) => {
         castsShadow={true}
       />
       <ViroAmbientLight color="#FFFFFF" intensity={150} />
-      {imageTrackers.map((imageTracker: IImageTracker, targetIndex: number) => {
-        return (
-          <ViroNode
-            key={
-              actividad + imageTracker.target + '_IT_' + targetIndex.toString()
-            }>
-            <TargetTracker imageTracker={imageTracker} />
-          </ViroNode>
-        );
-      })}
-      {models.map((itemNumber: number, modelIndex: number) => {
+      {imageTrackers[pageNumber].map(
+        (imageTracker: IImageTracker, targetIndex: number) => {
+          return (
+            <ViroNode
+              key={
+                actividad +
+                imageTracker.target +
+                '_IT_' +
+                targetIndex.toString()
+              }>
+              <TargetTracker imageTracker={imageTracker} />
+            </ViroNode>
+          );
+        },
+      )}
+      {models[pageNumber].map((itemNumber: number, modelIndex: number) => {
         return (
           <ViroNode key={actividad + '_3dobj_' + modelIndex.toString()}>
             {modelProps[itemNumber].modelType === 'object' && (
               <Objects3d
-                models3d={models3d}
+                models3d={models3d[pageNumber]}
                 modelProps={modelProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
-                positions={positions}
+                positions={positions[pageNumber]}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[
@@ -114,17 +115,17 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                   setMaterialSelectorToggle,
                 ]}
                 setSelectedModelMaterials={setSelectedModelMaterials}
-                modelMaterial={modelMaterial}
+                modelMaterial={modelMaterial[pageNumber]}
                 updateMaterial={[updateMaterial, setUpdateMaterial]}
               />
             )}
             {modelProps[itemNumber].modelType === 'portal' && (
               <Portals
-                models3d={models3d}
+                models3d={models3d[pageNumber]}
                 modelProps={modelProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
-                positions={positions}
+                positions={positions[pageNumber]}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[
@@ -132,7 +133,7 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                   setMaterialSelectorToggle,
                 ]}
                 setSelectedModelMaterials={setSelectedModelMaterials}
-                modelMaterial={modelMaterial}
+                modelMaterial={modelMaterial[pageNumber]}
                 updateMaterial={[updateMaterial, setUpdateMaterial]}
               />
             )}

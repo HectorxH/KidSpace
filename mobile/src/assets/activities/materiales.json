@@ -1856,7 +1856,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -1900,7 +1909,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -1944,7 +1962,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -1988,7 +2015,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2032,7 +2068,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2076,7 +2121,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2120,7 +2174,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2164,7 +2227,16 @@
   {
     "AR": {
       "start": true,
-      "models": [],
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
       "imageTrackers": [
         {
           "target": "pipe1",
@@ -2316,7 +2388,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2360,7 +2441,16 @@
   {
     "AR": {
       "start": true,
-      "models": [],
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
       "imageTrackers": [
         {
           "target": "menhera",
@@ -2512,7 +2602,16 @@
   {
     "AR": {
       "start": true,
-      "models": []
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
     "background": "",
     "textBoxes": [
@@ -2556,7 +2655,16 @@
   {
     "AR": {
       "start": true,
-      "models": [],
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
       "imageTrackers": [
         {
           "target": "fbk",

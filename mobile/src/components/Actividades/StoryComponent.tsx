@@ -6,66 +6,65 @@ import TextBoxes from './TextBoxes';
 import Texts from './Texts';
 import Alternativas from './Alternativas';
 import AlternativasDropdown from './AlternativasDropdown';
-import {ReactStateSetter} from '../../types/others';
-import {IActivityPage} from '../../types/activity';
 import TextInputAnswer from './TextInputAnswer';
 import Draggable from './Draggable';
+import {IStoryComponentParams} from '../../types/story';
 
 interface StoryComponentProps {
-  story: IActivityPage;
-  pageNumber: number;
-
-  // alternativas
-  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
-
-  // dropdown
-  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-  pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
-
-  // drag
-  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
-  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
-  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
-
-  // quiz
-  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
-  pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
-
-  // input field
-  userInputAnswers: [number[][], ReactStateSetter<number[][]>];
-
-  // especial de modelo 3d con custom texture
-  modelMaterial: string[][];
+  storyComponentParams: IStoryComponentParams;
 }
 
 const StoryComponent = (props: StoryComponentProps) => {
-  const {story} = props;
-  const items = typeof story.items !== 'undefined' ? story.items : [];
-  const bubbles = typeof story.bubbles !== 'undefined' ? story.bubbles : [];
+  const {
+    pageNumber,
+    story,
+    toggleDefaultValue,
+    toggleValues,
+    modelMaterial,
+    userAnswers,
+    pickedAnswers,
+    userAnswersQuiz,
+    pickedAnswersQuiz,
+    userAnswersDropdown,
+    pickedAnswersDropdown,
+    userInputAnswers,
+    userDragAnswers,
+    pickedDragAnswers,
+    receivingNames,
+    receivingValues,
+  } = props.storyComponentParams;
+
+  const pagina = story[pageNumber];
+  const items = typeof pagina.items !== 'undefined' ? pagina.items : [];
+  const bubbles = typeof pagina.bubbles !== 'undefined' ? pagina.bubbles : [];
   const textBoxes =
-    typeof story.textBoxes !== 'undefined' ? story.textBoxes : [];
-  const texts = typeof story.texts !== 'undefined' ? story.texts : [];
+    typeof pagina.textBoxes !== 'undefined' ? pagina.textBoxes : [];
+  const texts = typeof pagina.texts !== 'undefined' ? pagina.texts : [];
 
   const alternativas =
-    typeof story.alternativas !== 'undefined' ? story.alternativas : [];
+    typeof pagina.alternativas !== 'undefined' ? pagina.alternativas : [];
 
-  const quiz = typeof story.quiz !== 'undefined' ? story.quiz : [];
+  const quiz = typeof pagina.quiz !== 'undefined' ? pagina.quiz : [];
 
   const alternativasDropdown =
-    typeof story.alternativasDropdown !== 'undefined'
-      ? story.alternativasDropdown
+    typeof pagina.alternativasDropdown !== 'undefined'
+      ? pagina.alternativasDropdown
       : [];
 
   const inputFieldQuestions =
-    typeof story.textFieldQuestion !== 'undefined'
-      ? story.textFieldQuestion
+    typeof pagina.textFieldQuestion !== 'undefined'
+      ? pagina.textFieldQuestion
       : [];
 
   const dragQuestions =
-    typeof story.draggable !== 'undefined' ? story.draggable : [];
+    typeof pagina.draggable !== 'undefined' ? pagina.draggable : [];
 
+  if (
+    toggleDefaultValue[pageNumber] === false &&
+    toggleValues[pageNumber][0] !== 1
+  ) {
+    return null;
+  }
   return (
     <View style={styles.container}>
       {/* Personajes/Imagenes */}
@@ -73,9 +72,7 @@ const StoryComponent = (props: StoryComponentProps) => {
         <Items
           images={items}
           specialTexture={
-            props.pageNumber > 1
-              ? props.modelMaterial[props.pageNumber - 2][0]
-              : ''
+            pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
           }
         />
       </View>
@@ -92,9 +89,7 @@ const StoryComponent = (props: StoryComponentProps) => {
         <Items
           images={bubbles}
           specialTexture={
-            props.pageNumber > 1
-              ? props.modelMaterial[props.pageNumber - 2][0]
-              : ''
+            pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
           }
         />
       </View>
@@ -103,39 +98,39 @@ const StoryComponent = (props: StoryComponentProps) => {
         <Alternativas
           questions={alternativas}
           quiz={quiz}
-          userAnswers={props.userAnswers}
-          pickedAnswers={props.pickedAnswers}
-          userAnswersQuiz={props.userAnswersQuiz}
-          pickedAnswersQuiz={props.pickedAnswersQuiz}
-          pageNumber={props.pageNumber}
+          userAnswers={userAnswers}
+          pickedAnswers={pickedAnswers}
+          userAnswersQuiz={userAnswersQuiz}
+          pickedAnswersQuiz={pickedAnswersQuiz}
+          pageNumber={pageNumber}
         />
       </View>
       {/* Preguntas / Seleccion dropdown */}
       <View style={styles.overlay}>
         <AlternativasDropdown
           questionsDropdown={alternativasDropdown}
-          userAnswersDropdown={props.userAnswersDropdown}
-          pickedAnswersDropdown={props.pickedAnswersDropdown}
-          pageNumber={props.pageNumber}
+          userAnswersDropdown={userAnswersDropdown}
+          pickedAnswersDropdown={pickedAnswersDropdown}
+          pageNumber={pageNumber}
         />
       </View>
       {/* Preguntas / InputField */}
       <View style={styles.overlay}>
         <TextInputAnswer
           textFieldQuestions={inputFieldQuestions}
-          userInputAnswers={props.userInputAnswers}
-          pageNumber={props.pageNumber}
+          userInputAnswers={userInputAnswers}
+          pageNumber={pageNumber}
         />
       </View>
-      {/* Draggable / Seleccion colores */}
-      {typeof story.draggable !== 'undefined' && (
+      {/* Draggable */}
+      {typeof pagina.draggable !== 'undefined' && (
         <View style={styles.overlay}>
           <Draggable
-            pageNumber={props.pageNumber}
-            userDragAnswers={props.userDragAnswers}
-            pickedDragAnswers={props.pickedDragAnswers}
-            receivingNames={props.receivingNames}
-            receivingValues={props.receivingValues}
+            pageNumber={pageNumber}
+            userDragAnswers={userDragAnswers}
+            pickedDragAnswers={pickedDragAnswers}
+            receivingNames={receivingNames}
+            receivingValues={receivingValues}
             draggable={dragQuestions}
           />
         </View>
