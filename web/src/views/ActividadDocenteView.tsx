@@ -151,27 +151,27 @@ const ActividadDocenteView = () => {
   const navigate = useNavigate();
 
   const { logout } = useAuth();
-  const getCurso = async () => {
-    try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-      setCurso(res.data.curso);
-      console.log(res.data);
-      setLoading(false);
-    } catch (e) {
-      console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        logout();
-      }
-      setLoading(false);
-    }
-  };
+  // const getCurso = async () => {
+  //   try {
+  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
+  //     setCurso(res.data.curso);
+  //     console.log(res.data);
+  //     setLoading(false);
+  //   } catch (e) {
+  //     console.log(e);
+  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
+  //       logout();
+  //     }
+  //     setLoading(false);
+  //   }
+  // };
 
-  useEffect(() => {
-    if (!curso) getCurso();
-  }, []);
+  // useEffect(() => {
+  //   if (!curso) getCurso();
+  // }, []);
 
-  if (loading) return (<Box />);
-  if (!curso) return (<NotFoundView />);
+  // if (loading) return (<Box />);
+  // if (!curso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>

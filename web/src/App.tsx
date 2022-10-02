@@ -95,7 +95,7 @@ const App = () => (
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<LayoutApoderado />}>
                 <Route path="/pupilos" element={<PupilosView />} />
-                <Route path="/cursos/:cursoId/estadisticasEstudiante" element={<EstadisticasApoderadoView />} />
+                <Route path="/estadisticasEstudiante/:nEstudiante" element={<EstadisticasApoderadoView />} />
               </Route>
               <Route element={<Layout />}>
                 <Route path="/" element={<PanelControlView />} />

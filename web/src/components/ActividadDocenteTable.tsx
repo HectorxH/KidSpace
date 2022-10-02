@@ -5,7 +5,7 @@ import {
   TableCell, TableRow, Stack, Card, Box, TableHead,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
@@ -27,52 +27,33 @@ interface RowParams {
   row: IRow,
 }
 
-interface ICursoTableParams {
+interface ITableParams {
   rows: IRow[],
   // updateEstudiantes: Function
 }
 
 const ActividadDocenteTable = (
-  { rows }: ICursoTableParams,
+  { rows }: ITableParams,
 ) => {
   const { logout } = useAuth();
   const navigate = useNavigate();
+  const [curso, setCurso] = useState('633791565117c47b4c1399db');
   const handleVerStats = (i:string) => {
-    navigate(`/cursos/63352374912a82092e1799f9/estadisticas/actividadDocente/${i}`);
+    navigate(`/cursos/${curso}/estadisticas/actividadDocente/${i}`);
   };
   const cols: GridColDef[] = [
     {
       field: 'actividad',
+      headerName: 'Actividad',
       flex: 1,
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Actividad</b>
-          </Typography>
-        </span>
-      ),
-      renderCell: (params) => (
-        <div>
-          <Typography>
-            {params.row.actividad}
-          </Typography>
-        </div>
-      ),
     },
     {
       field: 'estado',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Estado</b>
-          </Typography>
-        </span>
-      ),
-      width: 150,
-      editable: true,
+      headerName: 'Estado',
+      flex: 1,
       renderCell: ((params) => (
         <div>
-          <Typography sx={{ color: params.row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
+          <Typography sx={{ fontSize: '15px', color: params.row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
             {params.row.estado}
           </Typography>
         </div>
@@ -80,32 +61,17 @@ const ActividadDocenteTable = (
     },
     {
       field: 'porcentaje',
-      headerName: '% del curso que completó la actividad',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>% del curso</b>
-          </Typography>
-        </span>
-      ),
+      headerName: '% del curso',
       flex: 1,
       renderCell: (params) => (
         <div>
-          <Typography>
-            {params.row.porcentaje} %
-          </Typography>
+          {params.row.porcentaje} %
         </div>
       ),
     },
     {
       field: 'accion',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Acción</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Acción',
       flex: 1,
       sortable: false,
       renderCell: (params) => {

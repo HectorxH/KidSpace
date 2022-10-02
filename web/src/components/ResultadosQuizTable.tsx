@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckIcon from '@mui/icons-material/Check';
 // import axios from 'axios';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
@@ -27,70 +28,71 @@ interface RowParams {
   row: IRow,
 }
 
-const Row = ({ row }:RowParams) => {
-  const {
-    _id, estado, nombre, pregunta1, pregunta2,
-  } = row;
-
-  return (
-    <TableRow
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell>{nombre}</TableCell>
-      <TableCell>
-        <Typography sx={{ color: estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
-          {estado}
-        </Typography>
-      </TableCell>
-      <TableCell>{pregunta1}{pregunta1 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) }</TableCell>
-      <TableCell>{pregunta2}{pregunta2 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) }</TableCell>
-    </TableRow>
-  );
-};
-
-interface ICursoTableParams {
+interface ITableParams {
   rows: IRow[],
 }
 
 const ResultadosQuizTable = (
-  { rows }: ICursoTableParams,
+  { rows }: ITableParams,
 ) => {
   const { logout } = useAuth();
-
+  const cols: GridColDef[] = [
+    {
+      field: 'nombre',
+      flex: 1,
+      headerName: 'Nombre',
+    },
+    {
+      field: 'estado',
+      headerName: 'Estado',
+      flex: 1,
+      editable: true,
+      renderCell: ((params) => (
+        <div>
+          <Typography sx={{ fontSize: '14px', color: params.row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
+            {params.row.estado}
+          </Typography>
+        </div>
+      )),
+    },
+    {
+      field: 'pregunta1',
+      headerName: 'Pregunta 1',
+      flex: 1,
+      renderCell: (params) => (
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          {params.row.pregunta1 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta1}
+        </Stack>
+      ),
+    },
+    {
+      field: 'pregunta2',
+      headerName: 'Pregunta 2',
+      flex: 1,
+      renderCell: (params) => (
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          {params.row.pregunta2 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta2}
+        </Stack>
+      ),
+    },
+  ];
   return (
-    <TableContainer
-      component={Card}
-      elevation={4}
-      sx={{ borderRadius: '20px' }}
-    >
-      <Table
-        sx={{ overflowX: 'scroll' }}
-        aria-label="simple table"
-      >
-        <TableHead>
-          <TableRow>
-            <TableCell>Nombre</TableCell>
-            <TableCell>Estado</TableCell>
-            <TableCell>Pregunta 1</TableCell>
-            <TableCell>Pregunta 2</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody sx={{ justifyContent: 'center' }}>
-          {(rows.length === 0
-            ? ''
-            : rows.map((row) => (
-              <Row
-                key={row._id}
-                row={row}
-              />
-            ))
-          )}
-        </TableBody>
-      </Table>
-      {(rows.length === 0)
-        ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
-        : ''}
-    </TableContainer>
+    <Box sx={{ width: '100%' }}>
+      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+        : (
+          <DataGrid
+            density="comfortable"
+            getRowHeight={() => 'auto'}
+            autoHeight
+            hideFooter
+            columns={cols}
+            rows={Object.values(rows)}
+            getRowId={(row: any) => row._id}
+            disableSelectionOnClick
+            sx={{ borderRadius: 5 }}
+          />
+        )}
+    </Box>
   );
 };
 

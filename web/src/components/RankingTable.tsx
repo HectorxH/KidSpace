@@ -43,80 +43,39 @@ const RankingTable = (
   const cols: GridColDef[] = [
     {
       field: 'lugar',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Lugar</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Lugar',
       flex: 1,
-      editable: true,
       renderCell: ((params) => (
         <div>
-          <Typography>
-            <FontAwesomeIcon
-              icon={faCrown}
-              style={{
-                color: params.row.lugar === 1
-                  ? '#F2C144'
-                  : params.row.lugar === 2
-                    ? '#C1C1C1'
-                    : params.row.lugar === 3
-                      ? '#DF8366'
-                      : '#FFFFFF',
-                opacity: params.row.lugar > 3 ? 0 : 1,
-              }}
-            /> {params.row.lugar}
-          </Typography>
+          <FontAwesomeIcon
+            icon={faCrown}
+            style={{
+              color: params.row.lugar === 1
+                ? '#F2C144'
+                : params.row.lugar === 2
+                  ? '#C1C1C1'
+                  : params.row.lugar === 3
+                    ? '#DF8366'
+                    : '#FFFFFF',
+              opacity: params.row.lugar > 3 ? 0 : 1,
+            }}
+          /> {params.row.lugar}
         </div>
       )),
     },
     {
       field: 'nombre',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Nombre</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Nombre',
       flex: 1,
-      renderCell: (params) => (
-        <div>
-          <Typography>
-            {params.row.nombre}
-          </Typography>
-        </div>
-      ),
     },
     {
       field: 'actividades',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Actividades completadas</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Actividades completadas',
       flex: 1,
-      renderCell: (params) => (
-        <div>
-          <Typography>
-            {params.row.actividades}
-          </Typography>
-        </div>
-      ),
     },
     {
       field: 'accion',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Acción</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Acción',
       flex: 1,
       sortable: false,
       renderCell: (params) => {

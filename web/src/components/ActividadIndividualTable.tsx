@@ -6,7 +6,7 @@ import {
   Typography,
   TextField,
 } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
@@ -35,55 +35,29 @@ const ActividadIndividualTable = (
 ) => {
   const { logout } = useAuth();
   const navigate = useNavigate();
+  const [curso, setCurso] = useState('633791565117c47b4c1399db');
   const handleVerStats = (i:string) => {
-    navigate(`/cursos/63352374912a82092e1799f9/estadisticas/actividadIndividual/${i}`);
+    navigate(`/cursos/${curso}/estadisticas/actividadIndividual/${i}`);
   };
   const cols: GridColDef[] = [
     {
       field: 'actividad',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Actividad</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Nombre',
       flex: 1,
-      renderCell: (params) => (
-        <div>
-          <Typography>
-            {params.row.actividad}
-          </Typography>
-        </div>
-      ),
     },
     {
       field: 'porcentaje',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>% del curso</b>
-          </Typography>
-        </span>
-      ),
+      headerName: '% del curso',
       flex: 1,
       renderCell: (params) => (
         <div>
-          <Typography>
-            {params.row.porcentaje} %
-          </Typography>
+          {params.row.porcentaje} %
         </div>
       ),
     },
     {
       field: 'accion',
-      renderHeader: (params) => (
-        <span data-testid="header-test-id">
-          <Typography>
-            <b>Acción</b>
-          </Typography>
-        </span>
-      ),
+      headerName: 'Acción',
       flex: 1,
       sortable: false,
       renderCell: (params) => {
