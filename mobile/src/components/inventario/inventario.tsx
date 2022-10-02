@@ -12,51 +12,68 @@ import {
 import {IconButton} from 'react-native-paper';
 import Images from '../../assets/images/images';
 import {IModels, Vec3} from '../../types/activity';
-import {ReactStateSetter} from '../../types/others';
+import {IInventarioParams} from '../../types/story';
 import {RSize} from '../../utils/responsive';
 
 interface InventarioProps {
-  models3d: IModels[];
-  models: [number[], ReactStateSetter<number[]>];
-  placedItems: [number[], ReactStateSetter<number[]>];
-  nPlacedItems: [number, ReactStateSetter<number>];
-  visible: boolean;
-  showInventory: boolean;
-  positions: [Vec3[], ReactStateSetter<Vec3[]>];
+  inventarioParams: IInventarioParams;
   sceneNav: React.RefObject<ViroARSceneNavigator>;
-  setMaterialSelectorToggle: ReactStateSetter<number>;
 }
 
 const Inventario = (props: InventarioProps) => {
-  const {models3d, visible, showInventory, sceneNav} = props;
-  const [placedItems, setPlacedItems] = props.placedItems;
-  const [nPlacedItems, setNPlacedItems] = props.nPlacedItems;
-  const [positions, setPositions] = props.positions;
+  const {
+    pageNumber,
+    models3d,
+    visible,
+    showInventory,
+    setMaterialSelectorToggle,
+  } = props.inventarioParams;
+  const sceneNav = props.sceneNav;
+  const [placedItems, setPlacedItems] = props.inventarioParams.placedItems;
+  const [nPlacedItems, setNPlacedItems] = props.inventarioParams.nPlacedItems;
+  const [positions, setPositions] = props.inventarioParams.positions;
+  const [models, setModels] = props.inventarioParams.models;
 
   function modelHandler(index: number) {
     updatePosition();
-    let aux = [...placedItems];
-    aux[index] = 1;
-    setPlacedItems(aux);
-    setNPlacedItems(nPlacedItems + 1);
-    let aux2 = [...props.models[0]];
-    aux2.push(index);
-    props.models[1](aux2);
+    let newPlacedItems = [...placedItems];
+    let newNPlacedItems = [...nPlacedItems];
+    let newModels = [...models];
+
+    newPlacedItems[pageNumber][index] = 1;
+    newNPlacedItems[pageNumber] = newNPlacedItems[pageNumber] + 1;
+    newModels[pageNumber].push(index);
+
+    setPlacedItems(newPlacedItems);
+    setNPlacedItems(newNPlacedItems);
+    setModels(newModels);
   }
 
   function handlePickUp() {
-    setPlacedItems(models3d.map(() => 0));
-    setNPlacedItems(0);
-    props.models[1]([]);
-    setPositions([]);
-    props.setMaterialSelectorToggle(0);
+    let newPlacedItems = [...placedItems];
+    let newNPlacedItems = [...nPlacedItems];
+    let newModels = [...models];
+    let newPositions = [...positions];
+
+    newPlacedItems[pageNumber] = models3d[pageNumber].map(() => 0);
+    newNPlacedItems[pageNumber] = 0;
+    newModels[pageNumber] = [];
+    newPositions[pageNumber] = [];
+
+    setPlacedItems(newPlacedItems);
+    setNPlacedItems(newNPlacedItems);
+    setModels(newModels);
+    setPositions(newPositions);
+    setMaterialSelectorToggle(0);
   }
 
   function updatePosition() {
     sceneNav.current
       ?._unproject([RSize(1, 'w'), RSize(1, 'h'), 0.05])
       .then(({position}: {position: Vec3}) => {
-        setPositions([...positions, position]);
+        let newPositions = [...positions];
+        newPositions[pageNumber].push(position);
+        setPositions(newPositions);
       })
       .catch(console.log);
     // setPositions([...positions, [0, 0, -1]]);
@@ -85,8 +102,8 @@ const Inventario = (props: InventarioProps) => {
           </View>
           <SafeAreaView style={styles.itemsBox}>
             <ScrollView fadingEdgeLength={10} persistentScrollbar>
-              {models3d.map((item: IModels, index: number) => {
-                if (placedItems[index] !== 0) {
+              {models3d[pageNumber].map((item: IModels, index: number) => {
+                if (placedItems[pageNumber][index] !== 0) {
                   return null;
                 }
                 return (

@@ -75,10 +75,10 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
   };
 
   function checkAnswer(payload: number) {
-    // El primer elemento es fijo asi que no se toca
-    // if (itemNumber <= 0) {
-    //   return;
-    // }
+    let newUserAnswers = [...userDragAnswers];
+    let newPickedAnswers = [...pickedDragAnswers];
+    let newReceivingNames = [...receivingNames];
+    let newItemFlaps = [...itemFlaps];
 
     // Si el item tiene nombre -> fijo, no se modifica
     if (draggable.receivingItems[itemNumber].name !== '') {
@@ -86,19 +86,17 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
     }
 
     // Si no hay bloques previos no asigna
+    console.log(itemNumber, itemFlaps[itemNumber - 1][1]);
+    console.log(newItemFlaps);
+
     if (itemNumber > 0) {
       if (
-        itemFlaps[itemNumber - 1][1] === false ||
-        receivingNames[pageNumber][dragNumber][itemNumber - 1] === ''
+        newItemFlaps[itemNumber - 1][1] === false ||
+        newReceivingNames[pageNumber][dragNumber][itemNumber - 1] === ''
       ) {
         return;
       }
     }
-
-    let newUserAnswers = [...userDragAnswers];
-    let newPickedAnswers = [...pickedDragAnswers];
-    let newReceivingNames = [...receivingNames];
-    let newItemFlaps = [...itemFlaps];
 
     const answer = draggable.draggableItems[payload].value;
 
@@ -114,7 +112,9 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
       typeof draggable.draggableItems[payload].bottom !== 'undefined'
         ? draggable.draggableItems[payload].bottom!
         : false;
-
+    console.log(newItemFlaps[itemNumber][1]);
+    console.log(newItemFlaps);
+    console.log('\n');
     if (
       draggable.answer.includes(answer) &&
       draggable.answer.indexOf(answer) === itemNumber
@@ -127,10 +127,10 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
         draggable.draggableItems[payload].name;
     }
 
+    setItemFlaps(newItemFlaps);
     setUserDragAnswers(newUserAnswers);
     setPickedDragAnswers(newPickedAnswers);
     setReceivingNames(newReceivingNames);
-    setItemFlaps(newItemFlaps);
   }
 
   function resetAnswer(receivingNumber: number) {

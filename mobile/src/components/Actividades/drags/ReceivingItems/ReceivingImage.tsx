@@ -22,6 +22,7 @@ const ReceivingImage = (props: ReceivingImageProps) => {
   const [receivingValues, setReceivingValues] = props.receivingValues;
 
   const dragStyle = [styles.receivingBase];
+
   const updateImage = (payload: number) => {
     let newReceivingValues = [...receivingValues];
     let newUserDragAnswers = [...userDragAnswers];
@@ -35,6 +36,7 @@ const ReceivingImage = (props: ReceivingImageProps) => {
   };
 
   function resetAnswer() {}
+
   return (
     <View style={styles.container}>
       <Layout
