@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IActivity} from './activity';
+import {IActividadLog, IActivity} from './activity';
 import {ICarrera, IInfo} from './carrera';
 import {IProfile} from './profile';
 
@@ -13,10 +13,13 @@ export type desafioTipo =
 export type actividadNombre =
   | 'diagramas'
   | 'diseños'
+  | 'materiales'
   | 'diseño1'
   | 'diseño2'
   | 'nutricion1'
   | 'nutricion2'
+  | 'informatica1'
+  | 'informatica2'
   | 'debug';
 
 export type RootStackParamList = {
@@ -27,15 +30,37 @@ export type RootStackParamList = {
   EditCharacter: undefined;
   FormularioView: {data: IProfile};
   MainMap: undefined;
-  Activity: {activity: IActivity};
-  Carrera: {carrera: ICarrera; completadas: string};
-  Story: {Info: IInfo};
+  Activity: {
+    activity: IActivity;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
+  Carrera: {
+    carrera: ICarrera;
+    completadas: string;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
+  Story: {Info: IInfo; curso: string; userName: string; userLastName: string};
   NoAvailableActivities: undefined;
-  AvailableActivities: {activities: IActivity[]};
+  AvailableActivities: {
+    activities: IActivity[];
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
 
-  Actividades: {actividad: actividadNombre; cantMonedas: number};
+  Actividades: {
+    actividad: actividadNombre;
+    cantMonedas: number;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;
@@ -43,7 +68,11 @@ export type RootStackParamList = {
   ResultadoFinal: undefined;
   DynamicTable: undefined;
   Qr: undefined;
-  Recompensas: {cantMonedas: number; nombreActividad: string};
+  Recompensas: {
+    cantMonedas: number;
+    nombreActividad: string;
+    actLog: IActividadLog;
+  };
 };
 
 export type InicioViewProps = NativeStackScreenProps<

@@ -46,6 +46,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [completadas, setCompletadas] = useState('[]');
 
   const userData = useAuth().user;
+  const userCurso = useAuth().curso;
 
   const loadNotification = () => {
     let visible = false;
@@ -133,7 +134,12 @@ const MainMap = ({navigation}: MainMapProps) => {
       //const messages = JSON.parse(jsonMessages!);
       //const visible = await AsyncStorage.getItem('@visible');
       notification !== '0' && notification !== null
-        ? navigation.push('AvailableActivities', {activities: message})
+        ? navigation.push('AvailableActivities', {
+            activities: message,
+            curso: userCurso,
+            userName: userData?.nombres!,
+            userLastName: userData?.apellidos!,
+          })
         : navigation.push('NoAvailableActivities');
     } catch (e) {
       console.log(e);
@@ -144,6 +150,9 @@ const MainMap = ({navigation}: MainMapProps) => {
     navigation.push('Carrera', {
       carrera: event.unidadCarrera,
       completadas: completadas,
+      curso: userCurso,
+      userName: userData?.nombres!,
+      userLastName: userData?.apellidos!,
     });
     setModalVisible(false);
   };
@@ -265,6 +274,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#EC87C0"
               mode="contained"
+              // disabled={true}
               icon={() => (
                 <Icon
                   name="account"
@@ -292,6 +302,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#A0C96A"
               mode="contained"
+              disabled={true}
               icon={() => (
                 <Icon
                   name="store"

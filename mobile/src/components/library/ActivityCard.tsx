@@ -15,13 +15,24 @@ interface ActivityCardProps {
     RootStackParamList,
     'AvailableActivities'
   >;
+  curso: string;
+  userName: string;
+  userLastName: string;
 }
 
-const ActivityCard = ({activity, navigation}: ActivityCardProps) => {
+const ActivityCard = ({
+  activity,
+  curso,
+  userName,
+  userLastName,
+  navigation,
+}: ActivityCardProps) => {
   return (
     <Card
       style={styles.card}
-      onPress={() => navigation.push('Activity', {activity})}>
+      onPress={() =>
+        navigation.push('Activity', {activity, curso, userName, userLastName})
+      }>
       <Card.Cover
         source={images['portadaAct'.concat(activity.nactividad)].uri}
       />

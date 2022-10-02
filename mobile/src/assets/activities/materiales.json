@@ -1,0 +1,3039 @@
+[
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [4, 2],
+          "end": [16, 15]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los objetos que nos rodean están fabricados para satisfacer las necesidades del ser humano.",
+        "position": {
+          "start": [4.5, 2.5],
+          "end": [15.5, 11.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "unnecessary_cheering",
+        "position": {
+          "start": [4.5, 11],
+          "end": [15.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [4, 2],
+          "end": [16, 15]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos objetos se fabrican con gran variedad de materiales. Estos también se conocen como *materia prima*.",
+        "position": {
+          "start": [4.5, 2.5],
+          "end": [15.5, 11.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "unnecessary_cheering",
+        "position": {
+          "start": [4.5, 11],
+          "end": [15.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Al principio solíamos encontrar la materia prima espontáneamente en la naturaleza.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "materias_primas_1",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Desde los tiempos antiguos hemos usado la madera, piedra o huesos.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "materias_primas_1",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Después se emplearon materiales elaborados como arcilla y lana.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "materias_primas_2",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La materia prima no engloba solamente los materiales que utilizamos para construir.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "materias_primas_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las hortalizas, las carnes y la leche también se consideran materia prima.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "materias_primas_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Conoce a Victoria. Ella trabaja en la manufactura.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su trabajo consiste en recibir distintos materiales y transformarlos en objetos,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como ropa, muebles o incluso comida.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En su trabajo, la materia prima se recibe desde *distintos lugares de Chile*.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaSmile",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, la madera es más común en el Sur de Chile, debido a su clima más húmedo.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En cambio, es improbable encontrar la madera en el norte porque el clima es demasiado árido.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "norte_sur",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Pero este clima árido ayuda a que el Norte sea el mayor productor de distintos metales y minerales.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "norte_chile",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Lo mismo pasa con las frutas y verduras, estas necesitan estar en un *lugar con clima adecuado*.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaSmile",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, cada lugar tiene sus propios materiales predominantes que  podemos extraer.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Incluso con tan solo observar un lugar podemos decir qué materiales se podrán encontrar en este,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "ojo_man",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " y cuales son improbables de encontrar.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "ojo_man",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Victoria intenta entrenar tu habilidad de observación, visitando algunos lugares de Chile.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando un poco de magia, Victoria creó varios portales a distintos lugares de Chile.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podrás encontrar los portales en tu inventario. Coloca un portal en el espacio y camina hacia este.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un portal es como una puerta a otra habitación. Tienes que entrar en un portal para transportarte a una región de Chile.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una vez en el portal, observa tu entorno y piensa que materiales podrías encontrar en esta región.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para volver, tienes que caminar hacia el portal en que entraste. Una vez que atravieses el portal, volverás a tu ubicación original.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En total, encontrarás 4 portales en tu inventario, que te llevarán a las zonas Norte, Centro, Sur y Austral.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Verifica tus observaciones sobre cada región, completando la actividad disponible en la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0.5, 4],
+          "end": [10, 9.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "chile",
+        "position": {
+          "start": [10.5, 4],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Arrastra cada materia prima a su región correspondiente según tus observaciones.",
+        "position": {
+          "start": [1, 4.5],
+          "end": [9.5, 9]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["cobre", "hortalizas", "madera", "leche_de_vaca"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "madera",
+            "value": "madera",
+            "position": {
+              "start": [2.5, 10.5],
+              "end": [4.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "leche_de_vaca",
+            "value": "leche_de_vaca",
+            "position": {
+              "start": [5.5, 10.5],
+              "end": [7.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "hortalizas",
+            "value": "hortalizas",
+            "position": {
+              "start": [2.5, 15],
+              "end": [4.5, 19]
+            }
+          },
+          {
+            "type": "image",
+            "name": "cobre",
+            "value": "cobre",
+            "position": {
+              "start": [5.5, 15],
+              "end": [7.5, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 4],
+              "end": [13.7, 8]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 8.5],
+              "end": [13.7, 12.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 13],
+              "end": [13.7, 17]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [16, 14],
+              "end": [18, 18]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 27,
+        "require": [26],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un producto tecnológico es un objeto creado para mejorar la calidad de vida de las personas.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para elaborarlo, primero se extraen las materias primas de la naturaleza. ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "forestnt_2",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estas se transforman en materiales y con los materiales se elaboran los productos.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "forestnt_2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Todos los productos tecnológicos pueden ser analizados según la complejidad de su elaboración.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaSmile",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántas personas crees que son necesarias para elaborar un celular?",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaQuestion",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Más de 10 personas"],
+        "answers": [
+          {
+            "text": "1 persona",
+            "position": {
+              "start": [11, 10.5],
+              "end": [17, 12.5]
+            }
+          },
+          {
+            "text": "3 personas",
+            "position": {
+              "start": [11, 13.5],
+              "end": [17, 15.5]
+            }
+          },
+          {
+            "text": "Más de 10 personas",
+            "position": {
+              "start": [11, 16.5],
+              "end": [17, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así es, y eso se debe a que un celular tiene muchos elementos",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePhoneParts",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [5, 10]  
+        }
+      },
+      {
+        "name": "bubbleOk",
+        "position": {
+          "start": [0.5, 10.5],
+          "end": [5, 15]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "que deben ser fabricados antes de juntarlas en un solo producto.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubblePhoneParts",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [5, 10]  
+        }
+      },
+      {
+        "name": "bubbleOk",
+        "position": {
+          "start": [0.5, 10.5],
+          "end": [5, 15]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los productos artesanales se elaboran con instalaciones sencillas.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "materiales_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los productos industriales se fabrican en lugares con grandes máquinas.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "materiales_2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las grandes obras de ingeniería requieren la intervención de las instalaciones muy complejas.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "materiales_1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [8.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Además, cada objeto tecnológico se puede clasificar según el material del cual está hecho.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaSmile",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿De qué material crees que se hacen los muebles?",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaQuestion",
+        "position": {
+          "start": [11.5, 2],
+          "end": [17.5, 20]  
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "questions",
+        "position": {
+          "start": [10.5, 1],
+          "end": [14, 7]  
+        },
+        "settings": {
+          "transform": [
+            {
+              "rotateZ": "-90deg"
+            }
+          ]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Madera"],
+        "answers": [
+          {
+            "text": "Madera",
+            "position": {
+              "start": [3, 10.5],
+              "end": [9, 12.5]
+            }
+          },
+          {
+            "text": "Papel",
+            "position": {
+              "start": [3, 13.5],
+              "end": [9, 15.5]
+            }
+          },
+          {
+            "text": "Vidrio",
+            "position": {
+              "start": [3, 16.5],
+              "end": [9, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Exacto. Para fabricar un mueble, se necesitan tablones de madera",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "forestnt_1",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "que se extraen de los troncos de los árboles.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "forestnt_1",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se dice que la madera en este caso es el material que proviene de los árboles - la materia prima.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "forestnt_1",
+        "position": {
+          "start": [11.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Victoria te invita a analizar varios objetos tecnológicos",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_materiales",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "para aprender sobre cómo estos se elaboran.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [2.5, 2],
+          "end": [8.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando *las tarjetas* podrás aprender sobre distintos materiales y",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como estos se utilizan en la elaboración de diversos productos tecnológicos.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Dada una materia prima, que aparecerá en tu pantalla, tienes que *encontrar una tarjeta*",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "con el *material* que se elabora con esta. Por ejemplo, si en la pantalla aparecen la palabra \"*árbol*\",",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*.\nEscanea la tarjeta con tu celular.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si la tarjeta fue correcta, podrás ver un video corto. Para verificar lo aprendido tienes que",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "responder las preguntas, que podrás encontrar en el botón de la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
+      "imageTrackers": [
+        {
+          "target": "pipe1",
+          "display": "test",
+          "displayType": "video"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 52,
+        "require": [51],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien!\n¿Podrás encontrar la tarjeta que corresponde a  “X”?",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
+      "imageTrackers": [
+        {
+          "target": "menhera",
+          "display": "cry",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 54,
+        "require": [53],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente!\nAhora necesitas encontrar la tarjeta correspondiente a X.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "hideInventory": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ],
+      "imageTrackers": [
+        {
+          "target": "fbk",
+          "display": "fbk",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 56,
+        "require": [55],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    "background": "bg_materiales",
+    "items": [
+      {
+        "name": "VictoriaHappy",
+        "position": {
+          "start": [13, 2],
+          "end": [19, 20]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [13, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Increible trabajo!\nVictoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [12.5, 15]
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Ir al Quiz",
+          "buttonTextNormal": "Ir al Quiz"
+        },
+        "position" : {
+          "start": [3, 13.5],
+          "end": [11, 16.5]
+        },
+        "target": 57,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 0.06,
+          "color": "white",
+          "elevation": 21
+        },
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El diseño siempre debe seguir la ______ del producto",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.05,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 0.045,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "pregunta": "El diseño siempre debe seguir la ______ del producto",
+        "answers": [
+          {
+            "text": "idea",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "función",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "creatividad",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "pregunta": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "answers": [
+          {
+            "text": "color",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "tamaño",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "textura",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [46],
+        "visible": false
+      }
+    ]
+  }
+]

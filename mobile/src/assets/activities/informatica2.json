@@ -1,0 +1,30 @@
+[
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "To do",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "cry",
+        "position": {
+          "start": [11.5, 3],
+          "end": [17.5, 20]  
+        }
+      }
+    ]
+  }]

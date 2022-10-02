@@ -1,4 +1,17 @@
 import {FlexAlignType} from 'react-native';
+import {actividadNombre} from './navigation';
+
+export interface IActividadLog {
+  tipo: 'individual' | 'clase';
+  actividad: string;
+  unidad: string;
+  steam: number[];
+  estudiante: string;
+  curso: string;
+  quizFinal?: {pregunta: string; respuesta: string}[];
+  duracion: string;
+  fecha: Date;
+}
 
 export interface IActivity {
   nunidad: string;
@@ -18,7 +31,8 @@ export interface IActivity {
   img5: string;
   path: string;
   pathAsignar: string;
-  nombreActividad: 'diagramas' | 'diseños';
+  nombreActividad: actividadNombre;
+  // nombreActividad: 'diagramas' | 'diseños' | 'materiales';
 }
 
 export type ButtonSetting = {
@@ -60,6 +74,10 @@ export interface ITextBoxSettings {
   elevation?: number;
   paddingVertical?: number;
   paddingHorizontal?: number;
+  borderBottomLeftRadius?: number;
+  borderBottomRightRadius?: number;
+  borderTopLeftRadius?: number;
+  borderTopRightRadius?: number;
 }
 
 export interface IImages {
@@ -73,6 +91,15 @@ export interface IImagesSettings {
   height?: string;
   width?: string;
   alignSelf?: FlexAlignType | 'auto' | undefined;
+  transform?: IImagesTransforms[];
+}
+
+export interface IImagesTransforms {
+  scaleX: number;
+  scaleY: number;
+  rotateX: string;
+  rotateY: string;
+  rotateZ: string;
 }
 
 export interface IAlternativas {
@@ -98,13 +125,15 @@ export interface IAlternativasDropdown {
 
 export interface IQuiz {
   answers: IAnswers[];
+  pregunta: string;
 }
 
 export interface IModels {
   model: string;
-  // type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
   scale: Vec3;
   rotation: Vec3;
+  type?: string;
+  image360?: string;
   interactable?: string[];
   ARMaterials?: {
     materialOrder: string[];
@@ -114,7 +143,15 @@ export interface IModels {
 
 export interface IAR {
   start: boolean;
-  models: IModels[];
+  imageTrackers?: IImageTracker[];
+  hideInventory?: boolean;
+  models?: IModels[];
+}
+
+export interface IImageTracker {
+  target: string;
+  display: string;
+  displayType: 'image' | 'video' | '3dobject';
 }
 
 export interface ITexts {
@@ -184,8 +221,28 @@ export interface ITextFieldQuestion {
 }
 
 export interface IDraggable {
-  draggable: boolean;
-  answer: string;
+  type: string;
+  answer: string[];
+  draggableItems: IDraggableItems[];
+  receivingItems: IReceivingItems[];
+}
+
+export interface IDraggableItems {
+  type: string;
+  name: string;
+  value: string;
+  position: IPosition;
+  top?: boolean;
+  bottom?: boolean;
+}
+
+export interface IReceivingItems {
+  type: string;
+  name: string;
+  value: string;
+  position: IPosition;
+  top?: boolean;
+  bottom?: boolean;
 }
 
 export interface IActivityPage {
@@ -202,7 +259,7 @@ export interface IActivityPage {
   jumpButton?: IJumpButton[] | never[];
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
-  draggable?: IDraggable;
+  draggable?: IDraggable[] | never[];
 }
 
 export type Actividad = IActivityPage[];
