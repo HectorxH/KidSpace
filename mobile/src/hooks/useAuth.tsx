@@ -16,6 +16,7 @@ interface IAuthContext {
   login: (data: IUser | null) => Promise<void>;
   logout: () => Promise<void>;
   refresh: () => Promise<void>;
+  deleteAccount: () => Promise<void>;
   instance: Agent;
 }
 
@@ -26,6 +27,7 @@ const AuthContext = createContext<IAuthContext>({
   login: async (data: IUser | null) => {},
   logout: async () => {},
   refresh: async () => {},
+  deleteAccount: async () => {},
   instance: instance,
 });
 
@@ -93,11 +95,16 @@ export const AuthProvider = ({children}: {children: any}) => {
       console.log(e);
       console.log('Logout: already loged out');
     }
+  };
+
+  const deleteAccount = async () => {
     try {
+      await logout();
       await AsyncStorage.setItem('@user', JSON.stringify(null));
       await AsyncStorage.setItem('@curso', JSON.stringify(''));
       setUser(null);
       setCurso('');
+      console.log('Account deleted!');
       navigation?.navigate('InicioView');
     } catch (e) {
       console.log(e);
@@ -106,12 +113,7 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const refresh = async () => {
     try {
-      await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-    } catch (e) {
-      console.log(e);
-      console.log('Refresh: already loged out');
-    }
-    try {
+      await logout();
       const res = await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/login`)
         .send({
@@ -127,14 +129,12 @@ export const AuthProvider = ({children}: {children: any}) => {
           console.log('Refresh: login as new user', newUser);
           await login(newUser);
         }
-      } else {
-        await logout();
       }
     } catch (e) {
       console.log(JSON.stringify(e));
       if ((e as ResponseError).status === 401) {
         try {
-          await logout();
+          await deleteAccount();
         } catch (err) {
           console.log(err);
         }
@@ -152,7 +152,7 @@ export const AuthProvider = ({children}: {children: any}) => {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   //   [],
   // );
-  const value = {user, curso, login, logout, refresh, instance};
+  const value = {user, curso, login, logout, refresh, deleteAccount, instance};
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 

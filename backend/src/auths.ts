@@ -19,7 +19,7 @@ export function checkNotAuth(
 ) {
   if (req.isAuthenticated()) {
     console.log('!!Autenticado');
-    return res.status(401).json({ message: 'Estas autenticado' });
+    return res.status(403).json({ message: 'Estas autenticado' });
   }
   return next();
 }

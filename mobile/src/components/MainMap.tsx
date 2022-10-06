@@ -78,6 +78,7 @@ const MainMap = ({navigation}: MainMapProps) => {
         navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
+
       const m = await AsyncStorage.getItem('@monedas');
       m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
       const c = await AsyncStorage.getItem('@completadas');
@@ -131,6 +132,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
+
   // console.log(userData?.apellidos);
   console.log(user);
   const HandleAct = async () => {
