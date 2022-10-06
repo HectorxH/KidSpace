@@ -15,7 +15,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
 
-  const {user, login, instance, logout} = useAuth();
+  const {user, login, instance, deleteAccount} = useAuth();
 
   useEffect(() => {
     if (user) {
@@ -53,7 +53,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
       console.log(JSON.stringify(error));
       if ((error as ResponseError).status === 401) {
         try {
-          await logout();
+          await deleteAccount();
         } catch (e) {
           console.log(e);
         }

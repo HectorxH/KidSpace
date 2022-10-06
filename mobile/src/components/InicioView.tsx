@@ -7,13 +7,12 @@ import {InicioViewProps} from '../types/navigation';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
-import axios from 'axios';
 // import Config from 'react-native-config';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 import CargaView from './CargaView';
 
 const InicioView = ({navigation}: InicioViewProps) => {
-  const {user, refresh, logout} = useAuth();
+  const {user, refresh} = useAuth();
   const [loading, setLoading] = useState(true);
 
   const refreshUser = async () => {
@@ -23,9 +22,6 @@ const InicioView = ({navigation}: InicioViewProps) => {
       navigation.navigate('MainMap');
     } catch (e) {
       console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        await logout();
-      }
     }
   };
 
