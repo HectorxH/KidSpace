@@ -68,7 +68,6 @@ router.get('/estudiante/:id/actividades', async (req, res) => {
 });
 
 router.post('/log', async (req, res) => {
-  console.log('!!!!!!!');
   try {
     const user = req.user?._id;
     const {
