@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import {
@@ -11,6 +12,8 @@ import {
   PointElement,
   LineElement,
   Title,
+  TimeScale,
+  TimeSeriesScale,
 } from 'chart.js';
 import { Doughnut, Line } from 'react-chartjs-2';
 import '../App.css';
@@ -18,6 +21,7 @@ import '../App.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import _ from 'lodash';
+import moment from 'moment';
 import actividades from '../mock/actividades';
 import actividadesIndividuales from '../mock/actividadesIndividuales';
 import HistorialTable from '../components/HistorialTable';
@@ -26,9 +30,14 @@ import { IEstudiante } from '../types/estudiantes';
 import CargaView from './LoadingView';
 import { useAuth } from '../hooks/useAuth';
 import { IActividadLogs } from '../types/actividadLog';
+import 'chartjs-adapter-moment';
 
 // const img = require('../assets/statistics.png');
 const imgStudent = require('../assets/webApoderados/student.png');
+
+type SteamArray = number[];
+type Actividades = {[key:string]: number}
+type PointArray = {x: number, y: number}[]
 
 const makeDataDona = (data: number[]) => {
   if (_.reduce(data, (a, b) => a + b, 0) > 0) {
@@ -55,6 +64,31 @@ const makeDataDona = (data: number[]) => {
   };
 };
 
+const makeDataScatter = (data: PointArray) => {
+  if (data.length > 0) {
+    return {
+      datasets: [
+        {
+          label: 'Actividades completadas',
+          data,
+          backgroundColor: '#f070f0',
+          borderColor: '#d03080',
+          fill: '#f070f0',
+        },
+      ],
+    };
+  }
+  return {
+    datasets: [
+      {
+        label: 'No hay actividades completadas',
+        data: [{ x: 0, y: 1 }],
+        backgroundColor: ['#bbb'],
+      },
+    ],
+  };
+};
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -63,6 +97,8 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
+  TimeScale,
+  TimeSeriesScale,
 );
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -80,13 +116,10 @@ const options = {
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 
-type SteamArray = number[];
-type Actividades = {[key:string]: number}
-
 const EstadisticasApoderadoView = () => {
   const [pupilo, setPupilo] = useState<IEstudiante>();
   const [steamStats, setSteamStats] = useState<SteamArray>();
-  const [timeline, setTimeline] = useState<SteamArray>();
+  const [timeline, setTimeline] = useState<PointArray>();
   const [actividadesI, setActividadesI] = useState<Actividades>();
   const [actividadesC, setActividadesC] = useState<Actividades>();
   const [historial, setHistorial] = useState<IActividadLogs>();
@@ -104,7 +137,15 @@ const EstadisticasApoderadoView = () => {
       setActividadesI(res.data.actividadesIndividuales);
       setActividadesC(res.data.actividadesClase);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/estudiante/${pupiloId}/timeline`);
-      setTimeline(res.data.timeline);
+      const timeDays = _.map(res.data.timeline, (o) => ({ x: moment(new Date(o.x)).format('MM/DD/YYYY'), y: o.y }));
+      const reducedTimeline = Object.values(timeDays.reduce((r, o) => {
+        // eslint-disable-next-line no-param-reassign
+        r[o.x] = r[o.x] || { x: o.x, y: 0 };
+        // eslint-disable-next-line no-param-reassign
+        r[o.x].y += o.y;
+        return r;
+      }, {} as {[key: string]: any}));
+      setTimeline(reducedTimeline);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/estudiante/${pupiloId}/steam`);
       setSteamStats(res.data.steam);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/estudiante/${pupiloId}/historial`);
@@ -178,8 +219,25 @@ const EstadisticasApoderadoView = () => {
         >
           <Line
             height="100px"
-            options={{ maintainAspectRatio: false }}
-            data={makeDataDona(steamStats)}
+            options={{
+              maintainAspectRatio: false,
+              scales: {
+                x: {
+                  type: 'time',
+                  time: {
+                    unit: 'day',
+                    round: 'day',
+                  },
+                },
+                y: {
+                  beginAtZero: true,
+                  ticks: {
+                    stepSize: 1,
+                  },
+                },
+              },
+            }}
+            data={makeDataScatter(timeline)}
           />
         </Card>
       </Box>
@@ -193,7 +251,7 @@ const EstadisticasApoderadoView = () => {
         </Typography>
         <Stack direction="column" spacing={2}>
           {(actividades.map((row) => {
-            const completada = actividadesI[row.title] > 0;
+            const completada = actividadesC[row.name] > 0;
             return (
               <Card key={row.id} sx={{ borderRadius: 5, p: 3 }}>
                 <Stack direction="row" spacing={2} sx={{ alignContent: 'center', width: '100%' }}>

@@ -27,7 +27,7 @@ router.get('/estudiante/:id/timeline', async (req, res) => {
     const { id } = req.params;
     const logs : IActividadLog[] = await ActividadLog.find({ estudiante: id });
     if (logs) {
-      const timeline = _.map(logs, (log) => ({ x: 1, y: new Date(log.fecha) }));
+      const timeline = _.map(logs, (log) => ({ y: 1, x: new Date(log.fecha) }));
       res.json({ timeline });
     } else {
       res.json({ timeline: [] });
@@ -81,14 +81,16 @@ router.post('/log', async (req, res) => {
       tipo, actividad, unidad, steam, curso, quizFinal, duracion, fecha,
     });
     log.estudiante = estudiante;
-    log.save();
+    await log.save();
 
     if (tipo === 'individual' && estudiante) {
       estudiante.actividadesIndividuales[actividad] += 1;
+      estudiante.set({ actividadesIndividuales: estudiante.actividadesIndividuales });
     } else if (tipo === 'clase' && estudiante) {
       estudiante.actividadesClase[actividad] += 1;
+      estudiante.set({ actividadesClase: estudiante.actividadesClase });
     }
-    estudiante.save();
+    await estudiante.save();
 
     res.sendStatus(200);
   } catch (e) {
