@@ -183,11 +183,37 @@ const Models: {
   portal_window_frame: {
     model: require('./portales/portal_window_frame/portal_window_frame.vrx'),
     type: 'VRX',
-    resources: [
-      // require('./portales/portal_window_frame/portal_window_frame_diffuse.png'),
-      // require('./portales/portal_window_frame/portal_window_frame_normal.png'),
-      // require('./portales/portal_window_frame/portal_window_frame_specular.png'),
-    ],
+    resources: [],
+  },
+  grafica: {
+    model: require('./informatica2/grafica/gpu-solo.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  grafica_aux: {
+    model: require('./informatica2/grafica/gpu-aux.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  ssd: {
+    model: require('./informatica2/ssd/ssd-solo.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  ssd_aux: {
+    model: require('./informatica2/ssd/ssd-aux.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  teclado: {
+    model: require('./informatica2/teclado/teclado-solo.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  teclado_aux: {
+    model: require('./informatica2/teclado/teclado-aux.glb'),
+    type: 'GLB',
+    resources: [],
   },
 };
 

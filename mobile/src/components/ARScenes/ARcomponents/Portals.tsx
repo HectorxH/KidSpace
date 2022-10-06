@@ -12,16 +12,18 @@ import {IModelProps, TSelectedMaterial} from './utils';
 
 interface PortalsProps {
   models3d: IModels[];
-  modelProps: IModelProps[];
+  modelProps: IModelProps[][];
+  pageNumber: number;
   itemNumber: number;
   modelIndex: number;
   modelMaterial: string[];
-  transforms: [ITransform[], ReactStateSetter<ITransform[]>];
-  rotations: [number[], ReactStateSetter<number[]>];
   positions: Vec3[];
+  setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
+  transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
+  rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
-  setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
 }
 
 interface ITransform {
@@ -38,15 +40,17 @@ const Portals = (props: PortalsProps) => {
     <ViroPortalScene passable={true}>
       <ViroPortal
         position={positions[props.modelIndex]}
-        scale={transforms[props.itemNumber].scale}
-        rotation={transforms[props.itemNumber].rotation}>
+        scale={transforms[props.pageNumber][props.itemNumber].scale}
+        rotation={transforms[props.pageNumber][props.itemNumber].rotation}>
         <Objects3d
+          pageNumber={props.pageNumber}
           models3d={props.models3d}
           modelProps={props.modelProps}
           itemNumber={props.itemNumber}
           modelIndex={props.modelIndex}
           positions={props.positions}
           rotations={props.rotations}
+          useAlt={props.useAlt}
           transforms={[transforms, setTransforms]}
           materialSelectorToggle={props.materialSelectorToggle}
           setSelectedModelMaterials={props.setSelectedModelMaterials}
@@ -56,7 +60,9 @@ const Portals = (props: PortalsProps) => {
       </ViroPortal>
       <Viro360Image
         source={
-          Images.images360[props.modelProps[props.itemNumber].modelImage360]
+          Images.images360[
+            props.modelProps[props.pageNumber][props.itemNumber].modelImage360
+          ]
         }
       />
     </ViroPortalScene>

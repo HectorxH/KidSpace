@@ -3,35 +3,30 @@ import {View, StyleSheet, Image} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import Images from '../../../../assets/images/images';
 import {IDraggableItems} from '../../../../types/activity';
-import Layout from '../../../Utils/Layout';
 
 interface DraggableImageProps {
   item: IDraggableItems;
   itemNumber: number;
+  dragNumber: number;
 }
 
 const DraggableImage = (props: DraggableImageProps) => {
   return (
     <View style={styles.container}>
-      <Layout
-        position={props.item.position}
-        ObjectView={
-          <DraxView
-            style={styles.draggableImage}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            payload={props.itemNumber}
-            longPressDelay={10}>
-            <Image
-              style={styles.image}
-              resizeMode={'contain'}
-              source={Images.items[props.item.name]}
-            />
-            {/* <View style={styles.test} /> */}
-          </DraxView>
-        }
-      />
+      <DraxView
+        style={styles.draggableImage}
+        draggingStyle={styles.dragging}
+        dragReleasedStyle={styles.dragging}
+        hoverDraggingStyle={styles.hoverDragging}
+        payload={[props.dragNumber, props.itemNumber]}
+        longPressDelay={10}>
+        <Image
+          style={styles.image}
+          resizeMode={'contain'}
+          source={Images.items[props.item.name]}
+        />
+        {/* <View style={styles.test} /> */}
+      </DraxView>
     </View>
   );
 };

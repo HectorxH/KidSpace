@@ -151,6 +151,8 @@ export interface IModels {
     materialOrder: string[];
     materialChoices: string[][];
   };
+  alt?: string;
+  childrens?: IModels[];
 }
 
 export interface IAR {

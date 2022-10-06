@@ -1,11 +1,11 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {DraxView} from 'react-native-drax';
-import {IDraggable} from '../../../../types/activity';
-import {ReactStateSetter} from '../../../../types/others';
-import {RSize} from '../../../../utils/responsive';
+import {IDraggable} from '../../types/activity';
+import {ReactStateSetter} from '../../types/others';
+import {RSize} from '../../utils/responsive';
 
-interface ReceivingRectangleProps {
+interface ReceivingRectangleTextProps {
   pageNumber: number;
   dragNumber: number;
   itemNumber: number;
@@ -14,7 +14,7 @@ interface ReceivingRectangleProps {
   draggable: IDraggable;
 }
 
-const ReceivingRectangle = (props: ReceivingRectangleProps) => {
+const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
@@ -27,6 +27,7 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
 
   const dragStyle = [
     styles.receivingBase,
+    styles.receivingRectangleBase,
     answerRectangleStyles[
       pickedDragAnswers[pageNumber][dragNumber][itemNumber]
     ],
@@ -72,12 +73,11 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
           resetAnswer();
         }}
         onReceiveDragDrop={event => {
+          console.log('dragged', event.dragged.payload);
           checkAnswer(event.dragged.payload[1]);
         }}>
         <Text style={styles.textStyle}>
-          {draggable.receivingItems[itemNumber].name !== ''
-            ? draggable.receivingItems[itemNumber].value
-            : userDragAnswers[pageNumber][dragNumber][itemNumber]}
+          {userDragAnswers[pageNumber][dragNumber][itemNumber]}
         </Text>
       </DraxView>
     </View>
@@ -121,15 +121,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   },
   receivingRectangleWrong: {
-    borderColor: '#D22323',
-    borderWidth: 3,
-    backgroundColor: '#EA6A6A',
+    // borderColor: '#D22323',
+    borderWidth: 0,
+    backgroundColor: '#5C9DEC',
   },
   receivingRectangleRight: {
-    borderColor: '#2BAB1F',
-    borderWidth: 3,
-    backgroundColor: '#A1C96A',
+    // borderColor: '#2BAB1F',
+    borderWidth: 0,
+    backgroundColor: '#5C9DEC',
   },
 });
 
-export default ReceivingRectangle;
+export default ReceivingRectangleText;

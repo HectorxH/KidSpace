@@ -168,118 +168,100 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
 
   return (
     <View style={styles.container}>
-      <Layout
-        position={{
-          start: draggable.receivingItems[itemNumber].position.start,
-          end: [
-            draggable.receivingItems[itemNumber].position.end[0],
-            draggable.receivingItems[itemNumber].position.end[1] + flapH,
-          ],
+      <DraxView
+        style={styles.container}
+        receivingStyle={
+          draggable.receivingItems[itemNumber].name === '' &&
+          ((itemNumber > 0 && itemFlaps[itemNumber - 1][1]) || itemNumber === 0)
+            ? // receivingNames[pageNumber][dragNumber][itemNumber - 1] !== '' &&
+              styles.receivingHover
+            : []
+        }
+        onTouchStart={() => {
+          resetAnswer(itemNumber);
         }}
-        ObjectView={
-          <DraxView
-            style={styles.container}
-            receivingStyle={
-              draggable.receivingItems[itemNumber].name === '' &&
-              ((itemNumber > 0 && itemFlaps[itemNumber - 1][1]) ||
-                itemNumber === 0)
-                ? // receivingNames[pageNumber][dragNumber][itemNumber - 1] !== '' &&
-                  styles.receivingHover
-                : []
-            }
-            onTouchStart={() => {
-              resetAnswer(itemNumber);
-            }}
-            onReceiveDragDrop={event => {
-              checkAnswer(event.dragged.payload);
-            }}>
+        onReceiveDragDrop={event => {
+          checkAnswer(event.dragged.payload[1]);
+        }}>
+        <View style={styles.overlay}>
+          {/* code block  */}
+          <View style={styles.overlay}>
+            <Layout
+              position={blockPosition}
+              // position={props.item.position}
+              ObjectView={
+                <View style={styles.overlay}>
+                  <View
+                    style={[
+                      dragStyle,
+                      userDragAnswers[pageNumber][dragNumber][itemNumber] ===
+                        '' &&
+                        draggable.receivingItems[itemNumber].value === '' && {
+                          borderWidth: 0,
+                          borderRadius: RSize(0.02, 'h'),
+                        },
+                    ]}>
+                    <Text style={styles.textStyle}>
+                      {draggable.receivingItems[itemNumber].name !== ''
+                        ? draggable.receivingItems[itemNumber].value
+                        : userDragAnswers[pageNumber][dragNumber][itemNumber]}
+                    </Text>
+                  </View>
+                </View>
+              }
+            />
+          </View>
+
+          {/* top flap inicial  */}
+          {itemNumber === 0 && itemFlaps[itemNumber][0] && (
             <View style={styles.overlay}>
-              {/* code block  */}
+              <Layout
+                position={topFlapPosition}
+                ObjectView={
+                  <View
+                    style={[
+                      dragStyle,
+                      styles.flapStyle,
+                      {backgroundColor: '#F2F2F2'},
+                    ]}
+                  />
+                }
+              />
+            </View>
+          )}
+          {/* top flap  */}
+          {itemNumber > 0 &&
+            itemFlaps[itemNumber - 1][1] &&
+            itemFlaps[itemNumber][0] && (
               <View style={styles.overlay}>
                 <Layout
-                  position={blockPosition}
-                  // position={props.item.position}
+                  position={topFlapPosition}
                   ObjectView={
-                    <View style={styles.overlay}>
-                      <View
-                        style={[
-                          dragStyle,
-                          userDragAnswers[pageNumber][dragNumber][
-                            itemNumber
-                          ] === '' &&
-                            draggable.receivingItems[itemNumber].value ===
-                              '' && {
-                              borderWidth: 0,
-                              borderRadius: RSize(0.02, 'h'),
-                            },
-                        ]}>
-                        <Text style={styles.textStyle}>
-                          {draggable.receivingItems[itemNumber].name !== ''
-                            ? draggable.receivingItems[itemNumber].value
-                            : userDragAnswers[pageNumber][dragNumber][
-                                itemNumber
-                              ]}
-                        </Text>
-                      </View>
-                    </View>
+                    <View
+                      style={[
+                        dragStyle,
+                        styles.flapStyle,
+                        codeBlockStyles[
+                          receivingNames[pageNumber][dragNumber][itemNumber - 1]
+                        ],
+                      ]}
+                    />
                   }
                 />
               </View>
+            )}
 
-              {/* top flap inicial  */}
-              {itemNumber === 0 && itemFlaps[itemNumber][0] && (
-                <View style={styles.overlay}>
-                  <Layout
-                    position={topFlapPosition}
-                    ObjectView={
-                      <View
-                        style={[
-                          dragStyle,
-                          styles.flapStyle,
-                          {backgroundColor: '#F2F2F2'},
-                        ]}
-                      />
-                    }
-                  />
-                </View>
-              )}
-              {/* top flap  */}
-              {itemNumber > 0 &&
-                itemFlaps[itemNumber - 1][1] &&
-                itemFlaps[itemNumber][0] && (
-                  <View style={styles.overlay}>
-                    <Layout
-                      position={topFlapPosition}
-                      ObjectView={
-                        <View
-                          style={[
-                            dragStyle,
-                            styles.flapStyle,
-                            codeBlockStyles[
-                              receivingNames[pageNumber][dragNumber][
-                                itemNumber - 1
-                              ]
-                            ],
-                          ]}
-                        />
-                      }
-                    />
-                  </View>
-                )}
-
-              {/* bottom flap  */}
-              {itemFlaps[itemNumber][1] && (
-                <View style={styles.overlay}>
-                  <Layout
-                    position={bottomFlapPosition}
-                    ObjectView={<View style={[dragStyle, styles.flapStyle]} />}
-                  />
-                </View>
-              )}
+          {/* bottom flap  */}
+          {itemFlaps[itemNumber][1] && (
+            <View style={styles.overlay}>
+              <Layout
+                position={bottomFlapPosition}
+                ObjectView={<View style={[dragStyle, styles.flapStyle]} />}
+              />
             </View>
-          </DraxView>
-        }
-      />
+          )}
+        </View>
+      </DraxView>
     </View>
   );
 };

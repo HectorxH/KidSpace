@@ -16,10 +16,18 @@ const DraggableItem = (props: DraggableItemProps) => {
   return (
     <View style={styles.container}>
       {props.item.type === 'image' && (
-        <DraggableImage item={props.item} itemNumber={props.itemNumber} />
+        <DraggableImage
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
       )}
       {props.item.type === 'rectangle' && (
-        <DraggableRectangle item={props.item} itemNumber={props.itemNumber} />
+        <DraggableRectangle
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
       )}
       {props.item.type === 'codeBlock' && (
         <DraggableCodeBlock

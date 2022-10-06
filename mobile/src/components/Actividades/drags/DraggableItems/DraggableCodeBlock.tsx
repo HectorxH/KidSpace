@@ -61,74 +61,66 @@ const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
   };
   return (
     <View style={styles.container}>
-      <Layout
-        position={{
-          start: props.item.position.start,
-          end: [props.item.position.end[0], props.item.position.end[1] + flapH],
-        }}
-        ObjectView={
-          <DraxView
-            style={styles.dragContainer}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            payload={props.itemNumber}
-            longPressDelay={10}>
+      <DraxView
+        style={styles.dragContainer}
+        draggingStyle={styles.dragging}
+        dragReleasedStyle={styles.dragging}
+        hoverDraggingStyle={styles.hoverDragging}
+        payload={[props.dragNumber, props.itemNumber]}
+        longPressDelay={10}>
+        <View style={styles.overlay}>
+          {/* code block  */}
+          <View style={styles.overlay}>
+            <Layout
+              position={blockPosition}
+              // position={props.item.position}
+              ObjectView={
+                <View style={styles.overlay}>
+                  <View style={dragStyle}>
+                    <Text style={styles.textStyle}>{props.item.value}</Text>
+                  </View>
+                </View>
+              }
+            />
+          </View>
+
+          {/* top flap  */}
+          {props.item.top && (
             <View style={styles.overlay}>
-              {/* code block  */}
-              <View style={styles.overlay}>
-                <Layout
-                  position={blockPosition}
-                  // position={props.item.position}
-                  ObjectView={
-                    <View style={styles.overlay}>
-                      <View style={dragStyle}>
-                        <Text style={styles.textStyle}>{props.item.value}</Text>
-                      </View>
-                    </View>
-                  }
-                />
-              </View>
-
-              {/* top flap  */}
-              {props.item.top && (
-                <View style={styles.overlay}>
-                  <Layout
-                    position={topFlapPosition}
-                    ObjectView={
-                      <View
-                        style={[
-                          dragStyle,
-                          styles.flapStyle,
-                          {backgroundColor: '#F2F2F2'},
-                        ]}
-                      />
-                    }
+              <Layout
+                position={topFlapPosition}
+                ObjectView={
+                  <View
+                    style={[
+                      dragStyle,
+                      styles.flapStyle,
+                      {backgroundColor: '#F2F2F2'},
+                    ]}
                   />
-                </View>
-              )}
-
-              {/* bottom flap  */}
-              {props.item.bottom && (
-                <View style={styles.overlay}>
-                  <Layout
-                    position={bottomFlapPosition}
-                    ObjectView={
-                      <View
-                        style={[
-                          dragStyle,
-                          styles.flapStyle,
-                          // {elevation: 0.0001},
-                        ]}
-                      />
-                    }
-                  />
-                </View>
-              )}
+                }
+              />
             </View>
-          </DraxView>
-        }
-      />
+          )}
+
+          {/* bottom flap  */}
+          {props.item.bottom && (
+            <View style={styles.overlay}>
+              <Layout
+                position={bottomFlapPosition}
+                ObjectView={
+                  <View
+                    style={[
+                      dragStyle,
+                      styles.flapStyle,
+                      // {elevation: 0.0001},
+                    ]}
+                  />
+                }
+              />
+            </View>
+          )}
+        </View>
+      </DraxView>
     </View>
   );
 };

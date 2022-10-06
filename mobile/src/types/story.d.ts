@@ -1,4 +1,8 @@
 import {
+  IModelProps,
+  ITransform,
+} from '../components/ARScenes/ARcomponents/utils';
+import {
   Actividad,
   IActividadLog,
   IImageTracker,
@@ -40,14 +44,18 @@ export interface IViroAppParams {
   actividad: string;
   positions: Vec3[][];
   imageTrackers: IImageTracker[][];
+  modelMaterial: string[][];
+  modelProps: IModelProps[][];
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
+  transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
+  rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
+  updateMaterial: [boolean, ReactStateSetter<boolean>];
+  setActiveModelIndex: ReactStateSetter<number>;
   setSelectedModelMaterials: ReactStateSetter<{
     materialOrder: string[];
     materialChoices: string[][];
   }>;
-  modelMaterial: string[][];
-  setActiveModelIndex: ReactStateSetter<number>;
-  updateMaterial: [boolean, ReactStateSetter<boolean>];
 }
 
 export interface IInventarioParams {
@@ -58,8 +66,9 @@ export interface IInventarioParams {
   placedItems: [number[][], ReactStateSetter<number[][]>];
   nPlacedItems: [number[], ReactStateSetter<number[]>];
   setMaterialSelectorToggle: ReactStateSetter<number>;
-  visible: boolean[];
-  showInventory: boolean[];
+  hideInventory: boolean[];
+  toggleDefaultValue: boolean[];
+  toggleValues: number[][];
 }
 
 export interface IMaterialSelectorParams {

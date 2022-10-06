@@ -9,6 +9,8 @@ import AlternativasDropdown from './AlternativasDropdown';
 import TextInputAnswer from './TextInputAnswer';
 import Draggable from './Draggable';
 import {IStoryComponentParams} from '../../types/story';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {DraxProvider} from 'react-native-drax';
 
 interface StoryComponentProps {
   storyComponentParams: IStoryComponentParams;
@@ -67,74 +69,82 @@ const StoryComponent = (props: StoryComponentProps) => {
   }
   return (
     <View style={styles.container}>
-      {/* Personajes/Imagenes */}
-      <View style={styles.overlay}>
-        <Items
-          images={items}
-          specialTexture={
-            pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
-          }
-        />
-      </View>
-      {/* Cuadros de texto */}
-      <View style={styles.overlay}>
-        <TextBoxes boxes={textBoxes} />
-      </View>
-      {/* Textos */}
-      <View style={styles.overlay}>
-        <Texts texts={texts} />
-      </View>
-      {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}
-      <View style={styles.overlay}>
-        <Items
-          images={bubbles}
-          specialTexture={
-            pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
-          }
-        />
-      </View>
-      {/* Preguntas / Alternativas */}
-      <View style={styles.overlay}>
-        <Alternativas
-          questions={alternativas}
-          quiz={quiz}
-          userAnswers={userAnswers}
-          pickedAnswers={pickedAnswers}
-          userAnswersQuiz={userAnswersQuiz}
-          pickedAnswersQuiz={pickedAnswersQuiz}
-          pageNumber={pageNumber}
-        />
-      </View>
-      {/* Preguntas / Seleccion dropdown */}
-      <View style={styles.overlay}>
-        <AlternativasDropdown
-          questionsDropdown={alternativasDropdown}
-          userAnswersDropdown={userAnswersDropdown}
-          pickedAnswersDropdown={pickedAnswersDropdown}
-          pageNumber={pageNumber}
-        />
-      </View>
-      {/* Preguntas / InputField */}
-      <View style={styles.overlay}>
-        <TextInputAnswer
-          textFieldQuestions={inputFieldQuestions}
-          userInputAnswers={userInputAnswers}
-          pageNumber={pageNumber}
-        />
-      </View>
-      {/* Draggable */}
-      {typeof pagina.draggable !== 'undefined' && (
-        <View style={styles.overlay}>
-          <Draggable
-            pageNumber={pageNumber}
-            userDragAnswers={userDragAnswers}
-            pickedDragAnswers={pickedDragAnswers}
-            receivingNames={receivingNames}
-            receivingValues={receivingValues}
-            draggable={dragQuestions}
-          />
-        </View>
-      )}
+      <GestureHandlerRootView style={styles.container}>
+        <DraxProvider>
+          {/* Personajes/Imagenes */}
+          <View style={styles.overlay}>
+            <Items
+              images={items}
+              specialTexture={
+                pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
+              }
+            />
+          </View>
+          {/* Cuadros de texto */}
+          <View style={styles.overlay}>
+            <TextBoxes boxes={textBoxes} />
+          </View>
+          {/* Textos */}
+          <View style={styles.overlay}>
+            <Texts
+              pageNumber={pageNumber}
+              userDragAnswers={userDragAnswers}
+              pickedDragAnswers={pickedDragAnswers}
+              draggable={dragQuestions}
+              texts={texts}
+            />
+          </View>
+          {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}
+          <View style={styles.overlay}>
+            <Items
+              images={bubbles}
+              specialTexture={
+                pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
+              }
+            />
+          </View>
+          {/* Preguntas / Alternativas */}
+          <View style={styles.overlay}>
+            <Alternativas
+              questions={alternativas}
+              quiz={quiz}
+              userAnswers={userAnswers}
+              pickedAnswers={pickedAnswers}
+              userAnswersQuiz={userAnswersQuiz}
+              pickedAnswersQuiz={pickedAnswersQuiz}
+              pageNumber={pageNumber}
+            />
+          </View>
+          {/* Preguntas / Seleccion dropdown */}
+          <View style={styles.overlay}>
+            <AlternativasDropdown
+              questionsDropdown={alternativasDropdown}
+              userAnswersDropdown={userAnswersDropdown}
+              pickedAnswersDropdown={pickedAnswersDropdown}
+              pageNumber={pageNumber}
+            />
+          </View>
+          {/* Preguntas / InputField */}
+          <View style={styles.overlay}>
+            <TextInputAnswer
+              textFieldQuestions={inputFieldQuestions}
+              userInputAnswers={userInputAnswers}
+              pageNumber={pageNumber}
+            />
+          </View>
+          {/* Draggable */}
+          <View style={styles.overlay}>
+            <Draggable
+              pageNumber={pageNumber}
+              userDragAnswers={userDragAnswers}
+              pickedDragAnswers={pickedDragAnswers}
+              receivingNames={receivingNames}
+              receivingValues={receivingValues}
+              draggable={dragQuestions}
+            />
+          </View>
+        </DraxProvider>
+      </GestureHandlerRootView>
     </View>
   );
 };

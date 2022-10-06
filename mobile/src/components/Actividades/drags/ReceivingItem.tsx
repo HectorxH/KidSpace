@@ -24,10 +24,10 @@ const ReceivingItem = (props: ReceivingItemProps) => {
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   // console.log(draggable.receivingItems[itemNumber].type);
   return (
-    <View style={styles.overlay}>
+    <View style={styles.container}>
       {/* color circle  */}
       {draggable.receivingItems[itemNumber].type === 'colorCircle' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingColorCircle
             pageNumber={pageNumber}
             dragNumber={dragNumber}
@@ -41,7 +41,7 @@ const ReceivingItem = (props: ReceivingItemProps) => {
       )}
       {/* image  */}
       {draggable.receivingItems[itemNumber].type === 'image' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingImage
             pageNumber={pageNumber}
             dragNumber={dragNumber}
@@ -55,7 +55,7 @@ const ReceivingItem = (props: ReceivingItemProps) => {
 
       {/* rectangle  */}
       {draggable.receivingItems[itemNumber].type === 'rectangle' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingRectangle
             pageNumber={pageNumber}
             dragNumber={dragNumber}

@@ -19,6 +19,7 @@ const MaterialSelector = (props: MaterialSelectorProps) => {
     selectedPageOrder,
   } = props.materialSelectorParams;
   if (
+    models3d[pageNumber].length === 0 ||
     models3d[pageNumber].length < activeModelIndex ||
     typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
     materialSelectorToggle[0] === 0

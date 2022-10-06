@@ -300,6 +300,24 @@ const images: {
     portal_window_frame: {
       square: require('./icons/portal_window_frame/square.png'),
     },
+    grafica: {
+      square: require('./icons/grafica/grafica.png'),
+    },
+    grafica_aux: {
+      square: require('./icons/grafica/grafica.png'),
+    },
+    ssd: {
+      square: require('./icons/ssd/ssd.png'),
+    },
+    ssd_aux: {
+      square: require('./icons/ssd/ssd.png'),
+    },
+    teclado: {
+      square: require('./icons/teclado/teclado.png'),
+    },
+    teclado_aux: {
+      square: require('./icons/teclado/teclado.png'),
+    },
   },
 
   images360: {

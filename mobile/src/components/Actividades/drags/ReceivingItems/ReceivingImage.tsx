@@ -4,7 +4,6 @@ import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
 import {ReactStateSetter} from '../../../../types/others';
 import {RSize} from '../../../../utils/responsive';
-import Layout from '../../../Utils/Layout';
 import Images from '../../../../assets/images/images';
 
 interface ReceivingImageProps {
@@ -39,30 +38,23 @@ const ReceivingImage = (props: ReceivingImageProps) => {
 
   return (
     <View style={styles.container}>
-      <Layout
-        position={draggable.receivingItems[itemNumber].position}
-        ObjectView={
-          <DraxView
-            style={dragStyle}
-            receivingStyle={[styles.receivingBase, styles.receivingHover]}
-            onTouchStart={() => {
-              resetAnswer();
-            }}
-            onReceiveDragDrop={event => {
-              updateImage(event.dragged.payload);
-            }}>
-            <Image
-              style={styles.image}
-              resizeMode={'contain'}
-              source={
-                Images.items[
-                  receivingValues[pageNumber][dragNumber][itemNumber]
-                ]
-              }
-            />
-          </DraxView>
-        }
-      />
+      <DraxView
+        style={dragStyle}
+        receivingStyle={[styles.receivingBase, styles.receivingHover]}
+        onTouchStart={() => {
+          resetAnswer();
+        }}
+        onReceiveDragDrop={event => {
+          updateImage(event.dragged.payload[1]);
+        }}>
+        <Image
+          style={styles.image}
+          resizeMode={'contain'}
+          source={
+            Images.items[receivingValues[pageNumber][dragNumber][itemNumber]]
+          }
+        />
+      </DraxView>
     </View>
   );
 };

@@ -7,12 +7,10 @@ import {
   ViroMaterials,
   ViroNode,
 } from '@viro-community/react-viro';
-import Models from '../../assets/3d/models';
 import {IImageTracker} from '../../types/activity';
 import TargetTracker from './ARcomponents/TargetTracker';
 import Objects3d from './ARcomponents/Object3d';
 import Portals from './ARcomponents/Portals';
-import {IModelProps, ITransform} from './ARcomponents/utils';
 import {IViroAppParams} from '../../types/story';
 
 interface ARMainComponentProps {
@@ -24,6 +22,7 @@ interface ARMainComponentProps {
 }
 
 const ARMainComponent = (props: ARMainComponentProps) => {
+  const viroProps = props.sceneNavigator.viroAppProps.viroAppParams;
   const {
     pageNumber,
     models,
@@ -33,41 +32,16 @@ const ARMainComponent = (props: ARMainComponentProps) => {
     positions,
     setSelectedModelMaterials,
     modelMaterial,
-  } = props.sceneNavigator.viroAppProps.viroAppParams;
+    modelProps,
+    useAlt,
+  } = viroProps;
 
-  const [updateMaterial, setUpdateMaterial] =
-    props.sceneNavigator.viroAppProps.viroAppParams.updateMaterial;
+  const [updateMaterial, setUpdateMaterial] = viroProps.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
-    props.sceneNavigator.viroAppProps.viroAppParams.materialSelectorToggle;
-  // const modelProps = props.sceneNavigator.viroAppProps.modelProps;
-  // const [transforms, setTransforms] =
-  //   props.sceneNavigator.viroAppProps.transforms;
-  // const [rotations, setRotations] = props.sceneNavigator.viroAppProps.rotations;
-
+    viroProps.materialSelectorToggle;
+  const [transforms, setTransforms] = viroProps.transforms;
+  const [rotations, setRotations] = viroProps.rotations;
   const [, setTracking] = useState(false);
-  const [transforms, setTransforms] = useState<ITransform[]>(
-    models3d[pageNumber].map(item => ({
-      scale: item.scale,
-      rotation: item.rotation,
-      position: [0, 0, 0],
-    })),
-  );
-
-  const modelProps: IModelProps[] = models3d[pageNumber].map(item => ({
-    model: Models[item.model].model,
-    modelType: typeof item.type !== 'undefined' ? item.type : 'object',
-    modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
-    resources: Models[item.model].resources,
-    materials: Models[item.model].materials,
-    type: Models[item.model].type,
-    interactable:
-      typeof item.interactable !== 'undefined' ? item.interactable : [],
-    ARMaterials:
-      typeof item.ARMaterials !== 'undefined'
-        ? item.ARMaterials
-        : {materialOrder: [], materialChoices: []},
-  }));
-  const [rotations, setRotations] = useState<number[]>(modelProps.map(() => 0));
 
   function onInitialized(state: ViroTrackingStateConstants) {
     if (state === ViroTrackingStateConstants.TRACKING_NORMAL) {
@@ -100,14 +74,16 @@ const ARMainComponent = (props: ARMainComponentProps) => {
       )}
       {models[pageNumber].map((itemNumber: number, modelIndex: number) => {
         return (
-          <ViroNode key={actividad + '_3dobj_' + modelIndex.toString()}>
-            {modelProps[itemNumber].modelType === 'object' && (
+          <ViroNode key={actividad + '_3dobj_' + modelIndex}>
+            {modelProps[pageNumber][itemNumber].modelType === 'object' && (
               <Objects3d
+                pageNumber={pageNumber}
                 models3d={models3d[pageNumber]}
                 modelProps={modelProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
                 positions={positions[pageNumber]}
+                useAlt={useAlt}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[
@@ -119,13 +95,15 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 updateMaterial={[updateMaterial, setUpdateMaterial]}
               />
             )}
-            {modelProps[itemNumber].modelType === 'portal' && (
+            {modelProps[pageNumber][itemNumber].modelType === 'portal' && (
               <Portals
+                pageNumber={pageNumber}
                 models3d={models3d[pageNumber]}
                 modelProps={modelProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
                 positions={positions[pageNumber]}
+                useAlt={useAlt}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[

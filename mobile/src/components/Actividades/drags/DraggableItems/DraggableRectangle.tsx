@@ -3,30 +3,27 @@ import {View, StyleSheet, Text} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IDraggableItems} from '../../../../types/activity';
 import {RSize} from '../../../../utils/responsive';
-import Layout from '../../../Utils/Layout';
 
 interface DraggableRectangleProps {
   item: IDraggableItems;
+  dragNumber: number;
   itemNumber: number;
 }
 
 const DraggableRectangle = (props: DraggableRectangleProps) => {
   return (
     <View style={styles.container}>
-      <Layout
-        position={props.item.position}
-        ObjectView={
-          <DraxView
-            style={styles.draggableRectangle}
-            draggingStyle={styles.dragging}
-            dragReleasedStyle={styles.dragging}
-            hoverDraggingStyle={styles.hoverDragging}
-            payload={props.itemNumber}
-            longPressDelay={10}>
-            <Text style={styles.textStyle}>{props.item.value}</Text>
-          </DraxView>
-        }
-      />
+      <DraxView
+        style={styles.draggableRectangle}
+        draggingStyle={styles.dragging}
+        dragReleasedStyle={styles.dragging}
+        hoverDraggingStyle={styles.hoverDragging}
+        payload={[props.dragNumber, props.itemNumber]}
+        longPressDelay={10}>
+        <View style={styles.textContainer}>
+          <Text style={styles.textStyle}>{props.item.value}</Text>
+        </View>
+      </DraxView>
     </View>
   );
 };
@@ -50,9 +47,12 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     opacity: 1,
   },
-  textStyle: {
-    alignSelf: 'center',
+  textContainer: {
+    flex: 1,
+    flexDirection: 'column',
     justifyContent: 'center',
+  },
+  textStyle: {
     textAlign: 'center',
     fontSize: RSize(0.045, 'h'),
     textTransform: 'none',

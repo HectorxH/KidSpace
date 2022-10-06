@@ -61,6 +61,9 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               />
             </View>
           )}
+          <View style={styles.overlay}>
+            <StoryComponent storyComponentParams={storyComponentParams} />
+          </View>
           {useAR === true && (
             <View style={styles.overlay}>
               <Inventario
@@ -69,6 +72,9 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               />
             </View>
           )}
+          <View style={styles.overlay}>
+            <ToggleButton toggleButtonParams={toggleButtonParams} />
+          </View>
           {useAR === true && (
             <View style={styles.overlay}>
               <MaterialSelector
@@ -76,14 +82,6 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               />
             </View>
           )}
-        </View>
-        <View style={styles.overlay}>
-          <View style={styles.overlay}>
-            <StoryComponent storyComponentParams={storyComponentParams} />
-          </View>
-          <View style={styles.overlay}>
-            <ToggleButton toggleButtonParams={toggleButtonParams} />
-          </View>
         </View>
       </ImageBackground>
       <View style={styles.overlay}>

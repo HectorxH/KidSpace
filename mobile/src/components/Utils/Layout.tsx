@@ -35,7 +35,7 @@ const Layout = (props: {position: IPosition; ObjectView: any}) => {
     objectContainer: {
       flex: xf - xi,
       flexDirection: 'column',
-      // backgroundColor: 'red',
+      // backgroundColor: 'blue',
     },
   });
 
