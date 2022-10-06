@@ -35,7 +35,6 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   const [selectedItem, setSelectedItem] = useState(-1);
   const [modalVisible, setModalVisible] = useState(false);
   const [currentMonedas, setCurrentMonedas] = useState(previousCantMonedas);
-  const [faltanMonedas, setFaltanMonedas] = useState(false);
   const target = useRef(null);
   const parent = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -56,16 +55,10 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   }
 
   const handleComprarClick = async (costo: number) => {
-    costo = 8000;
     currentMonedas - costo >= 0 ? setModalVisible(true) : setVisible(true);
   };
 
   const handleSave = async (costo: number) => {
-    costo = 8000;
-    let oldCantMonedas = await AsyncStorage.getItem('@monedas');
-    if (oldCantMonedas === null) {
-      oldCantMonedas = '0';
-    }
     let newCantMonedas = currentMonedas - costo;
     await AsyncStorage.setItem('@monedas', newCantMonedas.toString());
     setModalVisible(false);
@@ -75,13 +68,17 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
     setCurrentMonedas(newCantMonedas);
   };
 
-  const selectCard = (id: number, costo: number) => {
-    costo = 8000;
+  const selectCard = (id: number) => {
     if (disponibles[numImages][id] === 1) {
       setSelectedItem(id);
-      currentMonedas - costo >= 0
-        ? setFaltanMonedas(false)
-        : setFaltanMonedas(true);
+    }
+  };
+
+  const setOpacity = (costo: number) => {
+    if (currentMonedas - costo <= 0) {
+      return 0.2;
+    } else {
+      return 1;
     }
   };
 
@@ -145,6 +142,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
             <View
               style={{
                 flexDirection: 'row',
+                justifyContent: 'space-between',
                 marginTop: RSize(0.01, 'w'),
                 marginLeft: RSize(0.01, 'h'),
                 marginBottom: RSize(0.005, 'w'),
@@ -152,9 +150,39 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               <Button
                 color="#EC87C0"
                 mode="contained"
-                onPress={() => navigation.goBack()}>
+                style={{height: RSize(0.045, 'w')}}
+                onPress={() =>
+                  navigation.navigate('Tienda', {
+                    setCantMonedas: route.params.setCantMonedas,
+                    cantMonedas: currentMonedas,
+                  })
+                }>
                 {back}
               </Button>
+              <Chip
+                style={{
+                  backgroundColor: '#ededed',
+                  margin: RSize(0.02, 'h'),
+                  justifyContent: 'center',
+                }}>
+                <Image
+                  style={{
+                    resizeMode: 'cover',
+                    height: RSize(0.05, 'h'),
+                    width: RSize(0.05, 'h'),
+                  }}
+                  source={images.moneda.uri}
+                />
+                <Text
+                  style={{
+                    fontFamily: 'Poppins-Bold',
+                    alignSelf: 'center',
+                    fontSize: RSize(0.04, 'h'),
+                    textAlign: 'center',
+                  }}>
+                  {currentMonedas}
+                </Text>
+              </Chip>
             </View>
             <ItemPreview
               selectedItem={selectedItem}
@@ -172,8 +200,8 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                   margin: RSize(0.01, 'h'),
                   alignSelf: 'center',
                   borderRadius: 10,
+                  opacity: setOpacity(200),
                 },
-                faltanMonedas ? {opacity: 0.2} : {opacity: 1},
               ]}
               onPress={() => handleComprarClick(200)}
               ref={target}>
@@ -238,7 +266,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                           : styles.opcionDisponible,
                       ]}
                       key={id}
-                      onPress={() => selectCard(id, 200)}>
+                      onPress={() => selectCard(id)}>
                       <Image
                         key={id}
                         style={styles.opcion}
