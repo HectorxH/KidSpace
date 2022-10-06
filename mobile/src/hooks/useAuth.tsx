@@ -4,7 +4,7 @@ import {IUser} from '../types/user';
 import {NavigationContext} from '@react-navigation/core';
 import Config from 'react-native-config';
 import _ from 'lodash';
-import request from 'superagent';
+import request, {ResponseError} from 'superagent';
 
 let instance = request.agent();
 
@@ -132,7 +132,13 @@ export const AuthProvider = ({children}: {children: any}) => {
       }
     } catch (e) {
       console.log(JSON.stringify(e));
-      await logout();
+      if ((e as ResponseError).status === 401) {
+        try {
+          await logout();
+        } catch (err) {
+          console.log(err);
+        }
+      }
     }
   };
 
