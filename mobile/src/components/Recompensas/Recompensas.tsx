@@ -83,25 +83,24 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
         _.remove(actividadesJson, {nombreActividad: nombreActividad});
         await AsyncStorage.setItem('@message', JSON.stringify(actividadesJson));
       });
-      if (actividadesLog.tipo === 'clase') {
-        try {
-          await instance
-            .post(`${Config.REACT_APP_BACKEND_URL}/Estadisticas/log`)
-            .send({
-              tipo: actividadesLog.tipo,
-              actividad: actividadesLog.actividad,
-              unidad: actividadesLog.unidad,
-              steam: actividadesLog.steam,
-              estudiante: actividadesLog.estudiante,
-              curso: actividadesLog.curso,
-              quizFinal: actividadesLog.quizFinal,
-              duracion: actividadesLog.duracion,
-              fecha: new Date(actividadesLog.fecha),
-            });
-        } catch (e) {
-          console.log(JSON.stringify(e));
-        }
+      try {
+        await instance
+          .post(`${Config.REACT_APP_BACKEND_URL}/Estadisticas/log`)
+          .send({
+            tipo: actividadesLog.tipo,
+            actividad: actividadesLog.actividad,
+            unidad: actividadesLog.unidad,
+            steam: actividadesLog.steam,
+            estudiante: actividadesLog.estudiante,
+            curso: actividadesLog.curso,
+            quizFinal: actividadesLog.quizFinal,
+            duracion: actividadesLog.duracion,
+            fecha: new Date(actividadesLog.fecha),
+          });
+      } catch (e) {
+        console.log(JSON.stringify(e));
       }
+
       navigation?.dispatch(
         CommonActions.reset({
           index: 0,
