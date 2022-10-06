@@ -302,7 +302,6 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#A0C96A"
               mode="contained"
-              disabled={true}
               icon={() => (
                 <Icon
                   name="store"
@@ -315,7 +314,12 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() =>
+                navigation.push('Tienda', {
+                  setCantMonedas: setCantMonedas,
+                  cantMonedas: cantMonedas,
+                })
+              }>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>

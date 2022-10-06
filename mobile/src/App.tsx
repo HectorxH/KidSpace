@@ -19,6 +19,8 @@ import Story from './components/library/Story';
 import Recompensas from './components/Recompensas/Recompensas';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
+import Tienda from './components/Tienda/Tienda';
+import TiendaItems from './components/Tienda/TiendaItems';
 import MainMap from './components/MainMap';
 import InicioView from './components/InicioView';
 import CargaView from './components/CargaView';
@@ -119,6 +121,16 @@ const App = () => {
           <Stack.Screen
             name="Qr"
             component={Qr}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Tienda"
+            component={Tienda}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="TiendaItems"
+            component={TiendaItems}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
