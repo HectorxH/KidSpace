@@ -67,4 +67,35 @@ router.get('/estudiante/:id/actividades', async (req, res) => {
   }
 });
 
+router.post('/log', async (req, res) => {
+  console.log('!!!!!!!');
+  try {
+    const user = req.user?._id;
+    const {
+      tipo, actividad, unidad, steam, curso, quizFinal, duracion, fecha,
+    } = req.body;
+
+    const estudiante = await Estudiante.findOne({ user });
+    if (!estudiante) throw Error('Tipo de cuenta invalida');
+
+    const log = new ActividadLog({
+      tipo, actividad, unidad, steam, curso, quizFinal, duracion, fecha,
+    });
+    log.estudiante = estudiante;
+    log.save();
+
+    if (tipo === 'individual' && estudiante) {
+      estudiante.actividadesIndividuales[actividad] += 1;
+    } else if (tipo === 'clase' && estudiante) {
+      estudiante.actividadesClase[actividad] += 1;
+    }
+    estudiante.save();
+
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 export default router;

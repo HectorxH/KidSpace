@@ -1,7 +1,5 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
-import axios from 'axios';
-import Config from 'react-native-config';
 import {View, Text, StyleSheet, Animated, Image} from 'react-native';
 import {CommonActions} from '@react-navigation/native';
 import {Button, Chip} from 'react-native-paper';
@@ -13,11 +11,15 @@ import LottieRecompensaBadge from '../../assets/recompensa/badge.json';
 import LottieConfetti from '../../assets/recompensa/confetti.json';
 import {RSize} from '../../utils/responsive';
 import _ from 'lodash';
+import {useAuth} from '../../hooks/useAuth';
+import Config from 'react-native-config';
 
 const Recompensas = ({navigation, route}: RecompensasProps) => {
   const cantMonedas = route.params.cantMonedas;
   const nombreActividad = route.params.nombreActividad;
   const actividadesLog = route.params.actLog;
+
+  const {instance} = useAuth();
 
   let animationBadge: any = React.createRef();
   let animationConfetti: any = React.createRef();
@@ -83,17 +85,19 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       });
       if (actividadesLog.tipo === 'clase') {
         try {
-          await axios.post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/log`, {
-            tipo: actividadesLog.tipo,
-            actividad: actividadesLog.actividad,
-            unidad: actividadesLog.unidad,
-            steam: actividadesLog.steam,
-            estudiante: actividadesLog.estudiante,
-            curso: actividadesLog.curso,
-            quizFinal: actividadesLog.quizFinal,
-            duracion: actividadesLog.duracion,
-            fecha: new Date(actividadesLog.fecha),
-          });
+          await instance
+            .post(`${Config.REACT_APP_BACKEND_URL}/Estadisticas/log`)
+            .send({
+              tipo: actividadesLog.tipo,
+              actividad: actividadesLog.actividad,
+              unidad: actividadesLog.unidad,
+              steam: actividadesLog.steam,
+              estudiante: actividadesLog.estudiante,
+              curso: actividadesLog.curso,
+              quizFinal: actividadesLog.quizFinal,
+              duracion: actividadesLog.duracion,
+              fecha: new Date(actividadesLog.fecha),
+            });
         } catch (e) {
           console.log(JSON.stringify(e));
         }

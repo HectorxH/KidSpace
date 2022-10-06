@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import express from 'express';
-import ActividadLog from '../models/ActividadLog';
 import Apoderado from '../models/Apoderado';
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -84,28 +83,6 @@ router.put('/:id/apoderados', async (req, res) => {
     const { id } = req.params;
     const { apoderadoId } = req.body;
     await Estudiante.findByIdAndUpdate(id, { $addToSet: { apoderados: apoderadoId } });
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/log', async (req, res) => {
-  try {
-    const {
-      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
-    } = req.body;
-    const log = new ActividadLog({
-      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
-    });
-    log.save();
-    const est = await Estudiante.findById(estudiante);
-    if (tipo === 'individual' && est) {
-      est.actividadesIndividuales[actividad] += 1;
-    } else if (tipo === 'clase' && est) {
-      est.actividadesClase[actividad] += 1;
-    }
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

@@ -28,7 +28,7 @@ export type RootStackParamList = {
   CargaView: undefined;
   ProfileView: {Info: IProfile};
   EditCharacter: undefined;
-  FormularioView: {data: IProfile};
+  FormularioView: {data: string};
   MainMap: undefined;
   Activity: {
     activity: IActivity;

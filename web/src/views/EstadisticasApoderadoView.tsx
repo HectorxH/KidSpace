@@ -111,8 +111,6 @@ const EstadisticasApoderadoView = () => {
       setHistorial(res.data.historial);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estudiante/${pupiloId}`);
       setPupilo(res.data.estudiante);
-      console.log(actividadesI);
-      console.log(actividadesC);
     } catch (e) {
       if (axios.isAxiosError(e) && e.response?.status === 401) {
         logout();
