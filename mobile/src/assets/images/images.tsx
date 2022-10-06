@@ -47,6 +47,10 @@ const images: {
     NatyHappy: require('./character/naty/naty-happy.png'),
     NatyQuestion: require('./character/naty/naty-question.png'),
 
+    AbelSmile: require('./character/abel/abel-smile.png'),
+    AbelHappy: require('./character/abel/abel-happy.png'),
+    AbelQuestion: require('./character/abel/abel-question.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
     fbk: require('./trackingTargets/fbk.jpg'),
@@ -210,6 +214,21 @@ const images: {
     informatica_1_25: require('./extras/informatica1/71.png'),
     informatica_1_26: require('./extras/informatica1/72.png'),
 
+    //informatica2
+    informatica_2_1: require('./extras/informatica2/19.png'),
+    informatica_2_2: require('./extras/informatica2/18.png'),
+    informatica_2_3: require('./extras/informatica2/17.png'),
+    informatica_2_4: require('./extras/informatica2/16.png'),
+    informatica_2_5: require('./extras/informatica2/56.png'),
+    informatica_2_6: require('./extras/informatica2/54.png'),
+    informatica_2_7: require('./extras/informatica2/53.png'),
+    informatica_2_8: require('./extras/informatica2/52.png'),
+    informatica_2_9: require('./extras/informatica2/51.png'),
+    informatica_2_10: require('./extras/informatica2/50.png'),
+    informatica_2_11: require('./extras/informatica2/49.png'),
+    informatica_2_12: require('./extras/informatica2/48.png'),
+    informatica_2_13: require('./extras/informatica2/47.png'),
+
     // bubbles
     flower: require('./bubbles/flower.png'),
     bouquet: require('./bubbles/bouquet.png'),
@@ -248,6 +267,7 @@ const images: {
     bg_diseño2: require('./background/bg_diseño2.png'),
     bg_materiales: require('./background/bg_materiales.png'),
     bg_informatica1: require('./background/bg_informatica1.png'),
+    bg_informatica2: require('./background/bg_informatica2.png'),
   },
 
   icons: {

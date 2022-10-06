@@ -1,6 +1,93 @@
 [
   {
-    "background": "",
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Abel se dedica al servicio técnico de los computadores.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las personas que se dedican a esta área deben saber cómo instalar distintos  programas,",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelSmile",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y además, cómo arreglar las partes físicas de un computador.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelSmile",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
     "textBoxes": [
       {
         "position": {
@@ -11,7 +98,7 @@
     ],
     "texts": [
       {
-        "text": "To do",
+        "text": "¿Conoces cómo funcionan los computadores?",
         "position": {
           "start": [1.5, 4.5],
           "end": [10.5, 15.5]
@@ -20,11 +107,1149 @@
     ],
     "items": [
       {
-        "name": "cry",
+        "name": "AbelHappy",
         "position": {
           "start": [11.5, 3],
-          "end": [17.5, 20]  
+          "end": [20, 40]  
         }
       }
     ]
-  }]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El computador es una máquina automática capaz de recibir  instrucciones. ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_1",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los computadoras se inventaron para realizar trabajos de manera fácil, organizada y rápida.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_1",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Un computador se forma por dos aspectos fundamentales:",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_1",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " el software y el hardware. ",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_2",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Aunque quizá no lo sepas, ya has utilizado mucho software.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "bubbleOk",
+        "position": {
+          "start": [0.5, 10.5],
+          "end": [5, 15]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por software entendemos un conjunto de instrucciones que le damos al computador.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_3",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos se agrupan en unidades, que se llaman programas y aplicaciones",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, Word, Excel y Powerpoint son software.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_4",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Sin software, nuestros computadores serían tan solo",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelQuestion",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "un conjunto de dispositivos físicos sin utilidad alguna.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelQuestion",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos dispositivos físicos se conocen como hardware.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El hardware de un computador es todas aquellas partes físicas que podemos ver y tocar.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Por ejemplo, monitor y parlantes son hardware externo.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_5",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Algunas partes de hardware son internos al computador,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelSmile",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " y otras son externas.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelSmile",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Las partes externas son aquellas con las cuales solemos interactuar para usar el computador.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [11.5, 3],
+          "end": [20, 40]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Existen muchos componentes externos del computador.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "items": [
+      {
+        "name": "informatica_2_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " ¿Cuál crees que es la función de un monitor?",
+        "position": {
+          "start": [9, 2.5],
+          "end": [18, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Muestra datos al usuario"],
+        "answers": [
+          {
+            "text": "Ejecuta programas",
+            "position": {
+              "start": [10.5, 9.5],
+              "end": [16.5, 11.5]
+            }
+          },
+          {
+            "text": "Permite escuchar el sonido",
+            "position": {
+              "start": [10.5, 12.5],
+              "end": [16.5, 14.5]
+            }
+          },
+          {
+            "text": "Muestra datos al usuario",
+            "position": {
+              "start": [10.5, 15.5],
+              "end": [16.5, 17.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Exacto! Un monitor sirve para visualizar la información.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_6",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "items": [
+      {
+        "name": "informatica_2_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuál de estas partes es externa al computador?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 11]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Mouse"],
+        "answers": [
+          {
+            "text": "Memoria RAM",
+            "position": {
+              "start": [3, 9.5],
+              "end": [10, 11.5]
+            }
+          },
+          {
+            "text": "Mouse",
+            "position": {
+              "start": [3, 12.5],
+              "end": [10, 14.5]
+            }
+          },
+          {
+            "text": "CPU",
+            "position": {
+              "start": [3, 15.5],
+              "end": [10, 17.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Así es, el mouse o el ratón es la parte externa del computador.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_8",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Somos nosotros que interactuamos constantemente con este.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_8",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En cambio, no tocamos la memoria RAM ni la CPU,",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_9",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " y estos permanecen dentro de nuestro computador.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_9",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pero, ¿qué son la RAM y la CPU?",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_9",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "CPU es un acrónimo de Unidad Central de Procesamiento.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_10",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "CPU es un hardware vital de tu computador. ",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelQuestion",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "CPU permite que tu computador interactúe con todas las aplicaciones y programas.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_10",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "RAM es un acrónimo de Memoria de Acceso Aleatorio. ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_11",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es el cerebro de nuestro computador, que almacena la información ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_11",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "que cada programa y aplicación utiliza mientras que  se ejecuta.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_11",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Otra componente interna de un computador es el ventilador.",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_12",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "items": [
+      {
+        "name": "informatica_2_12",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Para qué crees que sirve?",
+        "position": {
+          "start": [9, 2.5],
+          "end": [18, 10]
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Baja la temperatura del computador"],
+        "answers": [
+          {
+            "text": "Quita el polvo de la CPU",
+            "position": {
+              "start": [10.5, 9.5],
+              "end": [16.5, 11.5]
+            }
+          },
+          {
+            "text": "Baja la temperatura en tu pieza",
+            "position": {
+              "start": [10.5, 12.5],
+              "end": [16.5, 14.5]
+            }
+          },
+          {
+            "text": "Baja la temperatura del computador",
+            "position": {
+              "start": [10.5, 15.5],
+              "end": [16.5, 17.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Así es! Los ventiladores son muy importantes, ya que ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_13",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [11, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "el hardware de un computador tiende a calentarse hasta incluso 90C! ",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [10.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_13",
+        "position": {
+          "start": [20, 3],
+          "end": [40, 50]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [9.5, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Abel te propone estudiar distinto hardware en más detalle. ¡Manos a la obra!",
+        "position": {
+          "start": [9.5, 4.5],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelHappy",
+        "position": {
+          "start": [1, 1],
+          "end": [10, 20]  
+        }
+      }
+    ]
+  }
+]
