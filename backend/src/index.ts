@@ -176,8 +176,9 @@ app.post(
     try {
       const { tipo } = req.body;
       const user = await User.findOne({ username: req.body.username });
-      if (tipo === user?.tipo) { return res.json(user); }
-      throw Error('El usuario no existe');
+      if (!user) throw Error('El usuario no existe');
+      if (tipo === user.tipo) return res.json(user);
+      throw Error('Tipo de usuario invalido');
     } catch (e) {
       console.log(e);
       return res.sendStatus(500);
@@ -199,7 +200,7 @@ app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
-app.use('/Estadistivas', checkAuth, EstadisticasRouter);
+app.use('/Estadisticas', checkAuth, EstadisticasRouter);
 
 app.listen(port, () => {
   console.log(`App listening on http://localhost:${port}`);

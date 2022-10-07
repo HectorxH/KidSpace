@@ -13,9 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
-import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   NavLink, Link, useMatch, useNavigate,
@@ -24,7 +21,6 @@ import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { Menu, MenuItem } from '@mui/material';
 import axios from 'axios';
-import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 
 import logo from '../assets/logo.png';
@@ -34,7 +30,7 @@ interface DrawerProps {
   children : React.ReactNode
 }
 
-const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
+const ResponsiveDrawerApoderado = ({ drawerWidth, children } : DrawerProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
@@ -47,47 +43,9 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   const items = [
     {
       uid: 1,
-      text: 'Panel de control',
+      text: 'Página principal',
       icon: <HomeIcon />,
-      paths: ['/panel'],
-      restricted: true,
-      tipo: ['profesor'],
-      visible: true,
-    },
-    {
-      uid: 2,
-      text: 'Pupilo',
-      icon: <HomeIcon />,
-      paths: ['/pupilo'],
-      restricted: true,
-      tipo: ['apoderado'],
-      visible: true,
-    },
-    {
-      uid: 3,
-      text: 'Cursos que dicto',
-      icon: <HistoryEduIcon />,
-      paths: ['/cursos'],
-      restricted: true,
-      tipo: ['profesor'],
-      visible: true,
-    },
-    {
-      uid: 4,
-      text: 'Actividades',
-      icon: <MenuBookIcon />,
-      paths: ['/actividades'],
-      restricted: true,
-      tipo: ['profesor'],
-      visible: true,
-    },
-    {
-      uid: 5,
-      text: 'Estadisticas',
-      icon: <BarChartIcon />,
-      paths: ['/estadisticas'],
-      restricted: true,
-      tipo: ['profesor'],
+      path: '/',
       visible: true,
     },
   ];
@@ -116,21 +74,16 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({
-          uid, text, icon, paths, restricted, tipo, visible,
+          uid, text, icon, path, visible,
         }) => {
-          const active = _.some(_.map(paths, (path) => useMatch({ path: `${path}/*` }) !== null));
-          if (restricted && user && tipo && !tipo.includes(user.tipo)) {
-            return null;
-          }
+          const active = useMatch({ path: `${path}/*` }) !== null;
           if (active) seccionActual = text;
-          if (!visible) {
-            return null;
-          }
+          if (!visible) return '';
           return (
             <ListItem
               disablePadding
               component={NavLink}
-              to={paths[0]}
+              to={path}
               key={uid}
             >
               <ListItemButton
@@ -290,4 +243,4 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   );
 };
 
-export default ResponsiveDrawer;
+export default ResponsiveDrawerApoderado;

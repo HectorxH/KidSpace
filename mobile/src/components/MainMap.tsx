@@ -24,7 +24,6 @@ import {mapImages} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
 import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
-import axios from 'axios';
 import _ from 'lodash';
 
 const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
@@ -47,6 +46,9 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const userData = useAuth().user;
   const userCurso = useAuth().curso;
+  const instance = useAuth().instance;
+
+  console.log(userCurso);
 
   const loadNotification = () => {
     let visible = false;
@@ -78,6 +80,7 @@ const MainMap = ({navigation}: MainMapProps) => {
         navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
+
       const m = await AsyncStorage.getItem('@monedas');
       m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
       const c = await AsyncStorage.getItem('@completadas');
@@ -90,24 +93,29 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const loadMessage = async () => {
     try {
-      channel.bind('message', async function (data: {message: IActivity}) {
-        let jsonAllMessages = await AsyncStorage.getItem('@message');
-        //check if value previously stored
-        allMessages =
-          jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
-        allMessages.push(data.message);
-        allMessages = _.uniqWith(allMessages, _.isEqual);
-        jsonAllMessages = JSON.stringify(allMessages);
-        await AsyncStorage.setItem('@message', jsonAllMessages);
-        const m = await AsyncStorage.getItem('@message');
-        setMessage(JSON.parse(m!));
-        await AsyncStorage.setItem(
-          '@notification',
-          allMessages.length.toString(),
-        );
-        let n = await AsyncStorage.getItem('@notification');
-        setNotification(n!);
-      });
+      channel.bind(
+        'message',
+        async function (data: {message: IActivity; curso: String}) {
+          let jsonAllMessages = await AsyncStorage.getItem('@message');
+          //check if value previously stored
+          allMessages =
+            jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
+          if (data.curso === userCurso) {
+            allMessages.push(data.message);
+            allMessages = _.uniqWith(allMessages, _.isEqual);
+            jsonAllMessages = JSON.stringify(allMessages);
+            await AsyncStorage.setItem('@message', jsonAllMessages);
+            const m = await AsyncStorage.getItem('@message');
+            setMessage(JSON.parse(m!));
+            await AsyncStorage.setItem(
+              '@notification',
+              allMessages.length.toString(),
+            );
+            let n = await AsyncStorage.getItem('@notification');
+            setNotification(n!);
+          }
+        },
+      );
     } catch (e) {
       console.log('B');
       console.log(e);
@@ -126,6 +134,7 @@ const MainMap = ({navigation}: MainMapProps) => {
     loadMessage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
+
   // console.log(userData?.apellidos);
   console.log(user);
   const HandleAct = async () => {
@@ -169,7 +178,7 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const {logout} = useAuth();
   const testLogout = async () => {
-    await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
+    await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
     await logout();
     console.log('!!!');
     AsyncStorage.clear();

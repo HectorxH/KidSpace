@@ -1,4 +1,5 @@
 import { Schema, Types, model } from 'mongoose';
+import { defaultProgresoAI, defaultProgresoAC } from '../mock/DefaultActividades';
 import { IApoderado } from './Apoderado';
 import { IProfesor } from './Profesor';
 
@@ -9,7 +10,8 @@ export interface IEstudiante {
   apoderados: Types.Array<IApoderado>
   monedas: number
   personaje: number[]
-  actividades: {[key: string]: Boolean}
+  actividadesIndividuales: {[key: string]: number}
+  actividadesClase: {[key:string]: number}
   compras: number[][]
 }
 const lenghtLimit = (val: number[]) => val.length === 12;
@@ -29,7 +31,8 @@ export const estudianteSchema = new Schema<IEstudiante>({
   apoderados: [{ type: Types.ObjectId, ref: 'Apoderado', default: [] }],
   monedas: { type: Number, default: 0, min: 0 },
   personaje: { type: [Number], validate: [lenghtLimit, 'Lenght should be 12'], default: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
-  actividades: { type: Object, default: {} },
+  actividadesIndividuales: { type: Object, default: defaultProgresoAI },
+  actividadesClase: { type: Object, default: defaultProgresoAC },
   compras: { type: [[Number]], default: defaultCompras },
 });
 

@@ -11,12 +11,12 @@ interface IProtectedRouteProps {
   noApoderado?: boolean
 }
 
-const ProtectedRoute : React.FC<IProtectedRouteProps> = ({
+const ProtectedRoute = ({
   loggedin = false,
   loggedout = false,
   noProfesor = false,
   noApoderado = false,
-}) => {
+} : IProtectedRouteProps) => {
   const { user } = useAuth();
   const [lodaing, setLoading] = useState(true);
   const [allowed, setAllowed] = useState(true);

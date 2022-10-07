@@ -2,9 +2,13 @@ import React, {createContext, useContext, useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {IUser} from '../types/user';
 import {NavigationContext} from '@react-navigation/core';
-import axios from 'axios';
 import Config from 'react-native-config';
 import _ from 'lodash';
+import request, {ResponseError} from 'superagent';
+
+let instance = request.agent();
+
+type Agent = request.SuperAgentStatic & request.Request;
 
 interface IAuthContext {
   user: IUser | null;
@@ -12,6 +16,8 @@ interface IAuthContext {
   login: (data: IUser | null) => Promise<void>;
   logout: () => Promise<void>;
   refresh: () => Promise<void>;
+  deleteAccount: () => Promise<void>;
+  instance: Agent;
 }
 
 const AuthContext = createContext<IAuthContext>({
@@ -21,6 +27,8 @@ const AuthContext = createContext<IAuthContext>({
   login: async (data: IUser | null) => {},
   logout: async () => {},
   refresh: async () => {},
+  deleteAccount: async () => {},
+  instance: instance,
 });
 
 export const AuthProvider = ({children}: {children: any}) => {
@@ -30,28 +38,29 @@ export const AuthProvider = ({children}: {children: any}) => {
   const navigation = useContext(NavigationContext);
 
   const getUser = async () => {
-    console.log('Initial User:', user);
+    console.log('Current User:', user);
     if (!user) {
-      const u = await AsyncStorage.getItem('@user');
-      if (u) {
+      let u = await AsyncStorage.getItem('@user');
+      if (u && u !== 'null') {
+        console.log('Loading User:', u);
         setUser(JSON.parse(u));
       }
-      console.log('Loaded User:', user);
     }
   };
 
   const getCurso = async () => {
-    console.log('Initial Curso:', curso);
+    console.log('Current Curso:', curso);
     if (curso === '') {
       const c = await AsyncStorage.getItem('@curso');
       if (c) {
+        console.log('Loading Curso:', c);
         setCurso(c);
       }
-      console.log('Loaded Curso:', curso);
     }
   };
 
   useEffect(() => {
+    instance = request.agent();
     if (!user) {
       getUser();
     }
@@ -81,10 +90,21 @@ export const AuthProvider = ({children}: {children: any}) => {
   // call this function to sign out logged in user
   const logout = async () => {
     try {
+      await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
+    } catch (e) {
+      console.log(e);
+      console.log('Logout: already loged out');
+    }
+  };
+
+  const deleteAccount = async () => {
+    try {
+      await logout();
       await AsyncStorage.setItem('@user', JSON.stringify(null));
-      await AsyncStorage.setItem('@curso', JSON.stringify(''));
+      //await AsyncStorage.setItem('@curso', JSON.stringify('a'));
       setUser(null);
-      setCurso('');
+      //setCurso('');
+      console.log('Account deleted!');
       navigation?.navigate('InicioView');
     } catch (e) {
       console.log(e);
@@ -93,17 +113,15 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const refresh = async () => {
     try {
-      await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-    } catch (e) {
-      console.log('Refresh: already loged out');
-    }
-    try {
-      const res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
-        username: user?.username,
-        password: user?.password,
-        tipo: 'estudiante',
-      });
-      const {_id, nombres, apellidos, tipo} = res.data;
+      await logout();
+      const res = await instance
+        .post(`${Config.REACT_APP_BACKEND_URL}/login`)
+        .send({
+          username: user?.username,
+          password: user?.password,
+          tipo: 'estudiante',
+        });
+      const {_id, nombres, apellidos, tipo} = res.body;
       if (user) {
         const {username, password} = user;
         const newUser = {_id, username, password, nombres, apellidos, tipo};
@@ -111,12 +129,16 @@ export const AuthProvider = ({children}: {children: any}) => {
           console.log('Refresh: login as new user', newUser);
           await login(newUser);
         }
-      } else {
-        await logout();
       }
     } catch (e) {
       console.log(JSON.stringify(e));
-      await logout();
+      if ((e as ResponseError).status === 401) {
+        try {
+          await deleteAccount();
+        } catch (err) {
+          console.log(err);
+        }
+      }
     }
   };
 
@@ -130,7 +152,7 @@ export const AuthProvider = ({children}: {children: any}) => {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   //   [],
   // );
-  const value = {user, curso, login, logout, refresh};
+  const value = {user, curso, login, logout, refresh, deleteAccount, instance};
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 

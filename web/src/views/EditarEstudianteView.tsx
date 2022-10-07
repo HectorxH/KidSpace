@@ -107,8 +107,7 @@ const EditarEstudiante = () => {
   const deleteApoderados = async (_id: string) => {
     if (estudiante && apoderados) {
       try {
-        const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Apoderado/${_id}`);
-        console.log(res);
+        const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Apoderado/${_id}/${estudiante._id}`);
       } catch (e) {
         console.log(e);
       }

@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import express from 'express';
-import ActividadLog from '../models/ActividadLog';
 import Apoderado from '../models/Apoderado';
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -51,6 +50,12 @@ router.delete('/:id', async (req, res) => {
       for (const apoderadoId of estudiante.apoderados) {
         // eslint-disable-next-line no-await-in-loop
         await Apoderado.findByIdAndUpdate(apoderadoId, { $pull: { estudiantes: [id] } });
+        // eslint-disable-next-line no-await-in-loop
+        const apoderado = await Apoderado.findById(apoderadoId);
+        if (apoderado?.estudiantes.length === 0) {
+          // eslint-disable-next-line no-await-in-loop
+          await Apoderado.findByIdAndDelete(apoderadoId);
+        }
       }
     }
     await Estudiante.findByIdAndDelete(id);
@@ -79,21 +84,6 @@ router.put('/:id/apoderados', async (req, res) => {
     const { apoderadoId } = req.body;
     await Estudiante.findByIdAndUpdate(id, { $addToSet: { apoderados: apoderadoId } });
     res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/log', async (req, res) => {
-  try {
-    const {
-      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
-    } = req.body;
-    const log = new ActividadLog({
-      tipo, actividad, unidad, steam, estudiante, curso, quizFinal, duracion, fecha,
-    });
-    log.save();
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
