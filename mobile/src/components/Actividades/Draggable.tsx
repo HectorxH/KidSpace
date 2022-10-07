@@ -32,7 +32,7 @@ const Draggable = (props: DraggableProps) => {
           <View
             style={styles.overlay}
             key={
-              draggable.answer.reduce((x, y) => x + y) +
+              draggable.answer.reduce((x, y) => x + y, '') +
               dragNumber +
               draggable.type
             }>

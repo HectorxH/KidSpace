@@ -4,6 +4,7 @@ const videos: {
 } = {
   items: {
     test: require('./test.mp4'),
+    vidrio: require('./Vidrio.mp4'),
   },
 };
 

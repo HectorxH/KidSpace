@@ -34,6 +34,9 @@ const ARMainComponent = (props: ARMainComponentProps) => {
     modelMaterial,
     modelProps,
     useAlt,
+    markerTrackingState,
+    activeTracker,
+    activeTrackerIndex,
   } = viroProps;
 
   const [updateMaterial, setUpdateMaterial] = viroProps.updateMaterial;
@@ -67,7 +70,14 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 '_IT_' +
                 targetIndex.toString()
               }>
-              <TargetTracker imageTracker={imageTracker} />
+              <TargetTracker
+                imageTracker={imageTracker}
+                pageNumber={pageNumber}
+                trackerNumber={targetIndex}
+                activeTrackerIndex={activeTrackerIndex}
+                markerTrackingState={markerTrackingState}
+                activeTracker={activeTracker}
+              />
             </ViroNode>
           );
         },

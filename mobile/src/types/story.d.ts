@@ -56,6 +56,9 @@ export interface IViroAppParams {
     materialOrder: string[];
     materialChoices: string[][];
   }>;
+  markerTrackingState: [string[][], ReactStateSetter<string[][]>];
+  activeTracker: [string[], ReactStateSetter<string[]>];
+  activeTrackerIndex: [number[], ReactStateSetter<number[]>];
 }
 
 export interface IInventarioParams {
@@ -83,6 +86,14 @@ export interface IMaterialSelectorParams {
   activeModelIndex: number;
   models3d: IModels[][];
   selectedPageOrder: [number, ReactStateSetter<number>];
+}
+
+export interface IMarkerTrackerFeedbackParams {
+  pageNumber: number;
+  activeTrackerIndex: number[];
+  // imageTrackers: IImageTracker[][];
+  markerTrackingState: string[][];
+  activeTracker: string[];
 }
 
 export interface IStoryComponentParams {
@@ -152,6 +163,7 @@ export interface IActividadesComponentParams {
   storyComponentParams: IStoryComponentParams;
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;
+  markerTrackerFeedbackParams: IMarkerTrackerFeedbackParams;
 }
 
 // export type Vec3 = [number, number, number];

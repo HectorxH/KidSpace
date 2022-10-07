@@ -15,6 +15,7 @@ import ARMainComponent from '../ARScenes/ARMainComponent';
 import Inventario from '../inventario/inventario';
 import MaterialSelector from './MaterialSelector';
 import {IActividadesComponentParams} from '../../types/story';
+import MarkerTrackerFeedback from './MarkerTrackerFeedback';
 
 interface ActividadComponentProps {
   actividadesComponentParams: IActividadesComponentParams;
@@ -31,6 +32,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     storyComponentParams,
     toggleButtonParams,
     actNavigationParams,
+    markerTrackerFeedbackParams,
   } = props.actividadesComponentParams;
 
   const actividad = actividades[pageNumber];
@@ -79,6 +81,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
             <View style={styles.overlay}>
               <MaterialSelector
                 materialSelectorParams={materialSelectorParams}
+              />
+            </View>
+          )}
+          {useAR === true && (
+            <View style={styles.overlay}>
+              <MarkerTrackerFeedback
+                markerTrackerFeedbackParams={markerTrackerFeedbackParams}
               />
             </View>
           )}

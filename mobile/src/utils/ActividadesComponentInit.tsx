@@ -10,6 +10,7 @@ import {
   IActividadesParams,
   IActNavigationParams,
   IInventarioParams,
+  IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
   IToggleButtonParams,
@@ -142,6 +143,23 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     models3d.map(model3d => model3d.map(() => false)),
   );
 
+  // image tracking
+  const [markerTrackingState, setMarkerTrackingState] = useState<string[][]>(
+    actividades.map(actividadPage =>
+      typeof actividadPage.AR !== 'undefined' &&
+      typeof actividadPage.AR.imageTrackers !== 'undefined'
+        ? actividadPage.AR.imageTrackers.map(() => 'lastKnownPose')
+        : [],
+    ),
+  );
+
+  const [activeTracker, setActiveTracker] = useState<string[]>(
+    actividades.map(() => ''),
+  );
+  const [activeTrackerIndex, setActiveTrackerIndex] = useState<number[]>(
+    actividades.map(() => 0),
+  );
+
   const ViroAppParams: IViroAppParams = {
     pageNumber: pageNumber,
     models: [...models],
@@ -158,6 +176,9 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     modelMaterial: modelMaterial[0],
     setActiveModelIndex: setActiveModelIndex,
     updateMaterial: [updateMaterial, setUpdateMaterial],
+    markerTrackingState: [markerTrackingState, setMarkerTrackingState],
+    activeTracker: [activeTracker, setActiveTracker],
+    activeTrackerIndex: [activeTrackerIndex, setActiveTrackerIndex],
   };
 
   const InventarioParams: IInventarioParams = {
@@ -182,6 +203,13 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     activeModelIndex: activeModelIndex,
     models3d: models3d,
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
+  };
+
+  const MarkerTrackerFeedbackParams: IMarkerTrackerFeedbackParams = {
+    pageNumber: pageNumber,
+    activeTrackerIndex: activeTrackerIndex,
+    markerTrackingState: markerTrackingState,
+    activeTracker: activeTracker,
   };
 
   const StoryComponentParams: IStoryComponentParams = {
@@ -254,6 +282,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     storyComponentParams: StoryComponentParams,
     toggleButtonParams: ToggleButtonParams,
     actNavigationParams: ActNavigationParams,
+    markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
   };
 
   return actividadComponentParams;

@@ -352,6 +352,12 @@ const images: {
     fbk: require('./trackingTargets/fbk.jpg'),
     pipe1: require('./trackingTargets/pipe1.png'),
     pipe2: require('./trackingTargets/pipe2.png'),
+    harina: require('./trackingTargets/harina.png'),
+    hilo: require('./trackingTargets/hilo.png'),
+    mermelada: require('./trackingTargets/mermelada.png'),
+    papel: require('./trackingTargets/papel.png'),
+    plastico: require('./trackingTargets/plastico.png'),
+    vidrio: require('./trackingTargets/vidrio2.png'),
   },
 };
 
