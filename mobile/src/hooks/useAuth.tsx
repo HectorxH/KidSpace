@@ -119,6 +119,8 @@ export const AuthProvider = ({children}: {children: any}) => {
   const refresh = async () => {
     try {
       await logout();
+      instance = request.agent();
+      setInstance(instance);
       const res = await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/login`)
         .send({
@@ -126,8 +128,6 @@ export const AuthProvider = ({children}: {children: any}) => {
           password: user?.password,
           tipo: 'estudiante',
         });
-      instance = request.agent();
-      setInstance(instance);
       const {_id, nombres, apellidos, tipo} = res.body;
       if (user) {
         const {username, password} = user;
