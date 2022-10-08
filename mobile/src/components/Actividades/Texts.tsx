@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
   baseText: {
     textAlign: 'center',
     fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.06, 'h'),
+    fontSize: RSize(4, 'h') / RSize(0.07, 'w'),
     fontWeight: 'normal',
     elevation: 0,
   },
