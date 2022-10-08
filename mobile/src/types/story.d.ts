@@ -25,6 +25,8 @@ export interface IActividadesParams {
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   rightDragAnswers: string[][][];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
@@ -91,9 +93,11 @@ export interface IMaterialSelectorParams {
 export interface IMarkerTrackerFeedbackParams {
   pageNumber: number;
   activeTrackerIndex: number[];
-  // imageTrackers: IImageTracker[][];
   markerTrackingState: string[][];
   activeTracker: string[];
+  toggleDefaultValue: boolean[];
+  toggleValues: number[][];
+  trackerMessages: string[];
 }
 
 export interface IStoryComponentParams {
@@ -106,10 +110,12 @@ export interface IStoryComponentParams {
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: string[][];
