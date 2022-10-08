@@ -26,7 +26,8 @@ const InicioView = ({navigation}: InicioViewProps) => {
   };
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
+    // setTimeout(() => setLoading(false), 1000);
+    setLoading(false);
   }, []);
 
   useEffect(() => {

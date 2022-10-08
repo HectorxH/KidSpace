@@ -25,6 +25,7 @@ import Carreras from '../assets/stories/carreras.json';
 import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
 import _ from 'lodash';
+import CargaView from './CargaView';
 
 const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
   cluster: 'sa1',
@@ -43,6 +44,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [apellidos, setApellidos] = useState('');
   const [cantMonedas, setCantMonedas] = useState(0);
   const [completadas, setCompletadas] = useState<{[key: string]: number}>({});
+  const [loading, setLoading] = useState(true);
 
   const userData = useAuth().user;
   const userCurso = useAuth().curso;
@@ -81,11 +83,9 @@ const MainMap = ({navigation}: MainMapProps) => {
         navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
-      console.log('a');
       let res = await instance.get(
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/monedas`,
       );
-      console.log('b');
       const {monedas} = res.body;
 
       if (monedas !== null) {
@@ -107,6 +107,8 @@ const MainMap = ({navigation}: MainMapProps) => {
 
       // const c = await AsyncStorage.getItem('@completadas');
       // c != null ? setCompletadas(c) : setCompletadas('[]');
+
+      setLoading(false);
     } catch (e) {
       console.log(e);
     }
@@ -204,6 +206,10 @@ const MainMap = ({navigation}: MainMapProps) => {
   //   AsyncStorage.clear();
   //   navigation.navigate('InicioView');
   // };
+
+  if (loading) {
+    return <CargaView />;
+  }
   return (
     <View style={styles.topView}>
       <Modal
