@@ -25,10 +25,10 @@ import RNTooltips from 'react-native-tooltips';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
 
-delete accesoriesImages.i0;
+const {i0: _, ...newAccesoriesImages} = accesoriesImages;
 const disponibles: any = {
   9: Array(Object.keys(clothesImages).length).fill(1), //31
-  10: Array(Object.keys(accesoriesImages).length).fill(1), //39
+  10: Array(Object.keys(newAccesoriesImages).length).fill(1), //39
   11: Array(Object.keys(backgroundImages).length).fill(1),
 };
 
@@ -52,7 +52,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
       numImages = 11;
       break;
     case 'Accesorios':
-      tipoImages = accesoriesImages;
+      tipoImages = newAccesoriesImages;
       numImages = 10;
       break;
     case 'Ropa':
@@ -265,11 +265,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
           <FlatList
             style={styles.scrollView}
             persistentScrollbar={true}
-            data={
-              tipo === 'Accesorios'
-                ? Array(Object.keys(tipoImages).length).fill(1)
-                : Array(Object.keys(tipoImages).length).fill(1)
-            }
+            data={Array(Object.keys(tipoImages).length).fill(1)}
             numColumns={4}
             renderItem={({index}) => (
               <View key={index} style={styles.part}>
