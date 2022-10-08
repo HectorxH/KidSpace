@@ -35,6 +35,13 @@ interface ITableParams {
 const RankingTable = (
   { rows }: ITableParams,
 ) => {
+  rows.sort((a, b) => b.actividades - a.actividades);
+  // eslint-disable-next-line no-return-assign
+  rows.map((_, id) => (
+    // eslint-disable-next-line no-param-reassign
+    rows[id].lugar = id + 1
+  ));
+  console.log(rows);
   const { logout } = useAuth();
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {

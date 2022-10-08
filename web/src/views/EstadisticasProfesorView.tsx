@@ -4,9 +4,8 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Button,
   Card,
-  CardMedia, Stack, Theme, Typography, CardContent, Divider, CardHeader,
+  Stack, Theme, Typography,
 } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -106,25 +105,25 @@ const infoActividadIndividualTable = [
 const infoRankingTable = [
   {
     _id: '0',
-    lugar: 1,
+    lugar: 0,
     nombre: 'Skylar',
     actividades: 70,
   },
   {
     _id: '1',
-    lugar: 2,
+    lugar: 0,
     nombre: 'Cirrus',
     actividades: 30,
   },
   {
     _id: '2',
-    lugar: 4,
+    lugar: 0,
     nombre: 'Kai',
     actividades: 10,
   },
   {
     _id: '3',
-    lugar: 3,
+    lugar: 0,
     nombre: 'Soo',
     actividades: 20,
   },
