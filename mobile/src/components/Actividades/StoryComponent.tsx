@@ -29,9 +29,11 @@ const StoryComponent = (props: StoryComponentProps) => {
     pickedAnswersQuiz,
     userAnswersDropdown,
     pickedAnswersDropdown,
+    isDragItemPicked,
     userInputAnswers,
     userDragAnswers,
     pickedDragAnswers,
+    pickedDragAnswersIndex,
     receivingNames,
     receivingValues,
   } = props.storyComponentParams;
@@ -138,6 +140,8 @@ const StoryComponent = (props: StoryComponentProps) => {
               pageNumber={pageNumber}
               userDragAnswers={userDragAnswers}
               pickedDragAnswers={pickedDragAnswers}
+              isDragItemPicked={isDragItemPicked}
+              pickedDragAnswersIndex={pickedDragAnswersIndex}
               receivingNames={receivingNames}
               receivingValues={receivingValues}
               draggable={dragQuestions}

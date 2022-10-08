@@ -9,9 +9,22 @@ interface MarkerTrackerFeedbackProps {
 }
 
 const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
-  const {pageNumber, activeTrackerIndex, markerTrackingState, activeTracker} =
-    props.markerTrackerFeedbackParams;
+  const {
+    pageNumber,
+    activeTrackerIndex,
+    markerTrackingState,
+    activeTracker,
+    toggleDefaultValue,
+    toggleValues,
+    trackerMessages,
+  } = props.markerTrackerFeedbackParams;
   if (markerTrackingState[pageNumber].length === 0) {
+    return null;
+  }
+  if (
+    toggleDefaultValue[pageNumber] === true ||
+    toggleValues[pageNumber][0] === 1
+  ) {
     return null;
   }
   // 'lastKnownPose'
@@ -25,9 +38,7 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
           }}
           ObjectView={
             <View style={styles.headerContainer}>
-              <Text style={styles.baseText}>
-                ¡Encuentra el material hecho de Arena!
-              </Text>
+              <Text style={styles.baseText}>{trackerMessages[pageNumber]}</Text>
             </View>
           }
         />
@@ -43,7 +54,25 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
             ObjectView={
               <View style={styles.headerContainer}>
                 <Text style={styles.baseText}>
-                  {`Estas trackeando ${activeTracker[pageNumber]}`}
+                  {`Tarjeta detectada: ${activeTracker[pageNumber]}`}
+                </Text>
+              </View>
+            }
+          />
+        </View>
+      )}
+      {markerTrackingState[pageNumber][activeTrackerIndex[pageNumber]] !==
+        'tracking' && (
+        <View style={styles.overlay}>
+          <Layout
+            position={{
+              start: [1, 16.5],
+              end: [12, 19],
+            }}
+            ObjectView={
+              <View style={styles.headerContainer}>
+                <Text style={styles.baseText}>
+                  Apunta con la cámara a la tarjeta correcta
                 </Text>
               </View>
             }

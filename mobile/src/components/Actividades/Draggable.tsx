@@ -11,6 +11,8 @@ interface DraggableProps {
   pageNumber: number;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   draggable: IDraggable[] | never[];
@@ -61,6 +63,10 @@ const Draggable = (props: DraggableProps) => {
                             itemNumber={itemNumber}
                             userDragAnswers={props.userDragAnswers}
                             pickedDragAnswers={props.pickedDragAnswers}
+                            pickedDragAnswersIndex={
+                              props.pickedDragAnswersIndex
+                            }
+                            isDragItemPicked={props.isDragItemPicked}
                             receivingNames={props.receivingNames}
                             receivingValues={props.receivingValues}
                             setResultColor={setResultColor}
@@ -95,6 +101,7 @@ const Draggable = (props: DraggableProps) => {
                             pageNumber={props.pageNumber}
                             dragNumber={dragNumber}
                             itemNumber={itemNumber}
+                            isDragItemPicked={props.isDragItemPicked[0]}
                           />
                         }
                       />

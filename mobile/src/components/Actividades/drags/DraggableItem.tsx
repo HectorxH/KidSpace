@@ -10,9 +10,17 @@ interface DraggableItemProps {
   pageNumber: number;
   dragNumber: number;
   itemNumber: number;
+  isDragItemPicked: boolean[][][];
 }
 
 const DraggableItem = (props: DraggableItemProps) => {
+  if (
+    props.isDragItemPicked[props.pageNumber][props.dragNumber][
+      props.itemNumber
+    ] === true
+  ) {
+    return null;
+  }
   return (
     <View style={styles.container}>
       {props.item.type === 'image' && (

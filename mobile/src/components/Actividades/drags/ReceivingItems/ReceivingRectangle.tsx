@@ -33,12 +33,12 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
   ];
 
   function checkAnswer(payload: number) {
-    let newUserAnswers = [...userDragAnswers];
+    let newUserDragAnswers = [...userDragAnswers];
     let newPickedAnswers = [...pickedDragAnswers];
 
     const answer = draggable.draggableItems[payload].value;
-    newUserAnswers[pageNumber][dragNumber][itemNumber] =
-      draggable.draggableItems[payload].value;
+
+    newUserDragAnswers[pageNumber][dragNumber][itemNumber] = answer;
     newPickedAnswers[pageNumber][dragNumber][itemNumber] = 1;
 
     if (
@@ -48,7 +48,7 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
       newPickedAnswers[pageNumber][dragNumber][itemNumber] = 2;
     }
 
-    setUserDragAnswers(newUserAnswers);
+    setUserDragAnswers(newUserDragAnswers);
     setPickedDragAnswers(newPickedAnswers);
   }
 

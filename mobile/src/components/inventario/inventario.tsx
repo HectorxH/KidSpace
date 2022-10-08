@@ -125,7 +125,11 @@ const Inventario = (props: InventarioProps) => {
                     <Image
                       style={styles.iconImage}
                       resizeMode="contain"
-                      source={Images.icons[item.model].square}
+                      source={
+                        typeof item.icon !== 'undefined'
+                          ? Images.icons[item.icon].square
+                          : Images.icons[item.model].square
+                      }
                     />
                   </TouchableOpacity>
                 );

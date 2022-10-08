@@ -24,6 +24,8 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     cantMonedas,
     userDragAnswers,
     pickedDragAnswers,
+    pickedDragAnswersIndex,
+    isDragItemPicked,
     userInputAnswers,
     rightInputAnswer,
     userAnswers,
@@ -153,6 +155,13 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     ),
   );
 
+  const trackerMessages = actividades.map(actividadPage =>
+    typeof actividadPage.AR !== 'undefined' &&
+    typeof actividadPage.AR.trackerMessage !== 'undefined'
+      ? actividadPage.AR.trackerMessage
+      : '',
+  );
+
   const [activeTracker, setActiveTracker] = useState<string[]>(
     actividades.map(() => ''),
   );
@@ -210,6 +219,9 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     activeTrackerIndex: activeTrackerIndex,
     markerTrackingState: markerTrackingState,
     activeTracker: activeTracker,
+    toggleDefaultValue: toggleDefaultValue,
+    toggleValues: toggleValues,
+    trackerMessages: trackerMessages,
   };
 
   const StoryComponentParams: IStoryComponentParams = {
@@ -222,10 +234,12 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswers: pickedAnswers,
     userAnswersDropdown: userAnswersDropdown,
     pickedAnswersDropdown: pickedAnswersDropdown,
+    isDragItemPicked: isDragItemPicked,
     userDragAnswers: userDragAnswers,
     receivingNames: receivingNames,
     receivingValues: receivingValues,
     pickedDragAnswers: pickedDragAnswers,
+    pickedDragAnswersIndex: pickedDragAnswersIndex,
     userAnswersQuiz: userAnswersQuiz,
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],

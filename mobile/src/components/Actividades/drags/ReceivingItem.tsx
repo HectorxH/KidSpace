@@ -14,6 +14,8 @@ interface ReceivingItemProps {
   itemNumber: number;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   setResultColor: ReactStateSetter<string>;
@@ -49,6 +51,9 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             receivingValues={props.receivingValues}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
           />
         </View>
       )}
