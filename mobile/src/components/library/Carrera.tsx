@@ -14,15 +14,34 @@ import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPe
 import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
+const nombreActividades = {
+  diagramas: 'Diagramas',
+  materiales: 'Materiales',
+  diseños: 'Diseños',
+  diseño1: 'Teoría de colores',
+  diseño2: 'Diseño gráfico en nuestro alrededor',
+  nurtricion1: 'Interpretando etiquetas de los alimentos',
+  nutricion2: 'Analizando nuestra dieta',
+  informatica1: 'Informática y algoritmos en nuestra vida',
+  informatica2: '¿Qué es un computador?',
+  astronomia1: 'Tierra, Luna y Sol',
+  astronomia2: '¿Qué vemos en el cielo nocturno?',
+};
+
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera, curso, userName, userLastName, completadas} = route.params;
+  console.log('a');
+  console.log(carrera);
+  console.log('a');
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
     try {
-      console.log('completadas:', completadas);
-      console.log('actividad:', nombre);
-      if (completadas[nombre] && completadas[nombre] > 0) {
+      if (
+        completadas[nombreActividades[nombre]] &&
+        completadas[nombreActividades[nombre]] > 0
+      ) {
+        console.log('dorada');
         return 'estrelladorada';
       }
       return 'estrellagris';

@@ -1,8 +1,8 @@
 import {Actividad} from '../../types/activity';
 const activities: {[key: string]: Actividad} = {
   debug: require('./debug.json'),
-  diagramas: require('./debug.json'),
-  // diagramas: require('./diagramas.json'),
+  //diagramas: require('./debug.json'),
+  diagramas: require('./diagramas.json'),
   materiales: require('./materiales.json'),
   diseños: require('./diseños.json'),
   diseño1: require('./diseño1.json'),
