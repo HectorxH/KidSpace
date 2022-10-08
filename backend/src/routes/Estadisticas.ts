@@ -84,13 +84,14 @@ router.post('/log', async (req, res) => {
     await log.save();
 
     if (tipo === 'individual' && estudiante) {
-      estudiante.actividadesIndividuales[actividad] += 1;
-      estudiante.set({ actividadesIndividuales: estudiante.actividadesIndividuales });
+      await Estudiante.findByIdAndUpdate(estudiante._id, {
+        [`actividadesIndividuales.${actividad}`]: estudiante.actividadesIndividuales[actividad] + 1,
+      });
     } else if (tipo === 'clase' && estudiante) {
-      estudiante.actividadesClase[actividad] += 1;
-      estudiante.set({ actividadesClase: estudiante.actividadesClase });
+      await Estudiante.findByIdAndUpdate(estudiante._id, {
+        [`actividadesClase.${actividad}`]: estudiante.actividadesClase[actividad] + 1,
+      });
     }
-    await estudiante.save();
 
     res.sendStatus(200);
   } catch (e) {

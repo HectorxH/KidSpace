@@ -81,8 +81,18 @@ const MainMap = ({navigation}: MainMapProps) => {
       }
       setNotification(allMessages.length.toString());
 
-      const m = await AsyncStorage.getItem('@monedas');
-      m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/monedas`,
+      );
+      const {monedas} = res.body;
+
+      if (monedas !== null) {
+        setCantMonedas(monedas);
+      }
+
+      // const m = await AsyncStorage.getItem('@monedas');
+      // m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
+
       const c = await AsyncStorage.getItem('@completadas');
       c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
@@ -176,14 +186,14 @@ const MainMap = ({navigation}: MainMapProps) => {
   //   ).start();
   // };
 
-  const {logout} = useAuth();
-  const testLogout = async () => {
-    await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-    await logout();
-    console.log('!!!');
-    AsyncStorage.clear();
-    navigation.navigate('InicioView');
-  };
+  // const {logout} = useAuth();
+  // const testLogout = async () => {
+  //   await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
+  //   await logout();
+  //   console.log('!!!');
+  //   AsyncStorage.clear();
+  //   navigation.navigate('InicioView');
+  // };
   return (
     <View style={styles.topView}>
       <Modal

@@ -101,9 +101,12 @@ export const AuthProvider = ({children}: {children: any}) => {
     try {
       await logout();
       await AsyncStorage.setItem('@user', JSON.stringify(null));
-      //await AsyncStorage.setItem('@curso', JSON.stringify('a'));
+      await AsyncStorage.setItem('@message', JSON.stringify(null));
+      await AsyncStorage.setItem('@completadas', JSON.stringify(null));
+      await AsyncStorage.setItem('@notification', JSON.stringify(null));
+      await AsyncStorage.setItem('@curso', JSON.stringify(null));
       setUser(null);
-      //setCurso('');
+      setCurso('');
       console.log('Account deleted!');
       navigation?.navigate('InicioView');
     } catch (e) {
@@ -134,6 +137,7 @@ export const AuthProvider = ({children}: {children: any}) => {
       console.log(JSON.stringify(e));
       if ((e as ResponseError).status === 401) {
         try {
+          console.log('delete account: refresh');
           await deleteAccount();
         } catch (err) {
           console.log(err);

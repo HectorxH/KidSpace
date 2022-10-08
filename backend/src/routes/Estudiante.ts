@@ -7,6 +7,95 @@ import User from '../models/User';
 
 const router = express.Router();
 
+router.get('/monedas', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const estudiante = await Estudiante.findOne({ user });
+    res.json({ monedas: estudiante?.monedas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/addMonedas', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const { cantMonedas } = req.body;
+    const estudiante = await Estudiante.findOne({ user });
+    if (estudiante) {
+      estudiante.monedas += cantMonedas;
+      await estudiante.save();
+      res.sendStatus(200);
+    } else {
+      throw Error();
+    }
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/personaje', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const estudiante = await Estudiante.findOne({ user });
+    res.json({ personaje: estudiante?.personaje });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/personaje', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const { personaje } = req.body;
+    await Estudiante.findOneAndUpdate({ user }, { personaje });
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/compras', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const estudiante = await Estudiante.findOne({ user });
+    res.json({ compras: estudiante?.compras });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/compras', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const { compras } = req.body;
+    await Estudiante.findOneAndUpdate({ user }, { compras });
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/actividades', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const estudiante = await Estudiante.findOne({ user });
+    res.json({
+      actividadesIndividuales: estudiante?.actividadesIndividuales,
+      actividadesClases: estudiante?.actividadesClase,
+    });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -83,75 +172,6 @@ router.put('/:id/apoderados', async (req, res) => {
     const { id } = req.params;
     const { apoderadoId } = req.body;
     await Estudiante.findByIdAndUpdate(id, { $addToSet: { apoderados: apoderadoId } });
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.get('/:id/monedas', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const estudiante = await Estudiante.findById(id);
-    res.json(estudiante?.monedas);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id/monedas', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { monedas } = req.body;
-    await Estudiante.findByIdAndUpdate(id, { monedas });
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.get('/:id/personaje', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const estudiante = await Estudiante.findById(id);
-    res.json(estudiante?.personaje);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id/personaje', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { personaje } = req.body;
-    await Estudiante.findByIdAndUpdate(id, { personaje });
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id/compras', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const estudiante = await Estudiante.findById(id);
-    res.json(estudiante?.personaje);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id/compras', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { compras } = req.body;
-    await Estudiante.findByIdAndUpdate(id, { compras });
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

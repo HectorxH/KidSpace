@@ -54,14 +54,23 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
   const handleEndRecompensa = async () => {
     if (!loadingButton) {
       loadingButton = true;
-      let oldCantMonedas = await AsyncStorage.getItem('@monedas');
-      if (oldCantMonedas === null) {
-        oldCantMonedas = '0';
+
+      try {
+        await instance
+          .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/addMonedas`)
+          .send({cantMonedas});
+      } catch (e) {
+        console.log(JSON.stringify(e));
+        console.log('No fue posible a añadir monedas');
       }
-      await AsyncStorage.setItem(
-        '@monedas',
-        (parseInt(oldCantMonedas, 10) + cantMonedas).toString(),
-      );
+      // let oldCantMonedas = await AsyncStorage.getItem('@monedas');
+      // if (oldCantMonedas === null) {
+      //   oldCantMonedas = '0';
+      // }
+      // await AsyncStorage.setItem(
+      //   '@monedas',
+      //   (parseInt(oldCantMonedas, 10) + cantMonedas).toString(),
+      // );
 
       let oldCompletadas = await AsyncStorage.getItem('@completadas');
       if (oldCompletadas === null) {

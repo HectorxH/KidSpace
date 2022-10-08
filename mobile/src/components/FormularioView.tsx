@@ -26,6 +26,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
 
   const handleEnviar = async () => {
     try {
+      await deleteAccount();
       let res = await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/register`)
         .send({
@@ -51,7 +52,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
       await AsyncStorage.setItem('@curso', cursoId);
     } catch (error) {
       console.log(JSON.stringify(error));
-      if ((error as ResponseError).status === 401) {
+      if ((error as ResponseError).status === 403) {
         try {
           await deleteAccount();
         } catch (e) {

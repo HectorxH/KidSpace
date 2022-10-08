@@ -12,7 +12,7 @@ import {
 import {images} from '../../assets/imgs/handler/images';
 import {Button, Card, Chip, Text} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 import {imagesTienda} from '../../assets/tienda/handler/imagesTienda';
 import {backgroundImages} from '../../assets/perfil/12background/handler/backgroundImages';
 import {accesoriesImages} from '../../assets/perfil/11accesories/handler/accesoriesImages';
@@ -22,6 +22,8 @@ import {RSize} from '../../utils/responsive';
 import ItemPreview from './ItemPreview';
 // @ts-ignore
 import RNTooltips from 'react-native-tooltips';
+import {useAuth} from '../../hooks/useAuth';
+import Config from 'react-native-config';
 
 delete accesoriesImages.i0;
 const disponibles: any = {
@@ -39,6 +41,9 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   const target = useRef(null);
   const parent = useRef(null);
   const [visible, setVisible] = useState(false);
+
+  const {instance} = useAuth();
+
   let tipoImages = backgroundImages;
   let numImages = 0;
   switch (tipo) {
@@ -61,7 +66,15 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
 
   const handleSave = async (costo: number) => {
     let newCantMonedas = currentMonedas - costo;
-    await AsyncStorage.setItem('@monedas', newCantMonedas.toString());
+    try {
+      await instance
+        .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/addMonedas`)
+        .send({cantMonedas: -costo});
+    } catch (e) {
+      console.log(JSON.stringify(e));
+      console.log('No fue posible a restar monedas');
+    }
+    // await AsyncStorage.setItem('@monedas', newCantMonedas.toString());
     setModalVisible(false);
     disponibles[numImages][selectedItem] = 0;
     setSelectedItem(-1);
@@ -258,7 +271,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 : Array(Object.keys(tipoImages).length).fill(1)
             }
             numColumns={4}
-            renderItem={({item, index}) => (
+            renderItem={({index}) => (
               <View key={index} style={styles.part}>
                 <Card
                   style={[
