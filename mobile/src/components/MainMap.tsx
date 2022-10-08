@@ -47,8 +47,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   const userData = useAuth().user;
   const userCurso = useAuth().curso;
   const instance = useAuth().instance;
-
-  console.log(userCurso);
+  const {refresh} = useAuth();
 
   const loadNotification = () => {
     let visible = false;
@@ -68,6 +67,8 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const initialLoader = async () => {
     try {
+      await refresh();
+      console.log(userCurso);
       let jsonAllMessages = await AsyncStorage.getItem('@message');
       //check if value previously stored
       allMessages = jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
@@ -80,10 +81,11 @@ const MainMap = ({navigation}: MainMapProps) => {
         navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
-
+      console.log('a');
       let res = await instance.get(
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/monedas`,
       );
+      console.log('b');
       const {monedas} = res.body;
 
       if (monedas !== null) {
@@ -106,7 +108,6 @@ const MainMap = ({navigation}: MainMapProps) => {
       // const c = await AsyncStorage.getItem('@completadas');
       // c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
-      console.log('A');
       console.log(e);
     }
   };
@@ -156,7 +157,6 @@ const MainMap = ({navigation}: MainMapProps) => {
   }, [userData]);
 
   // console.log(userData?.apellidos);
-  console.log(user);
   const HandleAct = async () => {
     try {
       //const jsonMessages = await AsyncStorage.getItem('@message');
