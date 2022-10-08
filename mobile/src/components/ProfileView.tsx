@@ -1,22 +1,53 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
+import Config from 'react-native-config';
 import {Button, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../assets/imgs/handler/images';
 import {medallasImages} from '../assets/medallas/handler/medallasImages';
+import {useAuth} from '../hooks/useAuth';
 import {ProfileProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import Character from './library/Character';
 
-const medallas = [1, 0, 1, 0, 1, 1, 1, 1];
+// const medallas = [1, 0, 1, 0, 1, 1, 1, 1];
+const medallas = [
+  'Informática y algoritmos en nuestra vida',
+  '¿Qué es un computador?',
+  'Tierra, Luna y Sol',
+  '¿Qué vemos en el cielo nocturno?',
+  'Interpretando etiquetas de los alimentos',
+  'Analizando nuestra dieta',
+  'Teoría de colores',
+  'Diseño gráfico en nuestro alrededor',
+];
 
 const ProfileView = ({navigation, route}: ProfileProps) => {
-  const {Info} = route.params;
-  const data = {
-    curso: 'Lost in the cloud',
+  const {Info, completadas} = route.params;
+  const [cursoNombre, setCursoNombre] = useState('');
+
+  const {instance, curso} = useAuth();
+
+  const getCurso = async () => {
+    try {
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Curso/${curso}`,
+      );
+      setCursoNombre(res.body.curso.nombre);
+    } catch (e) {
+      console.log('Error al cargar el curso');
+      console.log(JSON.stringify(e));
+    }
   };
+
+  useEffect(() => {
+    if (cursoNombre === '') {
+      getCurso();
+    }
+  });
+
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  console.log(Object.keys(medallas));
+  console.log(medallas);
   return (
     <View style={styles.container}>
       <View style={{flex: 1.5 / 4, flexDirection: 'column'}}>
@@ -46,7 +77,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
             {Info.nombres} {Info.apellidos}
           </Text>
           <Chip style={styles.chip}>
-            <Text style={styles.textChip}>Curso: {data.curso}</Text>
+            <Text style={styles.textChip}>Curso: {cursoNombre}</Text>
           </Chip>
           <Chip style={styles.chip}>
             <Image style={styles.icon} source={images.moneda.uri} />
@@ -87,9 +118,9 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
               key={id}
               style={[
                 styles.viewMedalla,
-                medallas[id] !== 1
-                  ? styles.medallaColor
-                  : styles.medallaColorGanada,
+                completadas[medalla] > 0
+                  ? styles.medallaColorGanada
+                  : styles.medallaColor,
               ]}
               source={medallasImages[`i${id}`].uri}
             />

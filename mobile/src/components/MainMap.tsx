@@ -323,6 +323,7 @@ const MainMap = ({navigation}: MainMapProps) => {
                     apellidos: apellidos,
                     monedas: cantMonedas,
                   },
+                  completadas,
                 })
               }>
               <Text style={styles.subtitle}>Perfil</Text>

@@ -26,7 +26,10 @@ export type RootStackParamList = {
   InicioView: undefined;
   ErrorView: undefined;
   CargaView: undefined;
-  ProfileView: {Info: IProfile};
+  ProfileView: {
+    Info: IProfile;
+    completadas: ActividadesCompletadas;
+  };
   EditCharacter: undefined;
   FormularioView: {data: string};
   MainMap: undefined;
