@@ -72,20 +72,20 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       //   (parseInt(oldCantMonedas, 10) + cantMonedas).toString(),
       // );
 
-      let oldCompletadas = await AsyncStorage.getItem('@completadas');
-      if (oldCompletadas === null) {
-        oldCompletadas = '[]';
-      }
-      oldCompletadas = JSON.parse(oldCompletadas);
-      // chequeamos que la actividad no este marcada como completada de antes
-      if (!oldCompletadas!.includes(nombreActividad)) {
-        const newCompletadas = [...oldCompletadas!, nombreActividad];
-        console.log(newCompletadas);
-        await AsyncStorage.setItem(
-          '@completadas',
-          JSON.stringify(newCompletadas),
-        );
-      }
+      // let oldCompletadas = await AsyncStorage.getItem('@completadas');
+      // if (oldCompletadas === null) {
+      //   oldCompletadas = '[]';
+      // }
+      // oldCompletadas = JSON.parse(oldCompletadas);
+      // // chequeamos que la actividad no este marcada como completada de antes
+      // if (!oldCompletadas!.includes(nombreActividad)) {
+      //   const newCompletadas = [...oldCompletadas!, nombreActividad];
+      //   console.log(newCompletadas);
+      //   await AsyncStorage.setItem(
+      //     '@completadas',
+      //     JSON.stringify(newCompletadas),
+      //   );
+      // }
       await AsyncStorage.getItem('@message', async (_err, actividades) => {
         let actividadesJson =
           actividades != null ? JSON.parse(actividades) : [];

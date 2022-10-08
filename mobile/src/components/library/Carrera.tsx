@@ -15,14 +15,14 @@ import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Carrera = ({navigation, route}: CarreraProps) => {
-  const {carrera, curso, userName, userLastName} = route.params;
-  const oldCompletadas = route.params.completadas;
+  const {carrera, curso, userName, userLastName, completadas} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
     try {
-      console.log(oldCompletadas);
-      if (JSON.parse(oldCompletadas).includes(nombre)) {
+      console.log('completadas:', completadas);
+      console.log('actividad:', nombre);
+      if (completadas[nombre] && completadas[nombre] > 0) {
         return 'estrelladorada';
       }
       return 'estrellagris';

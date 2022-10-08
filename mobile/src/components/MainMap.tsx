@@ -42,7 +42,7 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [user, setUser] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [cantMonedas, setCantMonedas] = useState(0);
-  const [completadas, setCompletadas] = useState('[]');
+  const [completadas, setCompletadas] = useState<{[key: string]: number}>({});
 
   const userData = useAuth().user;
   const userCurso = useAuth().curso;
@@ -81,7 +81,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       }
       setNotification(allMessages.length.toString());
 
-      const res = await instance.get(
+      let res = await instance.get(
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/monedas`,
       );
       const {monedas} = res.body;
@@ -93,8 +93,18 @@ const MainMap = ({navigation}: MainMapProps) => {
       // const m = await AsyncStorage.getItem('@monedas');
       // m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
 
-      const c = await AsyncStorage.getItem('@completadas');
-      c != null ? setCompletadas(c) : setCompletadas('[]');
+      res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/actividades`,
+      );
+      const {actividadesIndividuales, actividadesClase} = res.body;
+
+      if (actividadesClase && actividadesIndividuales) {
+        const actividades = {...actividadesClase, ...actividadesIndividuales};
+        setCompletadas(actividades);
+      }
+
+      // const c = await AsyncStorage.getItem('@completadas');
+      // c != null ? setCompletadas(c) : setCompletadas('[]');
     } catch (e) {
       console.log('A');
       console.log(e);

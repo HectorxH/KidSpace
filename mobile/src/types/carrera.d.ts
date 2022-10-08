@@ -1,8 +1,9 @@
+import {ActividadesCompletadas} from './activity';
 import {actividadNombre} from './navigation';
 
 export interface ICarrera {
   id: Int16Array;
-  completadas: string;
+  completadas: ActividadesCompletadas;
   img: string;
   title: string;
   desc: string;

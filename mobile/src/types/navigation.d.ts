@@ -1,5 +1,5 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IActividadLog, IActivity} from './activity';
+import {ActividadesCompletadas, IActividadLog, IActivity} from './activity';
 import {ICarrera, IInfo} from './carrera';
 import {IProfile} from './profile';
 
@@ -38,7 +38,7 @@ export type RootStackParamList = {
   };
   Carrera: {
     carrera: ICarrera;
-    completadas: string;
+    completadas: ActividadesCompletadas;
     curso: string;
     userName: string;
     userLastName: string;

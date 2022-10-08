@@ -274,4 +274,6 @@ export interface IActivityPage {
   draggable?: IDraggable[] | never[];
 }
 
+type ActividadesCompletadas = {[key: string]: number};
+
 export type Actividad = IActivityPage[];

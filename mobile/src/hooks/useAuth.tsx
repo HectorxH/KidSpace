@@ -34,6 +34,7 @@ const AuthContext = createContext<IAuthContext>({
 export const AuthProvider = ({children}: {children: any}) => {
   const [user, setUser] = useState<IUser | null>(null);
   const [curso, setCurso] = useState<string>('');
+  const [inst, setInstance] = useState<Agent>(instance);
 
   const navigation = useContext(NavigationContext);
 
@@ -61,6 +62,8 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   useEffect(() => {
     instance = request.agent();
+    setInstance(inst);
+    setInstance(instance);
     if (!user) {
       getUser();
     }
@@ -102,7 +105,6 @@ export const AuthProvider = ({children}: {children: any}) => {
       await logout();
       await AsyncStorage.setItem('@user', JSON.stringify(null));
       await AsyncStorage.setItem('@message', JSON.stringify(null));
-      await AsyncStorage.setItem('@completadas', JSON.stringify(null));
       await AsyncStorage.setItem('@notification', JSON.stringify(null));
       await AsyncStorage.setItem('@curso', JSON.stringify(null));
       setUser(null);
@@ -124,6 +126,8 @@ export const AuthProvider = ({children}: {children: any}) => {
           password: user?.password,
           tipo: 'estudiante',
         });
+      instance = request.agent();
+      setInstance(instance);
       const {_id, nombres, apellidos, tipo} = res.body;
       if (user) {
         const {username, password} = user;

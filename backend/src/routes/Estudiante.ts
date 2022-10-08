@@ -88,7 +88,7 @@ router.get('/actividades', async (req, res) => {
     const estudiante = await Estudiante.findOne({ user });
     res.json({
       actividadesIndividuales: estudiante?.actividadesIndividuales,
-      actividadesClases: estudiante?.actividadesClase,
+      actividadesClase: estudiante?.actividadesClase,
     });
   } catch (e) {
     console.log(e);
