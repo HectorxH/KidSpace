@@ -12,9 +12,11 @@ import ReceivingRectangleText from './drags/ReceivingItems/ReceivingRectangleTex
 interface TextsProps {
   pageNumber: number;
   texts: ITexts[] | never[];
+  draggable: IDraggable[];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  draggable: IDraggable[];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
 }
 
 const Texts = ({
@@ -23,28 +25,39 @@ const Texts = ({
   userDragAnswers,
   pickedDragAnswers,
   draggable,
+  pickedDragAnswersIndex,
+  isDragItemPicked,
 }: TextsProps) => {
   if (texts.length === 0) {
     return null;
   }
   const dragRectangleT = (idx: number, w: string, k: string) => {
+    console.log('receiving box id:', idx);
     return (
       <View style={styles.receivingRectangleStyle} key={idx + w + k}>
         <ReceivingRectangleText
           pageNumber={pageNumber}
           dragNumber={0}
           itemNumber={idx}
+          draggable={draggable[0]}
           userDragAnswers={userDragAnswers}
           pickedDragAnswers={pickedDragAnswers}
-          draggable={draggable[0]}
+          pickedDragAnswersIndex={pickedDragAnswersIndex}
+          isDragItemPicked={isDragItemPicked}
         />
       </View>
     );
   };
   const iconCheck = (idx: number, w: string, k: string) => {
+    console.log('icon check idx:', idx);
     return (
-      <View style={styles.iconContainer} key={idx + w + k}>
-        <Icon name={'check'} size={RSize(0.05, 'h')} color={'green'} />
+      <View style={styles.iconContainer} key={idx + w + k + '_'}>
+        {pickedDragAnswers[0][pageNumber][0][idx] === 2 && (
+          <Icon name={'check'} size={RSize(0.05, 'h')} color={'green'} />
+        )}
+        {pickedDragAnswers[0][pageNumber][0][idx] === 1 && (
+          <Icon name={'check'} size={RSize(0.05, 'h')} color={'red'} />
+        )}
       </View>
     );
   };
@@ -59,25 +72,33 @@ const Texts = ({
   const format = (text: string, auxKey: string) => {
     let newText: (string | JSX.Element)[] = [text];
     for (let i = 0; i < keywords.length; i++) {
+      let componentIdx = -1;
       newText = _.flattenDeep<string | JSX.Element>(
-        newText.map(t =>
-          typeof t === 'string'
+        newText.map(function (t) {
+          return typeof t === 'string'
             ? t
                 .split(`{{${keywords[i]}}}`)
-                .map((sentence, sentenceIndex) =>
-                  sentenceIndex < t.split(`{{${keywords[i]}}}`).length - 1
+                .map(function (sentence, sentenceIndex) {
+                  if (
+                    sentenceIndex <
+                    t.split(`{{${keywords[i]}}}`).length - 1
+                  ) {
+                    componentIdx = componentIdx + 1;
+                  }
+                  return sentenceIndex <
+                    t.split(`{{${keywords[i]}}}`).length - 1
                     ? [
                         sentence,
                         components[keywords[i]](
-                          sentenceIndex,
-                          sentence + auxKey,
+                          componentIdx,
+                          sentence + auxKey + t,
                           keywords[i],
                         ),
                       ]
-                    : [sentence],
-                )
-            : t,
-        ),
+                    : [sentence];
+                })
+            : t;
+        }),
       );
     }
     return newText;

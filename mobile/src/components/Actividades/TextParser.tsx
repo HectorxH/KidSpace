@@ -12,26 +12,28 @@ const dragRectangleT = (idx: number, w: string, k: string) => {
         pageNumber={pageNumber}
         dragNumber={0}
         itemNumber={idx}
+        draggable={draggable[0]}
         userDragAnswers={userDragAnswers}
         pickedDragAnswers={pickedDragAnswers}
-        draggable={draggable[0]}
+        pickedDragAnswersIndex={pickedDragAnswersIndex}
+        isDragItemPicked={isDragItemPicked}
       />
     </View>
   );
 };
 const iconCheck = (idx: number, w: string, k: string) => {
   return (
-    <View style={styles.receivingRectangleStyle} key={idx + w + k}>
+    <View style={styles.iconContainer} key={idx + w + k}>
       <Icon name={'check'} size={RSize(0.05, 'h')} color={'green'} />
     </View>
   );
 };
-const keywords = ['dragRectangle', 'iconCheck'];
+const keywords = ['dragRectangle', 'iconDragCheck'];
 const components: {
   [key: string]: (idx: number, w: string, k: string) => JSX.Element;
 } = {
   dragRectangle: dragRectangleT,
-  iconCheck: iconCheck,
+  iconDragCheck: iconCheck,
 };
 
 export const format = (text: string, auxKey: string) => {
@@ -41,7 +43,7 @@ export const format = (text: string, auxKey: string) => {
       newText.map(t =>
         typeof t === 'string'
           ? t
-              .split(`{${keywords[i]}}`)
+              .split(`{{${keywords[i]}}}`)
               .map((sentence, sentenceIndex) =>
                 sentenceIndex < t.split(`{{${keywords[i]}}}`).length - 1
                   ? [

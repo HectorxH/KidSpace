@@ -94,6 +94,8 @@ const StoryComponent = (props: StoryComponentProps) => {
               pickedDragAnswers={pickedDragAnswers}
               draggable={dragQuestions}
               texts={texts}
+              pickedDragAnswersIndex={pickedDragAnswersIndex}
+              isDragItemPicked={isDragItemPicked}
             />
           </View>
           {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}

@@ -24,7 +24,7 @@
         }
       },
       {
-        "text": "Durante la inspección *técnica*, se *realizó un* cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento de datos. La segunda pieza fue {{dragRectangle}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}}, para mejorar el procesamiento de los gráficos.",
+        "text": "Durante la inspección *técnica*, se *realizó un* cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento *de datos*. La segunda pieza fue {{dragRectangle}} {{iconDragCheck}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}} {{iconDragCheck}}, para mejorar el procesamiento de los gráficos.",
         "position": {
           "start": [5.5, 7.1],
           "end": [19, 18.5]
@@ -37,7 +37,7 @@
     "draggable": [
       {
         "type": "order",
-        "answer": [],
+        "answer": ["SSD", "Teclado", "GPU"],
         "draggableItems": [
           {
             "type": "rectangle",
@@ -67,7 +67,35 @@
             }
           }
         ],
-        "receivingItems": []
+        "receivingItems": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          }
+        ]
       }
     ],
     "jumpButton": [

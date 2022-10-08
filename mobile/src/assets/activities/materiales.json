@@ -1406,8 +1406,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
-          "end": [19, 16]
+          "start": [9, 2],
+          "end": [19, 14]
         }
       }
     ],
@@ -1415,7 +1415,7 @@
       {
         "text": "¿Cuántas personas crees que son necesarias para elaborar un celular?",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [9.5, 2.5],
           "end": [18.5, 10]
         }
       }

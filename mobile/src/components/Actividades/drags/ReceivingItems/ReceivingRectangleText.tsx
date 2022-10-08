@@ -9,15 +9,20 @@ interface ReceivingRectangleTextProps {
   pageNumber: number;
   dragNumber: number;
   itemNumber: number;
+  draggable: IDraggable;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
-  draggable: IDraggable;
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
 }
 
 const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
+  const [pickedDragAnswersIndex, setPickedDragAnswersIndex] =
+    props.pickedDragAnswersIndex;
+  const [isDragItemPicked, setIsDragItemPicked] = props.isDragItemPicked;
 
   const answerRectangleStyles = [
     styles.receivingRectangleBase,
@@ -34,13 +39,20 @@ const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
   ];
 
   function checkAnswer(payload: number) {
+    resetAnswer();
     let newUserAnswers = [...userDragAnswers];
     let newPickedAnswers = [...pickedDragAnswers];
+    let newPickedAnswersIndex = [...pickedDragAnswersIndex];
+    let newIsDragItemPicked = [...isDragItemPicked];
 
     const answer = draggable.draggableItems[payload].value;
     newUserAnswers[pageNumber][dragNumber][itemNumber] =
       draggable.draggableItems[payload].value;
     newPickedAnswers[pageNumber][dragNumber][itemNumber] = 1;
+
+    // Valores para cambiar visualización del drag item que llegó a este bloque
+    newPickedAnswersIndex[pageNumber][dragNumber][itemNumber] = payload;
+    newIsDragItemPicked[pageNumber][dragNumber][payload] = true;
 
     if (
       draggable.answer.includes(answer) &&
@@ -51,17 +63,30 @@ const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
 
     setUserDragAnswers(newUserAnswers);
     setPickedDragAnswers(newPickedAnswers);
+    setPickedDragAnswersIndex(newPickedAnswersIndex);
+    setIsDragItemPicked(newIsDragItemPicked);
   }
 
   function resetAnswer() {
     let newUserAnswers = [...userDragAnswers];
     let newPickedAnswers = [...pickedDragAnswers];
+    let newIsDragItemPicked = [...isDragItemPicked];
+    let newPickedAnswersIndex = [...pickedDragAnswersIndex];
+    let dragItemIndex =
+      newPickedAnswersIndex[pageNumber][dragNumber][itemNumber];
 
     newUserAnswers[pageNumber][dragNumber][itemNumber] = '';
     newPickedAnswers[pageNumber][dragNumber][itemNumber] = 0;
 
+    if (dragItemIndex !== -1) {
+      newIsDragItemPicked[pageNumber][dragNumber][dragItemIndex] = false;
+      newPickedAnswersIndex[pageNumber][dragNumber][itemNumber] = -1;
+    }
+
     setUserDragAnswers(newUserAnswers);
     setPickedDragAnswers(newPickedAnswers);
+    setPickedDragAnswersIndex(newPickedAnswersIndex);
+    setIsDragItemPicked(newIsDragItemPicked);
   }
 
   return (

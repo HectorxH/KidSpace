@@ -41,73 +41,75 @@ const Draggable = (props: DraggableProps) => {
             <View style={styles.overlay}>
               {/* Targets del drag */}
               <View style={styles.overlay}>
-                {draggable.receivingItems.map((item, itemNumber) => {
-                  return (
-                    <View
-                      style={styles.overlay}
-                      key={item.value + dragNumber + item.name + itemNumber}>
-                      <Layout
-                        position={{
-                          start: item.position.start,
-                          end: [
-                            item.position.end[0],
-                            item.type === 'codeBlock'
-                              ? item.position.end[1] + flapH
-                              : item.position.end[1],
-                          ],
-                        }}
-                        ObjectView={
-                          <ReceivingItem
-                            dragNumber={dragNumber}
-                            pageNumber={props.pageNumber}
-                            itemNumber={itemNumber}
-                            userDragAnswers={props.userDragAnswers}
-                            pickedDragAnswers={props.pickedDragAnswers}
-                            pickedDragAnswersIndex={
-                              props.pickedDragAnswersIndex
-                            }
-                            isDragItemPicked={props.isDragItemPicked}
-                            receivingNames={props.receivingNames}
-                            receivingValues={props.receivingValues}
-                            setResultColor={setResultColor}
-                            draggable={draggable}
-                          />
-                        }
-                      />
-                    </View>
-                  );
-                })}
+                {typeof draggable.receivingItems !== 'undefined' &&
+                  draggable.receivingItems.map((item, itemNumber) => {
+                    return (
+                      <View
+                        style={styles.overlay}
+                        key={item.value + dragNumber + item.name + itemNumber}>
+                        <Layout
+                          position={{
+                            start: item.position.start,
+                            end: [
+                              item.position.end[0],
+                              item.type === 'codeBlock'
+                                ? item.position.end[1] + flapH
+                                : item.position.end[1],
+                            ],
+                          }}
+                          ObjectView={
+                            <ReceivingItem
+                              dragNumber={dragNumber}
+                              pageNumber={props.pageNumber}
+                              itemNumber={itemNumber}
+                              userDragAnswers={props.userDragAnswers}
+                              pickedDragAnswers={props.pickedDragAnswers}
+                              pickedDragAnswersIndex={
+                                props.pickedDragAnswersIndex
+                              }
+                              isDragItemPicked={props.isDragItemPicked}
+                              receivingNames={props.receivingNames}
+                              receivingValues={props.receivingValues}
+                              setResultColor={setResultColor}
+                              draggable={draggable}
+                            />
+                          }
+                        />
+                      </View>
+                    );
+                  })}
               </View>
               {/* Cosas que drageo hacia los target */}
               <View style={styles.overlay}>
-                {draggable.draggableItems.map((item, itemNumber) => {
-                  return (
-                    <View
-                      style={styles.overlay}
-                      key={item.value + dragNumber + item.name + itemNumber}>
-                      <Layout
-                        position={{
-                          start: item.position.start,
-                          end: [
-                            item.position.end[0],
-                            item.type === 'codeBlock'
-                              ? item.position.end[1] + flapH
-                              : item.position.end[1],
-                          ],
-                        }}
-                        ObjectView={
-                          <DraggableItem
-                            item={item}
-                            pageNumber={props.pageNumber}
-                            dragNumber={dragNumber}
-                            itemNumber={itemNumber}
-                            isDragItemPicked={props.isDragItemPicked[0]}
-                          />
-                        }
-                      />
-                    </View>
-                  );
-                })}
+                {typeof draggable.draggableItems !== 'undefined' &&
+                  draggable.draggableItems.map((item, itemNumber) => {
+                    return (
+                      <View
+                        style={styles.overlay}
+                        key={item.value + dragNumber + item.name + itemNumber}>
+                        <Layout
+                          position={{
+                            start: item.position.start,
+                            end: [
+                              item.position.end[0],
+                              item.type === 'codeBlock'
+                                ? item.position.end[1] + flapH
+                                : item.position.end[1],
+                            ],
+                          }}
+                          ObjectView={
+                            <DraggableItem
+                              item={item}
+                              pageNumber={props.pageNumber}
+                              dragNumber={dragNumber}
+                              itemNumber={itemNumber}
+                              isDragItemPicked={props.isDragItemPicked[0]}
+                            />
+                          }
+                        />
+                      </View>
+                    );
+                  })}
               </View>
 
               {/* En el caso de los colores se agrega un circulo con el color resultante, mejorar */}

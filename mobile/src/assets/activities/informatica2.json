@@ -4,17 +4,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Abel se dedica al servicio técnico de los computadores.",
+        "text": "Abel se dedica al *servicio técnico de computadores*.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -22,8 +22,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -33,17 +33,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Las personas que se dedican a esta área deben saber cómo instalar distintos  programas,",
+        "text": "Las personas que se dedican a esta área deben saber cómo instalar distintos programas,",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -51,8 +51,8 @@
       {
         "name": "AbelSmile",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -62,17 +62,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "y además, cómo arreglar las partes físicas de un computador.",
+        "text": "y también, saber cómo arreglar las partes físicas de un computador.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -80,8 +80,8 @@
       {
         "name": "AbelSmile",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -92,16 +92,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "¿Conoces cómo funcionan los computadores?",
+        "text": "¿Sabes cómo funcionan los computadores?",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -109,8 +109,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -121,16 +121,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "El computador es una máquina automática capaz de recibir  instrucciones. ",
+        "text": "El computador es una máquina capaz de recibir instrucciones. ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -138,8 +138,8 @@
       {
         "name": "informatica_2_1",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -150,7 +150,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -159,7 +159,7 @@
         "text": "Los computadoras se inventaron para realizar trabajos de manera fácil, organizada y rápida.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -167,8 +167,8 @@
       {
         "name": "informatica_2_1",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -178,7 +178,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -187,8 +187,8 @@
       {
         "text": "Un computador se forma por dos aspectos fundamentales:",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -196,8 +196,8 @@
       {
         "name": "informatica_2_1",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -207,7 +207,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -216,8 +216,8 @@
       {
         "text": " el software y el hardware. ",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -225,8 +225,8 @@
       {
         "name": "informatica_2_2",
         "position": {
-          "start": [1, 1],
-          "end": [10, 40]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -236,7 +236,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -245,7 +245,7 @@
       {
         "text": "Aunque quizá no lo sepas, ya has utilizado mucho software.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -254,8 +254,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ],
@@ -263,8 +263,8 @@
       {
         "name": "bubbleOk",
         "position": {
-          "start": [0.5, 10.5],
-          "end": [5, 15]  
+          "start": [6, 0.5],
+          "end": [8.5, 7]  
         }
       }
     ]
@@ -274,7 +274,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -283,7 +283,7 @@
       {
         "text": "Por software entendemos un conjunto de instrucciones que le damos al computador.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -292,8 +292,8 @@
       {
         "name": "informatica_2_3",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -304,7 +304,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -313,16 +313,16 @@
         "text": "Estos se agrupan en unidades, que se llaman programas y aplicaciones",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
     "items": [
       {
-        "name": "AbelHappy",
+        "name": "AbelSmile",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -333,16 +333,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Por ejemplo, Word, Excel y Powerpoint son software.",
+        "text": "Por ejemplo, Word, Excel y Powerpoint son software. ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -350,8 +350,8 @@
       {
         "name": "informatica_2_4",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -362,7 +362,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -371,7 +371,7 @@
         "text": "Sin software, nuestros computadores serían tan solo",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -379,8 +379,8 @@
       {
         "name": "AbelQuestion",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -391,7 +391,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -400,7 +400,7 @@
         "text": "un conjunto de dispositivos físicos sin utilidad alguna.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -408,8 +408,8 @@
       {
         "name": "AbelQuestion",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -419,7 +419,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -428,8 +428,8 @@
       {
         "text": "Estos dispositivos físicos se conocen como hardware.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -437,8 +437,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -448,7 +448,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -457,8 +457,8 @@
       {
         "text": "El hardware de un computador es todas aquellas partes físicas que podemos ver y tocar.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -466,8 +466,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -477,17 +477,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " Por ejemplo, monitor y parlantes son hardware externo.",
+        "text": "Por ejemplo, el monitor y los parlantes son hardware externo.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -495,8 +495,8 @@
       {
         "name": "informatica_2_5",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -507,16 +507,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Algunas partes de hardware son internos al computador,",
+        "text": "Algunas piezas de hardware están dentro del computador,",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -524,8 +524,8 @@
       {
         "name": "AbelSmile",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -536,16 +536,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " y otras son externas.",
+        "text": " y otras están fuera.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -553,8 +553,8 @@
       {
         "name": "AbelSmile",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -565,16 +565,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " Las partes externas son aquellas con las cuales solemos interactuar para usar el computador.",
+        "text": "Las partes externas son aquellas con las cuales podemos interactuar para usar el computador.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -582,8 +582,8 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [11.5, 3],
-          "end": [20, 40]  
+          "start": [12.5, 3],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -593,7 +593,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -602,8 +602,8 @@
       {
         "text": "Existen muchos componentes externos del computador.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -611,23 +611,14 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
   },
   {
     "background": "bg_informatica2",
-    "items": [
-      {
-        "name": "informatica_2_6",
-        "position": {
-          "start": [0.5, 0.5],
-          "end": [7.5, 19.5]  
-        }
-      }
-    ],
     "textBoxes": [
       {
         "position": {
@@ -638,36 +629,45 @@
     ],
     "texts": [
       {
-        "text": " ¿Cuál crees que es la función de un monitor?",
+        "text": "¿Cuál crees que es la función de un monitor?",
         "position": {
-          "start": [9, 2.5],
-          "end": [18, 10]
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ],
     "alternativas": [
       {
-        "rightAnswer": ["Muestra datos al usuario"],
+        "rightAnswer": ["Muestra información al usuario"],
         "answers": [
           {
             "text": "Ejecuta programas",
             "position": {
-              "start": [10.5, 9.5],
-              "end": [16.5, 11.5]
+              "start": [9.5, 10.5],
+              "end": [17.5, 12.5]
             }
           },
           {
             "text": "Permite escuchar el sonido",
             "position": {
-              "start": [10.5, 12.5],
-              "end": [16.5, 14.5]
+              "start": [9.5, 13.5],
+              "end": [17.5, 15.5]
             }
           },
           {
-            "text": "Muestra datos al usuario",
+            "text": "Muestra información al usuario",
             "position": {
-              "start": [10.5, 15.5],
-              "end": [16.5, 17.5]
+              "start": [9.5, 16.5],
+              "end": [17.5, 18.5]
             }
           }
         ]
@@ -680,16 +680,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "¡Exacto! Un monitor sirve para visualizar la información.",
+        "text": "¡Exacto! Un monitor sirve para visualizar la información. ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -697,23 +697,14 @@
       {
         "name": "informatica_2_6",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
   },
   {
     "background": "bg_informatica2",
-    "items": [
-      {
-        "name": "informatica_2_7",
-        "position": {
-          "start": [12.5, 0.5],
-          "end": [19.5, 19.5]
-        }
-      }
-    ],
     "textBoxes": [
       {
         "position": {
@@ -727,7 +718,16 @@
         "text": "¿Cuál de estas partes es externa al computador?",
         "position": {
           "start": [1.5, 2.5],
-          "end": [11.5, 11]
+          "end": [11.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ],
@@ -738,22 +738,22 @@
           {
             "text": "Memoria RAM",
             "position": {
-              "start": [3, 9.5],
-              "end": [10, 11.5]
+              "start": [2.5, 10.5],
+              "end": [10.5, 12.5]
             }
           },
           {
             "text": "Mouse",
             "position": {
-              "start": [3, 12.5],
-              "end": [10, 14.5]
+              "start": [2.5, 13.5],
+              "end": [10.5, 15.5]
             }
           },
           {
             "text": "CPU",
             "position": {
-              "start": [3, 15.5],
-              "end": [10, 17.5]
+              "start": [2.5, 16.5],
+              "end": [10.5, 18.5]
             }
           }
         ]
@@ -766,7 +766,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -775,7 +775,7 @@
         "text": "¡Muy bien! Así es, el mouse o el ratón es la parte externa del computador.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -783,8 +783,8 @@
       {
         "name": "informatica_2_8",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -795,7 +795,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -804,7 +804,7 @@
         "text": "Somos nosotros que interactuamos constantemente con este.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -812,8 +812,8 @@
       {
         "name": "informatica_2_8",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -823,17 +823,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "En cambio, no tocamos la memoria RAM ni la CPU,",
+        "text": "En cambio, no podemos tocar la memoria RAM ni la CPU",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -841,8 +841,8 @@
       {
         "name": "informatica_2_9",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -852,17 +852,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " y estos permanecen dentro de nuestro computador.",
+        "text": "ya que estos se encuentran dentro de nuestro computador.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -870,8 +870,8 @@
       {
         "name": "informatica_2_9",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -881,7 +881,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -890,8 +890,8 @@
       {
         "text": "Pero, ¿qué son la RAM y la CPU?",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -899,8 +899,8 @@
       {
         "name": "informatica_2_9",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -910,17 +910,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "CPU es un acrónimo de Unidad Central de Procesamiento.",
+        "text": "CPU es las sigla en inglés para Unidad Central de Procesamiento.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -928,8 +928,8 @@
       {
         "name": "informatica_2_10",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -939,17 +939,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "CPU es un hardware vital de tu computador. ",
+        "text": "La CPU es hardware vital de cada computador. ",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -957,8 +957,8 @@
       {
         "name": "AbelQuestion",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -968,17 +968,17 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "CPU permite que tu computador interactúe con todas las aplicaciones y programas.",
+        "text": "Esta permite que el computador interactúe con todas las aplicaciones y programas.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -986,8 +986,8 @@
       {
         "name": "informatica_2_10",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -998,16 +998,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "RAM es un acrónimo de Memoria de Acceso Aleatorio. ",
+        "text": "RAM es la sigla en inglés para Memoria de Acceso Aleatorio. ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1015,8 +1015,8 @@
       {
         "name": "informatica_2_11",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -1027,16 +1027,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Es el cerebro de nuestro computador, que almacena la información ",
+        "text": "Es el cerebro de nuestro computador y almacena la información ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1044,8 +1044,8 @@
       {
         "name": "informatica_2_11",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -1056,16 +1056,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "que cada programa y aplicación utiliza mientras que  se ejecuta.",
+        "text": "que cada programa y aplicación utiliza mientras son usados.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1073,8 +1073,8 @@
       {
         "name": "informatica_2_11",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -1084,7 +1084,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1093,23 +1093,11 @@
       {
         "text": "Otra componente interna de un computador es el ventilador.",
         "position": {
-          "start": [9.5, 4.5],
-          "end": [19, 16]
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
-    "items": [
-      {
-        "name": "informatica_2_12",
-        "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
-        }
-      }
-    ]
-  },
-  {
-    "background": "bg_informatica2",
     "items": [
       {
         "name": "informatica_2_12",
@@ -1118,7 +1106,10 @@
           "end": [7.5, 19.5]  
         }
       }
-    ],
+    ]
+  },
+  {
+    "background": "bg_informatica2",
     "textBoxes": [
       {
         "position": {
@@ -1129,10 +1120,19 @@
     ],
     "texts": [
       {
-        "text": "¿Para qué crees que sirve?",
+        "text": "¿Cuál podría ser su función?",
         "position": {
-          "start": [9, 2.5],
-          "end": [18, 10]
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "informatica_2_12",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
         }
       }
     ],
@@ -1143,22 +1143,22 @@
           {
             "text": "Quita el polvo de la CPU",
             "position": {
-              "start": [10.5, 9.5],
-              "end": [16.5, 11.5]
+              "start": [9.5, 10.5],
+              "end": [17.5, 12.5]
             }
           },
           {
             "text": "Baja la temperatura en tu pieza",
             "position": {
-              "start": [10.5, 12.5],
-              "end": [16.5, 14.5]
+              "start": [9.5, 13.5],
+              "end": [17.5, 15.5]
             }
           },
           {
             "text": "Baja la temperatura del computador",
             "position": {
-              "start": [10.5, 15.5],
-              "end": [16.5, 17.5]
+              "start": [9.5, 16.5],
+              "end": [17.5, 18.5]
             }
           }
         ]
@@ -1171,7 +1171,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1180,7 +1180,7 @@
         "text": "¡Así es! Los ventiladores son muy importantes, ya que ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1188,8 +1188,8 @@
       {
         "name": "informatica_2_13",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -1200,7 +1200,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1209,7 +1209,7 @@
         "text": "el hardware de un computador tiende a calentarse hasta incluso 90C! ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1217,8 +1217,8 @@
       {
         "name": "informatica_2_13",
         "position": {
-          "start": [20, 3],
-          "end": [40, 50]  
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
         }
       }
     ]
@@ -1228,7 +1228,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9.5, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1237,8 +1237,629 @@
       {
         "text": "Abel te propone estudiar distinto hardware en más detalle. ¡Manos a la obra!",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AbelSmile",
+        "position": {
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Abel tiene que renovar un par de componentes de un computador",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "que uno de sus clientes dejó ayer en su oficina de servicio técnico.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Aprovechando la instancia, Abel te ofrece estudiar *las 3 piezas de hardware* que va a cambiar.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En el inventario podrás encontrar las piezas. ¡Colócalas en tu pantalla! ",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Al lado de cada pieza, encontrarás un símbolo “?”. Hazle click para desplegar",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "la información extra sobre la pieza estudiada.  Recuerda además responder las preguntas,",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "que podrás encontrar en el botón de la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "grafica",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "ssd",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        },
+        {
+          "model": "teclado",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 90, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [5, 6.6],
+          "end": [19.5, 19]
+        },
+        "settings": {
+          "borderWidth": 1
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡*Arrastra y suelta las* palabras para *completar el* reporte *de servicio técnico*!",
+        "position": {
+          "start": [0.2, 4],
+          "end": [19.8, 6.5]
+        },
+        "settings": {
+          "fontSize": 0.055
+        }
+      },
+      {
+        "text": "Durante la inspección técnica, se realizó un cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento de datos. La segunda pieza fue {{dragRectangle}} {{iconDragCheck}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}} {{iconDragCheck}}, para mejorar el procesamiento de los gráficos.",
+        "position": {
+          "start": [5.5, 7.1],
+          "end": [19, 18.5]
+        },
+        "settings": {
+          "fontSize": 0.055
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["SSD", "Teclado", "GPU"],
+        "draggableItems": [
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "GPU",
+            "position": {
+              "start": [0.5, 8.7],
+              "end": [4.5, 10.7]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "SSD",
+            "position": {
+              "start": [0.5, 11.8],
+              "end": [4.5, 13.8]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "Teclado",
+            "position": {
+              "start": [0.5, 14.9],
+              "end": [4.5, 16.9]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 48,
+        "require": [47],
+        "visible": false
+      }
+    ]
+  },
+
+
+  {
+    "background": "bg_informatica2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
           "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Super! Abel espera que hayas aprendido algo nuevo sobre  los computadores.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
         }
       }
     ],
@@ -1246,9 +1867,28 @@
       {
         "name": "AbelHappy",
         "position": {
-          "start": [1, 1],
-          "end": [10, 20]  
+          "start": [1.5, 3],
+          "end": [7.5, 20]  
         }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [10.5, 13.5],
+          "end": [16.5, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
       }
     ]
   }

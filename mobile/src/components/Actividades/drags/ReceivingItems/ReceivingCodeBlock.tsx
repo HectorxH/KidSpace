@@ -23,11 +23,13 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
   const [receivingNames, setReceivingNames] = props.receivingNames;
 
   const [itemFlaps, setItemFlaps] = useState<boolean[][]>(
-    draggable.receivingItems.map(item => {
-      let top = typeof item.top !== 'undefined' ? item.top : false;
-      let bottom = typeof item.bottom !== 'undefined' ? item.bottom : false;
-      return [top, bottom];
-    }),
+    typeof draggable.receivingItems !== 'undefined'
+      ? draggable.receivingItems.map(item => {
+          let top = typeof item.top !== 'undefined' ? item.top : false;
+          let bottom = typeof item.bottom !== 'undefined' ? item.bottom : false;
+          return [top, bottom];
+        })
+      : [[]],
   );
 
   const codeBlockStyles: {
@@ -75,15 +77,15 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
   };
 
   function checkAnswer(payload: number) {
-    let newUserAnswers = [...userDragAnswers];
-    let newPickedAnswers = [...pickedDragAnswers];
-    let newReceivingNames = [...receivingNames];
-    let newItemFlaps = [...itemFlaps];
-
     // Si el item tiene nombre -> fijo, no se modifica
     if (draggable.receivingItems[itemNumber].name !== '') {
       return;
     }
+
+    let newUserAnswers = [...userDragAnswers];
+    let newPickedAnswers = [...pickedDragAnswers];
+    let newReceivingNames = [...receivingNames];
+    let newItemFlaps = [...itemFlaps];
 
     // Si no hay bloques previos no asigna
     console.log(itemNumber, itemFlaps[itemNumber - 1][1]);

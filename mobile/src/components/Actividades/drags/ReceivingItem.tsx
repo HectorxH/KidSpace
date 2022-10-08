@@ -68,6 +68,8 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
           />
         </View>
       )}
