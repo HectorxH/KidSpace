@@ -41,7 +41,6 @@ const RankingTable = (
     // eslint-disable-next-line no-param-reassign
     rows[id].lugar = id + 1
   ));
-  console.log(rows);
   const { logout } = useAuth();
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
