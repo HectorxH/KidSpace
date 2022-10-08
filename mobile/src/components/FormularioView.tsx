@@ -41,6 +41,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
         password,
         tipo: 'estudiante',
       });
+      await AsyncStorage.setItem('@curso', cursoId);
       await login({
         _id,
         username,
@@ -49,7 +50,6 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
         apellidos,
         tipo: 'estudiante',
       });
-      await AsyncStorage.setItem('@curso', cursoId);
     } catch (error) {
       console.log(JSON.stringify(error));
       if ((error as ResponseError).status === 403) {
