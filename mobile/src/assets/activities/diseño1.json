@@ -1996,12 +1996,13 @@
     ],
     "texts": [
       {
-        "text": "Ahora necesitas pintar el tallo de la manzana. Arrastra dos colores que, al mezclar, dan el marrón rojizo.",
+        "text": "Ahora falta el tallo de la manzana. Arrastra dos colores que, al mezclarlos, den el marrón rojizo.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
         },
         "settings": { 
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
