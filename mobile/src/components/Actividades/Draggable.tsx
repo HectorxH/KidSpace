@@ -114,8 +114,16 @@ const Draggable = (props: DraggableProps) => {
 
               {/* En el caso de los colores se agrega un circulo con el color resultante, mejorar */}
               {draggable.type === 'color' && (
-                <View
-                  style={[styles.resultCircle, {backgroundColor: resultColor}]}
+                <Layout
+                  position={{start: [16.75, 9], end: [18.75, 13]}}
+                  ObjectView={
+                    <View
+                      style={[
+                        styles.resultCircle,
+                        {backgroundColor: resultColor},
+                      ]}
+                    />
+                  }
                 />
               )}
             </View>

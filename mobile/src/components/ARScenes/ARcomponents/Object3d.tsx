@@ -52,7 +52,6 @@ const Objects3d = (props: Objects3dProps) => {
       let materials = modelProps[pageNumber].map(model =>
         typeof model.materials !== 'undefined' ? model.materials : {},
       );
-
       if (materials.length > 0) {
         setUpdateMaterial(false);
       }
@@ -124,6 +123,9 @@ const Objects3d = (props: Objects3dProps) => {
     }
   }
 
+  console.log(useAlt[pageNumber][itemNumber]);
+  console.log(modelProps[pageNumber][itemNumber]);
+  console.log(modelProps[pageNumber][itemNumber].model);
   return (
     <Viro3DObject
       source={
@@ -132,7 +134,7 @@ const Objects3d = (props: Objects3dProps) => {
           : (modelProps[pageNumber][itemNumber].altModel as ImageSourcePropType)
       }
       resources={modelProps[pageNumber][itemNumber].resources}
-      materials={modelMaterial[modelIndex]}
+      // materials={modelMaterial[modelIndex]}
       position={positions[modelIndex]}
       scale={transforms[pageNumber][itemNumber].scale}
       rotation={transforms[pageNumber][itemNumber].rotation}
@@ -162,9 +164,36 @@ const Objects3d = (props: Objects3dProps) => {
           // setTransforms,
         )
       }
-      onClick={() => onModelClick(itemNumber)}
+      // onClick={() => onModelClick(itemNumber)}
     />
   );
 };
 
 export default Objects3d;
+
+ViroMaterials.createMaterials({
+  white_sphere: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(231,231,231)',
+  },
+  default: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(231,231,231)',
+  },
+  blue_sphere: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(19,42,143)',
+  },
+  grey_sphere: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(75,76,79)',
+  },
+  red_sphere: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(168,0,0)',
+  },
+  yellow_sphere: {
+    lightingModel: 'PBR',
+    diffuseColor: 'rgb(200,142,31)',
+  },
+});

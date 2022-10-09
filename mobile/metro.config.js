@@ -13,6 +13,7 @@ module.exports = {
       'vrx',
       'VRX',
       'mtl',
+      'MTL',
       'jpg',
       'JPG',
       'png',

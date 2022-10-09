@@ -135,18 +135,18 @@ const styles =
     answerText: {
       color: '#063D69',
       textTransform: 'none',
-      fontSize: 15,
+      fontSize: 14,
       // fontSize: RSize(0.04, 'h'),
     },
     wrongAnswerText: {
       color: '#ffffff',
-      fontSize: 15,
+      fontSize: 14,
       // fontSize: RSize(0.04, 'h'),
       textTransform: 'none',
     },
     rightAnswerText: {
       color: '#ffffff',
-      fontSize: 15,
+      fontSize: 14,
       // fontSize: RSize(0.04, 'h'),
       textTransform: 'none',
     },
