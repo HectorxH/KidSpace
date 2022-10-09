@@ -129,7 +129,7 @@ const Objects3d = (props: Objects3dProps) => {
           pageNumber,
           modelIndex,
           rotateState,
-          rotation + rotations[pageNumber][modelIndex],
+          rotation / 5 + rotations[pageNumber][modelIndex],
           rotations,
           transforms,
           setRotations,

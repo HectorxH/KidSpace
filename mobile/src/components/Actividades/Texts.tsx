@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 import {IDraggable, ITexts} from '../../types/activity';
@@ -28,9 +28,13 @@ const Texts = ({
   pickedDragAnswersIndex,
   isDragItemPicked,
 }: TextsProps) => {
+  const {fontScale} = useWindowDimensions(); //
+  const styles = makeStyles(fontScale); // pass in fontScale to the StyleSheet
+
   if (texts.length === 0) {
     return null;
   }
+
   const dragRectangleT = (idx: number, w: string, k: string) => {
     console.log('receiving box id:', idx);
     return (
@@ -162,49 +166,52 @@ const Texts = ({
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  iconContainer: {
-    height: '100%',
-  },
-  containerTexts: {
-    justifyContent: 'center',
-    alignContent: 'center',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  receivingRectangleStyle: {
-    height: 25,
-    width: 90,
-  },
-  overlay: {
-    flex: 1,
-    position: 'absolute',
-    opacity: 1,
-    width: '100%',
-    height: '100%',
-  },
-  textBox: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
-  baseText: {
-    textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
-    fontSize: RSize(4, 'h') / RSize(0.07, 'w'),
-    fontWeight: 'normal',
-    elevation: 0,
-  },
-  oddText: {
-    color: '#5C9DEC',
-  },
-  evenText: {
-    color: '#063D69',
-  },
-});
+const makeStyles = (fontscale: number) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    iconContainer: {
+      height: '100%',
+    },
+    containerTexts: {
+      flex: 1,
+      justifyContent: 'center',
+      alignContent: 'center',
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+    },
+    receivingRectangleStyle: {
+      height: 25,
+      width: 90,
+    },
+    overlay: {
+      flex: 1,
+      position: 'absolute',
+      opacity: 1,
+      width: '100%',
+      height: '100%',
+    },
+    textBox: {
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+    },
+    baseText: {
+      textAlign: 'center',
+      fontFamily: 'Poppins-Bold',
+      fontSize: 25 / fontscale,
+      // fontSize: RSize(4, 'h') / RSize(0.07, 'w'),
+      fontWeight: 'normal',
+      elevation: 0,
+    },
+    oddText: {
+      color: '#5C9DEC',
+    },
+    evenText: {
+      color: '#063D69',
+    },
+  });
 
 export default Texts;

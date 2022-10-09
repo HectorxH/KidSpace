@@ -40,8 +40,8 @@ const Portals = (props: PortalsProps) => {
     <ViroPortalScene passable={true}>
       <ViroPortal
         position={positions[props.modelIndex]}
-        scale={transforms[props.pageNumber][props.itemNumber].scale}
-        rotation={transforms[props.pageNumber][props.itemNumber].rotation}>
+        scale={[3, 3, 3]}
+        rotation={[0, 0, 0]}>
         <Objects3d
           pageNumber={props.pageNumber}
           models3d={props.models3d}
