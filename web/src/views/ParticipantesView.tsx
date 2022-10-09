@@ -1,11 +1,14 @@
+/* eslint-disable max-len */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
+  Card,
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import QrCodeIcon from '@mui/icons-material/QrCode';
+import PieChartIcon from '@mui/icons-material/PieChart';
 import { useNavigate, useParams } from 'react-router-dom';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
@@ -92,9 +95,10 @@ const ParticipantesView = () => {
           </Typography>
         </Box>
         <Button
+          startIcon={<QrCodeIcon />}
           sx={{
             marginRight: 2,
-            backgroundColor: '#FF8A01',
+            backgroundColor: (theme: Theme) => theme.palette.secondary.main,
             color: '#FFFFFF',
             '&:hover': {
               backgroundColor: '#ffbe82',
@@ -103,7 +107,7 @@ const ParticipantesView = () => {
           }}
           onClick={() => navigate(`/cursos/${cursoId}/qr`)}
         >
-          <QrCodeIcon />Generar QR
+          Generar QR
         </Button>
       </Stack>
       <Box sx={{ px: 4 }}>
@@ -111,6 +115,50 @@ const ParticipantesView = () => {
           Participantes
         </Typography>
         <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
+        <Card sx={{
+          mt: 2, p: 3, backgroundColor: '#F1F3F8', borderRadius: 5,
+        }}
+        >
+          <Stack
+            direction="row"
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+            }}
+          >
+            <Stack direction="column" spacing={2} sx={{ width: 5 / 7 }}>
+              <Typography variant="h5">
+                Reporte de las estadísticas de curso
+              </Typography>
+              <Typography>
+                Genera un informe para ver el progreso de este curso, por cierta actividad o por área STEAM.
+                También pordrás acceder a las estadísticas por cierta actividad o alumno de este curso.
+              </Typography>
+            </Stack>
+            <Stack sx={{
+              justifyContent: 'center', minWidth: 180, width: 2 / 7,
+            }}
+            >
+              <Button
+                startIcon={<PieChartIcon />}
+                sx={{
+                  alignSelf: 'center',
+                  minWidth: 150,
+                  maxHeight: 40,
+                  backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+                  color: '#FFFFFF',
+                  '&:hover': {
+                    backgroundColor: '#ffbe82',
+                    color: '#FFFFFF',
+                  },
+                }}
+                onClick={() => navigate(`/cursos/${cursoId}/estadisticas`)}
+              >
+                Generar reporte
+              </Button>
+            </Stack>
+          </Stack>
+        </Card>
       </Box>
     </Stack>
   );

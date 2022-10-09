@@ -25,19 +25,15 @@ import RNTooltips from 'react-native-tooltips';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const {i0: _, ...newAccesoriesImages} = accesoriesImages;
-const disponibles: any = {
-  9: Array(Object.keys(clothesImages).length).fill(1), //31
-  10: Array(Object.keys(newAccesoriesImages).length).fill(1), //39
-  11: Array(Object.keys(backgroundImages).length).fill(1),
-};
 
 const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
-  const tipo = route.params.tipo;
-  const previousCantMonedas = route.params.cantMonedas;
+  const {tipo, cantMonedas, compras, setCompras} = route.params;
   const [selectedItem, setSelectedItem] = useState(-1);
   const [modalVisible, setModalVisible] = useState(false);
-  const [currentMonedas, setCurrentMonedas] = useState(previousCantMonedas);
+  const [currentMonedas, setCurrentMonedas] = useState(cantMonedas);
+  const [noDisponibles, setNoDisponibles] = useState(compras);
   const target = useRef(null);
   const parent = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -49,15 +45,15 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   switch (tipo) {
     case 'Fondos':
       tipoImages = backgroundImages;
-      numImages = 11;
+      numImages = 0;
       break;
     case 'Accesorios':
       tipoImages = newAccesoriesImages;
-      numImages = 10;
+      numImages = 1;
       break;
     case 'Ropa':
       tipoImages = clothesImages;
-      numImages = 9;
+      numImages = 2;
   }
 
   const handleComprarClick = async (costo: number) => {
@@ -76,14 +72,25 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
     }
     // await AsyncStorage.setItem('@monedas', newCantMonedas.toString());
     setModalVisible(false);
-    disponibles[numImages][selectedItem] = 0;
+    noDisponibles[numImages][selectedItem] = 1;
+    setNoDisponibles(noDisponibles);
+    setCompras(noDisponibles);
     setSelectedItem(-1);
+
+    try {
+      await instance
+        .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`)
+        .send({compras: noDisponibles});
+    } catch (e) {
+      console.log(JSON.stringify(e));
+    }
+
     route.params.setCantMonedas(newCantMonedas);
     setCurrentMonedas(newCantMonedas);
   };
 
   const selectCard = (id: number) => {
-    if (disponibles[numImages][id] === 1) {
+    if (noDisponibles[numImages][id] === 0) {
       setSelectedItem(id);
     }
   };
@@ -272,7 +279,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 <Card
                   style={[
                     {borderRadius: 10},
-                    disponibles[numImages][index] === 0
+                    noDisponibles[numImages][index] === 1
                       ? styles.opcionNoDisponible
                       : styles.opcionDisponible,
                   ]}

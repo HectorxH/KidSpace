@@ -9,6 +9,9 @@ import { Helmet } from 'react-helmet';
 import {
   createTheme, CssBaseline, ThemeProvider,
 } from '@mui/material';
+import { esES } from '@mui/x-data-grid';
+import { esES as pickersesES } from '@mui/x-date-pickers';
+import { esES as coreesES } from '@mui/material/locale';
 import axios from 'axios';
 import Layout from './layout/Layout';
 import NotFoundView from './views/NotFoundView';
@@ -23,11 +26,12 @@ import AgregarCursoView from './views/AgregarCursoView';
 import CursosView from './views/CursosView';
 import ParticipantesView from './views/ParticipantesView';
 import EditarCursoView from './views/EditarCursoView';
+import EstadisticasProfesorView from './views/EstadisticasProfesorView';
 import PupilosView from './views/PupilosView';
 import EstadisticasApoderadoView from './views/EstadisticasApoderadoView';
-
 import QRView from './views/QRView';
-// import CursoView from './views/CursoView';
+import ActividadIndividualView from './views/ActividadIndividualView';
+import ActividadDocenteView from './views/ActividadDocenteView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
@@ -37,30 +41,35 @@ import RedirectHomeRoute from './layout/RedirectHomeRoute';
 axios.defaults.withCredentials = true;
 
 const { palette } = createTheme();
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#5c9dec',
-      contrastText: 'rgb(255, 255, 255)',
+const theme = createTheme(
+  {
+    palette: {
+      primary: {
+        main: '#5c9dec',
+        contrastText: 'rgb(255, 255, 255)',
+      },
+      secondary: {
+        main: '#f57c00',
+      },
+      tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
+      quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
+      textcol: {
+        ...palette.augmentColor({ color: { main: '#063d69' } }),
+        light: '#5C9DEC',
+      },
+      extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
     },
-    secondary: {
-      main: '#f57c00',
+    typography: {
+      fontFamily: 'Poppins',
+      allVariants: {
+        color: '#063d69',
+      },
     },
-    tertiary: palette.augmentColor({ color: { main: '#EC87C0' } }),
-    quaternary: palette.augmentColor({ color: { main: '#A1C96A' } }),
-    textcol: {
-      ...palette.augmentColor({ color: { main: '#063d69' } }),
-      light: '#5C9DEC',
-    },
-    extra: palette.augmentColor({ color: { main: '#F1F3F8' } }),
   },
-  typography: {
-    fontFamily: 'Poppins',
-    allVariants: {
-      color: '#063d69',
-    },
-  },
-});
+  esES, // x-data-grid translations
+  pickersesES, // x-date-pickers translations
+  coreesES, // core translations
+);
 
 const App = () => (
   <>
@@ -93,6 +102,9 @@ const App = () => (
                   <Route path="/cursos/:cursoId" element={<ParticipantesView />} />
                   <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
                   <Route path="/cursos/:cursoId/qr" element={<QRView />} />
+                  <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView />} />
+                  <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:nactividad" element={<ActividadDocenteView />} />
+                  <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:nactividad" element={<ActividadIndividualView />} />
                   <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
                   <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

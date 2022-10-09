@@ -98,6 +98,8 @@ export type RootStackParamList = {
     tipo: string;
     setCantMonedas: React.Dispatch<React.SetStateAction<number>>;
     cantMonedas: number;
+    compras: number[][];
+    setCompras: React.Dispatch<React.SetStateAction<number[][]>>;
   };
 };
 
