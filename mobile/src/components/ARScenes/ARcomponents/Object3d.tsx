@@ -155,7 +155,8 @@ const Objects3d = (props: Objects3dProps) => {
       onRotate={(rotateState, rotation) =>
         updateRotation(
           // pageNumber,
-          modelIndex,
+          // modelIndex,
+          itemNumber,
           rotateState,
           rotation,
           // (rotation / 5 + rotations[pageNumber][modelIndex]) % 360,
