@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Dimensions, LogBox} from 'react-native';
 import {Button, Card} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -7,6 +8,8 @@ import {imagesTienda} from '../../assets/tienda/handler/imagesTienda';
 import LottieView from 'lottie-react-native';
 import LottieTiendaBG from '../../assets/tienda/tiendaInicioBG.json';
 import {RSize} from '../../utils/responsive';
+import {useAuth} from '../../hooks/useAuth';
+import Config from 'react-native-config';
 
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
@@ -14,7 +17,57 @@ LogBox.ignoreLogs([
 
 const windowHeight = Dimensions.get('window').height;
 
+const defaultCompras = [
+  Array.from({length: 31}, () => 0),
+  Array.from({length: 39}, () => 0),
+  Array.from({length: 11}, () => 0),
+];
+
 const Tienda = ({navigation, route}: TiendaProps) => {
+  const [compras, setCompras] = useState(defaultCompras);
+  const [loading, setLoading] = useState(true);
+  const [moveOnLoad, setMoveOnLoad] = useState(false);
+  const [moveTo, setMoveTo] = useState('');
+
+  const {instance} = useAuth();
+
+  const getCompras = async () => {
+    try {
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`,
+      );
+      setCompras(res.body.compras);
+      setLoading(false);
+    } catch (e) {
+      console.log(JSON.stringify(e));
+    }
+  };
+
+  const navigateTo = (tipo: string) => {
+    if (!loading) {
+      navigation.push('TiendaItems', {
+        tipo,
+        setCantMonedas: route.params.setCantMonedas,
+        cantMonedas: route.params.cantMonedas,
+        compras,
+        setCompras,
+      });
+    } else {
+      setMoveOnLoad(true);
+      setMoveTo(tipo);
+    }
+  };
+
+  useEffect(() => {
+    if (moveOnLoad) {
+      navigateTo(moveTo);
+    }
+  }, [loading]);
+
+  useEffect(() => {
+    getCompras();
+  }, []);
+
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   let animationTiendaBG: any = React.createRef();
   return (
@@ -39,43 +92,21 @@ const Tienda = ({navigation, route}: TiendaProps) => {
         <Card
           elevation={5}
           style={styles.card}
-          onPress={() =>
-            navigation.push('TiendaItems', {
-              tipo: 'Ropa',
-              setCantMonedas: route.params.setCantMonedas,
-              cantMonedas: route.params.cantMonedas,
-            })
-          }>
+          onPress={() => navigateTo('Ropa')}>
           <Card.Cover
             source={imagesTienda.portada_ropa.uri}
             style={{backgroundColor: 'white'}}
           />
           <Card.Title title="Ropa" titleStyle={styles.titleCard} />
         </Card>
-        <Card
-          style={styles.card}
-          onPress={() =>
-            navigation.push('TiendaItems', {
-              tipo: 'Accesorios',
-              setCantMonedas: route.params.setCantMonedas,
-              cantMonedas: route.params.cantMonedas,
-            })
-          }>
+        <Card style={styles.card} onPress={() => navigateTo('Accesorios')}>
           <Card.Cover
             source={imagesTienda.portada_accesorios.uri}
             style={{backgroundColor: 'white'}}
           />
           <Card.Title title="Accesorios" titleStyle={styles.titleCard} />
         </Card>
-        <Card
-          style={styles.card}
-          onPress={() =>
-            navigation.push('TiendaItems', {
-              tipo: 'Fondos',
-              setCantMonedas: route.params.setCantMonedas,
-              cantMonedas: route.params.cantMonedas,
-            })
-          }>
+        <Card style={styles.card} onPress={() => navigateTo('Fondos')}>
           <Card.Cover
             source={imagesTienda.portada_fondos.uri}
             style={{backgroundColor: 'white'}}
