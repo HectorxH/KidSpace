@@ -35,7 +35,7 @@ const infoResultadosQuizTable = [
     _id: 0,
     nombre: 'Skylar',
     estado: 'Completada',
-    pregunta1: 'imagénes',
+    pregunta1: 'imágenes',
     pregunta2: 'una lista',
   },
   {
@@ -56,7 +56,7 @@ const infoResultadosQuizTable = [
     _id: 3,
     nombre: 'Soo',
     estado: 'Completada',
-    pregunta1: 'gráfico',
+    pregunta1: 'gráficos',
     pregunta2: 'una tabla',
   },
 ];
