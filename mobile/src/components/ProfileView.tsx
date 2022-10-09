@@ -26,6 +26,7 @@ const medallas = [
 const ProfileView = ({navigation, route}: ProfileProps) => {
   const {Info, completadas} = route.params;
   const [cursoNombre, setCursoNombre] = useState('');
+  const [loading, setLoading] = useState(false);
   const [personaje, setPersonaje] = useState<number[]>([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ]);
@@ -50,6 +51,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/personaje`,
       );
       setPersonaje(res.body.personaje);
+      setLoading(true);
     } catch (e) {
       console.log('Error al cargar el personaje');
       console.log(JSON.stringify(e));
@@ -83,7 +85,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
               borderWidth: 4,
               borderColor: 'white',
             }}>
-            <Character personaje={personaje} />
+            {loading ? <Character personaje={personaje} /> : <View />}
           </View>
         </View>
         <View style={{flex: 2.1 / 4}}>
