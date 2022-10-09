@@ -633,21 +633,21 @@
             "text": "4 cubitos",
             "position": {
               "start": [9.5, 10.5],
-              "end": [15.5, 12.5]
+              "end": [15.5, 13]
             }
           },
           {
             "text": "5 cubitos",
             "position": {
               "start": [9.5, 13.5],
-              "end": [15.5, 15.5]
+              "end": [15.5, 16]
             }
           },
           {
             "text": "6 cubitos",
             "position": {
               "start": [9.5, 16.5],
-              "end": [15.5, 18.5]
+              "end": [15.5, 19]
             }
           }
         ]
@@ -892,22 +892,22 @@
           {
             "text": "20,1 gramos",
             "position": {
-              "start": [3, 9.5],
-              "end": [10, 11.5]
+              "start": [3, 10.5],
+              "end": [10, 13]
             }
           },
           {
             "text": "2 gramos",
             "position": {
-              "start": [3, 12.5],
-              "end": [10, 14.5]
+              "start": [3, 13.5],
+              "end": [10, 16]
             }
           },
           {
             "text": "190 gramos",
             "position": {
-              "start": [3, 15.5],
-              "end": [10, 17.5]
+              "start": [3, 16.5],
+              "end": [10, 19]
             }
           }
         ]
@@ -949,22 +949,22 @@
           {
             "text": "Aproximadamente 2",
             "position": {
-              "start": [3, 9.5],
-              "end": [10, 11.5]
+              "start": [3, 10.5],
+              "end": [10, 13]
             }
           },
           {
             "text": "Aproximadamente 3",
             "position": {
-              "start": [3, 12.5],
-              "end": [10, 14.5]
+              "start": [3, 13.5],
+              "end": [10, 16]
             }
           },
           {
             "text": "Aproximadamente 4",
             "position": {
-              "start": [3, 15.5],
-              "end": [10, 17.5]
+              "start": [3, 16.5],
+              "end": [10, 19]
             }
           }
         ]
@@ -1412,7 +1412,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1425,7 +1425,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1620,7 +1620,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1633,7 +1633,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1828,7 +1828,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1841,7 +1841,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

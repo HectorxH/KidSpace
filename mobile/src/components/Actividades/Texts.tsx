@@ -4,7 +4,7 @@ import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 import {IDraggable, ITexts} from '../../types/activity';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import {getTextStyle} from './utils';
+import {GetTextStyle} from './utils';
 import _ from 'lodash';
 import {ReactStateSetter} from '../../types/others';
 import ReceivingRectangleText from './drags/ReceivingItems/ReceivingRectangleText';
@@ -28,8 +28,7 @@ const Texts = ({
   pickedDragAnswersIndex,
   isDragItemPicked,
 }: TextsProps) => {
-  const {fontScale} = useWindowDimensions(); //
-  const styles = makeStyles(fontScale); // pass in fontScale to the StyleSheet
+  const {fontScale} = useWindowDimensions();
 
   if (texts.length === 0) {
     return null;
@@ -111,10 +110,20 @@ const Texts = ({
   return (
     <View style={styles.container}>
       {texts.map((text: ITexts, textIndex: number) => {
-        const textStyles = getTextStyle(styles.baseText, text.settings);
+        let textStyles = GetTextStyle(styles.baseText, text.settings);
         const arrComps = format(text.text, textIndex.toString());
         const message = (
-          <View key={textIndex + text.text} style={styles.containerTexts}>
+          <View
+            key={textIndex + text.text}
+            style={[
+              styles.containerTexts,
+              {
+                justifyContent:
+                  textStyles.settings.textAlign === 'left'
+                    ? 'flex-start'
+                    : 'center',
+              },
+            ]}>
             {arrComps.map(
               (sentence: string | JSX.Element, sentenceIndex: number) => {
                 return typeof sentence !== 'string'
@@ -133,7 +142,15 @@ const Texts = ({
                               key={
                                 word + wordsIndex + sentenceIndex + wordIndex
                               }>
-                              <Text style={[textStyles.settings, textStyle]}>
+                              <Text
+                                style={[
+                                  textStyles.settings,
+                                  textStyle,
+                                  {
+                                    fontSize:
+                                      textStyles.settings.fontSize / fontScale,
+                                  },
+                                ]}>
                                 {wordIndex === words.split(' ').length - 1
                                   ? word
                                   : word + ' '}
@@ -166,52 +183,51 @@ const Texts = ({
   );
 };
 
-const makeStyles = (fontscale: number) =>
-  StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    iconContainer: {
-      height: '100%',
-    },
-    containerTexts: {
-      flex: 1,
-      justifyContent: 'center',
-      alignContent: 'center',
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-    },
-    receivingRectangleStyle: {
-      height: 25,
-      width: 90,
-    },
-    overlay: {
-      flex: 1,
-      position: 'absolute',
-      opacity: 1,
-      width: '100%',
-      height: '100%',
-    },
-    textBox: {
-      flex: 1,
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-    },
-    baseText: {
-      textAlign: 'center',
-      fontFamily: 'Poppins-Bold',
-      fontSize: 25 / fontscale,
-      // fontSize: RSize(4, 'h') / RSize(0.07, 'w'),
-      fontWeight: 'normal',
-      elevation: 0,
-    },
-    oddText: {
-      color: '#5C9DEC',
-    },
-    evenText: {
-      color: '#063D69',
-    },
-  });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  iconContainer: {
+    height: '100%',
+  },
+  containerTexts: {
+    flex: 1,
+    justifyContent: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+  },
+  receivingRectangleStyle: {
+    height: 25,
+    width: 90,
+  },
+  overlay: {
+    flex: 1,
+    position: 'absolute',
+    opacity: 1,
+    width: '100%',
+    height: '100%',
+  },
+  textBox: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  },
+  baseText: {
+    textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
+    fontSize: 22,
+    // fontSize: RSize(4, 'h') / RSize(0.07, 'w'),
+    fontWeight: 'normal',
+    elevation: 0,
+  },
+  oddText: {
+    color: '#5C9DEC',
+  },
+  evenText: {
+    color: '#063D69',
+  },
+});
 
 export default Texts;

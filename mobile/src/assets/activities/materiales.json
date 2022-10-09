@@ -1159,7 +1159,7 @@
           "end": [9.5, 9]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 18
         }
       }
     ],
@@ -1437,21 +1437,21 @@
             "text": "1 persona",
             "position": {
               "start": [11, 10.5],
-              "end": [17, 12.5]
+              "end": [17, 13]
             }
           },
           {
             "text": "3 personas",
             "position": {
               "start": [11, 13.5],
-              "end": [17, 15.5]
+              "end": [17, 16]
             }
           },
           {
             "text": "Más de 10 personas",
             "position": {
               "start": [11, 16.5],
-              "end": [17, 18.5]
+              "end": [17, 19]
             }
           }
         ]
@@ -1716,21 +1716,21 @@
             "text": "Madera",
             "position": {
               "start": [3, 10.5],
-              "end": [9, 12.5]
+              "end": [9, 13]
             }
           },
           {
             "text": "Papel",
             "position": {
               "start": [3, 13.5],
-              "end": [9, 15.5]
+              "end": [9, 16]
             }
           },
           {
             "text": "Vidrio",
             "position": {
               "start": [3, 16.5],
-              "end": [9, 18.5]
+              "end": [9, 19]
             }
           }
         ]
@@ -2340,7 +2340,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2353,7 +2353,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2562,7 +2562,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2575,7 +2575,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2784,7 +2784,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2797,7 +2797,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 20,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2933,7 +2933,7 @@
           "end": [20, 3]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 21,
           "color": "white",
           "elevation": 21
         },
@@ -2956,7 +2956,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
@@ -2970,7 +2970,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 18,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"
@@ -2984,7 +2984,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
@@ -2998,7 +2998,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 18,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"

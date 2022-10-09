@@ -1,10 +1,62 @@
-import {FlexAlignType, StyleSheet} from 'react-native';
+import {FlexAlignType, StyleSheet, useWindowDimensions} from 'react-native';
 import {
   IImagesSettings,
   ITextBoxSettings,
   ITextSettings,
 } from '../../types/activity';
 import {RSize} from '../../utils/responsive';
+
+// lo intente, pero no funciono por temas de la cantidad de hooks en cada render
+// a veces es diferente y crashea todo, reak klo
+export const GetFontScale = (size: string | number) => {
+  const {fontScale} = useWindowDimensions();
+  console.log('fontScale', fontScale);
+  if (typeof size === 'number') {
+    return size / fontScale;
+  } else {
+    switch (size) {
+      case 'xxl':
+        return 26 / fontScale;
+      case 'xl':
+        return 25 / fontScale;
+      case 'l':
+        return 24 / fontScale;
+      case 'm':
+        return 23 / fontScale;
+      case 'm':
+        return 22 / fontScale;
+      case 's':
+        return 21 / fontScale;
+      case 'xs':
+        return 20 / fontScale;
+      case 'xxs':
+        return 19 / fontScale;
+      case 'xxxs':
+        return 18 / fontScale;
+      case 'xxxxs':
+        return 17 / fontScale;
+      case 'xxxxxs':
+        return 16 / fontScale;
+      case 'xxxxxxs':
+        return 15 / fontScale;
+    }
+  }
+
+  return RSize(0.05, 'h');
+};
+
+export const GetFontSizes = (componentName: string) => {
+  switch (componentName) {
+    case 'texts':
+      return GetFontScale('l');
+    case 'answers':
+      return GetFontScale('xxs');
+    case 'answers':
+      return GetFontScale('xxs');
+  }
+
+  return GetFontScale('m');
+};
 
 export function getSteam(actividad: string) {
   switch (actividad) {
@@ -225,7 +277,7 @@ interface BaseTextProps {
     | '800'
     | '900';
 }
-export function getTextStyle(
+export function GetTextStyle(
   baseTextStyle: BaseTextProps,
   textStyle: ITextSettings | undefined,
 ) {
@@ -244,14 +296,14 @@ export function getTextStyle(
             : baseTextStyle.elevation,
         fontSize:
           typeof newTextStyle.fontSize !== 'undefined'
-            ? RSize(newTextStyle.fontSize, 'h')
+            ? newTextStyle.fontSize
             : baseTextStyle.fontSize,
         fontFamily:
           typeof newTextStyle.fontFamily !== 'undefined'
             ? newTextStyle.fontFamily
             : baseTextStyle.fontFamily,
         fontWeight:
-          typeof newTextStyle.fontSize !== 'undefined'
+          typeof newTextStyle.fontWeight !== 'undefined'
             ? newTextStyle.fontWeight
             : baseTextStyle.fontWeight,
       },

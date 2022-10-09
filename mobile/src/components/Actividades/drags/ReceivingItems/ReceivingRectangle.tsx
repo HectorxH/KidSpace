@@ -1,9 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, useWindowDimensions, View} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
 import {ReactStateSetter} from '../../../../types/others';
-import {RSize} from '../../../../utils/responsive';
 
 interface ReceivingRectangleProps {
   pageNumber: number;
@@ -17,6 +16,7 @@ interface ReceivingRectangleProps {
 }
 
 const ReceivingRectangle = (props: ReceivingRectangleProps) => {
+  const {fontScale} = useWindowDimensions();
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
@@ -99,7 +99,11 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
         onReceiveDragDrop={event => {
           checkAnswer(event.dragged.payload[1]);
         }}>
-        <Text style={styles.textStyle}>
+        <Text
+          style={[
+            styles.textStyle,
+            {fontSize: styles.textStyle.fontSize / fontScale},
+          ]}>
           {typeof draggable.receivingItems !== 'undefined' &&
           draggable.receivingItems[itemNumber].name !== ''
             ? draggable.receivingItems[itemNumber].value
@@ -129,7 +133,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.04, 'h'),
+    fontSize: 19,
     color: '#FFFFFF',
     elevation: 11,
     fontFamily: 'Poppins-Bold',

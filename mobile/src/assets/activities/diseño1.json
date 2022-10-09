@@ -551,7 +551,6 @@
           "end": [8.5, 11]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal"
         }
@@ -565,7 +564,7 @@
             "text": "Cálidos",
             "position": {
               "start": [2.5, 11.5],
-              "end": [8.5, 14.5]
+              "end": [8.5, 14]
             },
             "settings": {
               "elevation": 10
@@ -575,7 +574,7 @@
             "text": "Fríos",
             "position": {
               "start": [2.5, 15],
-              "end": [8.5, 18]
+              "end": [8.5, 17.5]
             },
             "settings": {
               "elevation": 10
@@ -653,7 +652,6 @@
           "end": [8.5, 11]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal"
         }
@@ -667,7 +665,7 @@
             "text": "Cálidos",
             "position": {
               "start": [2.5, 11.5],
-              "end": [8.5, 14.5]
+              "end": [8.5, 14]
             },
             "settings": {
               "elevation": 10
@@ -677,7 +675,7 @@
             "text": "Fríos",
             "position": {
               "start": [2.5, 15],
-              "end": [8.5, 18]
+              "end": [8.5, 17.5]
             },
             "settings": {
               "elevation": 10
@@ -755,7 +753,6 @@
           "end": [8.5, 11]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal"
         }
@@ -769,7 +766,7 @@
             "text": "Cálidos",
             "position": {
               "start": [2.5, 11.5],
-              "end": [8.5, 14.5]
+              "end": [8.5, 14]
             },
             "settings": {
               "elevation": 10
@@ -779,7 +776,7 @@
             "text": "Fríos",
             "position": {
               "start": [2.5, 15],
-              "end": [8.5, 18]
+              "end": [8.5, 17.5]
             },
             "settings": {
               "elevation": 10
@@ -1486,13 +1483,12 @@
     ],
     "texts": [
       {
-        "text": "Primero, necesitas pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
+        "text": "Debemos pintar la manzana y la hoja. Arrastra dos colores que, al mezclar, dan el verde.",
         "position": {
           "start": [8.5, 1.5],
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1505,7 +1501,6 @@
           "end": [12.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1518,7 +1513,6 @@
           "end": [16.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1666,7 +1660,6 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1679,7 +1672,6 @@
           "end": [12.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1692,7 +1684,6 @@
           "end": [16.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1840,7 +1831,6 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1853,7 +1843,6 @@
           "end": [12.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1866,7 +1855,6 @@
           "end": [16.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2014,7 +2002,6 @@
           "end": [19, 7]
         },
         "settings": { 
-          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2027,7 +2014,6 @@
           "end": [12.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2040,7 +2026,6 @@
           "end": [16.5, 13.5]
         },
         "settings": { 
-          "fontSize": 0.06,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2182,13 +2167,12 @@
     ],
     "texts": [
       {
-        "text": "¡Listo!\nCon unos pocos colores podemos formar todos los que necesitemos para nuestras pinturas.",
+        "text": "¡Listo! Con unos pocos colores podemos formar todos los que necesitemos para nuestras pinturas.",
         "position": {
           "start": [9.5, 5.5],
           "end": [18, 12.5]
         },
         "settings": { 
-          "fontSize": 0.05,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, useWindowDimensions} from 'react-native';
 import {Dropdown} from 'react-native-element-dropdown';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {RSize} from '../../utils/responsive';
@@ -16,6 +16,7 @@ interface AnswersProps {
 }
 
 const Answers = (props: AnswersProps) => {
+  const {fontScale} = useWindowDimensions();
   const [userAnswers, setUserAnswers] = props.userAnswersDropdown;
   const [pickedAnswers, setPickedAnswers] = props.pickedAnswersDropdown;
   const rightAnswer = props.question.rightAnswer;
@@ -77,9 +78,18 @@ const Answers = (props: AnswersProps) => {
             <View style={styles.dropdownContainer}>
               <Dropdown
                 style={[styles.dropdown, isFocus && {borderColor: 'blue'}]}
-                placeholderStyle={styles.placeholderStyle}
-                selectedTextStyle={styles.selectedTextStyle}
-                inputSearchStyle={styles.inputSearchStyle}
+                placeholderStyle={[
+                  styles.placeholderStyle,
+                  {fontSize: styles.placeholderStyle.fontSize / fontScale},
+                ]}
+                selectedTextStyle={[
+                  styles.selectedTextStyle,
+                  {fontSize: styles.selectedTextStyle.fontSize / fontScale},
+                ]}
+                inputSearchStyle={[
+                  styles.inputSearchStyle,
+                  {fontSize: styles.inputSearchStyle.fontSize / fontScale},
+                ]}
                 iconStyle={styles.iconStyle}
                 data={data}
                 maxHeight={300}

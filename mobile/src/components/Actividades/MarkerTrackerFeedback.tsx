@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import {IMarkerTrackerFeedbackParams} from '../../types/story';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
@@ -9,6 +9,7 @@ interface MarkerTrackerFeedbackProps {
 }
 
 const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
+  const {fontScale} = useWindowDimensions();
   const {
     pageNumber,
     activeTrackerIndex,
@@ -38,7 +39,13 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
           }}
           ObjectView={
             <View style={styles.headerContainer}>
-              <Text style={styles.baseText}>{trackerMessages[pageNumber]}</Text>
+              <Text
+                style={[
+                  styles.baseText,
+                  {fontSize: styles.baseText.fontSize / fontScale},
+                ]}>
+                {trackerMessages[pageNumber]}
+              </Text>
             </View>
           }
         />
@@ -53,7 +60,11 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
             }}
             ObjectView={
               <View style={styles.headerContainer}>
-                <Text style={styles.baseText}>
+                <Text
+                  style={[
+                    styles.baseText,
+                    {fontSize: styles.baseText.fontSize / fontScale},
+                  ]}>
                   {`Tarjeta detectada: ${activeTracker[pageNumber]}`}
                 </Text>
               </View>
@@ -71,7 +82,11 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
             }}
             ObjectView={
               <View style={styles.headerContainer}>
-                <Text style={styles.baseText}>
+                <Text
+                  style={[
+                    styles.baseText,
+                    {fontSize: styles.baseText.fontSize / fontScale},
+                  ]}>
                   Apunta con la cámara a la tarjeta correcta
                 </Text>
               </View>
@@ -107,7 +122,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'Poppins-Bold',
     color: '#FFFFFF',
-    fontSize: RSize(0.05, 'h'),
+    fontSize: 16,
     fontWeight: 'normal',
     elevation: 0,
   },

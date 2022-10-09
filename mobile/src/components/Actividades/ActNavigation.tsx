@@ -34,6 +34,9 @@ const ActNavigation = (props: ActNavigationProps) => {
     selectedMaterial,
     selectedPageOrder,
     tiempoInicio,
+    pickedDragAnswers,
+    pickedDragAnswersIndex,
+    isDragItemPicked,
   } = props.actNavigationParams;
   const navigation = props.navigation;
 
@@ -41,9 +44,9 @@ const ActNavigation = (props: ActNavigationProps) => {
   const [actividadLog, setActividadLog] =
     props.actNavigationParams.actividadLog;
 
-  const userAnswersPage = userAnswers[pageNumber];
-  const userAnswersDropdownPage = userAnswersDropdown[pageNumber];
-  const userAnswersQuizPage = userAnswersQuiz[pageNumber];
+  const userAnswersPage = userAnswers[0][pageNumber];
+  const userAnswersDropdownPage = userAnswersDropdown[0][pageNumber];
+  const userAnswersQuizPage = userAnswersQuiz[0][pageNumber];
 
   const [toggleValues, setToggleValues] =
     props.actNavigationParams.toggleValues;
@@ -116,7 +119,7 @@ const ActNavigation = (props: ActNavigationProps) => {
             pagina[0].length > 0
               ? pagina.map(
                   (pregunta, numeroPregunta) =>
-                    pregunta[userAnswersQuiz[numeroPagina][numeroPregunta]],
+                    pregunta[userAnswersQuiz[0][numeroPagina][numeroPregunta]],
                 )
               : [],
           )
@@ -180,6 +183,9 @@ const ActNavigation = (props: ActNavigationProps) => {
           <JumpCard
             jumpCards={jumpCards}
             userAnswers={userAnswers}
+            pickedDragAnswers={pickedDragAnswers}
+            pickedDragAnswersIndex={pickedDragAnswersIndex}
+            isDragItemPicked={isDragItemPicked}
             userAnswersDropdown={userAnswersDropdown}
             userAnswersQuiz={userAnswersQuiz}
             userDragAnswers={userDragAnswers}
@@ -198,10 +204,10 @@ const ActNavigation = (props: ActNavigationProps) => {
         <View style={styles.overlay}>
           <JumpButton
             jumpButtons={jumpButtons}
-            userAnswers={userAnswers}
-            userAnswersDropdown={userAnswersDropdown}
-            userAnswersQuiz={userAnswersQuiz}
-            userDragAnswers={userDragAnswers}
+            userAnswers={userAnswers[0]}
+            userAnswersDropdown={userAnswersDropdown[0]}
+            userAnswersQuiz={userAnswersQuiz[0]}
+            userDragAnswers={userDragAnswers[0]}
             rightDragAnswers={rightDragAnswers}
             userInputAnswers={userInputAnswers}
             rightInputAnswers={rightInputAnswer}

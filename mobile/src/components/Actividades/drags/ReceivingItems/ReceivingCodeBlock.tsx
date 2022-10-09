@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, useWindowDimensions, View} from 'react-native';
 // import {Svg, Defs, Rect, Mask, Circle} from 'react-native-svg';
 import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
@@ -18,6 +18,7 @@ interface ReceivingCodeBlockProps {
 }
 
 const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
+  const {fontScale} = useWindowDimensions();
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
@@ -236,7 +237,11 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
                           borderBottomRightRadius: 5,
                           justifyContent: 'center',
                         }}>
-                        <Text style={styles.textStyle}>
+                        <Text
+                          style={[
+                            styles.textStyle,
+                            {fontSize: styles.textStyle.fontSize / fontScale},
+                          ]}>
                           {draggable.receivingItems[itemNumber].value}
                         </Text>
                       </View>
@@ -298,7 +303,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.018, 'w'),
+    fontSize: 16,
     color: '#FFFFFF',
     elevation: 11,
     fontFamily: 'Poppins-Bold',

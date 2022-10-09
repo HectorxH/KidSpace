@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableHighlight} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  TouchableHighlight,
+  useWindowDimensions,
+} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {ButtonSetting} from '../../types/activity';
 import {RSize} from '../../utils/responsive';
@@ -11,23 +17,24 @@ interface ButtonComponentProps {
 }
 
 const ButtonComponent = (props: ButtonComponentProps) => {
+  const {fontScale} = useWindowDimensions();
   const {onPressFunction, settings} = props;
   return (
     <View style={styles.container}>
       <TouchableHighlight
         underlayColor={'gray'}
-        // icon={settings.buttonIcon}
-        // labelStyle={styles.iconStyle}
-        // mode="contained"
-        // color={settings.buttonColor}
         disabled={props.disabled}
         style={[styles.buttonStyle, {backgroundColor: settings.buttonColor}]}
         onPress={onPressFunction}>
-        <Text style={styles.textStyle}>
+        <Text
+          style={[
+            styles.textStyle,
+            {fontSize: styles.textStyle.fontSize / fontScale},
+          ]}>
           {settings.buttonIcon !== '' && (
             <Icon
               name={settings.buttonIcon}
-              size={RSize(0.05, 'h')}
+              size={styles.iconStyle.fontSize / fontScale}
               color={styles.textStyle.color}
             />
           )}
@@ -54,14 +61,14 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.05, 'h'),
+    fontSize: 20,
     textTransform: 'none',
     color: 'white',
     fontFamily: 'Poppins-Bold',
   },
   iconStyle: {
     alignSelf: 'center',
-    fontSize: RSize(0.07, 'h'),
+    fontSize: 19,
     justifyContent: 'center',
     color: 'white',
   },

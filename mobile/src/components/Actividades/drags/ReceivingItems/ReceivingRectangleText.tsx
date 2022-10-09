@@ -1,9 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, useWindowDimensions, View} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
 import {ReactStateSetter} from '../../../../types/others';
-import {RSize} from '../../../../utils/responsive';
 
 interface ReceivingRectangleTextProps {
   pageNumber: number;
@@ -17,6 +16,7 @@ interface ReceivingRectangleTextProps {
 }
 
 const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
+  const {fontScale} = useWindowDimensions();
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   const [userDragAnswers, setUserDragAnswers] = props.userDragAnswers;
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
@@ -101,7 +101,11 @@ const ReceivingRectangleText = (props: ReceivingRectangleTextProps) => {
           console.log('dragged', event.dragged.payload);
           checkAnswer(event.dragged.payload[1]);
         }}>
-        <Text style={styles.textStyle}>
+        <Text
+          style={[
+            styles.textStyle,
+            {fontSize: styles.textStyle.fontSize / fontScale},
+          ]}>
           {userDragAnswers[pageNumber][dragNumber][itemNumber]}
         </Text>
       </DraxView>
@@ -128,7 +132,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.04, 'h'),
+    fontSize: 18,
     color: '#FFFFFF',
     elevation: 11,
     fontFamily: 'Poppins-Bold',

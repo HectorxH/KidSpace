@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IDraggableItems} from '../../../../types/activity';
-import {RSize} from '../../../../utils/responsive';
 
 interface DraggableRectangleProps {
   item: IDraggableItems;
@@ -11,6 +10,7 @@ interface DraggableRectangleProps {
 }
 
 const DraggableRectangle = (props: DraggableRectangleProps) => {
+  const {fontScale} = useWindowDimensions();
   return (
     <View style={styles.container}>
       <DraxView
@@ -21,7 +21,13 @@ const DraggableRectangle = (props: DraggableRectangleProps) => {
         payload={[props.dragNumber, props.itemNumber]}
         longPressDelay={10}>
         <View style={styles.textContainer}>
-          <Text style={styles.textStyle}>{props.item.value}</Text>
+          <Text
+            style={[
+              styles.textStyle,
+              {fontSize: styles.textStyle.fontSize / fontScale},
+            ]}>
+            {props.item.value}
+          </Text>
         </View>
       </DraxView>
     </View>
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     textAlign: 'center',
-    fontSize: RSize(0.045, 'h'),
+    fontSize: 18,
     textTransform: 'none',
     color: 'white',
     elevation: 11,

@@ -1,9 +1,8 @@
 import React from 'react';
-import {View, StyleSheet, TextInput} from 'react-native';
+import {View, StyleSheet, TextInput, useWindowDimensions} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
 import {ITextFieldQuestion} from '../../types/activity';
 import Layout from '../Utils/Layout';
-import {RSize} from '../../utils/responsive';
 
 interface TextInputAnswerProps {
   textFieldQuestions: ITextFieldQuestion[] | never[];
@@ -12,15 +11,10 @@ interface TextInputAnswerProps {
 }
 
 const TextInputAnswer = (props: TextInputAnswerProps) => {
+  const {fontScale} = useWindowDimensions();
   if (props.textFieldQuestions.length === 0) {
     return null;
   }
-
-  // function onFieldChange(newValue: number, answerNumber: number) {
-  //   let userAnswers = [...props.userInputAnswers[0]];
-  //   userAnswers[props.pageNumber][answerNumber] = newValue;
-  //   props.userInputAnswers[1](userAnswers);
-  // }
 
   return (
     <View style={styles.container}>
@@ -35,7 +29,10 @@ const TextInputAnswer = (props: TextInputAnswerProps) => {
                 ObjectView={
                   <View style={styles.inputFieldBox}>
                     <TextInput
-                      style={styles.input}
+                      style={[
+                        styles.input,
+                        {fontSize: styles.input.fontSize / fontScale},
+                      ]}
                       onChangeText={newValue => {
                         let userAnswers = [...props.userInputAnswers[0]];
                         const inputInt = parseInt(newValue, 10);
@@ -46,9 +43,6 @@ const TextInputAnswer = (props: TextInputAnswerProps) => {
                         }
                         props.userInputAnswers[1](userAnswers);
                       }}
-                      // value={props.userInputAnswers[0][props.pageNumber][
-                      //   index
-                      // ].toString()}
                       value={
                         props.userInputAnswers[0][props.pageNumber][index]
                           ? props.userInputAnswers[0][props.pageNumber][
@@ -93,7 +87,7 @@ const styles = StyleSheet.create({
     height: '100%',
     width: '100%',
     textAlign: 'center',
-    fontSize: RSize(0.05, 'h'),
+    fontSize: 18,
     // margin: 12,
     // borderWidth: 1,
     // padding: 10,

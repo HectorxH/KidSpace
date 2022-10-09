@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import {DraxView} from 'react-native-drax';
 import {IReceivingItems} from '../../../../types/activity';
 import {RSize} from '../../../../utils/responsive';
@@ -14,6 +14,7 @@ interface DraggableCodeBlockProps {
 }
 
 const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
+  const {fontScale} = useWindowDimensions();
   // const [receivingNames, setReceivingNames] = props.receivingNames;
   const flapH = 0.5;
   const y0 = props.item.position.start[1];
@@ -93,7 +94,13 @@ const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
                         borderBottomLeftRadius: 5,
                         borderBottomRightRadius: 5,
                       }}>
-                      <Text style={styles.textStyle}>{props.item.value}</Text>
+                      <Text
+                        style={[
+                          styles.textStyle,
+                          {fontSize: styles.textStyle.fontSize / fontScale},
+                        ]}>
+                        {props.item.value}
+                      </Text>
                     </View>
                     <View
                       style={{
@@ -184,7 +191,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.018, 'w'),
+    fontSize: 16,
     color: '#FFFFFF',
     textTransform: 'none',
     elevation: 11,

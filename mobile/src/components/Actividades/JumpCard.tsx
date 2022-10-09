@@ -12,17 +12,20 @@ interface JumpCardProps {
   toggleVisibility: boolean;
 
   // alternativas
-  userAnswers: number[][][];
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
 
   // dropdown
-  userAnswersDropdown: number[][][];
+  userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
 
   // quiz
-  userAnswersQuiz: number[][];
+  userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
 
   // drag
-  userDragAnswers: string[][][];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   rightDragAnswers: string[][][];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
 
   // input field
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
@@ -43,10 +46,10 @@ const JumpCard = (props: JumpCardProps) => {
     if (
       checkAnswers(
         requirements,
-        props.userAnswers,
-        props.userAnswersDropdown,
-        props.userAnswersQuiz,
-        props.userDragAnswers,
+        props.userAnswers[0],
+        props.userAnswersDropdown[0],
+        props.userAnswersQuiz[0],
+        props.userDragAnswers[0],
         props.rightDragAnswers,
         props.userInputAnswers[0],
         props.rightInputAnswers,
@@ -75,16 +78,22 @@ const JumpCard = (props: JumpCardProps) => {
                     disabled={
                       checkAnswers(
                         jumpCard.disableWhen,
-                        props.userAnswers,
-                        props.userAnswersDropdown,
-                        props.userAnswersQuiz,
-                        props.userDragAnswers,
+                        props.userAnswers[0],
+                        props.userAnswersDropdown[0],
+                        props.userAnswersQuiz[0],
+                        props.userDragAnswers[0],
                         props.rightDragAnswers,
                         props.userInputAnswers[0],
                         props.rightInputAnswers,
                         props.selectedMaterial[0],
                       ) === true
                     }
+                    pageNumber={props.pageNumber[0]}
+                    userAnswers={props.userAnswers}
+                    userDragAnswers={props.userDragAnswers}
+                    pickedDragAnswers={props.pickedDragAnswers}
+                    pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+                    isDragItemPicked={props.isDragItemPicked}
                   />
                 }
               />

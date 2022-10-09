@@ -30,7 +30,7 @@ export interface IModelProps {
   };
 }
 
-export function updateRotation(
+export function updateRotation2(
   pageNumber: number,
   index: number,
   rotateState: number,
@@ -48,7 +48,7 @@ export function updateRotation(
   //Giro en eje y
   transform[pageNumber][index].rotation = [
     transform[pageNumber][index].rotation[0],
-    transform[pageNumber][index].rotation[2] - rotation,
+    transform[pageNumber][index].rotation[1] - rotation / 5,
     transform[pageNumber][index].rotation[2],
   ];
   let rots = [...rotations];

@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, TouchableHighlight, Image} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  TouchableHighlight,
+  Image,
+  useWindowDimensions,
+} from 'react-native';
 import {ReactStateSetter} from '../../types/others';
 import {RSize} from '../../utils/responsive';
 import Images from '../../assets/images/images';
@@ -20,6 +26,7 @@ interface MaterialSelectorComponentProps {
 }
 
 const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
+  const {fontScale} = useWindowDimensions();
   const [selectedPageOrder, setSelectedPageOrder] = props.selectedPageOrder;
   function buttonPressed(v: string) {
     let selectedMaterials = props.selectedMaterial[0];
@@ -72,7 +79,11 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                           ? styles.selectedButton
                           : styles.normalButton
                       }>
-                      <Text style={styles.buttonText}>
+                      <Text
+                        style={[
+                          styles.buttonText,
+                          {fontSize: styles.buttonText.fontSize / fontScale},
+                        ]}>
                         {(index + 1).toString() + ' - ' + material}
                       </Text>
                     </View>
@@ -101,7 +112,11 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
               end: [20, 4],
             }}
             ObjectView={
-              <Text style={styles.buttonText}>
+              <Text
+                style={[
+                  styles.buttonText,
+                  {fontSize: styles.buttonText.fontSize / fontScale},
+                ]}>
                 {props.selectedModelMaterials.materialOrder[selectedPageOrder]}
               </Text>
             }
@@ -141,13 +156,6 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                         source={Images.items[v]}
                       />
                     </TouchableHighlight>
-                    // <Button
-                    //   mode="contained"
-                    //   // color={'black'}
-                    //   style={styles.textureButton}
-                    //   onPress={() => buttonPressed(v)}>
-                    //   <Text style={styles.buttonText}>{v}</Text>
-                    // </Button>
                   }
                 />
               </View>
@@ -177,15 +185,14 @@ const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
                     : styles.continueButtonDisabled
                 }
                 onPress={() => changePage()}>
-                <Text style={styles.buttonText}>{'Listo'}</Text>
+                <Text
+                  style={[
+                    styles.buttonText,
+                    {fontSize: styles.buttonText.fontSize / fontScale},
+                  ]}>
+                  {'Listo'}
+                </Text>
               </TouchableHighlight>
-              // <Button
-              //   mode="contained"
-              //   // color={'black'}
-              //   style={styles.textureButton}
-              //   onPress={() => changePage()}>
-              //   <Text style={styles.buttonText}>{'Listo'}</Text>
-              // </Button>
             }
           />
         </View>
@@ -229,7 +236,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     textTransform: 'none',
-    fontSize: RSize(0.05, 'h'),
+    fontSize: 17,
     alignSelf: 'center',
   },
   texturesSpace: {
