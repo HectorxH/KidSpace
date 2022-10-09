@@ -25,6 +25,9 @@ const medallas = [
 const ProfileView = ({navigation, route}: ProfileProps) => {
   const {Info, completadas} = route.params;
   const [cursoNombre, setCursoNombre] = useState('');
+  const [personaje, setPersonaje] = useState<number[]>([
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  ]);
 
   const {instance, curso} = useAuth();
 
@@ -40,14 +43,24 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
     }
   };
 
-  useEffect(() => {
-    if (cursoNombre === '') {
-      getCurso();
+  const getPersonaje = async () => {
+    try {
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/personaje`,
+      );
+      setPersonaje(res.body.personaje);
+    } catch (e) {
+      console.log('Error al cargar el personaje');
+      console.log(JSON.stringify(e));
     }
-  });
+  };
+
+  useEffect(() => {
+    getCurso();
+    getPersonaje();
+  }, []);
 
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
-  console.log(medallas);
   return (
     <View style={styles.container}>
       <View style={{flex: 1.5 / 4, flexDirection: 'column'}}>
@@ -69,7 +82,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
               borderWidth: 4,
               borderColor: 'white',
             }}>
-            <Character />
+            <Character personaje={personaje} />
           </View>
         </View>
         <View style={{flex: 2.1 / 4}}>
@@ -99,7 +112,9 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
                 color="#FFFFFF"
               />
             )}
-            onPress={() => navigation.navigate('EditCharacter')}>
+            onPress={() =>
+              navigation.navigate('EditCharacter', {personaje, setPersonaje})
+            }>
             <Text style={styles.textButton}>Editar la apariencia</Text>
           </Button>
         </View>

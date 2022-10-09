@@ -10,7 +10,6 @@ import {
   Pressable,
   Modal,
   FlatList,
-  SafeAreaView,
 } from 'react-native';
 import {Button} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -31,6 +30,8 @@ import {backgroundImages} from '../../assets/perfil/12background/handler/backgro
 
 import {EditCharacterProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
+import {useAuth} from '../../hooks/useAuth';
+import Config from 'react-native-config';
 
 const Arraydisponibles = [
   [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31 de largo
@@ -59,6 +60,8 @@ const srcNames = [
   'backgroundImages',
 ];
 
+const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
+
 const partes = [
   {baseImages},
   {vitiligoImages},
@@ -73,22 +76,27 @@ const partes = [
   {accesoriesImages},
   {backgroundImages},
 ];
-const EditCharacter = ({navigation}: EditCharacterProps) => {
+
+const EditCharacter = ({navigation, route}: EditCharacterProps) => {
   // const {Info} = route.params;
+  const {personaje, setPersonaje} = route.params;
   const [parte, setParte] = useState(0);
   const [disponibles, setDisponibles] = useState(Arraydisponibles);
-  const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
-  const [parteArray, setParteArray] = useState(initialState);
+  const [parteArray, setParteArray] = useState(personaje);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
-  console.log(parteArray[7], bangsImages[`i${parteArray[7]}`].uri);
-  const handlePartes = (p: number, id: number) => {
+  console.log(personaje[7], bangsImages[`i${personaje[7]}`].uri);
+
+  const {instance} = useAuth();
+
+  const handlePartes = async (p: number, id: number) => {
     if (!(p > 8 && disponibles[p - 9][id] === 0)) {
       console.log(id, p);
       setSaved(false);
-      parteArray.splice(p, 1, id);
-      setParteArray(Array.from(parteArray));
-      console.log(parteArray);
+      const array = parteArray;
+      array.splice(p, 1, id);
+      setParteArray(Array.from(array));
+      console.log(array);
     }
   };
   const handleBack = () => {
@@ -98,9 +106,17 @@ const EditCharacter = ({navigation}: EditCharacterProps) => {
       setModalVisible(true);
     }
   };
-  const handleSave = () => {
-    setSaved(true);
-    console.log('hi');
+  const handleSave = async () => {
+    try {
+      await instance
+        .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/personaje`)
+        .send({personaje: parteArray});
+      setPersonaje(parteArray);
+      setSaved(true);
+    } catch (e) {
+      console.log('No se pudo guardar el personaje');
+      console.log(JSON.stringify(e));
+    }
   };
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 

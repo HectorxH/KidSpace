@@ -30,7 +30,10 @@ export type RootStackParamList = {
     Info: IProfile;
     completadas: ActividadesCompletadas;
   };
-  EditCharacter: undefined;
+  EditCharacter: {
+    personaje: number[];
+    setPersonaje: React.Dispatch<React.SetStateAction<number[]>>;
+  };
   FormularioView: {data: string};
   MainMap: undefined;
   Activity: {
