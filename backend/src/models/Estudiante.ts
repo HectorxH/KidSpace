@@ -21,6 +21,10 @@ const defaultCompras = [
   Array.from({ length: 39 }, () => 0),
   Array.from({ length: 11 }, () => 0),
 ];
+defaultCompras[0][0] = 1;
+defaultCompras[0][1] = 1;
+defaultCompras[0][2] = 1;
+defaultCompras[2][0] = 1;
 
 export const estudianteSchema = new Schema<IEstudiante>({
   user: {
