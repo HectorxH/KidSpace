@@ -25,8 +25,8 @@ export default [
       {
         nactividad: 2,
         actividad: 'Actividad',
-        titulo: 'lorem',
-        descripcion: 'En esta actividad vas a conocer a Victoria, quien día a día trabaja en una fábrica de manufactura. Junto con Victoria vas a teletransportarte a diversas regiones de Chile para aprender sobre las materias primas que se obtienen en cada una. Además, vas a aprender sobre las diferencias entre materia prima, material y producto tecnológico, jugando con las tarjetas físicas.',
+        titulo: 'Soluciones tecnologicas',
+        descripcion: 'Lorem ipsum',
         path: '/actividades/unidad/2/actividad/2',
       },
     ],
