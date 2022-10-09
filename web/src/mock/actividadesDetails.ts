@@ -58,8 +58,8 @@ export default [
     img3: portadaAct2Cuento2,
     img4: portadaAct2Desafio2,
     img5: quiz,
-    path: '/actividades/unidad/2/actividad/2',
-    pathAsignar: '/actividades/unidad/2/actividad/2/asignar/',
+    path: '/actividades/unidad/3/actividad/2',
+    pathAsignar: '/actividades/unidad/3/actividad/2/asignar/',
   },
   {
     id: 3,
