@@ -86,12 +86,21 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       //     JSON.stringify(newCompletadas),
       //   );
       // }
-      await AsyncStorage.getItem('@message', async (_err, actividades) => {
-        let actividadesJson =
-          actividades != null ? JSON.parse(actividades) : [];
-        _.remove(actividadesJson, {nombreActividad: nombreActividad});
-        await AsyncStorage.setItem('@message', JSON.stringify(actividadesJson));
-      });
+
+      try {
+        await AsyncStorage.getItem('@message', async (_err, actividades) => {
+          let actividadesJson =
+            actividades != null ? JSON.parse(actividades) : [];
+          _.remove(actividadesJson, {nombreActividad: nombreActividad});
+          await AsyncStorage.setItem(
+            '@message',
+            JSON.stringify(actividadesJson),
+          );
+        });
+      } catch (e) {
+        console.log('b');
+        console.log(JSON.stringify(e));
+      }
       try {
         await instance
           .post(`${Config.REACT_APP_BACKEND_URL}/Estadisticas/log`)
@@ -107,15 +116,11 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
             fecha: new Date(actividadesLog.fecha),
           });
       } catch (e) {
+        console.log('c');
         console.log(JSON.stringify(e));
       }
 
-      navigation?.dispatch(
-        CommonActions.reset({
-          index: 0,
-          routes: [{name: 'MainMap'}],
-        }),
-      );
+      navigation.navigate('MainMap');
     }
   };
 

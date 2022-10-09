@@ -4,6 +4,7 @@ import {Button} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import {RSize} from '../utils/responsive';
 import {InicioViewProps} from '../types/navigation';
+import {CommonActions} from '@react-navigation/native';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
@@ -19,7 +20,12 @@ const InicioView = ({navigation}: InicioViewProps) => {
     setLoading(true);
     try {
       await refresh();
-      navigation.navigate('MainMap');
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{name: 'MainMap'}],
+        }),
+      );
     } catch (e) {
       console.log(e);
     }

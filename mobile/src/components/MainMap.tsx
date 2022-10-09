@@ -110,8 +110,7 @@ const MainMap = ({navigation}: MainMapProps) => {
       setLoading(false);
     } catch (e) {
       console.log(e);
-      navigation.popToTop();
-      navigation.push('ErrorView');
+      navigation.navigate('ErrorView');
     }
   };
 
