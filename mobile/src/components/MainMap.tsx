@@ -122,8 +122,12 @@ const MainMap = ({navigation}: MainMapProps) => {
         async function (data: {message: IActivity; curso: String}) {
           let jsonAllMessages = await AsyncStorage.getItem('@message');
           //check if value previously stored
+          console.log('data.msg:', data.message);
           allMessages =
-            jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
+            jsonAllMessages !== null && jsonAllMessages !== 'null'
+              ? JSON.parse(jsonAllMessages)
+              : [];
+          console.log(allMessages, typeof allMessages);
           if (data.curso === userCurso) {
             allMessages.push(data.message);
             allMessages = _.uniqWith(allMessages, _.isEqual);

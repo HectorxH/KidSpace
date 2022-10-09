@@ -27,6 +27,7 @@ const ActivityCard = ({
   userLastName,
   navigation,
 }: ActivityCardProps) => {
+  console.log(activity);
   return (
     <Card
       style={styles.card}
