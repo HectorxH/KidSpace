@@ -3,7 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import Layout from '../Utils/Layout';
 import {RSize} from '../../utils/responsive';
 import {IDraggable, ITexts} from '../../types/activity';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 import {getTextStyle} from './utils';
 import _ from 'lodash';
 import {ReactStateSetter} from '../../types/others';
@@ -56,7 +56,7 @@ const Texts = ({
           <Icon name={'check'} size={RSize(0.05, 'h')} color={'green'} />
         )}
         {pickedDragAnswers[0][pageNumber][0][idx] === 1 && (
-          <Icon name={'check'} size={RSize(0.05, 'h')} color={'red'} />
+          <Icon name={'times'} size={RSize(0.05, 'h')} color={'red'} />
         )}
       </View>
     );
