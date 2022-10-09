@@ -159,7 +159,15 @@ export const AuthProvider = ({children}: {children: any}) => {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   //   [],
   // );
-  const value = {user, curso, login, logout, refresh, deleteAccount, instance};
+  const value = {
+    user,
+    curso,
+    login,
+    logout,
+    refresh,
+    deleteAccount,
+    instance: inst,
+  };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
