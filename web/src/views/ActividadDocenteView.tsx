@@ -21,18 +21,11 @@ import {
 import {
   Doughnut, Line, Bar, Pie,
 } from 'react-chartjs-2';
-import CheckIcon from '@mui/icons-material/Check';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import ClearIcon from '@mui/icons-material/Clear';
 import NotFoundView from './NotFoundView';
 import '../App.css';
-// import PupilosTable from '../components/PupilosTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
 import ResultadosQuizTable from '../components/ResultadosQuizTable';
-// import actividades from '../mock/actividades';
-// import actividadesIndividuales from '../mock/actividadesIndividuales';
-// import HistorialTable from '../components/HistorialTable';
 import actividadesDocentes from '../mock/actividadesDocentes';
 
 const letras = ['S', 'T', 'E', 'A', 'M'];
@@ -135,7 +128,8 @@ const ActividadDocenteView = () => {
   const index:number = +nactividad!;
   console.log(index);
   const navigate = useNavigate();
-
+  const respuestasCorrectas = [actividadesDocentes[index].preguntas[0].respuestaCorrecta, actividadesDocentes[index].preguntas[1].respuestaCorrecta];
+  console.log(respuestasCorrectas);
   const { logout } = useAuth();
   // const getCurso = async () => {
   //   try {
@@ -255,7 +249,7 @@ const ActividadDocenteView = () => {
         <Typography variant="h5">
           Resultados del Quiz
         </Typography>
-        <ResultadosQuizTable rows={infoResultadosQuizTable} />
+        <ResultadosQuizTable rows={infoResultadosQuizTable} correctas={respuestasCorrectas} />
       </Stack>
     </Stack>
   );

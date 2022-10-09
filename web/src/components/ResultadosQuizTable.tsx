@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  Stack, Card, Box,
+  Stack, Box,
   Typography,
 } from '@mui/material';
 import React, { useState } from 'react';
@@ -12,6 +12,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
+import actividadesDocentes from '../mock/actividadesDocentes';
 // import { useAuth } from '../hooks/useAuth';
 
 interface IRow {
@@ -24,10 +25,11 @@ interface IRow {
 
 interface ITableParams {
   rows: IRow[],
+  correctas: string[],
 }
 
 const ResultadosQuizTable = (
-  { rows }: ITableParams,
+  { rows, correctas }: ITableParams,
 ) => {
   const { logout } = useAuth();
   const cols: GridColDef[] = [
@@ -55,7 +57,7 @@ const ResultadosQuizTable = (
       flex: 1,
       renderCell: (params) => (
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          {params.row.pregunta1 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta1}
+          {params.row.pregunta1 === correctas[0] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta1}
         </Stack>
       ),
     },
@@ -65,7 +67,7 @@ const ResultadosQuizTable = (
       flex: 1,
       renderCell: (params) => (
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          {params.row.pregunta2 === 'una tabla' ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta2}
+          {params.row.pregunta2 === correctas[1] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />) } {params.row.pregunta2}
         </Stack>
       ),
     },
