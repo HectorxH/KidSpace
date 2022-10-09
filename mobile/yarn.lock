@@ -6383,10 +6383,10 @@
     "react-freeze" "^1.0.0"
     "warn-once" "^0.1.0"
 
-"react-native-svg@^13.2.0":
-  "integrity" "sha512-bDvMeFReA3F9pVp0EhACPrEerRcITzTu9N2m2lAPinhIMVvwzGzVXyFsXI8fCMSoeOIh+77hKvukoCedh06tLw=="
-  "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-13.2.0.tgz"
-  "version" "13.2.0"
+"react-native-svg@^13.3.0":
+  "integrity" "sha512-Xr6+sTt8ioCRypCbIDMgfmc4l2s/7H8l7FfPoMZ8qMf0dVx8ZVCHRsQlrdmwgVKLJwKSAiwj7Tqqz8NPSEpwDw=="
+  "resolved" "https://registry.npmjs.org/react-native-svg/-/react-native-svg-13.3.0.tgz"
+  "version" "13.3.0"
   dependencies:
     "css-select" "^5.1.0"
     "css-tree" "^1.1.3"

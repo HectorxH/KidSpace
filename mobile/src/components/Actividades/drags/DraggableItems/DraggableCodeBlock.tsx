@@ -15,30 +15,7 @@ interface DraggableCodeBlockProps {
 
 const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
   // const [receivingNames, setReceivingNames] = props.receivingNames;
-
-  const codeBlockStyles: {
-    [key: string]: {
-      backgroundColor: string;
-      borderColor: string;
-    };
-  } = {
-    move: styles.moveCodeBlock,
-    function: styles.functionCodeBlock,
-  };
-
-  const dragStyle = [
-    styles.defaultCodeBlock,
-    codeBlockStyles.move,
-    // codeBlockStyles[
-    //   receivingNames[props.pageNumber][props.dragNumber][props.itemNumber]
-    // ],
-  ];
-
   const flapH = 0.5;
-  const flapW = 0.5;
-
-  const x0 = props.item.position.start[0];
-  const x1 = props.item.position.end[0];
   const y0 = props.item.position.start[1];
   const y1 = props.item.position.end[1];
 
@@ -47,18 +24,6 @@ const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
     end: [20, (20 * (y1 - y0)) / (y1 - y0 + flapH)],
   };
 
-  const topFlapPosition = {
-    start: [(20 * flapW) / (x1 - x0), 0],
-    end: [(2 * 20 * flapW) / (x1 - x0), (20 * flapH) / (y1 - y0)],
-  };
-
-  const bottomFlapPosition = {
-    start: [
-      (20 * flapW) / (x1 - x0),
-      (20 * (y1 - y0)) / (y1 - y0 + flapH + 0.1),
-    ],
-    end: [(2 * 20 * flapW) / (x1 - x0), 20],
-  };
   return (
     <View style={styles.container}>
       <DraxView
@@ -76,49 +41,88 @@ const DraggableCodeBlock = (props: DraggableCodeBlockProps) => {
               // position={props.item.position}
               ObjectView={
                 <View style={styles.overlay}>
-                  <View style={dragStyle}>
-                    <Text style={styles.textStyle}>{props.item.value}</Text>
+                  <View
+                    style={{
+                      flex: 1,
+                      flexDirection: 'column',
+                    }}>
+                    <View
+                      style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                      }}>
+                      <View
+                        style={{
+                          elevation: 15,
+                          borderTopLeftRadius: 5,
+                          borderTopRightRadius: 5,
+                          width: 22,
+                          borderBottomWidth: 10,
+                          borderBottomColor:
+                            props.item.value !== 'Comer'
+                              ? '#FFAD45'
+                              : '#FF514F',
+                          borderRightWidth: 5,
+                          borderRightColor: 'transparent',
+                          borderStyle: 'solid',
+                        }}
+                      />
+                      <View style={{width: 15}} />
+                      <View
+                        style={{
+                          elevation: 15,
+                          borderTopLeftRadius: 5,
+                          borderTopRightRadius: 5,
+                          flex: 1,
+                          borderBottomWidth: 10,
+                          borderBottomColor:
+                            props.item.value !== 'Comer'
+                              ? '#FFAD45'
+                              : '#FF514F',
+                          borderLeftWidth: 5,
+                          borderLeftColor: 'transparent',
+                          borderStyle: 'solid',
+                        }}
+                      />
+                    </View>
+                    <View
+                      style={{
+                        elevation: 15,
+                        backgroundColor:
+                          props.item.value !== 'Comer' ? '#FFAD45' : '#FF514F',
+                        borderBottomLeftRadius: 5,
+                        borderBottomRightRadius: 5,
+                      }}>
+                      <Text style={styles.textStyle}>{props.item.value}</Text>
+                    </View>
+                    <View
+                      style={{
+                        flex: 1,
+                        flexDirection: 'row',
+                      }}>
+                      <View style={{width: 20}} />
+                      <View
+                        style={{
+                          elevation: 15,
+                          width: 22,
+                          borderTopWidth: 10,
+                          borderTopColor:
+                            props.item.value !== 'Comer'
+                              ? '#FFAD45'
+                              : '#FF514F',
+                          borderLeftWidth: 5,
+                          borderLeftColor: 'transparent',
+                          borderRightWidth: 5,
+                          borderRightColor: 'transparent',
+                          borderStyle: 'solid',
+                        }}
+                      />
+                    </View>
                   </View>
                 </View>
               }
             />
           </View>
-
-          {/* top flap  */}
-          {props.item.top && (
-            <View style={styles.overlay}>
-              <Layout
-                position={topFlapPosition}
-                ObjectView={
-                  <View
-                    style={[
-                      dragStyle,
-                      styles.flapStyle,
-                      {backgroundColor: '#F2F2F2'},
-                    ]}
-                  />
-                }
-              />
-            </View>
-          )}
-
-          {/* bottom flap  */}
-          {props.item.bottom && (
-            <View style={styles.overlay}>
-              <Layout
-                position={bottomFlapPosition}
-                ObjectView={
-                  <View
-                    style={[
-                      dragStyle,
-                      styles.flapStyle,
-                      // {elevation: 0.0001},
-                    ]}
-                  />
-                }
-              />
-            </View>
-          )}
         </View>
       </DraxView>
     </View>
@@ -134,11 +138,11 @@ const styles = StyleSheet.create({
     elevation: 0.01,
   },
   overlay: {
-    // flex: 1,
+    flex: 1,
     position: 'absolute',
     opacity: 1,
     width: '100%',
-    height: '100%',
+    height: '115%',
   },
   dragging: {
     opacity: 0,
@@ -170,7 +174,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: '100%',
     width: '100%',
-    borderRadius: RSize(0.015, 'h'),
+    borderRadius: 10,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
     borderWidth: 1,
@@ -180,7 +184,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: RSize(0.04, 'h'),
+    fontSize: RSize(0.018, 'w'),
     color: '#FFFFFF',
     textTransform: 'none',
     elevation: 11,
