@@ -26,15 +26,12 @@ const InicioView = ({navigation}: InicioViewProps) => {
   };
 
   useEffect(() => {
-    // setTimeout(() => setLoading(false), 1000);
-    setLoading(false);
-  }, []);
-
-  useEffect(() => {
     console.log('User: ', user);
     if (user) {
       refreshUser();
     }
+    // setTimeout(() => setLoading(false), 1000);
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 

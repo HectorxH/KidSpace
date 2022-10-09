@@ -62,7 +62,6 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   useEffect(() => {
     instance = request.agent();
-    setInstance(inst);
     setInstance(instance);
     if (!user) {
       getUser();
@@ -118,9 +117,9 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const refresh = async () => {
     try {
-      await logout();
       instance = request.agent();
       setInstance(instance);
+      await logout();
       const res = await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/login`)
         .send({

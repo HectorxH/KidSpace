@@ -48,8 +48,7 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const userData = useAuth().user;
   const userCurso = useAuth().curso;
-  const instance = useAuth().instance;
-  const {refresh} = useAuth();
+  const {refresh, instance} = useAuth();
 
   const loadNotification = () => {
     let visible = false;
@@ -111,6 +110,8 @@ const MainMap = ({navigation}: MainMapProps) => {
       setLoading(false);
     } catch (e) {
       console.log(e);
+      navigation.popToTop();
+      navigation.push('ErrorView');
     }
   };
 
