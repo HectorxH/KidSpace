@@ -486,6 +486,9 @@
         "position": {
           "start": [2, 5],
           "end": [10, 15]
+        },
+        "settings": {
+          "fontSize": 21
         }
       }
     ]

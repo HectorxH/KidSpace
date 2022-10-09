@@ -80,12 +80,14 @@ const Objects3d = (props: Objects3dProps) => {
     let rots = [...rotations];
     rots[pageNumber][index] = rotation;
 
-    if (rotateState === 1) {
-      setTransforms(transform);
-    }
-    if (rotateState !== 2) {
-      setRotations(rots);
-    }
+    console.log('rotate state', rotateState);
+
+    // if (rotateState === 2) {
+    setTransforms(transform);
+    // }
+    // if (rotateState === 3) {
+    setRotations(rots);
+    // }
   }
   function onModelClick(itemIndex: number) {
     console.log('click');
@@ -123,9 +125,9 @@ const Objects3d = (props: Objects3dProps) => {
     }
   }
 
-  console.log(useAlt[pageNumber][itemNumber]);
-  console.log(modelProps[pageNumber][itemNumber]);
-  console.log(modelProps[pageNumber][itemNumber].model);
+  // console.log(useAlt[pageNumber][itemNumber]);
+  // console.log(modelProps[pageNumber][itemNumber]);
+  // console.log(modelProps[pageNumber][itemNumber].model);
   return (
     <Viro3DObject
       source={

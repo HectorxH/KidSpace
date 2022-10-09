@@ -1327,6 +1327,9 @@
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
+        },
+        "settings": {
+          "fontSize": 21
         }
       }
     ],

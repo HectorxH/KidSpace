@@ -71,6 +71,8 @@ export function updateScale(
   setTransforms: ReactStateSetter<ITransform[][]>,
   models3d: IModels[],
 ) {
+  console.log('pinch state', pinchState);
+
   let transform = [...transforms];
   const MIN_SCALE = 0.8;
   const MAX_SCALE = 1.3;
