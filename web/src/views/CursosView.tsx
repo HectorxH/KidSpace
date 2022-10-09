@@ -47,10 +47,7 @@ const CursosView = () => {
       </Box>
       {!loading
         && (
-        // <Stack direction={{ xs: 'column', sm: 'row' }} spacing={5} sx={{ px: 4, py: 2 }}>
           <Box
-            // direction="row"
-            // spacing={2}
             sx={{
               display: 'flex',
               flexWrap: 'wrap',

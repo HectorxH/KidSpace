@@ -15,7 +15,6 @@ import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   NavLink, Link, useMatch, useNavigate,
@@ -77,15 +76,6 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       text: 'Actividades',
       icon: <MenuBookIcon />,
       paths: ['/actividades'],
-      restricted: true,
-      tipo: ['profesor'],
-      visible: true,
-    },
-    {
-      uid: 5,
-      text: 'Estadisticas',
-      icon: <BarChartIcon />,
-      paths: ['/estadisticas'],
       restricted: true,
       tipo: ['profesor'],
       visible: true,
