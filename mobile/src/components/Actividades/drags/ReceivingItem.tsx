@@ -14,6 +14,8 @@ interface ReceivingItemProps {
   itemNumber: number;
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   setResultColor: ReactStateSetter<string>;
@@ -24,10 +26,10 @@ const ReceivingItem = (props: ReceivingItemProps) => {
   const {pageNumber, dragNumber, itemNumber, draggable} = props;
   // console.log(draggable.receivingItems[itemNumber].type);
   return (
-    <View style={styles.overlay}>
+    <View style={styles.container}>
       {/* color circle  */}
       {draggable.receivingItems[itemNumber].type === 'colorCircle' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingColorCircle
             pageNumber={pageNumber}
             dragNumber={dragNumber}
@@ -41,7 +43,7 @@ const ReceivingItem = (props: ReceivingItemProps) => {
       )}
       {/* image  */}
       {draggable.receivingItems[itemNumber].type === 'image' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingImage
             pageNumber={pageNumber}
             dragNumber={dragNumber}
@@ -49,13 +51,16 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             receivingValues={props.receivingValues}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
           />
         </View>
       )}
 
       {/* rectangle  */}
       {draggable.receivingItems[itemNumber].type === 'rectangle' && (
-        <View style={styles.container}>
+        <View style={styles.overlay}>
           <ReceivingRectangle
             pageNumber={pageNumber}
             dragNumber={dragNumber}
@@ -63,6 +68,8 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
           />
         </View>
       )}

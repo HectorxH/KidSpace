@@ -23,9 +23,11 @@ const ToggleButton = (props: ToggleButtonProps) => {
     return null;
   }
   if (
-    toggleDefaultValue[pageNumber] === false &&
-    models3d[pageNumber].length !== models[pageNumber].length &&
-    hideInventory[pageNumber]
+    !(
+      toggleDefaultValue[pageNumber] === true ||
+      models3d[pageNumber].length === models[pageNumber].length ||
+      hideInventory[pageNumber] === true
+    )
   ) {
     return null;
   }

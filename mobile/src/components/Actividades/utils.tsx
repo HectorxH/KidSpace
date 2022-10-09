@@ -114,6 +114,7 @@ export function checkAnswers(
   selectedMaterial: string[][][],
 ) {
   // return true;
+
   var respuestasCorrectas =
     requirements
       .map(n =>
@@ -196,7 +197,11 @@ export function checkAnswers(
       .map(n => rightInputsAnswers[n].length)
       .reduce((x, y) => Number(x) + Number(y), 0) +
     requirements
-      .map(n => selectedMaterial[n][0].length)
+      .map(n =>
+        selectedMaterial[n]
+          .map(userAnswer => userAnswer.length)
+          .reduce((x, y) => Number(x) + Number(y), 0),
+      )
       .reduce((x, y) => Number(x) + Number(y), 0);
 
   return respuestasCorrectas === cantidadRespuestas;

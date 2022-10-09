@@ -24,15 +24,25 @@ const Inventario = (props: InventarioProps) => {
   const {
     pageNumber,
     models3d,
-    visible,
-    showInventory,
     setMaterialSelectorToggle,
+    hideInventory,
+    toggleDefaultValue,
+    toggleValues,
   } = props.inventarioParams;
   const sceneNav = props.sceneNav;
   const [placedItems, setPlacedItems] = props.inventarioParams.placedItems;
   const [nPlacedItems, setNPlacedItems] = props.inventarioParams.nPlacedItems;
   const [positions, setPositions] = props.inventarioParams.positions;
   const [models, setModels] = props.inventarioParams.models;
+
+  const visible =
+    !(
+      toggleDefaultValue[pageNumber] === true ||
+      toggleValues[pageNumber][0] === 1
+    ) || toggleDefaultValue[pageNumber] === true;
+  const showInventory =
+    models3d[pageNumber].length !== models[pageNumber].length &&
+    hideInventory[pageNumber] === false;
 
   function modelHandler(index: number) {
     updatePosition();
@@ -78,6 +88,7 @@ const Inventario = (props: InventarioProps) => {
       .catch(console.log);
     // setPositions([...positions, [0, 0, -1]]);
   }
+
   if (!visible) {
     return null;
   }
@@ -114,7 +125,11 @@ const Inventario = (props: InventarioProps) => {
                     <Image
                       style={styles.iconImage}
                       resizeMode="contain"
-                      source={Images.icons[item.model].square}
+                      source={
+                        typeof item.icon !== 'undefined'
+                          ? Images.icons[item.icon].square
+                          : Images.icons[item.model].square
+                      }
                     />
                   </TouchableOpacity>
                 );

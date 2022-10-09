@@ -16,6 +16,8 @@ export interface ITransform {
 
 export interface IModelProps {
   model: ImageSourcePropType;
+  altModel: ImageSourcePropType;
+  alt: string;
   modelType: string;
   modelImage360: string;
   resources: ImageSourcePropType[];
@@ -29,13 +31,14 @@ export interface IModelProps {
 }
 
 export function updateRotation(
+  pageNumber: number,
   index: number,
   rotateState: number,
   rotation: number,
-  rotations: number[],
-  transforms: ITransform[],
-  setRotations: ReactStateSetter<number[]>,
-  setTransforms: ReactStateSetter<ITransform[]>,
+  rotations: number[][],
+  transforms: ITransform[][],
+  setRotations: ReactStateSetter<number[][]>,
+  setTransforms: ReactStateSetter<ITransform[][]>,
 ) {
   let transform = [...transforms];
   // Giro en todos los ejes
@@ -43,13 +46,13 @@ export function updateRotation(
   // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
 
   //Giro en eje y
-  transform[index].rotation = [
-    transform[index].rotation[0],
-    transform[index].rotation[2] - rotation,
-    transform[index].rotation[2],
+  transform[pageNumber][index].rotation = [
+    transform[pageNumber][index].rotation[0],
+    transform[pageNumber][index].rotation[2] - rotation,
+    transform[pageNumber][index].rotation[2],
   ];
   let rots = [...rotations];
-  rots[index] = rotation;
+  rots[pageNumber][index] = rotation;
 
   if (rotateState === 2) {
     setTransforms(transform);
@@ -60,17 +63,18 @@ export function updateRotation(
 }
 
 export function updateScale(
+  pageNumber: number,
   index: number,
   pinchState: number,
   scaleFactor: number,
-  transforms: ITransform[],
-  setTransforms: ReactStateSetter<ITransform[]>,
+  transforms: ITransform[][],
+  setTransforms: ReactStateSetter<ITransform[][]>,
   models3d: IModels[],
 ) {
   let transform = [...transforms];
   const MIN_SCALE = 0.8;
   const MAX_SCALE = 1.3;
-  const temp = transform[index].scale.map(x => x * scaleFactor);
+  const temp = transform[pageNumber][index].scale.map(x => x * scaleFactor);
   let temp2: Vec3 = [temp[0], temp[1], temp[2]];
   if (temp2[0] < models3d[index].scale[0] * MIN_SCALE) {
     temp2 = [
@@ -78,16 +82,16 @@ export function updateScale(
       models3d[index].scale[1] * MIN_SCALE,
       models3d[index].scale[2] * MIN_SCALE,
     ];
-    transform[index].scale = temp2;
+    transform[pageNumber][index].scale = temp2;
   } else if (temp2[0] > models3d[index].scale[0] * MAX_SCALE) {
     temp2 = [
       models3d[index].scale[0] * MAX_SCALE,
       models3d[index].scale[1] * MAX_SCALE,
       models3d[index].scale[2] * MAX_SCALE,
     ];
-    transform[index].scale = temp2;
+    transform[pageNumber][index].scale = temp2;
   } else {
-    transform[index].scale = temp2;
+    transform[pageNumber][index].scale = temp2;
   }
 
   setTransforms(transform);

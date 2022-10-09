@@ -10,16 +10,32 @@ interface DraggableItemProps {
   pageNumber: number;
   dragNumber: number;
   itemNumber: number;
+  isDragItemPicked: boolean[][][];
 }
 
 const DraggableItem = (props: DraggableItemProps) => {
+  if (
+    props.isDragItemPicked[props.pageNumber][props.dragNumber][
+      props.itemNumber
+    ] === true
+  ) {
+    return null;
+  }
   return (
     <View style={styles.container}>
       {props.item.type === 'image' && (
-        <DraggableImage item={props.item} itemNumber={props.itemNumber} />
+        <DraggableImage
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
       )}
       {props.item.type === 'rectangle' && (
-        <DraggableRectangle item={props.item} itemNumber={props.itemNumber} />
+        <DraggableRectangle
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
       )}
       {props.item.type === 'codeBlock' && (
         <DraggableCodeBlock

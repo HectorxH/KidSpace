@@ -1,5 +1,1236 @@
 [
   {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [5, 6.6],
+          "end": [19.5, 19]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡*Arrastra y suelta las* palabras para *completar el* reporte *de servicio técnico*!",
+        "position": {
+          "start": [0.2, 4],
+          "end": [19.8, 6.5]
+        },
+        "settings": {
+          "fontSize": 0.055
+        }
+      },
+      {
+        "text": "Durante la inspección *técnica*, se *realizó un* cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento *de datos*. La segunda pieza fue {{dragRectangle}} {{iconDragCheck}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}} {{iconDragCheck}}, para mejorar el procesamiento de los gráficos.",
+        "position": {
+          "start": [5.5, 7.1],
+          "end": [19, 18.5]
+        },
+        "settings": {
+          "fontSize": 0.055
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["SSD", "Teclado", "GPU"],
+        "draggableItems": [
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "GPU",
+            "position": {
+              "start": [0.5, 8.7],
+              "end": [4.5, 10.7]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "SSD",
+            "position": {
+              "start": [0.5, 11.8],
+              "end": [4.5, 13.8]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "Teclado",
+            "position": {
+              "start": [0.5, 14.9],
+              "end": [4.5, 16.9]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#bbbbbb",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Ir al Quiz",
+          "buttonTextNormal": "Ir al Quiz"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19, 3.5]
+        },
+        "target": 1,
+        "require": [0],
+        "visible": false
+      }
+    ]
+  },
+  
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "antofagasta",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "lagos",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "rancagua",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "image360": "valdivia",
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0.5, 4],
+          "end": [10, 9.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "chile",
+        "position": {
+          "start": [10.5, 4],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Arrastra cada materia prima a su región correspondiente según tus observaciones.",
+        "position": {
+          "start": [1, 4.5],
+          "end": [9.5, 9]
+        },
+        "settings": {
+          "fontSize": 0.05
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["cobre", "hortalizas", "madera", "leche_de_vaca"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "madera",
+            "value": "madera",
+            "position": {
+              "start": [2.5, 10.5],
+              "end": [4.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "leche_de_vaca",
+            "value": "leche_de_vaca",
+            "position": {
+              "start": [5.5, 10.5],
+              "end": [7.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "hortalizas",
+            "value": "hortalizas",
+            "position": {
+              "start": [2.5, 15],
+              "end": [4.5, 19]
+            }
+          },
+          {
+            "type": "image",
+            "name": "cobre",
+            "value": "cobre",
+            "position": {
+              "start": [5.5, 15],
+              "end": [7.5, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 4],
+              "end": [13.7, 8]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 8.5],
+              "end": [13.7, 12.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.7, 13],
+              "end": [13.7, 17]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [16, 14],
+              "end": [18, 18]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 2,
+        "require": [1],
+        "visible": false
+      }
+    ]
+  },
+
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando *las tarjetas* podrás aprender sobre distintos materiales y",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como estos se utilizan en la elaboración de diversos productos tecnológicos.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Dada una materia prima, que aparecerá en tu pantalla, tienes que *encontrar una tarjeta*",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "con el *material* que se elabora con esta. Por ejemplo, si en la pantalla aparecen la palabra \"*árbol*\",",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*. Escanea la tarjeta con tu celular. ",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si la tarjeta fue correcta, podrás ver un video corto. Para verificar lo aprendido tienes que",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "responder las preguntas, que podrás encontrar en el botón de la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Empecemos! Intenta encontrar la tarjeta con material que se hace de materia prima *arena*.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "harina",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "hilo",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "mermelada",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "papel",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "plastico",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "vidrio",
+          "display": "vidrio",
+          "displayType": "video"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 11,
+        "require": [10],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Qué componente no es parte de la mezcla de vidrio?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "¿Qué productos se hacen de vidrio?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Sal"],
+        "answers": [
+          {
+            "text": "Arena de cuarzo",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "Cal",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "Sal",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["Lentes"],
+        "answers": [
+          {
+            "text": "Ropa",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "Lentes",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "Sillas",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien!  ¿Podrás encontrar la tarjeta con el material que se hace de *petróleo*?",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "menhera",
+          "display": "cry",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 12,
+        "require": [11],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente! Ahora necesitas encontrar la tarjeta correspondiente a X.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "imageTrackers": [
+        {
+          "target": "fbk",
+          "display": "fbk",
+          "displayType": "image"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 14,
+        "require": [13],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pregunta 1",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Pregunta 2",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        },
+        "settings": { 
+          "fontSize": 0.05,
+          "elevation": 21,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["3"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
+      },
+      {
+        "rightAnswer": ["2"],
+        "answers": [
+          {
+            "text": "1",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "2",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "3",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
     "background": "bg_materiales",
     "items": [
       {
@@ -20,7 +1251,7 @@
     ],
     "texts": [
       {
-        "text": "¡Increible trabajo!\nVictoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
+        "text": "¡Increible trabajo! Victoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
         "position": {
           "start": [1.5, 2.5],
           "end": [12.5, 15]
@@ -41,7 +1272,7 @@
           "start": [3, 13.5],
           "end": [11, 16.5]
         },
-        "target": 1,
+        "target": 15,
         "require": [],
         "visible": false
       }
@@ -215,7 +1446,7 @@
           "end": [13, 19.5]
         },
         "target": -1,
-        "require": [1],
+        "require": [15],
         "visible": false
       }
     ]

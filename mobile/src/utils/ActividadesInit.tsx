@@ -139,6 +139,16 @@ const ActividadesParams = (
         : [[]],
     ),
   );
+  // [pageNumber][dragNumber][receivingItemNumber] = dragAnswer = 0 (no responde) | 1 (bien) | 2 (mal), se usa para estilos
+  const [pickedDragAnswersIndex, setPickedDragAnswersIndex] = useState<
+    number[][][]
+  >(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.receivingItems.map(() => -1))
+        : [[]],
+    ),
+  );
   // [pageNumber][dragNumber][answerNumber] = rightAnswer
   const rightDragAnswers = actividad.map(s =>
     typeof s.draggable !== 'undefined' ? s.draggable.map(q => q.answer) : [],
@@ -161,6 +171,16 @@ const ActividadesParams = (
       typeof s.draggable !== 'undefined'
         ? s.draggable.map(q => q.receivingItems.map(item => item.value))
         : [['']],
+    ),
+  );
+
+  // [pageNumber][dragNumber][itemNumber] = itemValue
+  // se usa para controlar valores en campos de drag-receive
+  const [isDragItemPicked, setIsDragItemPicked] = useState<boolean[][][]>(
+    actividad.map(s =>
+      typeof s.draggable !== 'undefined'
+        ? s.draggable.map(q => q.draggableItems.map(() => false))
+        : [[]],
     ),
   );
 
@@ -212,8 +232,10 @@ const ActividadesParams = (
     pickedAnswersDropdown: [pickedAnswersDropdown, setPickedAnswersDropdown],
     userAnswersQuiz: [userAnswersQuiz, setUserAnswersQuiz],
     pickedAnswersQuiz: [pickedAnswersQuiz, setPickedAnswersQuiz],
+    isDragItemPicked: [isDragItemPicked, setIsDragItemPicked],
     userDragAnswers: [userDragAnswers, setUserDragAnswers],
     pickedDragAnswers: [pickedDragAnswers, setPickedDragAnswers],
+    pickedDragAnswersIndex: [pickedDragAnswersIndex, setPickedDragAnswersIndex],
     rightDragAnswers: rightDragAnswers,
     receivingNames: [receivingNames, setReceivingNames],
     receivingValues: [receivingValues, setReceivingValues],

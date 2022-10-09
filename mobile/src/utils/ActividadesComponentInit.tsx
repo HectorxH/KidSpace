@@ -1,10 +1,16 @@
 import {useState} from 'react';
+import Models from '../assets/3d/models';
+import {
+  IModelProps,
+  ITransform,
+} from '../components/ARScenes/ARcomponents/utils';
 import {Vec3} from '../types/activity';
 import {
   IActividadesComponentParams,
   IActividadesParams,
   IActNavigationParams,
   IInventarioParams,
+  IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
   IToggleButtonParams,
@@ -18,6 +24,8 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     cantMonedas,
     userDragAnswers,
     pickedDragAnswers,
+    pickedDragAnswersIndex,
+    isDragItemPicked,
     userInputAnswers,
     rightInputAnswer,
     userAnswers,
@@ -48,6 +56,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       ? actividadPage.AR.models
       : [],
   );
+
   const imageTrackers = actividades.map(actividadPage =>
     typeof actividadPage.AR !== 'undefined' &&
     typeof actividadPage.AR.imageTrackers !== 'undefined'
@@ -96,6 +105,70 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     models.map(placedModels => placedModels.length),
   );
 
+  // vars modelos 3d
+  const [transforms, setTransforms] = useState<ITransform[][]>(
+    models3d.map(model3d =>
+      model3d.map(item => ({
+        scale: item.scale,
+        rotation: item.rotation,
+        position: [0, 0, 0],
+      })),
+    ),
+  );
+  const modelProps: IModelProps[][] = models3d.map(model3d =>
+    model3d.map(item => ({
+      model: Models[item.model].model,
+      altModel:
+        typeof item.alt !== 'undefined'
+          ? Models[item.alt].model
+          : Models[item.model].model,
+      alt: typeof item.alt !== 'undefined' ? item.alt : '',
+      modelType: typeof item.type !== 'undefined' ? item.type : 'object',
+      modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
+      resources: Models[item.model].resources,
+      materials: Models[item.model].materials,
+      type: Models[item.model].type,
+      interactable:
+        typeof item.interactable !== 'undefined' ? item.interactable : [],
+      ARMaterials:
+        typeof item.ARMaterials !== 'undefined'
+          ? item.ARMaterials
+          : {materialOrder: [], materialChoices: []},
+    })),
+  );
+
+  const [rotations, setRotations] = useState<number[][]>(
+    modelProps.map(model => model.map(() => 0)),
+  );
+
+  const [useAlt, setUseAlt] = useState<boolean[][]>(
+    models3d.map(model3d => model3d.map(() => false)),
+  );
+
+  // image tracking
+  const [markerTrackingState, setMarkerTrackingState] = useState<string[][]>(
+    actividades.map(actividadPage =>
+      typeof actividadPage.AR !== 'undefined' &&
+      typeof actividadPage.AR.imageTrackers !== 'undefined'
+        ? actividadPage.AR.imageTrackers.map(() => 'lastKnownPose')
+        : [],
+    ),
+  );
+
+  const trackerMessages = actividades.map(actividadPage =>
+    typeof actividadPage.AR !== 'undefined' &&
+    typeof actividadPage.AR.trackerMessage !== 'undefined'
+      ? actividadPage.AR.trackerMessage
+      : '',
+  );
+
+  const [activeTracker, setActiveTracker] = useState<string[]>(
+    actividades.map(() => ''),
+  );
+  const [activeTrackerIndex, setActiveTrackerIndex] = useState<number[]>(
+    actividades.map(() => 0),
+  );
+
   const ViroAppParams: IViroAppParams = {
     pageNumber: pageNumber,
     models: [...models],
@@ -103,31 +176,31 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     positions: positions,
     models3d: models3d,
     imageTrackers: imageTrackers,
+    modelProps: modelProps,
+    transforms: [transforms, setTransforms],
+    useAlt: [useAlt, setUseAlt],
+    rotations: [rotations, setRotations],
     materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
     setSelectedModelMaterials: setSelectedModelMaterials,
     modelMaterial: modelMaterial[0],
     setActiveModelIndex: setActiveModelIndex,
     updateMaterial: [updateMaterial, setUpdateMaterial],
+    markerTrackingState: [markerTrackingState, setMarkerTrackingState],
+    activeTracker: [activeTracker, setActiveTracker],
+    activeTrackerIndex: [activeTrackerIndex, setActiveTrackerIndex],
   };
 
   const InventarioParams: IInventarioParams = {
     pageNumber: pageNumber,
     models3d: models3d,
-    showInventory: models3d.map(
-      (m3d, pNumber) =>
-        m3d.length !== models[pNumber].length &&
-        hideInventory[pNumber] === false,
-    ),
-    visible: toggleDefaultValue.map(
-      (tDefaultValue, toggleIndex) =>
-        !(tDefaultValue === true || toggleValues[toggleIndex][0] === 1) ||
-        tDefaultValue === true,
-    ),
     setMaterialSelectorToggle: setMaterialSelectorToggle,
     models: [models, setModels],
     positions: [positions, setPositions],
     placedItems: [placedItems, setPlacedItems],
     nPlacedItems: [nPlacedItems, setNPlacedItems],
+    hideInventory: hideInventory,
+    toggleDefaultValue: toggleDefaultValue,
+    toggleValues: toggleValues,
   };
 
   const MaterialSelectorParams: IMaterialSelectorParams = {
@@ -141,6 +214,16 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
+  const MarkerTrackerFeedbackParams: IMarkerTrackerFeedbackParams = {
+    pageNumber: pageNumber,
+    activeTrackerIndex: activeTrackerIndex,
+    markerTrackingState: markerTrackingState,
+    activeTracker: activeTracker,
+    toggleDefaultValue: toggleDefaultValue,
+    toggleValues: toggleValues,
+    trackerMessages: trackerMessages,
+  };
+
   const StoryComponentParams: IStoryComponentParams = {
     pageNumber: pageNumber,
     story: actividades,
@@ -151,10 +234,12 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswers: pickedAnswers,
     userAnswersDropdown: userAnswersDropdown,
     pickedAnswersDropdown: pickedAnswersDropdown,
+    isDragItemPicked: isDragItemPicked,
     userDragAnswers: userDragAnswers,
     receivingNames: receivingNames,
     receivingValues: receivingValues,
     pickedDragAnswers: pickedDragAnswers,
+    pickedDragAnswersIndex: pickedDragAnswersIndex,
     userAnswersQuiz: userAnswersQuiz,
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],
@@ -211,6 +296,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     storyComponentParams: StoryComponentParams,
     toggleButtonParams: ToggleButtonParams,
     actNavigationParams: ActNavigationParams,
+    markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
   };
 
   return actividadComponentParams;

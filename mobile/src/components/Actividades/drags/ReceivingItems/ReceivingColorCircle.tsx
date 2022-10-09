@@ -4,7 +4,6 @@ import {DraxView} from 'react-native-drax';
 import {IDraggable} from '../../../../types/activity';
 import {ReactStateSetter} from '../../../../types/others';
 import {RSize} from '../../../../utils/responsive';
-import Layout from '../../../Utils/Layout';
 import {getColor} from '../../utils';
 
 interface ReceivingColorCircleProps {
@@ -46,20 +45,15 @@ const ReceivingColorCircle = (props: ReceivingColorCircleProps) => {
   function resetAnswer() {}
   return (
     <View style={styles.container}>
-      <Layout
-        position={draggable.receivingItems[itemNumber].position}
-        ObjectView={
-          <DraxView
-            style={dragStyle}
-            receivingStyle={[styles.receivingBase, styles.receivingHover]}
-            onTouchStart={() => {
-              resetAnswer();
-            }}
-            onReceiveDragDrop={event => {
-              colorResult(event.dragged.payload);
-            }}
-          />
-        }
+      <DraxView
+        style={dragStyle}
+        receivingStyle={[styles.receivingBase, styles.receivingHover]}
+        onTouchStart={() => {
+          resetAnswer();
+        }}
+        onReceiveDragDrop={event => {
+          colorResult(event.dragged.payload[1]);
+        }}
       />
     </View>
   );

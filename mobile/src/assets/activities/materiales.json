@@ -63,7 +63,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -72,7 +72,7 @@
         "text": "Al principio solíamos encontrar la materia prima espontáneamente en la naturaleza.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -80,7 +80,7 @@
       {
         "name": "materias_primas_1",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -92,7 +92,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -101,7 +101,7 @@
         "text": "Desde los tiempos antiguos hemos usado la madera, piedra o huesos.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -109,7 +109,7 @@
       {
         "name": "materias_primas_1",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -121,7 +121,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -130,7 +130,7 @@
         "text": "Después se emplearon materiales elaborados como arcilla y lana.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -138,7 +138,7 @@
       {
         "name": "materias_primas_2",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -149,7 +149,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -158,7 +158,7 @@
       {
         "text": "La materia prima no engloba solamente los materiales que utilizamos para construir.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -168,7 +168,7 @@
         "name": "materias_primas_3",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -178,7 +178,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -187,7 +187,7 @@
       {
         "text": "Las hortalizas, las carnes y la leche también se consideran materia prima.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -197,7 +197,7 @@
         "name": "materias_primas_3",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -208,16 +208,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Conoce a Victoria. Ella trabaja en la manufactura.",
+        "text": "Conoce a Victoria. Ella trabaja en la *manufactura*.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -225,8 +225,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -237,7 +237,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -246,7 +246,7 @@
         "text": "Su trabajo consiste en recibir distintos materiales y transformarlos en objetos,",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -254,8 +254,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -266,7 +266,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -275,7 +275,7 @@
         "text": "como ropa, muebles o incluso comida.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -283,8 +283,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -294,7 +294,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -303,7 +303,7 @@
       {
         "text": "En su trabajo, la materia prima se recibe desde *distintos lugares de Chile*.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -312,8 +312,8 @@
       {
         "name": "VictoriaSmile",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -323,16 +323,16 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Por ejemplo, la madera es más común en el Sur de Chile, debido a su clima más húmedo.",
+        "text": "Por ejemplo, la *madera* es más común en el *sur de Chile*, debido a su clima más húmedo.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -341,8 +341,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -352,7 +352,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -361,7 +361,7 @@
       {
         "text": "En cambio, es improbable encontrar la madera en el norte porque el clima es demasiado árido.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -371,7 +371,7 @@
         "name": "norte_sur",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -381,16 +381,16 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " Pero este clima árido ayuda a que el Norte sea el mayor productor de distintos metales y minerales.",
+        "text": " Pero este clima árido ayuda a que *el norte* sea el mayor productor de *distintos metales y minerales*.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -400,7 +400,7 @@
         "name": "norte_chile",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -410,16 +410,16 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": "Lo mismo pasa con las frutas y verduras, estas necesitan estar en un *lugar con clima adecuado*.",
+        "text": "Lo mismo pasa con las *frutas* *y* *verduras*, estas necesitan estar en un *lugar con clima adecuado*.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -428,8 +428,8 @@
       {
         "name": "VictoriaSmile",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -440,7 +440,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -449,7 +449,7 @@
         "text": "Así, cada lugar tiene sus propios materiales predominantes que  podemos extraer.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -457,8 +457,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -469,7 +469,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -478,7 +478,7 @@
         "text": "Incluso con tan solo observar un lugar podemos decir qué materiales se podrán encontrar en este,",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -486,7 +486,7 @@
       {
         "name": "ojo_man",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -498,16 +498,16 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " y cuales son improbables de encontrar.",
+        "text": "y cuales son improbables de encontrar.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -515,7 +515,7 @@
       {
         "name": "ojo_man",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -527,7 +527,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -536,7 +536,7 @@
         "text": "Victoria intenta entrenar tu habilidad de observación, visitando algunos lugares de Chile.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -544,8 +544,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -559,12 +559,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -572,6 +574,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -579,6 +582,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -612,10 +616,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -632,12 +636,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -645,6 +651,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -652,6 +659,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -685,10 +693,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -705,12 +713,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -718,6 +728,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -725,6 +736,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -746,7 +758,7 @@
     ],
     "texts": [
       {
-        "text": "Un portal es como una puerta a otra habitación. Tienes que entrar en un portal para transportarte a una región de Chile.",
+        "text": "Un portal es como una puerta hacia otra habitación. Tienes que entrar en un portal para transportarte a una región de Chile.",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -758,10 +770,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -778,12 +790,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -791,6 +805,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -798,6 +813,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -831,10 +847,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -851,12 +867,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -864,6 +882,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -871,6 +890,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -904,10 +924,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -924,12 +944,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -937,6 +959,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -944,6 +967,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -977,10 +1001,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -997,12 +1021,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -1010,6 +1036,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -1017,6 +1044,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -1050,10 +1078,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -1070,12 +1098,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
+          "icon": "antofagasta",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
+          "icon": "lagos",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -1083,6 +1113,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "rancagua",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -1090,6 +1121,7 @@
         },
         {
           "model": "portal_window_frame",
+          "icon": "valdivia",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -1259,7 +1291,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1268,7 +1300,7 @@
         "text": "Un producto tecnológico es un objeto creado para mejorar la calidad de vida de las personas.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1276,8 +1308,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -1288,7 +1320,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1297,7 +1329,7 @@
         "text": "Para elaborarlo, primero se extraen las materias primas de la naturaleza. ",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1305,7 +1337,7 @@
       {
         "name": "forestnt_2",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -1316,7 +1348,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1325,7 +1357,7 @@
       {
         "text": "Estas se transforman en materiales y con los materiales se elaboran los productos.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1335,7 +1367,7 @@
         "name": "forestnt_2",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -1345,7 +1377,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1354,7 +1386,7 @@
       {
         "text": "Todos los productos tecnológicos pueden ser analizados según la complejidad de su elaboración.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1363,8 +1395,8 @@
       {
         "name": "VictoriaSmile",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -1374,8 +1406,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
-          "end": [19, 16]
+          "start": [9, 2],
+          "end": [19, 14]
         }
       }
     ],
@@ -1383,7 +1415,7 @@
       {
         "text": "¿Cuántas personas crees que son necesarias para elaborar un celular?",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [9.5, 2.5],
           "end": [18.5, 10]
         }
       }
@@ -1392,8 +1424,8 @@
       {
         "name": "VictoriaQuestion",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ],
@@ -1431,7 +1463,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1440,7 +1472,7 @@
       {
         "text": "Así es, y eso se debe a que un celular tiene muchos elementos",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1449,8 +1481,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ],
@@ -1459,14 +1491,14 @@
         "name": "bubblePhoneParts",
         "position": {
           "start": [0.5, 0.5],
-          "end": [5, 10]  
+          "end": [4, 10]  
         }
       },
       {
         "name": "bubbleOk",
         "position": {
           "start": [0.5, 10.5],
-          "end": [5, 15]  
+          "end": [4, 15]  
         }
       }
     ]
@@ -1476,7 +1508,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1485,7 +1517,7 @@
       {
         "text": "que deben ser fabricados antes de juntarlas en un solo producto.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1494,8 +1526,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ],
@@ -1504,14 +1536,14 @@
         "name": "bubblePhoneParts",
         "position": {
           "start": [0.5, 0.5],
-          "end": [5, 10]  
+          "end": [4, 10]  
         }
       },
       {
         "name": "bubbleOk",
         "position": {
           "start": [0.5, 10.5],
-          "end": [5, 15]  
+          "end": [4, 15]  
         }
       }
     ]
@@ -1521,7 +1553,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1530,7 +1562,7 @@
       {
         "text": "Los productos artesanales se elaboran con instalaciones sencillas.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1540,7 +1572,7 @@
         "name": "materiales_3",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -1550,7 +1582,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1559,7 +1591,7 @@
       {
         "text": "Los productos industriales se fabrican en lugares con grandes máquinas.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1569,7 +1601,7 @@
         "name": "materiales_2",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -1579,7 +1611,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1588,7 +1620,7 @@
       {
         "text": "Las grandes obras de ingeniería requieren la intervención de las instalaciones muy complejas.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1598,7 +1630,7 @@
         "name": "materiales_1",
         "position": {
           "start": [0.5, 0.5],
-          "end": [8.5, 19.5]  
+          "end": [7.5, 19.5]  
         }
       }
     ]
@@ -1609,7 +1641,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1618,7 +1650,7 @@
         "text": "Además, cada objeto tecnológico se puede clasificar según el material del cual está hecho.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1626,8 +1658,8 @@
       {
         "name": "VictoriaSmile",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ]
@@ -1638,7 +1670,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1655,8 +1687,8 @@
       {
         "name": "VictoriaQuestion",
         "position": {
-          "start": [11.5, 2],
-          "end": [17.5, 20]  
+          "start": [12.5, 2],
+          "end": [18.5, 20]  
         }
       }
     ],
@@ -1664,8 +1696,8 @@
       {
         "name": "questions",
         "position": {
-          "start": [10.5, 1],
-          "end": [14, 7]  
+          "start": [11.5, 1],
+          "end": [15, 7]  
         },
         "settings": {
           "transform": [
@@ -1711,7 +1743,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1720,7 +1752,7 @@
         "text": "Exacto. Para fabricar un mueble, se necesitan tablones de madera",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1728,7 +1760,7 @@
       {
         "name": "forestnt_1",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -1740,7 +1772,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1749,7 +1781,7 @@
         "text": "que se extraen de los troncos de los árboles.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1757,7 +1789,7 @@
       {
         "name": "forestnt_1",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -1769,7 +1801,7 @@
       {
         "position": {
           "start": [1, 4],
-          "end": [11, 16]
+          "end": [12, 16]
         }
       }
     ],
@@ -1778,7 +1810,7 @@
         "text": "Se dice que la madera en este caso es el material que proviene de los árboles - la materia prima.",
         "position": {
           "start": [1.5, 4.5],
-          "end": [10.5, 15.5]
+          "end": [11.5, 15.5]
         }
       }
     ],
@@ -1786,7 +1818,7 @@
       {
         "name": "forestnt_1",
         "position": {
-          "start": [11.5, 0.5],
+          "start": [12.5, 0.5],
           "end": [19.5, 19.5]  
         }
       }
@@ -1797,7 +1829,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1806,7 +1838,7 @@
       {
         "text": "Victoria te invita a analizar varios objetos tecnológicos",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1815,8 +1847,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -1826,7 +1858,7 @@
     "textBoxes": [
       {
         "position": {
-          "start": [9, 4],
+          "start": [8, 4],
           "end": [19, 16]
         }
       }
@@ -1835,7 +1867,7 @@
       {
         "text": "para aprender sobre cómo estos se elaboran.",
         "position": {
-          "start": [9.5, 4.5],
+          "start": [8.5, 4.5],
           "end": [18.5, 15.5]
         }
       }
@@ -1844,8 +1876,8 @@
       {
         "name": "VictoriaHappy",
         "position": {
-          "start": [2.5, 2],
-          "end": [8.5, 20]  
+          "start": [1.5, 2],
+          "end": [7.5, 20]  
         }
       }
     ]
@@ -1856,16 +1888,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -1909,16 +1932,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -1962,16 +1976,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2015,16 +2020,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2068,16 +2064,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2093,7 +2080,7 @@
     ],
     "texts": [
       {
-        "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*.\nEscanea la tarjeta con tu celular.",
+        "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*. Escanea la tarjeta con tu celular. ",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -2121,16 +2108,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2158,10 +2136,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2174,16 +2152,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2211,6 +2180,50 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Empecemos! Intenta encontrar la tarjeta con el material que se hace con la materia prima *arena*.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
           "buttonTextAlt": " Preguntas",
@@ -2227,20 +2240,37 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ],
+      "models": [],
+      "trackerMessage": "Encuentra el material hecho de *Arena*",
       "imageTrackers": [
         {
-          "target": "pipe1",
-          "display": "test",
+          "target": "harina",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "hilo",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "mermelada",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "papel",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "plastico",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "vidrio",
+          "display": "vidrio",
           "displayType": "video"
         }
       ]
@@ -2276,8 +2306,8 @@
           "start": [13, 1],
           "end": [19, 3.5]
         },
-        "target": 52,
-        "require": [51],
+        "target": 53,
+        "require": [52],
         "visible": false
       }
     ],
@@ -2304,7 +2334,7 @@
     ],
     "texts": [
       {
-        "text": "Pregunta 1",
+        "text": "¿Qué componente no es parte de la mezcla de vidrio?",
         "position": {
           "start": [2, 4.5],
           "end": [9.3, 10]
@@ -2317,7 +2347,7 @@
         }
       },
       {
-        "text": "Pregunta 2",
+        "text": "¿Qué productos se hacen de vidrio?",
         "position": {
           "start": [10.7, 4.5],
           "end": [18, 10]
@@ -2332,24 +2362,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["3"],
+        "rightAnswer": ["Sal"],
         "answers": [
           {
-            "text": "1",
+            "text": "Arena de cuarzo",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Cal",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Sal",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -2358,24 +2388,24 @@
         ]
       },
       {
-        "rightAnswer": ["2"],
+        "rightAnswer": ["Botellas", "Lentes"],
         "answers": [
           {
-            "text": "1",
+            "text": "Botellas",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Lentes",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Sillas",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -2388,16 +2418,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2413,7 +2434,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien!\n¿Podrás encontrar la tarjeta que corresponde a  “X”?",
+        "text": "¡Muy bien! ¿Podrás encontrar la tarjeta con el material que se hace a partir del *petróleo*?",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -2441,21 +2462,38 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ],
+      "models": [],
+      "trackerMessage": "Encuentra el material hecho de *Petróleo*",
       "imageTrackers": [
         {
-          "target": "menhera",
-          "display": "cry",
-          "displayType": "image"
+          "target": "harina",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "hilo",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "mermelada",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "papel",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "plastico",
+          "display": "plastico",
+          "displayType": "video"
+        },
+        {
+          "target": "vidrio",
+          "display": "",
+          "displayType": ""
         }
       ]
     },
@@ -2490,8 +2528,8 @@
           "start": [13, 1],
           "end": [19, 3.5]
         },
-        "target": 54,
-        "require": [53],
+        "target": 55,
+        "require": [54],
         "visible": false
       }
     ],
@@ -2518,7 +2556,7 @@
     ],
     "texts": [
       {
-        "text": "Pregunta 1",
+        "text": "¿Qué proceso de creación de plástico requiere alta temperatura y presión?",
         "position": {
           "start": [2, 4.5],
           "end": [9.3, 10]
@@ -2531,7 +2569,7 @@
         }
       },
       {
-        "text": "Pregunta 2",
+        "text": "¿Qué productos se hacen de plástico?",
         "position": {
           "start": [10.7, 4.5],
           "end": [18, 10]
@@ -2546,24 +2584,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["3"],
+        "rightAnswer": ["Polimerización"],
         "answers": [
           {
-            "text": "1",
+            "text": "Purificación",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Fusión",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Polimerización",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -2572,24 +2610,24 @@
         ]
       },
       {
-        "rightAnswer": ["2"],
+        "rightAnswer": ["Botellas", "Bolsas"],
         "answers": [
           {
-            "text": "1",
+            "text": "Comida",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Botellas",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Bolsas",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -2602,16 +2640,7 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2627,7 +2656,7 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente!\nAhora necesitas encontrar la tarjeta correspondiente a X.",
+        "text": "¡Excelente! Ahora necesitas encontrar la tarjeta con  el material que se hace a partir del *trigo*. ",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -2655,21 +2684,38 @@
   {
     "AR": {
       "start": true,
-      "hideInventory": true,
-      "models": [
-        {
-          "model": "portal_window_frame",
-          "type": "portal",
-          "image360": "antofagasta",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 0, 0]
-        }
-      ],
+      "models": [],
+      "trackerMessage": "Encuentra el material hecho de *Trigo*",
       "imageTrackers": [
         {
-          "target": "fbk",
-          "display": "fbk",
-          "displayType": "image"
+          "target": "harina",
+          "display": "harina",
+          "displayType": "video"
+        },
+        {
+          "target": "hilo",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "mermelada",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "papel",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "plastico",
+          "display": "",
+          "displayType": ""
+        },
+        {
+          "target": "vidrio",
+          "display": "",
+          "displayType": ""
         }
       ]
     },
@@ -2704,8 +2750,8 @@
           "start": [13, 1],
           "end": [19, 3.5]
         },
-        "target": 56,
-        "require": [55],
+        "target": 57,
+        "require": [56],
         "visible": false
       }
     ],
@@ -2732,7 +2778,7 @@
     ],
     "texts": [
       {
-        "text": "Pregunta 1",
+        "text": "¿Cuál es el nombre de proceso durante el cuál se genera la harina?",
         "position": {
           "start": [2, 4.5],
           "end": [9.3, 10]
@@ -2745,7 +2791,7 @@
         }
       },
       {
-        "text": "Pregunta 2",
+        "text": "¿Qué productos se hacen de harina?",
         "position": {
           "start": [10.7, 4.5],
           "end": [18, 10]
@@ -2760,24 +2806,24 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["3"],
+        "rightAnswer": ["Molienda"],
         "answers": [
           {
-            "text": "1",
+            "text": "Molienda",
             "position": {
               "start": [2, 10.5],
               "end": [9.3, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Purificación",
             "position": {
               "start": [2, 13.5],
               "end": [9.3, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Limpieza",
             "position": {
               "start": [2, 16.5],
               "end": [9.3, 19]
@@ -2786,24 +2832,24 @@
         ]
       },
       {
-        "rightAnswer": ["2"],
+        "rightAnswer": ["Pan", "Pasta"],
         "answers": [
           {
-            "text": "1",
+            "text": "Pan",
             "position": {
               "start": [10.7, 10.5],
               "end": [18, 13]
             }
           },
           {
-            "text": "2",
+            "text": "Ensalada",
             "position": {
               "start": [10.7, 13.5],
               "end": [18, 16]
             }
           },
           {
-            "text": "3",
+            "text": "Pasta",
             "position": {
               "start": [10.7, 16.5],
               "end": [18, 19]
@@ -2836,7 +2882,7 @@
     ],
     "texts": [
       {
-        "text": "¡Increible trabajo!\nVictoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
+        "text": "¡Increible trabajo! Victoria espera que hayas disfrutado aprendiendo sobre las materias primas.",
         "position": {
           "start": [1.5, 2.5],
           "end": [12.5, 15]
@@ -2857,7 +2903,7 @@
           "start": [3, 13.5],
           "end": [11, 16.5]
         },
-        "target": 57,
+        "target": 58,
         "require": [],
         "visible": false
       }
@@ -2917,7 +2963,7 @@
         }
       },
       {
-        "text": "El diseño siempre debe seguir la ______ del producto",
+        "text": "Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.",
         "position": {
           "start": [1, 5.5],
           "end": [19, 7]
@@ -2945,7 +2991,7 @@
         }
       },
       {
-        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "text": "Después de procesar la materia prima, obtenemos el _____.",
         "position": {
           "start": [1, 11.5],
           "end": [19, 13]
@@ -2961,24 +3007,24 @@
     ],
     "quiz": [
       {
-        "pregunta": "El diseño siempre debe seguir la ______ del producto",
+        "pregunta": "Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.",
         "answers": [
           {
-            "text": "idea",
+            "text": "Centro",
             "position": {
               "start": [2, 7.3],
               "end": [6, 9.8]
             }
           },
           {
-            "text": "función",
+            "text": "Norte",
             "position": {
               "start": [8, 7.3],
               "end": [12, 9.8]
             }
           },
           {
-            "text": "creatividad",
+            "text": "Austral",
             "position": {
               "start": [14, 7.3],
               "end": [18, 9.8]
@@ -2987,24 +3033,24 @@
         ]
       },
       {
-        "pregunta": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "pregunta": "Después de procesar la materia prima, obtenemos el _____.",
         "answers": [
           {
-            "text": "color",
+            "text": "Lote",
             "position": {
               "start": [2, 13.3],
               "end": [6, 15.8]
             }
           },
           {
-            "text": "tamaño",
+            "text": "Producto",
             "position": {
               "start": [8, 13.3],
               "end": [12, 15.8]
             }
           },
           {
-            "text": "textura",
+            "text": "Material",
             "position": {
               "start": [14, 13.3],
               "end": [18, 15.8]
@@ -3031,7 +3077,7 @@
           "end": [13, 19.5]
         },
         "target": -1,
-        "require": [46],
+        "require": [58],
         "visible": false
       }
     ]

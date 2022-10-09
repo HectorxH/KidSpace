@@ -1,4 +1,8 @@
 import {
+  IModelProps,
+  ITransform,
+} from '../components/ARScenes/ARcomponents/utils';
+import {
   Actividad,
   IActividadLog,
   IImageTracker,
@@ -21,6 +25,8 @@ export interface IActividadesParams {
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   rightDragAnswers: string[][][];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
@@ -40,14 +46,21 @@ export interface IViroAppParams {
   actividad: string;
   positions: Vec3[][];
   imageTrackers: IImageTracker[][];
+  modelMaterial: string[][];
+  modelProps: IModelProps[][];
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
+  transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
+  rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
+  updateMaterial: [boolean, ReactStateSetter<boolean>];
+  setActiveModelIndex: ReactStateSetter<number>;
   setSelectedModelMaterials: ReactStateSetter<{
     materialOrder: string[];
     materialChoices: string[][];
   }>;
-  modelMaterial: string[][];
-  setActiveModelIndex: ReactStateSetter<number>;
-  updateMaterial: [boolean, ReactStateSetter<boolean>];
+  markerTrackingState: [string[][], ReactStateSetter<string[][]>];
+  activeTracker: [string[], ReactStateSetter<string[]>];
+  activeTrackerIndex: [number[], ReactStateSetter<number[]>];
 }
 
 export interface IInventarioParams {
@@ -58,8 +71,9 @@ export interface IInventarioParams {
   placedItems: [number[][], ReactStateSetter<number[][]>];
   nPlacedItems: [number[], ReactStateSetter<number[]>];
   setMaterialSelectorToggle: ReactStateSetter<number>;
-  visible: boolean[];
-  showInventory: boolean[];
+  hideInventory: boolean[];
+  toggleDefaultValue: boolean[];
+  toggleValues: number[][];
 }
 
 export interface IMaterialSelectorParams {
@@ -76,6 +90,16 @@ export interface IMaterialSelectorParams {
   selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
+export interface IMarkerTrackerFeedbackParams {
+  pageNumber: number;
+  activeTrackerIndex: number[];
+  markerTrackingState: string[][];
+  activeTracker: string[];
+  toggleDefaultValue: boolean[];
+  toggleValues: number[][];
+  trackerMessages: string[];
+}
+
 export interface IStoryComponentParams {
   pageNumber: number;
   story: Actividad;
@@ -86,10 +110,12 @@ export interface IStoryComponentParams {
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: string[][];
@@ -143,6 +169,7 @@ export interface IActividadesComponentParams {
   storyComponentParams: IStoryComponentParams;
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;
+  markerTrackerFeedbackParams: IMarkerTrackerFeedbackParams;
 }
 
 // export type Vec3 = [number, number, number];

@@ -13,21 +13,35 @@ import {
 
 interface Objects3dProps {
   models3d: IModels[];
-  modelProps: IModelProps[];
+  modelProps: IModelProps[][];
+  pageNumber: number;
   itemNumber: number;
   modelIndex: number;
-  transforms: [ITransform[], ReactStateSetter<ITransform[]>];
   positions: Vec3[];
-  rotations: [number[], ReactStateSetter<number[]>];
-  materialSelectorToggle: [number, ReactStateSetter<number>];
-  setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
   modelMaterial: string[];
+  setSelectedModelMaterials: ReactStateSetter<TSelectedMaterial>;
+  transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
+  rotations: [number[][], ReactStateSetter<number[][]>];
+  materialSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
 }
 
 const Objects3d = (props: Objects3dProps) => {
+  const {
+    models3d,
+    modelProps,
+    pageNumber,
+    itemNumber,
+    modelIndex,
+    positions,
+    modelMaterial,
+    setSelectedModelMaterials,
+  } = props;
+
   const [transforms, setTransforms] = props.transforms;
   const [rotations, setRotations] = props.rotations;
+  const [useAlt, setUseAlt] = props.useAlt;
 
   const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
@@ -35,10 +49,13 @@ const Objects3d = (props: Objects3dProps) => {
 
   function makeMaterials() {
     if (updateMaterial === true) {
-      setUpdateMaterial(false);
-      let materials = props.modelProps.map(model =>
+      let materials = modelProps[pageNumber].map(model =>
         typeof model.materials !== 'undefined' ? model.materials : {},
       );
+
+      if (materials.length > 0) {
+        setUpdateMaterial(false);
+      }
       for (let i = 0; i < materials.length; i++) {
         ViroMaterials.createMaterials(materials[i]);
       }
@@ -46,57 +63,80 @@ const Objects3d = (props: Objects3dProps) => {
   }
 
   function onModelClick(itemIndex: number) {
+    console.log('click');
     if (
-      props.modelProps[itemIndex].interactable.length === 0 ||
+      modelProps[pageNumber][itemIndex].interactable.length === 0 ||
       materialSelectorToggle === 1
     ) {
       setMaterialSelectorToggle(0);
       return;
     }
-    for (let i = 0; i < props.modelProps[itemIndex].interactable.length; i++) {
-      if (props.modelProps[itemIndex].interactable[i] === 'materials') {
+    for (
+      let i = 0;
+      i < modelProps[pageNumber][itemIndex].interactable.length;
+      i++
+    ) {
+      if (modelProps[pageNumber][itemIndex].interactable[i] === 'materials') {
         makeMaterials();
-        props.setSelectedModelMaterials(
-          props.modelProps[itemIndex].ARMaterials,
+        setSelectedModelMaterials(
+          modelProps[pageNumber][itemIndex].ARMaterials,
         );
         setMaterialSelectorToggle(1);
+      }
+      if (
+        modelProps[pageNumber][itemIndex].interactable[i] === 'auxiliar' &&
+        modelProps[pageNumber][itemIndex].alt !== ''
+      ) {
+        let newUseAlt = [...useAlt];
+        if (newUseAlt[pageNumber][itemIndex] === true) {
+          newUseAlt[pageNumber][itemIndex] = false;
+        } else {
+          newUseAlt[pageNumber][itemIndex] = true;
+        }
+        setUseAlt(newUseAlt);
       }
     }
   }
 
   return (
     <Viro3DObject
-      source={props.modelProps[props.itemNumber].model as ImageSourcePropType}
-      resources={props.modelProps[props.itemNumber].resources}
-      materials={props.modelMaterial[props.modelIndex]}
-      position={props.positions[props.modelIndex]}
-      scale={transforms[props.itemNumber].scale}
-      rotation={transforms[props.itemNumber].rotation}
-      type={props.modelProps[props.itemNumber].type}
+      source={
+        useAlt[pageNumber][itemNumber] === false
+          ? (modelProps[pageNumber][itemNumber].model as ImageSourcePropType)
+          : (modelProps[pageNumber][itemNumber].altModel as ImageSourcePropType)
+      }
+      resources={modelProps[pageNumber][itemNumber].resources}
+      materials={modelMaterial[modelIndex]}
+      position={positions[modelIndex]}
+      scale={transforms[pageNumber][itemNumber].scale}
+      rotation={transforms[pageNumber][itemNumber].rotation}
+      type={modelProps[pageNumber][itemNumber].type}
       onDrag={() => {}}
       dragType={'FixedToWorld'}
       onPinch={(pinchState, scaleFactor) =>
         updateScale(
-          props.modelIndex,
+          pageNumber,
+          modelIndex,
           pinchState,
           scaleFactor,
           transforms,
           setTransforms,
-          props.models3d,
+          models3d,
         )
       }
       onRotate={(rotateState, rotation) =>
         updateRotation(
-          props.modelIndex,
+          pageNumber,
+          modelIndex,
           rotateState,
-          rotation + rotations[props.modelIndex],
+          rotation + rotations[pageNumber][modelIndex],
           rotations,
           transforms,
           setRotations,
           setTransforms,
         )
       }
-      onClick={() => onModelClick(props.itemNumber)}
+      onClick={() => onModelClick(itemNumber)}
     />
   );
 };

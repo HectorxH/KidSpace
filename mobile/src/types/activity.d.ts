@@ -147,15 +147,19 @@ export interface IModels {
   type?: string;
   image360?: string;
   interactable?: string[];
+  icon?: string;
   ARMaterials?: {
     materialOrder: string[];
     materialChoices: string[][];
   };
+  alt?: string;
+  childrens?: IModels[];
 }
 
 export interface IAR {
   start: boolean;
   imageTrackers?: IImageTracker[];
+  trackerMessage?: string;
   hideInventory?: boolean;
   models?: IModels[];
 }
