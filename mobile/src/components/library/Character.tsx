@@ -26,7 +26,9 @@ const Character = ({personaje}: {personaje: number[]}) => {
         <ImageBackground
           key="hair"
           style={{flex: 1}}
-          imageStyle={{borderRadius: 80}}
+          imageStyle={
+            personaje[8] !== 0 ? {opacity: 1, borderRadius: 80} : {opacity: 0}
+          }
           source={hairImages[`i${personaje[8]}`].uri}>
           <ImageBackground
             key="base"
