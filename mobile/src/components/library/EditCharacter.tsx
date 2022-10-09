@@ -176,6 +176,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <ImageBackground
             key="hair"
             style={{flex: 1}}
+            imageStyle={parteArray[8] !== 0 ? {opacity: 1} : {opacity: 0}}
             source={hairImages[`i${parteArray[8]}`].uri}>
             <ImageBackground
               key="base"
@@ -303,7 +304,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <FlatList
             style={styles.scrollView}
             persistentScrollbar={true}
-            numColumns={6}
+            numColumns={Math.round(RSize(0.0155, 'h'))}
             data={Array(len[parte]).fill(1)}
             renderItem={({item, index}) => (
               <View

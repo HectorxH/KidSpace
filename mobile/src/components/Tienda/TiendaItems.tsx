@@ -266,7 +266,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
             style={styles.scrollView}
             persistentScrollbar={true}
             data={Array(Object.keys(tipoImages).length).fill(1)}
-            numColumns={4}
+            numColumns={Math.round(RSize(0.01, 'h'))}
             renderItem={({index}) => (
               <View key={index} style={styles.part}>
                 <Card
