@@ -22,6 +22,10 @@ const defaultCompras = [
   Array.from({length: 39}, () => 0),
   Array.from({length: 11}, () => 0),
 ];
+defaultCompras[0][0] = 1;
+defaultCompras[0][1] = 1;
+defaultCompras[0][2] = 1;
+defaultCompras[2][0] = 1;
 
 const Tienda = ({navigation, route}: TiendaProps) => {
   const [compras, setCompras] = useState(defaultCompras);
@@ -36,6 +40,7 @@ const Tienda = ({navigation, route}: TiendaProps) => {
       const res = await instance.get(
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`,
       );
+      console.log(res.body.compras);
       setCompras(res.body.compras);
       setLoading(false);
     } catch (e) {

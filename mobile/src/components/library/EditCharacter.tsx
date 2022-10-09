@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -33,11 +34,16 @@ import {RSize} from '../../utils/responsive';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
 
-const Arraydisponibles = [
-  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0], //31 de largo
-  [1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0], //39
-  [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+const defaultCompras = [
+  Array.from({length: 31}, () => 0),
+  Array.from({length: 39}, () => 0),
+  Array.from({length: 11}, () => 0),
 ];
+
+defaultCompras[0][0] = 1;
+defaultCompras[0][1] = 1;
+defaultCompras[0][2] = 1;
+defaultCompras[2][0] = 1;
 
 interface IDisponibles {
   9: number[];
@@ -78,16 +84,15 @@ const partes = [
 const EditCharacter = ({navigation, route}: EditCharacterProps) => {
   const {personaje, setPersonaje} = route.params;
   const [parte, setParte] = useState(0);
-  const [disponibles, setDisponibles] = useState(Arraydisponibles);
+  const [compras, setCompras] = useState(defaultCompras);
   const [parteArray, setParteArray] = useState(personaje);
   const [modalVisible, setModalVisible] = useState(false);
   const [saved, setSaved] = useState(true);
-  console.log(personaje[7], bangsImages[`i${personaje[7]}`].uri);
 
   const {instance} = useAuth();
 
   const handlePartes = async (p: number, id: number) => {
-    if (!(p > 8 && disponibles[p - 9][id] === 0)) {
+    if (!(p > 8 && compras[p][id] === 0)) {
       console.log(id, p);
       setSaved(false);
       const array = parteArray;
@@ -115,6 +120,22 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
       console.log(JSON.stringify(e));
     }
   };
+
+  const getCompras = async () => {
+    try {
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`,
+      );
+      setCompras(res.body.compras);
+    } catch (e) {
+      console.log(JSON.stringify(e));
+    }
+  };
+
+  useEffect(() => {
+    getCompras();
+  }, []);
+
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   return (
@@ -322,7 +343,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
                     key={index}
                     style={[
                       styles.opcion,
-                      parte > 8 && disponibles[parte - 9][index] === 0
+                      parte > 8 && compras[parte - 9][index] === 0
                         ? styles.opcionNoDisponible
                         : styles.opcionDisponible,
                     ]}

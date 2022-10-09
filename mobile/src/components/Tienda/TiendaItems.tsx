@@ -45,7 +45,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   switch (tipo) {
     case 'Fondos':
       tipoImages = backgroundImages;
-      numImages = 0;
+      numImages = 2;
       break;
     case 'Accesorios':
       tipoImages = newAccesoriesImages;
@@ -53,7 +53,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
       break;
     case 'Ropa':
       tipoImages = clothesImages;
-      numImages = 2;
+      numImages = 0;
   }
 
   const handleComprarClick = async (costo: number) => {
