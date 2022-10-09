@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 14,
     color: '#FFFFFF',
     elevation: 11,
     fontFamily: 'Poppins-Bold',

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: 14,
     textTransform: 'none',
     color: 'white',
     elevation: 11,

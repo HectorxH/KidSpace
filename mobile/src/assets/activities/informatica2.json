@@ -653,21 +653,21 @@
             "text": "Ejecuta programas",
             "position": {
               "start": [9.5, 10.5],
-              "end": [17.5, 12.5]
+              "end": [17.5, 13]
             }
           },
           {
             "text": "Permite escuchar el sonido",
             "position": {
               "start": [9.5, 13.5],
-              "end": [17.5, 15.5]
+              "end": [17.5, 16]
             }
           },
           {
             "text": "Muestra información al usuario",
             "position": {
               "start": [9.5, 16.5],
-              "end": [17.5, 18.5]
+              "end": [17.5, 19]
             }
           }
         ]
@@ -739,21 +739,21 @@
             "text": "Memoria RAM",
             "position": {
               "start": [2.5, 10.5],
-              "end": [10.5, 12.5]
+              "end": [10.5, 13]
             }
           },
           {
             "text": "Mouse",
             "position": {
               "start": [2.5, 13.5],
-              "end": [10.5, 15.5]
+              "end": [10.5, 16]
             }
           },
           {
             "text": "CPU",
             "position": {
               "start": [2.5, 16.5],
-              "end": [10.5, 18.5]
+              "end": [10.5, 19]
             }
           }
         ]
@@ -1144,21 +1144,21 @@
             "text": "Quita el polvo de la CPU",
             "position": {
               "start": [9.5, 10.5],
-              "end": [17.5, 12.5]
+              "end": [17.5, 13]
             }
           },
           {
             "text": "Baja la temperatura en tu pieza",
             "position": {
               "start": [9.5, 13.5],
-              "end": [17.5, 15.5]
+              "end": [17.5, 16]
             }
           },
           {
             "text": "Baja la temperatura del computador",
             "position": {
               "start": [9.5, 16.5],
-              "end": [17.5, 18.5]
+              "end": [17.5, 19]
             }
           }
         ]
@@ -1727,7 +1727,7 @@
           "end": [19.8, 6.5]
         },
         "settings": {
-          "fontSize": 0.055
+          "fontSize": 18
         }
       },
       {
@@ -1737,7 +1737,7 @@
           "end": [19, 18.5]
         },
         "settings": {
-          "fontSize": 0.055
+          "fontSize": 16
         }
       }
     ],
