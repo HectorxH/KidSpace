@@ -25,7 +25,7 @@ export default [
       {
         nactividad: 2,
         actividad: 'Actividad',
-        titulo: 'Materiales',
+        titulo: 'lorem',
         descripcion: 'En esta actividad vas a conocer a Victoria, quien día a día trabaja en una fábrica de manufactura. Junto con Victoria vas a teletransportarte a diversas regiones de Chile para aprender sobre las materias primas que se obtienen en cada una. Además, vas a aprender sobre las diferencias entre materia prima, material y producto tecnológico, jugando con las tarjetas físicas.',
         path: '/actividades/unidad/2/actividad/2',
       },
@@ -44,6 +44,13 @@ export default [
         titulo: 'Diseños',
         descripcion: 'En esta actividad vas a conocer a Luca que trabaja en el área de diseño de productos. Junto con Luca vas a aprender sobre las distintas características que poseen los objetos, como las texturas o los colores. Además, conocerás un concepto clave - el diseño siempre sigue la función - y aprenderás qué es lo que esto significa a la hora de crear un producto que será utilizado por otras personas.',
         path: '/actividades/unidad/3/actividad/3',
+      },
+      {
+        nactividad: 2,
+        actividad: 'Actividad',
+        titulo: 'Materiales',
+        descripcion: 'En esta actividad vas a conocer a Victoria, quien día a día trabaja en una fábrica de manufactura. Junto con Victoria vas a teletransportarte a diversas regiones de Chile para aprender sobre las materias primas que se obtienen en cada una. Además, vas a aprender sobre las diferencias entre materia prima, material y producto tecnológico, jugando con las tarjetas físicas.',
+        path: '/actividades/unidad/3/actividad/2',
       },
     ],
   },
