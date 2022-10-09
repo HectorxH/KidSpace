@@ -261,7 +261,7 @@
     ],
     "bubbles": [
       {
-        "name": "bubbleOk",
+        "name": "bubbleFeliz",
         "position": {
           "start": [6, 0.5],
           "end": [8.5, 7]  
@@ -1262,17 +1262,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1322,17 +1322,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1382,17 +1382,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1442,17 +1442,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1502,17 +1502,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1562,17 +1562,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1622,17 +1622,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },
@@ -1682,17 +1682,17 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "rotation": [0, -90, 0]
         },
         {
           "model": "ssd",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [0.09, 0.09, 0.09],
+          "rotation": [0, -45, 0]
         },
         {
           "model": "teclado",
-          "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, 90, 0]
+          "scale": [1.2, 1.2, 1.2],
+          "rotation": [0, -45, 0]
         }
       ]
     },

@@ -67,6 +67,8 @@ const Objects3d = (props: Objects3dProps) => {
   ) {
     // console.log(index, rotateState, rotation);
     let transform = [...transforms];
+    // let rots = [...rotations];
+    // rots[pageNumber][index] = (rots[pageNumber][index] - rotation) % 360;
     // Giro en todos los ejes
     //const temp = transform[index].rotation.map(x => x - rotation / 50);
     // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
@@ -74,18 +76,16 @@ const Objects3d = (props: Objects3dProps) => {
     //Giro en eje y
     transform[pageNumber][index].rotation = [
       transform[pageNumber][index].rotation[0],
-      transform[pageNumber][index].rotation[2] - rotation,
+      // rots[pageNumber][index],
+      (transform[pageNumber][index].rotation[1] - rotation / 2) % 360,
       transform[pageNumber][index].rotation[2],
     ];
-    let rots = [...rotations];
-    rots[pageNumber][index] = rotation;
 
-    if (rotateState === 1) {
-      setTransforms(transform);
-    }
-    if (rotateState !== 2) {
-      setRotations(rots);
-    }
+    console.log('rotate state', rotateState);
+
+    // if (rotateState === 2) {
+    setTransforms(transform);
+    // }
   }
   function onModelClick(itemIndex: number) {
     console.log('click');
@@ -123,9 +123,9 @@ const Objects3d = (props: Objects3dProps) => {
     }
   }
 
-  console.log(useAlt[pageNumber][itemNumber]);
-  console.log(modelProps[pageNumber][itemNumber]);
-  console.log(modelProps[pageNumber][itemNumber].model);
+  // console.log(useAlt[pageNumber][itemNumber]);
+  // console.log(modelProps[pageNumber][itemNumber]);
+  // console.log(modelProps[pageNumber][itemNumber].model);
   return (
     <Viro3DObject
       source={
@@ -155,9 +155,11 @@ const Objects3d = (props: Objects3dProps) => {
       onRotate={(rotateState, rotation) =>
         updateRotation(
           // pageNumber,
-          modelIndex,
+          // modelIndex,
+          itemNumber,
           rotateState,
-          (rotation / 5 + rotations[pageNumber][modelIndex]) % 360,
+          rotation,
+          // (rotation / 5 + rotations[pageNumber][modelIndex]) % 360,
           // rotations,
           // transforms,
           // setRotations,

@@ -254,6 +254,7 @@ const images: {
 
     bubbleOk: require('./bubbles/bb_ok.png'),
     bubblePhoneParts: require('./bubbles/bb_phone_parts.png'),
+    bubbleFeliz: require('./bubbles/bubblefeliz.png'),
   },
 
   background: {
@@ -349,6 +350,18 @@ const images: {
     },
     valdivia: {
       square: require('./icons/teclado/teclado.png'),
+    },
+    norte: {
+      square: require('./icons/portales/norte.png'),
+    },
+    sur: {
+      square: require('./icons/portales/sur.png'),
+    },
+    centro: {
+      square: require('./icons/portales/centro.png'),
+    },
+    austral: {
+      square: require('./icons/portales/austral.png'),
     },
   },
 
