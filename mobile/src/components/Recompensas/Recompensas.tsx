@@ -13,6 +13,7 @@ import {RSize} from '../../utils/responsive';
 import _ from 'lodash';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
+import {CommonActions} from '@react-navigation/native';
 
 const actividadesIndividuales = {
   diseño1: 'La rueda de colores',
@@ -161,8 +162,12 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
       } catch (e) {
         console.log(JSON.stringify(e));
       }
-
-      navigation.navigate('MainMap');
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{name: 'MainMap'}],
+        }),
+      );
     }
   };
 
@@ -204,7 +209,10 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
               <Text style={styles.greyText}> ¡Nuevo logro! </Text>
             </View>
             <View style={styles.viewRight}>
-              <Image style={styles.iconTrophy} source={imagesRecompensa.trophy.uri} />
+              <Image
+                style={styles.iconTrophy}
+                source={imagesRecompensa.trophy.uri}
+              />
               <Text style={styles.blackText}>
                 {actividadesIndividuales[nombreActividad]}
               </Text>
