@@ -9,6 +9,7 @@ import {
 } from '../components/Actividades/utils';
 import {IActividadesParams} from '../types/story';
 import ActividadesComponentParams from './ActividadesComponentInit';
+import {ActividadesCompletadas} from '../types/activity';
 
 const ActividadesParams = (
   nombreActividad: string,
@@ -16,6 +17,7 @@ const ActividadesParams = (
   userLastName: string,
   curso: string,
   cantMonedas: number,
+  completadas: ActividadesCompletadas,
 ) => {
   const actividad = Activities[nombreActividad];
   const [pageNumber, setPageNumber] = useState(0);
@@ -226,6 +228,7 @@ const ActividadesParams = (
     pageNumber: [pageNumber, setPageNumber],
     nombreActividad: nombreActividad,
     cantMonedas: cantMonedas,
+    completadas: completadas,
     userAnswers: [userAnswers, setUserAnswers],
     pickedAnswers: [pickedAnswers, setPickedAnswers],
     userAnswersDropdown: [userAnswersDropdown, setUserAnswersDropdown],

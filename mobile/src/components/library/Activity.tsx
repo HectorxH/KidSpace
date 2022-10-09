@@ -7,7 +7,7 @@ import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Activity = ({navigation, route}: ActivityProps) => {
-  const {activity, curso, userName, userLastName} = route.params;
+  const {activity, curso, userName, userLastName, completadas} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   // console.log(activity);
   return (
@@ -48,6 +48,7 @@ const Activity = ({navigation, route}: ActivityProps) => {
                     curso: curso,
                     userName: userName,
                     userLastName: userLastName,
+                    completadas: completadas,
                   })
                 }>
                 {/* onPress={() => console.log('Pressed')}> */}

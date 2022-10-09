@@ -11,12 +11,14 @@ import {
   Vec3,
 } from './activity';
 import {ReactStateSetter} from './others';
+import {ActividadesCompletadas} from './activity';
 
 export interface IActividadesParams {
   actividades: Actividad;
   pageNumber: [number, ReactStateSetter<number>];
   nombreActividad: string;
   cantMonedas: number;
+  completadas: ActividadesCompletadas;
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
@@ -139,6 +141,7 @@ export interface IActNavigationParams {
   actividades: Actividad;
   nombreActividad: string;
   cantMonedas: number;
+  completadas: ActividadesCompletadas;
   storyLength: number;
   userDragAnswers: string[][][];
   rightDragAnswers: string[][][];

@@ -20,7 +20,7 @@ const nombreActividades = {
   diseños: 'Diseños',
   diseño1: 'Teoría de colores',
   diseño2: 'Diseño gráfico en nuestro alrededor',
-  nurtricion1: 'Interpretando etiquetas de los alimentos',
+  nutricion1: 'Interpretando etiquetas de los alimentos',
   nutricion2: 'Analizando nuestra dieta',
   informatica1: 'Informática y algoritmos en nuestra vida',
   informatica2: '¿Qué es un computador?',
@@ -30,9 +30,6 @@ const nombreActividades = {
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera, curso, userName, userLastName, completadas} = route.params;
-  console.log('a');
-  console.log(carrera);
-  console.log('a');
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
@@ -87,6 +84,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                 curso: curso,
                 userName: userName,
                 userLastName: userLastName,
+                completadas: completadas,
               })
             }>
             <Card
