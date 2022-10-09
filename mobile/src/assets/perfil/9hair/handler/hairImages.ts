@@ -595,6 +595,9 @@ const hairImages: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   i197: {
     uri: require('../197.png'),
   },
+  i198: {
+    uri: require('../198.png'),
+  },
 };
 
 export {hairImages};

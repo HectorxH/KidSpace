@@ -176,6 +176,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <ImageBackground
             key="hair"
             style={{flex: 1}}
+            imageStyle={parteArray[8] !== 0 ? {opacity: 1} : {opacity: 0}}
             source={hairImages[`i${parteArray[8]}`].uri}>
             <ImageBackground
               key="base"
