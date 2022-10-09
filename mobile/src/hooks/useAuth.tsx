@@ -103,7 +103,7 @@ export const AuthProvider = ({children}: {children: any}) => {
     try {
       await logout();
       await AsyncStorage.setItem('@user', JSON.stringify(null));
-      await AsyncStorage.setItem('@message', JSON.stringify('[]'));
+      await AsyncStorage.setItem('@message', JSON.stringify(null));
       await AsyncStorage.setItem('@notification', JSON.stringify(null));
       await AsyncStorage.setItem('@curso', JSON.stringify(null));
       setUser(null);
