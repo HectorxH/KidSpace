@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import Config from 'react-native-config';

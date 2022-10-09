@@ -60,8 +60,6 @@ const srcNames = [
   'backgroundImages',
 ];
 
-const initialState = [5, 0, 1, 1, 1, 1, 1, 110, 1, 6, 37, 1];
-
 const partes = [
   {baseImages},
   {vitiligoImages},
@@ -78,7 +76,6 @@ const partes = [
 ];
 
 const EditCharacter = ({navigation, route}: EditCharacterProps) => {
-  // const {Info} = route.params;
   const {personaje, setPersonaje} = route.params;
   const [parte, setParte] = useState(0);
   const [disponibles, setDisponibles] = useState(Arraydisponibles);
