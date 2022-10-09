@@ -18,6 +18,7 @@ const ActNavigation = (props: ActNavigationProps) => {
     actividades,
     storyLength,
     cantMonedas,
+    completadas,
     nombreActividad,
     setUpdateMaterial,
     setMaterialSelectorToggle,
@@ -146,6 +147,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         cantMonedas,
         nombreActividad,
         actLog,
+        completadas,
       });
     }
   };

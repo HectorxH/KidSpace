@@ -41,6 +41,7 @@ export type RootStackParamList = {
     curso: string;
     userName: string;
     userLastName: string;
+    completadas: ActividadesCompletadas;
   };
   Carrera: {
     carrera: ICarrera;
@@ -49,7 +50,13 @@ export type RootStackParamList = {
     userName: string;
     userLastName: string;
   };
-  Story: {Info: IInfo; curso: string; userName: string; userLastName: string};
+  Story: {
+    Info: IInfo;
+    curso: string;
+    userName: string;
+    userLastName: string;
+    completadas: ActividadesCompletadas;
+  };
   NoAvailableActivities: undefined;
   AvailableActivities: {
     activities: IActivity[];
@@ -66,6 +73,7 @@ export type RootStackParamList = {
     curso: string;
     userName: string;
     userLastName: string;
+    completadas: ActividadesCompletadas;
   };
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
@@ -78,6 +86,7 @@ export type RootStackParamList = {
     cantMonedas: number;
     nombreActividad: string;
     actLog: IActividadLog;
+    completadas: ActividadesCompletadas;
   };
   Tienda: {
     setCantMonedas: React.Dispatch<React.SetStateAction<number>>;

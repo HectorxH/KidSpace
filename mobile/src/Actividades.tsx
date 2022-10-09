@@ -11,6 +11,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
   const userName = route.params.userName;
   const userLastName = route.params.userLastName;
   const curso = route.params.curso;
+  const completadas = route.params.completadas;
 
   const actividadesComponentParams: IActividadesComponentParams =
     ActividadesParams(
@@ -19,6 +20,7 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       userLastName,
       curso,
       cantMonedas,
+      completadas,
     );
 
   return (
