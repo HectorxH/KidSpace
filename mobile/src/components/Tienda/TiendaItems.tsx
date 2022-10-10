@@ -60,7 +60,6 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
     setNoDisponibles(noDisponibles);
     setCompras(noDisponibles);
     setSelectedItem(-1);
-
     try {
       await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`)
@@ -80,7 +79,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   };
 
   const setOpacity = (costo: number) => {
-    if (currentMonedas - costo <= 0) {
+    if (currentMonedas - costo < 0) {
       return 0.2;
     } else {
       return 1;
@@ -303,8 +302,13 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
             initialNumToRender={1}
             maxToRenderPerBatch={1}
             data={Object.keys(tipoImages)}
-            numColumns={Math.round(RSize(0.01, 'h'))}
+            numColumns={Math.trunc(RSize(0.004, 'w'))}
             renderItem={renderItem}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           />
         </View>
       </View>
@@ -356,7 +360,8 @@ const styles = StyleSheet.create({
   opcion: {
     width: RSize(0.2, 'h'),
     height: RSize(0.2, 'h'),
-    margin: RSize(0.005, 'w'),
+    alignSelf: 'center',
+    marginTop: RSize(0.01, 'h'),
   },
   opcionDisponible: {
     backgroundColor: 'white',
@@ -422,7 +427,7 @@ const styles = StyleSheet.create({
   },
   chip2: {
     backgroundColor: '#ededed',
-    margin: RSize(0.02, 'h'),
+    margin: RSize(0.01, 'h'),
   },
   textChip1: {
     color: '#ffffff',

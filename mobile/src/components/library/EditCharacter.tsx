@@ -127,7 +127,9 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
       const res = await instance.get(
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`,
       );
-      setCompras(res.body.compras);
+      const aux = res.body.compras;
+      aux[1].splice(0, 0, 1);
+      setCompras(aux);
     } catch (e) {
       console.log(JSON.stringify(e));
     }
@@ -278,7 +280,10 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           icon={() => (
             <Icon name="content-save" size={RSize(0.06, 'h')} color="#FFFFFF" />
           )}
-          onPress={() => handleSave()}>
+          onPress={() => {
+            handleSave();
+            navigation.goBack();
+          }}>
           <Text style={styles.textButton}>Guardar</Text>
         </Button>
       </View>
@@ -326,7 +331,12 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <FlatList
             style={styles.scrollView}
             persistentScrollbar={true}
-            numColumns={Math.round(RSize(0.0155, 'h'))}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            numColumns={Math.trunc(RSize(0.006, 'w'))}
             data={Array(len[parte]).fill(1)}
             renderItem={({item, index}) => (
               <View
