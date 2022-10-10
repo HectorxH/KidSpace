@@ -186,6 +186,10 @@ const ActividadesParams = (
     ),
   );
 
+  const lotties = actividad.map(actividadPage =>
+    typeof actividadPage.lottie !== 'undefined' ? actividadPage.lottie : [],
+  );
+
   // variables para controlar bloques de código (drag)
   // [pageNumber][dragNumber][itemNumber][top/bottom] = true | false;
   // const [itemFlaps, setItemFlaps] = useState<boolean[][][][]>(
@@ -226,6 +230,7 @@ const ActividadesParams = (
   const actividadesParams: IActividadesParams = {
     actividades: actividad,
     pageNumber: [pageNumber, setPageNumber],
+    lotties: lotties,
     nombreActividad: nombreActividad,
     cantMonedas: cantMonedas,
     completadas: completadas,

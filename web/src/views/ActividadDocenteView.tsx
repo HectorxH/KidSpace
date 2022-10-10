@@ -173,7 +173,7 @@ const ActividadDocenteView = () => {
           <CardMedia
             component="img"
             sx={{ height: '30vh' }}
-            image={img}
+            image={actividadesDocentes[index].img}
           />
           <Typography>
             Nombre: {actividadesDocentes[index].actividad}

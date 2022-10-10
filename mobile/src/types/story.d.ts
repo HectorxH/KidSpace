@@ -7,6 +7,7 @@ import {
   Actividad,
   IActividadLog,
   IImageTracker,
+  ILottie,
   IModels,
   IToggleButton,
   Vec3,
@@ -16,6 +17,7 @@ import {ActividadesCompletadas} from './activity';
 
 export interface IActividadesParams {
   actividades: Actividad;
+  lotties: ILottie[][];
   pageNumber: [number, ReactStateSetter<number>];
   nombreActividad: string;
   cantMonedas: number;
@@ -109,6 +111,7 @@ export interface IStoryComponentParams {
   pageNumber: number;
   story: Actividad;
   toggleDefaultValue: boolean[];
+  lotties: ILottie[][];
   toggleValues: number[][];
   userInputAnswers: [number[][], ReactStateSetter<number[][]>];
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
@@ -169,6 +172,10 @@ export interface IActNavigationParams {
   selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
+export interface ILottieComponentParams {
+  pageNumber: number;
+  lotties: ILottie[][];
+}
 export interface IActividadesComponentParams {
   pageNumber: number;
   actividades: Actividad;
@@ -179,6 +186,7 @@ export interface IActividadesComponentParams {
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;
   markerTrackerFeedbackParams: IMarkerTrackerFeedbackParams;
+  lottiesComponentParams: ILottieComponentParams;
 }
 
 // export type Vec3 = [number, number, number];

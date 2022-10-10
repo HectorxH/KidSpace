@@ -261,6 +261,12 @@ export interface IReceivingItems {
   bottom?: boolean;
 }
 
+export interface ILottie {
+  name: string;
+  position: IPosition;
+  start: boolean;
+}
+
 export interface IActivityPage {
   background: string;
   items?: IImages[] | never[];
@@ -276,6 +282,7 @@ export interface IActivityPage {
   jumpCard?: IJumpCard[] | never[];
   quiz?: IQuiz[] | never[];
   draggable?: IDraggable[] | never[];
+  lottie?: ILottie[] | never[];
 }
 
 type ActividadesCompletadas = {[key: string]: number};

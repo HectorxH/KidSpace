@@ -88,6 +88,7 @@ const Draggable = (props: DraggableProps) => {
                         style={styles.overlay}
                         key={item.value + dragNumber + item.name + itemNumber}>
                         <Layout
+                          // position={item.position}
                           position={{
                             start: item.position.start,
                             end: [

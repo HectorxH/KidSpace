@@ -77,13 +77,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           <View style={styles.overlay}>
             <ToggleButton toggleButtonParams={toggleButtonParams} />
           </View>
-          {/* {useAR === true && (
+          {useAR === true && (
             <View style={styles.overlay}>
               <MaterialSelector
                 materialSelectorParams={materialSelectorParams}
               />
             </View>
-          )} */}
+          )}
           {useAR === true && (
             <View style={styles.overlay}>
               <MarkerTrackerFeedback
