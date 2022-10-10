@@ -78,10 +78,19 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       ? actividadPage.toggleButton[0].value
       : true,
   );
-  const [toggleValues, setToggleValues] = useState<number[][]>(
-    toggleButtons.map(tButton => tButton.map(b => (b.value === true ? 1 : 0))),
-  );
+  // const [toggleValues, setToggleValues] = useState<number[][]>(
+  //   toggleButtons.map(tButton => tButton.map(b => (b.value === true ? 1 : 0))),
+  // );
 
+  const [toggleValues, setToggleValues] = useState<number[][]>(
+    actividades.map(actividadPage =>
+      typeof actividadPage.toggleButton !== 'undefined'
+        ? actividadPage.toggleButton[0].value === true
+          ? [1]
+          : [0]
+        : [],
+    ),
+  );
   // vars texturas
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     useState<number>(0);

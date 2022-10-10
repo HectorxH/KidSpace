@@ -1134,15 +1134,26 @@
     "textBoxes": [
       {
         "position": {
+          "start": [0, 0],
+          "end": [20, 22]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
           "start": [0.5, 4],
           "end": [10, 9.5]
         },
         "settings": {
-          "borderWidth": 0
+          "borderWidth": 0,
+          "elevation": 10
         }
       }
     ],
-    "items": [
+    "bubbles": [
       {
         "name": "chile",
         "position": {
@@ -1159,7 +1170,8 @@
           "end": [9.5, 9]
         },
         "settings": {
-          "fontSize": 18
+          "fontSize": 18,
+          "elevation": 11
         }
       }
     ],
@@ -1916,10 +1928,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -1960,10 +1972,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2004,10 +2016,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2048,10 +2060,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2092,10 +2104,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2224,10 +2236,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2241,7 +2253,7 @@
     "AR": {
       "start": true,
       "models": [],
-      "trackerMessage": "Encuentra el material hecho de *Arena*",
+      "trackerMessage": "Encuentra el material hecho de Arena",
       "imageTrackers": [
         {
           "target": "harina",
@@ -2446,10 +2458,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2463,7 +2475,7 @@
     "AR": {
       "start": true,
       "models": [],
-      "trackerMessage": "Encuentra el material hecho de *Petróleo*",
+      "trackerMessage": "Encuentra el material hecho de Petróleo",
       "imageTrackers": [
         {
           "target": "harina",
@@ -2668,10 +2680,10 @@
         "settings": {
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
@@ -2685,7 +2697,7 @@
     "AR": {
       "start": true,
       "models": [],
-      "trackerMessage": "Encuentra el material hecho de *Trigo*",
+      "trackerMessage": "Encuentra el material hecho de Trigo",
       "imageTrackers": [
         {
           "target": "harina",

@@ -979,12 +979,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1038,12 +1038,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1097,12 +1097,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1156,12 +1156,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1215,12 +1215,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1274,12 +1274,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1336,12 +1336,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "eye",
+          "buttonTextNormal": " Ver el poster",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1406,7 +1406,7 @@
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": true
+        "value": false
       }
     ]
   },
