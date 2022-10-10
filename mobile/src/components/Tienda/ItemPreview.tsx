@@ -26,7 +26,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
           backgroundColor: '#ECECEC',
           justifyContent: 'center',
           alignItems: 'center',
-          marginHorizontal: RSize(0.15, 'h'),
+          marginHorizontal: RSize(0.07, 'w'),
           borderRadius: 10,
         }}>
         <Card elevation={5} style={styles.card}>
@@ -65,7 +65,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
           style={{
             justifyContent: 'center',
             alignItems: 'center',
-            translateY: RSize(-0.01, 'w'),
+            translateY: RSize(-0.02, 'w'),
           }}
           source={LottieSleepyCat}
           autoPlay
@@ -74,8 +74,8 @@ const ItemPreview = (props: ItemPreviewProps) => {
         <View
           style={{
             position: 'absolute',
-            left: RSize(0.05, 'h'),
-            bottom: RSize(0.04, 'w'),
+            left: RSize(0.02, 'w'),
+            bottom: RSize(0.16, 'h'),
             paddingHorizontal: RSize(0.1, 'h'),
           }}>
           <Card style={{borderRadius: 20}}>
@@ -83,8 +83,8 @@ const ItemPreview = (props: ItemPreviewProps) => {
               style={{
                 textAlign: 'center',
                 fontFamily: 'Poppins-SemiBold',
-                fontSize: RSize(0.55, 'h') / RSize(0.02, 'w'),
-                padding: RSize(0.15, 'h') / RSize(0.01, 'w'),
+                fontSize: RSize(0.6, 'w') / RSize(0.11, 'h'),
+                padding: RSize(0.2, 'w') / RSize(0.1, 'h'),
               }}>
               Vendemos solo los mejores productos, miau. Selecciona lo que más
               te guste para ver su{' '}
@@ -93,8 +93,8 @@ const ItemPreview = (props: ItemPreviewProps) => {
                   textAlign: 'center',
                   fontFamily: 'Poppins-SemiBold',
                   color: '#5C9DEC',
-                  fontSize: RSize(0.55, 'h') / RSize(0.02, 'w'),
-                  padding: RSize(0.15, 'h') / RSize(0.01, 'w'),
+                  fontSize: RSize(0.6, 'w') / RSize(0.11, 'h'),
+                  padding: RSize(0.2, 'w') / RSize(0.1, 'h'),
                 }}>
                 vista previa.
               </Text>
