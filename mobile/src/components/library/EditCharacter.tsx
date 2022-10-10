@@ -93,7 +93,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
   const {instance} = useAuth();
 
   const handlePartes = async (p: number, id: number) => {
-    if (!(p > 8 && compras[p][id] === 0)) {
+    if (!(p > 8 && compras[p - 9][id] === 0)) {
       console.log(id, p);
       setSaved(false);
       const array = parteArray;
