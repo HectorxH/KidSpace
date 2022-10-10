@@ -92,10 +92,9 @@ const Inventario = (props: InventarioProps) => {
   if (!visible) {
     return null;
   }
-  if (models3d.length === 0) {
+  if (models3d[pageNumber].length === 0) {
     return null;
   }
-
   return (
     <View style={styles.container}>
       <View style={styles.pickUpContainer}>

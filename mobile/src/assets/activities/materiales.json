@@ -1906,8 +1906,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1918,8 +1918,8 @@
       {
         "text": "Usando *las tarjetas* podrás aprender sobre distintos materiales y",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -1950,8 +1950,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -1962,8 +1962,8 @@
       {
         "text": "como estos se utilizan en la elaboración de diversos productos tecnológicos.",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -1994,8 +1994,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2006,8 +2006,8 @@
       {
         "text": "Dada una materia prima, que aparecerá en tu pantalla, tienes que *encontrar una tarjeta*",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2038,8 +2038,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2050,8 +2050,8 @@
       {
         "text": "con el *material* que se elabora con esta. Por ejemplo, si en la pantalla aparecen la palabra \"*árbol*\",",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2082,8 +2082,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2094,8 +2094,8 @@
       {
         "text": "la tarjeta correcta es aquella que tiene una imágen de *madera*. Escanea la tarjeta con tu celular. ",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2126,8 +2126,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2138,8 +2138,8 @@
       {
         "text": "Si la tarjeta fue correcta, podrás ver un video corto. Para verificar lo aprendido tienes que",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2170,8 +2170,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2182,8 +2182,8 @@
       {
         "text": "responder las preguntas, que podrás encontrar en el botón de la esquina superior izquierda.",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2214,8 +2214,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2226,8 +2226,8 @@
       {
         "text": "¡Empecemos! Intenta encontrar la tarjeta con el material que se hace con la materia prima *arena*.",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2255,31 +2255,6 @@
       "models": [],
       "trackerMessage": "Encuentra el material hecho de Arena",
       "imageTrackers": [
-        {
-          "target": "harina",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "hilo",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "mermelada",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "papel",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "plastico",
-          "display": "",
-          "displayType": ""
-        },
         {
           "target": "vidrio",
           "display": "vidrio",
@@ -2478,34 +2453,9 @@
       "trackerMessage": "Encuentra el material hecho de Petróleo",
       "imageTrackers": [
         {
-          "target": "harina",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "hilo",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "mermelada",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "papel",
-          "display": "",
-          "displayType": ""
-        },
-        {
           "target": "plastico",
           "display": "plastico",
           "displayType": "video"
-        },
-        {
-          "target": "vidrio",
-          "display": "",
-          "displayType": ""
         }
       ]
     },
@@ -2703,31 +2653,6 @@
           "target": "harina",
           "display": "harina",
           "displayType": "video"
-        },
-        {
-          "target": "hilo",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "mermelada",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "papel",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "plastico",
-          "display": "",
-          "displayType": ""
-        },
-        {
-          "target": "vidrio",
-          "display": "",
-          "displayType": ""
         }
       ]
     },
