@@ -360,7 +360,8 @@ const styles = StyleSheet.create({
   opcion: {
     width: RSize(0.2, 'h'),
     height: RSize(0.2, 'h'),
-    margin: RSize(0.005, 'w'),
+    alignSelf: 'center',
+    marginTop: RSize(0.01, 'h'),
   },
   opcionDisponible: {
     backgroundColor: 'white',
@@ -426,7 +427,7 @@ const styles = StyleSheet.create({
   },
   chip2: {
     backgroundColor: '#ededed',
-    margin: RSize(0.02, 'h'),
+    margin: RSize(0.01, 'h'),
   },
   textChip1: {
     color: '#ffffff',
