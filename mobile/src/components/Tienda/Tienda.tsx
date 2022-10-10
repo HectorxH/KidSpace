@@ -10,10 +10,16 @@ import LottieTiendaBG from '../../assets/tienda/tiendaInicioBG.json';
 import {RSize} from '../../utils/responsive';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
+import {backgroundImages} from '../../assets/perfil/12background/handler/backgroundImages';
+import {accesoriesImages} from '../../assets/perfil/11accesories/handler/accesoriesImages';
+import {clothesImages} from '../../assets/perfil/10clothes/handler/clothesImages';
 
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const {i0: _, ...newAccesoriesImages} = accesoriesImages;
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -25,6 +31,7 @@ const defaultCompras = [
 defaultCompras[0][0] = 1;
 defaultCompras[0][1] = 1;
 defaultCompras[0][2] = 1;
+defaultCompras[1][0] = 1;
 defaultCompras[2][0] = 1;
 
 const Tienda = ({navigation, route}: TiendaProps) => {
@@ -50,12 +57,29 @@ const Tienda = ({navigation, route}: TiendaProps) => {
 
   const navigateTo = (tipo: string) => {
     if (!loading) {
+      let tipoImages = backgroundImages;
+      let numImages = 0;
+      switch (tipo) {
+        case 'Fondos':
+          tipoImages = backgroundImages;
+          numImages = 2;
+          break;
+        case 'Accesorios':
+          tipoImages = newAccesoriesImages;
+          numImages = 1;
+          break;
+        case 'Ropa':
+          tipoImages = clothesImages;
+          numImages = 0;
+      }
       navigation.push('TiendaItems', {
         tipo,
         setCantMonedas: route.params.setCantMonedas,
         cantMonedas: route.params.cantMonedas,
         compras,
         setCompras,
+        tipoImages,
+        numImages,
       });
     } else {
       setMoveOnLoad(true);
