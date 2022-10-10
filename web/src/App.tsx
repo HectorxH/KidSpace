@@ -109,7 +109,6 @@ const App = () => (
                   <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
-                  <Route path="/estadisticas" />
                 </Route>
                 <Route element={<ProtectedRoute noProfesor />}>
                   <Route path="/pupilo" element={<PupilosView />} />

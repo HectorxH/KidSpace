@@ -23,7 +23,6 @@ const ProtectedRoute = ({
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(`user: ${user}`);
     if (((loggedout && user) || (loggedin && !user))) {
       // user is not authentprofileicated
       navigate('/login');

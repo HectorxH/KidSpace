@@ -5,6 +5,55 @@ import Estudiante from '../models/Estudiante';
 
 const router = express.Router();
 
+const RespuestasCorrectas: {[key: string]: string[]} = {
+  Diagramas: ['gráficos', 'una tabla'],
+  Diseños: ['función', 'textura'],
+  Materiales: ['centro', 'lote'],
+};
+
+router.get('/curso/:id/tiempo', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const avergeTimeByActividad = _.mapValues(
+      logsByActividad,
+      (o) => _.meanBy(o, (x) => Number(x.duracion)),
+    );
+    res.json({ tiempo: avergeTimeByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
+    const respuestas = _.map(logs, (o) => ({ actividad: o.actividad, respuestas: _.map(o.quizFinal, 'respuesta') }));
+    const byActividad = _.groupBy(respuestas, 'actividad');
+    const respuestasByActividad = _.mapValues(byActividad, (oArray) => _.map(oArray, 'respuestas'));
+    const correctas = _.mapValues(
+      respuestasByActividad,
+      // eslint-disable-next-line no-shadow
+      (v, k) => _.flatMap(v, (respuestas) => ([
+        respuestas[0] === RespuestasCorrectas[k][0] ? 'Correctas' : 'Incorrectas',
+        respuestas[1] === RespuestasCorrectas[k][1] ? 'Correctas' : 'Incorrectas',
+      ])),
+    );
+    const countCorrectas = _.mapValues(
+      correctas,
+      (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
+    );
+    console.log(countCorrectas);
+    res.json({ countCorrectas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/estudiante/:id/steam', async (req, res) => {
   try {
     const { id } = req.params;

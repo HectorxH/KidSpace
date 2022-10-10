@@ -17,7 +17,8 @@ import {
   LineElement,
   Title,
 } from 'chart.js';
-import { Doughnut, Line, Bar } from 'react-chartjs-2';
+import { Doughnut, Bar } from 'react-chartjs-2';
+import _ from 'lodash';
 import NotFoundView from './NotFoundView';
 import '../App.css';
 import ActividadDocenteTable from '../components/ActividadDocenteTable';
@@ -25,6 +26,15 @@ import ActividadIndividualTable from '../components/ActividadIndividualTable';
 import RankingTable from '../components/RankingTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
+import CargaView from './LoadingView';
+
+interface ITiempoData {
+  [key: string]: number
+}
+
+interface ICountCorrectas {
+  [key: string]: {'Correctas': number, 'Incorrectas': number}
+}
 
 const infoActividadDocenteTable = [
   {
@@ -52,7 +62,7 @@ const infoActividadDocenteTable = [
     porcentaje: 30,
   },
   {
-    _id: 3,
+    _id: 4,
     actividad: 'Diseño',
     estado: 'Completada',
     porcentaje: 30,
@@ -173,44 +183,107 @@ const options = {
   },
 };
 
+// eslint-disable-next-line no-shadow
+const makeTiempoData = (data: ITiempoData) => {
+  const x = Object.keys(data);
+  const y = Object.values(data);
+  if (x.length > 0) {
+    return {
+      labels: x,
+      datasets: [
+        {
+          label: 'Tiempo promedio de actividad (seg)',
+          data: y,
+          backgroundColor: '#B878EA',
+          // borderColor: '#d03080',
+          // fill: '#f070f0',
+        },
+      ],
+    };
+  }
+  return {
+    labels: ['-'],
+    datasets: [
+      {
+        label: 'No hay actividades completadas',
+        data: [1],
+        backgroundColor: ['#bbb'],
+      },
+    ],
+  };
+};
+
+// eslint-disable-next-line no-shadow
+const makeCorrectasData = (data: ICountCorrectas) => {
+  const counts = _.reduce(Object.values(data), (a, b) => ({
+    Correctas: a.Correctas + (b.Correctas || 0),
+    Incorrectas: a.Incorrectas + (b.Incorrectas || 0),
+  }), { Correctas: 0, Incorrectas: 0 });
+  if (counts.Correctas + counts.Incorrectas > 0) {
+    return {
+      labels: ['Correctas', 'Incorrectas'],
+      datasets: [
+        {
+          label: 'Tiempo promedio de actividad (seg)',
+          data: [counts.Correctas, counts.Incorrectas],
+          backgroundColor: ['#A1C96A', '#EA6A6A'],
+        },
+      ],
+    };
+  }
+  return {
+    labels: ['-'],
+    datasets: [
+      {
+        label: 'No hay actividades completadas',
+        data: [1],
+        backgroundColor: ['#bbb'],
+      },
+    ],
+  };
+};
+
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 
 const EstadisticasProfesorView = () => {
-  const params = useParams();
+  const { cursoId } = useParams();
   const [curso, setCurso] = useState<ICurso>();
+  const [tiempoData, setTiempoData] = useState<ITiempoData>();
+  const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
   const [loading, setLoading] = useState(true);
-  const { cursoId } = params;
   const navigate = useNavigate();
 
-  // const { logout } = useAuth();
-  // const getCurso = async () => {
-  //   try {
-  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-  //     setCurso(res.data.curso);
-  //     console.log(res.data);
-  //     setLoading(false);
-  //   } catch (e) {
-  //     console.log(e);
-  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
-  //       logout();
-  //     }
-  //     setLoading(false);
-  //   }
-  // };
+  const { logout } = useAuth();
+  const getData = async () => {
+    try {
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`); // ${cursoId}`);
+      setCurso(res.data.curso);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/tiempo`);
+      setTiempoData(res.data.tiempo);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`);
+      setCountCorrectas(res.data.countCorrectas);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
+    setLoading(false);
+  };
 
-  // useEffect(() => {
-  //   if (!curso) getCurso();
-  // }, []);
+  useEffect(() => {
+    getData();
+  }, []);
 
-  // if (loading) return (<Box />);
-  // if (!curso) return (<NotFoundView />);
+  if (loading) return (<CargaView />);
+  if (!curso || !tiempoData || !countCorrectas) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
           <b>Estadísticas del curso: </b>
-          {/* {curso.nombre} */}
+          {curso.nombre}
         </Typography>
       </Box>
       <Stack spacing={3} sx={{ px: 5, py: 1 }}>
@@ -230,14 +303,14 @@ const EstadisticasProfesorView = () => {
           }}
           >
             <Bar
-              data={data}
+              data={makeTiempoData(tiempoData)}
             />
           </Card>
           <Card sx={{
             p: 1, width: 2.5 / 6, borderRadius: 5,
           }}
           >
-            <Doughnut data={data} options={options} />
+            <Doughnut data={makeCorrectasData(countCorrectas)} options={options} />
           </Card>
         </Stack>
         <ActividadDocenteTable rows={infoActividadDocenteTable} />
