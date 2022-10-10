@@ -51,7 +51,7 @@ interface IDisponibles {
   10: number[];
   11: number[];
 }
-const len = [28, 9, 15, 19, 7, 14, 56, 281, 198, 31, 39, 11];
+const len = [28, 9, 15, 15, 7, 14, 56, 281, 198, 31, 39, 11];
 const srcNames = [
   'baseImages',
   'vitiligoImages',

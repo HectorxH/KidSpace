@@ -46,18 +46,6 @@ const righteyeImages: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   i14: {
     uri: require('../14.png'),
   },
-  i15: {
-    uri: require('../15.png'),
-  },
-  i16: {
-    uri: require('../16.png'),
-  },
-  i17: {
-    uri: require('../17.png'),
-  },
-  i18: {
-    uri: require('../18.png'),
-  },
 };
 
 export {righteyeImages};
