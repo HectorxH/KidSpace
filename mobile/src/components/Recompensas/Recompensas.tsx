@@ -291,7 +291,7 @@ const styles = StyleSheet.create({
   buttonView: {
     flexDirection: 'row',
     justifyContent: 'center',
-    padding: RSize(0.07, 'w'),
+    padding: RSize(0.04, 'w'),
   },
   button: {
     backgroundColor: '#A1C96A',
