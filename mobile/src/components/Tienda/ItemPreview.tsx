@@ -37,7 +37,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
                 backgroundColor: 'white',
               },
               props.tipo !== 'Fondos'
-                ? {marginHorizontal: RSize(0.1, 'h')}
+                ? {marginHorizontal: RSize(0.04, 'w')}
                 : {marginHorizontal: 0},
             ]}
           />
@@ -65,7 +65,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
           style={{
             justifyContent: 'center',
             alignItems: 'center',
-            translateY: RSize(-0.02, 'w'),
+            translateY: RSize(-0.025, 'w'),
           }}
           source={LottieSleepyCat}
           autoPlay
@@ -75,7 +75,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
           style={{
             position: 'absolute',
             left: RSize(0.02, 'w'),
-            bottom: RSize(0.16, 'h'),
+            bottom: RSize(0.15, 'h'),
             paddingHorizontal: RSize(0.1, 'h'),
           }}>
           <Card style={{borderRadius: 20}}>
@@ -83,7 +83,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
               style={{
                 textAlign: 'center',
                 fontFamily: 'Poppins-SemiBold',
-                fontSize: RSize(0.6, 'w') / RSize(0.11, 'h'),
+                fontSize: RSize(0.7, 'w') / RSize(0.1, 'h'),
                 padding: RSize(0.2, 'w') / RSize(0.1, 'h'),
               }}>
               Vendemos solo los mejores productos, miau. Selecciona lo que más
@@ -93,7 +93,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
                   textAlign: 'center',
                   fontFamily: 'Poppins-SemiBold',
                   color: '#5C9DEC',
-                  fontSize: RSize(0.6, 'w') / RSize(0.11, 'h'),
+                  fontSize: RSize(0.7, 'w') / RSize(0.1, 'h'),
                   padding: RSize(0.2, 'w') / RSize(0.1, 'h'),
                 }}>
                 vista previa.

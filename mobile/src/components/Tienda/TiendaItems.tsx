@@ -244,7 +244,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 style={{
                   fontFamily: 'Poppins-Bold',
                   alignSelf: 'center',
-                  fontSize: RSize(0.04, 'h'),
+                  fontSize: RSize(13, 'w') / RSize(2, 'h'),
                   textAlign: 'center',
                 }}>
                 200
@@ -405,7 +405,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(5, 'h') / RSize(0.12, 'w'),
+    fontSize: RSize(13, 'w') / RSize(2, 'h'),
   },
   chip1: {
     backgroundColor: '#B878EA',
