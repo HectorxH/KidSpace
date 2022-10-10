@@ -1492,6 +1492,7 @@
           "end": [19, 7]
         },
         "settings": { 
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1663,6 +1664,7 @@
           "end": [19, 7]
         },
         "settings": { 
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1834,6 +1836,7 @@
           "end": [19, 7]
         },
         "settings": { 
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2177,6 +2180,7 @@
           "end": [18, 12.5]
         },
         "settings": { 
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"

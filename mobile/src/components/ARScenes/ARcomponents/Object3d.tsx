@@ -85,7 +85,7 @@ const Objects3d = (props: Objects3dProps) => {
     transform[pageNumber][index].rotation = [
       transform[pageNumber][index].rotation[0],
       // rots[pageNumber][index],
-      (transform[pageNumber][index].rotation[1] - rotation / 2) % 360,
+      (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
       transform[pageNumber][index].rotation[2],
     ];
 
@@ -194,15 +194,6 @@ const Objects3d = (props: Objects3dProps) => {
                   .altModel as ImageSourcePropType)
           }
           resources={modelChildrenProps[pageNumber][itemNumber][0].resources}
-          // position={
-          //   typeof positions[modelIndex] === 'undefined'
-          //     ? positions[modelIndex]
-          //     : [
-          //         positions[modelIndex][0],
-          //         positions[modelIndex][1] + 1,
-          //         positions[modelIndex][2],
-          //       ]
-          // }
           position={[0, 1.2, 0]}
           scale={modelChildrenProps[pageNumber][itemNumber][0].scale}
           rotation={modelChildrenProps[pageNumber][itemNumber][0].rotation}

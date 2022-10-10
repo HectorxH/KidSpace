@@ -76,7 +76,7 @@ const PortalObjects3d = (props: PortalObjects3dProps) => {
     transform[pageNumber][index].rotation = [
       transform[pageNumber][index].rotation[0],
       // rots[pageNumber][index],
-      (transform[pageNumber][index].rotation[1] - rotation / 2) % 360,
+      (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
       transform[pageNumber][index].rotation[2],
     ];
 

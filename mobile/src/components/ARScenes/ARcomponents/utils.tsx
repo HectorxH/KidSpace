@@ -116,3 +116,11 @@ export function updateScale(
 
   setTransforms(transform);
 }
+
+export function calculateDistance(p1: Vec3, p2: Vec3) {
+  var a = p2[0] - p1[0];
+  var b = p2[1] - p1[1];
+  var c = p2[2] - p1[2];
+
+  return Math.sqrt(a * a + b * b + c * c);
+}
