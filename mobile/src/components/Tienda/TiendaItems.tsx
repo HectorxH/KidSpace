@@ -20,8 +20,6 @@ import {imagesTienda} from '../../assets/tienda/handler/imagesTienda';
 import {TiendaItemsProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 import ItemPreview from './ItemPreview';
-// @ts-ignore
-import RNTooltips from 'react-native-tooltips';
 import {useAuth} from '../../hooks/useAuth';
 import Config from 'react-native-config';
 
@@ -34,8 +32,6 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [currentMonedas, setCurrentMonedas] = useState(cantMonedas);
   const [noDisponibles, setNoDisponibles] = useState(compras);
-  const target = useRef(null);
-  const parent = useRef(null);
   const [visible, setVisible] = useState(false);
 
   const {instance} = useAuth();
@@ -217,12 +213,12 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               tipo={tipo}
             />
           </View>
-          <View ref={parent}>
+          <View>
             <TouchableOpacity
               style={[
                 {
-                  paddingVertical: RSize(0.01, 'w'),
-                  paddingHorizontal: RSize(0.06, 'h'),
+                  paddingVertical: RSize(0.01, 'h'),
+                  paddingHorizontal: RSize(0.01, 'w'),
                   backgroundColor: '#A1C96A',
                   margin: RSize(0.01, 'h'),
                   alignSelf: 'center',
@@ -233,8 +229,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                   alignItems: 'center',
                 },
               ]}
-              onPress={() => handleComprarClick(200)}
-              ref={target}>
+              onPress={() => handleComprarClick(200)}>
               <Text style={styles.textButton}>Comprar</Text>
               <Image
                 style={{
@@ -249,21 +244,12 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 style={{
                   fontFamily: 'Poppins-Bold',
                   alignSelf: 'center',
-                  fontSize: RSize(0.04, 'h'),
+                  fontSize: RSize(13, 'w') / RSize(2, 'h'),
                   textAlign: 'center',
                 }}>
                 200
               </Text>
             </TouchableOpacity>
-            <RNTooltips
-              text="No tienes suficientes monedas =("
-              visible={visible}
-              target={target.current}
-              parent={parent.current}
-              onHide={() => setVisible(false)}
-              tintColor={'white'}
-              textColor={'black'}
-            />
           </View>
         </ImageBackground>
       </View>
@@ -419,7 +405,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#ffffff',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(5, 'h') / RSize(0.12, 'w'),
+    fontSize: RSize(13, 'w') / RSize(2, 'h'),
   },
   chip1: {
     backgroundColor: '#B878EA',

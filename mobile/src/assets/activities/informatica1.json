@@ -1428,7 +1428,7 @@
         "rightAnswer": ["Caminar hacia abajo y derecha, comer"],
         "answers": [
           {
-            "text": "Caminar hacia derecha y abajo, comer",
+            "text": "Caminar hacia izquierda y abajo, comer",
             "position": {
               "start": [1.5, 10.5],
               "end": [11.5, 13]
@@ -1630,8 +1630,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [8.5, 4],
-          "end": [19.5, 9]
+          "start": [8.5, 1],
+          "end": [19.5, 6]
         },
         "settings": {
           "borderWidth": 0,
@@ -1641,7 +1641,7 @@
       {
         "position": {
           "start": [0.1, 16.5],
-          "end": [11, 20]
+          "end": [11.5, 20]
         },
         "settings": {
           "borderWidth": 0,
@@ -1656,8 +1656,8 @@
       {
         "text": "Arrastra los bloques para ayudar a Ia tortuga Ignacio a comer la manzana. ¡El primer bloque ya está listo!",
         "position": {
-          "start": [9, 4.5],
-          "end": [19, 8.5]
+          "start": [9, 1.5],
+          "end": [19, 5.5]
         },
         "settings": {
           "fontWeight": "bold",
@@ -1690,12 +1690,12 @@
           "buttonColorNormal": "#A1C96A",
           "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
-          "buttonTextAlt": " Avanzar",
-          "buttonTextNormal": " Avanzar"
+          "buttonTextAlt": " Ejecutar",
+          "buttonTextNormal": " Ejecutar"
         },
         "position" : {
-          "start": [15, 1],
-          "end": [19.5, 3.5]
+          "start": [15, 16.5],
+          "end": [19.5, 19]
         },
         "target": 47,
         "require": [46],
@@ -1735,8 +1735,8 @@
             "value": "Comer",
             "top": true,
             "position": {
-              "start": [9.2, 17.5],
-              "end": [10.8, 19]
+              "start": [9.1, 17.5],
+              "end": [11.4, 19]
             }
           }
         ],
@@ -1748,8 +1748,8 @@
             "top": true,
             "bottom": true,
             "position": {
-              "start": [0.5, 4.5],
-              "end": [7, 6]
+              "start": [0.5, 4],
+              "end": [7, 5.5]
             }
           },
           {
@@ -1757,8 +1757,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 6],
-              "end": [7, 7.5]
+              "start": [0.5, 5.7],
+              "end": [7, 7.2]
             }
           },
           {
@@ -1766,8 +1766,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 7.5],
-              "end": [7, 9]
+              "start": [0.5, 7.4],
+              "end": [7, 8.9]
             }
           },
           {
@@ -1775,8 +1775,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 9],
-              "end": [7, 10.5]
+              "start": [0.5, 9.1],
+              "end": [7, 10.6]
             }
           },
           {
@@ -1784,8 +1784,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 10.5],
-              "end": [7, 12]
+              "start": [0.5, 10.8],
+              "end": [7, 12.3]
             }
           },
           {
@@ -1793,8 +1793,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 12],
-              "end": [7, 13.5]
+              "start": [0.5, 12.5],
+              "end": [7, 14]
             }
           },
           {
@@ -1802,11 +1802,216 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 13.5],
-              "end": [7, 15]
+              "start": [0.5, 14.2],
+              "end": [7, 15.7]
             }
           }
         ]
+      }
+    ],
+    "lottie": [
+      {
+        "name": "tortuga",
+        "position": {
+          "start": [8.5, 6.5],
+          "end": [19.5, 16]
+        },
+        "start": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8.5, 1],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      },
+      {
+        "position": {
+          "start": [0.1, 16.5],
+          "end": [11.5, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "backgroundColor": "#5C9DEC",
+          "borderTopLeftRadius": 20,
+          "borderTopRightRadius": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Arrastra los bloques para ayudar a Ia tortuga Ignacio a comer la manzana. ¡El primer bloque ya está listo!",
+        "position": {
+          "start": [9, 1.5],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "fontWeight": "bold",
+          "fontSize": 20,
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0.5, 1],
+          "end": [2, 3.5]
+        },
+        "target": 45,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 16.5],
+          "end": [19.5, 19]
+        },
+        "target": 48,
+        "require": [],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Caminar hacia arriba", "Caminar hacia derecha", "Caminar hacia abajo", "Caminar hacia derecha", "Caminar hacia abajo", "Caminar hacia derecha", "Comer"],
+        "draggableItems": [
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia abajo",
+            "top": true,
+            "bottom": true,
+            "position": {
+              "start": [0.2, 17.5],
+              "end": [4.3, 19]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia derecha",
+            "top": true,
+            "bottom": true,
+            "position": {
+              "start": [4.4, 17.5],
+              "end": [9, 19]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "function",
+            "value": "Comer",
+            "top": true,
+            "position": {
+              "start": [9.1, 17.5],
+              "end": [11.4, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia arriba",
+            "top": true,
+            "bottom": true,
+            "position": {
+              "start": [0.5, 4],
+              "end": [7, 5.5]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia derecha",
+            "position": {
+              "start": [0.5, 5.7],
+              "end": [7, 7.2]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia abajo",
+            "position": {
+              "start": [0.5, 7.4],
+              "end": [7, 8.9]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia derecha",
+            "position": {
+              "start": [0.5, 9.1],
+              "end": [7, 10.6]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia abajo",
+            "position": {
+              "start": [0.5, 10.8],
+              "end": [7, 12.3]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "move",
+            "value": "Caminar hacia derecha",
+            "position": {
+              "start": [0.5, 12.5],
+              "end": [7, 14]
+            }
+          },
+          {
+            "type": "codeBlock",
+            "name": "function",
+            "value": "Comer",
+            "position": {
+              "start": [0.5, 14.2],
+              "end": [7, 15.7]
+            }
+          }
+        ]
+      }
+    ],
+    "lottie": [
+      {
+        "name": "tortuga",
+        "position": {
+          "start": [8.5, 6.5],
+          "end": [19.5, 16]
+        },
+        "start": true
       }
     ]
   },
@@ -1836,6 +2041,25 @@
           "start": [2.5, 3],
           "end": [8.5, 20]  
         }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": " Terminar",
+          "buttonTextNormal": " Terminar"
+        },
+        "position" : {
+          "start": [11, 13.5],
+          "end": [17, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
       }
     ]
   }

@@ -11,6 +11,7 @@ import {
   IActividadesParams,
   IActNavigationParams,
   IInventarioParams,
+  ILottieComponentParams,
   IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
@@ -21,6 +22,7 @@ import {
 const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   const {
     actividades,
+    lotties,
     nombreActividad,
     cantMonedas,
     completadas,
@@ -76,10 +78,19 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       ? actividadPage.toggleButton[0].value
       : true,
   );
-  const [toggleValues, setToggleValues] = useState<number[][]>(
-    toggleButtons.map(tButton => tButton.map(b => (b.value === true ? 1 : 0))),
-  );
+  // const [toggleValues, setToggleValues] = useState<number[][]>(
+  //   toggleButtons.map(tButton => tButton.map(b => (b.value === true ? 1 : 0))),
+  // );
 
+  const [toggleValues, setToggleValues] = useState<number[][]>(
+    actividades.map(actividadPage =>
+      typeof actividadPage.toggleButton !== 'undefined'
+        ? actividadPage.toggleButton[0].value === true
+          ? [1]
+          : [0]
+        : [],
+    ),
+  );
   // vars texturas
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     useState<number>(0);
@@ -290,6 +301,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     userAnswersQuiz: userAnswersQuiz,
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],
+    lotties: lotties,
   };
 
   const ToggleButtonParams: IToggleButtonParams = {
@@ -340,6 +352,11 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
+  const LottieComponentParams: ILottieComponentParams = {
+    pageNumber: pageNumber,
+    lotties: lotties,
+  };
+
   const actividadComponentParams: IActividadesComponentParams = {
     pageNumber: pageNumber,
     actividades: actividades,
@@ -350,6 +367,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     toggleButtonParams: ToggleButtonParams,
     actNavigationParams: ActNavigationParams,
     markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
+    lottiesComponentParams: LottieComponentParams,
   };
 
   return actividadComponentParams;

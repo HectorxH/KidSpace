@@ -298,12 +298,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -345,12 +345,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -392,12 +392,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -866,12 +866,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -923,12 +923,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -980,12 +980,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -1037,12 +1037,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],

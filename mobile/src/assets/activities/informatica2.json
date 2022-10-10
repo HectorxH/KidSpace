@@ -1327,12 +1327,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1414,12 +1414,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1501,12 +1501,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1588,12 +1588,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1675,12 +1675,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1762,12 +1762,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1849,12 +1849,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
