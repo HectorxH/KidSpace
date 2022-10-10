@@ -1,4 +1,5 @@
 import {
+  IModelChildrenProps,
   IModelProps,
   ITransform,
 } from '../components/ARScenes/ARcomponents/utils';
@@ -50,7 +51,7 @@ export interface IViroAppParams {
   imageTrackers: IImageTracker[][];
   modelMaterial: string[][];
   modelProps: IModelProps[][];
-  modelChildrenProps: IModelProps[][][];
+  modelChildrenProps: IModelChildrenProps[][][];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
   useChildrenAlt: [boolean[][][], ReactStateSetter<boolean[][][]>];
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];

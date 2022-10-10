@@ -8,6 +8,7 @@ import {IModels, Vec3} from '../../../types/activity';
 import {ImageSourcePropType} from 'react-native';
 import {ReactStateSetter} from '../../../types/others';
 import {
+  IModelChildrenProps,
   IModelProps,
   ITransform,
   TSelectedMaterial,
@@ -18,7 +19,7 @@ import {
 interface Objects3dProps {
   models3d: IModels[];
   modelProps: IModelProps[][];
-  modelChildrenProps: IModelProps[][][];
+  modelChildrenProps: IModelChildrenProps[][][];
   pageNumber: number;
   itemNumber: number;
   modelIndex: number;
@@ -145,7 +146,14 @@ const Objects3d = (props: Objects3dProps) => {
     }
   }
   return (
-    <ViroNode>
+    <ViroNode
+      position={positions[modelIndex]}
+      onDrag={() => {}}
+      dragType={'FixedToWorld'}
+      rotation={transforms[pageNumber][itemNumber].rotation}
+      onRotate={(rotateState, rotation) =>
+        updateRotation(itemNumber, rotateState, rotation)
+      }>
       <Viro3DObject
         source={
           useAlt[pageNumber][itemNumber] === false
@@ -154,13 +162,12 @@ const Objects3d = (props: Objects3dProps) => {
                 .altModel as ImageSourcePropType)
         }
         resources={modelProps[pageNumber][itemNumber].resources}
-        materials={modelMaterial[modelIndex]}
-        position={positions[modelIndex]}
-        scale={transforms[pageNumber][itemNumber].scale}
-        rotation={transforms[pageNumber][itemNumber].rotation}
         type={modelProps[pageNumber][itemNumber].type}
-        onDrag={() => {}}
-        dragType={'FixedToWorld'}
+        materials={modelMaterial[modelIndex]}
+        // position={positions[modelIndex]}
+        position={[0, 0, 0]}
+        scale={transforms[pageNumber][itemNumber].scale}
+        // rotation={transforms[pageNumber][itemNumber].rotation}
         onPinch={(pinchState, scaleFactor) =>
           updateScale(
             pageNumber,
@@ -172,9 +179,9 @@ const Objects3d = (props: Objects3dProps) => {
             models3d,
           )
         }
-        onRotate={(rotateState, rotation) =>
-          updateRotation(itemNumber, rotateState, rotation)
-        }
+        // onRotate={(rotateState, rotation) =>
+        //   updateRotation(itemNumber, rotateState, rotation)
+        // }
         onClick={() => onModelClick(itemNumber, 'main')}
       />
       {modelChildrenProps[pageNumber][itemNumber].length > 0 && (
@@ -187,19 +194,18 @@ const Objects3d = (props: Objects3dProps) => {
                   .altModel as ImageSourcePropType)
           }
           resources={modelChildrenProps[pageNumber][itemNumber][0].resources}
-          // materials={modelMaterial[modelIndex]}
-          position={
-            typeof positions[modelIndex] === 'undefined'
-              ? positions[modelIndex]
-              : [
-                  positions[modelIndex][0],
-                  positions[modelIndex][1] + 0.5,
-                  positions[modelIndex][2],
-                ]
-          }
-          // position={[0, 1.5, 0]}
-          scale={transforms[pageNumber][itemNumber].scale}
-          rotation={transforms[pageNumber][itemNumber].rotation}
+          // position={
+          //   typeof positions[modelIndex] === 'undefined'
+          //     ? positions[modelIndex]
+          //     : [
+          //         positions[modelIndex][0],
+          //         positions[modelIndex][1] + 1,
+          //         positions[modelIndex][2],
+          //       ]
+          // }
+          position={[0, 1.2, 0]}
+          scale={modelChildrenProps[pageNumber][itemNumber][0].scale}
+          rotation={modelChildrenProps[pageNumber][itemNumber][0].rotation}
           type={modelChildrenProps[pageNumber][itemNumber][0].type}
           onClick={() => onModelClick(itemNumber, 'aux')}
         />

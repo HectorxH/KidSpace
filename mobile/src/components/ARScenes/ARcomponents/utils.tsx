@@ -30,6 +30,24 @@ export interface IModelProps {
   };
 }
 
+export interface IModelChildrenProps {
+  model: ImageSourcePropType;
+  altModel: ImageSourcePropType;
+  alt: string;
+  modelType: string;
+  modelImage360: string;
+  resources: ImageSourcePropType[];
+  materials: ViroMaterialDict | undefined;
+  type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
+  interactable: string[];
+  ARMaterials: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+  rotation: Vec3;
+  scale: Vec3;
+}
+
 export function updateRotation2(
   pageNumber: number,
   index: number,

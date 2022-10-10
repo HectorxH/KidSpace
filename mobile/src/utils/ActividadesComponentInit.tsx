@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import Models from '../assets/3d/models';
 import {
+  IModelChildrenProps,
   IModelProps,
   ITransform,
 } from '../components/ARScenes/ARcomponents/utils';
@@ -138,7 +139,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     })),
   );
   // pagenumber-itemnumber-childnumber
-  const modelChildrenProps: IModelProps[][][] = models3d.map(model3d =>
+  const modelChildrenProps: IModelChildrenProps[][][] = models3d.map(model3d =>
     model3d.map(item =>
       typeof item.childrens !== 'undefined'
         ? item.childrens.map(child => ({
@@ -163,6 +164,9 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
               typeof child.ARMaterials !== 'undefined'
                 ? child.ARMaterials
                 : {materialOrder: [], materialChoices: []},
+
+            rotation: child.rotation,
+            scale: child.scale,
           }))
         : [],
     ),
