@@ -331,7 +331,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <FlatList
             style={styles.scrollView}
             persistentScrollbar={true}
-            numColumns={Math.round(RSize(0.0155, 'h'))}
+            numColumns={Math.trunc(RSize(0.0155, 'h'))}
             data={Array(len[parte]).fill(1)}
             renderItem={({item, index}) => (
               <View

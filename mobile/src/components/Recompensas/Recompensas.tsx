@@ -232,6 +232,7 @@ const styles = StyleSheet.create({
   mainView: {
     flexDirection: 'row',
     justifyContent: 'center',
+    marginTop: RSize(0.01, 'h'),
   },
   viewBG: {
     position: 'absolute',
