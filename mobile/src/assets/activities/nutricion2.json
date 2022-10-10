@@ -1415,7 +1415,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1428,7 +1428,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1623,7 +1623,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1636,7 +1636,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1726,7 +1726,7 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente!\n Carlos te tiene el último desafío para practicar.",
+        "text": "¡Excelente! Carlos te tiene el último desafío para practicar.",
         "position": {
           "start": [4, 5.5],
           "end": [16, 16.5]
@@ -1831,7 +1831,7 @@
           "end": [9.3, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1844,7 +1844,7 @@
           "end": [18, 10]
         },
         "settings": { 
-          "fontSize": 20,
+          "fontSize": 18,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
