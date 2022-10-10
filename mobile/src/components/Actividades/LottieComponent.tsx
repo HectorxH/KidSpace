@@ -45,7 +45,7 @@ const LottieComponent = ({lotties}: LottieComponentProps) => {
                     style={styles.viewBG}
                     source={tortuga}
                     autoPlay={lottie.start}
-                    loop={lottie.start}
+                    loop={false}
                   />
                 </View>
               }
