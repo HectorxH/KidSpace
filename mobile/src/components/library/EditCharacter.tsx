@@ -331,7 +331,12 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           <FlatList
             style={styles.scrollView}
             persistentScrollbar={true}
-            numColumns={Math.trunc(RSize(0.0155, 'h'))}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            numColumns={Math.trunc(RSize(0.006, 'w'))}
             data={Array(len[parte]).fill(1)}
             renderItem={({item, index}) => (
               <View

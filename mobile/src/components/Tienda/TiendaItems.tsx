@@ -302,8 +302,13 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
             initialNumToRender={1}
             maxToRenderPerBatch={1}
             data={Object.keys(tipoImages)}
-            numColumns={Math.trunc(RSize(0.01, 'h'))}
+            numColumns={Math.trunc(RSize(0.004, 'w'))}
             renderItem={renderItem}
+            contentContainerStyle={{
+              flexGrow: 1,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           />
         </View>
       </View>
