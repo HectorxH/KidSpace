@@ -339,18 +339,6 @@ const images: {
     teclado_aux: {
       square: require('./icons/teclado/teclado.png'),
     },
-    antofagasta: {
-      square: require('./icons/ssd/ssd.png'),
-    },
-    lagos: {
-      square: require('./icons/ssd/ssd.png'),
-    },
-    rancagua: {
-      square: require('./icons/teclado/teclado.png'),
-    },
-    valdivia: {
-      square: require('./icons/teclado/teclado.png'),
-    },
     norte: {
       square: require('./icons/portales/norte.png'),
     },
