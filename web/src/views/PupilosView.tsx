@@ -15,8 +15,7 @@ const img = require('../assets/statistics.png');
 const PupilosView = () => {
   const [estudiantes, setEstudiantes] = useState<IEstudiantes>();
   const [loading, setLoading] = useState(true);
-  const { logout } = useAuth();
-  const { user } = useAuth();
+  const { logout, user } = useAuth();
 
   const getCurso = async () => {
     try {
