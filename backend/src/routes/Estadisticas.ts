@@ -1,6 +1,7 @@
 import express from 'express';
 import _ from 'lodash';
 import ActividadLog, { IActividadLog } from '../models/ActividadLog';
+import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
 
 const router = express.Router();
@@ -31,7 +32,10 @@ router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
   try {
     const { id } = req.params;
     const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
-    const respuestas = _.map(logs, (o) => ({ actividad: o.actividad, respuestas: _.map(o.quizFinal, 'respuesta') }));
+    const respuestas = _.map(logs, (o) => ({
+      actividad: o.actividad,
+      respuestas: _.map(o.quizFinal, 'respuesta'),
+    }));
     const byActividad = _.groupBy(respuestas, 'actividad');
     const respuestasByActividad = _.mapValues(byActividad, (oArray) => _.map(oArray, 'respuestas'));
     const correctas = _.mapValues(
@@ -46,8 +50,30 @@ router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
       correctas,
       (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
     );
-    console.log(countCorrectas);
     res.json({ countCorrectas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/%delcurso', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const curso = await Curso.findById(id);
+    const nEstudiantes = curso?.estudiantes?.length;
+    if (!nEstudiantes) throw Error('No se encontro el curso');
+    const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
+
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.map(o, 'estudiante'));
+    const uniqueEstudiantesByActividad = _.mapValues(
+      estudiantesByActividad,
+      (o) => _.uniq(o).length / nEstudiantes,
+    );
+
+    console.log(uniqueEstudiantesByActividad);
+    res.json({ actividadesCurso: uniqueEstudiantesByActividad });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

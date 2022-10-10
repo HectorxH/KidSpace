@@ -36,38 +36,20 @@ interface ICountCorrectas {
   [key: string]: {'Correctas': number, 'Incorrectas': number}
 }
 
-const infoActividadDocenteTable = [
-  {
-    _id: 0,
-    actividad: 'Diagramas',
-    estado: 'Completada',
-    porcentaje: 70,
-  },
-  {
-    _id: 1,
-    actividad: 'Soluciones tecnologicas',
-    estado: 'Sin completar',
-    porcentaje: 30,
-  },
-  {
-    _id: 2,
-    actividad: 'Materiales',
-    estado: 'Sin completar',
-    porcentaje: 30,
-  },
-  {
-    _id: 3,
-    actividad: 'Reciclaje',
-    estado: 'Sin completar',
-    porcentaje: 30,
-  },
-  {
-    _id: 4,
-    actividad: 'Diseño',
-    estado: 'Completada',
-    porcentaje: 30,
-  },
-];
+interface IActividadesCurso {
+  [key: string]: number
+}
+
+// const infoActividadIndividualTable = [
+//   'Informática y algrotimos en nuestra vida ',
+//   '¿Qué es un computador?',
+//   'Tierra, Luna y Sol',
+//   '¿Qué vemos en el cielo nocturno?',
+//   'Interpretando etiquetas de los alimentos',
+//   'Analizando nuestro dieta',
+//   'Teoría de colores',
+//   'Diseño gráfico en nuestro alrededor',
+// ];
 
 const infoActividadIndividualTable = [
   {
@@ -162,17 +144,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const img = require('../assets/quiz.png');
 
-const data = {
-  labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [12, 19, 3, 5, 3], // Utils.numbers(NUMBER_CFG),
-      backgroundColor: ['#5C9DEC', '#B878EA', '#FF8A00', '#F2C144', '#A1C96A'],
-    },
-  ],
-};
-
 const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -251,6 +222,7 @@ const EstadisticasProfesorView = () => {
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
+  const [actividadesCurso, setActividadesCurso] = useState<IActividadesCurso>();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -263,6 +235,8 @@ const EstadisticasProfesorView = () => {
       setTiempoData(res.data.tiempo);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`);
       setCountCorrectas(res.data.countCorrectas);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%delcurso`);
+      setActividadesCurso(res.data.actividadesCurso);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
@@ -277,7 +251,7 @@ const EstadisticasProfesorView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!curso || !tiempoData || !countCorrectas) return (<NotFoundView />);
+  if (!curso || !tiempoData || !countCorrectas || !actividadesCurso) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
@@ -313,7 +287,7 @@ const EstadisticasProfesorView = () => {
             <Doughnut data={makeCorrectasData(countCorrectas)} options={options} />
           </Card>
         </Stack>
-        <ActividadDocenteTable rows={infoActividadDocenteTable} />
+        <ActividadDocenteTable rowsData={actividadesCurso} cursoId={curso._id} />
         <Typography variant="h5">
           Actividades Individuales
         </Typography>

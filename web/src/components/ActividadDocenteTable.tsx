@@ -9,12 +9,22 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
+import { ICurso } from '../types/cursos';
 // import { useAuth } from '../hooks/useAuth';
 
 const imgStudent = require('../assets/quiz.png');
+
+const actividades = [
+  'Diagramas',
+  'Soluciones tecnologicas',
+  'Materiales',
+  'Reciclaje',
+  'Diseño',
+];
 
 interface IRow {
   _id: number,
@@ -23,29 +33,28 @@ interface IRow {
   porcentaje: number
 }
 
-interface RowParams {
-  row: IRow,
+interface IActividadesCurso {
+  [key: string]: number
 }
 
 interface ITableParams {
-  rows: IRow[],
-  // updateEstudiantes: Function
+  rowsData: IActividadesCurso,
+  cursoId: string
 }
 
 const ActividadDocenteTable = (
-  { rows }: ITableParams,
+  { rowsData, cursoId }: ITableParams,
 ) => {
-  const { logout } = useAuth();
   const navigate = useNavigate();
-  const [curso, setCurso] = useState('633791565117c47b4c1399db');
   const handleVerStats = (i:string) => {
-    navigate(`/cursos/${curso}/estadisticas/actividadDocente/${i}`);
+    navigate(`/cursos/${cursoId}/estadisticas/actividadDocente/${i}`);
   };
   const cols: GridColDef[] = [
     {
       field: 'actividad',
       headerName: 'Actividad',
       flex: 1,
+      renderCell: ((params) => (params.row)),
     },
     {
       field: 'estado',
@@ -53,8 +62,8 @@ const ActividadDocenteTable = (
       flex: 1,
       renderCell: ((params) => (
         <div>
-          <Typography sx={{ fontSize: '15px', color: params.row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
-            {params.row.estado}
+          <Typography sx={{ fontSize: '15px', color: rowsData[params.row] ? '#A1C96A' : '#EA6A6A' }}>
+            {rowsData[params.row] ? 'Completada' : 'Sin Completar' }
           </Typography>
         </div>
       )),
@@ -65,7 +74,7 @@ const ActividadDocenteTable = (
       flex: 1,
       renderCell: (params) => (
         <div>
-          {params.row.porcentaje} %
+          {_.round((Number(rowsData[params.row]) || 0) * 100, 1)} %
         </div>
       ),
     },
@@ -76,7 +85,7 @@ const ActividadDocenteTable = (
       sortable: false,
       renderCell: (params) => {
         const onClick = (e:any) => {
-          handleVerStats(params.row._id);
+          handleVerStats(params.row);
         };
         return (
           <div>
@@ -100,20 +109,17 @@ const ActividadDocenteTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
-        : (
-          <DataGrid
-            density="comfortable"
-            getRowHeight={() => 'auto'}
-            autoHeight
-            hideFooter
-            columns={cols}
-            rows={Object.values(rows)}
-            getRowId={(row: any) => row._id}
-            disableSelectionOnClick
-            sx={{ borderRadius: 5 }}
-          />
-        )}
+      <DataGrid
+        density="comfortable"
+        getRowHeight={() => 'auto'}
+        autoHeight
+        hideFooter
+        columns={cols}
+        rows={actividades}
+        getRowId={(row: any) => row}
+        disableSelectionOnClick
+        sx={{ borderRadius: 5 }}
+      />
     </Box>
   );
 };
