@@ -33,7 +33,9 @@ const ARMainComponent = (props: ARMainComponentProps) => {
     setSelectedModelMaterials,
     modelMaterial,
     modelProps,
+    modelChildrenProps,
     useAlt,
+    useChildrenAlt,
     markerTrackingState,
     activeTracker,
     activeTrackerIndex,
@@ -90,10 +92,12 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 pageNumber={pageNumber}
                 models3d={models3d[pageNumber]}
                 modelProps={modelProps}
+                modelChildrenProps={modelChildrenProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
                 positions={positions[pageNumber]}
                 useAlt={useAlt}
+                useChildrenAlt={useChildrenAlt}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[
@@ -110,10 +114,12 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 pageNumber={pageNumber}
                 models3d={models3d[pageNumber]}
                 modelProps={modelProps}
+                modelChildrenProps={modelChildrenProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
                 positions={positions[pageNumber]}
                 useAlt={useAlt}
+                useChildrenAlt={useChildrenAlt}
                 rotations={[rotations, setRotations]}
                 transforms={[transforms, setTransforms]}
                 materialSelectorToggle={[

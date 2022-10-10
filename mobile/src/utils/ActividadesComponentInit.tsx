@@ -137,6 +137,36 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
           : {materialOrder: [], materialChoices: []},
     })),
   );
+  // pagenumber-itemnumber-childnumber
+  const modelChildrenProps: IModelProps[][][] = models3d.map(model3d =>
+    model3d.map(item =>
+      typeof item.childrens !== 'undefined'
+        ? item.childrens.map(child => ({
+            model: Models[child.model].model,
+            altModel:
+              typeof child.alt !== 'undefined'
+                ? Models[child.alt].model
+                : Models[child.model].model,
+            alt: typeof child.alt !== 'undefined' ? child.alt : '',
+            modelType:
+              typeof child.type !== 'undefined' ? child.type : 'object',
+            modelImage360:
+              typeof child.image360 !== 'undefined' ? child.image360 : '',
+            resources: Models[child.model].resources,
+            materials: Models[child.model].materials,
+            type: Models[child.model].type,
+            interactable:
+              typeof child.interactable !== 'undefined'
+                ? child.interactable
+                : [],
+            ARMaterials:
+              typeof child.ARMaterials !== 'undefined'
+                ? child.ARMaterials
+                : {materialOrder: [], materialChoices: []},
+          }))
+        : [],
+    ),
+  );
 
   const [rotations, setRotations] = useState<number[][]>(
     modelProps.map(model => model.map(() => 0)),
@@ -144,6 +174,16 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
 
   const [useAlt, setUseAlt] = useState<boolean[][]>(
     models3d.map(model3d => model3d.map(() => false)),
+  );
+
+  const [useChildrenAlt, setUseChildrenAlt] = useState<boolean[][][]>(
+    models3d.map(model3d =>
+      model3d.map(model =>
+        typeof model.childrens !== 'undefined'
+          ? model.childrens.map(() => false)
+          : [],
+      ),
+    ),
   );
 
   // image tracking
@@ -178,8 +218,10 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     models3d: models3d,
     imageTrackers: imageTrackers,
     modelProps: modelProps,
+    modelChildrenProps: modelChildrenProps,
     transforms: [transforms, setTransforms],
     useAlt: [useAlt, setUseAlt],
+    useChildrenAlt: [useChildrenAlt, setUseChildrenAlt],
     rotations: [rotations, setRotations],
     materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
     setSelectedModelMaterials: setSelectedModelMaterials,

@@ -3,13 +3,12 @@ import {
   ViroPortalScene,
   ViroPortal,
   Viro360Image,
-  Viro3DObject,
 } from '@viro-community/react-viro';
 import Images from '../../../assets/images/images';
 import {IModels, Vec3} from '../../../types/activity';
 import {ReactStateSetter} from '../../../types/others';
 import {IModelProps, TSelectedMaterial} from './utils';
-import {ImageSourcePropType} from 'react-native';
+import PortalObjects3d from './PortalObject3d';
 
 interface PortalsProps {
   models3d: IModels[];
@@ -37,28 +36,28 @@ interface ITransform {
 
 const Portals = (props: PortalsProps) => {
   const positions = props.positions;
+  const [transforms, setTransforms] = props.transforms;
 
   return (
     <ViroPortalScene passable={true}>
       <ViroPortal
-        position={
-          typeof positions[props.modelIndex] === 'undefined'
-            ? positions[props.modelIndex]
-            : [
-                positions[props.modelIndex][0],
-                positions[props.modelIndex][1],
-                -5,
-              ]
-        }
-        onDrag={() => {}}
-        dragType={'FixedToWorld'}
-        scale={[2, 2, 2]}>
-        <Viro3DObject
-          source={
-            props.modelProps[props.pageNumber][props.itemNumber]
-              .model as ImageSourcePropType
-          }
-          type={props.modelProps[props.pageNumber][props.itemNumber].type}
+        position={positions[props.modelIndex]}
+        scale={[3, 3, 3]}
+        rotation={[0, 0, 0]}>
+        <PortalObjects3d
+          pageNumber={props.pageNumber}
+          models3d={props.models3d}
+          modelProps={props.modelProps}
+          itemNumber={props.itemNumber}
+          modelIndex={props.modelIndex}
+          positions={props.positions}
+          rotations={props.rotations}
+          useAlt={props.useAlt}
+          transforms={[transforms, setTransforms]}
+          materialSelectorToggle={props.materialSelectorToggle}
+          setSelectedModelMaterials={props.setSelectedModelMaterials}
+          modelMaterial={props.modelMaterial}
+          updateMaterial={props.updateMaterial}
         />
       </ViroPortal>
       <Viro360Image

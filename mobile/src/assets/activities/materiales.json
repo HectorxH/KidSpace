@@ -13,8 +13,8 @@
       {
         "text": "Los objetos que nos rodean están fabricados para satisfacer las necesidades del ser humano.",
         "position": {
-          "start": [4.5, 2.5],
-          "end": [15.5, 11.5]
+          "start": [4.5, 3.5],
+          "end": [15.5, 12.5]
         }
       }
     ],
@@ -42,8 +42,8 @@
       {
         "text": "Estos objetos se fabrican con gran variedad de materiales. Estos también se conocen como *materia prima*.",
         "position": {
-          "start": [4.5, 2.5],
-          "end": [15.5, 11.5]
+          "start": [4.5, 3.5],
+          "end": [15.5, 12.5]
         }
       }
     ],
@@ -559,14 +559,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -574,7 +574,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -582,7 +582,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -636,14 +636,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -651,7 +651,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -659,7 +659,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -713,14 +713,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -728,7 +728,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -736,7 +736,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -790,14 +790,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -805,7 +805,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -813,7 +813,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -867,14 +867,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -882,7 +882,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -890,7 +890,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -944,14 +944,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -959,7 +959,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -967,7 +967,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -1021,14 +1021,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -1036,7 +1036,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -1044,7 +1044,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],
@@ -1098,14 +1098,14 @@
         {
           "model": "portal_window_frame",
           "type": "portal",
-          "icon": "antofagasta",
+          "icon": "norte",
           "image360": "antofagasta",
           "scale": [0.5, 0.5, 0.5],
           "rotation": [0, 0, 0]
         },
         {
           "model": "portal_window_frame",
-          "icon": "lagos",
+          "icon": "austral",
           "type": "portal",
           "image360": "lagos",
           "scale": [0.5, 0.5, 0.5],
@@ -1113,7 +1113,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "rancagua",
+          "icon": "centro",
           "type": "portal",
           "image360": "rancagua",
           "scale": [0.5, 0.5, 0.5],
@@ -1121,7 +1121,7 @@
         },
         {
           "model": "portal_window_frame",
-          "icon": "valdivia",
+          "icon": "sur",
           "type": "portal",
           "image360": "valdivia",
           "scale": [0.5, 0.5, 0.5],

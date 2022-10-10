@@ -215,6 +215,11 @@ const Models: {
     type: 'GLB',
     resources: [],
   },
+  auxiliar: {
+    model: require('./informatica2/auxiliar.glb'),
+    type: 'GLB',
+    resources: [],
+  },
 };
 
 export default Models;

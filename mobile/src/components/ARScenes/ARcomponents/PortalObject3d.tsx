@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  Viro3DObject,
-  ViroMaterials,
-  ViroNode,
-} from '@viro-community/react-viro';
+import {Viro3DObject, ViroMaterials} from '@viro-community/react-viro';
 import {IModels, Vec3} from '../../../types/activity';
 import {ImageSourcePropType} from 'react-native';
 import {ReactStateSetter} from '../../../types/others';
@@ -15,10 +11,9 @@ import {
   updateScale,
 } from './utils';
 
-interface Objects3dProps {
+interface PortalObjects3dProps {
   models3d: IModels[];
   modelProps: IModelProps[][];
-  modelChildrenProps: IModelProps[][][];
   pageNumber: number;
   itemNumber: number;
   modelIndex: number;
@@ -30,14 +25,12 @@ interface Objects3dProps {
   materialSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
-  useChildrenAlt: [boolean[][][], ReactStateSetter<boolean[][][]>];
 }
 
-const Objects3d = (props: Objects3dProps) => {
+const PortalObjects3d = (props: PortalObjects3dProps) => {
   const {
     models3d,
     modelProps,
-    modelChildrenProps,
     pageNumber,
     itemNumber,
     modelIndex,
@@ -48,7 +41,6 @@ const Objects3d = (props: Objects3dProps) => {
 
   const [transforms, setTransforms] = props.transforms;
   const [useAlt, setUseAlt] = props.useAlt;
-  const [useChildrenAlt, setUseChildrenAlt] = props.useChildrenAlt;
 
   const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
@@ -87,6 +79,8 @@ const Objects3d = (props: Objects3dProps) => {
       (transform[pageNumber][index].rotation[1] - rotation / 2) % 360,
       transform[pageNumber][index].rotation[2],
     ];
+
+    console.log('rotate state', rotateState);
 
     // if (rotateState === 2) {
     setTransforms(transform);
@@ -128,87 +122,46 @@ const Objects3d = (props: Objects3dProps) => {
         }
       }
     }
-    if (type === 'aux') {
-      if (
-        modelChildrenProps[pageNumber][itemIndex][0].interactable[0] ===
-          'auxiliar' &&
-        modelChildrenProps[pageNumber][itemIndex][0].alt !== ''
-      ) {
-        let newUseChildrenAlt = [...useChildrenAlt];
-        if (newUseChildrenAlt[pageNumber][itemIndex][0] === true) {
-          newUseChildrenAlt[pageNumber][itemIndex][0] = false;
-        } else {
-          newUseChildrenAlt[pageNumber][itemIndex][0] = true;
-        }
-        setUseChildrenAlt(newUseChildrenAlt);
-      }
-    }
   }
   return (
-    <ViroNode>
-      <Viro3DObject
-        source={
-          useAlt[pageNumber][itemNumber] === false
-            ? (modelProps[pageNumber][itemNumber].model as ImageSourcePropType)
-            : (modelProps[pageNumber][itemNumber]
-                .altModel as ImageSourcePropType)
-        }
-        resources={modelProps[pageNumber][itemNumber].resources}
-        materials={modelMaterial[modelIndex]}
-        position={positions[modelIndex]}
-        scale={transforms[pageNumber][itemNumber].scale}
-        rotation={transforms[pageNumber][itemNumber].rotation}
-        type={modelProps[pageNumber][itemNumber].type}
-        onDrag={() => {}}
-        dragType={'FixedToWorld'}
-        onPinch={(pinchState, scaleFactor) =>
-          updateScale(
-            pageNumber,
-            itemNumber,
-            pinchState,
-            scaleFactor,
-            transforms,
-            setTransforms,
-            models3d,
-          )
-        }
-        onRotate={(rotateState, rotation) =>
-          updateRotation(itemNumber, rotateState, rotation)
-        }
-        onClick={() => onModelClick(itemNumber, 'main')}
-      />
-      {modelChildrenProps[pageNumber][itemNumber].length > 0 && (
-        <Viro3DObject
-          source={
-            useChildrenAlt[pageNumber][itemNumber][0] === false
-              ? (modelChildrenProps[pageNumber][itemNumber][0]
-                  .model as ImageSourcePropType)
-              : (modelChildrenProps[pageNumber][itemNumber][0]
-                  .altModel as ImageSourcePropType)
-          }
-          resources={modelChildrenProps[pageNumber][itemNumber][0].resources}
-          // materials={modelMaterial[modelIndex]}
-          position={
-            typeof positions[modelIndex] === 'undefined'
-              ? positions[modelIndex]
-              : [
-                  positions[modelIndex][0],
-                  positions[modelIndex][1] + 0.5,
-                  positions[modelIndex][2],
-                ]
-          }
-          // position={[0, 1.5, 0]}
-          scale={transforms[pageNumber][itemNumber].scale}
-          rotation={transforms[pageNumber][itemNumber].rotation}
-          type={modelChildrenProps[pageNumber][itemNumber][0].type}
-          onClick={() => onModelClick(itemNumber, 'aux')}
-        />
-      )}
-    </ViroNode>
+    <Viro3DObject
+      source={
+        useAlt[pageNumber][itemNumber] === false
+          ? (modelProps[pageNumber][itemNumber].model as ImageSourcePropType)
+          : (modelProps[pageNumber][itemNumber].altModel as ImageSourcePropType)
+      }
+      resources={modelProps[pageNumber][itemNumber].resources}
+      materials={modelMaterial[modelIndex]}
+      position={
+        typeof positions[modelIndex] === 'undefined'
+          ? positions[modelIndex]
+          : [positions[modelIndex][0], positions[modelIndex][1], 0.5]
+      }
+      scale={transforms[pageNumber][itemNumber].scale}
+      rotation={transforms[pageNumber][itemNumber].rotation}
+      type={modelProps[pageNumber][itemNumber].type}
+      onDrag={() => {}}
+      dragType={'FixedToWorld'}
+      onPinch={(pinchState, scaleFactor) =>
+        updateScale(
+          pageNumber,
+          itemNumber,
+          pinchState,
+          scaleFactor,
+          transforms,
+          setTransforms,
+          models3d,
+        )
+      }
+      onRotate={(rotateState, rotation) =>
+        updateRotation(itemNumber, rotateState, rotation)
+      }
+      onClick={() => onModelClick(itemNumber, 'main')}
+    />
   );
 };
 
-export default Objects3d;
+export default PortalObjects3d;
 
 ViroMaterials.createMaterials({
   white_sphere: {

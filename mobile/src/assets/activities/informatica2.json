@@ -1257,22 +1257,49 @@
 
   {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1322,17 +1349,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1382,17 +1436,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1442,17 +1523,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1502,17 +1610,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1562,17 +1697,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1622,17 +1784,44 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
@@ -1682,21 +1871,47 @@
         {
           "model": "grafica",
           "scale": [0.5, 0.5, 0.5],
-          "rotation": [0, -90, 0]
+          "rotation": [0, -90, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "grafica_aux"
+            }
+          ]
         },
         {
           "model": "ssd",
           "scale": [0.09, 0.09, 0.09],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "ssd_aux"
+            }
+          ]
         },
         {
           "model": "teclado",
           "scale": [1.2, 1.2, 1.2],
-          "rotation": [0, -45, 0]
+          "rotation": [0, -45, 0],
+          "childrens": [
+            {
+              "model": "auxiliar",
+              "scale": [0.5, 0.5, 0.5],
+              "rotation": [0, 0, 0],
+              "interactable": ["auxiliar"],
+              "alt": "teclado_aux"
+            }
+          ]
         }
       ]
     },
-
     "background": "",
     "textBoxes": [
       {

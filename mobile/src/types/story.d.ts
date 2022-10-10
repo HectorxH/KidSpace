@@ -50,7 +50,9 @@ export interface IViroAppParams {
   imageTrackers: IImageTracker[][];
   modelMaterial: string[][];
   modelProps: IModelProps[][];
+  modelChildrenProps: IModelProps[][][];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
+  useChildrenAlt: [boolean[][][], ReactStateSetter<boolean[][][]>];
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
   rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
