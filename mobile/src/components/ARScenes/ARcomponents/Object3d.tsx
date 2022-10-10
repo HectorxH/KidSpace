@@ -194,7 +194,7 @@ const Objects3d = (props: Objects3dProps) => {
                   .altModel as ImageSourcePropType)
           }
           resources={modelChildrenProps[pageNumber][itemNumber][0].resources}
-          position={[0, 1.2, 0]}
+          position={[0, 0.8, 0]}
           scale={modelChildrenProps[pageNumber][itemNumber][0].scale}
           rotation={modelChildrenProps[pageNumber][itemNumber][0].rotation}
           type={modelChildrenProps[pageNumber][itemNumber][0].type}

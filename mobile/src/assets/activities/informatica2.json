@@ -1266,7 +1266,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1280,7 +1280,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1294,7 +1294,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1353,7 +1353,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1367,7 +1367,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1381,7 +1381,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1440,7 +1440,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1454,7 +1454,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1468,7 +1468,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1527,7 +1527,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1541,7 +1541,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1555,7 +1555,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1614,7 +1614,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1628,7 +1628,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1642,7 +1642,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1701,7 +1701,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1715,7 +1715,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1729,7 +1729,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1788,7 +1788,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1802,7 +1802,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1816,7 +1816,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
@@ -1875,7 +1875,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 90, 0],
               "interactable": ["auxiliar"],
               "alt": "grafica_aux"
@@ -1889,7 +1889,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "ssd_aux"
@@ -1903,7 +1903,7 @@
           "childrens": [
             {
               "model": "auxiliar",
-              "scale": [0.5, 0.5, 0.5],
+              "scale": [0.25, 0.25, 0.25],
               "rotation": [0, 45, 0],
               "interactable": ["auxiliar"],
               "alt": "teclado_aux"
