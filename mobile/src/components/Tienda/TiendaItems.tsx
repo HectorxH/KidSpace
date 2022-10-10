@@ -60,7 +60,6 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
     setNoDisponibles(noDisponibles);
     setCompras(noDisponibles);
     setSelectedItem(-1);
-
     try {
       await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/Estudiante/compras`)
