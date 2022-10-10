@@ -11,6 +11,7 @@ import {
   IActividadesParams,
   IActNavigationParams,
   IInventarioParams,
+  ILottieComponentParams,
   IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
@@ -21,6 +22,7 @@ import {
 const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   const {
     actividades,
+    lotties,
     nombreActividad,
     cantMonedas,
     completadas,
@@ -290,6 +292,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     userAnswersQuiz: userAnswersQuiz,
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],
+    lotties: lotties,
   };
 
   const ToggleButtonParams: IToggleButtonParams = {
@@ -340,6 +343,11 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
+  const LottieComponentParams: ILottieComponentParams = {
+    pageNumber: pageNumber,
+    lotties: lotties,
+  };
+
   const actividadComponentParams: IActividadesComponentParams = {
     pageNumber: pageNumber,
     actividades: actividades,
@@ -350,6 +358,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     toggleButtonParams: ToggleButtonParams,
     actNavigationParams: ActNavigationParams,
     markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
+    lottiesComponentParams: LottieComponentParams,
   };
 
   return actividadComponentParams;

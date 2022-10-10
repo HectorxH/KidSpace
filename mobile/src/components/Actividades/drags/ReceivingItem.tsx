@@ -84,7 +84,7 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             draggable={draggable}
             userDragAnswers={props.userDragAnswers}
             pickedDragAnswers={props.pickedDragAnswers}
-            receivingNames={props.receivingNames}
+            receivingValues={props.receivingValues}
           />
         </View>
       )}

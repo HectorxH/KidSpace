@@ -11,6 +11,7 @@ import Draggable from './Draggable';
 import {IStoryComponentParams} from '../../types/story';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {DraxProvider} from 'react-native-drax';
+import LottieComponent from './LottieComponent';
 
 interface StoryComponentProps {
   storyComponentParams: IStoryComponentParams;
@@ -20,6 +21,7 @@ const StoryComponent = (props: StoryComponentProps) => {
   const {
     pageNumber,
     story,
+    lotties,
     toggleDefaultValue,
     toggleValues,
     modelMaterial,
@@ -148,6 +150,9 @@ const StoryComponent = (props: StoryComponentProps) => {
               receivingValues={receivingValues}
               draggable={dragQuestions}
             />
+          </View>
+          <View style={styles.overlay}>
+            <LottieComponent lotties={lotties[pageNumber]} />
           </View>
         </DraxProvider>
       </GestureHandlerRootView>
