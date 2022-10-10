@@ -45,8 +45,8 @@ export default [
     enundiado2: 'Después de procesar la materia prima, obtenemos el _____.',
     alternativas1: ['centro', 'norte', 'austral'],
     alternativas2: ['lote', 'producto', 'material'],
-    respuestaCorrecta1: 'Centro',
-    respuestaCorrecta2: 'Lote',
+    respuestaCorrecta1: 'centro',
+    respuestaCorrecta2: 'lote',
   },
   {
     id: 3,
