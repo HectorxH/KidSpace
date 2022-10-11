@@ -163,26 +163,23 @@ const MainMap = ({navigation}: MainMapProps) => {
   }, [userData]);
 
   // console.log(userData?.apellidos);
-  const HandleAct = async () => {
+  const HandleAct = () => {
     try {
-      //const jsonMessages = await AsyncStorage.getItem('@message');
-      //const messages = JSON.parse(jsonMessages!);
-      //const visible = await AsyncStorage.getItem('@visible');
       notification !== '0' && notification !== null
-        ? navigation.push('AvailableActivities', {
+        ? navigation.navigate('AvailableActivities', {
             activities: message,
             curso: userCurso,
             userName: userData?.nombres!,
             userLastName: userData?.apellidos!,
           })
-        : navigation.push('NoAvailableActivities');
+        : navigation.navigate('NoAvailableActivities');
     } catch (e) {
       console.log(e);
     }
   };
 
   const HandleCarrera = (event: any) => {
-    navigation.push('Carrera', {
+    navigation.navigate('Carrera', {
       carrera: event.unidadCarrera,
       completadas: completadas,
       curso: userCurso,
@@ -313,7 +310,6 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#EC87C0"
               mode="contained"
-              // disabled={true}
               icon={() => (
                 <Icon
                   name="account"
@@ -327,7 +323,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               )}
               contentStyle={{flexDirection: 'column'}}
               onPress={() =>
-                navigation.push('ProfileView', {
+                navigation.navigate('ProfileView', {
                   Info: {
                     nombres: user,
                     apellidos: apellidos,
@@ -355,7 +351,7 @@ const MainMap = ({navigation}: MainMapProps) => {
               )}
               contentStyle={{flexDirection: 'column'}}
               onPress={() =>
-                navigation.push('Tienda', {
+                navigation.navigate('Tienda', {
                   setCantMonedas: setCantMonedas,
                   cantMonedas: cantMonedas,
                 })

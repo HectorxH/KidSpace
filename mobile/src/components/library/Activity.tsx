@@ -42,7 +42,7 @@ const Activity = ({navigation, route}: ActivityProps) => {
                 color="#FF8A01"
                 mode="contained"
                 onPress={() =>
-                  navigation.push('Actividades', {
+                  navigation.navigate('Actividades', {
                     actividad: activity.nombreActividad,
                     cantMonedas: 0,
                     curso: curso,

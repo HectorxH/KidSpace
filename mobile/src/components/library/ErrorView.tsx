@@ -21,7 +21,7 @@ const ErrorView = ({navigation}: ErrorViewProps) => {
         style={styles.button}
         color="#FF8A01"
         mode="contained"
-        onPress={() => navigation.push('InicioView')}>
+        onPress={() => navigation.navigate('InicioView')}>
         <Text style={styles.textButton}>Intentar de Nuevo</Text>
       </Button>
     </View>
