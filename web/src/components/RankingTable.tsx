@@ -119,7 +119,7 @@ const RankingTable = (
             rows={Object.values(rows)}
             getRowId={(row: any) => row.estudiante._id}
             disableSelectionOnClick
-            sx={{ borderRadius: 5 }}
+            sx={{ borderRadius: 5, paddingLeft: 3 }}
           />
         )}
     </Box>

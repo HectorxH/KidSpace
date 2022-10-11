@@ -117,7 +117,7 @@ const makeTiempoData = (data: ITiempoData) => {
         {
           label: 'Tiempo promedio de actividad (seg)',
           data: y,
-          backgroundColor: '#B878EA',
+          backgroundColor: '#FF8A00',
           // borderColor: '#d03080',
           // fill: '#f070f0',
         },

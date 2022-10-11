@@ -85,7 +85,7 @@ const ResultadosQuizTable = (
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}
             disableSelectionOnClick
-            sx={{ borderRadius: 5 }}
+            sx={{ borderRadius: 5, paddingLeft: 3 }}
           />
         )}
     </Box>

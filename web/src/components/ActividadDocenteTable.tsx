@@ -117,7 +117,7 @@ const ActividadDocenteTable = (
         rows={actividades}
         getRowId={(row: any) => row}
         disableSelectionOnClick
-        sx={{ borderRadius: 5 }}
+        sx={{ borderRadius: 5, paddingLeft: 3 }}
       />
     </Box>
   );
