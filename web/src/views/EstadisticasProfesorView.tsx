@@ -1,13 +1,10 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import {
   Box,
   Card,
   Stack, Theme, Typography,
 } from '@mui/material';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {
   Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
@@ -46,33 +43,6 @@ interface IRank {
   cantidad: number
 }
 
-const infoRankingTable = [
-  {
-    _id: '0',
-    lugar: 0,
-    nombre: 'Skylar',
-    actividades: 70,
-  },
-  {
-    _id: '1',
-    lugar: 0,
-    nombre: 'Cirrus',
-    actividades: 30,
-  },
-  {
-    _id: '2',
-    lugar: 0,
-    nombre: 'Kai',
-    actividades: 10,
-  },
-  {
-    _id: '3',
-    lugar: 0,
-    nombre: 'Soo',
-    actividades: 20,
-  },
-];
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -94,8 +64,6 @@ ChartJS.register(
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const img = require('../assets/quiz.png');
-
 const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -106,7 +74,6 @@ const options = {
   },
 };
 
-// eslint-disable-next-line no-shadow
 const makeTiempoData = (data: ITiempoData) => {
   const x = Object.keys(data);
   const y = Object.values(data);
@@ -118,8 +85,6 @@ const makeTiempoData = (data: ITiempoData) => {
           label: 'Tiempo promedio de actividad (seg)',
           data: y,
           backgroundColor: '#B878EA',
-          // borderColor: '#d03080',
-          // fill: '#f070f0',
         },
       ],
     };
@@ -136,7 +101,6 @@ const makeTiempoData = (data: ITiempoData) => {
   };
 };
 
-// eslint-disable-next-line no-shadow
 const makeCorrectasData = (data: ICountCorrectas) => {
   const counts = _.reduce(Object.values(data), (a, b) => ({
     Correctas: a.Correctas + (b.Correctas || 0),
@@ -166,9 +130,6 @@ const makeCorrectasData = (data: ICountCorrectas) => {
   };
 };
 
-const letras = ['S', 'T', 'E', 'A', 'M'];
-const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
-
 const EstadisticasProfesorView = () => {
   const { cursoId } = useParams();
   const [curso, setCurso] = useState<ICurso>();
@@ -178,7 +139,6 @@ const EstadisticasProfesorView = () => {
   const [actividadesIndividual, setActividadesIndividual] = useState<IActividades>();
   const [rank, setRank] = useState<IRank[]>();
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
 
   const { logout } = useAuth();
   const getData = async () => {
@@ -209,7 +169,8 @@ const EstadisticasProfesorView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!curso || !tiempoData || !countCorrectas || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
+  if (!curso || !tiempoData || !countCorrectas
+    || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>

@@ -1,22 +1,11 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  TableContainer, Button, Table, TableBody, Theme,
-  TableCell, TableRow, Stack, Card, Box, TableHead,
-  Typography,
+  Button, Theme, Box, Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import _ from 'lodash';
-import { useAuth } from '../hooks/useAuth';
-import SinActividades from './SinActividades';
-import { IEstudiante, IEstudiantes } from '../types/estudiantes';
-import { ICurso } from '../types/cursos';
-// import { useAuth } from '../hooks/useAuth';
-
-const imgStudent = require('../assets/quiz.png');
 
 const actividades = [
   'Diagramas',
@@ -25,14 +14,6 @@ const actividades = [
   'Reciclaje',
   'Diseño',
 ];
-
-interface IRow {
-  _id: number,
-  estado: string,
-  actividad: string,
-  porcentaje: number
-}
-
 interface IActividades {
   [key: string]: number
 }
@@ -82,28 +63,23 @@ const ActividadDocenteTable = (
       headerName: 'Acción',
       flex: 1,
       sortable: false,
-      renderCell: (params) => {
-        const onClick = (e:any) => {
-          handleVerStats(params.row);
-        };
-        return (
-          <div>
-            <Button
-              variant="contained"
-              color="quaternary"
-              sx={{ m: 1 }}
-              onClick={() => onClick(params)}
+      renderCell: (params) => (
+        <div>
+          <Button
+            variant="contained"
+            color="quaternary"
+            sx={{ m: 1 }}
+            onClick={() => handleVerStats(params.row)}
+          >
+            <Typography
+              variant="button"
+              color={(theme: Theme) => theme.palette.primary.contrastText}
             >
-              <Typography
-                variant="button"
-                color={(theme: Theme) => theme.palette.primary.contrastText}
-              >
-                Ver estadísticas
-              </Typography>
-            </Button>
-          </div>
-        );
-      },
+              Ver estadísticas
+            </Typography>
+          </Button>
+        </div>
+      ),
     },
   ];
   return (

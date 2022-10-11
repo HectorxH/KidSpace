@@ -8,7 +8,6 @@ import {
 } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 import unidades from '../mock/unidades';
-// import RSize from '../utils/responsive';
 import '../App.css';
 
 const ActividadesPorUnidadesView = () => (

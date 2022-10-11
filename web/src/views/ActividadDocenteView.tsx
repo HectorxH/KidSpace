@@ -1,14 +1,10 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable max-len */
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Button,
   Card,
-  CardMedia, Stack, Theme, Typography, CardContent, Divider, CardHeader,
+  CardMedia, Stack, Theme, Typography, Divider,
 } from '@mui/material';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {
   Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
@@ -19,14 +15,14 @@ import {
   Title,
 } from 'chart.js';
 import {
-  Doughnut, Line, Bar, Pie,
+  Doughnut, Bar, Pie,
 } from 'react-chartjs-2';
-import NotFoundView from './NotFoundView';
-import '../App.css';
-import { ICurso } from '../types/cursos';
+import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 import ResultadosQuizTable from '../components/ResultadosQuizTable';
 import actividadesDocentes from '../mock/actividadesDocentes';
+import NotFoundView from './NotFoundView';
+import CargaView from './LoadingView';
 
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
@@ -60,8 +56,6 @@ const infoResultadosQuizTable = [
     pregunta2: 'una tabla',
   },
 ];
-
-const img = require('../assets/quiz.png');
 
 ChartJS.register(
   CategoryScale,
@@ -119,39 +113,41 @@ const dataGrafico = (d:number[]) => {
   return datosDona;
 };
 
+const RespuestasCorrectas: {[key: string]: string[]} = {
+  Diagramas: ['gráficos', 'una tabla'],
+  Diseños: ['función', 'textura'],
+  Materiales: ['centro', 'lote'],
+};
+
 const ActividadDocenteView = () => {
-  const params = useParams();
-  const [curso, setCurso] = useState<ICurso>();
   const [loading, setLoading] = useState(true);
-  const { cursoId } = params;
-  const { nactividad } = params;
-  const index:number = +nactividad!;
-  console.log(index);
-  const navigate = useNavigate();
-  const respuestasCorrectas = [actividadesDocentes[index].preguntas[0].respuestaCorrecta, actividadesDocentes[index].preguntas[1].respuestaCorrecta];
-  console.log(respuestasCorrectas);
+
+  const { actividad } = useParams();
+  if (!actividad) return <NotFoundView />;
+  const respuestasCorrectas = RespuestasCorrectas[actividad];
+  const actividadData = _.find(actividadesDocentes, { actividad });
+
   const { logout } = useAuth();
-  // const getCurso = async () => {
-  //   try {
-  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-  //     setCurso(res.data.curso);
-  //     console.log(res.data);
-  //     setLoading(false);
-  //   } catch (e) {
-  //     console.log(e);
-  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
-  //       logout();
-  //     }
-  //     setLoading(false);
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   if (!curso) getCurso();
-  // }, []);
+  const loadData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
+    setLoading(false);
+  };
 
-  // if (loading) return (<Box />);
-  // if (!curso) return (<NotFoundView />);
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  if (loading) return (<CargaView />);
+  if (!actividadData) return <NotFoundView />;
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -173,10 +169,10 @@ const ActividadDocenteView = () => {
           <CardMedia
             component="img"
             sx={{ height: '30vh' }}
-            image={actividadesDocentes[index].img}
+            image={actividadData.img}
           />
           <Typography>
-            Nombre: {actividadesDocentes[index].actividad}
+            Nombre: {actividadData.actividad}
           </Typography>
           <Typography>
             Estado:
@@ -196,7 +192,7 @@ const ActividadDocenteView = () => {
             >
               {(letras.map((letra, id) => (
                 <Typography sx={{
-                  color: actividadesDocentes[index].steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                  color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
                 }}
                 ><b>{letra}</b>
                 </Typography>
@@ -223,7 +219,7 @@ const ActividadDocenteView = () => {
         <Typography variant="h5">
           Preguntas del Quiz
         </Typography>
-        {(actividadesDocentes[index].preguntas.map((pregunta, id) => (
+        {(actividadData.preguntas.map((pregunta, id) => (
           <Stack direction="row" spacing={2}>
             <Card sx={{
               width: 1.2 / 2, borderRadius: 5, backgroundColor: '#F1F3F8',

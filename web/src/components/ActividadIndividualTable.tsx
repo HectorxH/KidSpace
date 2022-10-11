@@ -1,18 +1,13 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
   Button, Theme,
   Box,
   Typography,
 } from '@mui/material';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
-// import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import _ from 'lodash';
-import { useAuth } from '../hooks/useAuth';
-import SinActividades from './SinActividades';
-// import { useAuth } from '../hooks/useAuth';
 
 const actividades = [
   'Informática y algrotimos en nuestra vida ',
@@ -36,7 +31,6 @@ interface ITableParams {
 const ActividadIndividualTable = (
   { rowsData }: ITableParams,
 ) => {
-  const { logout } = useAuth();
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
     navigate(`actividadIndividual/${i}`);
@@ -63,28 +57,23 @@ const ActividadIndividualTable = (
       headerName: 'Acción',
       flex: 1,
       sortable: false,
-      renderCell: (params) => {
-        const onClick = (e:any) => {
-          handleVerStats(params.row);
-        };
-        return (
-          <div>
-            <Button
-              variant="contained"
-              color="quaternary"
-              onClick={() => onClick(params)}
-              sx={{ m: 1 }}
+      renderCell: (params) => (
+        <div>
+          <Button
+            variant="contained"
+            color="quaternary"
+            onClick={() => handleVerStats(params.row)}
+            sx={{ m: 1 }}
+          >
+            <Typography
+              variant="button"
+              color={(theme: Theme) => theme.palette.primary.contrastText}
             >
-              <Typography
-                variant="button"
-                color={(theme: Theme) => theme.palette.primary.contrastText}
-              >
-                Ver estadísticas
-              </Typography>
-            </Button>
-          </div>
-        );
-      },
+              Ver estadísticas
+            </Typography>
+          </Button>
+        </div>
+      ),
     },
   ];
   return (

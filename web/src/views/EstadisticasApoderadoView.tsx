@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import {
@@ -33,7 +31,6 @@ import { useAuth } from '../hooks/useAuth';
 import { IActividadLogs } from '../types/actividadLog';
 import 'chartjs-adapter-moment';
 
-// const img = require('../assets/statistics.png');
 const imgStudent = require('../assets/webApoderados/student.png');
 
 type SteamArray = number[];

@@ -103,8 +103,9 @@ const App = () => (
                   <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
                   <Route path="/cursos/:cursoId/qr" element={<QRView />} />
                   <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView />} />
-                  <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:nactividad" element={<ActividadDocenteView />} />
-                  <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:nactividad" element={<ActividadIndividualView />} />
+                  <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:actividad" element={<ActividadDocenteView />} />
+                  <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:actividad" element={<ActividadIndividualView />} />
+                  <Route path="/cursos/:cursoId/estadisticas/estadisticasEstudiante/:pupiloId" element={<EstadisticasApoderadoView />} />
                   <Route path="/actividades" element={<ActividadesPorUnidadesView />} />
                   <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />

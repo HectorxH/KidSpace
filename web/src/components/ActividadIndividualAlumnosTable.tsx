@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
   Box,
@@ -6,13 +5,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-// import axios from 'axios';
-import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
-import { IEstudiante, IEstudiantes } from '../types/estudiantes';
-// import { useAuth } from '../hooks/useAuth';
-
-const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
   _id: number,
@@ -28,7 +21,6 @@ interface ITableParams {
 const ActividadIndividualAlumnosTable = (
   { rows }: ITableParams,
 ) => {
-  const { logout } = useAuth();
   const cols: GridColDef[] = [
     {
       field: 'nombre',

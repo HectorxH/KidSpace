@@ -1,14 +1,11 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Button,
   Card,
-  CardMedia, Stack, Theme, Typography, CardContent, Divider, CardHeader,
+  CardMedia, Stack, Theme, Typography, Divider,
 } from '@mui/material';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {
   Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
@@ -17,16 +14,14 @@ import {
   LineElement,
   Title,
 } from 'chart.js';
-import { Doughnut, Line } from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import NotFoundView from './NotFoundView';
-import '../App.css';
+import _ from 'lodash';
 import actividadesIndividuales from '../mock/actividadesIndividuales';
 import ActividadIndividualAlumnosTable from '../components/ActividadIndividualAlumnosTable';
-import { ICurso } from '../types/cursos';
+import CargaView from './LoadingView';
+import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
-
-const img = require('../assets/quiz.png');
 
 ChartJS.register(
   CategoryScale,
@@ -82,36 +77,32 @@ const options = {
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 const ActividadIndividualView = () => {
-  const params = useParams();
-  const [curso, setCurso] = useState<ICurso>();
   const [loading, setLoading] = useState(true);
-  const { cursoId } = params;
-  const navigate = useNavigate();
-  const { nactividad } = params;
-  const index:number = +nactividad!;
-  console.log(actividadesIndividuales[index].steam);
+
+  const { actividad } = useParams();
+  const actividadData = _.find(actividadesIndividuales, { title: actividad });
+
   const { logout } = useAuth();
-  // const getCurso = async () => {
-  //   try {
-  //     const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`); // ${cursoId}`);
-  //     setCurso(res.data.curso);
-  //     console.log(res.data);
-  //     setLoading(false);
-  //   } catch (e) {
-  //     console.log(e);
-  //     if (axios.isAxiosError(e) && e.response?.status === 401) {
-  //       logout();
-  //     }
-  //     setLoading(false);
-  //   }
-  // };
 
-  // useEffect(() => {
-  //   if (!curso) getCurso();
-  // }, []);
+  const loadData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`);
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
+    setLoading(false);
+  };
 
-  // if (loading) return (<Box />);
-  // if (!curso) return (<NotFoundView />);
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  if (loading) return (<CargaView />);
+  if (!actividadData) return <NotFoundView />;
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -134,12 +125,12 @@ const ActividadIndividualView = () => {
             <CardMedia
               component="img"
               // sx={{ height: '20vh' }}
-              image={actividadesIndividuales[index].img}
+              image={actividadData.img}
             />
             <Typography sx={{ m: 1 }}>
-              <b>Nombre:</b> {actividadesIndividuales[index].title}
+              <b>Nombre:</b> {actividadData.title}
               <br />
-              <b>Carrera Asociada:</b> {actividadesIndividuales[index].carrera}
+              <b>Carrera Asociada:</b> {actividadData.carrera}
             </Typography>
             <Divider style={{ width: '90%', alignSelf: 'center' }} />
             <Stack
@@ -150,7 +141,7 @@ const ActividadIndividualView = () => {
             >
               {(letras.map((letra, id) => (
                 <Typography sx={{
-                  color: actividadesIndividuales[index].steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                  color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
                 }}
                 ><b>{letra}</b>
                 </Typography>
