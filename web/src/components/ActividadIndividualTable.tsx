@@ -10,7 +10,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import _ from 'lodash';
 
 const actividades = [
-  'Informática y algrotimos en nuestra vida ',
+  'Informática y algoritmos en nuestra vida ',
   '¿Qué es un computador?',
   'Tierra, Luna y Sol',
   '¿Qué vemos en el cielo nocturno?',
@@ -87,7 +87,7 @@ const ActividadIndividualTable = (
         rows={actividades}
         getRowId={(row: any) => row}
         disableSelectionOnClick
-        sx={{ borderRadius: 5 }}
+        sx={{ borderRadius: 5, paddingLeft: 3 }}
       />
     </Box>
   );
