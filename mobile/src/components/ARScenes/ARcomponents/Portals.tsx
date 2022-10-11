@@ -37,47 +37,28 @@ interface ITransform {
 
 const Portals = (props: PortalsProps) => {
   const positions = props.positions;
-  function updateRotation(
-    index: number,
-    rotateState: number,
-    rotation: number,
-  ) {
-    let transform = [...props.transforms[0]];
-
-    //Giro en eje y
-    transform[props.pageNumber][index].rotation = [
-      transform[props.pageNumber][index].rotation[0],
-      (transform[props.pageNumber][index].rotation[1] - rotation / 10) % 360,
-      transform[props.pageNumber][index].rotation[2],
-    ];
-
-    props.transforms[1](transform);
-  }
 
   return (
     <ViroPortalScene
       passable={true}
       onDrag={() => {}}
       dragType="FixedDistance"
-      onRotate={(rotateState, rotation) =>
-        updateRotation(props.itemNumber, rotateState, rotation)
+      position={
+        typeof positions[props.modelIndex] === 'undefined'
+          ? positions[props.modelIndex]
+          : [
+              positions[props.modelIndex][0],
+              positions[props.modelIndex][1],
+              -0.8,
+            ]
       }>
       <ViroPortal
-        position={
-          typeof positions[props.modelIndex] === 'undefined'
-            ? positions[props.modelIndex]
-            : [
-                positions[props.modelIndex][0],
-                positions[props.modelIndex][1],
-                -1,
-              ]
-        }
         rotation={
           props.transforms[0][props.pageNumber][props.itemNumber].rotation
         }
         //onDrag={() => {}}
         //dragType={'FixedDistance'}
-        scale={[0.1, 0.1, 0.1]}>
+        scale={[0.2, 0.2, 0.2]}>
         <Viro3DObject
           source={
             props.modelProps[props.pageNumber][props.itemNumber]
