@@ -37,9 +37,31 @@ interface ITransform {
 
 const Portals = (props: PortalsProps) => {
   const positions = props.positions;
+  function updateRotation(
+    index: number,
+    rotateState: number,
+    rotation: number,
+  ) {
+    let transform = [...props.transforms[0]];
+
+    //Giro en eje y
+    transform[props.pageNumber][index].rotation = [
+      transform[props.pageNumber][index].rotation[0],
+      (transform[props.pageNumber][index].rotation[1] - rotation / 10) % 360,
+      transform[props.pageNumber][index].rotation[2],
+    ];
+
+    props.transforms[1](transform);
+  }
 
   return (
-    <ViroPortalScene passable={true} onDrag={() => {}} dragType="FixedDistance">
+    <ViroPortalScene
+      passable={true}
+      onDrag={() => {}}
+      dragType="FixedDistance"
+      onRotate={(rotateState, rotation) =>
+        updateRotation(props.itemNumber, rotateState, rotation)
+      }>
       <ViroPortal
         position={
           typeof positions[props.modelIndex] === 'undefined'
@@ -49,6 +71,9 @@ const Portals = (props: PortalsProps) => {
                 positions[props.modelIndex][1],
                 -1,
               ]
+        }
+        rotation={
+          props.transforms[0][props.pageNumber][props.itemNumber].rotation
         }
         //onDrag={() => {}}
         //dragType={'FixedDistance'}
