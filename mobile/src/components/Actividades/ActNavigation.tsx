@@ -49,8 +49,8 @@ const ActNavigation = (props: ActNavigationProps) => {
   const userAnswersDropdownPage = userAnswersDropdown[0][pageNumber];
   const userAnswersQuizPage = userAnswersQuiz[0][pageNumber];
 
-  const [toggleValues, setToggleValues] =
-    props.actNavigationParams.toggleValues;
+  // const [toggleValues, setToggleValues] =
+  //   props.actNavigationParams.toggleValues;
 
   const [placedItems, setPlacedItems] = props.actNavigationParams.placedItems;
   const [nPlacedItems, setNPlacedItems] =
@@ -87,13 +87,13 @@ const ActNavigation = (props: ActNavigationProps) => {
         actividades[pageNumber + 1].AR?.start === true
       ) {
         setUpdateMaterial(true);
-        let newToggleValues = [...toggleValues];
+        // let newToggleValues = [...toggleValues];
         let newPlacedItems = [...placedItems];
         let newNPlacedItems = [...nPlacedItems];
         let newModels = [...models];
         let newPositions = [...positions];
 
-        newToggleValues[pageNumber] = [0];
+        // newToggleValues[pageNumber] = [0];
         newPlacedItems[pageNumber] =
           typeof actividades[pageNumber + 1].AR !== 'undefined' &&
           typeof actividades[pageNumber + 1].AR?.models !== 'undefined'
@@ -103,7 +103,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         newModels[pageNumber] = [];
         newPositions[pageNumber] = [];
 
-        setToggleValues(newToggleValues);
+        // setToggleValues(newToggleValues);
         setPlacedItems(newPlacedItems);
         setNPlacedItems(newNPlacedItems);
         setModels(newModels);

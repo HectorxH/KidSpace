@@ -65,7 +65,7 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
                     styles.baseText,
                     {fontSize: styles.baseText.fontSize / fontScale},
                   ]}>
-                  {`Tarjeta detectada: ${activeTracker[pageNumber]}`}
+                  {` ¡Muy bien! ${activeTracker[pageNumber]} es la tarjeta correcta`}
                 </Text>
               </View>
             }

@@ -311,6 +311,8 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     models3d: models3d,
     models: models,
     hideInventory: hideInventory,
+    imageTrackers: imageTrackers,
+    activeTracker: activeTracker,
     toggleQuestions: [toggleValues, setToggleValues],
   };
 

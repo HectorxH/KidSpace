@@ -136,6 +136,8 @@ export interface IToggleButtonParams {
   models: number[][];
   hideInventory: boolean[];
   toggleButtons: IToggleButton[][];
+  activeTracker: string[];
+  imageTrackers: IImageTracker[][];
   toggleQuestions: [number[][], ReactStateSetter<number[][]>];
 }
 
