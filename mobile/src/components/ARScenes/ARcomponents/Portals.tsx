@@ -49,7 +49,7 @@ const Portals = (props: PortalsProps) => {
           : [
               positions[props.modelIndex][0],
               positions[props.modelIndex][1],
-              -0.8,
+              -0.6,
             ]
       }>
       <ViroPortal
@@ -58,7 +58,7 @@ const Portals = (props: PortalsProps) => {
         }
         //onDrag={() => {}}
         //dragType={'FixedDistance'}
-        scale={[0.2, 0.2, 0.2]}>
+        scale={[0.3, 0.3, 0.3]}>
         <Viro3DObject
           source={
             props.modelProps[props.pageNumber][props.itemNumber]
