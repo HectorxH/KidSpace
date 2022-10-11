@@ -33,21 +33,20 @@ interface IRow {
   porcentaje: number
 }
 
-interface IActividadesCurso {
+interface IActividades {
   [key: string]: number
 }
 
 interface ITableParams {
-  rowsData: IActividadesCurso,
-  cursoId: string
+  rowsData: IActividades,
 }
 
 const ActividadDocenteTable = (
-  { rowsData, cursoId }: ITableParams,
+  { rowsData }: ITableParams,
 ) => {
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
-    navigate(`/cursos/${cursoId}/estadisticas/actividadDocente/${i}`);
+    navigate(`actividadDocente/${i}`);
   };
   const cols: GridColDef[] = [
     {

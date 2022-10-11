@@ -1,8 +1,8 @@
 import express from 'express';
 import _ from 'lodash';
+import Estudiante from '../models/Estudiante';
 import ActividadLog, { IActividadLog } from '../models/ActividadLog';
 import Curso from '../models/Curso';
-import Estudiante from '../models/Estudiante';
 
 const router = express.Router();
 
@@ -57,7 +57,7 @@ router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
   }
 });
 
-router.get('/curso/:id/%delcurso', async (req, res) => {
+router.get('/curso/:id/%curso', async (req, res) => {
   try {
     const { id } = req.params;
     const curso = await Curso.findById(id);
@@ -71,9 +71,49 @@ router.get('/curso/:id/%delcurso', async (req, res) => {
       estudiantesByActividad,
       (o) => _.uniq(o).length / nEstudiantes,
     );
-
-    console.log(uniqueEstudiantesByActividad);
     res.json({ actividadesCurso: uniqueEstudiantesByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/%individual', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const curso = await Curso.findById(id);
+    const nEstudiantes = curso?.estudiantes?.length;
+    if (!nEstudiantes) throw Error('No se encontro el curso');
+    const logs = await ActividadLog.find({ curso: id, tipo: 'individual' });
+
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.map(o, 'estudiante'));
+    const uniqueEstudiantesByActividad = _.mapValues(
+      estudiantesByActividad,
+      (o) => _.uniq(o).length / nEstudiantes,
+    );
+    res.json({ actividadesIndividual: uniqueEstudiantesByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/rank', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const logs = await ActividadLog.find({ curso: id });
+
+    const logsByEstudiante = _.groupBy(logs, 'estudiante');
+    const countByEstudiantePromise = _.mapValues(logsByEstudiante, async (logArray) => {
+      const estudianteId = logArray[0].estudiante;
+      const estudiante = await Estudiante.findById(estudianteId).populate('user');
+      if (!estudiante) return null;
+      return { estudiante, cantidad: logArray.length };
+    });
+    const countByEstudiante = await Promise.all(Object.values(countByEstudiantePromise));
+    const rank = Object.values(_.omitBy(countByEstudiante, (o) => !o || !o.estudiante));
+    res.json({ rank });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

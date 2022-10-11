@@ -14,33 +14,30 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCrown } from '@fortawesome/free-solid-svg-icons';
 // import axios from 'axios';
+import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
+import { IEstudiante } from '../types/estudiantes';
 // import { useAuth } from '../hooks/useAuth';
 
 const imgStudent = require('../assets/quiz.png');
 
 interface IRow {
-  _id: string,
-  lugar: number,
-  nombre: string,
-  actividades: number
+    estudiante: IEstudiante,
+    cantidad: number
 }
 
 interface ITableParams {
-  rows: IRow[],
+  rowsData: IRow[],
   // updateEstudiantes: Function
 }
 
 const RankingTable = (
-  { rows }: ITableParams,
+  { rowsData }: ITableParams,
 ) => {
-  rows.sort((a, b) => b.actividades - a.actividades);
-  // eslint-disable-next-line no-return-assign
-  rows.map((_, id) => (
-    // eslint-disable-next-line no-param-reassign
-    rows[id].lugar = id + 1
-  ));
+  rowsData.sort((a, b) => b.cantidad - a.cantidad);
+  const rows = _.map(rowsData, (data, idx) => ({ ...data, lugar: idx + 1 }));
+
   const { logout } = useAuth();
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
@@ -73,9 +70,10 @@ const RankingTable = (
       field: 'nombre',
       headerName: 'Nombre',
       flex: 1,
+      renderCell: (params) => `${params.row.estudiante.user.nombres} ${params.row.estudiante.user.apellidos}`,
     },
     {
-      field: 'actividades',
+      field: 'cantidad',
       headerName: 'Actividades completadas',
       flex: 1,
     },
@@ -86,7 +84,7 @@ const RankingTable = (
       sortable: false,
       renderCell: (params) => {
         const onClick = (e:any) => {
-          handleVerStats(params.row._id);
+          handleVerStats(params.row.estudiante._id);
         };
         return (
           <div>
@@ -119,7 +117,7 @@ const RankingTable = (
             hideFooter
             columns={cols}
             rows={Object.values(rows)}
-            getRowId={(row: any) => row._id}
+            getRowId={(row: any) => row.estudiante._id}
             disableSelectionOnClick
             sx={{ borderRadius: 5 }}
           />

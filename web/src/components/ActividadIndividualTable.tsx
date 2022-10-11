@@ -9,35 +9,44 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 import SinActividades from './SinActividades';
 // import { useAuth } from '../hooks/useAuth';
 
-interface IRow {
-  _id: number,
-  actividad: string,
-  porcentaje: number
+const actividades = [
+  'Informática y algrotimos en nuestra vida ',
+  '¿Qué es un computador?',
+  'Tierra, Luna y Sol',
+  '¿Qué vemos en el cielo nocturno?',
+  'Interpretando etiquetas de los alimentos',
+  'Analizando nuestro dieta',
+  'Teoría de colores',
+  'Diseño gráfico en nuestro alrededor',
+];
+
+interface IActividades {
+  [key: string]: number
 }
 
 interface ITableParams {
-  rows: IRow[],
-  // updateEstudiantes: Function
+  rowsData: IActividades
 }
 
 const ActividadIndividualTable = (
-  { rows }: ITableParams,
+  { rowsData }: ITableParams,
 ) => {
   const { logout } = useAuth();
   const navigate = useNavigate();
-  const [curso, setCurso] = useState('633791565117c47b4c1399db');
   const handleVerStats = (i:string) => {
-    navigate(`/cursos/${curso}/estadisticas/actividadIndividual/${i}`);
+    navigate(`actividadIndividual/${i}`);
   };
   const cols: GridColDef[] = [
     {
       field: 'actividad',
       headerName: 'Nombre',
       flex: 1,
+      renderCell: (params) => params.row,
     },
     {
       field: 'porcentaje',
@@ -45,7 +54,7 @@ const ActividadIndividualTable = (
       flex: 1,
       renderCell: (params) => (
         <div>
-          {params.row.porcentaje} %
+          {_.round(100 * (Number(rowsData[params.row] || 0)), 1)} %
         </div>
       ),
     },
@@ -56,7 +65,7 @@ const ActividadIndividualTable = (
       sortable: false,
       renderCell: (params) => {
         const onClick = (e:any) => {
-          handleVerStats(params.row._id);
+          handleVerStats(params.row);
         };
         return (
           <div>
@@ -80,20 +89,17 @@ const ActividadIndividualTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
-        : (
-          <DataGrid
-            density="comfortable"
-            getRowHeight={() => 'auto'}
-            autoHeight
-            hideFooter
-            columns={cols}
-            rows={Object.values(rows)}
-            getRowId={(row: any) => row._id}
-            disableSelectionOnClick
-            sx={{ borderRadius: 5 }}
-          />
-        )}
+      <DataGrid
+        density="comfortable"
+        getRowHeight={() => 'auto'}
+        autoHeight
+        hideFooter
+        columns={cols}
+        rows={actividades}
+        getRowId={(row: any) => row}
+        disableSelectionOnClick
+        sx={{ borderRadius: 5 }}
+      />
     </Box>
   );
 };

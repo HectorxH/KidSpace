@@ -27,6 +27,7 @@ import RankingTable from '../components/RankingTable';
 import { ICurso } from '../types/cursos';
 import { useAuth } from '../hooks/useAuth';
 import CargaView from './LoadingView';
+import { IEstudiante } from '../types/estudiantes';
 
 interface ITiempoData {
   [key: string]: number
@@ -36,63 +37,14 @@ interface ICountCorrectas {
   [key: string]: {'Correctas': number, 'Incorrectas': number}
 }
 
-interface IActividadesCurso {
+interface IActividades {
   [key: string]: number
 }
 
-// const infoActividadIndividualTable = [
-//   'Informática y algrotimos en nuestra vida ',
-//   '¿Qué es un computador?',
-//   'Tierra, Luna y Sol',
-//   '¿Qué vemos en el cielo nocturno?',
-//   'Interpretando etiquetas de los alimentos',
-//   'Analizando nuestro dieta',
-//   'Teoría de colores',
-//   'Diseño gráfico en nuestro alrededor',
-// ];
-
-const infoActividadIndividualTable = [
-  {
-    _id: 0,
-    actividad: 'Informática y algrotimos en nuestra vida ',
-    porcentaje: 70,
-  },
-  {
-    _id: 1,
-    actividad: '¿Qué es un computador?',
-    porcentaje: 30,
-  },
-  {
-    _id: 2,
-    actividad: 'Tierra, Luna y Sol',
-    porcentaje: 30,
-  },
-  {
-    _id: 3,
-    actividad: '¿Qué vemos en el cielo nocturno?',
-    porcentaje: 30,
-  },
-  {
-    _id: 4,
-    actividad: 'Interpretando etiquetas de los alimentos',
-    porcentaje: 30,
-  },
-  {
-    _id: 5,
-    actividad: 'Analizando nuestro dieta',
-    porcentaje: 30,
-  },
-  {
-    _id: 6,
-    actividad: 'Teoría de colores',
-    porcentaje: 30,
-  },
-  {
-    _id: 7,
-    actividad: 'Diseño gráfico en nuestro alrededor',
-    porcentaje: 30,
-  },
-];
+interface IRank {
+  estudiante: IEstudiante,
+  cantidad: number
+}
 
 const infoRankingTable = [
   {
@@ -222,7 +174,9 @@ const EstadisticasProfesorView = () => {
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
-  const [actividadesCurso, setActividadesCurso] = useState<IActividadesCurso>();
+  const [actividadesCurso, setActividadesCurso] = useState<IActividades>();
+  const [actividadesIndividual, setActividadesIndividual] = useState<IActividades>();
+  const [rank, setRank] = useState<IRank[]>();
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -235,8 +189,12 @@ const EstadisticasProfesorView = () => {
       setTiempoData(res.data.tiempo);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`);
       setCountCorrectas(res.data.countCorrectas);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%delcurso`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%curso`);
       setActividadesCurso(res.data.actividadesCurso);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%individual`);
+      setActividadesIndividual(res.data.actividadesIndividual);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/rank`);
+      setRank(res.data.rank);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
@@ -251,7 +209,7 @@ const EstadisticasProfesorView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!curso || !tiempoData || !countCorrectas || !actividadesCurso) return (<NotFoundView />);
+  if (!curso || !tiempoData || !countCorrectas || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
@@ -287,15 +245,15 @@ const EstadisticasProfesorView = () => {
             <Doughnut data={makeCorrectasData(countCorrectas)} options={options} />
           </Card>
         </Stack>
-        <ActividadDocenteTable rowsData={actividadesCurso} cursoId={curso._id} />
+        <ActividadDocenteTable rowsData={actividadesCurso} />
         <Typography variant="h5">
           Actividades Individuales
         </Typography>
-        <ActividadIndividualTable rows={infoActividadIndividualTable} />
+        <ActividadIndividualTable rowsData={actividadesIndividual} />
         <Typography variant="h5">
           Ranking de Estudiantes
         </Typography>
-        <RankingTable rows={infoRankingTable} />
+        <RankingTable rowsData={rank} />
       </Stack>
     </Stack>
   );
