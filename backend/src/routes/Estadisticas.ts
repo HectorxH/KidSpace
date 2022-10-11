@@ -61,8 +61,7 @@ router.get('/curso/:id/%curso', async (req, res) => {
   try {
     const { id } = req.params;
     const curso = await Curso.findById(id);
-    const nEstudiantes = curso?.estudiantes?.length;
-    if (!nEstudiantes) throw Error('No se encontro el curso');
+    const nEstudiantes = curso?.estudiantes?.length || 0;
     const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
 
     const logsByActividad = _.groupBy(logs, 'actividad');
@@ -82,8 +81,7 @@ router.get('/curso/:id/%individual', async (req, res) => {
   try {
     const { id } = req.params;
     const curso = await Curso.findById(id);
-    const nEstudiantes = curso?.estudiantes?.length;
-    if (!nEstudiantes) throw Error('No se encontro el curso');
+    const nEstudiantes = curso?.estudiantes?.length || 0;
     const logs = await ActividadLog.find({ curso: id, tipo: 'individual' });
 
     const logsByActividad = _.groupBy(logs, 'actividad');
