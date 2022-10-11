@@ -72,7 +72,7 @@ const Tienda = ({navigation, route}: TiendaProps) => {
           tipoImages = clothesImages;
           numImages = 0;
       }
-      navigation.push('TiendaItems', {
+      navigation.navigate('TiendaItems', {
         tipo,
         setCantMonedas: route.params.setCantMonedas,
         cantMonedas: route.params.cantMonedas,

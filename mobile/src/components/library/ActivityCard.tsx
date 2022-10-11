@@ -32,7 +32,7 @@ const ActivityCard = ({
     <Card
       style={styles.card}
       onPress={() =>
-        navigation.push('Activity', {activity, curso, userName, userLastName})
+        navigation.navigate('Activity', {activity, curso, userName, userLastName})
       }>
       <Card.Cover
         source={images['portadaAct'.concat(activity.nactividad)].uri}

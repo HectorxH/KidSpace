@@ -79,7 +79,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
               borderRadius: 20,
             }}
             onPress={() =>
-              navigation.push('Story', {
+              navigation.navigate('Story', {
                 Info: story,
                 curso: curso,
                 userName: userName,

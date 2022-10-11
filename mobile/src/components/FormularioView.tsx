@@ -59,7 +59,7 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
           console.log(e);
         }
       }
-      navigation.push('ErrorView');
+      navigation.navigate('ErrorView');
     }
   };
   return (

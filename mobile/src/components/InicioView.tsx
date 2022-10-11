@@ -69,7 +69,7 @@ const InicioView = ({navigation}: InicioViewProps) => {
             style={styles.button}
             color="#8DB4E4"
             mode="contained"
-            onPress={() => navigation.push('Qr')}>
+            onPress={() => navigation.navigate('Qr')}>
             <Text style={styles.buttonText}>
               <Icon name="camera" size={RSize(0.07, 'h')} color="#FFFFFF" />{' '}
               Abrir la cámara

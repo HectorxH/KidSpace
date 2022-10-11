@@ -18,7 +18,7 @@ const ActivityCard = ({
   return (
     <Card
       style={[styles.card, {width: windowWidth / 3 - 10 * quantity}]}
-      onPress={() => navigation.push('Activity', {act})}>
+      onPress={() => navigation.navigate('Activity', {act})}>
       <Card.Cover source={images['portadaAct'.concat(act.nactividad)].uri} />
       <Card.Title title={act.titulo} titleStyle={styles.title} />
     </Card>
