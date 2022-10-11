@@ -50,7 +50,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
       style={{
         flexDirection: 'column',
         justifyContent: 'center',
-        marginBottom: RSize(0.1, 'w'),
+        marginBottom: RSize(0.1, 'h'),
       }}>
       <ImageBackground
         style={{
@@ -73,10 +73,10 @@ const ItemPreview = (props: ItemPreviewProps) => {
         />
         <View
           style={{
-            position: 'absolute',
-            left: RSize(0.02, 'w'),
-            bottom: RSize(0.15, 'h'),
-            paddingHorizontal: RSize(0.1, 'h'),
+            //alignItems: 'center',
+            //position: 'absolute',
+            //left: RSize(0.01, 'w'),
+            bottom: RSize(-0.56, 'h'),
           }}>
           <Card style={{borderRadius: 20}}>
             <Text
@@ -84,7 +84,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
                 textAlign: 'center',
                 fontFamily: 'Poppins-SemiBold',
                 fontSize: RSize(0.7, 'w') / RSize(0.1, 'h'),
-                padding: RSize(0.2, 'w') / RSize(0.1, 'h'),
+                padding: RSize(0.01, 'w') / RSize(0.1, 'h'),
               }}>
               Vendemos solo los mejores productos, miau. Selecciona lo que más
               te guste para ver su{' '}
