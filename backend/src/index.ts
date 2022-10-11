@@ -180,6 +180,8 @@ app.post(
       if (tipo === user.tipo) return res.json(user);
       throw Error('Tipo de usuario invalido');
     } catch (e) {
+      req.session.destroy(() => {});
+      req.logout(() => {});
       console.log(e);
       return res.sendStatus(500);
     }
