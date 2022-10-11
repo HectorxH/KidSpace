@@ -39,7 +39,7 @@ const Portals = (props: PortalsProps) => {
   const positions = props.positions;
 
   return (
-    <ViroPortalScene passable={true}>
+    <ViroPortalScene passable={true} onDrag={() => {}} dragType="FixedDistance">
       <ViroPortal
         position={
           typeof positions[props.modelIndex] === 'undefined'
@@ -47,12 +47,12 @@ const Portals = (props: PortalsProps) => {
             : [
                 positions[props.modelIndex][0],
                 positions[props.modelIndex][1],
-                -5,
+                -1,
               ]
         }
-        onDrag={() => {}}
-        dragType={'FixedToWorld'}
-        scale={[2, 2, 2]}>
+        //onDrag={() => {}}
+        //dragType={'FixedDistance'}
+        scale={[0.1, 0.1, 0.1]}>
         <Viro3DObject
           source={
             props.modelProps[props.pageNumber][props.itemNumber]
