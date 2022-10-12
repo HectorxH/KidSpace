@@ -2633,21 +2633,21 @@
         "pregunta": "El software Excel permite crear tablas y ______",
         "answers": [
           {
-            "text": "imágenes",
+            "text": "Imágenes",
             "position": {
               "start": [2, 7.3],
               "end": [6, 9.8]
             }
           },
           {
-            "text": "gráficos",
+            "text": "Gráficos",
             "position": {
               "start": [8, 7.3],
               "end": [12, 9.8]
             }
           },
           {
-            "text": "celdas",
+            "text": "Celdas",
             "position": {
               "start": [14, 7.3],
               "end": [18, 9.8]
@@ -2659,21 +2659,21 @@
           "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
           "answers": [
           {
-            "text": "una lista",
+            "text": "Una lista",
             "position": {
               "start": [2, 13.3],
               "end": [6, 15.8]
             }
           },
           {
-            "text": "una celda",
+            "text": "Una celda",
             "position": {
               "start": [8, 13.3],
               "end": [12, 15.8]
             }
           },
           {
-            "text": "una tabla",
+            "text": "Una tabla",
             "position": {
               "start": [14, 13.3],
               "end": [18, 15.8]

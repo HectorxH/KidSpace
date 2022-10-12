@@ -2256,6 +2256,7 @@
       "trackerMessage": "Encuentra el material hecho de Arena",
       "imageTrackers": [
         {
+          "name": "Vidrio",
           "target": "vidrio",
           "display": "vidrio",
           "displayType": "video"
@@ -2411,8 +2412,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2423,8 +2424,8 @@
       {
         "text": "¡Muy bien! ¿Podrás encontrar la tarjeta con el material que se hace a partir del *petróleo*?",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2453,6 +2454,7 @@
       "trackerMessage": "Encuentra el material hecho de Petróleo",
       "imageTrackers": [
         {
+          "name": "Plástico",
           "target": "plastico",
           "display": "plastico",
           "displayType": "video"
@@ -2608,8 +2610,8 @@
     "textBoxes": [
       {
         "position": {
-          "start": [2, 5],
-          "end": [16, 17]
+          "start": [3, 5],
+          "end": [17, 17]
         },
         "settings": {
           "borderWidth": 0
@@ -2620,8 +2622,8 @@
       {
         "text": "¡Excelente! Ahora necesitas encontrar la tarjeta con  el material que se hace a partir del *trigo*. ",
         "position": {
-          "start": [3, 5.5],
-          "end": [15, 16.5]
+          "start": [4, 5.5],
+          "end": [16, 16.5]
         }
       }
     ],
@@ -2650,6 +2652,7 @@
       "trackerMessage": "Encuentra el material hecho de Trigo",
       "imageTrackers": [
         {
+          "name": "Harina",
           "target": "harina",
           "display": "harina",
           "displayType": "video"

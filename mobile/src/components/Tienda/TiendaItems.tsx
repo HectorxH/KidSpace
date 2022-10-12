@@ -244,9 +244,11 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 style={{
                   fontFamily: 'Poppins-Bold',
                   alignSelf: 'center',
+                  color: '#FFFFFF',
                   fontSize: RSize(13, 'w') / RSize(2, 'h'),
                   textAlign: 'center',
                 }}>
+                {'  '}
                 200
               </Text>
             </TouchableOpacity>

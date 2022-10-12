@@ -46,7 +46,8 @@ const DesafioIntroductorioSceneAR = (
             anchor.trackingMethod;
 
           if (anchor.trackingMethod === 'tracking') {
-            newActiveTracker[pageNumber] = imageTracker.target;
+            // newActiveTracker[pageNumber] = imageTracker.target;
+            newActiveTracker[pageNumber] = imageTracker.name;
             newActiveTrackerIndex[pageNumber] = trackerNumber;
             console.log('target detectado:', imageTracker.target);
           }

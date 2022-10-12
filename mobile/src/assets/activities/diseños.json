@@ -2135,7 +2135,7 @@
         }
       },
       {
-        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "text": "¿Cuál de las siguientes características de un objeto se percibe con el tacto?",
         "position": {
           "start": [1, 11.5],
           "end": [19, 13]
@@ -2151,23 +2151,24 @@
     ],
     "quiz": [
       {
+        "pregunta": "El diseño siempre debe seguir la ______ del producto",
         "answers": [
           {
-            "text": "idea",
+            "text": "Idea",
             "position": {
               "start": [2, 7.3],
               "end": [6, 9.8]
             }
           },
           {
-            "text": "función",
+            "text": "Función",
             "position": {
               "start": [8, 7.3],
               "end": [12, 9.8]
             }
           },
           {
-            "text": "creatividad",
+            "text": "Creatividad",
             "position": {
               "start": [14, 7.3],
               "end": [18, 9.8]
@@ -2176,23 +2177,24 @@
         ]
       },
       {
+        "pregunta": "¿Cuál de las siguientes características de un objeto se percibe con el tacto?",
         "answers": [
           {
-            "text": "color",
+            "text": "Color",
             "position": {
               "start": [2, 13.3],
               "end": [6, 15.8]
             }
           },
           {
-            "text": "tamaño",
+            "text": "Tamaño",
             "position": {
               "start": [8, 13.3],
               "end": [12, 15.8]
             }
           },
           {
-            "text": "textura",
+            "text": "Textura",
             "position": {
               "start": [14, 13.3],
               "end": [18, 15.8]
