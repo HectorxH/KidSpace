@@ -120,10 +120,10 @@ const ActividadIndividualView = () => {
         direction="row"
         spacing={3}
         sx={{
-          px: 5, justifyContent: 'center', alingContent: 'center', height: '400px',
+          px: 5, justifyContent: 'center', height: '40vh', alingContent: 'center',
         }}
       >
-        <Stack direction="column" spacing={1} sx={{ width: 0.9 / 2 }}>
+        <Stack direction="column" spacing={1} sx={{ width: 0.4 }}>
           <Card sx={{
             width: 1, borderRadius: 5, alignItems: 'center', height: '100%',
           }}
@@ -140,18 +140,25 @@ const ActividadIndividualView = () => {
             </Typography>
             <Divider style={{ width: '90%', alignSelf: 'center' }} />
             <Stack
-              direction="row"
+              direction="column"
               sx={{
-                width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
+                justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
               }}
             >
-              {(letras.map((letra, id) => (
-                <Typography sx={{
-                  color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+              <Stack
+                direction="row"
+                sx={{
+                  width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
                 }}
-                ><b>{letra}</b>
-                </Typography>
-              )))}
+              >
+                {(letras.map((letra, id) => (
+                  <Typography sx={{
+                    color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                  }}
+                  ><b>{letra}</b>
+                  </Typography>
+                )))}
+              </Stack>
             </Stack>
           </Card>
           <Card sx={{
@@ -178,7 +185,10 @@ const ActividadIndividualView = () => {
           </Card>
 
         </Stack>
-        <Card sx={{ padding: 1, width: 1.1 / 2, borderRadius: 5 }}>
+        <Card sx={{
+          padding: 1, width: 0.6, borderRadius: 5,
+        }}
+        >
           <Doughnut data={makeGlobalData(completadas, curso)} options={options} />
         </Card>
       </Stack>
