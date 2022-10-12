@@ -40,7 +40,7 @@ const HistorialTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+      {(rows.length === 0) ? <SinActividades mainmsg="Sin actividades." submsg="Cuande se hayan realizado actividades, estas aparecerán aquí." />
         : (
           <DataGrid
             density="comfortable"

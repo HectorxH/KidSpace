@@ -106,7 +106,11 @@ const options = {
   maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'right' as const,
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: 'Tiempo promedio empleado por actividad',
     },
   },
 };
@@ -232,6 +236,12 @@ const EstadisticasApoderadoView = () => {
                   ticks: {
                     stepSize: 1,
                   },
+                },
+              },
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Resumen de actividades completadas',
                 },
               },
             }}

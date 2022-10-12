@@ -64,12 +64,13 @@ ChartJS.register(
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const options = {
+const quicesOptions = {
   responsive: true,
   maintainAspectRatio: false,
   plugins: {
-    legend: {
-      position: 'right' as const,
+    title: {
+      display: true,
+      text: 'Resultados de quices',
     },
   },
 };
@@ -82,9 +83,9 @@ const makeTiempoData = (data: ITiempoData) => {
       labels: x,
       datasets: [
         {
-          label: 'Tiempo promedio de actividad (seg)',
+          label: 'segundos',
           data: y,
-          backgroundColor: '#B878EA',
+          backgroundColor: '#FF8A00',
         },
       ],
     };
@@ -118,7 +119,7 @@ const makeCorrectasData = (data: ICountCorrectas) => {
     };
   }
   return {
-    labels: ['-'],
+    labels: ['No hay actividades completadas'],
     datasets: [
       {
         label: 'No hay actividades completadas',
@@ -167,6 +168,17 @@ const EstadisticasProfesorView = () => {
     getData();
   }, []);
 
+  const tiempoOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: 'Tiempo promedio empleado por actividad',
+      },
+    },
+  };
+
   if (loading) return (<CargaView />);
   if (!curso || !tiempoData || !countCorrectas
     || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
@@ -196,13 +208,14 @@ const EstadisticasProfesorView = () => {
           >
             <Bar
               data={makeTiempoData(tiempoData)}
+              options={tiempoOptions}
             />
           </Card>
           <Card sx={{
             p: 1, width: 2.5 / 6, borderRadius: 5,
           }}
           >
-            <Doughnut data={makeCorrectasData(countCorrectas)} options={options} />
+            <Doughnut data={makeCorrectasData(countCorrectas)} options={quicesOptions} />
           </Card>
         </Stack>
         <ActividadDocenteTable rowsData={actividadesCurso} />
