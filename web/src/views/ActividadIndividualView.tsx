@@ -83,6 +83,8 @@ const ActividadIndividualView = () => {
   const { actividad, cursoId } = useParams();
   if (!actividad) return <NotFoundView />;
   const actividadData = _.find(actividadesIndividuales, { title: actividad });
+  console.log({ a: actividad, b: actividadesIndividuales[5].title });
+  console.log(actividad === actividadesIndividuales[5].title);
 
   const { logout } = useAuth();
 
@@ -108,8 +110,17 @@ const ActividadIndividualView = () => {
     loadData();
   }, []);
 
+  console.log(actividadData, curso, nLogs, completadas, resultados);
+
   if (loading) return (<CargaView />);
-  if (!actividadData || !curso || !nLogs || !completadas || !resultados) return <NotFoundView />;
+  if (
+    _.isUndefined(actividadData)
+    || _.isUndefined(curso)
+    || _.isUndefined(nLogs)
+    || _.isUndefined(completadas)
+    || _.isUndefined(resultados)) {
+    return <NotFoundView />;
+  }
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>

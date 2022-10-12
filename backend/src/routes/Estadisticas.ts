@@ -10,6 +10,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['gráficos', 'una tabla'],
   Diseños: ['función', 'textura'],
   Materiales: ['centro', 'lote'],
+  Reciclaje: ['placeholder', 'placeholder'],
+  'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
 };
 
 router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
@@ -86,8 +88,12 @@ router.get('/curso/:id/docente/:actividad', async (req, res) => {
       groupRespuestas,
       (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
     );
-    console.log(counts);
-    res.json({ nLogs: logs.length, counts });
+    res.json({
+      nLogs: logs.length,
+      counts: counts.length > 0
+        ? counts
+        : [{ Correctas: 0, Incorrectas: 0 }, { Correctas: 0, Incorrectas: 0 }],
+    });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

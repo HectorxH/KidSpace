@@ -15,7 +15,7 @@ const actividades = [
   'Tierra, Luna y Sol',
   '¿Qué vemos en el cielo nocturno?',
   'Interpretando etiquetas de los alimentos',
-  'Analizando nuestro dieta',
+  'Analizando nuestra dieta',
   'Teoría de colores',
   'Diseño gráfico en nuestro alrededor',
 ];

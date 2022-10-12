@@ -110,6 +110,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['gráficos', 'una tabla'],
   Diseños: ['función', 'textura'],
   Materiales: ['centro', 'lote'],
+  Reciclaje: ['placeholder', 'placeholder'],
+  'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
 };
 
 const ActividadDocenteView = () => {
@@ -149,7 +151,14 @@ const ActividadDocenteView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!actividadData || !curso || !nLogs || !counts || !resultados) return <NotFoundView />;
+  if (
+    _.isUndefined(actividadData)
+    || _.isUndefined(curso)
+    || _.isUndefined(nLogs)
+    || _.isUndefined(counts)
+    || _.isUndefined(resultados)) {
+    return <NotFoundView />;
+  }
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>

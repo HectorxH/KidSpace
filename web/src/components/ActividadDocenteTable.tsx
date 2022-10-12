@@ -9,10 +9,10 @@ import _ from 'lodash';
 
 const actividades = [
   'Diagramas',
-  'Soluciones tecnologicas',
+  // 'Soluciones tecnologicas',
   'Materiales',
-  'Reciclaje',
-  'Diseño',
+  // 'Reciclaje',
+  'Diseños',
 ];
 interface IActividades {
   [key: string]: number
