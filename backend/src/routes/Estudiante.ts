@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import express from 'express';
+import ActividadLog from '../models/ActividadLog';
 import Apoderado from '../models/Apoderado';
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -134,6 +135,7 @@ router.delete('/:id', async (req, res) => {
     const estudiante = await Estudiante.findById(id);
     const user = estudiante?.user;
     await Curso.findByIdAndUpdate(estudiante?.curso, { $pull: { estudiantes: id } });
+    await ActividadLog.findOneAndDelete({ estudiante });
     if (estudiante) {
       // eslint-disable-next-line no-restricted-syntax
       for (const apoderadoId of estudiante.apoderados) {
