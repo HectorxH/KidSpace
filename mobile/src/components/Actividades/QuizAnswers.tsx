@@ -44,6 +44,7 @@ const QuizAnswers = (props: QuizAnswersProps) => {
 
     setUserAnswers(newUserAnswers);
     setPickedAnswers(newPickedAnswers);
+    console.log(newPickedAnswers[pageNumber][answerNumber]);
   }
 
   return (

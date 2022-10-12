@@ -122,7 +122,13 @@ const ActNavigation = (props: ActNavigationProps) => {
               ? pagina.map(
                   (pregunta, numeroPregunta) =>
                     pregunta[
-                      pickedAnswersQuiz[numeroPagina][numeroPregunta].indexOf(1)
+                      pickedAnswersQuiz[numeroPagina][numeroPregunta].includes(
+                        1,
+                      )
+                        ? pickedAnswersQuiz[numeroPagina][
+                            numeroPregunta
+                          ].indexOf(1)
+                        : 0
                     ],
                 )
               : [],
