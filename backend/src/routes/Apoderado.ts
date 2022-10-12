@@ -104,7 +104,7 @@ router.delete('/:id', async (req, res) => {
 router.delete('/:id/estudiante/:estudianteId', async (req, res) => {
   try {
     const { id, estudianteId } = req.params;
-    await Apoderado.findByIdAndUpdate(id, { $pull: { estudiantes: [estudianteId] } });
+    await Apoderado.findByIdAndUpdate(id, { $pull: { estudiantes: estudianteId } });
     const apoderado = await Apoderado.findById(id);
     if (apoderado?.estudiantes.length === 0) {
       await Apoderado.findByIdAndDelete(id);
