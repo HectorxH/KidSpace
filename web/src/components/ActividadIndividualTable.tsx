@@ -87,7 +87,7 @@ const ActividadIndividualTable = (
         rows={actividades}
         getRowId={(row: any) => row}
         disableSelectionOnClick
-        sx={{ borderRadius: 5, paddingLeft: 3 }}
+        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
       />
     </Box>
   );

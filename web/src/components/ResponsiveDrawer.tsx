@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
+import GroupIcon from '@mui/icons-material/Group';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
@@ -55,8 +56,8 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
     },
     {
       uid: 2,
-      text: 'Pupilo',
-      icon: <HomeIcon />,
+      text: 'Pupilos',
+      icon: <GroupIcon />,
       paths: ['/pupilo'],
       restricted: true,
       tipo: ['apoderado'],

@@ -1,68 +1,60 @@
 /* eslint-disable no-underscore-dangle */
 import {
-  TableContainer, Table, TableBody,
-  TableCell, TableHead, TableRow, Card,
+  Box,
 } from '@mui/material';
 import React from 'react';
 import moment from 'moment-timezone';
+import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import SinActividades from './SinActividades';
-import { IActividadLog, IActividadLogs } from '../types/actividadLog';
+import { IActividadLog } from '../types/actividadLog';
 
-const Row = ({ row }:{row: IActividadLog}) => {
-  const {
-    actividad, tipo, fecha,
-  } = row;
-  // const navigate = useNavigate();
-
-  return (
-    <TableRow
-      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-    >
-      <TableCell>
-        {actividad}
-      </TableCell>
-      <TableCell>{tipo}</TableCell>
-      <TableCell>{moment(fecha).format('DD/MM/YYYY')}</TableCell>
-    </TableRow>
-  );
-};
+interface ITableParams {
+  rows: IActividadLog[],
+}
 
 const HistorialTable = (
-  { rows }: { rows: IActividadLogs },
-) => (
-
-  <TableContainer
-    component={Card}
-    elevation={4}
-    sx={{ borderRadius: '20px' }}
-  >
-    <Table
-      sx={{ overflowX: 'scroll' }}
-      aria-label="simple table"
-    >
-      <TableHead>
-        <TableRow>
-          <TableCell>Actividad</TableCell>
-          <TableCell>Tipo de Actividad</TableCell>
-          <TableCell>Fecha</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody sx={{ justifyContent: 'center' }}>
-        {(rows.length === 0
-          ? <TableRow />
-          : rows.map((row) => (
-            <Row
-              key={String(row.fecha)}
-              row={row}
-            />
-          ))
-          )}
-      </TableBody>
-    </Table>
-    {(rows.length === 0)
-      ? <SinActividades mainmsg="Sin actividades Realizadas." submsg="Este pupilo no ha realizado niguna actividad todavía." />
-      : ''}
-  </TableContainer>
-);
+  { rows }: ITableParams,
+) => {
+  console.log(rows);
+  const cols: GridColDef[] = [
+    {
+      field: 'actividad',
+      headerName: 'Actividad',
+      flex: 1,
+    },
+    {
+      field: 'tipo',
+      headerName: 'Tipo de Actividad',
+      flex: 1,
+    },
+    {
+      field: 'fecha',
+      headerName: 'Fecha',
+      flex: 1,
+      renderCell: ((params) => (
+        <div>
+          {moment(params.row.fecha).format('DD/MM/YYYY')}
+        </div>
+      )),
+    },
+  ];
+  return (
+    <Box sx={{ width: '100%' }}>
+      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+        : (
+          <DataGrid
+            density="comfortable"
+            getRowHeight={() => 50}
+            autoHeight
+            columns={cols}
+            rows={Object.values(rows)}
+            getRowId={(row: any) => row._id}
+            disableSelectionOnClick
+            sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
+          />
+        )}
+    </Box>
+  );
+};
 
 export default HistorialTable;

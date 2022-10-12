@@ -78,14 +78,14 @@ const ResultadosQuizTable = (
         : (
           <DataGrid
             density="comfortable"
-            getRowHeight={() => 'auto'}
+            getRowHeight={() => 50}
             autoHeight
             hideFooter
             columns={cols}
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}
             disableSelectionOnClick
-            sx={{ borderRadius: 5, paddingLeft: 3 }}
+            sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
           />
         )}
     </Box>
