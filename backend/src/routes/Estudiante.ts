@@ -135,7 +135,7 @@ router.delete('/:id', async (req, res) => {
     const estudiante = await Estudiante.findById(id);
     const user = estudiante?.user;
     await Curso.findByIdAndUpdate(estudiante?.curso, { $pull: { estudiantes: id } });
-    await ActividadLog.findOneAndDelete({ estudiante });
+    await ActividadLog.deleteMany({ estudiante });
     if (estudiante) {
       // eslint-disable-next-line no-restricted-syntax
       for (const apoderadoId of estudiante.apoderados) {
