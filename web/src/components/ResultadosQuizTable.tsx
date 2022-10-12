@@ -74,7 +74,7 @@ const ResultadosQuizTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(Object.keys(rows).length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+      {(estudiantes.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
         : (
           <DataGrid
             density="comfortable"
