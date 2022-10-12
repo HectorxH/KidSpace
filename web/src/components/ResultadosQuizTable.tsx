@@ -29,7 +29,6 @@ interface ITableParams {
 const ResultadosQuizTable = (
   { rows, correctas, estudiantes }: ITableParams,
 ) => {
-  console.log(rows, correctas, estudiantes);
   const cols: GridColDef[] = [
     {
       field: 'nombre',
@@ -67,7 +66,7 @@ const ResultadosQuizTable = (
       flex: 1,
       renderCell: ({ row }) => (
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          {rows[row] && rows[row].respuesta2 === correctas[0] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />)}
+          {rows[row] && rows[row].respuesta2 === correctas[1] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />)}
           {rows[row] ? rows[row].respuesta2 : '-'}
         </Stack>
       ),

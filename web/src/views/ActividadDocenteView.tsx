@@ -107,9 +107,9 @@ const makeGlobalData = (data: ICount[], curso: ICurso) => {
 };
 
 const RespuestasCorrectas: {[key: string]: string[]} = {
-  Diagramas: ['gráficos', 'una tabla'],
-  Diseños: ['función', 'textura'],
-  Materiales: ['centro', 'lote'],
+  Diagramas: ['Gráficos', 'Una tabla'],
+  Diseños: ['Función', 'Textura'],
+  Materiales: ['Norte', 'Material'],
   Reciclaje: ['placeholder', 'placeholder'],
   'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
 };
