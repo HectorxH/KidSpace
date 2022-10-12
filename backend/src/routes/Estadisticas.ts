@@ -172,12 +172,13 @@ router.get('/curso/:id/%individual', async (req, res) => {
     const curso = await Curso.findById(id);
     const nEstudiantes = curso?.estudiantes?.length || 0;
     const logs = await ActividadLog.find({ curso: id, tipo: 'individual' });
+    const uniqueLogs = _.uniqBy(logs, 'estudiante');
 
-    const logsByActividad = _.groupBy(logs, 'actividad');
+    const logsByActividad = _.groupBy(uniqueLogs, 'actividad');
     const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.map(o, 'estudiante'));
     const uniqueEstudiantesByActividad = _.mapValues(
       estudiantesByActividad,
-      (o) => _.uniq(o).length / nEstudiantes,
+      (o) => o.length / nEstudiantes,
     );
     res.json({ actividadesIndividual: uniqueEstudiantesByActividad });
   } catch (e) {
