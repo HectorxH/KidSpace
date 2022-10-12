@@ -193,7 +193,7 @@ router.get('/curso/:id/rank', async (req, res) => {
     const { estudiantes } = curso;
     const rankPromise = _.map(estudiantes, async (estudiante) => ({
       estudiante,
-      cantidad: await ActividadLog.count({ estudiante: estudiante._id }),
+      cantidad: await ActividadLog.countDocuments({ estudiante: estudiante._id }),
     }));
     const rank = await Promise.all(rankPromise);
     res.json({ rank });
