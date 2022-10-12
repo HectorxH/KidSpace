@@ -111,7 +111,6 @@ const makeCorrectasData = (data: ICountCorrectas) => {
       labels: ['Correctas', 'Incorrectas'],
       datasets: [
         {
-          label: 'Tiempo promedio de actividad (seg)',
           data: [counts.Correctas, counts.Incorrectas],
           backgroundColor: ['#A1C96A', '#EA6A6A'],
         },

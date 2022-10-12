@@ -1,6 +1,6 @@
 import express from 'express';
 import _ from 'lodash';
-import Estudiante from '../models/Estudiante';
+import Estudiante, { IEstudiante } from '../models/Estudiante';
 import ActividadLog, { IActividadLog } from '../models/ActividadLog';
 import Curso from '../models/Curso';
 
@@ -11,6 +11,52 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diseños: ['función', 'textura'],
   Materiales: ['centro', 'lote'],
 };
+
+router.get('/curso/:id/docente/:actividad/resultados', async (req, res) => {
+  try {
+    const { id, actividad } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'clase', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
+    const filteredLogs = _.filter(_.map(logs, (o) => {
+      const estudiante = o.estudiante as IEstudiante;
+      return {
+        fecha: o.fecha,
+        respuesta1: o.quizFinal ? o.quizFinal[0].respuesta : null,
+        respuesta2: o.quizFinal ? o.quizFinal[1].respuesta : null,
+        nombre: estudiante ? `${estudiante.user.nombres} ${estudiante.user.apellidos}` : null,
+      };
+    }), (o) => o.nombre !== null);
+    const logsByEstudiante = _.groupBy(filteredLogs, 'nombre');
+    const resultados = _.mapValues(logsByEstudiante, (logsArray) => _.maxBy(logsArray, 'fecha'));
+    res.json({ resultados });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/docente/:actividad', async (req, res) => {
+  try {
+    const { id, actividad } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'clase', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
+    const noNulls = _.filter(logs, (o) => o.estudiante !== null);
+    const noDups = _.map(_.groupBy(noNulls, 'estudiante'), (o) => _.maxBy(o, 'fecha'));
+    const logsRespuestas = _.map(noDups, (o) => _.map(o?.quizFinal, 'respuesta'));
+    const checkeadas = _.map(logsRespuestas, (respuestas) => ([
+      respuestas[0] === RespuestasCorrectas[actividad][0] ? 'Correctas' : 'Incorrectas',
+      respuestas[1] === RespuestasCorrectas[actividad][1] ? 'Correctas' : 'Incorrectas',
+    ]));
+    const groupRespuestas = _.zip(...checkeadas);
+    const counts = _.map(
+      groupRespuestas,
+      (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
+    );
+    console.log(counts);
+    res.json({ nLogs: logs.length, counts });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 router.get('/curso/:id/tiempo', async (req, res) => {
   try {

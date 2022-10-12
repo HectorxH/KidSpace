@@ -15,47 +15,35 @@ import {
   Title,
 } from 'chart.js';
 import {
-  Doughnut, Bar, Pie,
+  Doughnut, Pie,
 } from 'react-chartjs-2';
 import _ from 'lodash';
+import CheckIcon from '@mui/icons-material/Check';
 import { useAuth } from '../hooks/useAuth';
 import ResultadosQuizTable from '../components/ResultadosQuizTable';
 import actividadesDocentes from '../mock/actividadesDocentes';
 import NotFoundView from './NotFoundView';
 import CargaView from './LoadingView';
+import { ICurso } from '../types/cursos';
+
+interface IResultado {
+  nombre: string;
+  fecha: string;
+  respuesta1: string;
+  respuesta2:string;
+}
+
+interface IResultados {
+  [key: string]: IResultado;
+}
+
+interface ICount {
+    Correctas: number,
+    Incorrectas: number
+}
 
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
-const infoResultadosQuizTable = [
-  {
-    _id: 0,
-    nombre: 'Skylar',
-    estado: 'Completada',
-    pregunta1: 'imágenes',
-    pregunta2: 'una lista',
-  },
-  {
-    _id: 1,
-    nombre: 'Cirrus',
-    estado: 'Sin Completar',
-    pregunta1: '-',
-    pregunta2: '-',
-  },
-  {
-    _id: 2,
-    nombre: 'Kai',
-    estado: 'Completada',
-    pregunta1: 'celdas',
-    pregunta2: 'una lista',
-  },
-  {
-    _id: 3,
-    nombre: 'Soo',
-    estado: 'Completada',
-    pregunta1: 'gráficos',
-    pregunta2: 'una tabla',
-  },
-];
 
 ChartJS.register(
   CategoryScale,
@@ -77,16 +65,6 @@ ChartJS.register(
 );
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-const data = {
-  labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [12, 19, 3, 5, 3], // Utils.numbers(NUMBER_CFG),
-      backgroundColor: ['#5C9DEC', '#B878EA', '#FF8A00', '#F2C144', '#A1C96A'],
-    },
-  ],
-};
 
 const options = {
   responsive: true,
@@ -98,19 +76,34 @@ const options = {
   },
 };
 
-const dataGrafico = (d:number[]) => {
-  const datosDona = {
+const makeSingleData = (data: ICount[], curso: ICurso, idx: number) => {
+  const correctas = data[idx].Correctas || 0;
+  const incorrectas = data[idx].Incorrectas || 0;
+  const sinResponder = curso.estudiantes.length - correctas - incorrectas;
+  return {
     labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
     datasets: [
       {
-        label: 'Pregunta',
-        data: d,
+        data: [correctas, incorrectas, sinResponder],
         backgroundColor: ['#A1C96A', '#EA6A6A', 'gray'],
       },
     ],
   };
+};
 
-  return datosDona;
+const makeGlobalData = (data: ICount[], curso: ICurso) => {
+  const correctas = (data[0].Correctas || 0) + (data[1].Correctas || 0);
+  const incorrectas = (data[0].Incorrectas || 0) + (data[1].Incorrectas || 0);
+  const sinResponder = curso.estudiantes.length * 2 - correctas - incorrectas;
+  return {
+    labels: ['Respuesta Correcta', 'Respuesta Incorrecta', 'Sin responder'],
+    datasets: [
+      {
+        data: [correctas, incorrectas, sinResponder],
+        backgroundColor: ['#A1C96A', '#EA6A6A', 'gray'],
+      },
+    ],
+  };
 };
 
 const RespuestasCorrectas: {[key: string]: string[]} = {
@@ -120,9 +113,13 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
 };
 
 const ActividadDocenteView = () => {
+  const [curso, setCurso] = useState<ICurso>();
+  const [resultados, setResultados] = useState<IResultados>();
+  const [nLogs, setNLogs] = useState<number>();
+  const [counts, setCounts] = useState<ICount[]>();
   const [loading, setLoading] = useState(true);
 
-  const { actividad } = useParams();
+  const { actividad, cursoId } = useParams();
   if (!actividad) return <NotFoundView />;
   const respuestasCorrectas = RespuestasCorrectas[actividad];
   const actividadData = _.find(actividadesDocentes, { actividad });
@@ -131,8 +128,13 @@ const ActividadDocenteView = () => {
 
   const loadData = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`);
-      console.log(res);
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`); // ${cursoId}`);
+      setCurso(res.data.curso);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${actividad}`);
+      setNLogs(res.data.nLogs);
+      setCounts(res.data.counts);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${actividad}/resultados`);
+      setResultados(res.data.resultados);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
@@ -147,7 +149,7 @@ const ActividadDocenteView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!actividadData) return <NotFoundView />;
+  if (!actividadData || !curso || !nLogs || !counts || !resultados) return <NotFoundView />;
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -176,6 +178,9 @@ const ActividadDocenteView = () => {
           </Typography>
           <Typography>
             Estado:
+            <Typography display="inline" sx={{ fontSize: '15px', color: nLogs > 0 ? '#A1C96A' : '#EA6A6A' }}>
+              {nLogs > 0 ? ' Completada' : ' Sin Completar' }
+            </Typography>
           </Typography>
           <Divider style={{ width: '90%', alignSelf: 'center' }} />
           <Stack
@@ -204,18 +209,10 @@ const ActividadDocenteView = () => {
           padding: 1, width: 3 / 6, borderRadius: 5, height: '50vh',
         }}
         >
-          <Doughnut data={data} options={options} />
+          <Doughnut data={makeGlobalData(counts, curso)} options={options} />
         </Card>
       </Stack>
       <Stack spacing={2} sx={{ px: 5 }}>
-        <Card sx={{
-          padding: 4, width: 1, borderRadius: 5,
-        }}
-        >
-          <Bar
-            data={data}
-          />
-        </Card>
         <Typography variant="h5">
           Preguntas del Quiz
         </Typography>
@@ -231,21 +228,32 @@ const ActividadDocenteView = () => {
                 </Typography>
                 <Typography>
                   {pregunta.enunciado}
-                  {(pregunta.alternativas.map((alt) => (
-                    <li>{alt}</li>
-                  )))}
+                  {pregunta.alternativas.map((alt) => {
+                    if (respuestasCorrectas[id] === alt) {
+                      return (
+                        <Stack direction="row">
+                          <li>{alt}</li> <CheckIcon sx={{ color: '#A1C96A', marginX: 1 }} />
+                        </Stack>
+                      );
+                    }
+                    return (<li>{alt}</li>);
+                  })}
                 </Typography>
               </Stack>
             </Card>
             <Card sx={{ width: 0.8 / 2, borderRadius: 5 }}>
-              <Pie data={dataGrafico(pregunta.data)} options={options} />
+              <Pie data={makeSingleData(counts, curso, id)} options={options} />
             </Card>
           </Stack>
         )))}
         <Typography variant="h5">
           Resultados del Quiz
         </Typography>
-        <ResultadosQuizTable rows={infoResultadosQuizTable} correctas={respuestasCorrectas} />
+        <ResultadosQuizTable
+          rows={resultados}
+          correctas={respuestasCorrectas}
+          estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
+        />
       </Stack>
     </Stack>
   );
