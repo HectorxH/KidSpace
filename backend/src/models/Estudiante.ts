@@ -24,7 +24,6 @@ const defaultCompras = [
 defaultCompras[0][0] = 1;
 defaultCompras[0][1] = 1;
 defaultCompras[0][2] = 1;
-defaultCompras[1][0] = 1;
 defaultCompras[2][0] = 1;
 
 export const estudianteSchema = new Schema<IEstudiante>({
