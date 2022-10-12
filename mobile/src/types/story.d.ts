@@ -157,6 +157,7 @@ export interface IActNavigationParams {
   userAnswers: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
+  pickedAnswersQuiz: number[][][];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
   pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];

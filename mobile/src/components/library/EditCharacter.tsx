@@ -246,7 +246,7 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
                                   parteArray[10] > 27 && parteArray[10] < 35
                                     ? {marginTop: RSize(0.05, 'h')}
                                     : parteArray[10] > 35
-                                    ? {marginTop: RSize(0.1, 'h')}
+                                    ? {marginTop: RSize(0.12, 'h')}
                                     : {opacity: 1},
                                 ]}
                                 imageStyle={[

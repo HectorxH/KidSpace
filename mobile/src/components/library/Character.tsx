@@ -74,7 +74,9 @@ const Character = ({personaje}: {personaje: number[]}) => {
                               key="accesories"
                               style={[
                                 styles.container,
-                                personaje[10] > 30
+                                personaje[10] > 27 && personaje[10] < 35
+                                  ? {marginTop: RSize(0.02, 'h')}
+                                  : personaje[10] > 35
                                   ? {marginTop: RSize(0.05, 'h')}
                                   : {opacity: 1},
                               ]}
