@@ -58,15 +58,15 @@ export default [
     steam: ['#5C9DEC', 0, '#FF8A00', 0, 0],
     preguntas: [
       {
-        enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        enunciado: 'Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.',
+        alternativas: ['centro', 'norte', 'austral'],
+        respuestaCorrecta: 'centro',
         data: [2, 12, 5],
       },
       {
-        enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        enunciado: 'Después de procesar la materia prima, obtenemos el _____.',
+        alternativas: ['lote', 'producto', 'material'],
+        respuestaCorrecta: 'lote',
         data: [2, 12, 5],
       },
     ],
