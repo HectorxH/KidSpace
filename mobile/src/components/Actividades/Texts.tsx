@@ -52,7 +52,6 @@ const Texts = ({
     );
   };
   const iconCheck = (idx: number, w: string, k: string) => {
-    console.log('icon check idx:', idx);
     return (
       <View style={styles.iconContainer} key={idx + w + k + '_'}>
         {pickedDragAnswers[0][pageNumber][0][idx] === 2 && (
@@ -64,12 +63,32 @@ const Texts = ({
       </View>
     );
   };
-  const keywords = ['dragRectangle', 'iconDragCheck'];
+  const iconCheckT = (idx: number, w: string, k: string) => {
+    return (
+      <View style={styles.iconContainer} key={idx + w + k + '_'}>
+        <Icon name={'check'} size={RSize(0.05, 'h')} color={'green'} />
+      </View>
+    );
+  };
+  const keywords = [
+    'dragRectangle',
+    'iconDragCheck',
+    'iconCheckT',
+    'iconDragCheck:0',
+    'iconDragCheck:1',
+    'iconDragCheck:2',
+    'iconDragCheck:3',
+    'iconDragCheck:4',
+    'iconDragCheck:5',
+    'iconDragCheck:6',
+    'iconDragCheck:7',
+  ];
   const components: {
     [key: string]: (idx: number, w: string, k: string) => JSX.Element;
   } = {
     dragRectangle: dragRectangleT,
     iconDragCheck: iconCheck,
+    iconCheckT: iconCheckT,
   };
 
   const format = (text: string, auxKey: string) => {
@@ -92,11 +111,17 @@ const Texts = ({
                     t.split(`{{${keywords[i]}}}`).length - 1
                     ? [
                         sentence,
-                        components[keywords[i]](
-                          componentIdx,
-                          sentence + auxKey + t,
-                          keywords[i],
-                        ),
+                        keywords[i].split(':').length === 1
+                          ? components[keywords[i]](
+                              componentIdx,
+                              sentence + auxKey + t,
+                              keywords[i],
+                            )
+                          : components[keywords[i].split(':')[0]](
+                              parseInt(keywords[i].split(':')[1], 10),
+                              sentence + auxKey + t,
+                              keywords[i].split(':')[0],
+                            ),
                       ]
                     : [sentence];
                 })

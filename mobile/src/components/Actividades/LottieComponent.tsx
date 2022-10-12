@@ -4,7 +4,7 @@ import Layout from '../Utils/Layout';
 import LottieView from 'lottie-react-native';
 import Lottie from 'lottie-react-native';
 import {ILottie} from '../../types/activity';
-import tortuga from '../../assets/lotties/tortugaInfo1.json';
+import tortuga from '../../assets/lotties/tortugaInfo2.json';
 
 interface LottieComponentProps {
   lotties: ILottie[] | never[];
@@ -46,6 +46,7 @@ const LottieComponent = ({lotties}: LottieComponentProps) => {
                     source={tortuga}
                     autoPlay={lottie.start}
                     loop={false}
+                    speed={1.5}
                   />
                 </View>
               }
