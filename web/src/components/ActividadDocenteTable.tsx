@@ -27,14 +27,14 @@ const ActividadDocenteTable = (
 ) => {
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
-    navigate(`actividadDocente/${i}`);
+    navigate(`actividadDocente/${encodeURIComponent(i)}`);
   };
   const cols: GridColDef[] = [
     {
       field: 'actividad',
       headerName: 'Actividad',
       flex: 1,
-      renderCell: ((params) => (params.row)),
+      renderCell: (({ row }) => row),
     },
     {
       field: 'estado',
@@ -52,9 +52,9 @@ const ActividadDocenteTable = (
       field: 'porcentaje',
       headerName: '% del curso',
       flex: 1,
-      renderCell: (params) => (
+      renderCell: ({ row }) => (
         <div>
-          {_.round((Number(rowsData[params.row]) || 0) * 100, 1)} %
+          {_.round((Number(rowsData[row]) || 0) * 100, 1)} %
         </div>
       ),
     },
@@ -63,13 +63,13 @@ const ActividadDocenteTable = (
       headerName: 'Acción',
       flex: 1,
       sortable: false,
-      renderCell: (params) => (
+      renderCell: ({ row }) => (
         <div>
           <Button
             variant="contained"
             color="quaternary"
             sx={{ m: 1 }}
-            onClick={() => handleVerStats(params.row)}
+            onClick={() => handleVerStats(row)}
           >
             <Typography
               variant="button"
@@ -91,7 +91,7 @@ const ActividadDocenteTable = (
         hideFooter
         columns={cols}
         rows={actividades}
-        getRowId={(row: any) => row}
+        getRowId={(row) => row}
         disableSelectionOnClick
         sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
       />

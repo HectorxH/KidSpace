@@ -12,6 +12,39 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Materiales: ['centro', 'lote'],
 };
 
+router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
+  try {
+    const { id, actividad } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'individual', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
+    const filteredLogs = _.filter(_.map(logs, (o) => {
+      const estudiante = o.estudiante as IEstudiante;
+      return {
+        fecha: o.fecha,
+        duracion: o.duracion,
+        nombre: estudiante ? `${estudiante.user.nombres} ${estudiante.user.apellidos}` : null,
+      };
+    }), (o) => o.nombre !== null);
+    const resultados = _.mapValues(_.groupBy(filteredLogs, 'nombre'), (logsArray) => _.maxBy(logsArray, 'fecha'));
+    res.json({ resultados });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/curso/:id/individual/:actividad', async (req, res) => {
+  try {
+    const { id, actividad } = req.params;
+    const logs = await ActividadLog.find({ curso: id, tipo: 'individual', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
+    const noNulls = _.filter(logs, (o) => o.estudiante !== null);
+    const noDups = _.map(_.groupBy(noNulls, 'estudiante'), (o) => _.maxBy(o, 'fecha')?.estudiante);
+    res.json({ nLogs: logs.length, completadas: noDups });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/curso/:id/docente/:actividad/resultados', async (req, res) => {
   try {
     const { id, actividad } = req.params;

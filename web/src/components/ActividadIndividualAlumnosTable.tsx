@@ -5,49 +5,57 @@ import {
 } from '@mui/material';
 import React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
+import _ from 'lodash';
 import SinActividades from './SinActividades';
 
-interface IRow {
-  _id: number,
-  nombre: string,
-  estado: string,
-  tiempo: string,
+interface IResultado {
+  nombre: string;
+  fecha: string;
+  duracion: string;
+}
+
+interface IResultados {
+  [key: string]: IResultado
 }
 
 interface ITableParams {
-  rows: IRow[],
+  rows: IResultados,
+  estudiantes: string[]
 }
 
 const ActividadIndividualAlumnosTable = (
-  { rows }: ITableParams,
+  { rows, estudiantes }: ITableParams,
 ) => {
+  console.log(rows);
   const cols: GridColDef[] = [
     {
       field: 'nombre',
       headerName: 'Nombre',
       flex: 1,
+      renderCell: ({ row }) => row,
     },
     {
       field: 'estado',
       headerName: 'Estado',
       flex: 1,
-      renderCell: ((params) => (
+      renderCell: (({ row }) => (
         <div>
-          <Typography sx={{ fontSize: '15px', color: params.row.estado === 'Completada' ? '#A1C96A' : '#EA6A6A' }}>
-            {params.row.estado}
+          <Typography sx={{ fontSize: '15px', color: rows[row] ? '#A1C96A' : '#EA6A6A' }}>
+            {rows[row] ? 'Completada' : 'Sin completar'}
           </Typography>
         </div>
       )),
     },
     {
-      field: 'tiempo',
+      field: 'duracion',
       headerName: 'Tiempo',
       flex: 1,
+      renderCell: ({ row }) => _.round(Number((rows[row] || { duracion: '-' }).duracion)),
     },
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
+      {(estudiantes.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
         : (
           <DataGrid
             density="comfortable"
@@ -55,8 +63,8 @@ const ActividadIndividualAlumnosTable = (
             autoHeight
             hideFooter
             columns={cols}
-            rows={Object.values(rows)}
-            getRowId={(row: any) => row._id}
+            rows={estudiantes}
+            getRowId={(row) => row}
             disableSelectionOnClick
             sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
           />

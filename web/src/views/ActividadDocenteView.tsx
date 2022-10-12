@@ -196,9 +196,10 @@ const ActividadDocenteView = () => {
               }}
             >
               {(letras.map((letra, id) => (
-                <Typography sx={{
-                  color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
-                }}
+                <Typography
+                  sx={{
+                    color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                  }}
                 ><b>{letra}</b>
                 </Typography>
               )))}

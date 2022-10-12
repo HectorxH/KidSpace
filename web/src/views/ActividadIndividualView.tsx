@@ -22,6 +22,18 @@ import ActividadIndividualAlumnosTable from '../components/ActividadIndividualAl
 import CargaView from './LoadingView';
 import NotFoundView from './NotFoundView';
 import { useAuth } from '../hooks/useAuth';
+import { ICurso } from '../types/cursos';
+import { IEstudiante } from '../types/estudiantes';
+
+interface IResultado {
+  nombre: string;
+  fecha: string;
+  duracion: string;
+}
+
+interface IResultados {
+  [key: string]: IResultado
+}
 
 ChartJS.register(
   CategoryScale,
@@ -34,36 +46,7 @@ ChartJS.register(
 );
 
 ChartJS.register(ArcElement, Tooltip, Legend);
-const data = {
-  labels: ['Ciencia (S)', 'Tecnología (T)', 'Ingeniería (E)', 'Arte (A)', 'Matemáticas (M)'],
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: [12, 19, 3, 5, 3], // Utils.numbers(NUMBER_CFG),
-      backgroundColor: ['#5C9DEC', '#B878EA', '#FF8A00', '#F2C144', '#A1C96A'],
-    },
-  ],
-};
-const infoActividadIndividualAlumnosTable = [
-  {
-    _id: 0,
-    nombre: 'Soohyun',
-    estado: 'Completada',
-    tiempo: '3min 20 s',
-  },
-  {
-    _id: 0,
-    nombre: 'Soohyeong',
-    estado: 'Completada',
-    tiempo: '1min 50 s',
-  },
-  {
-    _id: 0,
-    nombre: 'Jihwa',
-    estado: 'Sin completar',
-    tiempo: '-',
-  },
-];
+
 const options = {
   responsive: true,
   maintainAspectRatio: false,
@@ -74,20 +57,43 @@ const options = {
   },
 };
 
+const makeGlobalData = (data: IEstudiante[], curso: ICurso) => {
+  const completadas = data.length;
+  const sinCompletar = curso.estudiantes.length - completadas;
+  return {
+    labels: ['Completaron', 'No completaron'],
+    datasets: [
+      {
+        data: [completadas, sinCompletar],
+        backgroundColor: ['#A1C96A', '#EA6A6A'],
+      },
+    ],
+  };
+};
+
 const letras = ['S', 'T', 'E', 'A', 'M'];
 const colores = ['#5C9DEC', '#B878EA', '#FF8A00', '#F3C550', '#A1C96A'];
 const ActividadIndividualView = () => {
+  const [nLogs, setNLogs] = useState<number>();
+  const [completadas, setCompletadas] = useState<IEstudiante[]>();
+  const [resultados, setResultados] = useState<IResultados>();
+  const [curso, setCurso] = useState<ICurso>();
   const [loading, setLoading] = useState(true);
 
-  const { actividad } = useParams();
+  const { actividad, cursoId } = useParams();
   const actividadData = _.find(actividadesIndividuales, { title: actividad });
 
   const { logout } = useAuth();
 
   const loadData = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/63310b2d77aa3a312eb9fcb5`);
-      console.log(res);
+      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
+      setCurso(res.data.curso);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${actividad}`);
+      setNLogs(res.data.nLogs);
+      setCompletadas(res.data.completadas);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${actividad}/resultados`);
+      setResultados(res.data.resultados);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
@@ -102,7 +108,7 @@ const ActividadIndividualView = () => {
   }, []);
 
   if (loading) return (<CargaView />);
-  if (!actividadData) return <NotFoundView />;
+  if (!actividadData || !curso || !nLogs || !completadas || !resultados) return <NotFoundView />;
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
@@ -119,12 +125,12 @@ const ActividadIndividualView = () => {
       >
         <Stack direction="column" spacing={1} sx={{ width: 0.9 / 2 }}>
           <Card sx={{
-            width: 1, borderRadius: 5, alignItems: 'center',
+            width: 1, borderRadius: 5, alignItems: 'center', height: '100%',
           }}
           >
             <CardMedia
               component="img"
-              // sx={{ height: '20vh' }}
+              sx={{ height: '20vh' }}
               image={actividadData.img}
             />
             <Typography sx={{ m: 1 }}>
@@ -155,20 +161,32 @@ const ActividadIndividualView = () => {
             <Stack
               direction="row"
               sx={{ justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }}
-            ><CheckCircleIcon sx={{ color: '#A1C96A', mr: 1 }} />
-              <Typography sx={{ fontSize: 14 }}>
-                La actividad se realizó un total de  25 veces por los y las estudiantes del curso
+            >
+              <CheckCircleIcon sx={{ color: '#A1C96A', mr: 1 }} />
+              <Typography sx={{ fontSize: 16 }}>
+                <Typography sx={{ fontSize: 16 }} display="inline">
+                  La actividad se realizó un total de
+                </Typography>
+                <Typography sx={{ fontSize: 21, color: '#A1C96A' }} display="inline">
+                  {` ${nLogs} `}
+                </Typography>
+                <Typography sx={{ fontSize: 16 }} display="inline">
+                  veces por los y las estudiantes del curso.
+                </Typography>
               </Typography>
             </Stack>
           </Card>
 
         </Stack>
         <Card sx={{ padding: 1, width: 1.1 / 2, borderRadius: 5 }}>
-          <Doughnut data={data} options={options} />
+          <Doughnut data={makeGlobalData(completadas, curso)} options={options} />
         </Card>
       </Stack>
       <Stack sx={{ px: 5, py: 2 }}>
-        <ActividadIndividualAlumnosTable rows={infoActividadIndividualAlumnosTable} />
+        <ActividadIndividualAlumnosTable
+          rows={resultados}
+          estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
+        />
       </Stack>
     </Stack>
   );

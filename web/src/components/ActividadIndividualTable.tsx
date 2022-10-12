@@ -10,7 +10,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import _ from 'lodash';
 
 const actividades = [
-  'Informática y algoritmos en nuestra vida ',
+  'Informática y algoritmos en nuestra vida',
   '¿Qué es un computador?',
   'Tierra, Luna y Sol',
   '¿Qué vemos en el cielo nocturno?',
@@ -33,7 +33,7 @@ const ActividadIndividualTable = (
 ) => {
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
-    navigate(`actividadIndividual/${i}`);
+    navigate(`actividadIndividual/${encodeURIComponent(i)}`);
   };
   const cols: GridColDef[] = [
     {
