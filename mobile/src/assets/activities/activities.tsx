@@ -14,6 +14,7 @@ const activities: {[key: string]: Actividad} = {
   // informatica2: require('./debug.json'),
   // informatica2: require('./materiales.json'),
   astronomia1: require('./debug.json'),
+  // astronomia2: require('./diagramas.json'),
   astronomia2: require('./materiales.json'),
 };
 

@@ -26,6 +26,7 @@ const ActNavigation = (props: ActNavigationProps) => {
     userAnswers,
     userAnswersDropdown,
     userAnswersQuiz,
+    pickedAnswersQuiz,
     userDragAnswers,
     rightDragAnswers,
     userInputAnswers,
@@ -120,7 +121,9 @@ const ActNavigation = (props: ActNavigationProps) => {
             pagina[0].length > 0
               ? pagina.map(
                   (pregunta, numeroPregunta) =>
-                    pregunta[userAnswersQuiz[0][numeroPagina][numeroPregunta]],
+                    pregunta[
+                      pickedAnswersQuiz[numeroPagina][numeroPregunta].indexOf(1)
+                    ],
                 )
               : [],
           )
@@ -142,6 +145,7 @@ const ActNavigation = (props: ActNavigationProps) => {
         duracion: ((Date.now() - tiempoInicio) / 1000).toString(),
         fecha: actividadLog.fecha.toString(),
       };
+      console.log(actLog.quizFinal);
       setActividadLog(actLog);
       navigation?.navigate('Recompensas', {
         cantMonedas,

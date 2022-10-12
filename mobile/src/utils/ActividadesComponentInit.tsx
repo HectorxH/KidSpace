@@ -332,6 +332,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     userAnswers: userAnswers,
     userAnswersDropdown: userAnswersDropdown,
     userAnswersQuiz: userAnswersQuiz,
+    pickedAnswersQuiz: pickedAnswersQuiz[0],
     rightDragAnswers: rightDragAnswers,
     rightInputAnswer: rightInputAnswer,
     pickedDragAnswers: pickedDragAnswers,
