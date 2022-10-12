@@ -1320,7 +1320,7 @@
     ],
     "texts": [
       {
-        "text": "Conoce a Ignacio.Es una tortuga a la que le encanta explorar y comer manzanas.",
+        "text": "Conoce a Ignacio. Es una tortuga a la que le encanta explorar y comer manzanas.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1664,6 +1664,48 @@
           "fontSize": 20,
           "elevation": 11
         }
+      },
+      {
+        "text": "{{iconDragCheck:1}}",
+        "position": {
+          "start": [0.5, 5.7],
+          "end": [1.5, 7.2]
+        }
+      },
+      {
+        "text": "{{iconDragCheck:2}}",
+        "position": {
+          "start": [0.5, 7.4],
+          "end": [1.5, 8.9]
+        }
+      },
+      {
+        "text": "{{iconDragCheck:3}}",
+        "position": {
+          "start": [0.5, 9.1],
+          "end": [1.5, 10.6]
+        }
+      },
+      {
+        "text": "{{iconDragCheck:4}}",
+        "position": {
+          "start": [0.5, 10.8],
+          "end": [1.5, 12.3]
+        }
+      },
+      {
+        "text": "{{iconDragCheck:5}}",
+        "position": {
+          "start": [0.5, 12.5],
+          "end": [1.5, 14]
+        }
+      },
+      {
+        "text": "{{iconDragCheck:6}}",
+        "position": {
+          "start": [0.5, 14.2],
+          "end": [1.5, 15.7]
+        }
       }
     ],
     "jumpButton": [
@@ -1748,8 +1790,8 @@
             "top": true,
             "bottom": true,
             "position": {
-              "start": [0.5, 4],
-              "end": [7, 5.5]
+              "start": [1.5, 4],
+              "end": [8, 5.5]
             }
           },
           {
@@ -1757,8 +1799,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 5.7],
-              "end": [7, 7.2]
+              "start": [1.5, 5.7],
+              "end": [8, 7.2]
             }
           },
           {
@@ -1766,8 +1808,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 7.4],
-              "end": [7, 8.9]
+              "start": [1.5, 7.4],
+              "end": [8, 8.9]
             }
           },
           {
@@ -1775,8 +1817,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 9.1],
-              "end": [7, 10.6]
+              "start": [1.5, 9.1],
+              "end": [8, 10.6]
             }
           },
           {
@@ -1784,8 +1826,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 10.8],
-              "end": [7, 12.3]
+              "start": [1.5, 10.8],
+              "end": [8, 12.3]
             }
           },
           {
@@ -1793,8 +1835,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 12.5],
-              "end": [7, 14]
+              "start": [1.5, 12.5],
+              "end": [8, 14]
             }
           },
           {
@@ -1802,8 +1844,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 14.2],
-              "end": [7, 15.7]
+              "start": [1.5, 14.2],
+              "end": [8, 15.7]
             }
           }
         ]
@@ -1858,6 +1900,48 @@
           "fontWeight": "bold",
           "fontSize": 20,
           "elevation": 11
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 5.7],
+          "end": [1.5, 7.2]
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 7.4],
+          "end": [1.5, 8.9]
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 9.1],
+          "end": [1.5, 10.6]
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 10.8],
+          "end": [1.5, 12.3]
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 12.5],
+          "end": [1.5, 14]
+        }
+      },
+      {
+        "text": "{{iconCheckT}}",
+        "position": {
+          "start": [0.5, 14.2],
+          "end": [1.5, 15.7]
         }
       }
     ],
@@ -1943,8 +2027,8 @@
             "top": true,
             "bottom": true,
             "position": {
-              "start": [0.5, 4],
-              "end": [7, 5.5]
+              "start": [1.5, 4],
+              "end": [8, 5.5]
             }
           },
           {
@@ -1952,8 +2036,8 @@
             "name": "move",
             "value": "Caminar hacia derecha",
             "position": {
-              "start": [0.5, 5.7],
-              "end": [7, 7.2]
+              "start": [1.5, 5.7],
+              "end": [8, 7.2]
             }
           },
           {
@@ -1961,8 +2045,8 @@
             "name": "move",
             "value": "Caminar hacia abajo",
             "position": {
-              "start": [0.5, 7.4],
-              "end": [7, 8.9]
+              "start": [1.5, 7.4],
+              "end": [8, 8.9]
             }
           },
           {
@@ -1970,8 +2054,8 @@
             "name": "move",
             "value": "Caminar hacia derecha",
             "position": {
-              "start": [0.5, 9.1],
-              "end": [7, 10.6]
+              "start": [1.5, 9.1],
+              "end": [8, 10.6]
             }
           },
           {
@@ -1979,8 +2063,8 @@
             "name": "move",
             "value": "Caminar hacia abajo",
             "position": {
-              "start": [0.5, 10.8],
-              "end": [7, 12.3]
+              "start": [1.5, 10.8],
+              "end": [8, 12.3]
             }
           },
           {
@@ -1988,8 +2072,8 @@
             "name": "move",
             "value": "Caminar hacia derecha",
             "position": {
-              "start": [0.5, 12.5],
-              "end": [7, 14]
+              "start": [1.5, 12.5],
+              "end": [8, 14]
             }
           },
           {
@@ -1997,8 +2081,8 @@
             "name": "function",
             "value": "Comer",
             "position": {
-              "start": [0.5, 14.2],
-              "end": [7, 15.7]
+              "start": [1.5, 14.2],
+              "end": [8, 15.7]
             }
           }
         ]

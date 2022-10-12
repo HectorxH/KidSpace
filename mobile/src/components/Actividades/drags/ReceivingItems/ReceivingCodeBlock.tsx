@@ -22,7 +22,7 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
   const [pickedDragAnswers, setPickedDragAnswers] = props.pickedDragAnswers;
   const [receivingValues, setReceivingValues] = props.receivingValues;
 
-  console.log(userDragAnswers[pageNumber]);
+  // console.log(userDragAnswers[pageNumber]);
   function checkAnswer(payload: number) {
     // Si el item tiene nombre -> fijo, no se modifica
     if (draggable.receivingItems[itemNumber].name !== '') {
@@ -52,7 +52,8 @@ const ReceivingCodeBlock = (props: ReceivingCodeBlockProps) => {
 
     if (
       draggable.answer.includes(answer) &&
-      draggable.answer.indexOf(answer) === itemNumber
+      draggable.answer.length > itemNumber &&
+      draggable.answer[itemNumber] === answer
     ) {
       newPickedAnswers[pageNumber][dragNumber][itemNumber] = 2;
     }
