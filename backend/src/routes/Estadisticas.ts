@@ -188,17 +188,14 @@ router.get('/curso/:id/%individual', async (req, res) => {
 router.get('/curso/:id/rank', async (req, res) => {
   try {
     const { id } = req.params;
-    const logs = await ActividadLog.find({ curso: id });
-
-    const logsByEstudiante = _.groupBy(logs, 'estudiante');
-    const countByEstudiantePromise = _.mapValues(logsByEstudiante, async (logArray) => {
-      const estudianteId = logArray[0].estudiante;
-      const estudiante = await Estudiante.findById(estudianteId).populate('user');
-      if (!estudiante) return null;
-      return { estudiante, cantidad: logArray.length };
-    });
-    const countByEstudiante = await Promise.all(Object.values(countByEstudiantePromise));
-    const rank = Object.values(_.omitBy(countByEstudiante, (o) => !o || !o.estudiante));
+    const curso = await Curso.findById(id).populate({ path: 'estudiantes', populate: { path: 'user' } });
+    if (!curso) throw Error('El curso no existe');
+    const { estudiantes } = curso;
+    const rankPromise = _.map(estudiantes, async (estudiante) => ({
+      estudiante,
+      cantidad: await ActividadLog.count({ estudiante: estudiante._id }),
+    }));
+    const rank = await Promise.all(rankPromise);
     res.json({ rank });
   } catch (e) {
     console.log(e);
