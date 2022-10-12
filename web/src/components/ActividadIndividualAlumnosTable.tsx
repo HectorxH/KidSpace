@@ -49,7 +49,7 @@ const ActividadIndividualAlumnosTable = (
       field: 'duracion',
       headerName: 'Tiempo',
       flex: 1,
-      renderCell: ({ row }) => _.round(Number((rows[row] || { duracion: null }).duracion)) || '-',
+      renderCell: ({ row }) => (rows[row] ? `${_.round(Number(rows[row].duracion))} s` : '-'),
     },
   ];
   return (

@@ -133,12 +133,12 @@ router.delete('/:id', async (req, res) => {
     const { id } = req.params;
     const estudiante = await Estudiante.findById(id);
     const user = estudiante?.user;
-    await Curso.findByIdAndUpdate(estudiante?.curso, { $pull: { estudiantes: [id] } });
+    await Curso.findByIdAndUpdate(estudiante?.curso, { $pull: { estudiantes: id } });
     if (estudiante) {
       // eslint-disable-next-line no-restricted-syntax
       for (const apoderadoId of estudiante.apoderados) {
         // eslint-disable-next-line no-await-in-loop
-        await Apoderado.findByIdAndUpdate(apoderadoId, { $pull: { estudiantes: [id] } });
+        await Apoderado.findByIdAndUpdate(apoderadoId, { $pull: { estudiantes: id } });
         // eslint-disable-next-line no-await-in-loop
         const apoderado = await Apoderado.findById(apoderadoId);
         if (apoderado?.estudiantes.length === 0) {

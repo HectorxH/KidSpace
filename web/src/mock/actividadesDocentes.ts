@@ -60,13 +60,13 @@ export default [
       {
         enunciado: 'Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.',
         alternativas: ['Centro', 'Norte', 'Austral'],
-        respuestaCorrecta: 'Centro',
+        respuestaCorrecta: 'Norte',
         data: [2, 12, 5],
       },
       {
         enunciado: 'Después de procesar la materia prima, obtenemos el _____.',
         alternativas: ['Lote', 'Producto', 'Material'],
-        respuestaCorrecta: 'Lote',
+        respuestaCorrecta: 'Material',
         data: [2, 12, 5],
       },
     ],
