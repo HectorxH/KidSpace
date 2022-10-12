@@ -151,10 +151,9 @@ router.get('/curso/:id/%curso', async (req, res) => {
     const curso = await Curso.findById(id);
     const nEstudiantes = curso?.estudiantes?.length || 0;
     const logs = await ActividadLog.find({ curso: id, tipo: 'clase' });
-    const uniqueLogs = _.uniqBy(logs, 'estudiante');
 
-    const logsByActividad = _.groupBy(uniqueLogs, 'actividad');
-    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.map(o, 'estudiante'));
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));
     const uniqueEstudiantesByActividad = _.mapValues(
       estudiantesByActividad,
       (o) => o.length / nEstudiantes,
@@ -172,10 +171,9 @@ router.get('/curso/:id/%individual', async (req, res) => {
     const curso = await Curso.findById(id);
     const nEstudiantes = curso?.estudiantes?.length || 0;
     const logs = await ActividadLog.find({ curso: id, tipo: 'individual' });
-    const uniqueLogs = _.uniqBy(logs, 'estudiante');
 
-    const logsByActividad = _.groupBy(uniqueLogs, 'actividad');
-    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.map(o, 'estudiante'));
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));
     const uniqueEstudiantesByActividad = _.mapValues(
       estudiantesByActividad,
       (o) => o.length / nEstudiantes,
