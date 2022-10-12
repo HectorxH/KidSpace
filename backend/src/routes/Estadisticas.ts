@@ -14,7 +14,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
 
 router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
   try {
-    const { id, actividad } = req.params;
+    const { id } = req.params;
+    const actividad = decodeURIComponent(req.params.actividad);
     const logs = await ActividadLog.find({ curso: id, tipo: 'individual', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
     const filteredLogs = _.filter(_.map(logs, (o) => {
       const estudiante = o.estudiante as IEstudiante;
@@ -25,6 +26,7 @@ router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
       };
     }), (o) => o.nombre !== null);
     const resultados = _.mapValues(_.groupBy(filteredLogs, 'nombre'), (logsArray) => _.maxBy(logsArray, 'fecha'));
+    console.log(resultados);
     res.json({ resultados });
   } catch (e) {
     console.log(e);
@@ -34,7 +36,8 @@ router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
 
 router.get('/curso/:id/individual/:actividad', async (req, res) => {
   try {
-    const { id, actividad } = req.params;
+    const { id } = req.params;
+    const actividad = decodeURIComponent(req.params.actividad);
     const logs = await ActividadLog.find({ curso: id, tipo: 'individual', actividad }).populate({ path: 'estudiante', populate: { path: 'user' } });
     const noNulls = _.filter(logs, (o) => o.estudiante !== null);
     const noDups = _.map(_.groupBy(noNulls, 'estudiante'), (o) => _.maxBy(o, 'fecha')?.estudiante);

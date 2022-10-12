@@ -81,6 +81,7 @@ const ActividadIndividualView = () => {
   const [loading, setLoading] = useState(true);
 
   const { actividad, cursoId } = useParams();
+  if (!actividad) return <NotFoundView />;
   const actividadData = _.find(actividadesIndividuales, { title: actividad });
 
   const { logout } = useAuth();
@@ -89,10 +90,10 @@ const ActividadIndividualView = () => {
     try {
       let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
       setCurso(res.data.curso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${actividad}`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${encodeURIComponent(actividad)}`);
       setNLogs(res.data.nLogs);
       setCompletadas(res.data.completadas);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${actividad}/resultados`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/individual/${encodeURIComponent(actividad)}/resultados`);
       setResultados(res.data.resultados);
     } catch (e) {
       console.log(e);

@@ -130,10 +130,10 @@ const ActividadDocenteView = () => {
     try {
       let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`); // ${cursoId}`);
       setCurso(res.data.curso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${actividad}`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${encodeURIComponent(actividad)}`);
       setNLogs(res.data.nLogs);
       setCounts(res.data.counts);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${actividad}/resultados`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/docente/${encodeURIComponent(actividad)}/resultados`);
       setResultados(res.data.resultados);
     } catch (e) {
       console.log(e);

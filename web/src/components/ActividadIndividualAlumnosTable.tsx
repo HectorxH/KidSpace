@@ -26,7 +26,6 @@ interface ITableParams {
 const ActividadIndividualAlumnosTable = (
   { rows, estudiantes }: ITableParams,
 ) => {
-  console.log(rows);
   const cols: GridColDef[] = [
     {
       field: 'nombre',
