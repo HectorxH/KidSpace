@@ -15,14 +15,14 @@ export default [
     preguntas: [
       {
         enunciado: 'El software Excel permite crear tablas y ______',
-        alternativas: ['imágenes', 'gráficos', 'celdas'],
-        respuestaCorrecta: 'gráficos',
+        alternativas: ['Imágenes', 'Gráficos', 'Celdas'],
+        respuestaCorrecta: 'Gráficos',
         data: [2, 12, 5],
       },
       {
         enunciado: 'Para elaborar un gráfico, debemos usar valores guardados en ______',
-        alternativas: ['una lista', 'una celda', 'una tabla'],
-        respuestaCorrecta: 'una tabla',
+        alternativas: ['Una lista', 'Una celda', 'Una tabla'],
+        respuestaCorrecta: 'Una tabla',
         data: [2, 12, 5],
       },
     ],
@@ -59,14 +59,14 @@ export default [
     preguntas: [
       {
         enunciado: 'Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.',
-        alternativas: ['centro', 'norte', 'austral'],
-        respuestaCorrecta: 'centro',
+        alternativas: ['Centro', 'Norte', 'Austral'],
+        respuestaCorrecta: 'Centro',
         data: [2, 12, 5],
       },
       {
         enunciado: 'Después de procesar la materia prima, obtenemos el _____.',
-        alternativas: ['lote', 'producto', 'material'],
-        respuestaCorrecta: 'lote',
+        alternativas: ['Lote', 'Producto', 'Material'],
+        respuestaCorrecta: 'Lote',
         data: [2, 12, 5],
       },
     ],
@@ -103,14 +103,14 @@ export default [
     preguntas: [
       {
         enunciado: 'El diseño siempre debe seguir la ______',
-        alternativas: ['ideas', 'función', 'creatividad'],
-        respuestaCorrecta: 'función',
+        alternativas: ['Ideas', 'Función', 'Creatividad'],
+        respuestaCorrecta: 'Función',
         data: [2, 12, 5],
       },
       {
         enunciado: '¿Cual de las siguientes características de un objeto se percibe con el tacto?',
-        alternativas: ['color', 'tamaño', 'textura'],
-        respuestaCorrecta: 'textura',
+        alternativas: ['Color', 'Tamaño', 'Textura'],
+        respuestaCorrecta: 'Textura',
         data: [2, 12, 5],
       },
     ],
