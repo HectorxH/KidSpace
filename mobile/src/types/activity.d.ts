@@ -165,6 +165,7 @@ export interface IAR {
 }
 
 export interface IImageTracker {
+  name: string;
   target: string;
   display: string;
   displayType: 'image' | 'video' | '3dobject';
