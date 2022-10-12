@@ -23,10 +23,8 @@ const ItemPreview = (props: ItemPreviewProps) => {
     return (
       <View
         style={{
-          backgroundColor: '#ECECEC',
           justifyContent: 'center',
           alignItems: 'center',
-          marginHorizontal: RSize(0.07, 'w'),
           borderRadius: 10,
         }}>
         <Card elevation={5} style={styles.card}>
@@ -37,7 +35,7 @@ const ItemPreview = (props: ItemPreviewProps) => {
                 backgroundColor: 'white',
               },
               props.tipo !== 'Fondos'
-                ? {marginHorizontal: RSize(0.04, 'w')}
+                ? {marginHorizontal: '20%'}
                 : {marginHorizontal: 0},
             ]}
           />
@@ -48,9 +46,10 @@ const ItemPreview = (props: ItemPreviewProps) => {
   return (
     <View
       style={{
-        flexDirection: 'column',
-        justifyContent: 'center',
-        marginBottom: RSize(0.1, 'h'),
+        flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignContent: 'flex-end',
+        //marginBottom: 100,
       }}>
       <ImageBackground
         style={{
@@ -64,8 +63,8 @@ const ItemPreview = (props: ItemPreviewProps) => {
           ref={animationSleepyCat}
           style={{
             justifyContent: 'center',
-            alignItems: 'center',
-            translateY: RSize(-0.025, 'w'),
+            //alignItems: 'center',
+            //transform: [{translateY: -10}],
           }}
           source={LottieSleepyCat}
           autoPlay
@@ -73,10 +72,11 @@ const ItemPreview = (props: ItemPreviewProps) => {
         />
         <View
           style={{
-            //alignItems: 'center',
+            alignItems: 'center',
+            maxHeight: '60%',
             //position: 'absolute',
             //left: RSize(0.01, 'w'),
-            bottom: RSize(-0.56, 'h'),
+            //bottom: RSize(-0.5, 'h'),
           }}>
           <Card style={{borderRadius: 20}}>
             <Text
@@ -108,16 +108,9 @@ const ItemPreview = (props: ItemPreviewProps) => {
 
 const styles = StyleSheet.create({
   card: {
-    margin: RSize(0.05, 'h'),
+    margin: 0,
     backgroundColor: 'white',
-    width: RSize(1, 'w') / 3.23,
-  },
-  titleCard: {
-    flex: 1,
-    textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
-    fontSize: RSize(1.5, 'h') / RSize(0.03, 'w'),
-    color: '#5C9DEC',
+    width: '70%',
   },
 });
 

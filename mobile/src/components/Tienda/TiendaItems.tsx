@@ -166,14 +166,11 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
-                marginTop: RSize(0.01, 'w'),
-                marginLeft: RSize(0.01, 'h'),
-                marginBottom: RSize(0.005, 'w'),
+                margin: 8,
               }}>
               <Button
                 color="#EC87C0"
                 mode="contained"
-                style={{height: RSize(0.1, 'h')}}
                 onPress={() => {
                   navigation.navigate('Tienda', {
                     setCantMonedas: route.params.setCantMonedas,
@@ -185,14 +182,13 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               <Chip
                 style={{
                   backgroundColor: '#ededed',
-                  margin: RSize(0.02, 'h'),
                   justifyContent: 'center',
                 }}>
                 <Image
                   style={{
                     resizeMode: 'cover',
-                    height: RSize(0.05, 'h'),
-                    width: RSize(0.05, 'h'),
+                    height: 18,
+                    width: 18,
                   }}
                   source={images.moneda.uri}
                 />
@@ -200,7 +196,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                   style={{
                     fontFamily: 'Poppins-Bold',
                     alignSelf: 'center',
-                    fontSize: RSize(0.04, 'h'),
+                    fontSize: 16,
                     textAlign: 'center',
                   }}>
                   {currentMonedas}
@@ -213,14 +209,13 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               tipo={tipo}
             />
           </View>
-          <View>
+          <View style={{flex: 1}}>
             <TouchableOpacity
               style={[
                 {
-                  paddingVertical: RSize(0.01, 'h'),
-                  paddingHorizontal: RSize(0.01, 'w'),
+                  padding: '3%',
                   backgroundColor: '#A1C96A',
-                  margin: RSize(0.01, 'h'),
+                  margin: 4,
                   alignSelf: 'center',
                   borderRadius: 10,
                   opacity: setOpacity(200),
@@ -230,21 +225,29 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
                 },
               ]}
               onPress={() => handleComprarClick(200)}>
-              <Text style={styles.textButton}>Comprar</Text>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  color: '#ffffff',
+                  fontFamily: 'Poppins-SemiBold',
+                  fontSize: 18,
+                }}>
+                Comprar
+              </Text>
               <Image
                 style={{
                   resizeMode: 'cover',
-                  height: RSize(0.05, 'h'),
-                  width: RSize(0.05, 'h'),
-                  marginLeft: RSize(0.02, 'h'),
+                  height: 30,
+                  width: 30,
+                  marginLeft: 4,
+                  alignSelf: 'center',
                 }}
                 source={images.moneda.uri}
               />
               <Text
                 style={{
                   fontFamily: 'Poppins-Bold',
-                  alignSelf: 'center',
-                  fontSize: RSize(13, 'w') / RSize(2, 'h'),
+                  fontSize: 16,
                   textAlign: 'center',
                 }}>
                 200
@@ -270,7 +273,7 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               textAlign: 'center',
               color: '#063D69',
               fontFamily: 'Poppins-SemiBold',
-              fontSize: RSize(1, 'h') / RSize(0.018, 'w'),
+              fontSize: 32,
             }}>
             {tipo}
           </Text>
@@ -283,7 +286,6 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
           }}
           onStartShouldSetResponder={() => true}>
           <FlatList
-            style={styles.scrollView}
             persistentScrollbar={true}
             initialNumToRender={1}
             maxToRenderPerBatch={1}
@@ -306,14 +308,14 @@ const Precio = () => (
   <Chip
     style={{
       backgroundColor: '#ededed',
-      margin: RSize(0.02, 'h'),
+      margin: 10,
       justifyContent: 'center',
     }}>
     <Image
       style={{
         resizeMode: 'cover',
-        height: RSize(0.05, 'h'),
-        width: RSize(0.05, 'h'),
+        height: 18,
+        width: 18,
       }}
       source={images.moneda.uri}
     />
@@ -321,7 +323,7 @@ const Precio = () => (
       style={{
         fontFamily: 'Poppins-Bold',
         alignSelf: 'center',
-        fontSize: RSize(0.04, 'h'),
+        fontSize: 14,
         textAlign: 'center',
       }}>
       200
@@ -334,7 +336,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignSelf: 'center',
     borderWidth: 2,
-    margin: RSize(0.005, 'h'),
+    margin: 2,
     borderColor: '#B5B5B5',
   },
   partNoSelected: {
@@ -344,10 +346,10 @@ const styles = StyleSheet.create({
     borderColor: '#5C9DEC',
   },
   opcion: {
-    width: RSize(0.2, 'h'),
-    height: RSize(0.2, 'h'),
+    width: 82,
+    height: 82,
     alignSelf: 'center',
-    marginTop: RSize(0.01, 'h'),
+    marginTop: 2,
   },
   opcionDisponible: {
     backgroundColor: 'white',
@@ -361,99 +363,34 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
-  scrollView: {
-    marginHorizontal: RSize(0.01),
-    marginVertical: RSize(0.01),
-  },
-  viewLeft: {
-    flex: 1,
-    backgroundColor: '#B878EA',
-    paddingLeft: RSize(0.02),
-    paddingRight: RSize(0.02),
-    paddingTop: RSize(0.01),
-    paddingBottom: RSize(0.02),
-  },
-  viewText: {
-    flex: 2,
-    justifyContent: 'center',
-    marginLeft: RSize(0.02),
-    marginRight: RSize(0.02),
-  },
-  viewButton: {
-    alignItems: 'center',
-  },
-  button: {
-    width: RSize(0.18),
-    color: '#000000',
-    marginTop: RSize(0.02, 'h'),
-  },
-  title: {
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.035),
-    textAlign: 'left',
-  },
   paragraph: {
-    marginLeft: RSize(0.015),
+    marginLeft: 0,
     fontFamily: 'Poppins-Regular',
-    fontSize: RSize(0.019),
-    textAlign: 'left',
-    marginTop: RSize(0.001, 'h'),
-    marginBottom: RSize(0.001, 'h'),
-  },
-  textButton: {
+    fontSize: 16,
     textAlign: 'center',
-    color: '#ffffff',
-    fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(13, 'w') / RSize(2, 'h'),
-  },
-  chip1: {
-    backgroundColor: '#B878EA',
-    margin: RSize(0.02, 'h'),
-  },
-  chip2: {
-    backgroundColor: '#ededed',
-    margin: RSize(0.01, 'h'),
-  },
-  textChip1: {
-    color: '#ffffff',
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(0.019),
-    textAlign: 'left',
-    marginTop: RSize(0.001, 'h'),
-    marginBottom: RSize(0.001, 'h'),
-  },
-  textChip2: {
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-SemiBold',
-    fontSize: RSize(0.019),
-    textAlign: 'left',
-    marginTop: RSize(0.001, 'h'),
-    marginBottom: RSize(0.001, 'h'),
+    marginTop: 0,
+    marginBottom: 0,
   },
   titleModal: {
-    marginLeft: RSize(0.015),
+    marginLeft: 0,
     fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.035),
+    fontSize: 32,
   },
   textModalButton: {
     fontFamily: 'Poppins-SemiBold',
     textAlign: 'center',
     color: '#ffffff',
-    fontSize: RSize(32, 'h') / RSize(1, 'w'),
+    fontSize: 16,
   },
   centeredView: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: RSize(0.02, 'h'),
   },
   modalView: {
-    margin: RSize(0.1, 'w'),
     backgroundColor: 'white',
     borderRadius: 20,
-    padding: RSize(0.03, 'w'),
+    padding: 20,
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -466,10 +403,7 @@ const styles = StyleSheet.create({
   },
   buttonModal: {
     borderRadius: 10,
-    maxHeight: RSize(0.05, 'w'),
-    marginTop: RSize(0.05, 'h'),
-    marginRight: RSize(0.02, 'h'),
-    marginLeft: RSize(0.02, 'h'),
+    margin: 12,
   },
   background: {
     flex: 1,
