@@ -39,7 +39,7 @@ const ActividadIndividualTable = (
     {
       field: 'actividad',
       headerName: 'Nombre',
-      flex: 1.3,
+      flex: 1,
       renderCell: (params) => params.row,
     },
     {
@@ -55,10 +55,10 @@ const ActividadIndividualTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      flex: 1,
+      width: 210,
       sortable: false,
-      align: 'right',
-      headerAlign: 'right',
+      align: 'center',
+      headerAlign: 'center',
       renderCell: (params) => (
         <div>
           <Button
