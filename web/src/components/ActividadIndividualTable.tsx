@@ -39,7 +39,7 @@ const ActividadIndividualTable = (
     {
       field: 'actividad',
       headerName: 'Nombre',
-      flex: 1,
+      flex: 1.3,
       renderCell: (params) => params.row,
     },
     {
