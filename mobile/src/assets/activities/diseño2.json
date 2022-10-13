@@ -1359,6 +1359,23 @@
     },
 
     "background": "",
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": false
+      }
+    ],
     "jumpButton": [
       {
         "settings": {
