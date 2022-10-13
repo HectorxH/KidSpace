@@ -66,15 +66,47 @@ ChartJS.register(
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const options = {
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      position: 'right' as const,
+const options = [
+  {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: true,
+        text: 'Distribución de respuestas quiz',
+      },
     },
   },
-};
+  {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: true,
+        text: 'Distribución de respuestas pregunta 1',
+      },
+    },
+  },
+  {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'top' as const,
+      },
+      title: {
+        display: true,
+        text: 'Distribución de respuestas pregunta 2',
+      },
+    },
+  },
+];
 
 const makeSingleData = (data: ICount[], curso: ICurso, idx: number) => {
   const correctas = data[idx].Correctas || 0;
@@ -219,7 +251,7 @@ const ActividadDocenteView = () => {
           padding: 1, width: 3 / 6, borderRadius: 5, height: '50vh',
         }}
         >
-          <Doughnut data={makeGlobalData(counts, curso)} options={options} />
+          <Doughnut data={makeGlobalData(counts, curso)} options={options[0]} />
         </Card>
       </Stack>
       <Stack spacing={2} sx={{ px: 5 }}>
@@ -252,7 +284,7 @@ const ActividadDocenteView = () => {
               </Stack>
             </Card>
             <Card sx={{ width: 0.8 / 2, borderRadius: 5 }}>
-              <Pie data={makeSingleData(counts, curso, id)} options={options} />
+              <Pie data={makeSingleData(counts, curso, id)} options={options[id + 1]} />
             </Card>
           </Stack>
         )))}
