@@ -10,21 +10,21 @@
     "stories":[
       {
         "carrera":"Carrera: Informática",
-        "actividad":"informatica2",
-        "img":"portada_inf2",
+        "actividad":"informatica1",
+        "img":"portada_inf1",
         "title":"Historia de Naty",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":350,
+        "desc":"En esta actividad conocerás a Naty, que se dedica a la informática. Junto con Naty, aprenderás algunos de los conceptos básicos relacionados con los algoritmos en tu vida real y también en la computación. Además, ¡escribirás tu primer programa!",
+        "coins":200,
         "estado":"estrellagris"
       },
       {
         "carrera":"Carrera: Informática",
-        "actividad":"informatica1",
-        "img":"portada_inf1",
+        "actividad":"informatica2",
+        "img":"portada_inf2",
         "title":"Historia de Abel",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "coins":200,
-        "estado":"estrelladorada"
+        "desc":"En esta actividad conocerás a Abel – un técnico que ofrece servicio de ajuste y arreglo de los computadores. Junto con Abel te vas a introducir al mundo de software y hardware, explorando de qué se compone tu computador. Podrás además ayudarle a Abel a rellenar un informe técnico de cambio de ciertas piezas de un computador.",
+        "coins":350,
+        "estado":"estrellagris"
       }
     ]
   },
@@ -99,7 +99,7 @@
         "carrera":"Carrera: Astronomía",
         "actividad":"astronomia1",
         "img":"portada_astr1",
-        "title":"Historia de Andrés",
+        "title":"Historia de André",
         "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "coins":200,
         "estado":"estrellagris"

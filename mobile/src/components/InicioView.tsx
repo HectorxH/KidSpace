@@ -4,40 +4,40 @@ import {Button} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import {RSize} from '../utils/responsive';
 import {InicioViewProps} from '../types/navigation';
+import {CommonActions} from '@react-navigation/native';
 import LottieBackground from '../assets/inicio/background.json';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {useAuth} from '../hooks/useAuth';
-import axios from 'axios';
 // import Config from 'react-native-config';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 import CargaView from './CargaView';
 
 const InicioView = ({navigation}: InicioViewProps) => {
-  const {user, refresh, logout} = useAuth();
+  const {user, refresh} = useAuth();
   const [loading, setLoading] = useState(true);
 
   const refreshUser = async () => {
     setLoading(true);
     try {
       await refresh();
-      navigation.navigate('MainMap');
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{name: 'MainMap'}],
+        }),
+      );
     } catch (e) {
       console.log(e);
-      if (axios.isAxiosError(e) && e.response?.status === 401) {
-        await logout();
-      }
     }
   };
-
-  useEffect(() => {
-    setTimeout(() => setLoading(false), 1000);
-  }, []);
 
   useEffect(() => {
     console.log('User: ', user);
     if (user) {
       refreshUser();
     }
+    // setTimeout(() => setLoading(false), 1000);
+    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
@@ -69,7 +69,7 @@ const InicioView = ({navigation}: InicioViewProps) => {
             style={styles.button}
             color="#8DB4E4"
             mode="contained"
-            onPress={() => navigation.push('Qr')}>
+            onPress={() => navigation.navigate('Qr')}>
             <Text style={styles.buttonText}>
               <Icon name="camera" size={RSize(0.07, 'h')} color="#FFFFFF" />{' '}
               Abrir la cámara

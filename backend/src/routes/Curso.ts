@@ -68,10 +68,15 @@ router.post('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
+    const user = req.user?._id;
     const { id } = req.params;
-    await Estudiante.updateMany({ curso: id }, { $set: { curso: null } });
+    await Profesor.findOneAndUpdate({ user }, {
+      $pull: { planificadas: { curso: id } },
+    });
+    await Profesor.findOneAndUpdate({ user }, { $pull: { cursos: id } });
+    await Estudiante.deleteMany({ curso: id });
     await Curso.deleteOne({ _id: id });
-    res.send(200);
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

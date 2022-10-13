@@ -15,7 +15,7 @@ import {InfoProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Story = ({navigation, route}: InfoProps) => {
-  const {Info} = route.params;
+  const {Info, curso, userName, userLastName, completadas} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   return (
     <View style={styles.container}>
@@ -74,6 +74,10 @@ const Story = ({navigation, route}: InfoProps) => {
                   navigation.navigate('Actividades', {
                     actividad: Info.actividad,
                     cantMonedas: Info.coins,
+                    curso: curso,
+                    userName: userName,
+                    userLastName: userLastName,
+                    completadas: completadas,
                   })
                 }>
                 <Text style={styles.textButton}>¡Iniciar!</Text>

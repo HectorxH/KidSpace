@@ -31,8 +31,6 @@ const AsignarView = () => {
   const [cursoId, setCursoId] = useState('');
   const [fecha, setFecha] = useState(currentDate);
   const [fechaShow, setFechaShow] = useState(currentDate);
-  console.log(currentDate);
-  console.log(fechaShow);
   const [success, setSuccess] = useState(false);
   const handleFecha = (e : any) => {
     setFecha(e);

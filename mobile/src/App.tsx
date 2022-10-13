@@ -19,11 +19,15 @@ import Story from './components/library/Story';
 import Recompensas from './components/Recompensas/Recompensas';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
+import Tienda from './components/Tienda/Tienda';
+import TiendaItems from './components/Tienda/TiendaItems';
 import MainMap from './components/MainMap';
 import InicioView from './components/InicioView';
 import CargaView from './components/CargaView';
 import ErrorView from './components/library/ErrorView';
 import FormularioView from './components/FormularioView';
+import ProfileView from './components/ProfileView';
+import EditCharacter from './components/library/EditCharacter';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/navigation';
@@ -62,6 +66,16 @@ const App = () => {
           <Stack.Screen
             name="MainMap"
             component={MainMap}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="ProfileView"
+            component={ProfileView}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="EditCharacter"
+            component={EditCharacter}
             options={{headerShown: false}}
           />
           <Stack.Screen
@@ -107,6 +121,16 @@ const App = () => {
           <Stack.Screen
             name="Qr"
             component={Qr}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="Tienda"
+            component={Tienda}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="TiendaItems"
+            component={TiendaItems}
             options={{headerShown: false}}
           />
         </Stack.Navigator>

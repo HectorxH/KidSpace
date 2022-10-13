@@ -298,12 +298,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -345,12 +345,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -392,12 +392,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -610,21 +610,21 @@
             "text": "Excel",
             "position": {
               "start": [7, 10.5],
-              "end": [13, 12.5]
+              "end": [13, 13]
             }
           },
           {
             "text": "Paint",
             "position": {
-              "start": [7,13.5],
-              "end": [13, 15.5]
+              "start": [7, 13.5],
+              "end": [13, 16]
             }
           },
           {
             "text": "Word",
             "position": {
               "start": [7, 16.5],
-              "end": [13, 18.5]
+              "end": [13, 19]
             }
           }
         ]
@@ -714,21 +714,21 @@
             "text": "SUMA()",
             "position": {
               "start": [9.5, 10.5],
-              "end": [15.5, 12.5]
+              "end": [15.5, 13]
             }
           },
           {
             "text": "CONTAR()",
             "position": {
               "start": [9.5, 13.5],
-              "end": [15.5, 15.5]
+              "end": [15.5, 16]
             }
           },
           {
             "text": "PROMEDIO()",
             "position": {
               "start": [9.5, 16.5],
-              "end": [15.5, 18.5]
+              "end": [15.5, 19]
             }
           }
         ]
@@ -800,21 +800,21 @@
             "text": "Número",
             "position": {
               "start": [4, 10.5],
-              "end": [10, 12.5]
+              "end": [10, 13]
             }
           },
           {
             "text": "Porcentaje",
             "position": {
               "start": [4, 13.5],
-              "end": [10, 15.5]
+              "end": [10, 16]
             }
           },
           {
             "text": "Moneda",
             "position": {
               "start": [4, 16.5],
-              "end": [10, 18.5]
+              "end": [10, 19]
             }
           }
         ]
@@ -866,12 +866,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -923,12 +923,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -980,12 +980,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -1037,12 +1037,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#169C34",
           "buttonColorAlt": "#169C34",
-          "buttonIconNormal": "cube",
-          "buttonIconAlt": "table",
-          "buttonTextNormal": " Volver",
-          "buttonTextAlt": " Hoja de cálculo"
+          "buttonColorNormal": "#169C34",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "table",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Hoja de cálculo"
         },
         "position" : {
           "start": [1, 1],
@@ -1265,7 +1265,7 @@
           "end": [7.5, 9.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1275,7 +1275,7 @@
           "end": [7.5, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1285,7 +1285,7 @@
           "end": [7.5, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1295,7 +1295,7 @@
           "end": [7.5, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1305,7 +1305,7 @@
           "end": [11.25, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1316,7 +1316,7 @@
         },
         "settings": {
           "color": "#FFFFFF",
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1326,7 +1326,7 @@
           "end": [11.25, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1336,7 +1336,7 @@
           "end": [11.25, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1346,7 +1346,7 @@
           "end": [11.25, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1356,7 +1356,7 @@
           "end": [15, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1366,7 +1366,7 @@
           "end": [15, 9.5]
         }, 
         "settings": {
-          "fontSize": 0.05,
+          "fontSize": 19,
           "color": "#FFFFFF"
         }
       }
@@ -1673,7 +1673,7 @@
           "end": [3.5, 9.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1683,7 +1683,7 @@
           "end": [3.5, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1693,7 +1693,7 @@
           "end": [3.5, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1703,7 +1703,7 @@
           "end": [3.5, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1713,7 +1713,7 @@
           "end": [3.5, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1723,7 +1723,7 @@
           "end": [7.25, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1734,7 +1734,7 @@
         },
         "settings": {
           "color": "#FFFFFF",
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1744,7 +1744,7 @@
           "end": [7.25, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1754,7 +1754,7 @@
           "end": [7.25, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1764,7 +1764,7 @@
           "end": [7.25, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1774,7 +1774,7 @@
           "end": [7.25, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1784,7 +1784,7 @@
           "end": [11, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1794,7 +1794,7 @@
           "end": [11, 9.5]
         }, 
         "settings": {
-          "fontSize": 0.05,
+          "fontSize": 19,
           "color": "#FFFFFF"
         }
       },
@@ -1805,7 +1805,7 @@
           "end": [11, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1815,7 +1815,7 @@
           "end": [11, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1825,7 +1825,7 @@
           "end": [11, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -1835,7 +1835,7 @@
           "end": [11, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2180,7 +2180,7 @@
           "end": [3.5, 9.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2190,7 +2190,7 @@
           "end": [3.5, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2200,7 +2200,7 @@
           "end": [3.5, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2210,7 +2210,7 @@
           "end": [3.5, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2220,7 +2220,7 @@
           "end": [3.5, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2230,7 +2230,7 @@
           "end": [7.25, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2241,7 +2241,7 @@
         },
         "settings": {
           "color": "#FFFFFF",
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2251,7 +2251,7 @@
           "end": [7.25, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2261,7 +2261,7 @@
           "end": [7.25, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2271,7 +2271,7 @@
           "end": [7.25, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2281,7 +2281,7 @@
           "end": [7.25, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2291,7 +2291,7 @@
           "end": [11, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2301,7 +2301,7 @@
           "end": [11, 9.5]
         }, 
         "settings": {
-          "fontSize": 0.05,
+          "fontSize": 19,
           "color": "#FFFFFF"
         }
       },
@@ -2312,7 +2312,7 @@
           "end": [11, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2322,7 +2322,7 @@
           "end": [11, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2332,7 +2332,7 @@
           "end": [11, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2342,7 +2342,7 @@
           "end": [11, 19.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2362,7 +2362,7 @@
           "end": [13, 7]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2372,7 +2372,7 @@
           "end": [13, 12]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2382,7 +2382,7 @@
           "end": [13, 14.5]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -2392,7 +2392,7 @@
           "end": [13, 17]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       }
     ],
@@ -2566,7 +2566,7 @@
           "end": [20, 3]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 20,
           "color": "white",
           "elevation": 21
         }
@@ -2579,7 +2579,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
@@ -2593,7 +2593,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 17,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"
@@ -2607,7 +2607,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
@@ -2621,7 +2621,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 17,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"
@@ -2630,23 +2630,24 @@
     ],
     "quiz": [
       {
+        "pregunta": "El software Excel permite crear tablas y ______",
         "answers": [
           {
-            "text": "imágenes",
+            "text": "Imágenes",
             "position": {
               "start": [2, 7.3],
               "end": [6, 9.8]
             }
           },
           {
-            "text": "gráficos",
+            "text": "Gráficos",
             "position": {
               "start": [8, 7.3],
               "end": [12, 9.8]
             }
           },
           {
-            "text": "celdas",
+            "text": "Celdas",
             "position": {
               "start": [14, 7.3],
               "end": [18, 9.8]
@@ -2655,23 +2656,24 @@
         ]
       },
       {
-        "answers": [
+          "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
+          "answers": [
           {
-            "text": "una lista",
+            "text": "Una lista",
             "position": {
               "start": [2, 13.3],
               "end": [6, 15.8]
             }
           },
           {
-            "text": "una celda",
+            "text": "Una celda",
             "position": {
               "start": [8, 13.3],
               "end": [12, 15.8]
             }
           },
           {
-            "text": "una tabla",
+            "text": "Una tabla",
             "position": {
               "start": [14, 13.3],
               "end": [18, 15.8]

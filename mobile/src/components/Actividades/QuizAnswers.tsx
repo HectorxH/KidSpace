@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import {Button} from 'react-native-paper';
 import {RSize} from '../../utils/responsive';
 import Layout from '../Utils/Layout';
@@ -16,6 +16,7 @@ interface QuizAnswersProps {
 }
 
 const QuizAnswers = (props: QuizAnswersProps) => {
+  const {fontScale} = useWindowDimensions();
   const [userAnswers, setUserAnswers] = props.userAnswersQuiz;
   const [pickedAnswers, setPickedAnswers] = props.pickedAnswersQuiz;
 
@@ -43,11 +44,14 @@ const QuizAnswers = (props: QuizAnswersProps) => {
 
     setUserAnswers(newUserAnswers);
     setPickedAnswers(newPickedAnswers);
+    console.log(newPickedAnswers[pageNumber][answerNumber]);
   }
 
   return (
     <View style={styles.container}>
       {messageAnswers.map((item: IAnswers, index) => {
+        let answerTextSylye =
+          answerTextStyles[pickedAnswers[pageNumber][answerNumber][index]];
         return (
           <View style={styles.overlay} key={index.toString()}>
             <Layout
@@ -67,11 +71,10 @@ const QuizAnswers = (props: QuizAnswersProps) => {
                   }
                   onPress={() => checkAnswer(index)}>
                   <Text
-                    style={
-                      answerTextStyles[
-                        pickedAnswers[pageNumber][answerNumber][index]
-                      ]
-                    }>
+                    style={[
+                      answerTextSylye,
+                      {fontSize: answerTextSylye.fontSize / fontScale},
+                    ]}>
                     {item.text}
                   </Text>
                 </Button>
@@ -113,11 +116,11 @@ const styles = StyleSheet.create({
   answerText: {
     color: '#063D69',
     textTransform: 'none',
-    fontSize: RSize(0.035, 'h'),
+    fontSize: 15,
   },
   selectedAnswerText: {
     color: '#ffffff',
-    fontSize: RSize(0.035, 'h'),
+    fontSize: 15,
     textTransform: 'none',
   },
 });

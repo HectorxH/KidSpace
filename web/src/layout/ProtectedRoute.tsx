@@ -1,26 +1,41 @@
 /* eslint-disable react/require-default-props */
-import React from 'react';
-import { Navigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import LoadingView from '../views/LoadingView';
 
 interface IProtectedRouteProps {
-  children: any,
-  loggedin?: boolean,
+  loggedin?: boolean
   loggedout?: boolean
+  noProfesor?: boolean
+  noApoderado?: boolean
 }
 
-const ProtectedRoute : React.FC<IProtectedRouteProps> = ({
-  children,
+const ProtectedRoute = ({
   loggedin = false,
   loggedout = false,
-}) => {
+  noProfesor = false,
+  noApoderado = false,
+} : IProtectedRouteProps) => {
   const { user } = useAuth();
-  console.log(user);
-  if ((loggedout && user) || (loggedin && !user)) {
-    // user is not authentprofileicated
-    return <Navigate to="/" />;
-  }
-  return children;
+  const [lodaing, setLoading] = useState(true);
+  const [allowed, setAllowed] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (((loggedout && user) || (loggedin && !user))) {
+      // user is not authentprofileicated
+      navigate('/login');
+    }
+    if (((noProfesor && user?.tipo === 'profesor') || (noApoderado && user?.tipo === 'apoderado'))) {
+      setAllowed(false);
+    }
+    setLoading(false);
+  }, []);
+
+  if (lodaing) return <LoadingView />;
+  if (!allowed) return (null);
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

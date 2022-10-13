@@ -1,28 +1,28 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {ReactStateSetter} from '../../types/others';
-import {IModels} from '../../types/activity';
 import MaterialSelectorComponent from './MaterialSelectorComponent';
+import {IMaterialSelectorParams} from '../../types/story';
 
 interface MaterialSelectorProps {
-  materialSelectorToggle: [number, ReactStateSetter<number>];
-  pageNumber: number;
-  modelMaterial: [string[][], ReactStateSetter<string[][]>]; // este contiene el string con la textura completa de cada objeto 3d por cada pagina
-  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>]; // este contiene el string con la textura separada por campo de cada objeto 3d por cada pagina
-  selectedModelMaterials: {
-    materialOrder: string[];
-    materialChoices: string[][];
-  };
-  activeModelIndex: number;
-  models3d: IModels[];
-  selectedPageOrder: [number, ReactStateSetter<number>];
+  materialSelectorParams: IMaterialSelectorParams;
 }
 
 const MaterialSelector = (props: MaterialSelectorProps) => {
+  const {
+    pageNumber,
+    activeModelIndex,
+    models3d,
+    materialSelectorToggle,
+    modelMaterial,
+    selectedMaterial,
+    selectedModelMaterials,
+    selectedPageOrder,
+  } = props.materialSelectorParams;
   if (
-    props.models3d.length < props.activeModelIndex ||
-    typeof props.models3d[props.activeModelIndex].ARMaterials === 'undefined' ||
-    props.materialSelectorToggle[0] === 0
+    models3d[pageNumber].length === 0 ||
+    models3d[pageNumber].length < activeModelIndex ||
+    typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
+    materialSelectorToggle[0] === 0
   ) {
     return null;
   }
@@ -31,13 +31,13 @@ const MaterialSelector = (props: MaterialSelectorProps) => {
     <View style={styles.container}>
       <View style={styles.overlay}>
         <MaterialSelectorComponent
-          objectNumber={props.activeModelIndex}
-          materialSelectorToggle={props.materialSelectorToggle}
-          pageNumber={props.pageNumber}
-          modelMaterial={props.modelMaterial}
-          selectedMaterial={props.selectedMaterial}
-          selectedModelMaterials={props.selectedModelMaterials}
-          selectedPageOrder={props.selectedPageOrder}
+          objectNumber={activeModelIndex}
+          materialSelectorToggle={materialSelectorToggle}
+          pageNumber={pageNumber}
+          modelMaterial={modelMaterial}
+          selectedMaterial={selectedMaterial}
+          selectedModelMaterials={selectedModelMaterials}
+          selectedPageOrder={selectedPageOrder}
         />
       </View>
     </View>

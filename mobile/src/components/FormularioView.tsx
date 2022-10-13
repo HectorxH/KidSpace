@@ -1,6 +1,4 @@
 import React, {useEffect} from 'react';
-import axios from 'axios';
-import Config from 'react-native-config';
 import {useState} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 import {Button, Card} from 'react-native-paper';
@@ -8,13 +6,16 @@ import {FormularioViewProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import {images} from '../assets/inicio/handler/images';
 import {useAuth} from '../hooks/useAuth';
+import Config from 'react-native-config';
+import {ResponseError} from 'superagent';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const FormularioView = ({navigation, route}: FormularioViewProps) => {
-  const cursoId = route.params.event.data;
+  const cursoId = route.params.data;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
 
-  const {user, login} = useAuth();
+  const {user, login, instance, deleteAccount} = useAuth();
 
   useEffect(() => {
     if (user) {
@@ -25,17 +26,22 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
 
   const handleEnviar = async () => {
     try {
-      let res = await axios.post(`${Config.REACT_APP_BACKEND_URL}/register`, {
-        nombres,
-        apellidos,
-        tipo: 'estudiante',
-        cursoId,
-      });
-      const {_id, username, password} = res.data;
-      await axios.post(`${Config.REACT_APP_BACKEND_URL}/login`, {
+      await deleteAccount();
+      let res = await instance
+        .post(`${Config.REACT_APP_BACKEND_URL}/register`)
+        .send({
+          nombres,
+          apellidos,
+          tipo: 'estudiante',
+          cursoId,
+        });
+      const {_id, username, password} = res.body;
+      await instance.post(`${Config.REACT_APP_BACKEND_URL}/login`).send({
         username,
         password,
+        tipo: 'estudiante',
       });
+      await AsyncStorage.setItem('@curso', cursoId);
       await login({
         _id,
         username,
@@ -46,7 +52,14 @@ const FormularioView = ({navigation, route}: FormularioViewProps) => {
       });
     } catch (error) {
       console.log(JSON.stringify(error));
-      navigation.push('ErrorView');
+      if ((error as ResponseError).status === 403) {
+        try {
+          await deleteAccount();
+        } catch (e) {
+          console.log(e);
+        }
+      }
+      navigation.navigate('ErrorView');
     }
   };
   return (

@@ -1,267 +1,158 @@
 import React from 'react';
-import {StyleSheet, View, Image} from 'react-native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import {DraxProvider, DraxView, DraxList} from 'react-native-drax';
+import {StyleSheet, View} from 'react-native';
 import {RSize} from '../../utils/responsive';
-import Images from '../../assets/images/images';
 import {ReactStateSetter} from '../../types/others';
+import {IDraggable} from '../../types/activity';
+import ReceivingItem from './drags/ReceivingItem';
+import DraggableItem from './drags/DraggableItem';
+import Layout from '../Utils/Layout';
 
 interface DraggableProps {
   pageNumber: number;
-  userDragAnswers: [string[], ReactStateSetter<string[]>];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
+  receivingNames: [string[][][], ReactStateSetter<string[][][]>];
+  receivingValues: [string[][][], ReactStateSetter<string[][][]>];
+  draggable: IDraggable[] | never[];
 }
 
-const gestureRootViewStyle = {flex: 1};
-
 const Draggable = (props: DraggableProps) => {
-  const draggableItemList = [
-    {
-      id: 0,
-      name: 'negro',
-      background_color: 'black',
-    },
-    {
-      id: 1,
-      name: 'blanco',
-      background_color: 'white',
-    },
-    {
-      id: 2,
-      name: 'rojo',
-      background_color: '#FF1616',
-    },
-    {
-      id: 3,
-      name: 'azul',
-      background_color: '#0098D5',
-    },
-    {
-      id: 4,
-      name: 'amarillo',
-      background_color: '#FFE700',
-    },
-  ];
+  const [resultColor, setResultColor] = React.useState<string>('white');
 
-  const FirstReceivingItemList = [
-    {
-      id: 5,
-      name: 'blanco',
-      background_color: 'white',
-    },
-    {
-      id: 6,
-      name: 'blanco',
-      background_color: 'white',
-    },
-  ];
+  if (props.draggable.length === 0) {
+    return null;
+  }
 
-  const [receivingItemList, setReceivedItemList] = React.useState(
-    FirstReceivingItemList,
-  );
-
-  const [resultColor, setResultColor] = React.useState('white');
-
-  const colores = [
-    'tempera_negra',
-    'tempera_blanca',
-    'tempera_roja',
-    'tempera_azul',
-    'tempera_amarilla',
-    'tempera_azul',
-    'tempera_blanca',
-  ];
-
-  const colorResult = (newReceivingItemList: any) => {
-    console.log(newReceivingItemList);
-    const first = newReceivingItemList[0].name;
-    const second = newReceivingItemList[1].name;
-    const colors = first.concat(second);
-    let color = 'white';
-    switch (colors) {
-      case 'azulnegro':
-      case 'negroazul':
-        color = '#216079';
-        break;
-      case 'azulblanco':
-      case 'blancoazul':
-        color = '#9EF3FF';
-        break;
-      case 'azulrojo':
-      case 'rojoazul':
-        color = '#A31B95';
-        break;
-      case 'azulamarillo':
-      case 'amarilloazul':
-        color = '#31C852';
-        break;
-      case 'azulazul':
-        color = '#0098D5';
-        break;
-
-      case 'blanconegro':
-      case 'negroblanco':
-        color = '#DADADA';
-        break;
-      case 'blancoblanco':
-        color = 'white';
-        break;
-      case 'blancorojo':
-      case 'rojoblanco':
-        color = '#FFAFAD';
-        break;
-      case 'blancoamarillo':
-      case 'amarilloblanco':
-        color = '#FFF6A4';
-        break;
-
-      case 'negronegro':
-        color = 'black';
-        break;
-      case 'negrorojo':
-      case 'rojonegro':
-        color = '#63313C';
-        break;
-      case 'negroamarillo':
-      case 'amarillonegro':
-        color = '#736C27';
-        break;
-
-      case 'rojorojo':
-        color = '#FF1616';
-        break;
-      case 'rojoamarillo':
-      case 'amarillorojo':
-        color = '#ED801C';
-        break;
-
-      case 'amarilloamarillo':
-        color = '#FFE700';
-        break;
-    }
-    let userAnswers = [...props.userDragAnswers[0]];
-    userAnswers[props.pageNumber] = color;
-    props.userDragAnswers[1](userAnswers);
-
-    setResultColor(color);
-  };
-
-  const DragUIComponent = ({_, index}: any) => {
-    return (
-      <DraxView
-        style={styles.draggableCircle}
-        draggingStyle={styles.dragging}
-        dragReleasedStyle={styles.dragging}
-        hoverDraggingStyle={styles.hoverDragging}
-        dragPayload={index}
-        longPressDelay={10}
-        key={index}>
-        <Image style={styles.tempera} source={Images.items[colores[index]]} />
-      </DraxView>
-    );
-  };
-
-  const ReceivingZoneUIComponent = ({item, index}: any) => {
-    return (
-      <DraxView
-        style={[
-          styles.receivingZone,
-          typeof item.background_color !== 'undefined'
-            ? {backgroundColor: item.background_color}
-            : {},
-        ]}
-        receivingStyle={styles.receiving}
-        key={index}
-        onReceiveDragDrop={event => {
-          let selected_item = draggableItemList[event.dragged.payload];
-          let newReceivingItemList = [...receivingItemList];
-          newReceivingItemList[index] = selected_item;
-          setReceivedItemList(newReceivingItemList);
-          colorResult(newReceivingItemList);
-        }}
-      />
-    );
-  };
-
-  const FlatListItemSeparator = () => {
-    return <View style={styles.itemSeparator} />;
-  };
+  const flapH = 0.5; // coso para codeblock, temporal
 
   return (
-    <GestureHandlerRootView style={gestureRootViewStyle}>
-      <DraxProvider>
-        <View style={styles.container}>
-          <View style={styles.receivingContainer}>
-            {receivingItemList.map((item, index) =>
-              ReceivingZoneUIComponent({item, index}),
-            )}
-            <View
-              style={[styles.resultCircle, {backgroundColor: resultColor}]}
-            />
+    <View style={styles.container}>
+      {props.draggable.map((draggable: IDraggable, dragNumber) => {
+        return (
+          <View
+            style={styles.overlay}
+            key={
+              draggable.answer.reduce((x, y) => x + y, '') +
+              dragNumber +
+              draggable.type
+            }>
+            <View style={styles.overlay}>
+              {/* Targets del drag */}
+              <View style={styles.overlay}>
+                {typeof draggable.receivingItems !== 'undefined' &&
+                  draggable.receivingItems.map((item, itemNumber) => {
+                    return (
+                      <View
+                        style={styles.overlay}
+                        key={item.value + dragNumber + item.name + itemNumber}>
+                        <Layout
+                          position={{
+                            start: item.position.start,
+                            end: [
+                              item.position.end[0],
+                              item.type === 'codeBlock'
+                                ? item.position.end[1] + flapH
+                                : item.position.end[1],
+                            ],
+                          }}
+                          ObjectView={
+                            <ReceivingItem
+                              dragNumber={dragNumber}
+                              pageNumber={props.pageNumber}
+                              itemNumber={itemNumber}
+                              userDragAnswers={props.userDragAnswers}
+                              pickedDragAnswers={props.pickedDragAnswers}
+                              pickedDragAnswersIndex={
+                                props.pickedDragAnswersIndex
+                              }
+                              isDragItemPicked={props.isDragItemPicked}
+                              receivingNames={props.receivingNames}
+                              receivingValues={props.receivingValues}
+                              setResultColor={setResultColor}
+                              draggable={draggable}
+                            />
+                          }
+                        />
+                      </View>
+                    );
+                  })}
+              </View>
+              {/* Cosas que drageo hacia los target */}
+              <View style={styles.overlay}>
+                {typeof draggable.draggableItems !== 'undefined' &&
+                  draggable.draggableItems.map((item, itemNumber) => {
+                    return (
+                      <View
+                        style={styles.overlay}
+                        key={item.value + dragNumber + item.name + itemNumber}>
+                        <Layout
+                          // position={item.position}
+                          position={{
+                            start: item.position.start,
+                            end: [
+                              item.position.end[0],
+                              item.type === 'codeBlock'
+                                ? item.position.end[1] + flapH
+                                : item.position.end[1],
+                            ],
+                          }}
+                          ObjectView={
+                            <DraggableItem
+                              item={item}
+                              pageNumber={props.pageNumber}
+                              dragNumber={dragNumber}
+                              itemNumber={itemNumber}
+                              isDragItemPicked={props.isDragItemPicked[0]}
+                            />
+                          }
+                        />
+                      </View>
+                    );
+                  })}
+              </View>
+
+              {/* En el caso de los colores se agrega un circulo con el color resultante, mejorar */}
+              {draggable.type === 'color' && (
+                <Layout
+                  position={{start: [16.75, 9], end: [18.75, 13]}}
+                  ObjectView={
+                    <View
+                      style={[
+                        styles.resultCircle,
+                        {backgroundColor: resultColor},
+                      ]}
+                    />
+                  }
+                />
+              )}
+            </View>
           </View>
-          <View style={styles.draxListContainer}>
-            <DraxList
-              data={draggableItemList}
-              renderItemContent={DragUIComponent}
-              keyExtractor={(item, index) => index.toString()}
-              numColumns={5}
-              ItemSeparatorComponent={FlatListItemSeparator}
-            />
-          </View>
-        </View>
-      </DraxProvider>
-    </GestureHandlerRootView>
+        );
+      })}
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
   },
-  receivingZone: {
-    height: RSize(0.1, 'w'),
-    width: RSize(0.1, 'w'),
-    borderRadius: RSize(0.1, 'w') / 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: '19%',
-    borderColor: '#B5B5B5',
-    borderWidth: 3,
-  },
-  receiving: {
-    borderColor: 'red',
-    borderWidth: 2,
-  },
-  tempera: {
-    height: RSize(0.125, 'w'),
-    width: RSize(0.125, 'h'),
-    opacity: 1,
-  },
-  draggableCircle: {
+  overlay: {
     flex: 1,
-    justifyContent: 'center',
-    marginRight: RSize(0.1, 'h'),
-  },
-  dragging: {
-    opacity: 0,
-  },
-  hoverDragging: {
-    borderColor: 'magenta',
-    borderWidth: 0,
+    position: 'absolute',
     opacity: 1,
+    width: '100%',
+    height: '100%',
   },
-  receivingContainer: {
+  overlayTest: {
     flex: 1,
-    marginTop: '18%',
-    marginBottom: '15%',
-    marginLeft: '40%',
-    marginRight: '5%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-  itemSeparator: {
-    height: 15,
+    position: 'absolute',
+    opacity: 1,
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'blue',
   },
   resultCircle: {
     height: RSize(0.1, 'w'),
@@ -270,13 +161,11 @@ const styles = StyleSheet.create({
     borderColor: '#B5B5B5',
     borderWidth: 3,
   },
-  draxListContainer: {
+  test: {
     flex: 1,
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
-    paddingRight: RSize(0.02, 'h'),
-    paddingBottom: RSize(0.013, 'w'),
+    height: '100%',
+    width: '100%',
+    backgroundColor: 'red',
   },
 });
 

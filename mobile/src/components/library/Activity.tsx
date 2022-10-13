@@ -7,7 +7,7 @@ import {ActivityProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
 const Activity = ({navigation, route}: ActivityProps) => {
-  const {activity} = route.params;
+  const {activity, curso, userName, userLastName, completadas} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   // console.log(activity);
   return (
@@ -42,9 +42,13 @@ const Activity = ({navigation, route}: ActivityProps) => {
                 color="#FF8A01"
                 mode="contained"
                 onPress={() =>
-                  navigation.push('Actividades', {
+                  navigation.navigate('Actividades', {
                     actividad: activity.nombreActividad,
                     cantMonedas: 0,
+                    curso: curso,
+                    userName: userName,
+                    userLastName: userLastName,
+                    completadas: completadas,
                   })
                 }>
                 {/* onPress={() => console.log('Pressed')}> */}

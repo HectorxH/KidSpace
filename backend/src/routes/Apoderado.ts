@@ -101,4 +101,30 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.delete('/:id/estudiante/:estudianteId', async (req, res) => {
+  try {
+    const { id, estudianteId } = req.params;
+    await Apoderado.findByIdAndUpdate(id, { $pull: { estudiantes: estudianteId } });
+    const apoderado = await Apoderado.findById(id);
+    if (apoderado?.estudiantes.length === 0) {
+      await Apoderado.findByIdAndDelete(id);
+    }
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/mispupilos', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const apoderado = await Apoderado.findOne({ user }).populate({ path: 'estudiantes', populate: ['user', 'curso'] });
+    res.json({ estudiantes: apoderado?.estudiantes });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 export default router;

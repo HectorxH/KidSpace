@@ -14,15 +14,31 @@ import {imagesPersonajes} from '../../assets/personajesCarreras/handler/imagesPe
 import {CarreraProps} from '../../types/navigation';
 import {RSize} from '../../utils/responsive';
 
+const nombreActividades = {
+  diagramas: 'Diagramas',
+  materiales: 'Materiales',
+  diseños: 'Diseños',
+  diseño1: 'Teoría de colores',
+  diseño2: 'Diseño gráfico en nuestro alrededor',
+  nutricion1: 'Interpretando etiquetas de los alimentos',
+  nutricion2: 'Analizando nuestra dieta',
+  informatica1: 'Informática y algoritmos en nuestra vida',
+  informatica2: '¿Qué es un computador?',
+  astronomia1: 'Tierra, Luna y Sol',
+  astronomia2: '¿Qué vemos en el cielo nocturno?',
+};
+
 const Carrera = ({navigation, route}: CarreraProps) => {
-  const {carrera} = route.params;
-  const oldCompletadas = route.params.completadas;
+  const {carrera, curso, userName, userLastName, completadas} = route.params;
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
     try {
-      console.log(oldCompletadas);
-      if (JSON.parse(oldCompletadas).includes(nombre)) {
+      if (
+        completadas[nombreActividades[nombre]] &&
+        completadas[nombreActividades[nombre]] > 0
+      ) {
+        console.log('dorada');
         return 'estrelladorada';
       }
       return 'estrellagris';
@@ -63,8 +79,12 @@ const Carrera = ({navigation, route}: CarreraProps) => {
               borderRadius: 20,
             }}
             onPress={() =>
-              navigation.push('Story', {
+              navigation.navigate('Story', {
                 Info: story,
+                curso: curso,
+                userName: userName,
+                userLastName: userLastName,
+                completadas: completadas,
               })
             }>
             <Card

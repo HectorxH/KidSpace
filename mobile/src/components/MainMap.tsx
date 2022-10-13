@@ -24,8 +24,8 @@ import {mapImages} from '../assets/map/handler/images';
 import Carreras from '../assets/stories/carreras.json';
 import Config from 'react-native-config';
 import {useAuth} from '../hooks/useAuth';
-import axios from 'axios';
 import _ from 'lodash';
+import CargaView from './CargaView';
 
 const pusher = new Pusher(Config.REACT_APP_PUSHER_KEY, {
   cluster: 'sa1',
@@ -41,10 +41,14 @@ const MainMap = ({navigation}: MainMapProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [unidadCarrera, setUnidadCarrera] = useState('');
   const [user, setUser] = useState('');
+  const [apellidos, setApellidos] = useState('');
   const [cantMonedas, setCantMonedas] = useState(0);
-  const [completadas, setCompletadas] = useState('[]');
+  const [completadas, setCompletadas] = useState<{[key: string]: number}>({});
+  const [loading, setLoading] = useState(true);
 
   const userData = useAuth().user;
+  const userCurso = useAuth().curso;
+  const {refresh, instance} = useAuth();
 
   const loadNotification = () => {
     let visible = false;
@@ -64,6 +68,8 @@ const MainMap = ({navigation}: MainMapProps) => {
 
   const initialLoader = async () => {
     try {
+      await refresh();
+      console.log(userCurso);
       let jsonAllMessages = await AsyncStorage.getItem('@message');
       //check if value previously stored
       allMessages = jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
@@ -71,40 +77,72 @@ const MainMap = ({navigation}: MainMapProps) => {
       setMessage(allMessages);
       if (userData) {
         setUser(userData?.nombres);
+        setApellidos(userData?.apellidos);
       } else {
         navigation.navigate('InicioView');
       }
       setNotification(allMessages.length.toString());
-      const m = await AsyncStorage.getItem('@monedas');
-      m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
-      const c = await AsyncStorage.getItem('@completadas');
-      c != null ? setCompletadas(c) : setCompletadas('[]');
+      let res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/monedas`,
+      );
+      const {monedas} = res.body;
+
+      if (monedas !== null) {
+        setCantMonedas(monedas);
+      }
+
+      // const m = await AsyncStorage.getItem('@monedas');
+      // m != null ? setCantMonedas(parseInt(m!, 10)) : setCantMonedas(0);
+
+      res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/actividades`,
+      );
+      const {actividadesIndividuales, actividadesClase} = res.body;
+
+      if (actividadesClase && actividadesIndividuales) {
+        const actividades = {...actividadesClase, ...actividadesIndividuales};
+        setCompletadas(actividades);
+      }
+
+      // const c = await AsyncStorage.getItem('@completadas');
+      // c != null ? setCompletadas(c) : setCompletadas('[]');
+
+      setLoading(false);
     } catch (e) {
-      console.log('A');
       console.log(e);
+      navigation.navigate('ErrorView');
     }
   };
 
   const loadMessage = async () => {
     try {
-      channel.bind('message', async function (data: {message: IActivity}) {
-        let jsonAllMessages = await AsyncStorage.getItem('@message');
-        //check if value previously stored
-        allMessages =
-          jsonAllMessages != null ? JSON.parse(jsonAllMessages) : [];
-        allMessages.push(data.message);
-        allMessages = _.uniqWith(allMessages, _.isEqual);
-        jsonAllMessages = JSON.stringify(allMessages);
-        await AsyncStorage.setItem('@message', jsonAllMessages);
-        const m = await AsyncStorage.getItem('@message');
-        setMessage(JSON.parse(m!));
-        await AsyncStorage.setItem(
-          '@notification',
-          allMessages.length.toString(),
-        );
-        let n = await AsyncStorage.getItem('@notification');
-        setNotification(n!);
-      });
+      channel.bind(
+        'message',
+        async function (data: {message: IActivity; curso: String}) {
+          let jsonAllMessages = await AsyncStorage.getItem('@message');
+          //check if value previously stored
+          console.log('data.msg:', data.message);
+          allMessages =
+            jsonAllMessages !== null && jsonAllMessages !== 'null'
+              ? JSON.parse(jsonAllMessages)
+              : [];
+          console.log(allMessages, typeof allMessages);
+          if (data.curso === userCurso) {
+            allMessages.push(data.message);
+            allMessages = _.uniqWith(allMessages, _.isEqual);
+            jsonAllMessages = JSON.stringify(allMessages);
+            await AsyncStorage.setItem('@message', jsonAllMessages);
+            const m = await AsyncStorage.getItem('@message');
+            setMessage(JSON.parse(m!));
+            await AsyncStorage.setItem(
+              '@notification',
+              allMessages.length.toString(),
+            );
+            let n = await AsyncStorage.getItem('@notification');
+            setNotification(n!);
+          }
+        },
+      );
     } catch (e) {
       console.log('B');
       console.log(e);
@@ -124,23 +162,29 @@ const MainMap = ({navigation}: MainMapProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
-  const HandleAct = async () => {
+  // console.log(userData?.apellidos);
+  const HandleAct = () => {
     try {
-      //const jsonMessages = await AsyncStorage.getItem('@message');
-      //const messages = JSON.parse(jsonMessages!);
-      //const visible = await AsyncStorage.getItem('@visible');
       notification !== '0' && notification !== null
-        ? navigation.push('AvailableActivities', {activities: message})
-        : navigation.push('NoAvailableActivities');
+        ? navigation.navigate('AvailableActivities', {
+            activities: message,
+            curso: userCurso,
+            userName: userData?.nombres!,
+            userLastName: userData?.apellidos!,
+          })
+        : navigation.navigate('NoAvailableActivities');
     } catch (e) {
       console.log(e);
     }
   };
 
   const HandleCarrera = (event: any) => {
-    navigation.push('Carrera', {
+    navigation.navigate('Carrera', {
       carrera: event.unidadCarrera,
       completadas: completadas,
+      curso: userCurso,
+      userName: userData?.nombres!,
+      userLastName: userData?.apellidos!,
     });
     setModalVisible(false);
   };
@@ -155,15 +199,18 @@ const MainMap = ({navigation}: MainMapProps) => {
   //   ).start();
   // };
 
-  const {logout} = useAuth();
-  const testLogout = async () => {
-    await axios.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
-    await logout();
-    console.log('!!!');
-    AsyncStorage.clear();
-    navigation.navigate('InicioView');
-  };
+  // const {logout} = useAuth();
+  // const testLogout = async () => {
+  //   await instance.delete(`${Config.REACT_APP_BACKEND_URL}/logout`);
+  //   await logout();
+  //   console.log('!!!');
+  //   AsyncStorage.clear();
+  //   navigation.navigate('InicioView');
+  // };
 
+  if (loading) {
+    return <CargaView />;
+  }
   return (
     <View style={styles.topView}>
       <Modal
@@ -275,7 +322,16 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() =>
+                navigation.navigate('ProfileView', {
+                  Info: {
+                    nombres: user,
+                    apellidos: apellidos,
+                    monedas: cantMonedas,
+                  },
+                  completadas,
+                })
+              }>
               <Text style={styles.subtitle}>Perfil</Text>
             </Button>
             <Button
@@ -294,7 +350,12 @@ const MainMap = ({navigation}: MainMapProps) => {
                 />
               )}
               contentStyle={{flexDirection: 'column'}}
-              onPress={testLogout}>
+              onPress={() =>
+                navigation.navigate('Tienda', {
+                  setCantMonedas: setCantMonedas,
+                  cantMonedas: cantMonedas,
+                })
+              }>
               <Text style={styles.subtitle}>Tienda</Text>
             </Button>
             <View style={styles.rightButtonView}>
@@ -332,11 +393,6 @@ const styles = StyleSheet.create({
     marginHorizontal: RSize(0.01),
     marginVertical: RSize(0.01),
   },
-  titleModal: {
-    marginLeft: RSize(0.015),
-    fontFamily: 'Poppins-Bold',
-    fontSize: RSize(0.035),
-  },
   paragraph: {
     marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Regular',
@@ -344,6 +400,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: RSize(0.001, 'h'),
     marginBottom: RSize(0.001, 'h'),
+  },
+  titleModal: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.035),
   },
   textModalButton: {
     textAlign: 'center',

@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, TouchableOpacity} from 'react-native';
 import {IJumpCard} from '../../types/activity';
+import {ReactStateSetter} from '../../types/others';
 // import {Button} from 'react-native-paper';
 import {RSize} from '../../utils/responsive';
 import Items from './Items';
@@ -10,6 +11,12 @@ interface CardComponentProps {
   onPressFunction(): void;
   jumpCard: IJumpCard;
   disabled: boolean;
+  pageNumber: number;
+  userAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];
+  pickedDragAnswersIndex: [number[][][], ReactStateSetter<number[][][]>];
+  isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
 }
 
 const CardComponent = (props: CardComponentProps) => {
@@ -26,7 +33,15 @@ const CardComponent = (props: CardComponentProps) => {
         <Items images={jumpCard.items} resize="cover" specialTexture={''} />
       </View>
       <View style={styles.overlay}>
-        <Texts texts={jumpCard.texts} />
+        <Texts
+          texts={jumpCard.texts}
+          pageNumber={props.pageNumber}
+          draggable={[]}
+          userDragAnswers={props.userDragAnswers}
+          pickedDragAnswers={props.pickedDragAnswers}
+          pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+          isDragItemPicked={props.isDragItemPicked}
+        />
       </View>
     </TouchableOpacity>
   );

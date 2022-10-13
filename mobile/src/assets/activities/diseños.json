@@ -353,12 +353,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -423,12 +423,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -493,12 +493,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -563,12 +563,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -648,7 +648,7 @@
           "end": [6.5, 10]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       }
       
@@ -660,7 +660,7 @@
           "end": [13.1, 10]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       },
       {
@@ -670,7 +670,7 @@
           "end": [19.7, 10]
         },
         "settings": {
-          "fontSize": 0.05
+          "fontSize": 19
         }
       }
     ],
@@ -888,21 +888,21 @@
             "text": "Es difícil de usar",
             "position": {
               "start": [3, 10.5],
-              "end": [10, 12.5]
+              "end": [10, 13]
             }
           },
           {
             "text": "El color no es adecuado",
             "position": {
               "start": [3, 13.5],
-              "end": [10, 15.5]
+              "end": [10, 16]
             }
           },
           {
             "text": "La regadera es muy chica",
             "position": {
               "start": [3, 16.5],
-              "end": [10, 18.5]
+              "end": [10, 19]
             }
           }
         ]
@@ -992,6 +992,9 @@
         "position": {
           "start": [1.5, 2.5],
           "end": [11.5, 11]
+        },
+        "settings": {
+          "fontSize": 20
         }
       }
     ],
@@ -1003,21 +1006,21 @@
             "text": "Su color no es adecuado",
             "position": {
               "start": [3, 10.5],
-              "end": [10, 12.5]
+              "end": [10, 13]
             }
           },
           {
             "text": "Es demasiado grueso",
             "position": {
               "start": [3, 13.5],
-              "end": [10, 15.5]
+              "end": [10, 16]
             }
           },
           {
             "text": "Es poco resistente",
             "position": {
               "start": [3, 16.5],
-              "end": [10, 18.5]
+              "end": [10, 19]
             }
           }
         ]
@@ -1126,12 +1129,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "book",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Cuaderno",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#B878EA",
+          "buttonIconNormal": "book",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Cuaderno",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1181,12 +1184,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "book",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Cuaderno",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#B878EA",
+          "buttonIconNormal": "book",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Cuaderno",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1236,12 +1239,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "book",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Cuaderno",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#B878EA",
+          "buttonIconNormal": "book",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Cuaderno",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1291,12 +1294,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "book",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Cuaderno",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#B878EA",
+          "buttonIconNormal": "book",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Cuaderno",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1336,7 +1339,7 @@
     ],
     "texts": [
       {
-        "text": "Rellena las observaciones en el cuaderno ,dando click en el boton en *la esquina superior izquierda*.",
+        "text": "Rellena las observaciones en el cuaderno, dando click en el boton en *la esquina superior izquierda*.",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1346,12 +1349,12 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
-          "buttonIconAlt": "book",
-          "buttonIconNormal": "cube",
-          "buttonTextAlt": " Cuaderno",
-          "buttonTextNormal": " Volver"
+          "buttonColorAlt": "#B878EA",
+          "buttonIconNormal": "book",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Cuaderno",
+          "buttonTextAlt": " Volver"
         },
         "position" : {
           "start": [1, 1],
@@ -1404,8 +1407,8 @@
     "toggleButton": [
       {
         "settings": {
-          "buttonColorAlt": "#B878EA",
           "buttonColorNormal": "#B878EA",
+          "buttonColorAlt": "#B878EA",
           "buttonIconAlt": "book",
           "buttonIconNormal": "cube",
           "buttonTextAlt": " Cuaderno",
@@ -1464,7 +1467,7 @@
               "end": [20, 20]
             },
             "settings": { 
-              "fontSize": 0.05,
+              "fontSize": 19,
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1498,7 +1501,7 @@
               "end": [20, 20]
             },
             "settings": { 
-              "fontSize": 0.05,
+              "fontSize": 19,
               "elevation": 21,
               "fontWeight": "normal",
               "fontFamily": "Poppins-Regular"
@@ -1512,18 +1515,7 @@
   {
     "AR": {
       "start": false,
-      "models": [
-        {
-          "model": "silla",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 0, 0]
-        },
-        {
-          "model": "mug",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 180, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -1566,7 +1558,7 @@
           "end": [8, 8.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1579,7 +1571,7 @@
           "end": [8, 11.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1592,7 +1584,7 @@
           "end": [8, 14.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1639,7 +1631,7 @@
             "start": [0, 0],
             "end": [0, 0]
           },
-          "value": false
+          "value": true
         }
       ],
     "jumpButton": [
@@ -1682,18 +1674,7 @@
   {
     "AR": {
       "start": false,
-      "models": [
-        {
-          "model": "silla",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 0, 0]
-        },
-        {
-          "model": "mug",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 180, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -1733,7 +1714,7 @@
           "end": [19, 15.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1754,7 +1735,7 @@
           "start": [0, 0],
           "end": [0, 0]
         },
-        "value": false
+        "value": true
       }
     ],
     "jumpButton": [
@@ -1781,18 +1762,7 @@
   {
     "AR": {
       "start": false,
-      "models": [
-        {
-          "model": "silla",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 0, 0]
-        },
-        {
-          "model": "mug",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 180, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -1835,7 +1805,7 @@
           "end": [8, 8.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1848,7 +1818,7 @@
           "end": [8, 11.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1861,7 +1831,7 @@
           "end": [8, 14.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -1908,7 +1878,7 @@
             "start": [0, 0],
             "end": [0, 0]
           },
-          "value": false
+          "value": true
         }
       ],
     "jumpButton": [
@@ -1951,18 +1921,7 @@
   {
     "AR": {
       "start": false,
-      "models": [
-        {
-          "model": "silla",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 0, 0]
-        },
-        {
-          "model": "mug",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 180, 0]
-        }
-      ]
+      "models": []
     },
     "background": "",
     "textBoxes": [
@@ -2002,7 +1961,7 @@
           "end": [19, 15.5]
         },
         "settings": { 
-          "fontSize": 0.05,
+          "fontSize": 19,
           "elevation": 21,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
@@ -2023,7 +1982,7 @@
           "start": [0, 0],
           "end": [0, 0]
         },
-        "value": false
+        "value": true
       }
     ],
     "jumpButton": [
@@ -2118,7 +2077,7 @@
           "end": [20, 3]
         },
         "settings": { 
-          "fontSize": 0.06,
+          "fontSize": 20,
           "color": "white",
           "elevation": 21
         },
@@ -2141,7 +2100,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
@@ -2155,7 +2114,7 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 17,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"
@@ -2169,21 +2128,21 @@
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.05,
+          "fontSize": 19,
           "fontWeight": "bold",
           "fontFamily": "Poppins-Bold",
           "color": "#063D69"
         }
       },
       {
-        "text": "¿Cual de las siguientes características de un objeto se percibe con el tacto?",
+        "text": "¿Cuál de las siguientes características de un objeto se percibe con el tacto?",
         "position": {
           "start": [1, 11.5],
           "end": [19, 13]
         },
         "settings": {
           "textAlign": "left",
-          "fontSize": 0.045,
+          "fontSize": 17,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular",
           "color": "#063D69"
@@ -2192,23 +2151,24 @@
     ],
     "quiz": [
       {
+        "pregunta": "El diseño siempre debe seguir la ______ del producto",
         "answers": [
           {
-            "text": "idea",
+            "text": "Idea",
             "position": {
               "start": [2, 7.3],
               "end": [6, 9.8]
             }
           },
           {
-            "text": "función",
+            "text": "Función",
             "position": {
               "start": [8, 7.3],
               "end": [12, 9.8]
             }
           },
           {
-            "text": "creatividad",
+            "text": "Creatividad",
             "position": {
               "start": [14, 7.3],
               "end": [18, 9.8]
@@ -2217,23 +2177,24 @@
         ]
       },
       {
+        "pregunta": "¿Cuál de las siguientes características de un objeto se percibe con el tacto?",
         "answers": [
           {
-            "text": "color",
+            "text": "Color",
             "position": {
               "start": [2, 13.3],
               "end": [6, 15.8]
             }
           },
           {
-            "text": "tamaño",
+            "text": "Tamaño",
             "position": {
               "start": [8, 13.3],
               "end": [12, 15.8]
             }
           },
           {
-            "text": "textura",
+            "text": "Textura",
             "position": {
               "start": [14, 13.3],
               "end": [18, 15.8]

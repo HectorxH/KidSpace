@@ -13,20 +13,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import HomeIcon from '@mui/icons-material/Home';
+import GroupIcon from '@mui/icons-material/Group';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import BarChartIcon from '@mui/icons-material/BarChart';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   NavLink, Link, useMatch, useNavigate,
 } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { Button, Menu, MenuItem } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
 import axios from 'axios';
+import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
 
-const logo = require('../assets/logo.png');
+import logo from '../assets/logo.png';
 
 interface DrawerProps {
   drawerWidth : any,
@@ -48,43 +49,37 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       uid: 1,
       text: 'Panel de control',
       icon: <HomeIcon />,
-      path: '/',
+      paths: ['/panel'],
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
     },
     {
       uid: 2,
-      text: 'Cursos que dicto',
-      icon: <HistoryEduIcon />,
-      path: '/cursos',
+      text: 'Pupilos',
+      icon: <GroupIcon />,
+      paths: ['/pupilo'],
+      restricted: true,
+      tipo: ['apoderado'],
       visible: true,
     },
     {
       uid: 3,
-      text: 'Actividades',
-      icon: <MenuBookIcon />,
-      path: '/actividades',
+      text: 'Cursos que dicto',
+      icon: <HistoryEduIcon />,
+      paths: ['/cursos'],
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
     },
     {
       uid: 4,
-      text: 'Estadisticas',
-      icon: <BarChartIcon />,
-      path: '/estadisticas',
+      text: 'Actividades',
+      icon: <MenuBookIcon />,
+      paths: ['/actividades'],
+      restricted: true,
+      tipo: ['profesor'],
       visible: true,
-    },
-    {
-      uid: 5,
-      text: 'Login',
-      icon: <HomeIcon />,
-      path: '/login',
-      visible: false,
-    },
-    {
-      uid: 6,
-      text: 'Registro',
-      icon: <HomeIcon />,
-      path: '/registro',
-      visible: false,
     },
   ];
 
@@ -112,16 +107,21 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       }}
       >
         {items.map(({
-          uid, text, icon, path, visible,
+          uid, text, icon, paths, restricted, tipo, visible,
         }) => {
-          const active = useMatch({ path: `${path}/*` }) !== null;
+          const active = _.some(_.map(paths, (path) => useMatch({ path: `${path}/*` }) !== null));
+          if (restricted && user && tipo && !tipo.includes(user.tipo)) {
+            return null;
+          }
           if (active) seccionActual = text;
-          if (!visible) return '';
+          if (!visible) {
+            return null;
+          }
           return (
             <ListItem
               disablePadding
               component={NavLink}
-              to={path}
+              to={paths[0]}
               key={uid}
             >
               <ListItemButton
@@ -200,23 +200,14 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {seccionActual}
           </Typography>
-          { user
-          && (
-            <>
-              <Typography>
-                {`${user.nombres} ${user.apellidos}`}
-              </Typography>
-              <IconButton onClick={handleClick}>
-                <AccountCircle />
-              </IconButton>
-            </>
-          )}
-          {!user && (
-            <>
-              <Button component={Link} to="/login">Login</Button>
-              <Button component={Link} to="/registro">Registrate</Button>
-            </>
-          )}
+          <>
+            <Typography>
+              {`${user?.nombres} ${user?.apellidos}`}
+            </Typography>
+            <IconButton onClick={handleClick}>
+              <AccountCircle />
+            </IconButton>
+          </>
           <Menu
             id="demo-positioned-menu"
             aria-labelledby="demo-positioned-button"

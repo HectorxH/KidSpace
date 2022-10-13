@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, useWindowDimensions} from 'react-native';
 import {Button} from 'react-native-paper';
 import {RSize} from '../../utils/responsive';
 import Layout from '../Utils/Layout';
@@ -16,6 +16,8 @@ interface AnswersProps {
 }
 
 const Answers = (props: AnswersProps) => {
+  const {fontScale} = useWindowDimensions();
+
   const [userAnswers, setUserAnswers] = props.userAnswers;
   const [pickedAnswers, setPickedAnswers] = props.pickedAnswers;
 
@@ -52,6 +54,8 @@ const Answers = (props: AnswersProps) => {
   return (
     <View style={styles.container}>
       {messageAnswers.map((item: IAnswers, index) => {
+        let answerTextStyle =
+          answerTextStyles[pickedAnswers[pageNumber][answerNumber][index]];
         return (
           <View style={styles.overlay} key={index.toString()}>
             <Layout
@@ -71,11 +75,12 @@ const Answers = (props: AnswersProps) => {
                   }
                   onPress={() => checkAnswer(item.text, index)}>
                   <Text
-                    style={
-                      answerTextStyles[
-                        pickedAnswers[pageNumber][answerNumber][index]
-                      ]
-                    }>
+                    style={[
+                      answerTextStyle,
+                      {
+                        fontSize: answerTextStyle.fontSize / fontScale,
+                      },
+                    ]}>
                     {item.text}
                   </Text>
                 </Button>
@@ -88,57 +93,63 @@ const Answers = (props: AnswersProps) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  overlay: {
-    flex: 1,
-    position: 'absolute',
-    opacity: 1,
-    width: '100%',
-    height: '100%',
-    flexDirection: 'column',
-  },
-  answerButton: {
-    borderRadius: RSize(0.04, 'h'),
-    height: RSize(0.12, 'h'),
-    borderWidth: 3,
-    justifyContent: 'center',
-    borderColor: '#5C9DEC',
-    elevation: 11,
-  },
-  wrongAnswerButton: {
-    borderRadius: RSize(0.04, 'h'),
-    height: RSize(0.12, 'h'),
-    borderWidth: 3,
-    justifyContent: 'center',
-    borderColor: '#5C9DEC',
-    elevation: 11,
-  },
-  rightAnswerButton: {
-    borderRadius: RSize(0.04, 'h'),
-    height: RSize(0.12, 'h'),
-    borderWidth: 3,
-    justifyContent: 'center',
-    borderColor: '#5C9DEC',
-    elevation: 11,
-  },
-  answerText: {
-    color: '#063D69',
-    textTransform: 'none',
-    fontSize: RSize(0.04, 'h'),
-  },
-  wrongAnswerText: {
-    color: '#ffffff',
-    fontSize: RSize(0.04, 'h'),
-    textTransform: 'none',
-  },
-  rightAnswerText: {
-    color: '#ffffff',
-    fontSize: RSize(0.04, 'h'),
-    textTransform: 'none',
-  },
-});
+const styles =
+  // (fontSize: number) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    overlay: {
+      flex: 1,
+      position: 'absolute',
+      opacity: 1,
+      width: '100%',
+      height: '100%',
+      flexDirection: 'column',
+    },
+    answerButton: {
+      flex: 1,
+      borderRadius: RSize(0.04, 'h'),
+      height: RSize(0.12, 'h'),
+      borderWidth: 3,
+      borderColor: '#5C9DEC',
+      elevation: 11,
+    },
+    wrongAnswerButton: {
+      flex: 1,
+      borderRadius: RSize(0.04, 'h'),
+      height: RSize(0.12, 'h'),
+      borderWidth: 3,
+      borderColor: '#5C9DEC',
+      elevation: 11,
+    },
+    rightAnswerButton: {
+      flex: 1,
+      borderRadius: RSize(0.04, 'h'),
+      height: RSize(0.12, 'h'),
+      borderWidth: 3,
+      justifyContent: 'center',
+      borderColor: '#5C9DEC',
+      elevation: 11,
+    },
+    answerText: {
+      color: '#063D69',
+      textTransform: 'none',
+      fontSize: 14,
+      // fontSize: RSize(0.04, 'h'),
+    },
+    wrongAnswerText: {
+      color: '#ffffff',
+      fontSize: 14,
+      // fontSize: RSize(0.04, 'h'),
+      textTransform: 'none',
+    },
+    rightAnswerText: {
+      color: '#ffffff',
+      fontSize: 14,
+      // fontSize: RSize(0.04, 'h'),
+      textTransform: 'none',
+    },
+  });
 
 export default Answers;

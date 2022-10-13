@@ -1,6 +1,7 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {IActivity} from './activity';
+import {ActividadesCompletadas, IActividadLog, IActivity} from './activity';
 import {ICarrera, IInfo} from './carrera';
+import {IProfile} from './profile';
 
 export type desafioTipo =
   | 'CuentoIntroductorio'
@@ -12,27 +13,68 @@ export type desafioTipo =
 export type actividadNombre =
   | 'diagramas'
   | 'diseños'
+  | 'materiales'
   | 'diseño1'
   | 'diseño2'
   | 'nutricion1'
   | 'nutricion2'
+  | 'informatica1'
+  | 'informatica2'
   | 'debug';
 
 export type RootStackParamList = {
   InicioView: undefined;
   ErrorView: undefined;
   CargaView: undefined;
-  FormularioView: {event: any};
+  ProfileView: {
+    Info: IProfile;
+    completadas: ActividadesCompletadas;
+  };
+  EditCharacter: {
+    personaje: number[];
+    setPersonaje: React.Dispatch<React.SetStateAction<number[]>>;
+  };
+  FormularioView: {data: string};
   MainMap: undefined;
-  Activity: {activity: IActivity};
-  Carrera: {carrera: ICarrera; completadas: string};
-  Story: {Info: IInfo};
+  Activity: {
+    activity: IActivity;
+    curso: string;
+    userName: string;
+    userLastName: string;
+    completadas: ActividadesCompletadas;
+  };
+  Carrera: {
+    carrera: ICarrera;
+    completadas: ActividadesCompletadas;
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
+  Story: {
+    Info: IInfo;
+    curso: string;
+    userName: string;
+    userLastName: string;
+    completadas: ActividadesCompletadas;
+  };
   NoAvailableActivities: undefined;
-  AvailableActivities: {activities: IActivity[]};
+  AvailableActivities: {
+    activities: IActivity[];
+    curso: string;
+    userName: string;
+    userLastName: string;
+  };
   CuentoInteractivo: {actividad: actividadNombre};
   CuentoIntroductorio: {actividad: actividadNombre};
 
-  Actividades: {actividad: actividadNombre; cantMonedas: number};
+  Actividades: {
+    actividad: actividadNombre;
+    cantMonedas: number;
+    curso: string;
+    userName: string;
+    userLastName: string;
+    completadas: ActividadesCompletadas;
+  };
 
   Conclusion: {actividad: actividadNombre; tipo: desafioTipo};
   ConclusionStory: undefined;
@@ -40,7 +82,27 @@ export type RootStackParamList = {
   ResultadoFinal: undefined;
   DynamicTable: undefined;
   Qr: undefined;
-  Recompensas: {cantMonedas: number; nombreActividad: string};
+  Recompensas: {
+    cantMonedas: number;
+    nombreActividad: string;
+    actLog: IActividadLog;
+    completadas: ActividadesCompletadas;
+  };
+  Tienda: {
+    setCantMonedas: React.Dispatch<React.SetStateAction<number>>;
+    cantMonedas: number;
+  };
+  Ropa: undefined;
+  Accesorios: undefined;
+  TiendaItems: {
+    tipo: string;
+    setCantMonedas: React.Dispatch<React.SetStateAction<number>>;
+    cantMonedas: number;
+    compras: number[][];
+    setCompras: React.Dispatch<React.SetStateAction<number[][]>>;
+    tipoImages: any;
+    numImages: number;
+  };
 };
 
 export type InicioViewProps = NativeStackScreenProps<
@@ -62,6 +124,14 @@ export type CargaViewProps = NativeStackScreenProps<
 export type MainMapProps = NativeStackScreenProps<
   RootStackParamList,
   'MainMap'
+>;
+export type ProfileProps = NativeStackScreenProps<
+  RootStackParamList,
+  'ProfileView'
+>;
+export type EditCharacterProps = NativeStackScreenProps<
+  RootStackParamList,
+  'EditCharacter'
 >;
 export type ActivityProps = NativeStackScreenProps<
   RootStackParamList,
@@ -110,4 +180,15 @@ export type ConclusionStoryProps = NativeStackScreenProps<
 export type RecompensasProps = NativeStackScreenProps<
   RootStackParamList,
   'Recompensas'
+>;
+export type TiendaProps = NativeStackScreenProps<RootStackParamList, 'Tienda'>;
+
+export type RopaProps = NativeStackScreenProps<RootStackParamList, 'Ropa'>;
+export type AccesoriosProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Accesorios'
+>;
+export type TiendaItemsProps = NativeStackScreenProps<
+  RootStackParamList,
+  'TiendaItems'
 >;
