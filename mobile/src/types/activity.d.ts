@@ -90,6 +90,10 @@ export interface ITextBoxSettings {
   borderBottomRightRadius?: number;
   borderTopLeftRadius?: number;
   borderTopRightRadius?: number;
+  borderBottomWidth?: number;
+  borderTopWidth?: number;
+  borderLeftWidth?: number;
+  borderRightWidth?: number;
 }
 
 export interface IImages {

@@ -1,167 +1,590 @@
 [
-  {
-    "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": {      
-          "backgroundColor": "#EE93C6",
-          "borderWidth": 0,
-          "borderRadius": 0,
-          "elevation": 20
-        }
+{
+  "background": "",
+  "textBoxes": [
+    {
+      "position": {
+        "start": [1, 4.5],
+        "end": [3.5, 7]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
       }
-    ],
-    "texts": [
-      {
-        "text": " Quiz Final ",
-        "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": { 
-          "fontSize": 20,
-          "color": "white",
-          "elevation": 21
-        }
-      },
-      {
-        "text": "1. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 4],
-          "end": [19, 5.5]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "El software Excel permite crear tablas y ______",
-        "position": {
-          "start": [1, 5.5],
-          "end": [19, 7]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "2. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 10],
-          "end": [19, 11.5]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-        "position": {
-          "start": [1, 11.5],
-          "end": [19, 13]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
-        }
+    },
+    {
+      "position": {
+        "start": [1, 7],
+        "end": [3.5, 9.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
       }
-    ],
-    "quiz": [
-      {
-        "pregunta": "El software Excel permite crear tablas y ______",
-        "answers": [
-          {
-            "text": "Imágenes",
-            "position": {
-              "start": [2, 7.3],
-              "end": [6, 9.8]
-            }
-          },
-          {
-            "text": "Gráficos",
-            "position": {
-              "start": [8, 7.3],
-              "end": [12, 9.8]
-            }
-          },
-          {
-            "text": "Celdas",
-            "position": {
-              "start": [14, 7.3],
-              "end": [18, 9.8]
-            }
-          }
-        ]
+    },
+    {
+      "position": {
+        "start": [1, 9.5],
+        "end": [3.5, 12]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [1, 12],
+        "end": [3.5, 14.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [1, 14.5],
+        "end": [3.5, 17]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [1, 17],
+        "end": [3.5, 19.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderBottomWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 4.5],
+        "end": [7.25, 7]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 7],
+        "end": [7.25, 9.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#A1C96A"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 9.5],
+        "end": [7.25, 12]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 12],
+        "end": [7.25, 14.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 14.5],
+        "end": [7.25, 17]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [3.5, 17],
+        "end": [7.25, 19.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderBottomWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 4.5],
+        "end": [11, 7]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 7],
+        "end": [11, 9.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#A1C96A"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 9.5],
+        "end": [11, 12]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 12],
+        "end": [11, 14.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 14.5],
+        "end": [11, 17]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [7.25, 17],
+        "end": [11, 19.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderBottomWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    {
+      "position": {
+        "start": [13.5, 4.5],
+        "end": [19.5, 19.5]
+      }, 
+      "settings": {
+        "borderWidth" : 0,
+        "backgroundColor": "#FFFFFF",
+        "elevation": 10
+      }
+    },
+    {
+      "position": {
+        "start": [11, 4.5],
+        "end": [13, 7]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [11, 7],
+        "end": [13, 9.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#A1C96A"
+      }
+    },
+    {
+      "position": {
+        "start": [11, 9.5],
+        "end": [13, 12]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [11, 12],
+        "end": [13, 14.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [11, 14.5],
+        "end": [13, 17]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    },
+    {
+      "position": {
+        "start": [11, 17],
+        "end": [13, 19.5]
+      }, 
+      "settings": {
+        "borderRadius": 0,
+        "borderWidth" : 0,
+        "borderTopWidth": 3,
+        "borderLeftWidth": 3,
+        "borderRightWidth": 3,
+        "borderBottomWidth": 3,
+        "borderColor": "#169C34",
+        "backgroundColor": "#F1F3F8"
+      }
+    }
+  ],
+  "texts": [
+    {
+      "text": "1",
+      "position": {
+        "start": [1, 7],
+        "end": [3.5, 9.5]
       },
-      {
-          "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-          "answers": [
-          {
-            "text": "Una lista",
-            "position": {
-              "start": [2, 13.3],
-              "end": [6, 15.8]
-            }
-          },
-          {
-            "text": "Una celda",
-            "position": {
-              "start": [8, 13.3],
-              "end": [12, 15.8]
-            }
-          },
-          {
-            "text": "Una tabla",
-            "position": {
-              "start": [14, 13.3],
-              "end": [18, 15.8]
-            }
-          }
-        ]
+      "settings": {
+        "fontSize": 19
       }
-    ],
-    "jumpButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#D9D9D9",
-          "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "",
-          "buttonIconNormal": "",
-          "buttonTextAlt": "Terminar",
-          "buttonTextNormal": "Terminar"
-        },
-        "style": {
-
-        },
-        "position" : {
-          "start": [7, 16.5],
-          "end": [13, 19.5]
-        },
-        "target": -1,
-        "require": [0],
-        "visible": false
+    },
+    {
+      "text": "2",
+      "position": {
+        "start": [1, 9.5],
+        "end": [3.5, 12]
+      },
+      "settings": {
+        "fontSize": 19
       }
-    ]
-  }
+    },
+    {
+      "text": "3",
+      "position": {
+        "start": [1, 12],
+        "end": [3.5, 14.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "4",
+      "position": {
+        "start": [1, 14.5],
+        "end": [3.5, 17]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "5",
+      "position": {
+        "start": [1, 17],
+        "end": [3.5, 19.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "A",
+      "position": {
+        "start": [3.5, 4.5],
+        "end": [7.25, 7]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Flores",
+      "position": {
+        "start": [3.5, 7],
+        "end": [7.25, 9.5]
+      },
+      "settings": {
+        "color": "#FFFFFF",
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Margarita",
+      "position": {
+        "start": [3.5, 9.5],
+        "end": [7.25, 12]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Girasol",
+      "position": {
+        "start": [3.5, 12],
+        "end": [7.25, 14.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Iris",
+      "position": {
+        "start": [3.5, 14.5],
+        "end": [7.25, 17]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Total",
+      "position": {
+        "start": [3.5, 17],
+        "end": [7.25, 19.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "B",
+      "position": {
+        "start": [7.25, 4.5],
+        "end": [11, 7]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Cantidades",
+      "position": {
+        "start": [7.25, 7],
+        "end": [11, 9.5]
+      }, 
+      "settings": {
+        "fontSize": 19,
+        "color": "#FFFFFF"
+      }
+    },
+    {
+      "text": "9",
+      "position": {
+        "start": [7.25, 9.5],
+        "end": [11, 12]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "7",
+      "position": {
+        "start": [7.25, 12],
+        "end": [11, 14.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "4",
+      "position": {
+        "start": [7.25, 14.5],
+        "end": [11, 17]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "20",
+      "position": {
+        "start": [7.25, 17],
+        "end": [11, 19.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "Para calcular el porcentaje de cada flor, tenemos que *dividir la cantidad de una flor entre el total de flores*.",
+      "position": {
+        "start": [14, 5],
+        "end": [19, 19]
+      },
+      "settings": {
+        "elevation": 11
+      }
+    },
+    {
+      "text": "C",
+      "position": {
+        "start": [11, 4.5],
+        "end": [13, 7]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "45%",
+      "position": {
+        "start": [11, 9.5],
+        "end": [13, 12]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "35%",
+      "position": {
+        "start": [11, 12],
+        "end": [13, 14.5]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    },
+    {
+      "text": "20%",
+      "position": {
+        "start": [11, 14.5],
+        "end": [13, 17]
+      },
+      "settings": {
+        "fontSize": 19
+      }
+    }
+  ]
+}
 ]
 
 
