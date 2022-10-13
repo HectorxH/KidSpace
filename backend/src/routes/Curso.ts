@@ -1,5 +1,4 @@
 import express from 'express';
-import { Types } from 'mongoose';
 /* eslint-disable camelcase */
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -72,9 +71,9 @@ router.delete('/:id', async (req, res) => {
     const user = req.user?._id;
     const { id } = req.params;
     await Profesor.findOneAndUpdate({ user }, {
-      $pull:
-      { planificadas: { cursoId: new Types.ObjectId(id) } },
+      $pull: { planificadas: { curso: id } },
     });
+    await Profesor.findOneAndUpdate({ user }, { $pull: { cursos: id } });
     await Estudiante.deleteMany({ curso: id });
     await Curso.deleteOne({ _id: id });
     res.sendStatus(200);

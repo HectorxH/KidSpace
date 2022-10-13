@@ -9,7 +9,7 @@ export interface IFavorita {
 export interface IPlanificada {
   nunidad: number,
   nactividad: number,
-  cursoId: any,
+  curso: any,
   fecha: Date,
 }
 

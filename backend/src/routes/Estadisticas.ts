@@ -28,7 +28,6 @@ router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
       };
     }), (o) => o.nombre !== null);
     const resultados = _.mapValues(_.groupBy(filteredLogs, 'nombre'), (logsArray) => _.maxBy(logsArray, 'fecha'));
-    console.log(resultados);
     res.json({ resultados });
   } catch (e) {
     console.log(e);
@@ -158,7 +157,6 @@ router.get('/curso/:id/%curso', async (req, res) => {
       estudiantesByActividad,
       (o) => o.length / nEstudiantes,
     );
-    console.log(estudiantesByActividad);
     res.json({ actividadesCurso: uniqueEstudiantesByActividad });
   } catch (e) {
     console.log(e);
@@ -179,7 +177,6 @@ router.get('/curso/:id/%individual', async (req, res) => {
       estudiantesByActividad,
       (o) => o.length / nEstudiantes,
     );
-    console.log(estudiantesByActividad);
     res.json({ actividadesIndividual: uniqueEstudiantesByActividad });
   } catch (e) {
     console.log(e);
