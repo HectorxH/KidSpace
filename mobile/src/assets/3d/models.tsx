@@ -183,7 +183,11 @@ const Models: {
   portal_window_frame: {
     model: require('./portales/portal_window_frame/portal_window_frame.vrx'),
     type: 'VRX',
-    resources: [],
+    resources: [
+      require('./portales/portal_window_frame/portal_window_frame_diffuse.png'),
+      require('./portales/portal_window_frame/portal_window_frame_normal.png'),
+      require('./portales/portal_window_frame/portal_window_frame_specular.png'),
+    ],
   },
   grafica: {
     model: require('./informatica2/grafica/gpu-solo.glb'),
