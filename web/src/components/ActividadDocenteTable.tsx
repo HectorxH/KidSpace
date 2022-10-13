@@ -61,10 +61,10 @@ const ActividadDocenteTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      flex: 1,
+      width: 210,
       sortable: false,
-      align: 'right',
-      headerAlign: 'right',
+      align: 'center',
+      headerAlign: 'center',
       renderCell: ({ row }) => (
         <div>
           <Button
