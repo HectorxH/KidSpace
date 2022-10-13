@@ -52,7 +52,11 @@ const options = {
   maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'right' as const,
+      position: 'top' as const,
+    },
+    title: {
+      display: true,
+      text: 'Cantidad de alumnos que completaron la actividad',
     },
   },
 };
