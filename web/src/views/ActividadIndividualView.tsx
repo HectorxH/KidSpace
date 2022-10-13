@@ -131,7 +131,7 @@ const ActividadIndividualView = () => {
           px: 5, justifyContent: 'center', height: '25em', alingContent: 'center',
         }}
       >
-        <Stack direction="column" spacing={1} sx={{ width: 0.7 }}>
+        <Stack direction="column" spacing={1} sx={{ width: 0.6 }}>
           <Card sx={{
             width: 1, borderRadius: 5, alignItems: 'center', height: '100%',
           }}
