@@ -142,7 +142,8 @@ const ActividadIndividualView = () => {
           >
             <CardMedia
               component="img"
-              sx={{ height: '60%', maxWidth: '40em' }}
+              style={{ objectPosition: 'top' }}
+              sx={{ height: '60%' }}
               image={actividadData.img}
             />
             <Typography sx={{ m: 1 }}>
