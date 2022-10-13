@@ -65,6 +65,9 @@ const Portals = (props: PortalsProps) => {
               .model as ImageSourcePropType
           }
           type={props.modelProps[props.pageNumber][props.itemNumber].type}
+          resources={
+            props.modelProps[props.pageNumber][props.itemNumber].resources
+          }
         />
       </ViroPortal>
       <Viro360Image
