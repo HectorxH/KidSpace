@@ -1,590 +1,214 @@
 [
-{
-  "background": "",
-  "textBoxes": [
-    {
-      "position": {
-        "start": [1, 4.5],
-        "end": [3.5, 7]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [11.5, 4.5],
+          "end": [19.5, 19.5]
+        }
       }
+    ],
+    "texts": [
+        {
+          "text": "*:c*",
+          "position": {
+            "start": [12, 5],
+            "end": [19, 19]
+          }
+        }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
     },
-    {
-      "position": {
-        "start": [1, 7],
-        "end": [3.5, 9.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
+        }
       }
+    ],
+    "texts": [
+      {
+        "text": "Test",
+        "position": {
+          "start": [3, 4.5],
+          "end": [15, 15.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "interactable": ["materials"],
+          "ARMaterials": {
+            "materialOrder": ["Material", "Logo", "Etiqueta"],
+            "materialChoices": [
+              ["mat1", "mat2", "mat3"],
+              ["logo1", "logo2"],
+              ["et1", "et2"]
+            ]
+          }
+        }
+      ]
     },
-    {
-      "position": {
-        "start": [1, 9.5],
-        "end": [3.5, 12]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [1, 12],
-        "end": [3.5, 14.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [1, 14.5],
-        "end": [3.5, 17]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [1, 17],
-        "end": [3.5, 19.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderBottomWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 4.5],
-        "end": [7.25, 7]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 7],
-        "end": [7.25, 9.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#A1C96A"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 9.5],
-        "end": [7.25, 12]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 12],
-        "end": [7.25, 14.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 14.5],
-        "end": [7.25, 17]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [3.5, 17],
-        "end": [7.25, 19.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderBottomWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 4.5],
-        "end": [11, 7]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 7],
-        "end": [11, 9.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#A1C96A"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 9.5],
-        "end": [11, 12]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 12],
-        "end": [11, 14.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 14.5],
-        "end": [11, 17]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [7.25, 17],
-        "end": [11, 19.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderBottomWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#FFFFFF"
-      }
-    },
-    {
-      "position": {
-        "start": [13.5, 4.5],
-        "end": [19.5, 19.5]
-      }, 
-      "settings": {
-        "borderWidth" : 0,
-        "backgroundColor": "#FFFFFF",
-        "elevation": 10
-      }
-    },
-    {
-      "position": {
-        "start": [11, 4.5],
-        "end": [13, 7]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [11, 7],
-        "end": [13, 9.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#A1C96A"
-      }
-    },
-    {
-      "position": {
-        "start": [11, 9.5],
-        "end": [13, 12]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [11, 12],
-        "end": [13, 14.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [11, 14.5],
-        "end": [13, 17]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    },
-    {
-      "position": {
-        "start": [11, 17],
-        "end": [13, 19.5]
-      }, 
-      "settings": {
-        "borderRadius": 0,
-        "borderWidth" : 0,
-        "borderTopWidth": 3,
-        "borderLeftWidth": 3,
-        "borderRightWidth": 3,
-        "borderBottomWidth": 3,
-        "borderColor": "#169C34",
-        "backgroundColor": "#F1F3F8"
-      }
-    }
-  ],
-  "texts": [
-    {
-      "text": "1",
-      "position": {
-        "start": [1, 7],
-        "end": [3.5, 9.5]
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1.5, 4],
+          "end": [9.8, 19.5]
+        }
       },
-      "settings": {
-        "fontSize": 19
+      {
+        "position": {
+          "start": [10.2, 4],
+          "end": [18.5, 19.5]
+        }
       }
-    },
-    {
-      "text": "2",
-      "position": {
-        "start": [1, 9.5],
-        "end": [3.5, 12]
+    ],
+    "texts": [
+      {
+        "text": "¿Cuántas margaritas vendió Diego el día sábado?",
+        "position": {
+          "start": [2, 4.5],
+          "end": [9.3, 10]
+        }
       },
-      "settings": {
-        "fontSize": 19
+      {
+        "text": "¿Cuál de las dos flores se vendió más el fin de semana?",
+        "position": {
+          "start": [10.7, 4.5],
+          "end": [18, 10]
+        }
       }
-    },
-    {
-      "text": "3",
-      "position": {
-        "start": [1, 12],
-        "end": [3.5, 14.5]
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["25"],
+        "answers": [
+          {
+            "text": "25",
+            "position": {
+              "start": [2, 10.5],
+              "end": [9.3, 13]
+            }
+          },
+          {
+            "text": "5",
+            "position": {
+              "start": [2, 13.5],
+              "end": [9.3, 16]
+            }
+          },
+          {
+            "text": "35",
+            "position": {
+              "start": [2, 16.5],
+              "end": [9.3, 19]
+            }
+          }
+        ]
       },
-      "settings": {
-        "fontSize": 19
+      {
+        "rightAnswer": ["Girasoles"],
+        "answers": [
+          {
+            "text": "Margaritas",
+            "position": {
+              "start": [10.7, 10.5],
+              "end": [18, 13]
+            }
+          },
+          {
+            "text": "Ninguna",
+            "position": {
+              "start": [10.7, 13.5],
+              "end": [18, 16]
+            }
+          },
+          {
+            "text": "Girasoles",
+            "position": {
+              "start": [10.7, 16.5],
+              "end": [18, 19]
+            }
+          }
+        ]
       }
-    },
-    {
-      "text": "4",
-      "position": {
-        "start": [1, 14.5],
-        "end": [3.5, 17]
-      },
-      "settings": {
-        "fontSize": 19
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
       }
-    },
-    {
-      "text": "5",
-      "position": {
-        "start": [1, 17],
-        "end": [3.5, 19.5]
-      },
-      "settings": {
-        "fontSize": 19
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": -1,
+        "require": [2],
+        "visible": false
       }
-    },
-    {
-      "text": "A",
-      "position": {
-        "start": [3.5, 4.5],
-        "end": [7.25, 7]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Flores",
-      "position": {
-        "start": [3.5, 7],
-        "end": [7.25, 9.5]
-      },
-      "settings": {
-        "color": "#FFFFFF",
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Margarita",
-      "position": {
-        "start": [3.5, 9.5],
-        "end": [7.25, 12]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Girasol",
-      "position": {
-        "start": [3.5, 12],
-        "end": [7.25, 14.5]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Iris",
-      "position": {
-        "start": [3.5, 14.5],
-        "end": [7.25, 17]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Total",
-      "position": {
-        "start": [3.5, 17],
-        "end": [7.25, 19.5]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "B",
-      "position": {
-        "start": [7.25, 4.5],
-        "end": [11, 7]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Cantidades",
-      "position": {
-        "start": [7.25, 7],
-        "end": [11, 9.5]
-      }, 
-      "settings": {
-        "fontSize": 19,
-        "color": "#FFFFFF"
-      }
-    },
-    {
-      "text": "9",
-      "position": {
-        "start": [7.25, 9.5],
-        "end": [11, 12]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "7",
-      "position": {
-        "start": [7.25, 12],
-        "end": [11, 14.5]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "4",
-      "position": {
-        "start": [7.25, 14.5],
-        "end": [11, 17]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "20",
-      "position": {
-        "start": [7.25, 17],
-        "end": [11, 19.5]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "Para calcular el porcentaje de cada flor, tenemos que *dividir la cantidad de una flor entre el total de flores*.",
-      "position": {
-        "start": [14, 5],
-        "end": [19, 19]
-      },
-      "settings": {
-        "elevation": 11
-      }
-    },
-    {
-      "text": "C",
-      "position": {
-        "start": [11, 4.5],
-        "end": [13, 7]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "45%",
-      "position": {
-        "start": [11, 9.5],
-        "end": [13, 12]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "35%",
-      "position": {
-        "start": [11, 12],
-        "end": [13, 14.5]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    },
-    {
-      "text": "20%",
-      "position": {
-        "start": [11, 14.5],
-        "end": [13, 17]
-      },
-      "settings": {
-        "fontSize": 19
-      }
-    }
-  ]
-}
+    ]
+  }
 ]
 
 
