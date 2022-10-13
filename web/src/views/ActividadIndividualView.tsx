@@ -83,8 +83,6 @@ const ActividadIndividualView = () => {
   const { actividad, cursoId } = useParams();
   if (!actividad) return <NotFoundView />;
   const actividadData = _.find(actividadesIndividuales, { title: actividad });
-  console.log({ a: actividad, b: actividadesIndividuales[5].title });
-  console.log(actividad === actividadesIndividuales[5].title);
 
   const { logout } = useAuth();
 
@@ -110,8 +108,6 @@ const ActividadIndividualView = () => {
     loadData();
   }, []);
 
-  console.log(actividadData, curso, nLogs, completadas, resultados);
-
   if (loading) return (<CargaView />);
   if (
     _.isUndefined(actividadData)
@@ -132,17 +128,17 @@ const ActividadIndividualView = () => {
         direction="row"
         spacing={3}
         sx={{
-          px: 5, justifyContent: 'center', height: '40vh', alingContent: 'center',
+          px: 5, justifyContent: 'center', height: '25em', alingContent: 'center',
         }}
       >
-        <Stack direction="column" spacing={1} sx={{ width: 0.4 }}>
+        <Stack direction="column" spacing={1} sx={{ width: 0.7 }}>
           <Card sx={{
             width: 1, borderRadius: 5, alignItems: 'center', height: '100%',
           }}
           >
             <CardMedia
               component="img"
-              sx={{ height: '20vh' }}
+              sx={{ height: '60%' }}
               image={actividadData.img}
             />
             <Typography sx={{ m: 1 }}>
