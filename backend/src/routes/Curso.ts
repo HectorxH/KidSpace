@@ -1,4 +1,5 @@
 import express from 'express';
+import { Types } from 'mongoose';
 /* eslint-disable camelcase */
 import Curso from '../models/Curso';
 import Estudiante from '../models/Estudiante';
@@ -70,10 +71,13 @@ router.delete('/:id', async (req, res) => {
   try {
     const user = req.user?._id;
     const { id } = req.params;
-    await Profesor.findOneAndUpdate({ user }, { $pull: { planificadas: { cursoId: id } } });
-    await Estudiante.deleteMany({ curso: id }, { $set: { curso: null } });
+    await Profesor.findOneAndUpdate({ user }, {
+      $pull:
+      { planificadas: { cursoId: new Types.ObjectId(id) } },
+    });
+    await Estudiante.deleteMany({ curso: id });
     await Curso.deleteOne({ _id: id });
-    res.send(200);
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
