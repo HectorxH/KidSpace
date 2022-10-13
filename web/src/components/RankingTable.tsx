@@ -66,6 +66,8 @@ const RankingTable = (
       headerName: 'Acción',
       flex: 1,
       sortable: false,
+      align: 'right',
+      headerAlign: 'right',
       renderCell: (params) => (
         <div>
           <Button
