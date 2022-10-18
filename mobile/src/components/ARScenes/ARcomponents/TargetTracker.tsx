@@ -5,12 +5,14 @@ import {
   ViroARImageMarker,
   ViroImage,
   ViroVideo,
+  Viro3DObject,
 } from '@viro-community/react-viro';
 import Images from '../../../assets/images/images';
 import {IImageTracker} from '../../../types/activity';
 import videos from '../../../assets/videos/videos';
 import {ViroARTrackingTargetsMap} from '@viro-community/react-viro/dist/components/AR/ViroARTrackingTargets';
 import {ReactStateSetter} from '../../../types/others';
+import Models from '../../../assets/3d/models';
 
 interface DesafioIntroductorioSceneARProps {
   imageTracker: IImageTracker;
@@ -84,7 +86,16 @@ const DesafioIntroductorioSceneAR = (
 
         {/* NOTE quizás implementar algun dia, pero va a desordenar
          todo con tanto parametro, igual seria choro */}
-        {/* {imageTracker.displayType === '3dobject'} */}
+        {imageTracker.displayType === '3dobject' && (
+          <Viro3DObject
+            source={Models[imageTracker.display].model}
+            type={Models[imageTracker.display].type}
+            resources={Models[imageTracker.display].resources}
+            scale={[0.1, 0.1, 0.1]}
+            onDrag={() => {}}
+            dragType={'FixedToWorld'}
+          />
+        )}
       </ViroNode>
     </ViroARImageMarker>
   );

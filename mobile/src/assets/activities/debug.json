@@ -68,21 +68,15 @@
   },
   {
     "AR": {
-      "start": false,
-      "models": [
+      "start": true,
+      "models": [],
+      "trackerMessage": "Encuentra el material hecho de Arena",
+      "imageTrackers": [
         {
-          "model": "caja_torta",
-          "scale": [0.6, 0.6, 0.6],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "name": "Vidrio",
+          "target": "vidrio",
+          "display": "barras",
+          "displayType": "3dobject"
         }
       ]
     },
