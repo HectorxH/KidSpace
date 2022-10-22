@@ -22,3 +22,7 @@ export interface IInfo {
   coins: number;
   estado: string;
 }
+
+export interface ICarreraNombre {
+  carreraNombre: string;
+}
