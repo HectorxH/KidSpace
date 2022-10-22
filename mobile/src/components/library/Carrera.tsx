@@ -30,7 +30,7 @@ const nombreActividades = {
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera, curso, userName, userLastName, completadas} = route.params;
-  console.log(carrera.title);
+  console.log(carrera.stories[1].nombre);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
@@ -74,7 +74,11 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             )}
             onPress={() =>
               navigation.navigate('CompanerosView', {
-                carreraNombre: carrera.title,
+                datos: {
+                  carrera: carrera.title,
+                  nombre1: carrera.stories[0].nombre,
+                  nombre2: carrera.stories[1].nombre,
+                },
               })
             }>
             <Text style={styles.textButton}>Compañeros</Text>

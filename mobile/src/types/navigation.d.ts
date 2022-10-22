@@ -58,7 +58,7 @@ export type RootStackParamList = {
     completadas: ActividadesCompletadas;
   };
   CompanerosView: {
-    carreraNombre: ICarreraNombre;
+    datos: ICarreraNombre;
   };
   NoAvailableActivities: undefined;
   AvailableActivities: {

@@ -61,6 +61,7 @@ const Story = ({navigation, route}: InfoProps) => {
         <SafeAreaView>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.title}>{Info.title}</Text>
+            <Text style={styles.subtitle}>{Info.nombre}</Text>
             <Text style={styles.paragraph}>{Info.desc}</Text>
             <View style={styles.viewButton}>
               <Button
@@ -70,6 +71,7 @@ const Story = ({navigation, route}: InfoProps) => {
                 )}
                 color="#FF8A01"
                 mode="contained"
+                uppercase={false}
                 onPress={() =>
                   navigation.navigate('Actividades', {
                     actividad: Info.actividad,
@@ -127,6 +129,12 @@ const styles = StyleSheet.create({
     fontSize: RSize(0.035),
     textAlign: 'left',
   },
+  subtitle: {
+    marginLeft: RSize(0.015),
+    fontFamily: 'Poppins-Bold',
+    fontSize: RSize(0.025),
+    textAlign: 'left',
+  },
   paragraph: {
     marginLeft: RSize(0.015),
     fontFamily: 'Poppins-Regular',
@@ -137,6 +145,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },
