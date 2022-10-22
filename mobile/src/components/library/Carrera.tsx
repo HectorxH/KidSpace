@@ -134,6 +134,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                       mapImages[`${checkCompletada(story.actividad)}`].uri
                     }
                     style={{
+                      marginTop: RSize(0.01, 'h'),
                       width: RSize(0.06, 'h'),
                       height: RSize(0.06, 'h'),
                     }}
@@ -143,7 +144,9 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   source={imagesPersonajes[`${story.img}`].uri}
                   style={{
                     height: RSize(0.6, 'h'),
+                    borderRadius: 20,
                     marginTop: RSize(0.03, 'h'),
+                    marginHorizontal: RSize(0.03, 'h'),
                   }}
                 />
                 <Text style={styles.title2}>{story.title}</Text>
