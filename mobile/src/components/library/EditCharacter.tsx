@@ -448,6 +448,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },
@@ -483,6 +484,7 @@ const styles = StyleSheet.create({
   },
   textModalButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

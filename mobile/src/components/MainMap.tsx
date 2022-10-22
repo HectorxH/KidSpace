@@ -412,6 +412,7 @@ const styles = StyleSheet.create({
   },
   textModalButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

@@ -62,7 +62,8 @@ const Carrera = ({navigation, route}: CarreraProps) => {
         <View
           style={{
             flex: 1,
-            margin: RSize(0.01),
+            marginTop: RSize(0.01),
+            marginHorizontal: RSize(0.01),
             flexDirection: 'row-reverse',
           }}>
           <Button
@@ -193,6 +194,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

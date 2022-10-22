@@ -171,6 +171,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-SemiBold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },
