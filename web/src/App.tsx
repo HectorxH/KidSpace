@@ -94,6 +94,9 @@ const App = () => (
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
             </Route>
+            <Route element={<ProtectedRoute loggedout />}>
+              <Route element={<div />} />
+            </Route>
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<Layout />}>
                 <Route element={<ProtectedRoute noApoderado />}>

@@ -15,7 +15,6 @@ interface ITableParams {
 const HistorialTable = (
   { rows }: ITableParams,
 ) => {
-  console.log(rows);
   const cols: GridColDef[] = [
     {
       field: 'actividad',
