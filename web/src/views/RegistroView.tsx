@@ -7,6 +7,11 @@ import {
   Alert,
   Typography,
   Stack,
+  FormControl,
+  MenuItem,
+  Select,
+  InputLabel,
+  SelectChangeEvent,
 } from '@mui/material';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -17,6 +22,7 @@ const RegistroView = () => {
   const [apellidos, setApellidos] = useState('');
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
+  const [tipo, setTipo] = useState('profesor');
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
@@ -28,13 +34,13 @@ const RegistroView = () => {
       const res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/register`,
         {
-          nombres, apellidos, username, password, tipo: 'profesor',
+          nombres, apellidos, username, password, tipo,
         },
       );
       console.log(res);
       setCorrect(true);
       setError(false);
-      setTimeout(() => { navigate('/login'); }, 1500);
+      setTimeout(() => navigate('/login'), 1500);
     } catch (e) {
       setCorrect(false);
       setError(true);
@@ -56,6 +62,10 @@ const RegistroView = () => {
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
+  };
+
+  const handleTipoChange = (event: SelectChangeEvent<string>) => {
+    setTipo(event.target.value);
   };
 
   return (
@@ -80,6 +90,13 @@ const RegistroView = () => {
               <Typography variant="h5">Registrar</Typography>
             </Stack>
             <Stack spacing={2}>
+              <FormControl fullWidth>
+                <InputLabel id="select-label">Tipo de cuenta</InputLabel>
+                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
+                  <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
+                  <MenuItem value="representante"><Typography>Representante</Typography></MenuItem>
+                </Select>
+              </FormControl>
               <TextField required label="Nombres" onChange={handleNombresChange} />
               <TextField required label="Apellidos" onChange={handleApellidosChange} />
               <TextField required label="Nombre de usuario" onChange={handleUsernameChange} />

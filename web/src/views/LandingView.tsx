@@ -1,24 +1,14 @@
-/* eslint-disable no-nested-ternary */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-underscore-dangle */
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   AppBar, Button, Stack, Theme, Typography,
-  Toolbar, Box, Card, SvgIcon, Grid, CardMedia, MenuItem,
-  Menu, Container, IconButton,
+  Toolbar, Box, MenuItem,
+  Menu, Container, IconButton, Card,
 } from '@mui/material';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
 import { faGamepad, faFaceSmile, faVrCardboard } from '@fortawesome/free-solid-svg-icons';
 import ReactPlayer from 'react-player/youtube';
-import PupilosTable from '../components/PupilosTable';
-import { useAuth } from '../hooks/useAuth';
-import { IEstudiantes } from '../types/estudiantes';
-import CargaView from './LoadingView';
-import NotFoundView from './NotFoundView';
-import App from '../App';
 import paquetes from '../mock/paquetes';
 import features from '../mock/features';
 
@@ -105,8 +95,9 @@ const ResponsiveAppBar = () => {
                 minWidth: 150,
                 alignSelf: 'center',
               }}
+              href="login"
             >
-              <Typography>
+              <Typography sx={{ textAlign: 'center' }}>
                 Iniciar Sesión
               </Typography>
             </Button>
@@ -126,9 +117,11 @@ const ResponsiveAppBar = () => {
                   color: '#FFFFFF',
                 },
               }}
+              href="registro"
             >
               <Typography sx={{
                 color: '#FFF',
+                textAlign: 'center',
               }}
               >
                 Registrarme
@@ -142,10 +135,7 @@ const ResponsiveAppBar = () => {
 };
 
 const LandingView = () => {
-  const [estudiantes, setEstudiantes] = useState<IEstudiantes>();
-  const [loading, setLoading] = useState(true);
-  const [winWidth, setWinWidth] = useState<number>(window.innerWidth);
-  console.log(winWidth);
+  const [winWidth] = useState<number>(window.innerWidth);
   return (
     <>
       <ResponsiveAppBar />
@@ -178,6 +168,7 @@ const LandingView = () => {
                 },
                 maxWidth: 150,
               }}
+              href="login"
             >
               <Typography sx={{
                 color: '#FFF',
@@ -226,32 +217,13 @@ const LandingView = () => {
                   alignItems: 'center',
                 }}
               >
-                {id === 0
-                  ? (
-                    <FontAwesomeIcon
-                      icon={faGamepad}
-                      style={{
-                        color: '#FFFFFF',
-                        height: 30,
-                      }}
-                    />
-                  ) : id === 1 ? (
-                    <FontAwesomeIcon
-                      icon={faVrCardboard}
-                      style={{
-                        color: '#FFFFFF',
-                        height: 30,
-                      }}
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faFaceSmile}
-                      style={{
-                        color: '#FFFFFF',
-                        height: 30,
-                      }}
-                    />
-                  )}
+                <FontAwesomeIcon
+                  icon={[faGamepad, faVrCardboard, faFaceSmile][id]}
+                  style={{
+                    color: '#FFFFFF',
+                    height: 30,
+                  }}
+                />
               </Stack>
               <Typography
                 align="center"
@@ -293,7 +265,7 @@ const LandingView = () => {
           sx={{ flexWrap: 'wrap', justifyContent: 'center' }}
         >
 
-          {paquetes.map((paquete, id) => (
+          {paquetes.map((paquete) => (
             <Card sx={{
               padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1,
             }}
@@ -333,6 +305,7 @@ const LandingView = () => {
                     color: '#FFFFFF',
                   },
                 }}
+                href="login"
               >
                 <Typography sx={{
                   color: '#FFF',
