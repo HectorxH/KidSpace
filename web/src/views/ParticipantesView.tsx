@@ -113,10 +113,17 @@ const ParticipantesView = () => {
         </Grid>
       </Grid>
       <Box sx={{ px: 4 }}>
-        <Typography variant="h4" sx={{ my: 2 }}>
+        <Typography variant="h4" sx={{ marginTop: 2 }}>
           Participantes
         </Typography>
-        <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
+          }}
+          >
+            <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
+          </Stack>
+        </Stack>
         <Card sx={{
           mt: 2, p: 3, backgroundColor: '#F1F3F8', borderRadius: 5,
         }}

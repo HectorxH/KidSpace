@@ -37,7 +37,7 @@ const RankingTable = (
     {
       field: 'lugar',
       headerName: 'Lugar',
-      flex: 1,
+      width: 100,
       renderCell: ((params) => (
         <div>
           <FontAwesomeIcon
@@ -53,21 +53,19 @@ const RankingTable = (
     {
       field: 'nombre',
       headerName: 'Nombre',
-      flex: 1,
+      width: 300,
       renderCell: (params) => `${params.row.estudiante.user.nombres} ${params.row.estudiante.user.apellidos}`,
     },
     {
       field: 'cantidad',
       headerName: 'Actividades completadas',
-      flex: 1,
+      width: 200,
     },
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      width: 200,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
       renderCell: (params) => (
         <div>
           <Button
@@ -88,7 +86,7 @@ const RankingTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: 1 }}>
       {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
         : (
           <DataGrid

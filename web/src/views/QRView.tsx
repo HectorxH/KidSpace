@@ -74,12 +74,11 @@ const QRView = () => {
         container
         spacing={0}
         justifyContent="center"
-        sx={{ px: 2 }}
       >
         <Grid item xs={12} sm={12} md={6}>
-          <Stack justifyContent="center" spacing={3} alignItems="center" sx={{ height: '100%', p: 4 }}>
+          <Stack justifyContent="center" spacing={3} sx={{ height: '100%', p: 4, ml: 4 }}>
             <Typography variant="h4" sx={{ marginBottom: 3 }}>
-              Modo de uso:
+              <b>Modo de uso:</b>
             </Typography>{' '}
             <Typography display="block" sx={{ marginBottom: 2 }}>
               Proyecte el código en la pantalla o imprima el
@@ -98,14 +97,15 @@ const QRView = () => {
           </Stack>
         </Grid>
         <Grid item xs={12} sm={12} md={6}>
-          <Stack justifyContent="center" spacing={3} alignItems="center" sx={{ height: '100%' }}>
+          <Stack justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
             <Card sx={{
-              alignItems: 'center', justifyContent: 'center', borderRadius: 5, p: 5,
+              alignItems: 'center', justifyContent: 'center', borderRadius: 5, paddingLeft: 8, paddingRight: 8,
             }}
             >
               <Qr curso={curso} />
               <CardMedia
                 component="img"
+                sx={{ height: '25%' }}
                 image={logoKidspace}
               />
               <Typography variant="h5">
