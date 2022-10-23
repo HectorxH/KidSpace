@@ -63,51 +63,55 @@ const LoginView = () => {
     <Grid
       container
       spacing={0}
-      direction="column"
+      // direction="column"
       alignItems="center"
       justifyContent="center"
       style={{ minHeight: '100vh', backgroundColor: '#5c9dec' }}
     >
-      <Paper
-        sx={{
-          px: 5, pb: 5, pt: 2, width: '40vw', my: 5,
-        }}
-        elevation={3}
-      >
-        <form onSubmit={handleClick}>
-          <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
-            <Stack alignItems="center">
-              <img src={logo} alt="Logo Kidspace" width="60%" />
-              <Typography variant="h5">Iniciar sesion</Typography>
-            </Stack>
-            <FormControl fullWidth>
-              <InputLabel id="select-label">Tipo de cuenta</InputLabel>
-              <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
-                <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
-                <MenuItem value="apoderado"><Typography>Apoderado</Typography></MenuItem>
-              </Select>
-            </FormControl>
-            <Stack spacing={2}>
-              <TextField required label="Nombre de Usuario" onChange={handleUsernameChange} />
-              <TextField required type="password" label="Contraseña" onChange={handlePasswordChange} />
-            </Stack>
-            {correct && (
+      <Grid item xs={12} sm={6} md={4}>
+        <Paper
+          sx={{
+            textAlign: 'center',
+            m: 2,
+            p: 2,
+          }}
+          elevation={3}
+        >
+          <form onSubmit={handleClick}>
+            <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
+              <Stack alignItems="center">
+                <img src={logo} alt="Logo Kidspace" width="60%" />
+                <Typography variant="h5">Iniciar sesion</Typography>
+              </Stack>
+              <FormControl fullWidth>
+                <InputLabel id="select-label">Tipo de cuenta</InputLabel>
+                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
+                  <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
+                  <MenuItem value="apoderado"><Typography>Apoderado</Typography></MenuItem>
+                </Select>
+              </FormControl>
+              <Stack spacing={2}>
+                <TextField required label="Nombre de Usuario" onChange={handleUsernameChange} />
+                <TextField required type="password" label="Contraseña" onChange={handlePasswordChange} />
+              </Stack>
+              {correct && (
               <Alert severity="success">
                 Sesión Iniciada
               </Alert>
-            )}
-            {error && (
+              )}
+              {error && (
               <Alert severity="error">
                 Usuario o Contraseña Incorrecta
               </Alert>
-            )}
-            <Stack spacing={1}>
-              <Button type="submit" variant="contained">Iniciar sesion</Button>
-              <Button variant="outlined" onClick={() => navigate('/registro')}>Registrar  </Button>
+              )}
+              <Stack spacing={1}>
+                <Button type="submit" variant="contained">Iniciar sesion</Button>
+                <Button variant="outlined" onClick={() => navigate('/registro')}>Registrar  </Button>
+              </Stack>
             </Stack>
-          </Stack>
-        </form>
-      </Paper>
+          </form>
+        </Paper>
+      </Grid>
     </Grid>
   );
 
