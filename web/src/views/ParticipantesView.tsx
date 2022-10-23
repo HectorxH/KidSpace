@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
-  Card,
+  Card, Grid,
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import QrCodeIcon from '@mui/icons-material/QrCode';
@@ -79,37 +79,39 @@ const ParticipantesView = () => {
           image={img}
         />
       </Stack>
-      <Stack
-        direction="row"
-        justifyContent="flex-end"
-        alignItems="center"
+      <Grid
+        container
+        spacing={0}
+        justifyContent="right"
+        sx={{ px: 2 }}
       >
-        <Box
-          sx={{
-            width: 2 / 4,
-          }}
-        >
+        <Grid item xs={12} sm={12} md={3} />
+        <Grid item xs={12} sm={12} md={6}>
           <Typography>
             Los y las estudiantes deben escanear el código
             QR dentro de la aplicación para unirse al curso.
           </Typography>
-        </Box>
-        <Button
-          startIcon={<QrCodeIcon />}
-          sx={{
-            marginRight: 2,
-            backgroundColor: (theme: Theme) => theme.palette.secondary.main,
-            color: '#FFFFFF',
-            '&:hover': {
-              backgroundColor: '#ffbe82',
-              color: '#FFFFFF',
-            },
-          }}
-          onClick={() => navigate(`/cursos/${cursoId}/qr`)}
-        >
-          Generar QR
-        </Button>
-      </Stack>
+        </Grid>
+        <Grid item xs={12} sm={12} md={3}>
+          <Stack direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
+            <Button
+              startIcon={<QrCodeIcon />}
+              sx={{
+                backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+                width: 150,
+                color: '#FFFFFF',
+                '&:hover': {
+                  backgroundColor: '#ffbe82',
+                  color: '#FFFFFF',
+                },
+              }}
+              onClick={() => navigate(`/cursos/${cursoId}/qr`)}
+            >
+              Generar QR
+            </Button>
+          </Stack>
+        </Grid>
+      </Grid>
       <Box sx={{ px: 4 }}>
         <Typography variant="h4" sx={{ my: 2 }}>
           Participantes
@@ -119,45 +121,45 @@ const ParticipantesView = () => {
           mt: 2, p: 3, backgroundColor: '#F1F3F8', borderRadius: 5,
         }}
         >
-          <Stack
-            direction="row"
-            sx={{
-              display: 'flex',
-              flexWrap: 'wrap',
-            }}
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            sx={{ px: 1 }}
           >
-            <Stack direction="column" spacing={2} sx={{ width: 5 / 7 }}>
-              <Typography variant="h5">
-                Reporte de las estadísticas de curso
-              </Typography>
-              <Typography>
-                Genera un informe para ver el progreso de este curso, por cierta actividad o por área STEAM.
-                También pordrás acceder a las estadísticas por cierta actividad o alumno de este curso.
-              </Typography>
-            </Stack>
-            <Stack sx={{
-              justifyContent: 'center', minWidth: 180, width: 2 / 7,
-            }}
-            >
-              <Button
-                startIcon={<PieChartIcon />}
-                sx={{
-                  alignSelf: 'center',
-                  minWidth: 150,
-                  maxHeight: 40,
-                  backgroundColor: (theme: Theme) => theme.palette.secondary.main,
-                  color: '#FFFFFF',
-                  '&:hover': {
-                    backgroundColor: '#ffbe82',
+            <Grid item xs={12} sm={12} md={8}>
+              <Stack direction="column" spacing={2}>
+                <Typography variant="h5">
+                  Reporte de las estadísticas de curso
+                </Typography>
+                <Typography>
+                  Genera un informe para ver el progreso de este curso, por cierta actividad o por área STEAM.
+                  También pordrás acceder a las estadísticas por cierta actividad o alumno de este curso.
+                </Typography>
+              </Stack>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4}>
+              <Stack direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
+                <Button
+                  startIcon={<PieChartIcon />}
+                  sx={{
+                    alignSelf: 'center',
+                    width: 200,
+                    textTransfrom: 'none',
+                    backgroundColor: (theme: Theme) => theme.palette.secondary.main,
                     color: '#FFFFFF',
-                  },
-                }}
-                onClick={() => navigate(`/cursos/${cursoId}/estadisticas`)}
-              >
-                Generar reporte
-              </Button>
-            </Stack>
-          </Stack>
+                    '&:hover': {
+                      backgroundColor: '#ffbe82',
+                      color: '#FFFFFF',
+                    },
+                  }}
+                  onClick={() => navigate(`/cursos/${cursoId}/estadisticas`)}
+                >
+                  Generar reporte
+                </Button>
+              </Stack>
+            </Grid>
+          </Grid>
         </Card>
       </Box>
     </Stack>
