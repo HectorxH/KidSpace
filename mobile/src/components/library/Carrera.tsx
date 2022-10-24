@@ -30,7 +30,7 @@ const nombreActividades = {
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera, curso, userName, userLastName, completadas} = route.params;
-  console.log(carrera.title);
+  console.log(carrera.stories[1].nombre);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
@@ -62,7 +62,8 @@ const Carrera = ({navigation, route}: CarreraProps) => {
         <View
           style={{
             flex: 1,
-            margin: RSize(0.01),
+            marginTop: RSize(0.01),
+            marginHorizontal: RSize(0.01),
             flexDirection: 'row-reverse',
           }}>
           <Button
@@ -74,7 +75,11 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             )}
             onPress={() =>
               navigation.navigate('CompanerosView', {
-                carreraNombre: carrera.title,
+                datos: {
+                  carrera: carrera.title,
+                  nombre1: carrera.stories[0].nombre,
+                  nombre2: carrera.stories[1].nombre,
+                },
               })
             }>
             <Text style={styles.textButton}>Compañeros</Text>
@@ -129,6 +134,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                       mapImages[`${checkCompletada(story.actividad)}`].uri
                     }
                     style={{
+                      marginTop: RSize(0.01, 'h'),
                       width: RSize(0.06, 'h'),
                       height: RSize(0.06, 'h'),
                     }}
@@ -138,7 +144,9 @@ const Carrera = ({navigation, route}: CarreraProps) => {
                   source={imagesPersonajes[`${story.img}`].uri}
                   style={{
                     height: RSize(0.6, 'h'),
+                    borderRadius: 20,
                     marginTop: RSize(0.03, 'h'),
+                    marginHorizontal: RSize(0.03, 'h'),
                   }}
                 />
                 <Text style={styles.title2}>{story.title}</Text>
@@ -189,6 +197,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

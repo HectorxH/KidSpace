@@ -16,6 +16,7 @@ export interface ICarrera {
 export interface IInfo {
   carrera: string;
   actividad: actividadNombre;
+  nombre: string;
   img: string;
   title: string;
   desc: string;
@@ -24,5 +25,7 @@ export interface IInfo {
 }
 
 export interface ICarreraNombre {
-  carreraNombre: string;
+  carrera: string;
+  nombre1: string;
+  nombre2: string;
 }
