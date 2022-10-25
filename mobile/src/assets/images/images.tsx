@@ -51,6 +51,10 @@ const images: {
     AbelHappy: require('./character/abel/abel-happy.png'),
     AbelQuestion: require('./character/abel/abel-question.png'),
 
+    AndreHappy: require('./character/andres/andres-happy.png'),
+    AndreSmile: require('./character/andres/andres-smile.png'),
+    AndreSad: require('./character/andres/andres-sad.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
     fbk: require('./trackingTargets/fbk.jpg'),
@@ -229,6 +233,33 @@ const images: {
     informatica_2_12: require('./extras/informatica2/48.png'),
     informatica_2_13: require('./extras/informatica2/47.png'),
 
+    // Astronomia1
+    astronomia_1_1: require('./extras/astronomia1/46.png'),
+    astronomia_1_2: require('./extras/astronomia1/62.png'),
+    astronomia_1_3: require('./extras/astronomia1/61.png'),
+    astronomia_1_4: require('./extras/astronomia1/64.png'),
+    astronomia_1_5: require('./extras/astronomia1/60.png'),
+    astronomia_1_6: require('./extras/astronomia1/59.png'),
+    astronomia_1_7: require('./extras/astronomia1/65.png'),
+    astronomia_1_8: require('./extras/astronomia1/55.png'),
+    astronomia_1_9: require('./extras/astronomia1/58.png'),
+    astronomia_1_10: require('./extras/astronomia1/56.png'),
+    astronomia_1_11: require('./extras/astronomia1/57.png'),
+    astronomia_1_12: require('./extras/astronomia1/53.png'),
+    astronomia_1_13: require('./extras/astronomia1/52.png'),
+    astronomia_1_14: require('./extras/astronomia1/48.png'),
+    astronomia_1_15: require('./extras/astronomia1/51.png'),
+    astronomia_1_16: require('./extras/astronomia1/50.png'),
+    astronomia_1_17: require('./extras/astronomia1/49.png'),
+    astronomia_1_18: require('./extras/astronomia1/47.png'),
+    creciente: require('./extras/astronomia1/creciente.png'),
+    nueva: require('./extras/astronomia1/nueva.png'),
+    llena: require('./extras/astronomia1/llena.png'),
+    menguante: require('./extras/astronomia1/menguante.png'),
+    solarTotal: require('./extras/astronomia1/solar-total.jpg'),
+    lunaRoja: require('./extras/astronomia1/lunaroja.jpg'),
+    sombraLunar: require('./extras/astronomia1/sombralunar.png'),
+
     // bubbles
     flower: require('./bubbles/flower.png'),
     bouquet: require('./bubbles/bouquet.png'),
@@ -269,6 +300,7 @@ const images: {
     bg_materiales: require('./background/bg_materiales.png'),
     bg_informatica1: require('./background/bg_informatica1.png'),
     bg_informatica2: require('./background/bg_informatica2.png'),
+    bg_astronomia1: require('./background/bg_astronomia1.png'),
   },
 
   icons: {

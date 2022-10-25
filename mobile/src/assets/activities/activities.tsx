@@ -13,9 +13,11 @@ const activities: {[key: string]: Actividad} = {
   informatica2: require('./informatica2.json'),
   // informatica2: require('./debug.json'),
   // informatica2: require('./materiales.json'),
-  astronomia1: require('./debug.json'),
+  // astronomia1: require('./debug.json'),
+  astronomia1: require('./astronomia1.json'),
+  astronomia2: require('./astronomia2.json'),
   // astronomia2: require('./diagramas.json'),
-  astronomia2: require('./materiales.json'),
+  // astronomia2: require('./materiales.json'),
 };
 
 export default activities;
