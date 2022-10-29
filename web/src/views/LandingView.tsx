@@ -321,6 +321,9 @@ const LandingView = () => {
                 {paquete.cantidad}
               </Typography>
               <Button
+                onClick={() => {
+                  window.open(paquete.url, '_self');
+                }}
                 sx={{
                   backgroundColor: (theme: Theme) => theme.palette.secondary.main,
                   borderRadius: 4,
