@@ -49,10 +49,10 @@ const ProfesoresView = () => {
   const [profesores, setProfesores] = useState<IProfesores[]>(profes);
   const [loading, setLoading] = useState(true);
   const [disabledButton, setDisabledButton] = useState(false);
-  const [cantidad, setCantidad] = useState(1);
+  const [cantidad, setCantidad] = useState(2);
   const navigate = useNavigate();
   const user = {
-    _id: 'sdfs54df6', nombres: 'nombre', apellidos: 'apellidos', institucion: 'Institucion', plan: 0,
+    _id: 'sdfs54df6', nombres: 'nombre', apellidos: 'apellidos', institucion: 'Institucion', plan: 2,
   };
   const { logout } = useAuth();
   const getProfesores = () => {
@@ -111,21 +111,36 @@ const ProfesoresView = () => {
         container
         spacing={0}
         justifyContent="right"
-        sx={{ px: 2 }}
+        sx={{ px: 4 }}
       >
-        <Grid item xs={12} sm={12} md={5} />
-        <Grid item xs={12} sm={12} md={7}>
-          <Card sx={{ p: 3, backgroundColor: '#F1F3F8', borderRadius: 5 }}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={paquetes[user.plan].limite
+            ? 5 : 8}
+        />
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={paquetes[user.plan].limite
+            ? 7 : 4}
+        >
+          <Card sx={{
+            p: 3, backgroundColor: '#F1F3F8', borderRadius: 5,
+          }}
+          >
             <Grid
               container
               spacing={0}
-              justifyContent="right"
+              justifyContent="center"
               alignItems="center"
             >
-              <Grid item xs={12} sm={12} md={8}>
-                {paquetes[user.plan].limite
-                  ? (
-                    cantidad > 1
+              {paquetes[user.plan].limite
+                ? (
+                  <Grid item xs={12} sm={12} md={8}>
+                    {cantidad > 1
                       ? (
                         <Typography>
                           Tienes disponible <b>{cantidad}</b> profesores para registrar
@@ -140,13 +155,19 @@ const ProfesoresView = () => {
                           <Typography>
                             Has llegado al límite de profesores a registrar
                           </Typography>
-                        )
-                  )
-                  : (
-                    <Box />
-                  )}
-              </Grid>
-              <Grid item xs={12} sm={12} md={4}>
+                        )}
+                  </Grid>
+                )
+                : (
+                  <Box />
+                )}
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                md={paquetes[user.plan].limite
+                  ? 4 : 6}
+              >
                 <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="h5" sx={{ color: '#000' }}>
                     <b>KIDSPACE</b>

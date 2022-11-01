@@ -5,7 +5,7 @@ import {
   Button, Theme,
   TableCell, TableRow, Stack,
   Typography, Dialog, DialogActions, DialogContent,
-  DialogContentText, DialogTitle, Box,
+  DialogContentText, DialogTitle, Box, Card,
 } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -212,7 +212,14 @@ const ProfesoresTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="No hay profesores inscritos." submsg="Aún no has inscrito un profesor o profesora" />
+      {(rows.length !== 0)
+        ? (
+          <Stack>
+            <Card sx={{ borderRadius: 5 }} elevation={4}>
+              <SinActividades mainmsg="No hay profesores inscritos." submsg="Aún no has inscrito un profesor o profesora" />
+            </Card>
+          </Stack>
+        )
         : (
           <DataGrid
             density="comfortable"
