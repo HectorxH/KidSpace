@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -13,87 +13,101 @@ import {RSize} from '../../utils/responsive';
 import {mapImages} from '../../assets/map/handler/images';
 import {CompaneroProps} from '../../types/navigation';
 import Character from './Character';
+import CargaView from '../CargaView';
+import {useAuth} from '../../hooks/useAuth';
+import Config from 'react-native-config';
 
-const losCompas = [
-  {
-    nombres: 'skylar',
-    apellidos: 'cirrus',
-    personaje: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8],
-    actividadesIndividuales: {
-      'Informática y algoritmos en nuestra vida': 1,
-      '¿Qué es un computador?': 2,
-      'Tierra, Luna y Sol': 0,
-      '¿Qué vemos en el cielo nocturno?': 0,
-      'Interpretando etiquetas de los alimentos': 1,
-      'Analizando nuestra dieta': 0,
-      'Teoría de colores': 0,
-      'Diseño gráfico en nuestro alrededor': 0,
-    },
-  },
-  {
-    nombres: 'kai',
-    apellidos: 'soo',
-    personaje: [8, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 5],
-    actividadesIndividuales: {
-      'Informática y algoritmos en nuestra vida': 0,
-      '¿Qué es un computador?': 0,
-      'Tierra, Luna y Sol': 9,
-      '¿Qué vemos en el cielo nocturno?': 2,
-      'Interpretando etiquetas de los alimentos': 0,
-      'Analizando nuestra dieta': 0,
-      'Teoría de colores': 0,
-      'Diseño gráfico en nuestro alrededor': 0,
-    },
-  },
-  {
-    nombres: 'jen',
-    apellidos: 'lisa',
-    personaje: [3, 0, 2, 2, 0, 0, 25, 25, 0, 0, 8, 1],
-    actividadesIndividuales: {
-      'Informática y algoritmos en nuestra vida': 0,
-      '¿Qué es un computador?': 0,
-      'Tierra, Luna y Sol': 0,
-      '¿Qué vemos en el cielo nocturno?': 0,
-      'Interpretando etiquetas de los alimentos': 0,
-      'Analizando nuestra dieta': 0,
-      'Teoría de colores': 0,
-      'Diseño gráfico en nuestro alrededor': 0,
-    },
-  },
-  {
-    nombres: 'skylar',
-    apellidos: 'cirrus',
-    personaje: [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6],
-    actividadesIndividuales: {
-      'Informática y algoritmos en nuestra vida': 0,
-      '¿Qué es un computador?': 0,
-      'Tierra, Luna y Sol': 0,
-      '¿Qué vemos en el cielo nocturno?': 0,
-      'Interpretando etiquetas de los alimentos': 0,
-      'Analizando nuestra dieta': 0,
-      'Teoría de colores': 0,
-      'Diseño gráfico en nuestro alrededor': 0,
-    },
-  },
-  {
-    nombres: 'kai',
-    apellidos: 'soo',
-    personaje: [0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 3],
-    actividadesIndividuales: {
-      'Informática y algoritmos en nuestra vida': 0,
-      '¿Qué es un computador?': 0,
-      'Tierra, Luna y Sol': 0,
-      '¿Qué vemos en el cielo nocturno?': 0,
-      'Interpretando etiquetas de los alimentos': 0,
-      'Analizando nuestra dieta': 0,
-      'Teoría de colores': 0,
-      'Diseño gráfico en nuestro alrededor': 0,
-    },
-  },
-];
+interface ICompaniero {
+  nombres: string;
+  apellidos: string;
+  personaje: number[];
+  actividadesIndividuales: {[key: string]: number};
+}
+
+// const losCompas = [
+//   {
+//     nombres: 'skylar',
+//     apellidos: 'cirrus',
+//     personaje: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8],
+//     actividadesIndividuales: {
+//       'Informática y algoritmos en nuestra vida': 1,
+//       '¿Qué es un computador?': 2,
+//       'Tierra, Luna y Sol': 0,
+//       '¿Qué vemos en el cielo nocturno?': 0,
+//       'Interpretando etiquetas de los alimentos': 1,
+//       'Analizando nuestra dieta': 0,
+//       'Teoría de colores': 0,
+//       'Diseño gráfico en nuestro alrededor': 0,
+//     },
+//   },
+//   {
+//     nombres: 'kai',
+//     apellidos: 'soo',
+//     personaje: [8, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 5],
+//     actividadesIndividuales: {
+//       'Informática y algoritmos en nuestra vida': 0,
+//       '¿Qué es un computador?': 0,
+//       'Tierra, Luna y Sol': 9,
+//       '¿Qué vemos en el cielo nocturno?': 2,
+//       'Interpretando etiquetas de los alimentos': 0,
+//       'Analizando nuestra dieta': 0,
+//       'Teoría de colores': 0,
+//       'Diseño gráfico en nuestro alrededor': 0,
+//     },
+//   },
+//   {
+//     nombres: 'jen',
+//     apellidos: 'lisa',
+//     personaje: [3, 0, 2, 2, 0, 0, 25, 25, 0, 0, 8, 1],
+//     actividadesIndividuales: {
+//       'Informática y algoritmos en nuestra vida': 0,
+//       '¿Qué es un computador?': 0,
+//       'Tierra, Luna y Sol': 0,
+//       '¿Qué vemos en el cielo nocturno?': 0,
+//       'Interpretando etiquetas de los alimentos': 0,
+//       'Analizando nuestra dieta': 0,
+//       'Teoría de colores': 0,
+//       'Diseño gráfico en nuestro alrededor': 0,
+//     },
+//   },
+//   {
+//     nombres: 'skylar',
+//     apellidos: 'cirrus',
+//     personaje: [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6],
+//     actividadesIndividuales: {
+//       'Informática y algoritmos en nuestra vida': 0,
+//       '¿Qué es un computador?': 0,
+//       'Tierra, Luna y Sol': 0,
+//       '¿Qué vemos en el cielo nocturno?': 0,
+//       'Interpretando etiquetas de los alimentos': 0,
+//       'Analizando nuestra dieta': 0,
+//       'Teoría de colores': 0,
+//       'Diseño gráfico en nuestro alrededor': 0,
+//     },
+//   },
+//   {
+//     nombres: 'kai',
+//     apellidos: 'soo',
+//     personaje: [0, 0, 3, 0, 0, 0, 2, 0, 0, 0, 0, 3],
+//     actividadesIndividuales: {
+//       'Informática y algoritmos en nuestra vida': 0,
+//       '¿Qué es un computador?': 0,
+//       'Tierra, Luna y Sol': 0,
+//       '¿Qué vemos en el cielo nocturno?': 0,
+//       'Interpretando etiquetas de los alimentos': 0,
+//       'Analizando nuestra dieta': 0,
+//       'Teoría de colores': 0,
+//       'Diseño gráfico en nuestro alrededor': 0,
+//     },
+//   },
+// ];
 
 const CompanerosView = ({navigation, route}: CompaneroProps) => {
   const {carrera, nombre1, nombre2} = route.params.datos;
+  const [compas, setCompas] = useState<ICompaniero[]>([]);
+  const [loading, setLoading] = useState(true);
+  const {instance} = useAuth();
+
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
   const checkCompletada = (estado: number) => {
     if (estado > 0) {
@@ -101,6 +115,29 @@ const CompanerosView = ({navigation, route}: CompaneroProps) => {
     }
     return 'estrellagris';
   };
+
+  const getCompas = async () => {
+    try {
+      const res = await instance.get(
+        `${Config.REACT_APP_BACKEND_URL}/Estudiante/compas`,
+      );
+      console.log(res.body.compas);
+      setCompas(res.body.compas);
+    } catch (e) {
+      console.log(JSON.stringify(e));
+      console.log('No se encontraron compas :(');
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getCompas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (loading) {
+    return <CargaView />;
+  }
   return (
     <>
       <View style={{flexDirection: 'row'}}>
@@ -127,7 +164,7 @@ const CompanerosView = ({navigation, route}: CompaneroProps) => {
       <View style={styles.container}>
         <SafeAreaView>
           <ScrollView style={styles.scrollView}>
-            {losCompas.map((compa, index) => (
+            {compas.map((compa, index) => (
               <Card
                 key={index}
                 style={{
