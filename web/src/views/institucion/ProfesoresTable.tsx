@@ -212,7 +212,7 @@ const ProfesoresTable = (
   ];
   return (
     <Box sx={{ width: '100%' }}>
-      {(rows.length !== 0)
+      {(rows.length === 0)
         ? (
           <Stack>
             <Card sx={{ borderRadius: 5 }} elevation={4}>
