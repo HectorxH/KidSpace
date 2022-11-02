@@ -1909,6 +1909,67 @@
               "alt": "teclado_aux"
             }
           ]
+        },
+
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        },
+        {
+          "model": "rigel",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        },
+        {
+          "model": "sirius",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        },
+        {
+          "model": "sun",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        },
+        {
+          "model": "mesaDesarmada",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "mesa"
+        },
+        {
+          "model": "mesaArmada",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "mesa"
+        },
+        {
+          "model": "martilloDesarmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        },
+        {
+          "model": "martilloArmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        },
+        {
+          "model": "skateDesarmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "skate"
+        },
+        {
+          "model": "skateArmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "skate"
         }
       ]
     },

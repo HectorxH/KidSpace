@@ -811,7 +811,7 @@
         "answer": ["Luna llena", "Luna nueva", "Luna menguante", "Luna creciente"],
         "draggableItems": [
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "Luna menguante",
             "position": {
@@ -820,7 +820,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "Luna llena",
             "position": {
@@ -829,7 +829,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "Luna nueva",
             "position": {
@@ -838,7 +838,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "Luna creciente",
             "position": {
@@ -849,71 +849,173 @@
         ],
         "receivingItems": [
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "",
             "position": {
-              "start": [0.5, 11],
+              "start": [0.5, 10.95],
               "end": [4.875, 15]
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "",
             "position": {
-              "start": [5.375, 11],
+              "start": [5.375, 10.95],
               "end": [9.75, 15]
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "",
             "position": {
-              "start": [10.25, 11],
+              "start": [10.25, 10.95],
               "end": [14.625, 15]
             }
           },
           {
-            "type": "rectangle",
+            "type": "moonBlock",
             "name": "",
             "value": "",
             "position": {
-              "start": [15.125, 11],
+              "start": [15.125, 10.95],
               "end": [19.5, 15]
             }
           }
         ]
       }
     ],
-    "items": [
+    "bubbles": [
       {
         "name": "llena",
         "position": {
-          "start": [0.5, 7],
-          "end": [4.875, 11]
+          "start": [0.5, 6.75],
+          "end": [4.875, 10.75]
         }
       },
       {
         "name": "nueva",
         "position": {
-          "start": [5.375, 7],
-          "end": [9.75, 11]
+          "start": [5.375, 6.75],
+          "end": [9.75, 10.75]
         }
       },
       {
         "name": "menguante",
         "position": {
-          "start": [10.25, 7],
-          "end": [14.625, 11]
+          "start": [10.25, 6.75],
+          "end": [14.625, 10.75]
         }
       },
       {
         "name": "creciente",
         "position": {
-          "start": [15.125, 7],
+          "start": [15.125, 6.75],
+          "end": [19.5, 10.75]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [4.875, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [2.275, 10.95],
+          "end": [3.1, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [5.375, 6.5],
+          "end": [9.75, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [7.15, 10.95],
+          "end": [7.975, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.25, 6.5],
+          "end": [14.625, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [12.025, 10.95],
+          "end": [12.85, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [15.125, 6.5],
           "end": [19.5, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [16.9, 10.95],
+          "end": [17.725, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
         }
       }
     ]
@@ -1306,7 +1408,7 @@
     ],
     "texts": [
       {
-        "text": "¿Cuál es la alineación para observar el eclipse solar desde la Tierra?",
+        "text": "¿Cuál es la alineación para observar el eclipse lunar desde la Tierra?",
         "position": {
           "start": [1.5, 2.5],
           "end": [11.5, 10]
@@ -1324,10 +1426,10 @@
     ],
     "alternativas": [
       {
-        "rightAnswer": ["La Luna debe estar entre el Sol y la Tierra"],
+        "rightAnswer": ["La Tierra debe estar entre el Sol y la Luna"],
         "answers": [
           {
-            "text": "La Tierra debe estar entre la Luna y el Sol",
+            "text": "La Tierra debe estar entre el Sol y la Luna",
             "position": {
               "start": [1.5, 10.5],
               "end": [11.5, 13]
@@ -1469,15 +1571,16 @@
   },
   {
     "background": "",
-    "textBoxes": [
+    "textBoxesDragChecking": [
       {
         "position": {
           "start": [7.5, 8],
           "end": [19.5, 12.5]
         },
         "settings": {
-          "borderWidth": 0
-        }
+          "borderRadius": 10
+        },
+        "requirements": [44]
       }
     ],
     "texts": [
@@ -1537,7 +1640,7 @@
         "answer": ["T", "O", "T", "A", "L"],
         "draggableItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "T",
             "position": {
@@ -1546,7 +1649,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "T",
             "position": {
@@ -1555,7 +1658,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "O",
             "position": {
@@ -1564,7 +1667,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "L",
             "position": {
@@ -1573,7 +1676,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "A",
             "position": {
@@ -1584,7 +1687,7 @@
         ],
         "receivingItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1593,7 +1696,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1602,7 +1705,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1611,7 +1714,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1620,7 +1723,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1631,27 +1734,55 @@
         ]
       }
     ],
-    "items": [
+    "jumpCard": [
       {
-        "name": "solarTotal",
         "position": {
           "start": [0.5, 6],
           "end": [6.5, 18.5]
-        }
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "items": [
+          {
+            "name": "solarTotal",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿Qué tipo de eclipse solar es?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
       }
     ]
   },
   {
     "background": "",
-    "textBoxes": [
+    "textBoxesDragChecking": [
       {
         "position": {
           "start": [7.5, 8],
           "end": [19.5, 12.5]
         },
         "settings": {
-          "borderWidth": 0
-        }
+          "borderRadius": 10
+        },
+        "requirements": [45]
       }
     ],
     "texts": [
@@ -1711,7 +1842,7 @@
         "answer": ["S", "O", "M", "B", "R", "A"],
         "draggableItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "S",
             "position": {
@@ -1720,7 +1851,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "R",
             "position": {
@@ -1729,7 +1860,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "A",
             "position": {
@@ -1738,7 +1869,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "B",
             "position": {
@@ -1747,7 +1878,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "O",
             "position": {
@@ -1756,7 +1887,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "M",
             "position": {
@@ -1767,7 +1898,7 @@
         ],
         "receivingItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1776,7 +1907,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1785,7 +1916,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1794,7 +1925,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1803,7 +1934,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1812,7 +1943,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1823,27 +1954,55 @@
         ]
       }
     ],
-    "items": [
+    "jumpCard": [
       {
-        "name": "sombraLunar",
         "position": {
           "start": [0.5, 6],
           "end": [6.5, 18.5]
-        }
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "items": [
+          {
+            "name": "sombraLunar",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿Qué genera un eclipse solar sobre la Tierra?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
       }
     ]
   },
   {
     "background": "",
-    "textBoxes": [
+    "textBoxesDragChecking": [
       {
         "position": {
           "start": [7.5, 8],
           "end": [19.5, 12.5]
         },
         "settings": {
-          "borderWidth": 0
-        }
+          "borderRadius": 10
+        },
+        "requirements": [46]
       }
     ],
     "texts": [
@@ -1903,7 +2062,7 @@
         "answer": ["R", "O", "J", "I", "Z", "O"],
         "draggableItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "R",
             "position": {
@@ -1912,7 +2071,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "J",
             "position": {
@@ -1921,7 +2080,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "O",
             "position": {
@@ -1930,7 +2089,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "Z",
             "position": {
@@ -1939,7 +2098,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "O",
             "position": {
@@ -1948,7 +2107,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "I",
             "position": {
@@ -1959,7 +2118,7 @@
         ],
         "receivingItems": [
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1968,7 +2127,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1977,7 +2136,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1986,7 +2145,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -1995,7 +2154,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -2004,7 +2163,7 @@
             }
           },
           {
-            "type": "rectangle",
+            "type": "letter",
             "name": "",
             "value": "",
             "position": {
@@ -2015,13 +2174,40 @@
         ]
       }
     ],
-    "items": [
+    "jumpCard": [
       {
-        "name": "lunaRoja",
         "position": {
           "start": [0.5, 6],
           "end": [6.5, 18.5]
-        }
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "items": [
+          {
+            "name": "lunaRoja",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿De qué tono es la Luna durante un eclipse lunar?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
       }
     ]
   },

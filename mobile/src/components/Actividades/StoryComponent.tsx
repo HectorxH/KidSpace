@@ -12,6 +12,7 @@ import {IStoryComponentParams} from '../../types/story';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {DraxProvider} from 'react-native-drax';
 import LottieComponent from './LottieComponent';
+import TextBoxesDragChecking from './TextBoxesDragChecking';
 
 interface StoryComponentProps {
   storyComponentParams: IStoryComponentParams;
@@ -34,6 +35,7 @@ const StoryComponent = (props: StoryComponentProps) => {
     isDragItemPicked,
     userInputAnswers,
     userDragAnswers,
+    rightDragAnswers,
     pickedDragAnswers,
     pickedDragAnswersIndex,
     receivingNames,
@@ -45,6 +47,11 @@ const StoryComponent = (props: StoryComponentProps) => {
   const bubbles = typeof pagina.bubbles !== 'undefined' ? pagina.bubbles : [];
   const textBoxes =
     typeof pagina.textBoxes !== 'undefined' ? pagina.textBoxes : [];
+  const textBoxesDragChecking =
+    typeof pagina.textBoxesDragChecking !== 'undefined'
+      ? pagina.textBoxesDragChecking
+      : [];
+
   const texts = typeof pagina.texts !== 'undefined' ? pagina.texts : [];
 
   const alternativas =
@@ -87,6 +94,14 @@ const StoryComponent = (props: StoryComponentProps) => {
           {/* Cuadros de texto */}
           <View style={styles.overlay}>
             <TextBoxes boxes={textBoxes} />
+          </View>
+          {/* Cuadros de texto para checking de drag */}
+          <View style={styles.overlay}>
+            <TextBoxesDragChecking
+              boxes={textBoxesDragChecking}
+              userDragAnswers={userDragAnswers[0]}
+              rightDragAnswers={rightDragAnswers}
+            />
           </View>
           {/* Textos */}
           <View style={styles.overlay}>

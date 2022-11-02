@@ -15,6 +15,7 @@ import {
   IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
+  ITemperaturaSelectorParams,
   IToggleButtonParams,
   IViroAppParams,
 } from '../types/story';
@@ -272,6 +273,17 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
+  const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
+    pageNumber: pageNumber,
+    materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
+    modelMaterial: modelMaterial,
+    selectedMaterial: selectedMaterial,
+    selectedModelMaterials: selectedModelMaterials,
+    activeModelIndex: activeModelIndex,
+    models3d: models3d,
+    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
+  };
+
   const MarkerTrackerFeedbackParams: IMarkerTrackerFeedbackParams = {
     pageNumber: pageNumber,
     activeTrackerIndex: activeTrackerIndex,
@@ -294,6 +306,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswersDropdown: pickedAnswersDropdown,
     isDragItemPicked: isDragItemPicked,
     userDragAnswers: userDragAnswers,
+    rightDragAnswers: rightDragAnswers,
     receivingNames: receivingNames,
     receivingValues: receivingValues,
     pickedDragAnswers: pickedDragAnswers,
