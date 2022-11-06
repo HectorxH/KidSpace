@@ -1,9 +1,7 @@
-/* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  Button, Theme,
-  TableCell, TableRow, Stack,
+  Button, Theme, Stack,
   Typography, Dialog, DialogActions, DialogContent,
   DialogContentText, DialogTitle, Box, Card,
 } from '@mui/material';
@@ -130,20 +128,9 @@ const ProfesoresTable = (
   { rows, updateProfesores }: ICursoTableParams,
 ) => {
   const navigate = useNavigate();
-  // console.log(rows[0]);
   const { logout } = useAuth();
   const eliminarAsignacion = async (estudiante: IEstudiante) => {
-    console.log('.');
-    // try {
-    //   const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Estudiante/${estudiante._id}`);
-    //   console.log(res);
-    //   updateEstudiantes();
-    // } catch (e) {
-    //   console.log(e);
-    //   if (axios.isAxiosError(e) && e.response?.status === 401) {
-    //     logout();
-    //   }
-    // }
+    //
   };
   const cols: GridColDef[] = [
     {
@@ -175,7 +162,7 @@ const ProfesoresTable = (
       sortable: false,
       renderCell: ({ row }) => {
         const handleEditClick = (_id: string) => {
-          navigate(`/profesor/${_id}`);
+          navigate(`/profesores/${_id}/editar`);
         };
         return (
           <div>

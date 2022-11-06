@@ -6,12 +6,11 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
-  Card, Grid, Tooltip,
-  CardMedia, Stack, Theme, Typography,
+  Card, Grid,
+  Stack, Theme, Typography,
 } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
-import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
 import NotFoundView from '../NotFoundView';
 import '../../App.css';
@@ -61,18 +60,7 @@ const ProfesoresView = () => {
     if (cantidad === 0) {
       setDisabledButton(true);
     }
-    // try {
-    //   const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
-    //   setCurso(res.data.curso);
-    //   console.log(res.data);
-    //   setLoading(false);
-    // } catch (e) {
-    //   console.log(e);
-    //   if (axios.isAxiosError(e) && e.response?.status === 401) {
-    //     logout();
-    //   }
-    //   setLoading(false);
-    // }
+    //
   };
 
   // useEffect(() => {

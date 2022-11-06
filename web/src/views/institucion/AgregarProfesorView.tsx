@@ -5,10 +5,11 @@
 /* eslint-disable no-underscore-dangle */
 import {
   Button, TextField, Card, CardContent,
-  Divider, Stack, Typography, Grid,
+  Divider, Stack, Typography, Grid, Box,
 } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import ForwardToInboxIcon from '@mui/icons-material/ForwardToInbox';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import axios from 'axios';
@@ -27,54 +28,30 @@ interface IProfesor {
 
 const AgregarProfesorView = () => {
   const params = useParams();
-  // const { profesorId } = params;
+  const { profesorId } = params;
+  console.log(profesorId);
   // if (!profesorId) return <NotFoundView />;
-
   const [defaultProfesor, setDefaultProfesor] = useState<IProfesor>();
   const [profesor, setProfesor] = useState<IProfesor>();
+  const navigate = useNavigate();
   const [editingProfesor, setEditingProfesor] = useState(false);
+  const [nuevo, setNuevo] = useState(false);
+  console.log(nuevo);
+  useEffect(() => {
+    if (!profesorId) { setEditingProfesor(true); setNuevo(true); }
+  }, []);
 
-  const { logout } = useAuth();
-
-  const getProfesor = async () => {
-    // try {
-    //   const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/${funcionarioId}`);
-    //   const est : IProfesor = res.data.profesor;
-    //   setDefaultProfesor(est);
-    //   setProfesor(est);
-    //   setApoderados(est.apoderados);
-    //   console.log(est);
-    // } catch (e) {
-    //   console.log(e);
-    //   if (axios.isAxiosError(e) && e.response?.status === 401) {
-    //     logout();
-    //   }
-    // }
+  const handleCancelarClick = () => {
+    if (!profesorId) {
+      navigate('/profesores');
+    }
+    setEditingProfesor(false);
   };
 
-  // useEffect(() => {
-  //   if (!profesor) getProfesor();
-  // }, []);
-
-  // const handleCancelarClick = () => {
-  //   setProfesor(defaultProfesor);
-  //   setEditingProfesor(false);
-  // };
-
   const handleGuardarClick = async () => {
-    // try {
-    //   const res = await axios.post(
-    //     `${process.env.REACT_APP_BACKEND_URL}/Profesor/${profesorId}`,
-    //     { nombres: profesor?.user.nombres, apellidos: profesor?.user.apellidos },
-    //   );
-    //   console.log(res);
-    //   setEditingProfesor(false);
-    // } catch (e) {
-    //   console.log(e);
-    //   if (axios.isAxiosError(e) && e.response?.status === 401) {
-    //     logout();
-    //   }
-    // }
+    setEditingProfesor(false);
+    setNuevo(false);
+    // try
   };
 
   const handleNombresChange = (event: any) => {
@@ -84,8 +61,17 @@ const AgregarProfesorView = () => {
   const handleApellidosChange = (event: any) => {
     console.log(1);
   };
-  const navigate = useNavigate();
+
+  const sendCredentials = async () => {
+    try {
+      // const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/`);
+      // console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   // if (!profesor) return <div />;
+  console.log(nuevo);
   return (
     <Stack padding={4}>
       <Typography variant="h4">
@@ -97,12 +83,19 @@ const AgregarProfesorView = () => {
             <Typography>
               Datos del profesor:
             </Typography>
+            {!nuevo
+              ? (
+                <Button startIcon={<EditIcon />} onClick={() => { setEditingProfesor(true); }}>
+                  Editar
+                </Button>
+              )
+              : (<Box />)}
           </Stack>
           <Divider />
           <Stack
             spacing={3}
             direction="column"
-            py={4}
+            py={5}
           >
             <Grid
               container
@@ -143,13 +136,27 @@ const AgregarProfesorView = () => {
                 <TextField size="small" disabled={!editingProfesor} value={profesor?.email} onChange={handleApellidosChange} sx={{ borderRadius: 10 }} />
               </Grid>
             </Grid>
-            <Stack direction="row" justifyContent="end">
-              <Button onClick={() => navigate('/profesores')} variant="contained" color="inherit" sx={{ marginRight: 2 }}> Cancelar </Button>
-              <Button onClick={handleGuardarClick} variant="contained" color="quaternary">
-                <Typography variant="button" color="white">
-                  Guardar
-                </Typography>
-              </Button>
+            <Stack direction="row">
+              <Stack direction="row" px={3}>
+                <Button
+                  startIcon={<ForwardToInboxIcon />}
+                  onClick={sendCredentials}
+                >
+                  Enviar credenciales
+                </Button>
+              </Stack>
+              <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                {editingProfesor && (
+                <Stack direction="row">
+                  <Button onClick={handleCancelarClick} variant="contained" color="inherit" sx={{ marginRight: 2 }}> Cancelar </Button>
+                  <Button onClick={handleGuardarClick} variant="contained" color="quaternary">
+                    <Typography variant="button" color="white">
+                      Guardar
+                    </Typography>
+                  </Button>
+                </Stack>
+                )}
+              </Box>
             </Stack>
           </Stack>
         </CardContent>
