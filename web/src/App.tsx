@@ -37,7 +37,7 @@ import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 
 import ProfesoresView from './views/institucion/ProfesoresView';
-// import EditarProfesorView from './views/institucion/EditarProfesorView';
+import EstadisticasInstitucionView from './views/institucion/EstadisticasInstitucionView';
 import AgregarProfesorView from './views/institucion/AgregarProfesorView';
 
 import { AuthProvider } from './hooks/useAuth';
@@ -120,6 +120,7 @@ const App = () => (
                   <Route path="/profesores" element={<ProfesoresView />} />
                   <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
                   <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
+                  <Route path="/estadisticas" element={<EstadisticasInstitucionView />} />
                 </Route>
                 <Route element={<ProtectedRoute noProfesor />}>
                   <Route path="/pupilo" element={<PupilosView />} />

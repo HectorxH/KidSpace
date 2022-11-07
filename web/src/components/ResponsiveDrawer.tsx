@@ -17,6 +17,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import PieChartIcon from '@mui/icons-material/PieChart';
 import {
   NavLink, Link, useMatch, useNavigate,
 } from 'react-router-dom';
@@ -90,15 +91,15 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       tipo: ['profesor'], //
       visible: true,
     },
-    // {
-    //   uid: 6,
-    //   text: 'Estadisticas',
-    //   icon: <GroupIcon />,
-    //   paths: ['/estadisticas'],
-    //   restricted: true,
-    //   tipo: ['profesor'], //
-    //   visible: true,
-    // },
+    {
+      uid: 6,
+      text: 'Estadisticas',
+      icon: <PieChartIcon />,
+      paths: ['/estadisticas'],
+      restricted: true,
+      tipo: ['profesor'], //
+      visible: true,
+    },
   ];
 
   let seccionActual = 'Pagina no encontrada';

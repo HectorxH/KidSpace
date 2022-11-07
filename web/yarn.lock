@@ -1800,7 +1800,7 @@
   "resolved" "https://registry.npmjs.org/@mui/types/-/types-7.2.0.tgz"
   "version" "7.2.0"
 
-"@mui/utils@^5.10.3", "@mui/utils@^5.10.6":
+"@mui/utils@^5.10.3", "@mui/utils@^5.10.6", "@mui/utils@^5.9.3":
   "integrity" "sha512-g0Qs8xN/MW2M3fLL8197h5J2VB9U+49fLlnKKqC6zy/yus5cZwdT+Gwec+wUMxgwQoxMDn+J8oDWAn28kEOR/Q=="
   "resolved" "https://registry.npmjs.org/@mui/utils/-/utils-5.10.6.tgz"
   "version" "5.10.6"
@@ -1822,10 +1822,28 @@
     "prop-types" "^15.8.1"
     "reselect" "^4.1.6"
 
-"@mui/x-date-pickers@^5.0.0-beta.6":
-  "integrity" "sha512-njoQvsh7WzgiHu0wGSSPnQ4emT3SDzxCpaKK9DM0jRaxyxfC2wQX431RWmouG8JjnugTltwLnPwkKjLclHQhhA=="
-  "resolved" "https://registry.npmjs.org/@mui/x-date-pickers/-/x-date-pickers-5.0.3.tgz"
-  "version" "5.0.3"
+"@mui/x-date-pickers-pro@^5.0.7":
+  "integrity" "sha512-24PA+Yqb4zI/YQvDyoTXHhW4SzZYtrVTPPWZWnzaNLuk9g/dPGEx7jHEsGSgenfEi4Vcsb2rbgAplbSlhwCnkQ=="
+  "resolved" "https://registry.npmjs.org/@mui/x-date-pickers-pro/-/x-date-pickers-pro-5.0.7.tgz"
+  "version" "5.0.7"
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@date-io/date-fns" "^2.15.0"
+    "@date-io/dayjs" "^2.15.0"
+    "@date-io/luxon" "^2.15.0"
+    "@date-io/moment" "^2.15.0"
+    "@mui/utils" "^5.10.3"
+    "@mui/x-date-pickers" "5.0.7"
+    "@mui/x-license-pro" "5.17.0"
+    "clsx" "^1.2.1"
+    "prop-types" "^15.7.2"
+    "react-transition-group" "^4.4.5"
+    "rifm" "^0.12.1"
+
+"@mui/x-date-pickers@^5.0.7", "@mui/x-date-pickers@5.0.7":
+  "integrity" "sha512-NhxG4tGj+NabxTCQxw4d5RVYl8yzBycHw3YbfawaPVRAsBk/1p3ktSdTbiEi/j+8IUrT8C7Kh/XMNNnOwub/3Q=="
+  "resolved" "https://registry.npmjs.org/@mui/x-date-pickers/-/x-date-pickers-5.0.7.tgz"
+  "version" "5.0.7"
   dependencies:
     "@babel/runtime" "^7.18.9"
     "@date-io/core" "^2.15.0"
@@ -1839,6 +1857,14 @@
     "prop-types" "^15.7.2"
     "react-transition-group" "^4.4.5"
     "rifm" "^0.12.1"
+
+"@mui/x-license-pro@5.17.0":
+  "integrity" "sha512-SVn0E1sUSjuvT79mvfFnW1BtwfiQ+yg6hZpTNwS13a9hJLRJYDI+GiEypArsXRHHvs5XL5PVMmfmHs5voQF9Iw=="
+  "resolved" "https://registry.npmjs.org/@mui/x-license-pro/-/x-license-pro-5.17.0.tgz"
+  "version" "5.17.0"
+  dependencies:
+    "@babel/runtime" "^7.18.9"
+    "@mui/utils" "^5.9.3"
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   "integrity" "sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg=="
@@ -3929,6 +3955,11 @@
   "integrity" "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA=="
   "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.29.3.tgz"
   "version" "2.29.3"
+
+"dayjs@^1.10.7", "dayjs@^1.11.6", "dayjs@^1.8.17":
+  "integrity" "sha512-zZbY5giJAinCG+7AGaw0wIhNZ6J8AhWuSXKvuc1KAyMiRsvGQWqh4L+MomvhdAYjN+lqvVCMq1I41e3YHvXkyQ=="
+  "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.6.tgz"
+  "version" "1.11.6"
 
 "debug@^2.6.0":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
