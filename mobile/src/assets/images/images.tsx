@@ -51,6 +51,18 @@ const images: {
     AbelHappy: require('./character/abel/abel-happy.png'),
     AbelQuestion: require('./character/abel/abel-question.png'),
 
+    AndreHappy: require('./character/andres/andres-happy.png'),
+    AndreSmile: require('./character/andres/andres-smile.png'),
+    AndreSad: require('./character/andres/andres-sad.png'),
+
+    LauraHappy: require('./character/laura/laura-happy.png'),
+    LauraQuestion: require('./character/laura/laura-question.png'),
+    LauraSmile: require('./character/laura/laura-smile.png'),
+
+    AlecHappy: require('./character/alec/alec-happy.png'),
+    AlecQuestion: require('./character/alec/alec-question.png'),
+    AlecSmile: require('./character/alec/alec-smile.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
     fbk: require('./trackingTargets/fbk.jpg'),
@@ -229,6 +241,67 @@ const images: {
     informatica_2_12: require('./extras/informatica2/48.png'),
     informatica_2_13: require('./extras/informatica2/47.png'),
 
+    // Astronomia1
+    astronomia_1_1: require('./extras/astronomia1/46.png'),
+    astronomia_1_2: require('./extras/astronomia1/62.png'),
+    astronomia_1_3: require('./extras/astronomia1/61.png'),
+    astronomia_1_4: require('./extras/astronomia1/64.png'),
+    astronomia_1_5: require('./extras/astronomia1/60.png'),
+    astronomia_1_6: require('./extras/astronomia1/59.png'),
+    astronomia_1_7: require('./extras/astronomia1/65.png'),
+    astronomia_1_8: require('./extras/astronomia1/55.png'),
+    astronomia_1_9: require('./extras/astronomia1/58.png'),
+    astronomia_1_10: require('./extras/astronomia1/56.png'),
+    astronomia_1_11: require('./extras/astronomia1/57.png'),
+    astronomia_1_12: require('./extras/astronomia1/53.png'),
+    astronomia_1_13: require('./extras/astronomia1/52.png'),
+    astronomia_1_14: require('./extras/astronomia1/48.png'),
+    astronomia_1_15: require('./extras/astronomia1/51.png'),
+    astronomia_1_16: require('./extras/astronomia1/50.png'),
+    astronomia_1_17: require('./extras/astronomia1/49.png'),
+    astronomia_1_18: require('./extras/astronomia1/47.png'),
+    creciente: require('./extras/astronomia1/creciente.png'),
+    nueva: require('./extras/astronomia1/nueva.png'),
+    llena: require('./extras/astronomia1/llena.png'),
+    menguante: require('./extras/astronomia1/menguante.png'),
+    solarTotal: require('./extras/astronomia1/solar-total.jpg'),
+    lunaRoja: require('./extras/astronomia1/lunaroja.jpg'),
+    sombraLunar: require('./extras/astronomia1/sombralunar.png'),
+
+    // Astronomia2
+    astronomia_2_1: require('./extras/astronomia2/1.png'),
+    astronomia_2_2: require('./extras/astronomia2/2.png'),
+    astronomia_2_3: require('./extras/astronomia2/3.png'),
+    astronomia_2_4: require('./extras/astronomia2/4.png'),
+    astronomia_2_5: require('./extras/astronomia2/5.png'),
+    astronomia_2_6: require('./extras/astronomia2/6.png'),
+    astronomia_2_7: require('./extras/astronomia2/7.png'),
+    astronomia_2_8: require('./extras/astronomia2/8.png'),
+    astronomia_2_9: require('./extras/astronomia2/9.png'),
+    astronomia_2_10: require('./extras/astronomia2/10.png'),
+    astronomia_2_11: require('./extras/astronomia2/11.png'),
+    astronomia_2_12: require('./extras/astronomia2/12.png'),
+    astronomia_2_13: require('./extras/astronomia2/13.png'),
+    astronomia_2_14: require('./extras/astronomia2/14.png'),
+    astronomia_2_15: require('./extras/astronomia2/15.png'),
+    astronomia_2_16: require('./extras/astronomia2/16.png'),
+    astronomia_2_17: require('./extras/astronomia2/17.png'),
+    astronomia_2_18: require('./extras/astronomia2/18.png'),
+    Betelguese: require('./extras/astronomia2/betelguese.png'),
+    Rigel: require('./extras/astronomia2/rigel.png'),
+    Sirius: require('./extras/astronomia2/sirius.png'),
+    Sol: require('./extras/astronomia2/sol.png'),
+
+    // Soluciones tecnologicas
+    tecnologicas_1: require('./extras/tecnologicas/1.png'),
+    tecnologicas_2: require('./extras/tecnologicas/2.png'),
+    tecnologicas_3: require('./extras/tecnologicas/3.png'),
+    tecnologicas_4: require('./extras/tecnologicas/4.png'),
+    tecnologicas_5: require('./extras/tecnologicas/5.png'),
+    tecnologicas_6: require('./extras/tecnologicas/6.png'),
+    tecnologicas_7: require('./extras/tecnologicas/7.png'),
+    tecnologicas_8: require('./extras/tecnologicas/8.png'),
+
     // bubbles
     flower: require('./bubbles/flower.png'),
     bouquet: require('./bubbles/bouquet.png'),
@@ -269,6 +342,9 @@ const images: {
     bg_materiales: require('./background/bg_materiales.png'),
     bg_informatica1: require('./background/bg_informatica1.png'),
     bg_informatica2: require('./background/bg_informatica2.png'),
+    bg_astronomia1: require('./background/bg_astronomia1.png'),
+    bg_astronomia2: require('./background/bg_astronomia2.png'),
+    bg_tecnologicas: require('./background/bg_tecnologicas.png'),
   },
 
   icons: {
@@ -350,6 +426,18 @@ const images: {
     },
     austral: {
       square: require('./icons/portales/austral.png'),
+    },
+    estrella: {
+      square: require('./icons/estrella/estrella.jpg'),
+    },
+    mesa: {
+      square: require('./icons/mesa/mesa.jpg'),
+    },
+    martillo: {
+      square: require('./icons/martillo/martillo.jpg'),
+    },
+    skate: {
+      square: require('./icons/skate/skate.jpg'),
     },
   },
 

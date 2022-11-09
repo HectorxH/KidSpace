@@ -4,161 +4,118 @@
     "textBoxes": [
       {
         "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": {      
-          "backgroundColor": "#EE93C6",
-          "borderWidth": 0,
-          "borderRadius": 0,
-          "elevation": 20
+          "start": [11.5, 4.5],
+          "end": [19.5, 19.5]
+        }
+      }
+    ],
+    "texts": [
+        {
+          "text": "*:c*",
+          "position": {
+            "start": [12, 5],
+            "end": [19, 19]
+          }
+        }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "caja_torta",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 4],
+          "end": [16, 16]
         }
       }
     ],
     "texts": [
       {
-        "text": " Quiz Final ",
+        "text": "Test",
         "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": { 
-          "fontSize": 20,
-          "color": "white",
-          "elevation": 21
-        }
-      },
-      {
-        "text": "1. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 4],
-          "end": [19, 5.5]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "El software Excel permite crear tablas y ______",
-        "position": {
-          "start": [1, 5.5],
-          "end": [19, 7]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "2. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 10],
-          "end": [19, 11.5]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-        "position": {
-          "start": [1, 11.5],
-          "end": [19, 13]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
+          "start": [3, 4.5],
+          "end": [15, 15.5]
         }
       }
     ],
-    "quiz": [
+    "toggleButton": [
       {
-        "pregunta": "El software Excel permite crear tablas y ______",
-        "answers": [
-          {
-            "text": "Imágenes",
-            "position": {
-              "start": [2, 7.3],
-              "end": [6, 9.8]
-            }
-          },
-          {
-            "text": "Gráficos",
-            "position": {
-              "start": [8, 7.3],
-              "end": [12, 9.8]
-            }
-          },
-          {
-            "text": "Celdas",
-            "position": {
-              "start": [14, 7.3],
-              "end": [18, 9.8]
-            }
-          }
-        ]
-      },
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "Encuentra el material hecho de Arena",
+      "imageTrackers": [
+        {
+          "name": "Vidrio",
+          "target": "vidrio",
+          "display": "barras",
+          "displayType": "3dobject"
+        }
+      ]
+    },
+
+    "background": "",
+    "toggleButton": [
       {
-          "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-          "answers": [
-          {
-            "text": "Una lista",
-            "position": {
-              "start": [2, 13.3],
-              "end": [6, 15.8]
-            }
-          },
-          {
-            "text": "Una celda",
-            "position": {
-              "start": [8, 13.3],
-              "end": [12, 15.8]
-            }
-          },
-          {
-            "text": "Una tabla",
-            "position": {
-              "start": [14, 13.3],
-              "end": [18, 15.8]
-            }
-          }
-        ]
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": false
       }
     ],
     "jumpButton": [
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
-          "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "",
-          "buttonIconNormal": "",
-          "buttonTextAlt": "Terminar",
-          "buttonTextNormal": "Terminar"
-        },
-        "style": {
-
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "eye",
+          "buttonTextAlt": " Ver el poster",
+          "buttonTextNormal": " Ver el poster"
         },
         "position" : {
-          "start": [7, 16.5],
-          "end": [13, 19.5]
+          "start": [1, 1],
+          "end": [7, 3.5]
         },
         "target": -1,
-        "require": [0],
-        "visible": false
+        "require": [2],
+        "visible": true
       }
     ]
   }

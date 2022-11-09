@@ -15,6 +15,7 @@ import { esES as coreesES } from '@mui/material/locale';
 import axios from 'axios';
 import Layout from './layout/Layout';
 import NotFoundView from './views/NotFoundView';
+import LandingView from './views/LandingView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
 import UnidadView from './views/UnidadView';
 import DescripcionActividadView from './views/DescipcionActividadView';
@@ -89,6 +90,7 @@ const App = () => (
           <Routes>
             <Route path="/loading" element={<LoadingView />} />
             <Route element={<ProtectedRoute loggedout />}>
+              <Route path="/landing" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
             </Route>

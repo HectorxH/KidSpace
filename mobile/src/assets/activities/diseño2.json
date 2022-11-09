@@ -942,16 +942,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1001,16 +992,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1060,16 +1042,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1119,17 +1092,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
-        }
+          "rotation": [0, 180, 0]        }
       ]
     },
     "background": "",
@@ -1178,16 +1141,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1237,16 +1191,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1296,16 +1241,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1358,16 +1294,7 @@
         {
           "model": "caja_torta",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1416,7 +1343,7 @@
       "models": [
         {
           "model": "caja_torta",
-          "scale": [0.8, 0.8, 0.8],
+          "scale": [0.6, 0.6, 0.6],
           "rotation": [0, 180, 0],
           "interactable": ["materials"],
           "ARMaterials": {
@@ -1432,6 +1359,23 @@
     },
 
     "background": "",
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": false
+      }
+    ],
     "jumpButton": [
       {
         "settings": {
@@ -1455,22 +1399,7 @@
   {
     "AR": {
       "start": false,
-      "models": [
-        {
-          "model": "caja_torta",
-          "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "interactable": ["materials"],
-          "ARMaterials": {
-            "materialOrder": ["Material", "Logo", "Etiqueta"],
-            "materialChoices": [
-              ["mat1", "mat2", "mat3"],
-              ["logo1", "logo2"],
-              ["et1", "et2"]
-            ]
-          }
-        }
-      ]
+      "models": []
     },
 
     "background": "",
