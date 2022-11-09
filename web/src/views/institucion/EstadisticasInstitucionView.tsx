@@ -7,10 +7,12 @@ import {
   Grid,
   Stack, Theme, Typography, TextField,
 } from '@mui/material';
-import { Dayjs } from 'dayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers-pro';
-import { AdapterDayjs } from '@mui/x-date-pickers-pro/AdapterDayjs';
-import { DateRangePicker, DateRange } from '@mui/x-date-pickers-pro/DateRangePicker';
+
+import { DateRangePicker } from 'react-date-range';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
+import { addDays } from 'date-fns';
+import locale from 'date-fns/locale/es';
 
 import axios from 'axios';
 import NotFoundView from '../NotFoundView';
@@ -19,16 +21,17 @@ import { useAuth } from '../../hooks/useAuth';
 
 const img = require('../../assets/institucion.png');
 
-function getWeeksAfter(date: Dayjs | null, amount: number) {
-  return date ? date.add(amount, 'week') : undefined;
-}
-
 const EstadisticasInstitucionView = () => {
-  const [value, setValue] = React.useState<DateRange<Dayjs>>([null, null]);
   const user = {
     _id: 'sdfs54df6', nombres: 'nombre', apellidos: 'apellidos', institucion: 'Institucion', plan: 2,
   };
-
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 0),
+      key: 'selection',
+    },
+  ]);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Stack
@@ -56,33 +59,21 @@ const EstadisticasInstitucionView = () => {
         />
       </Stack>
       <Stack alignItems="center">
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <DateRangePicker
-            disablePast
-            value={value}
-            maxDate={getWeeksAfter(value[0], 4)}
-            onChange={(newValue) => {
-              setValue(newValue);
-            }}
-            renderInput={(startProps, endProps) => (
-              <>
-                <TextField
-                  {...startProps}
-                  inputProps={{
-                    // autocomplete: 'new-password',
-                    form: {
-                      autocomplete: 'off',
-                    },
-                  }}
-                />
-                <Box sx={{ mx: 2 }}> to </Box>
-                <TextField {...endProps} />
-              </>
-            )}
-          />
-        </LocalizationProvider>
+        <DateRangePicker
+          onChange={(item: any) => setState([item.selection])}
+          moveRangeOnFirstSelection={false}
+          months={2}
+          ranges={state}
+          direction="horizontal"
+          preventSnapRefocus
+          calendarFocus="backwards"
+          weekStartsOn={1}
+          dateDisplayFormat="dd/MM/yyyy"
+          locale={locale}
+        />
       </Stack>
     </Stack>
   );
 };
+
 export default EstadisticasInstitucionView;
