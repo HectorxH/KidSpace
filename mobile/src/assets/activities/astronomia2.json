@@ -641,21 +641,21 @@
         "rightAnswer": ["Sol"],
         "answers": [
           {
-            "text": "Estrella 1",
+            "text": "Betelgeuse",
             "position": {
               "start": [1.5, 10.5],
               "end": [11.5, 13]
             }
           },
           {
-            "text": "Estrella 2",
+            "text": "Sol",
             "position": {
               "start": [1.5, 13.5],
               "end": [11.5, 16]
             }
           },
           {
-            "text": "Sol",
+            "text": "Rigel",
             "position": {
               "start": [1.5, 16.5],
               "end": [11.5, 19]

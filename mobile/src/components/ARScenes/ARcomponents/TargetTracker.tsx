@@ -164,6 +164,36 @@ const targets: ViroARTrackingTargetsMap = {
     physicalWidth: 0.3,
     type: 'Image',
   },
+  camaraMomento: {
+    source: Images.trackingTargets.camaraMomento,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  cucharaComer: {
+    source: Images.trackingTargets.cucharaComer,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  libroInformacion: {
+    source: Images.trackingTargets.libroInformacion,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  planchaRopa: {
+    source: Images.trackingTargets.planchaRopa,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  telefonoDistancia: {
+    source: Images.trackingTargets.telefonoDistancia,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
 };
 
 ViroARTrackingTargets.createTargets(targets);
