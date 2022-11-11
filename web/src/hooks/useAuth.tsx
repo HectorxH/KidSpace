@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }:{children: any}) => {
     } else if (userRef.current?.tipo === 'profesor') {
       navigate('/panel');
     } else if (userRef.current?.tipo === 'representante') {
-      navigate('/panel');
+      navigate('/profesores');
     }
   };
 

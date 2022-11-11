@@ -9,6 +9,7 @@ interface IProtectedRouteProps {
   loggedout?: boolean
   noProfesor?: boolean
   noApoderado?: boolean
+  noRepresentante?: boolean
 }
 
 const ProtectedRoute = ({
@@ -16,6 +17,7 @@ const ProtectedRoute = ({
   loggedout = false,
   noProfesor = false,
   noApoderado = false,
+  noRepresentante = false,
 } : IProtectedRouteProps) => {
   const { user, navigateToDefault } = useAuth();
   const [lodaing, setLoading] = useState(true);
@@ -28,7 +30,9 @@ const ProtectedRoute = ({
     } else if (loggedin && !user) {
       // user is not authentprofileicated
       navigate('/login');
-    } else if (((noProfesor && user?.tipo === 'profesor') || (noApoderado && user?.tipo === 'apoderado'))) {
+    } else if (((noProfesor && user?.tipo === 'profesor')
+    || (noApoderado && user?.tipo === 'apoderado')
+    || (noRepresentante && user?.tipo === 'representante'))) {
       navigateToDefault();
     }
     setLoading(false);

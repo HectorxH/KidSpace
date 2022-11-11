@@ -87,7 +87,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <GroupIcon />,
       paths: ['/profesores'],
       restricted: true,
-      tipo: ['profesor'], //
+      tipo: ['representante'], //
       visible: true,
     },
     // {

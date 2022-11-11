@@ -99,7 +99,7 @@ const App = () => (
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<Layout />}>
-                <Route element={<ProtectedRoute noApoderado />}>
+                <Route element={<ProtectedRoute noApoderado noRepresentante />}>
                   <Route path="/panel" element={<PanelControlView />} />
                   <Route path="/cursos" element={<CursosView />} />
                   <Route path="/cursos/:cursoId/:estudianteId" element={<EditarEstudianteView />} />
@@ -119,9 +119,14 @@ const App = () => (
                   <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
                   <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
                 </Route>
-                <Route element={<ProtectedRoute noProfesor />}>
+                <Route element={<ProtectedRoute noProfesor noRepresentante />}>
                   <Route path="/pupilo" element={<PupilosView />} />
                   <Route path="/pupilo/:pupiloId/estadisticas" element={<EstadisticasApoderadoView />} />
+                </Route>
+                <Route element={<ProtectedRoute noProfesor noApoderado />}>
+                  <Route path="/profesores" element={<ProfesoresView />} />
+                  <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
+                  <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
                 </Route>
                 <Route path="/" element={<RedirectHomeRoute />} />
                 <Route path="/*" element={<NotFoundView />} />
