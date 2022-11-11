@@ -1,6 +1,6 @@
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {ActividadesCompletadas, IActividadLog, IActivity} from './activity';
-import {ICarrera, IInfo} from './carrera';
+import {ICarrera, IInfo, ICarreraNombre} from './carrera';
 import {IProfile} from './profile';
 
 export type desafioTipo =
@@ -56,6 +56,9 @@ export type RootStackParamList = {
     userName: string;
     userLastName: string;
     completadas: ActividadesCompletadas;
+  };
+  CompanerosView: {
+    datos: ICarreraNombre;
   };
   NoAvailableActivities: undefined;
   AvailableActivities: {
@@ -140,6 +143,10 @@ export type ActivityProps = NativeStackScreenProps<
 export type CarreraProps = NativeStackScreenProps<
   RootStackParamList,
   'Carrera'
+>;
+export type CompaneroProps = NativeStackScreenProps<
+  RootStackParamList,
+  'CompanerosView'
 >;
 export type InfoProps = NativeStackScreenProps<RootStackParamList, 'Story'>;
 export type NoAvailableActivitiesProps = NativeStackScreenProps<

@@ -43,6 +43,10 @@ const JumpCard = (props: JumpCardProps) => {
   }
 
   const jumpPage = (pgNumber: number, requirements: number[]) => {
+    if (pgNumber === -2) {
+      return null;
+    }
+
     if (
       checkAnswers(
         requirements,
@@ -72,10 +76,13 @@ const JumpCard = (props: JumpCardProps) => {
                 ObjectView={
                   <CardComponent
                     onPressFunction={() =>
-                      jumpPage(jumpCard.target, jumpCard.require)
+                      jumpCard.disableWhen.length !== 0
+                        ? jumpPage(jumpCard.target, jumpCard.require)
+                        : {}
                     }
                     jumpCard={jumpCard}
                     disabled={
+                      jumpCard.disableWhen.length !== 0 &&
                       checkAnswers(
                         jumpCard.disableWhen,
                         props.userAnswers[0],

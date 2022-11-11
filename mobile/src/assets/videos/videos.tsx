@@ -7,6 +7,9 @@ const videos: {
     vidrio: require('./vidrio.mp4'),
     plastico: require('./plastico.mp4'),
     harina: require('./harina.mp4'),
+    camara: require('./camara.mp4'),
+    plancha: require('./plancha.mp4'),
+    telefono: require('./telefono.mp4'),
   },
 };
 

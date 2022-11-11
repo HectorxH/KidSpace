@@ -6,6 +6,8 @@ import {RSize} from '../../../utils/responsive';
 import ReceivingCodeBlock from './ReceivingItems/ReceivingCodeBlock';
 import ReceivingColorCircle from './ReceivingItems/ReceivingColorCircle';
 import ReceivingImage from './ReceivingItems/ReceivingImage';
+import ReceivingLetter from './ReceivingItems/ReceivingLetter';
+import ReceivingMoonBlock from './ReceivingItems/ReceivingMoonBlock';
 import ReceivingRectangle from './ReceivingItems/ReceivingRectangle';
 
 interface ReceivingItemProps {
@@ -74,6 +76,22 @@ const ReceivingItem = (props: ReceivingItemProps) => {
         </View>
       )}
 
+      {/* letter  */}
+      {draggable.receivingItems[itemNumber].type === 'letter' && (
+        <View style={styles.overlay}>
+          <ReceivingLetter
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
+
       {/* code block  */}
       {draggable.receivingItems[itemNumber].type === 'codeBlock' && (
         <View style={styles.overlay}>
@@ -88,6 +106,23 @@ const ReceivingItem = (props: ReceivingItemProps) => {
           />
         </View>
       )}
+
+      {/* moon block  */}
+      {draggable.receivingItems[itemNumber].type === 'moonBlock' && (
+        <View style={styles.overlay}>
+          <ReceivingMoonBlock
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            receivingValues={props.receivingValues}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
     </View>
   );
 };
@@ -95,6 +130,7 @@ const ReceivingItem = (props: ReceivingItemProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    elevation: 0,
   },
   overlay: {
     flex: 1,

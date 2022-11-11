@@ -78,6 +78,12 @@ export interface ITextBoxes {
   settings?: ITextBoxSettings;
 }
 
+export interface ITextBoxesDragChecking {
+  position: IPosition;
+  requirements: number[];
+  settings?: ITextBoxSettings;
+}
+
 export interface ITextBoxSettings {
   backgroundColor?: string;
   borderRadius?: number;
@@ -94,6 +100,10 @@ export interface ITextBoxSettings {
   borderTopWidth?: number;
   borderLeftWidth?: number;
   borderRightWidth?: number;
+  borderLeftColor?: string;
+  borderRightColor?: string;
+  borderTopColor?: string;
+  borderBottomColor?: string;
 }
 
 export interface IImages {
@@ -151,6 +161,8 @@ export interface IModels {
   type?: string;
   image360?: string;
   interactable?: string[];
+  temperaturas?: string[];
+  temperaturasModels?: string[];
   icon?: string;
   ARMaterials?: {
     materialOrder: string[];
@@ -277,6 +289,7 @@ export interface IActivityPage {
   items?: IImages[] | never[];
   bubbles?: IImages[] | never[];
   textBoxes?: ITextBoxes[] | never[];
+  textBoxesDragChecking?: ITextBoxesDragChecking[] | never[];
   texts?: ITexts[] | never[];
   textFieldQuestion?: ITextFieldQuestion[];
   alternativas?: IAlternativas[] | never[];

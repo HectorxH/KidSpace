@@ -13,6 +13,7 @@ import EstudianteRouter from './routes/Estudiante';
 import ApoderadoRouter from './routes/Apoderado';
 import ActivityRouter from './routes/Activity';
 import EstadisticasRouter from './routes/Estadisticas';
+import RepresentanteRouter from './routes/Representante';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
@@ -20,6 +21,7 @@ import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
 import Apoderado from './models/Apoderado';
 import Curso from './models/Curso';
+import Representante from './models/Representante';
 
 // Agrega la funcion .format como en python
 if (!String.prototype.format) {
@@ -119,7 +121,7 @@ app.post('/register', async (req, res) => {
     }
 
     const hashedPass = await bcrypt.hash(password, 10);
-    const user = new User({
+    const user : any = new User({
       nombres, apellidos, username, password: hashedPass, tipo, email,
     });
     await user.save();
@@ -145,6 +147,10 @@ app.post('/register', async (req, res) => {
         { $addToSet: { estudiantes: estudianteId } },
       );
       return res.json({ apoderado: await Apoderado.findById(apoderado?._id).populate('user') });
+    } if (user.tipo === 'representante') {
+      const representante = new Representante({ user: user._id });
+      await representante.save();
+      return res.sendStatus(200);
     }
     return res.sendStatus(200);
   } catch (e) {
@@ -201,6 +207,7 @@ app.use('/Profesor', checkAuth, ProfesorRouter);
 app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
+app.use('/Representante', checkAuth, RepresentanteRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
 app.use('/Estadisticas', checkAuth, EstadisticasRouter);
 

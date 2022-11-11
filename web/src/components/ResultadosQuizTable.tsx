@@ -32,14 +32,14 @@ const ResultadosQuizTable = (
   const cols: GridColDef[] = [
     {
       field: 'nombre',
-      flex: 1,
+      width: 300,
       headerName: 'Nombre',
       renderCell: ({ row }) => row,
     },
     {
       field: 'estado',
       headerName: 'Estado',
-      flex: 1,
+      width: 200,
       editable: true,
       renderCell: (params) => (
         <div>
@@ -52,7 +52,7 @@ const ResultadosQuizTable = (
     {
       field: 'pregunta1',
       headerName: 'Pregunta 1',
-      flex: 1,
+      width: 200,
       renderCell: ({ row }) => (
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
           {rows[row] && rows[row].respuesta1 === correctas[0] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />)}
@@ -63,7 +63,7 @@ const ResultadosQuizTable = (
     {
       field: 'pregunta2',
       headerName: 'Pregunta 2',
-      flex: 1,
+      width: 200,
       renderCell: ({ row }) => (
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
           {rows[row] && rows[row].respuesta2 === correctas[1] ? (<CheckIcon sx={{ color: '#A1C96A' }} />) : (<ClearIcon sx={{ color: '#EA6A6A' }} />)}

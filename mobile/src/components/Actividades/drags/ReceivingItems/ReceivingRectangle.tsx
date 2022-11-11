@@ -55,7 +55,8 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
 
     if (
       draggable.answer.includes(answer) &&
-      draggable.answer.indexOf(answer) === itemNumber
+      draggable.answer.length > itemNumber &&
+      draggable.answer[itemNumber] === answer
     ) {
       newPickedAnswers[pageNumber][dragNumber][itemNumber] = 2;
     }

@@ -185,9 +185,11 @@ const ActNavigation = (props: ActNavigationProps) => {
             {/* // Cuando es cuento o introduccion de desafio se usa navegacion con tap  */}
             <TouchableWithoutFeedback onPress={prevPageNumber}>
               <View style={styles.containerLeft}>
-                <View style={styles.viewIcon}>
-                  <Icon name={'arrow-left'} size={RSize(0.05, 'h')} />
-                </View>
+                {pageNumber !== 0 && (
+                  <View style={styles.viewIcon}>
+                    <Icon name={'arrow-left'} size={RSize(0.05, 'h')} />
+                  </View>
+                )}
               </View>
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={nextPageNumber}>

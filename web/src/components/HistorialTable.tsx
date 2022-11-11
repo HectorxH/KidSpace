@@ -15,17 +15,16 @@ interface ITableParams {
 const HistorialTable = (
   { rows }: ITableParams,
 ) => {
-  console.log(rows);
   const cols: GridColDef[] = [
     {
       field: 'actividad',
       headerName: 'Actividad',
-      flex: 1,
+      width: 400,
     },
     {
       field: 'tipo',
       headerName: 'Tipo de Actividad',
-      flex: 1,
+      width: 200,
       renderCell: ({ row }) => {
         if (row.tipo === 'clase') {
           return 'Docente';
@@ -37,7 +36,7 @@ const HistorialTable = (
     {
       field: 'fecha',
       headerName: 'Fecha',
-      flex: 1,
+      width: 200,
       renderCell: (({ row }) => (
         <div>
           {moment(row.fecha).format('DD/MM/YYYY')}
