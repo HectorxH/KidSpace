@@ -83,7 +83,7 @@ const LoginView = () => {
               </Stack>
               <FormControl fullWidth>
                 <InputLabel id="select-label">Tipo de cuenta</InputLabel>
-                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
+                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange} sx={{ textAlign: 'start' }}>
                   <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
                   <MenuItem value="apoderado"><Typography>Apoderado</Typography></MenuItem>
                   <MenuItem value="representante"><Typography>Representante</Typography></MenuItem>
