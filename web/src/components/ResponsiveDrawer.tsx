@@ -81,6 +81,24 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       tipo: ['profesor'],
       visible: true,
     },
+    {
+      uid: 5,
+      text: 'Profesores',
+      icon: <GroupIcon />,
+      paths: ['/profesores'],
+      restricted: true,
+      tipo: ['profesor'], //
+      visible: true,
+    },
+    // {
+    //   uid: 6,
+    //   text: 'Estadisticas',
+    //   icon: <GroupIcon />,
+    //   paths: ['/estadisticas'],
+    //   restricted: true,
+    //   tipo: ['profesor'], //
+    //   visible: true,
+    // },
   ];
 
   let seccionActual = 'Pagina no encontrada';
