@@ -36,7 +36,6 @@ import ActividadDocenteView from './views/ActividadDocenteView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
 import { AuthProvider } from './hooks/useAuth';
-import LoadingView from './views/LoadingView';
 import RedirectHomeRoute from './layout/RedirectHomeRoute';
 
 axios.defaults.withCredentials = true;
@@ -88,9 +87,8 @@ const App = () => (
       <ThemeProvider theme={theme}>
         <AuthProvider>
           <Routes>
-            <Route path="/loading" element={<LoadingView />} />
             <Route element={<ProtectedRoute loggedout />}>
-              <Route path="/landing" element={<LandingView />} />
+              <Route path="/" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
             </Route>
