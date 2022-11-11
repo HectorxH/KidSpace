@@ -1,7 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import {
   Button, Theme,
-  Box,
   Typography,
 } from '@mui/material';
 import React from 'react';
@@ -39,13 +38,13 @@ const ActividadIndividualTable = (
     {
       field: 'actividad',
       headerName: 'Nombre',
-      flex: 1.5,
+      width: 400,
       renderCell: (params) => params.row,
     },
     {
       field: 'porcentaje',
       headerName: '% del curso',
-      flex: 1,
+      width: 200,
       renderCell: (params) => (
         <div>
           {_.round(100 * (Number(rowsData[params.row] || 0)), 1)} %
@@ -55,10 +54,8 @@ const ActividadIndividualTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      width: 200,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
       renderCell: (params) => (
         <div>
           <Button
@@ -79,19 +76,17 @@ const ActividadIndividualTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
-      <DataGrid
-        density="comfortable"
-        getRowHeight={() => 'auto'}
-        autoHeight
-        hideFooter
-        columns={cols}
-        rows={actividades}
-        getRowId={(row: any) => row}
-        disableSelectionOnClick
-        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
-      />
-    </Box>
+    <DataGrid
+      density="comfortable"
+      getRowHeight={() => 'auto'}
+      autoHeight
+      hideFooter
+      columns={cols}
+      rows={actividades}
+      getRowId={(row: any) => row}
+      disableSelectionOnClick
+      sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
+    />
   );
 };
 

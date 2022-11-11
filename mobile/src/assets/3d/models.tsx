@@ -82,6 +82,60 @@ const Models: {
     type: 'GLB',
     resources: [],
   },
+  betelgeuse: {
+    model: require('./astronomia2/estrella/betelgeuse.glb'),
+    type: 'GLB',
+    resources: [],
+    // resources: [require('./astronomia2/estrella/betelgeuse.png')],
+  },
+  rigel: {
+    model: require('./astronomia2/estrella/rigel.glb'),
+    type: 'GLB',
+    resources: [],
+    // resources: [require('./astronomia2/estrella/rigel.png')],
+  },
+  sirius: {
+    model: require('./astronomia2/estrella/sirius.glb'),
+    type: 'GLB',
+    resources: [],
+    // resources: [require('./astronomia2/estrella/sirius.png')],
+  },
+  sun: {
+    model: require('./astronomia2/estrella/sun.glb'),
+    type: 'GLB',
+    resources: [],
+    // resources: [require('./astronomia2/estrella/sun.png')],
+  },
+  mesaDesarmada: {
+    model: require('./tecnologicas/mesa/mesa_desarmada.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  mesaArmada: {
+    model: require('./tecnologicas/mesa/mesa_armada.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  martilloDesarmado: {
+    model: require('./tecnologicas/martillo/martillo_desarmado.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  martilloArmado: {
+    model: require('./tecnologicas/martillo/martillo_armado.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  skateDesarmado: {
+    model: require('./tecnologicas/skate/skate_desarmado.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  skateArmado: {
+    model: require('./tecnologicas/skate/skate_armado.glb'),
+    type: 'GLB',
+    resources: [],
+  },
   caja_torta: {
     model: require('./diseño2/caja_torta/caja-torta.obj'),
     resources: [],

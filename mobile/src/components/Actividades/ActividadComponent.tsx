@@ -16,6 +16,7 @@ import Inventario from '../inventario/inventario';
 import MaterialSelector from './MaterialSelector';
 import {IActividadesComponentParams} from '../../types/story';
 import MarkerTrackerFeedback from './MarkerTrackerFeedback';
+import TemperaturaSelector from './TemperaturaSelector';
 
 interface ActividadComponentProps {
   actividadesComponentParams: IActividadesComponentParams;
@@ -80,6 +81,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
           {useAR === true && (
             <View style={styles.overlay}>
               <MaterialSelector
+                materialSelectorParams={materialSelectorParams}
+              />
+            </View>
+          )}
+          {useAR === true && (
+            <View style={styles.overlay}>
+              <TemperaturaSelector
                 materialSelectorParams={materialSelectorParams}
               />
             </View>

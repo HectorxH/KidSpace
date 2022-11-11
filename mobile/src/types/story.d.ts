@@ -97,6 +97,20 @@ export interface IMaterialSelectorParams {
   selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
+export interface ITemperaturaSelectorParams {
+  pageNumber: number;
+  materialSelectorToggle: [number, ReactStateSetter<number>];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  selectedModelMaterials: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+  activeModelIndex: number;
+  models3d: IModels[][];
+  selectedPageOrder: [number, ReactStateSetter<number>];
+}
+
 export interface IMarkerTrackerFeedbackParams {
   pageNumber: number;
   activeTrackerIndex: number[];
@@ -120,6 +134,7 @@ export interface IStoryComponentParams {
   pickedAnswersDropdown: [number[][][], ReactStateSetter<number[][][]>];
   isDragItemPicked: [boolean[][][], ReactStateSetter<boolean[][][]>];
   userDragAnswers: [string[][][], ReactStateSetter<string[][][]>];
+  rightDragAnswers: string[][][];
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   pickedDragAnswers: [number[][][], ReactStateSetter<number[][][]>];

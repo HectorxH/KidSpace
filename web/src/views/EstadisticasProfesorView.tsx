@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Card,
-  Stack, Theme, Typography,
+  Stack, Theme, Typography, Grid,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -183,50 +183,76 @@ const EstadisticasProfesorView = () => {
   if (!curso || !tiempoData || !countCorrectas
     || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
   return (
-    <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-      <Box sx={{ backgroundColor: '#B878EA', px: 4, py: 2 }}>
+    <Stack>
+      <Box sx={{
+        backgroundColor: '#B878EA', pb: 4, px: 4, py: 2,
+      }}
+      >
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
           <b>Estadísticas del curso: </b>
           {curso.nombre}
         </Typography>
       </Box>
-      <Stack spacing={3} sx={{ px: 5, py: 1 }}>
+      <Stack sx={{ px: 5, py: 1, m: 3 }}>
         <Typography variant="h5">
           Actividades en la sala de clases (docentes)
         </Typography>
-        <Stack
-          direction="row"
-          spacing={3}
-          sx={{
-            justifyContent: 'center',
-            alingContent: 'center',
-          }}
+        <Grid
+          container
+          spacing={2}
+          justifyContent="center"
+          sx={{ marginBottom: 3, minHeight: 300 }}
         >
-          <Card sx={{
-            p: 3, width: 3.5 / 6, borderRadius: 5, alignItems: 'center',
+          <Grid item xs={12} sm={12} md={7}>
+            <Card sx={{
+              p: 3, borderRadius: 5, alignItems: 'center', height: '100%',
+            }}
+            >
+              <Bar
+                data={makeTiempoData(tiempoData)}
+                options={tiempoOptions}
+              />
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={12} md={5}>
+            <Card sx={{
+              p: 1, borderRadius: 5, height: '100%',
+            }}
+            >
+              <Doughnut data={makeCorrectasData(countCorrectas)} options={quicesOptions} />
+            </Card>
+          </Grid>
+        </Grid>
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <Bar
-              data={makeTiempoData(tiempoData)}
-              options={tiempoOptions}
-            />
-          </Card>
-          <Card sx={{
-            p: 1, width: 2.5 / 6, borderRadius: 5,
-          }}
-          >
-            <Doughnut data={makeCorrectasData(countCorrectas)} options={quicesOptions} />
-          </Card>
+            <ActividadDocenteTable rowsData={actividadesCurso} />
+          </Stack>
         </Stack>
-        <ActividadDocenteTable rowsData={actividadesCurso} />
-        <Typography variant="h5">
+        <Typography variant="h5" sx={{ alignSelf: 'center' }}>
           Actividades Individuales
         </Typography>
-        <ActividadIndividualTable rowsData={actividadesIndividual} />
-        <Typography variant="h5">
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
+          }}
+          >
+            <ActividadIndividualTable rowsData={actividadesIndividual} />
+          </Stack>
+        </Stack>
+        <Typography variant="h5" sx={{ alignSelf: 'center' }}>
           Ranking de Estudiantes
         </Typography>
-        <RankingTable rowsData={rank} />
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
+          }}
+          >
+            <RankingTable rowsData={rank} />
+          </Stack>
+        </Stack>
       </Stack>
     </Stack>
   );

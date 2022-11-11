@@ -1,0 +1,1584 @@
+[
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Laura se dedica a la *astrofísica*",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estudia los planetas y las estrellas utilizando equipos especiales",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como satélites y telescopios",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Chile es un país reconocido por ser el mejor lugar para estudiar el espacio",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por esto, Laura trabaja durante la noche, observando el universo",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Nuestro universo está compuesto por estructuras cósmicas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Algunas de estas son los planetas y las estrellas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En nuestro sistema solar, existen un total de 8 planetas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Mercurio es el planeta más chico de nuestro sistema solar y más cercano al Sol",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_4",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Venus refleja mucha luz, por lo que podemos ver este planeta en el cielo",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_5",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La Tierra es el planeta en el cual vivimos",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_6",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Marte tiene un aspecto rojizo y es el planeta más alejado del Sol",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Júpiter se conoce como el gigante gaseoso",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_8",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "ya que está formado mayoritariamente por gases",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_8",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Urano es un planeta de aspecto azul",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y está compuesto de agua, metano y amoníaco",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Neptuno es conocido como el gigante helado, es el planeta más lejano del sol",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_10",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y su color azul se debe a la presencia de metano, al igual que Urano",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_10",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si bien algunos planetas son visibles desde la Tierra",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraQuestion",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "lo que vemos en el cielo nocturno son mayoritariamente estrellas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraQuestion",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una estrella es un cuerpo de gran masa que emite luz propia",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_11",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una de las estrellas nos da el calor para la vida. ¿Cuál crees qué es?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraQuestion",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Sol"],
+        "answers": [
+          {
+            "text": "Betelgeuse",
+            "position": {
+              "start": [1.5, 10.5],
+              "end": [11.5, 13]
+            }
+          },
+          {
+            "text": "Sol",
+            "position": {
+              "start": [1.5, 13.5],
+              "end": [11.5, 16]
+            }
+          },
+          {
+            "text": "Rigel",
+            "position": {
+              "start": [1.5, 16.5],
+              "end": [11.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Exacto, el Sol es la estrella más cercana a la Tierra",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_12",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se caracteriza por emitir la luz y el calor. El Sol tiene aspecto amarillo",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_12",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las estrellas se clasifican en tipos espectrales",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos se basan en el color y la temperatura de una estrella",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_13",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, las estrellas más frías son aquellas que poseen color rojo",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_14",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las estrellas de color amarillo son más calientes que las estrellas rojas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_15",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las estrellas blancas son aún más calientes que las amarillas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_16",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y las estrellas más calientes son aquellas que tienen el color azul",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_17",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa la imágen. ¿Cuál de las tres estrellas es la más fría?",
+        "position": {
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_18",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Antares"],
+        "answers": [
+          {
+            "text": "Antares",
+            "position": {
+              "start": [8.5, 10.5],
+              "end": [18.5, 13]
+            }
+          },
+          {
+            "text": "Rigel",
+            "position": {
+              "start": [8.5, 13.5],
+              "end": [18.5, 16]
+            }
+          },
+          {
+            "text": "Sol",
+            "position": {
+              "start": [8.5, 16.5],
+              "end": [18.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Antares es la estrella de color rojo, y por esto es la más fría de las tres",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_18",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La temperatura de Antares alcanza los 3500 grados Celsius",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_18",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En cambio, el Sol alcanza 6000 grados Celsius, y Rigel 11.000 °C.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_2_18",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esta diferencia hace que el Sol tenga color amarillo y Rigel azul",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora conoces bastante sobre las estrellas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Laura te pide ayuda para completar un informe",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "sobre el efecto de la temperatura en el color de las estrellas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Laura recién instalo un simulador de universo en su laboratorio",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Este permite subir y bajar la temperatura de una estrella",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "sin tener que esperar años para un cambio natural de su temperatura",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podrás encontrar una estrella en tu inventario. Cambia su temperatura, usando el termómetro",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa lo que ocurre. Registra tus observaciones, completando un ejercicio",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "estrella"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Acceda al ejercicio con el botón que está en la esquina superior izquierda.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "betelgeuse",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "icon": "estrella",
+          "interactable": ["temperatura"],
+          "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
+          "temperaturasModels": ["betelgeuse", "sol", "sirius", "rigel"]
+        }
+      ]
+    },
+
+    "background": "",
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 45,
+        "require": [44],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["SSD", "Teclado", "GPU"],
+        "draggableItems": [
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "GPU",
+            "position": {
+              "start": [0.5, 8.7],
+              "end": [4.5, 10.7]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "SSD",
+            "position": {
+              "start": [0.5, 11.8],
+              "end": [4.5, 13.8]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "",
+            "value": "Teclado",
+            "position": {
+              "start": [0.5, 14.9],
+              "end": [4.5, 16.9]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          },
+          {
+            "type": "text",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0, 0],
+              "end": [0, 0]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

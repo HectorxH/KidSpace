@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import {
-  Button, Theme, Box, Typography,
+  Button, Theme, Typography,
 } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -33,13 +33,13 @@ const ActividadDocenteTable = (
     {
       field: 'actividad',
       headerName: 'Actividad',
-      flex: 1,
+      width: 200,
       renderCell: (({ row }) => row),
     },
     {
       field: 'estado',
       headerName: 'Estado',
-      flex: 1,
+      width: 200,
       renderCell: ((params) => (
         <div>
           <Typography sx={{ fontSize: '15px', color: rowsData[params.row] ? '#A1C96A' : '#EA6A6A' }}>
@@ -51,7 +51,7 @@ const ActividadDocenteTable = (
     {
       field: 'porcentaje',
       headerName: '% del curso',
-      flex: 1,
+      width: 200,
       renderCell: ({ row }) => (
         <div>
           {_.round((Number(rowsData[row]) || 0) * 100, 1)} %
@@ -61,10 +61,8 @@ const ActividadDocenteTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      width: 200,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
       renderCell: ({ row }) => (
         <div>
           <Button
@@ -85,19 +83,19 @@ const ActividadDocenteTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
-      <DataGrid
-        density="comfortable"
-        getRowHeight={() => 'auto'}
-        autoHeight
-        hideFooter
-        columns={cols}
-        rows={actividades}
-        getRowId={(row) => row}
-        disableSelectionOnClick
-        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
-      />
-    </Box>
+    <DataGrid
+      density="comfortable"
+      getRowHeight={() => 'auto'}
+      autoHeight
+      hideFooter
+      columns={cols}
+      rows={actividades}
+      getRowId={(row) => row}
+      disableSelectionOnClick
+      sx={{
+        borderRadius: 5, paddingLeft: 3, paddingRight: 3,
+      }}
+    />
   );
 };
 
