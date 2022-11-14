@@ -123,58 +123,90 @@ const EstadisticasInstitucionView = () => {
           src={img}
         />
       </Stack>
-      <Stack justifyContent="center" direction="row" spacing={15}>
-        <DateRangePicker
-          onChange={(item: any) => changeDate([item.selection])}
-          moveRangeOnFirstSelection={false}
-          months={1}
-          ranges={state}
-          direction="horizontal"
-          preventSnapRefocus
-          calendarFocus="backwards"
-          weekStartsOn={1}
-          dateDisplayFormat="dd/MM/yyyy"
-          locale={locale}
-        />
-        <Stack spacing={10} alignSelf="center">
-          <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between" spacing={1}>
-            <Typography alignSelf={{ sm: 'center' }}>
-              Seleccione un profesor:
+      <Stack justifyContent="center">
+        <Grid
+          container
+          alignItems="center"
+        >
+          <Grid item xs={12} sm={6} md={6}>
+            <Typography align="center" sx={{ pb: 2 }}>
+              Seleccione un rango de fechas:
             </Typography>
-            <TextField
-              select
-              id="select-profesor"
-              sx={{ minWidth: '270px' }}
-              label="Profesor"
-              defaultValue=""
-              onChange={(e) => changeProfesor(e)}
-              required
+            <Stack alignItems="center">
+              <DateRangePicker
+                onChange={(item: any) => changeDate([item.selection])}
+                moveRangeOnFirstSelection={false}
+                months={1}
+                ranges={state}
+                direction="horizontal"
+                preventSnapRefocus
+                calendarFocus="backwards"
+                weekStartsOn={1}
+                dateDisplayFormat="dd/MM/yyyy"
+                locale={locale}
+              />
+            </Stack>
+          </Grid>
+          <Grid item xs={12} sm={6} md={6}>
+            <Stack
+              spacing={3}
+              alignItems="center"
+              py={5}
             >
-              {profesores?.map((p) => (
-                <MenuItem key={p._id} value={p._id}>{p.nombre}</MenuItem>
-              ))}
-            </TextField>
-          </Stack>
-          <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="space-between">
-            <Typography alignSelf={{ sm: 'center' }}>
-              Seleccione un curso:
-            </Typography>
-            <TextField
-              select
-              id="select-curso"
-              sx={{ minWidth: '270px' }}
-              label="Curso"
-              defaultValue=""
-              disabled={isDisabledCurso}
-              onChange={(e) => setCurso(e.target.value)}
-            >
-              <MenuItem key={0} value="">Ninguno</MenuItem>
-              {cursos?.map((c) => (
-                <MenuItem key={c._id} value={c._id}>{c.nombre}</MenuItem>
-              ))}
-            </TextField>
-          </Stack>
-        </Stack>
+              <Grid
+                container
+                alignItems="center"
+              >
+                <Grid item xs={12} sm={6} md={4}>
+                  <Typography variant="subtitle2" px={4}>
+                    Seleccione un profesor:
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6} md={7}>
+                  <TextField
+                    select
+                    id="select-profesor"
+                    sx={{ minWidth: '270px' }}
+                    label="Profesor"
+                    defaultValue=""
+                    onChange={(e) => changeProfesor(e)}
+                    required
+                  >
+                    {profesores?.map((p) => (
+                      <MenuItem key={p._id} value={p._id}>{p.nombre}</MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                alignItems="center"
+              >
+                <Grid item xs={12} sm={6} md={4}>
+                  <Typography variant="subtitle2" px={4}>
+                    Seleccione un curso:
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6} md={7}>
+                  <TextField
+                    select
+                    id="select-curso"
+                    sx={{ minWidth: '270px' }}
+                    label="Curso"
+                    defaultValue=""
+                    disabled={isDisabledCurso}
+                    onChange={(e) => setCurso(e.target.value)}
+                  >
+                    <MenuItem key={0} value="">Ninguno</MenuItem>
+                    {cursos?.map((c) => (
+                      <MenuItem key={c._id} value={c._id}>{c.nombre}</MenuItem>
+                    ))}
+                  </TextField>
+                </Grid>
+              </Grid>
+            </Stack>
+          </Grid>
+        </Grid>
       </Stack>
       <Stack sx={{ pr: 10 }}>
         <Button

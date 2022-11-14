@@ -99,7 +99,7 @@ const AgregarProfesorView = () => {
           >
             <Grid
               container
-              spacing={1}
+              alignItems="center"
             >
               <Grid item xs={12} sm={6} md={3}>
                 <Typography variant="subtitle2" px={4}>
@@ -112,7 +112,7 @@ const AgregarProfesorView = () => {
             </Grid>
             <Grid
               container
-              spacing={1}
+              alignItems="center"
             >
               <Grid item xs={12} sm={6} md={3}>
                 <Typography variant="subtitle2" px={4}>
@@ -125,7 +125,7 @@ const AgregarProfesorView = () => {
             </Grid>
             <Grid
               container
-              spacing={1}
+              alignItems="center"
             >
               <Grid item xs={12} sm={6} md={3}>
                 <Typography variant="subtitle2" px={4}>
