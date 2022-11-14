@@ -16,6 +16,18 @@ const portadaAct3Cuento1 : string = require('../assets/diseños_cuento_intro.png
 const portadaAct3Desafio2 : string = require('../assets/diseños_desafio_creativo.png');
 const portadaAct3Desafio1 : string = require('../assets/diseños_desafio_inter.png');
 
+const portadaAct4Global: string = require('../assets/webApoderados/solucionesTecnologicas.png');
+// const portadaAct4Cuento2 : string = require('../assets/solucionesTecno_cuento_inter.png');
+// const portadaAct4Cuento1 : string = require('../assets/solucionesTecno_cuento_intro.png');
+// const portadaAct4Desafio2 : string = require('../assets/solucionesTecno_desafio_creativo.png');
+// const portadaAct4Desafio1 : string = require('../assets/solucionesTecno_desafio_inter.png');
+
+const portadaAct5Global: string = require('../assets/webApoderados/reciclaje.png');
+// const portadaAct5Cuento2 : string = require('../assets/reciclaje_cuento_inter.png');
+// const portadaAct5Cuento1 : string = require('../assets/reciclaje_cuento_intro.png');
+// const portadaAct5Desafio2 : string = require('../assets/reciclaje_desafio_creativo.png');
+// const portadaAct5Desafio1 : string = require('../assets/reciclaje_desafio_inter.png');
+
 const quiz : string = require('../assets/quiz.png');
 
 export default [
@@ -81,5 +93,47 @@ export default [
     img5: quiz,
     path: '/actividades/unidad/3/actividad/3',
     pathAsignar: '/actividades/unidad/3/actividad/3/asignar/',
+  },
+  {
+    id: 4,
+    nunidad: 2,
+    nactividad: 4,
+    titulo: 'Actividad: Soluciones Técnologicas',
+    nombreActividad: 'materiales',
+    descripcion: 'En esta actividad vas a conocer a Alec, que se dedica al diseño industrial. Junto con Alec, podrás armar y desarmar diversos objetos, para aprender sobre sus partes y las funciones que estas brindan. Además, aprenderás a detectar las problemáticas y las necesidades que resuelven distintos objetos técnicos que te rodean.',
+    portada: portadaAct4Global,
+    cuento1: 'En este cuento, los y las estudiantes conocerán a Alec, que trabaja en el diseño industrial. En este cuento se revisarán los conceptos base sobre el análisis estructural de objetos tecnológicos, con una mirada hacia el análisis de sus partes para entender el total.',
+    desafio1: 'En este desafío, los y las estudiantes podrán aplicar lo aprendido para analizar y observar tres objetos tecnológicos. Durante la actividad, cada estudiante podrá armar y desarmar diversos objetos, para analizarlos tanto en su totalidad, como también por parte. Todo esto con el fin de comprender cómo las componentes se relacionan para dar una respuesta frente a alguna problemática específica.',
+    cuento2: 'En este cuento, los y las estudiantes  continuarán adentrándose en el mundo de los objetos tecnológicos. Durante este cuento, se desarrollará la idea sobre evolución tecnológica que sufrió todo objeto tecnológico para resolver distintos problemas de la humanidad.',
+    desafio2: 'En este desafío, los y las estudiantes tendrán la oportunidad de jugar con objetos físicos para avanzar dentro de la aplicación.  El profesor o la profesora debe entregar tarjetas físicas impresas, y los y las estudiantes tendrán la misión de formar un par de tarjetas físicas y escanear el patrón formado, según la pregunta que aparezca en la pantalla. En caso de que se haga escaneo de una tarjeta correcta, cada estudiante podrá ver un video corto sobre la evolución de un objeto específico, también en el entorno de realidad virtual.',
+    quiz: 'En el quiz final los estudiantes podrán responder las preguntas asociadas a la materia de la actividad. Las respuestas serán utilizadas para proporcionar una evaluación de entendimiento para el o la docente.',
+    img1: portadaAct2Cuento1,
+    img2: portadaAct2Desafio1,
+    img3: portadaAct2Cuento2,
+    img4: portadaAct2Desafio2,
+    img5: quiz,
+    path: '/actividades/unidad/2/actividad/4',
+    pathAsignar: '/actividades/unidad/2/actividad/4/asignar/',
+  },
+  {
+    id: 5,
+    nunidad: 2,
+    nactividad: 5,
+    titulo: 'Actividad: Reciclaje',
+    nombreActividad: 'materiales',
+    descripcion: 'En esta actividad vas a conocer a Alec, que se dedica al diseño industrial. Junto con Alec, podrás armar y desarmar diversos objetos, para aprender sobre sus partes y las funciones que estas brindan. Además, aprenderás a detectar las problemáticas y las necesidades que resuelven distintos objetos técnicos que te rodean.',
+    portada: portadaAct5Global,
+    cuento1: 'En este cuento, los y las estudiantes conocerán a Alec, que trabaja en el diseño industrial. En este cuento se revisarán los conceptos base sobre el análisis estructural de objetos tecnológicos, con una mirada hacia el análisis de sus partes para entender el total.',
+    desafio1: 'En este desafío, los y las estudiantes podrán aplicar lo aprendido para analizar y observar tres objetos tecnológicos. Durante la actividad, cada estudiante podrá armar y desarmar diversos objetos, para analizarlos tanto en su totalidad, como también por parte. Todo esto con el fin de comprender cómo las componentes se relacionan para dar una respuesta frente a alguna problemática específica.',
+    cuento2: 'En este cuento, los y las estudiantes  continuarán adentrándose en el mundo de los objetos tecnológicos. Durante este cuento, se desarrollará la idea sobre evolución tecnológica que sufrió todo objeto tecnológico para resolver distintos problemas de la humanidad.',
+    desafio2: 'En este desafío, los y las estudiantes tendrán la oportunidad de jugar con objetos físicos para avanzar dentro de la aplicación.  El profesor o la profesora debe entregar tarjetas físicas impresas, y los y las estudiantes tendrán la misión de formar un par de tarjetas físicas y escanear el patrón formado, según la pregunta que aparezca en la pantalla. En caso de que se haga escaneo de una tarjeta correcta, cada estudiante podrá ver un video corto sobre la evolución de un objeto específico, también en el entorno de realidad virtual.',
+    quiz: 'En el quiz final los estudiantes podrán responder las preguntas asociadas a la materia de la actividad. Las respuestas serán utilizadas para proporcionar una evaluación de entendimiento para el o la docente.',
+    img1: portadaAct2Cuento1,
+    img2: portadaAct2Desafio1,
+    img3: portadaAct2Cuento2,
+    img4: portadaAct2Desafio2,
+    img5: quiz,
+    path: '/actividades/unidad/2/actividad/5',
+    pathAsignar: '/actividades/unidad/2/actividad/5/asignar/',
   },
 ];
