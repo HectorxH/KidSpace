@@ -43,6 +43,10 @@ interface IRank {
   cantidad: number
 }
 
+interface IInstitucion {
+  institucion: boolean
+}
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -130,7 +134,7 @@ const makeCorrectasData = (data: ICountCorrectas) => {
   };
 };
 
-const EstadisticasProfesorView = () => {
+const EstadisticasProfesorView = (institucion: IInstitucion) => {
   const { cursoId } = useParams();
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
@@ -228,7 +232,7 @@ const EstadisticasProfesorView = () => {
             maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <ActividadDocenteTable rowsData={actividadesCurso} />
+            <ActividadDocenteTable rowsData={actividadesCurso} institucion={institucion} />
           </Stack>
         </Stack>
         <Typography variant="h5" sx={{ alignSelf: 'center' }}>
@@ -239,7 +243,7 @@ const EstadisticasProfesorView = () => {
             maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <ActividadIndividualTable rowsData={actividadesIndividual} />
+            <ActividadIndividualTable rowsData={actividadesIndividual} institucion={institucion} />
           </Stack>
         </Stack>
         <Typography variant="h5" sx={{ alignSelf: 'center' }}>
@@ -250,7 +254,7 @@ const EstadisticasProfesorView = () => {
             maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <RankingTable rowsData={rank} />
+            <RankingTable rowsData={rank} institucion={institucion} />
           </Stack>
         </Stack>
       </Stack>

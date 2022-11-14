@@ -6,10 +6,16 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import SinActividades from '../../components/SinActividades';
-import { IActividadLog } from '../../types/actividadLog';
+
+interface IHistorial {
+  _id: string,
+  actividad: string,
+  curso: string,
+  fecha: Date,
+}
 
 interface ITableParams {
-  rows: IActividadLog[],
+  rows: IHistorial[],
 }
 
 const HistorialIntitucionTable = (
@@ -26,7 +32,6 @@ const HistorialIntitucionTable = (
       field: 'curso',
       headerName: 'Curso',
       width: 200,
-      renderCell: ({ row }) => row.tipo,
     },
     {
       field: 'fecha',
@@ -51,6 +56,7 @@ const HistorialIntitucionTable = (
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}
             disableSelectionOnClick
+            hideFooter
             sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
           />
         )}

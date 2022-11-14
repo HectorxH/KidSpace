@@ -18,13 +18,22 @@ interface IActividades {
   [key: string]: number
 }
 
+interface IInstitucion {
+  institucion: boolean
+}
+
 interface ITableParams {
   rowsData: IActividades,
+  institucion: IInstitucion,
 }
 
 const ActividadDocenteTable = (
-  { rowsData }: ITableParams,
+  { rowsData, institucion }: ITableParams,
 ) => {
+  let hideColumn = false;
+  if (institucion) {
+    hideColumn = true;
+  }
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
     navigate(`actividadDocente/${encodeURIComponent(i)}`);
@@ -33,13 +42,15 @@ const ActividadDocenteTable = (
     {
       field: 'actividad',
       headerName: 'Actividad',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       renderCell: (({ row }) => row),
     },
     {
       field: 'estado',
       headerName: 'Estado',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       renderCell: ((params) => (
         <div>
           <Typography sx={{ fontSize: '15px', color: rowsData[params.row] ? '#A1C96A' : '#EA6A6A' }}>
@@ -51,7 +62,8 @@ const ActividadDocenteTable = (
     {
       field: 'porcentaje',
       headerName: '% del curso',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       renderCell: ({ row }) => (
         <div>
           {_.round((Number(rowsData[row]) || 0) * 100, 1)} %
@@ -61,8 +73,10 @@ const ActividadDocenteTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       sortable: false,
+      hide: hideColumn,
       renderCell: ({ row }) => (
         <div>
           <Button
@@ -85,7 +99,7 @@ const ActividadDocenteTable = (
   return (
     <DataGrid
       density="comfortable"
-      getRowHeight={() => 'auto'}
+      getRowHeight={() => 60}
       autoHeight
       hideFooter
       columns={cols}

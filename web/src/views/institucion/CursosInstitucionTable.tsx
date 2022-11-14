@@ -10,7 +10,8 @@ import SinActividades from '../../components/SinActividades';
 interface ICursosTable {
   _id: string;
   nombre: string;
-  fecha: string;
+  cantidad: number;
+  fecha: Date;
 }
 
 interface ITableParams {
@@ -57,6 +58,7 @@ const CursosIntitucionTable = (
             rows={Object.values(rows)}
             getRowId={(row: any) => row._id}
             disableSelectionOnClick
+            hideFooter
             sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
           />
         )}

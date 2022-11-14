@@ -110,7 +110,7 @@ const App = () => (
                   <Route path="/cursos/:cursoId" element={<ParticipantesView />} />
                   <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
                   <Route path="/cursos/:cursoId/qr" element={<QRView />} />
-                  <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView />} />
+                  <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView institucion={false} />} />
                   <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:actividad" element={<ActividadDocenteView />} />
                   <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:actividad" element={<ActividadIndividualView />} />
                   <Route path="/cursos/:cursoId/estadisticas/estadisticasEstudiante/:pupiloId" element={<EstadisticasApoderadoView />} />
@@ -123,6 +123,7 @@ const App = () => (
                   <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
                   <Route path="/estadisticas" element={<EstadisticasInstitucionView />} />
                   <Route path="/estadisticas/:profesorId" element={<EstadisticasProfesorInstitucionView />} />
+                  <Route path="/estadisticas/:profesorId/:cursoId" element={<EstadisticasProfesorView institucion />} />
                 </Route>
                 <Route element={<ProtectedRoute noProfesor />}>
                   <Route path="/pupilo" element={<PupilosView />} />

@@ -87,7 +87,7 @@ const EstadisticasInstitucionView = () => {
   const handleReporte = () => (
     curso === ''
       ? navigate(`/estadisticas/${profesor}`)
-      : navigate(`/cursos/${curso}/estadisticas`)
+      : navigate(`/estadisticas/${profesor}/${curso}`)
   );
 
   const reporteActivo = () => {
