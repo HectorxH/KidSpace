@@ -21,10 +21,6 @@ const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
     toggleValues,
     nPlacedItems,
   } = props.temperaturaSelectorParams;
-  console.log(models3d[pageNumber].length);
-  console.log(models3d[pageNumber]);
-  console.log(activeModelIndex);
-  console.log(nPlacedItems[pageNumber]);
   if (
     models3d[pageNumber].length === 0 ||
     nPlacedItems[pageNumber] === 0 ||

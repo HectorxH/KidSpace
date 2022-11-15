@@ -79,10 +79,19 @@ export interface IInventarioParams {
   positions: [Vec3[][], ReactStateSetter<Vec3[][]>];
   placedItems: [number[][], ReactStateSetter<number[][]>];
   nPlacedItems: [number[], ReactStateSetter<number[]>];
-  setMaterialSelectorToggle: ReactStateSetter<number>;
   hideInventory: boolean[];
   toggleDefaultValue: boolean[];
   toggleValues: number[][];
+
+  modelProps: IModelProps[][];
+  updateMaterial: [boolean, ReactStateSetter<boolean>];
+  setSelectedModelMaterials: ReactStateSetter<{
+    materialOrder: string[];
+    materialChoices: string[][];
+  }>;
+  setMaterialSelectorToggle: ReactStateSetter<number>;
+  setArmarDesarmarToggle: ReactStateSetter<number>;
+  setTemperaturaSelectorToggle: ReactStateSetter<number>;
 }
 
 export interface IMaterialSelectorParams {
@@ -112,6 +121,7 @@ export interface IArmarDesarmarParams {
   selectedPageOrder: [number, ReactStateSetter<number>];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
   toggleValues: number[][];
+  nPlacedItems: number[];
 }
 
 export interface ITemperaturaSelectorParams {

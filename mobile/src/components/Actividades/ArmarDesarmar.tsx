@@ -19,9 +19,11 @@ const ArmarDesarmar = (props: ArmarDesarmarProps) => {
     selectedPageOrder,
     useAlt,
     toggleValues,
+    nPlacedItems,
   } = props.armarDesarmarParams;
   if (
     models3d[pageNumber].length === 0 ||
+    nPlacedItems[pageNumber] === 0 ||
     armarDesarmarToggle[0] === 0 ||
     toggleValues[pageNumber][0] === 1
   ) {
