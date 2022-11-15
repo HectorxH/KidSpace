@@ -8,13 +8,25 @@ import {
   Stack,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
 import imgPipoFeliz from '../../assets/pipo_feliz.png';
+import { useAuth } from '../../hooks/useAuth';
 
 const Aprobado = () => {
   const { planId } = useParams();
 
-  const handleClick = () => {
-    console.log(planId);
+  const { logout } = useAuth();
+
+  const handleClick = async () => {
+    try {
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Representante/plan`, { plan: planId });
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+    }
   };
 
   return (

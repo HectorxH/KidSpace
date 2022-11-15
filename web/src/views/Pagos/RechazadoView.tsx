@@ -8,10 +8,13 @@ import {
   Stack,
 } from '@mui/material';
 import imgPipoTriste from '../../assets/pipo_triste.png';
+import { useAuth } from '../../hooks/useAuth';
 
 const Rechazado = () => {
+  const { logout } = useAuth();
+
   const handleClick = () => {
-    console.log('click');
+    logout();
   };
 
   return (

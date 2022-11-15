@@ -14,12 +14,14 @@ import {
   InputLabel,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { IUser } from '../types/user';
 import logo from '../assets/logo-horizontal.png';
 
 const LoginView = () => {
+  const params = useParams();
+  const { planId } = params;
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
   const [tipo, setTipo] = useState('profesor');
@@ -105,7 +107,14 @@ const LoginView = () => {
               )}
               <Stack spacing={1}>
                 <Button type="submit" variant="contained">Iniciar sesion</Button>
-                <Button variant="outlined" onClick={() => navigate('/registro')}>Registrar  </Button>
+                <Button
+                  variant="outlined"
+                  onClick={() => {
+                    if (planId) navigate(`/registro/${planId}`);
+                    else navigate('/registro');
+                  }}
+                >Registrar
+                </Button>
               </Stack>
             </Stack>
           </form>
