@@ -44,6 +44,7 @@ export default [
     price: '$0',
     color: '#000',
     cantidad: 'Sin profesores',
+    url: '',
     limite: 0,
   },
 ];

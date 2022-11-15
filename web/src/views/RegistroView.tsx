@@ -16,6 +16,7 @@ import {
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
+import { useAuth } from '../hooks/useAuth';
 
 const RegistroView = () => {
   const params = useParams();
@@ -27,6 +28,10 @@ const RegistroView = () => {
   const [plan, setPlan] = useState(`${planId}`);
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
+
+  const { setBuyPlan } = useAuth();
+
+  if (planId) { setBuyPlan(Number(planId)); }
 
   const navigate = useNavigate();
 

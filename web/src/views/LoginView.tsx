@@ -28,8 +28,10 @@ const LoginView = () => {
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
-  const { login } = useAuth();
+  const { login, setBuyPlan } = useAuth();
   const navigate = useNavigate();
+
+  if (planId) { setBuyPlan(Number(planId)); }
 
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
