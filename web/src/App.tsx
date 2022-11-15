@@ -97,7 +97,9 @@ const App = () => (
             <Route element={<ProtectedRoute loggedout />}>
               <Route path="/" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
-              <Route path="/registro" element={<RegistroView />} />
+              <Route path="/registro" element={<LoginView />} />
+              <Route path="/login/:planId" element={<LoginView />} />
+              <Route path="/registro/:planId" element={<RegistroView />} />
               <Route path="/aprobado/:planId" element={<Aprobado />} />
               <Route path="/rechazado" element={<Rechazado />} />
             </Route>

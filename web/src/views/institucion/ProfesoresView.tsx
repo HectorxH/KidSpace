@@ -12,63 +12,51 @@ import {
 import { useNavigate, useParams } from 'react-router-dom';
 import AddIcon from '@mui/icons-material/Add';
 import axios from 'axios';
-import NotFoundView from '../NotFoundView';
 import '../../App.css';
 import ProfesoresTable from './ProfesoresTable';
-import { ICurso } from '../../types/cursos';
 import { useAuth } from '../../hooks/useAuth';
 import paquetes from '../../mock/paquetes';
+import { IProfesor } from '../../types/profesores';
+import NotFoundView from '../NotFoundView';
+import { IRepresentante } from '../../types/representante';
 
 const img = require('../../assets/institucion.png');
 
-const profes = [
-  {
-    _id: '5ds6f',
-    nombres: 'nombre',
-    apellidos: 'apellidos',
-    email: 'email@gmail.email',
-  },
-  {
-    _id: '5dsgb6f',
-    nombres: 'nombress',
-    apellidos: 'apellidoss',
-    email: 'email@gmail.emaill',
-  },
-];
-
-interface IProfesores {
-  _id: string,
-  nombres: string,
-  apellidos: string,
-  email: string,
-}
-
 const ProfesoresView = () => {
   const params = useParams();
-  const [profesores, setProfesores] = useState<IProfesores[]>(profes);
+  const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(true);
   const [disabledButton, setDisabledButton] = useState(false);
   const [cantidad, setCantidad] = useState(2);
+  const [representante, setRepresentante] = useState<IRepresentante>();
   const navigate = useNavigate();
-  const user = {
-    _id: 'sdfs54df6', nombres: 'nombre', apellidos: 'apellidos', institucion: 'Institucion', plan: 2,
-  };
+
   const { logout } = useAuth();
-  const getProfesores = () => {
-    setProfesores(profes); // res.data
-    setCantidad(profes.length);
-    if (cantidad === 0) {
-      setDisabledButton(true);
+
+  const getData = async () => {
+    try {
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Representante`);
+      setRepresentante(res.data.representante);
+      setProfesores(res.data.representante.profesores);
+      setCantidad(res.data.representante.profesores.length);
+      if (cantidad === 0) {
+        setDisabledButton(true);
+      }
+      setLoading(false);
+    } catch (e) {
+      if (axios.isAxiosError(e) && e.response?.status === 401) {
+        logout();
+      }
+      setLoading(false);
     }
-    //
   };
 
-  // useEffect(() => {
-  //   if (!curso) getCurso();
-  // }, []);
+  useEffect(() => {
+    if (!profesores) getData();
+  }, []);
 
-  // if (loading) return (<Box />);
-  // if (!curso) return (<NotFoundView />);
+  if (loading) return (<Box />);
+  if (profesores === undefined || representante === undefined) return (<NotFoundView />);
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Stack
@@ -79,7 +67,7 @@ const ProfesoresView = () => {
       >
         <Stack direction="column" spacing={2} sx={{ margin: 2, width: 4 / 5 }}>
           <Typography display="block" variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-            <b>Hola, {user?.nombres} {user?.apellidos}</b>
+            <b>Hola, {representante.user.nombres} {representante.user.apellidos}</b>
           </Typography>
           <Typography display="block" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
             <b>¡Te damos la bienvenida al sistema de estadísticas de Kidspace!</b>
@@ -105,14 +93,14 @@ const ProfesoresView = () => {
           item
           xs={12}
           sm={12}
-          md={paquetes[user.plan].limite
+          md={paquetes[representante.plan].limite
             ? 5 : 8}
         />
         <Grid
           item
           xs={12}
           sm={12}
-          md={paquetes[user.plan].limite
+          md={paquetes[representante.plan].limite
             ? 7 : 4}
         >
           <Card sx={{
@@ -125,18 +113,18 @@ const ProfesoresView = () => {
               justifyContent="center"
               alignItems="center"
             >
-              {paquetes[user.plan].limite
+              {paquetes[representante.plan].limite
                 ? (
                   <Grid item xs={12} sm={12} md={8}>
-                    {cantidad > 1
+                    {Number(paquetes[representante.plan].limite) - cantidad > 1
                       ? (
                         <Typography>
-                          Tienes disponible <b>{cantidad}</b> profesores para registrar
+                          Tienes disponible <b>{Number(paquetes[representante.plan].limite) - cantidad}</b> profesores para registrar
                         </Typography>
                       )
-                      : cantidad === 1 ? (
+                      : Number(paquetes[representante.plan].limite) - cantidad === 1 ? (
                         <Typography>
-                          Tienes disponible <b>{cantidad}</b> profesor más para registrar
+                          Tienes disponible <b>{Number(paquetes[representante.plan].limite) - cantidad}</b> profesor más para registrar
                         </Typography>
                       )
                         : (
@@ -153,15 +141,15 @@ const ProfesoresView = () => {
                 item
                 xs={12}
                 sm={12}
-                md={paquetes[user.plan].limite
+                md={paquetes[representante.plan].limite
                   ? 4 : 6}
               >
                 <Stack direction="row" spacing={1} sx={{ alignItems: 'flex-end' }}>
                   <Typography variant="h5" sx={{ color: '#000' }}>
                     <b>KIDSPACE</b>
                   </Typography>
-                  <Typography variant="h4" sx={{ color: paquetes[user.plan].color }}>
-                    <b>{paquetes[user.plan].title}</b>
+                  <Typography variant="h4" sx={{ color: paquetes[representante.plan].color }}>
+                    <b>{paquetes[representante.plan].title}</b>
                   </Typography>
                 </Stack>
               </Grid>
@@ -191,7 +179,7 @@ const ProfesoresView = () => {
             marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <ProfesoresTable rows={profesores} updateProfesores={getProfesores} />
+            <ProfesoresTable rows={profesores} updateProfesores={getData} />
           </Stack>
         </Stack>
       </Box>
