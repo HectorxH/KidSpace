@@ -276,7 +276,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   const InventarioParams: IInventarioParams = {
     pageNumber: pageNumber,
     models3d: models3d,
-    setMaterialSelectorToggle: setMaterialSelectorToggle,
     models: [models, setModels],
     positions: [positions, setPositions],
     placedItems: [placedItems, setPlacedItems],
@@ -284,6 +283,13 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     hideInventory: hideInventory,
     toggleDefaultValue: toggleDefaultValue,
     toggleValues: toggleValues,
+
+    modelProps: modelProps,
+    updateMaterial: [updateMaterial, setUpdateMaterial],
+    setSelectedModelMaterials: setSelectedModelMaterials,
+    setMaterialSelectorToggle: setMaterialSelectorToggle,
+    setArmarDesarmarToggle: setArmarDesarmarToggle,
+    setTemperaturaSelectorToggle: setTemperaturaSelectorToggle,
   };
 
   const MaterialSelectorParams: IMaterialSelectorParams = {
@@ -399,6 +405,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
     useAlt: [useAlt, setUseAlt],
     toggleValues: toggleValues,
+    nPlacedItems: nPlacedItems,
   };
 
   const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
