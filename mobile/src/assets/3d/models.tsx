@@ -141,6 +141,31 @@ const Models: {
     type: 'GLB',
     resources: [],
   },
+  basureroAzul: {
+    model: require('./reciclaje/basurero-azul.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroAmarillo: {
+    model: require('./reciclaje/basurero-amarillo.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroCafe: {
+    model: require('./reciclaje/basurero-cafe.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroGris: {
+    model: require('./reciclaje/basurero-gris.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroVerde: {
+    model: require('./reciclaje/basurero-verde.glb'),
+    type: 'GLB',
+    resources: [],
+  },
   star: {
     model: require('./astronomia2/estrella/star.obj'),
     type: 'OBJ',

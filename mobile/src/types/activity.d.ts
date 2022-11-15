@@ -188,6 +188,8 @@ export interface IImageTracker {
   target: string;
   display: string;
   displayType: 'image' | 'video' | '3dobject';
+  scale?: number[];
+  rotation?: number[];
 }
 
 export interface ITexts {

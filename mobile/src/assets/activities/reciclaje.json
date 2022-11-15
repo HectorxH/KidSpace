@@ -2679,8 +2679,10 @@
         {
           "name": "Basurero Azul",
           "target": "basureroAzul",
-          "display": "organico",
-          "displayType": "3dobject"
+          "display": "basureroAzul",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
         }
       ]
     },
@@ -2775,8 +2777,10 @@
         {
           "name": "Basurero Café",
           "target": "basureroCafe",
-          "display": "organico",
-          "displayType": "3dobject"
+          "display": "basureroCafe",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
         }
       ]
     },
@@ -2871,8 +2875,10 @@
         {
           "name": "Basurero Amarillo",
           "target": "basureroAmarillo",
-          "display": "organico",
-          "displayType": "3dobject"
+          "display": "basureroAmarillo",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
         }
       ]
     },
@@ -2967,8 +2973,10 @@
         {
           "name": "Basurero Verde",
           "target": "basureroVerde",
-          "display": "organico",
-          "displayType": "3dobject"
+          "display": "basureroVerde",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
         }
       ]
     },
@@ -3065,8 +3073,10 @@
         {
           "name": "Basurero Gris",
           "target": "basureroGris",
-          "display": "organico",
-          "displayType": "3dobject"
+          "display": "basureroGris",
+          "displayType": "3dobject",
+          "scale": [0.15, 0.15, 0.15],
+          "rotation": [180, 180, 90]
         }
       ]
     },
