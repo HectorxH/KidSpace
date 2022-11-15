@@ -415,6 +415,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
     temperaturasList: temperaturasList,
     toggleValues: toggleValues,
+    nPlacedItems: nPlacedItems,
   };
 
   const actividadComponentParams: IActividadesComponentParams = {

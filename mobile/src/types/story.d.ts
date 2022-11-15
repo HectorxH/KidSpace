@@ -128,6 +128,7 @@ export interface ITemperaturaSelectorParams {
   selectedPageOrder: [number, ReactStateSetter<number>];
   temperaturasList: string[][][];
   toggleValues: number[][];
+  nPlacedItems: number[];
 }
 
 export interface IMarkerTrackerFeedbackParams {
