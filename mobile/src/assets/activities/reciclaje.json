@@ -3243,14 +3243,6 @@
           "start": [0, 0],
           "end": [20, 20]  
         }
-      },
-      {
-        "name": "bg_reciclaje3",
-        "resize": "cover",
-        "position": {
-          "start": [0, 0],
-          "end": [20, 20]  
-        }
       }
     ],
     "feedbackJose": true
