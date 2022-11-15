@@ -14,15 +14,17 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
 
 const RegistroView = () => {
+  const params = useParams();
+  const { planId } = params;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
-  const [tipo, setTipo] = useState('profesor');
+  const [plan, setPlan] = useState(`${planId}`);
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
@@ -34,13 +36,17 @@ const RegistroView = () => {
       const res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/register`,
         {
-          nombres, apellidos, username, password, tipo,
+          nombres, apellidos, username, password, tipo: 'representante',
         },
       );
       console.log(res);
       setCorrect(true);
       setError(false);
-      setTimeout(() => navigate('/login'), 1500);
+      if (plan) {
+        setTimeout(() => navigate(`/login/${plan}`), 1500);
+      } else {
+        setTimeout(() => navigate('/login'), 1500);
+      }
     } catch (e) {
       setCorrect(false);
       setError(true);
@@ -64,8 +70,8 @@ const RegistroView = () => {
     setPassword(event.target.value);
   };
 
-  const handleTipoChange = (event: SelectChangeEvent<string>) => {
-    setTipo(event.target.value);
+  const handlePlanChange = (event: SelectChangeEvent<string>) => {
+    setPlan(event.target.value);
   };
 
   return (
@@ -92,9 +98,10 @@ const RegistroView = () => {
             <Stack spacing={2}>
               <FormControl fullWidth>
                 <InputLabel id="select-label">Tipo de cuenta</InputLabel>
-                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
-                  <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
-                  <MenuItem value="representante"><Typography>Representante</Typography></MenuItem>
+                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={plan} onChange={handlePlanChange}>
+                  <MenuItem value={0}><Typography>Basic</Typography></MenuItem>
+                  <MenuItem value={1}><Typography>Pro</Typography></MenuItem>
+                  <MenuItem value={2}><Typography>Pro+</Typography></MenuItem>
                 </Select>
               </FormControl>
               <TextField required label="Nombres" onChange={handleNombresChange} />
@@ -114,7 +121,14 @@ const RegistroView = () => {
             )}
             <Stack spacing={1}>
               <Button variant="contained" type="submit">Registrar</Button>
-              <Button variant="outlined" onClick={() => navigate('/login')}>Iniciar sesion</Button>
+              <Button
+                variant="outlined"
+                onClick={() => {
+                  if (plan) navigate(`/login/${plan}`);
+                  else navigate('/login');
+                }}
+              >Iniciar sesion
+              </Button>
             </Stack>
           </Stack>
         </form>

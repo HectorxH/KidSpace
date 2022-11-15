@@ -1467,7 +1467,12 @@
           "rotation": [0, 180, 0],
           "interactable": ["temperatura"],
           "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
-          "temperaturasModels": ["betelgeuse", "sol", "sirius", "rigel"]
+          "ARMaterials": {
+            "materialOrder": ["Estrella"],
+            "materialChoices": [
+              ["betelgeuse", "sun", "sirius", "rigel"]
+            ]
+          }
         }
       ]
     },
@@ -1509,68 +1514,194 @@
         "visible": false
       }
     ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Ordena las estrellas, de menor a mayor temperatura!",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [4.5, 6.5],
+          "end": [5.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [9.5, 6.5],
+          "end": [10.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [14.5, 6.5],
+          "end": [15.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      }
+    ],
     "draggable": [
       {
         "type": "order",
-        "answer": ["SSD", "Teclado", "GPU"],
+        "answer": ["Betelgeuse", "Sol", "Sirius", "Rigel"],
         "draggableItems": [
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "GPU",
+            "type": "image",
+            "name": "Rigel",
+            "value": "Rigel",
             "position": {
-              "start": [0.5, 8.7],
-              "end": [4.5, 10.7]
+              "start": [3.25, 15.5],
+              "end": [6.25, 19.5]
             }
           },
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "SSD",
+            "type": "image",
+            "name": "Betelgeuse",
+            "value": "Betelgeuse",
             "position": {
-              "start": [0.5, 11.8],
-              "end": [4.5, 13.8]
+              "start": [6.75, 15.5],
+              "end": [9.75, 19.5]
             }
           },
           {
-            "type": "rectangle",
-            "name": "",
-            "value": "Teclado",
+            "type": "image",
+            "name": "Sol",
+            "value": "Sol",
             "position": {
-              "start": [0.5, 14.9],
-              "end": [4.5, 16.9]
+              "start": [10.25, 15.5],
+              "end": [13.25, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Sirius",
+            "value": "Sirius",
+            "position": {
+              "start": [13.75, 15.5],
+              "end": [16.75, 19.5]
             }
           }
         ],
         "receivingItems": [
           {
-            "type": "text",
+            "type": "circleImage",
             "name": "",
             "value": "",
             "position": {
-              "start": [0, 0],
-              "end": [0, 0]
+              "start": [0.5, 6.5],
+              "end": [4.5, 12.5]
             }
           },
           {
-            "type": "text",
+            "type": "circleImage",
             "name": "",
             "value": "",
             "position": {
-              "start": [0, 0],
-              "end": [0, 0]
+              "start": [5.5, 6.5],
+              "end": [9.5, 12.5]
             }
           },
           {
-            "type": "text",
+            "type": "circleImage",
             "name": "",
             "value": "",
             "position": {
-              "start": [0, 0],
-              "end": [0, 0]
+              "start": [10.5, 6.5],
+              "end": [14.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.5, 6.5],
+              "end": [19.5, 12.5]
             }
           }
         ]
+      }
+    ]
+  },
+
+
+  {
+    "background": "bg_astronomia2",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Laura espera que te haya gustado aprender sobre las estrellas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "LauraHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [10.5, 13.5],
+          "end": [16.5, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
       }
     ]
   }

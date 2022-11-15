@@ -4,6 +4,7 @@ import React, {
 import { useNavigate } from 'react-router-dom';
 import { IUser } from '../types/user';
 import useLocalStorage from './useLocalStorage';
+import paquetes from '../mock/paquetes';
 
 interface IAuthContext {
   user: IUser | null,
@@ -37,8 +38,12 @@ export const AuthProvider = ({ children }:{children: any}) => {
   };
 
   // call this function when you want to authenticate the user
-  const login = (data: IUser) => {
-    setUser(data, navigateToDefault);
+  const login = (data: IUser, plan = -1) => {
+    if (plan !== -1) {
+      setUser(data, navigateToDefault);
+    } else {
+      setUser(data, () => window.open(paquetes[plan].url, '_self'));
+    }
   };
 
   // call this function to sign out logged in user

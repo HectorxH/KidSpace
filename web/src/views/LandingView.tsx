@@ -265,60 +265,65 @@ const LandingView = () => {
           sx={{ flexWrap: 'wrap', justifyContent: 'center' }}
         >
 
-          {paquetes.map((paquete) => (
-            <Card sx={{
-              padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1,
-            }}
-            >
-              <Box
-                component="img"
-                src={paquete.img}
-                alt="logo"
-                sx={{
-                  height: 150,
-                }}
-              />
-              <Stack direction="row" sx={{ alignItems: 'center' }}>
-                <Typography sx={{ color: '#000', margin: 1 }}>
-                  <b>KIDSPACE</b>
-                </Typography>
-                <Typography variant="h5" sx={{ color: paquete.color, margin: 1 }}>
-                  <b>{paquete.title}</b>
-                </Typography>
-              </Stack>
-              <Typography align="center" variant="h5" sx={{ color: '#000', alignSelf: 'center' }}>
-                <b>{paquete.price}</b>
-              </Typography>
-              <Typography sx={{ color: '#000', alignSelf: 'center', margin: 1 }}>
-                {paquete.cantidad}
-              </Typography>
-              <Button
-                onClick={() => {
-                  window.open(paquete.url, '_self');
-                }}
-                sx={{
-                  backgroundColor: (theme: Theme) => theme.palette.secondary.main,
-                  borderRadius: 4,
-                  color: '#FFF',
-                  textTransform: 'none',
-                  width: 150,
-                  margin: 1,
-                  '&:hover': {
-                    backgroundColor: '#ffbe82',
-                    color: '#FFFFFF',
-                  },
-                }}
-                href="login"
+          {paquetes.map((paquete) => {
+            if (paquete.id === 3) {
+              return null;
+            }
+            return (
+              <Card sx={{
+                padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1,
+              }}
               >
-                <Typography sx={{
-                  color: '#FFF',
-                }}
-                >
-                  Comenzar
+                <Box
+                  component="img"
+                  src={paquete.img}
+                  alt="logo"
+                  sx={{
+                    height: 150,
+                  }}
+                />
+                <Stack direction="row" sx={{ alignItems: 'center' }}>
+                  <Typography sx={{ color: '#000', margin: 1 }}>
+                    <b>KIDSPACE</b>
+                  </Typography>
+                  <Typography variant="h5" sx={{ color: paquete.color, margin: 1 }}>
+                    <b>{paquete.title}</b>
+                  </Typography>
+                </Stack>
+                <Typography align="center" variant="h5" sx={{ color: '#000', alignSelf: 'center' }}>
+                  <b>{paquete.price}</b>
                 </Typography>
-              </Button>
-            </Card>
-          ))}
+                <Typography sx={{ color: '#000', alignSelf: 'center', margin: 1 }}>
+                  {paquete.cantidad}
+                </Typography>
+                <Button
+                  href={`login/${paquete.id}`}
+                  // onClick={() => {
+                  //   window.open(paquete.url, '_self');
+                  // }}
+                  sx={{
+                    backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+                    borderRadius: 4,
+                    color: '#FFF',
+                    textTransform: 'none',
+                    width: 150,
+                    margin: 1,
+                    '&:hover': {
+                      backgroundColor: '#ffbe82',
+                      color: '#FFFFFF',
+                    },
+                  }}
+                >
+                  <Typography sx={{
+                    color: '#FFF',
+                  }}
+                  >
+                    Comenzar
+                  </Typography>
+                </Button>
+              </Card>
+            );
+          })}
         </Stack>
       </Stack>
     </ >

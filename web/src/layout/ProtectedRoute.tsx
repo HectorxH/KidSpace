@@ -24,7 +24,6 @@ const ProtectedRoute = ({
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(loggedout, !!user);
     if (loggedout && user) {
       navigateToDefault();
     } else if (loggedin && !user) {
