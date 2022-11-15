@@ -372,7 +372,6 @@ const images: {
     residuo_6: require('./extras/reciclaje/residuo_6.png'),
     residuo_7: require('./extras/reciclaje/residuo_7.png'),
     bg_reciclaje2: require('./background/bg_reciclaje2.png'),
-    bg_reciclaje3: require('./background/bg_reciclaje3.png'),
 
     // bubbles
     flower: require('./bubbles/flower.png'),
