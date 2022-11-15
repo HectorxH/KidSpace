@@ -19,9 +19,11 @@ const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
     selectedPageOrder,
     temperaturasList,
     toggleValues,
+    nPlacedItems,
   } = props.temperaturaSelectorParams;
   if (
     models3d[pageNumber].length === 0 ||
+    nPlacedItems[pageNumber] === 0 ||
     models3d[pageNumber].length < activeModelIndex ||
     typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
     temperaturaSelectorToggle[0] === 0 ||
