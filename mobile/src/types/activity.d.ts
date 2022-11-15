@@ -251,6 +251,7 @@ export interface IJumpCard {
   disableWhen: number[];
   // settings: IToggleButtonSetting;
   visible: boolean;
+  borderRadius?: boolean;
 }
 
 export interface ITextFieldQuestion {
