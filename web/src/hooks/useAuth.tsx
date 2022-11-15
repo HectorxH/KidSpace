@@ -9,7 +9,7 @@ import paquetes from '../mock/paquetes';
 interface IAuthContext {
   user: IUser | null,
   // eslint-disable-next-line no-unused-vars
-  login: (data: IUser) => void,
+  login: (data: IUser, plan?: number) => void,
   logout: () => void,
   navigateToDefault: () => void
 }
@@ -17,7 +17,7 @@ interface IAuthContext {
 const AuthContext = createContext<IAuthContext>({
   user: null,
   // eslint-disable-next-line no-unused-vars
-  login: (data: IUser) => {},
+  login: (data: IUser, plan?: number) => {},
   logout: () => {},
   navigateToDefault: () => {},
 });
@@ -38,8 +38,8 @@ export const AuthProvider = ({ children }:{children: any}) => {
   };
 
   // call this function when you want to authenticate the user
-  const login = (data: IUser, plan = -1) => {
-    if (plan !== -1) {
+  const login = (data: IUser, plan?: number) => {
+    if (!plan) {
       setUser(data, navigateToDefault);
     } else {
       setUser(data, () => window.open(paquetes[plan].url, '_self'));

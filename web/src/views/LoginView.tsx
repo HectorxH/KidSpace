@@ -38,6 +38,9 @@ const LoginView = () => {
         `${process.env.REACT_APP_BACKEND_URL}/login`,
         { username, password, tipo },
       );
+      if (planId) {
+        login(res.data, Number(planId));
+      }
       login(res.data);
       setCorrect(true);
       setError(false);
