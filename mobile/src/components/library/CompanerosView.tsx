@@ -15,6 +15,7 @@ import {CompaneroProps} from '../../types/navigation';
 import Character from './Character';
 import CargaView from '../CargaView';
 import {useAuth} from '../../hooks/useAuth';
+import _ from 'lodash';
 import Config from 'react-native-config';
 
 interface ICompaniero {
@@ -122,7 +123,8 @@ const CompanerosView = ({navigation, route}: CompaneroProps) => {
         `${Config.REACT_APP_BACKEND_URL}/Estudiante/compas`,
       );
       console.log(res.body.compas);
-      setCompas(res.body.compas);
+      const sortedCompas = _.orderBy(res.body.compas, ['nombres'], ['asc']);
+      setCompas(sortedCompas);
     } catch (e) {
       console.log(JSON.stringify(e));
       console.log('No se encontraron compas :(');
