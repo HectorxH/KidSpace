@@ -3212,8 +3212,8 @@
           "buttonTextNormal": "Responder el quiz"
         },
         "position" : {
-          "start": [10.5, 17],
-          "end": [16.5, 20]
+          "start": [10.5, 14.5],
+          "end": [16.5, 17.5]
         },
         "target": 61,
         "require": [],
