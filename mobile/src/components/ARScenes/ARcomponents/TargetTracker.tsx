@@ -13,6 +13,10 @@ import videos from '../../../assets/videos/videos';
 import {ViroARTrackingTargetsMap} from '@viro-community/react-viro/dist/components/AR/ViroARTrackingTargets';
 import {ReactStateSetter} from '../../../types/others';
 import Models from '../../../assets/3d/models';
+import {
+  ViroRotation,
+  ViroScale,
+} from '@viro-community/react-viro/dist/components/Types/ViroUtils';
 
 interface DesafioIntroductorioSceneARProps {
   imageTracker: IImageTracker;
@@ -31,7 +35,15 @@ const DesafioIntroductorioSceneAR = (
     props.markerTrackingState;
   const [activeTracker, setActiveTracker] = props.activeTracker;
   const [activeTrackerIndex, setActiveTrackerIndex] = props.activeTrackerIndex;
+  const scale =
+    typeof imageTracker.scale !== 'undefined' ? imageTracker.scale : [1, 1, 1];
+  const rotation =
+    typeof imageTracker.rotation !== 'undefined'
+      ? imageTracker.rotation
+      : [0, 0, 0];
 
+  // const scale = [0.3, 0.3, 0.3];
+  // const rotation = [-90, 180, 90];
   return (
     <ViroARImageMarker
       target={imageTracker.target}
@@ -59,7 +71,7 @@ const DesafioIntroductorioSceneAR = (
           setActiveTrackerIndex(newActiveTrackerIndex);
         }
       }}>
-      <ViroNode>
+      <ViroNode scale={scale as ViroScale} rotation={rotation as ViroRotation}>
         {imageTracker.displayType === 'image' && (
           <ViroImage
             height={0.5}
@@ -91,7 +103,7 @@ const DesafioIntroductorioSceneAR = (
             source={Models[imageTracker.display].model}
             type={Models[imageTracker.display].type}
             resources={Models[imageTracker.display].resources}
-            scale={[0.1, 0.1, 0.1]}
+            position={[0, 0, 0]}
             onDrag={() => {}}
             dragType={'FixedToWorld'}
           />
@@ -190,6 +202,36 @@ const targets: ViroARTrackingTargetsMap = {
   },
   telefonoDistancia: {
     source: Images.trackingTargets.telefonoDistancia,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroAmarillo: {
+    source: Images.trackingTargets.basureroAmarillo,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroAzul: {
+    source: Images.trackingTargets.basureroAzul,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroCafe: {
+    source: Images.trackingTargets.basureroCafe,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroGris: {
+    source: Images.trackingTargets.basureroGris,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroVerde: {
+    source: Images.trackingTargets.basureroVerde,
     orientation: 'Up',
     physicalWidth: 0.3,
     type: 'Image',

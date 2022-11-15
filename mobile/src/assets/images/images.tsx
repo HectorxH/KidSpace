@@ -63,6 +63,10 @@ const images: {
     AlecQuestion: require('./character/alec/alec-question.png'),
     AlecSmile: require('./character/alec/alec-smile.png'),
 
+    JoseHappy: require('./character/jose/jose-happy.png'),
+    JoseQuestion: require('./character/jose/jose-sad.png'),
+    JoseSmile: require('./character/jose/jose-smile.png'),
+
     normal: require('./character/menhera/menhera_normal.png'),
     cry: require('./character/menhera/menhera_cry.png'),
     fbk: require('./trackingTargets/fbk.jpg'),
@@ -324,6 +328,51 @@ const images: {
     plancha3: require('./extras/tecnologicas/plancha3.png'),
     plancha4: require('./extras/tecnologicas/plancha4.png'),
     noChile: require('./extras/tecnologicas/noChile.png'),
+    martilloAR: require('./extras/tecnologicas/martilloAR.png'),
+    skateAR: require('./extras/tecnologicas/skateAR.png'),
+
+    // Reciclaje
+    reciclaje_1: require('./extras/reciclaje/1.png'),
+    reciclaje_2: require('./extras/reciclaje/2.png'),
+    reciclaje_3: require('./extras/reciclaje/3.png'),
+    reciclaje_4: require('./extras/reciclaje/4.png'),
+    reciclaje_5: require('./extras/reciclaje/5.png'),
+    reciclaje_6: require('./extras/reciclaje/6.png'),
+    reciclaje_7: require('./extras/reciclaje/7.png'),
+    reciclaje_8: require('./extras/reciclaje/8.png'),
+    reciclaje_9: require('./extras/reciclaje/9.png'),
+    reciclaje_10: require('./extras/reciclaje/10.png'),
+    reciclaje_11: require('./extras/reciclaje/11.png'),
+    reciclaje_12: require('./extras/reciclaje/12.png'),
+    reciclaje_13: require('./extras/reciclaje/13.png'),
+    reciclaje_14: require('./extras/reciclaje/14.png'),
+    reciclaje_15: require('./extras/reciclaje/15.png'),
+    reciclaje_16: require('./extras/reciclaje/16.png'),
+    reciclaje_17: require('./extras/reciclaje/17.png'),
+    reciclaje_18: require('./extras/reciclaje/18.png'),
+    reciclaje_19: require('./extras/reciclaje/19.png'),
+    reciclaje_20: require('./extras/reciclaje/20.png'),
+    emoji_1: require('./extras/reciclaje/emoji1.png'),
+    emoji_2: require('./extras/reciclaje/emoji2.png'),
+    emoji_3: require('./extras/reciclaje/emoji3.png'),
+    stampFalso: require('./extras/reciclaje/stampFalso.png'),
+    stampVerdadero: require('./extras/reciclaje/stampVerdadero.png'),
+    stickerFalso: require('./extras/reciclaje/stickerFalso.png'),
+    stickerVerdadero: require('./extras/reciclaje/stickerVerdadero.png'),
+    basureroAmarillo: require('./extras/reciclaje/basureroAmarillo.png'),
+    basureroAzul: require('./extras/reciclaje/basureroAzul.png'),
+    basureroCafe: require('./extras/reciclaje/basureroCafe.png'),
+    basureroGris: require('./extras/reciclaje/basureroGris.png'),
+    basureroVerde: require('./extras/reciclaje/basureroVerde.png'),
+    residuo_1: require('./extras/reciclaje/residuo_1.png'),
+    residuo_2: require('./extras/reciclaje/residuo_2.png'),
+    residuo_3: require('./extras/reciclaje/residuo_3.png'),
+    residuo_4: require('./extras/reciclaje/residuo_4.png'),
+    residuo_5: require('./extras/reciclaje/residuo_5.png'),
+    residuo_6: require('./extras/reciclaje/residuo_6.png'),
+    residuo_7: require('./extras/reciclaje/residuo_7.png'),
+    bg_reciclaje2: require('./background/bg_reciclaje2.png'),
+    bg_reciclaje3: require('./background/bg_reciclaje3.png'),
 
     // bubbles
     flower: require('./bubbles/flower.png'),
@@ -368,6 +417,8 @@ const images: {
     bg_astronomia1: require('./background/bg_astronomia1.png'),
     bg_astronomia2: require('./background/bg_astronomia2.png'),
     bg_tecnologicas: require('./background/bg_tecnologicas.png'),
+    bg_reciclaje: require('./background/bg_reciclaje.png'),
+    bg_reciclaje2: require('./background/bg_reciclaje2.png'),
   },
 
   icons: {
@@ -450,8 +501,20 @@ const images: {
     austral: {
       square: require('./icons/portales/austral.png'),
     },
+    maipu: {
+      square: require('./icons/portales/maipu.png'),
+    },
+    renca: {
+      square: require('./icons/portales/renca.png'),
+    },
+    sanbernardo: {
+      square: require('./icons/portales/sanbernardo.png'),
+    },
     estrella: {
       square: require('./icons/estrella/estrella.jpg'),
+    },
+    star: {
+      square: require('./icons/star/star.jpg'),
     },
     mesa: {
       square: require('./icons/mesa/mesa.jpg'),
@@ -469,6 +532,9 @@ const images: {
     lagos: require('../360/materiales/lagos.jpg'),
     rancagua: require('../360/materiales/rancagua.jpg'),
     valdivia: require('../360/materiales/valdivia.jpg'),
+    maipu: require('../360/reciclaje/maipu.jpg'),
+    renca: require('../360/reciclaje/renca.jpg'),
+    sanbernardo: require('../360/reciclaje/sanbernardo.jpg'),
   },
 
   trackingTargets: {
@@ -487,6 +553,11 @@ const images: {
     libroInformacion: require('./trackingTargets/libroInformacion.png'),
     planchaRopa: require('./trackingTargets/planchaRopa.png'),
     telefonoDistancia: require('./trackingTargets/telefonoDistancia.png'),
+    basureroAmarillo: require('./trackingTargets/reciclaje/amarillo.png'),
+    basureroAzul: require('./trackingTargets/reciclaje/azul.png'),
+    basureroCafe: require('./trackingTargets/reciclaje/cafe.png'),
+    basureroGris: require('./trackingTargets/reciclaje/gris.png'),
+    basureroVerde: require('./trackingTargets/reciclaje/verde.png'),
   },
 };
 

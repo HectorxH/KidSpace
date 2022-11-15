@@ -51,7 +51,9 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
 
     // Valores para cambiar visualización del drag item que llegó a este bloque
     newPickedAnswersIndex[pageNumber][dragNumber][itemNumber] = payload;
-    newIsDragItemPicked[pageNumber][dragNumber][payload] = true;
+    if (typeof draggable.draggableItems[payload].persistent === 'undefined') {
+      newIsDragItemPicked[pageNumber][dragNumber][payload] = true;
+    }
 
     if (
       draggable.answer.includes(answer) &&

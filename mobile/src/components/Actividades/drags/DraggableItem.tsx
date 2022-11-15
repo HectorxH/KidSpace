@@ -6,6 +6,7 @@ import DraggableCodeBlock from './DraggableItems/DraggableCodeBlock';
 import DraggableImage from './DraggableItems/DraggableImage';
 import DraggableMoonBlock from './DraggableItems/DraggableMoonBlock';
 import DraggableLetter from './DraggableItems/DraggableLetter';
+import DraggableResiduo from './DraggableItems/DraggableResiduo';
 
 interface DraggableItemProps {
   item: IReceivingItems;
@@ -28,6 +29,13 @@ const DraggableItem = (props: DraggableItemProps) => {
     <View style={styles.container}>
       {props.item.type === 'image' && (
         <DraggableImage
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
+      )}
+      {props.item.type === 'residuo' && (
+        <DraggableResiduo
           item={props.item}
           dragNumber={props.dragNumber}
           itemNumber={props.itemNumber}

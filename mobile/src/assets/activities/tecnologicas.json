@@ -794,15 +794,11 @@
       "models": [
         {
           "model": "martilloArmado",
+          "alt": "martilloDesarmado",
           "scale": [0.8, 0.8, 0.8],
           "rotation": [90, 180, 0],
-          "icon": "martillo"
-        },
-        {
-          "model": "martilloDesarmado",
-          "scale": [0.8, 0.8, 0.8],
-          "rotation": [90, 180, 0],
-          "icon": "martillo"
+          "icon": "martillo",
+          "interactable": ["armarDesarmar"]
         }
       ]
     },
@@ -812,123 +808,221 @@
       {
         "position": {
           "start": [0, 0],
-          "end": [20, 22]
+          "end": [20, 20]
         },
         "settings": {
           "borderRadius": 0,
           "borderWidth": 0
         }
-      },
-      {
-        "position": {
-          "start": [0.5, 4],
-          "end": [10, 9.5]
-        },
-        "settings": {
-          "borderWidth": 0,
-          "elevation": 10
-        }
       }
     ],
     "bubbles": [
       {
-        "name": "chile",
+        "name": "martilloAR",
         "position": {
-          "start": [10.5, 4],
-          "end": [19.5, 19.5]
+          "start": [0.5, 11.5],
+          "end": [6, 19.5]
         }
       }
     ],
     "texts": [
       {
-        "text": "Arrastra cada materia prima a su región correspondiente según tus observaciones.",
+        "text": "Completa los recuadros con las palabras correspondientes",
         "position": {
-          "start": [1, 4.5],
-          "end": [9.5, 9]
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
         },
         "settings": {
           "fontSize": 18,
           "elevation": 11
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [1, 6.5],
+          "end": [5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [10, 6.5],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [1, 9],
+          "end": [5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:1}}",
+        "position": {
+          "start": [10, 9],
+          "end": [11.5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [5, 14],
+          "end": [9, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:2}}",
+        "position": {
+          "start": [14, 14],
+          "end": [15.5, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [5, 16.5],
+          "end": [9, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:3}}",
+        "position": {
+          "start": [14, 16.5],
+          "end": [15.5, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
     "draggable": [
       {
         "type": "order",
-        "answer": ["cobre", "hortalizas", "madera", "leche_de_vaca"],
+        "answer": ["Cabeza", "Clavar", "Mango", "Sujetar"],
         "draggableItems": [
           {
-            "type": "image",
-            "name": "madera",
-            "value": "madera",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Sujetar",
+            "value": "Sujetar",
             "position": {
-              "start": [2.5, 10.5],
-              "end": [4.5, 14.5]
+              "start": [15, 6.5],
+              "end": [19, 8.5]
             }
           },
           {
-            "type": "image",
-            "name": "leche_de_vaca",
-            "value": "leche_de_vaca",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Cabeza",
+            "value": "Cabeza",
             "position": {
-              "start": [5.5, 10.5],
-              "end": [7.5, 14.5]
+              "start": [15, 9],
+              "end": [19, 11]
             }
           },
           {
-            "type": "image",
-            "name": "hortalizas",
-            "value": "hortalizas",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Mango",
+            "value": "Mango",
             "position": {
-              "start": [2.5, 15],
-              "end": [4.5, 19]
+              "start": [15, 11.5],
+              "end": [19, 13.5]
             }
           },
           {
-            "type": "image",
-            "name": "cobre",
-            "value": "cobre",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Clavar",
+            "value": "Clavar",
             "position": {
-              "start": [5.5, 15],
-              "end": [7.5, 19]
+              "start": [15, 14],
+              "end": [19, 16]
             }
           }
         ],
         "receivingItems": [
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 4],
-              "end": [13.7, 8]
+              "start": [5.5, 6.5],
+              "end": [9.5, 8.5]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 8.5],
-              "end": [13.7, 12.5]
+              "start": [5.5, 9],
+              "end": [9.5, 11]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 13],
-              "end": [13.7, 17]
+              "start": [9.5, 14],
+              "end": [13.5, 16]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [16, 14],
-              "end": [18, 18]
+              "start": [9.5, 16.5],
+              "end": [13.5, 18.5]
             }
           }
         ]
@@ -1033,15 +1127,11 @@
       "models": [
         {
           "model": "skateArmado",
+          "alt": "skateDesarmado",
           "scale": [0.2, 0.2, 0.2],
           "rotation": [0, 90, 0],
-          "icon": "skate"
-        },
-        {
-          "model": "skateDesarmado",
-          "scale": [0.4, 0.4, 0.4],
-          "rotation": [0, 90, 0],
-          "icon": "skate"
+          "icon": "skate",
+          "interactable": ["armarDesarmar"]
         }
       ]
     },
@@ -1051,123 +1141,221 @@
       {
         "position": {
           "start": [0, 0],
-          "end": [20, 22]
+          "end": [20, 20]
         },
         "settings": {
           "borderRadius": 0,
           "borderWidth": 0
         }
-      },
-      {
-        "position": {
-          "start": [0.5, 4],
-          "end": [10, 9.5]
-        },
-        "settings": {
-          "borderWidth": 0,
-          "elevation": 10
-        }
       }
     ],
     "bubbles": [
       {
-        "name": "chile",
+        "name": "skateAR",
         "position": {
-          "start": [10.5, 4],
-          "end": [19.5, 19.5]
+          "start": [0.5, 11.5],
+          "end": [6, 19.5]
         }
       }
     ],
     "texts": [
       {
-        "text": "Arrastra cada materia prima a su región correspondiente según tus observaciones.",
+        "text": "Completa los recuadros con las palabras correspondientes",
         "position": {
-          "start": [1, 4.5],
-          "end": [9.5, 9]
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
         },
         "settings": {
           "fontSize": 18,
           "elevation": 11
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [1, 6.5],
+          "end": [5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [10, 6.5],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [1, 9],
+          "end": [5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:1}}",
+        "position": {
+          "start": [10, 9],
+          "end": [11.5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [5, 14],
+          "end": [9, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:2}}",
+        "position": {
+          "start": [14, 14],
+          "end": [15.5, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [5, 16.5],
+          "end": [9, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:3}}",
+        "position": {
+          "start": [14, 16.5],
+          "end": [15.5, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
         }
       }
     ],
     "draggable": [
       {
         "type": "order",
-        "answer": ["cobre", "hortalizas", "madera", "leche_de_vaca"],
+        "answer": ["Base", "Soportar", "Ruedas", "Deslizar"],
         "draggableItems": [
           {
-            "type": "image",
-            "name": "madera",
-            "value": "madera",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Base",
+            "value": "Base",
             "position": {
-              "start": [2.5, 10.5],
-              "end": [4.5, 14.5]
+              "start": [15, 6.5],
+              "end": [19, 8.5]
             }
           },
           {
-            "type": "image",
-            "name": "leche_de_vaca",
-            "value": "leche_de_vaca",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Deslizar",
+            "value": "Deslizar",
             "position": {
-              "start": [5.5, 10.5],
-              "end": [7.5, 14.5]
+              "start": [15, 9],
+              "end": [19, 11]
             }
           },
           {
-            "type": "image",
-            "name": "hortalizas",
-            "value": "hortalizas",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Soportar",
+            "value": "Soportar",
             "position": {
-              "start": [2.5, 15],
-              "end": [4.5, 19]
+              "start": [15, 11.5],
+              "end": [19, 13.5]
             }
           },
           {
-            "type": "image",
-            "name": "cobre",
-            "value": "cobre",
+            "type": "rectangle",
+            "persistent": true,
+            "name": "Ruedas",
+            "value": "Ruedas",
             "position": {
-              "start": [5.5, 15],
-              "end": [7.5, 19]
+              "start": [15, 14],
+              "end": [19, 16]
             }
           }
         ],
         "receivingItems": [
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 4],
-              "end": [13.7, 8]
+              "start": [5.5, 6.5],
+              "end": [9.5, 8.5]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 8.5],
-              "end": [13.7, 12.5]
+              "start": [5.5, 9],
+              "end": [9.5, 11]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [11.7, 13],
-              "end": [13.7, 17]
+              "start": [9.5, 14],
+              "end": [13.5, 16]
             }
           },
           {
-            "type": "image",
+            "type": "rectangleText",
             "name": "",
             "value": "",
             "position": {
-              "start": [16, 14],
-              "end": [18, 18]
+              "start": [9.5, 16.5],
+              "end": [13.5, 18.5]
             }
           }
         ]
@@ -2266,11 +2454,11 @@
       {
         "text": "Siglo 16",
         "position": {
-          "start": [7, 4.5],
-          "end": [10, 6]
+          "start": [7, 2.5],
+          "end": [10, 4]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2278,11 +2466,11 @@
       {
         "text": "Siglo 20",
         "position": {
-          "start": [7, 10],
-          "end": [10, 11.5]
+          "start": [7, 9],
+          "end": [10, 10.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2290,11 +2478,11 @@
       {
         "text": "Siglo 19",
         "position": {
-          "start": [0.5, 8.5],
-          "end": [3.5, 10]
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2302,11 +2490,11 @@
       {
         "text": "Siglo 21",
         "position": {
-          "start": [0.5, 14],
-          "end": [3.5, 15.5]
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2369,8 +2557,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 6],
-              "end": [9.5, 10]
+              "start": [7.5, 4],
+              "end": [9.5, 8]
             }
           },
           {
@@ -2378,8 +2566,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 11.5],
-              "end": [9.5, 15.5]
+              "start": [7.5, 10.5],
+              "end": [9.5, 14.5]
             }
           },
           {
@@ -2387,8 +2575,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 10],
-              "end": [3, 14]
+              "start": [1, 8],
+              "end": [3, 12]
             }
           },
           {
@@ -2396,8 +2584,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 15.5],
-              "end": [3, 19.5]
+              "start": [1, 14.5],
+              "end": [3, 18.5]
             }
           }
         ]
@@ -2544,11 +2732,11 @@
       {
         "text": "1876",
         "position": {
-          "start": [7, 3],
-          "end": [10, 4.5]
+          "start": [7, 1],
+          "end": [10, 2.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2556,11 +2744,11 @@
       {
         "text": "1934",
         "position": {
-          "start": [7, 8.5],
-          "end": [10, 10]
+          "start": [7, 7.5],
+          "end": [10, 9]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2572,7 +2760,7 @@
           "end": [10, 15.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2580,11 +2768,11 @@
       {
         "text": "1920",
         "position": {
-          "start": [0.5, 5.5],
-          "end": [3.5, 7]
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2592,11 +2780,11 @@
       {
         "text": "1980",
         "position": {
-          "start": [0.5, 11],
-          "end": [3.5, 12.5]
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2668,8 +2856,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 4.5],
-              "end": [9.5, 8.5]
+              "start": [7.5, 2.5],
+              "end": [9.5, 6.5]
             }
           },
           {
@@ -2677,8 +2865,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 10],
-              "end": [9.5, 14]
+              "start": [7.5, 9],
+              "end": [9.5, 13]
             }
           },
           {
@@ -2695,8 +2883,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 7],
-              "end": [3, 11]
+              "start": [1, 8],
+              "end": [3, 12]
             }
           },
           {
@@ -2704,8 +2892,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 12.5],
-              "end": [3, 16.5]
+              "start": [1, 14.5],
+              "end": [3, 18.5]
             }
           }
         ]
@@ -2852,11 +3040,11 @@
       {
         "text": "Siglo 17",
         "position": {
-          "start": [7, 4.5],
-          "end": [10, 6]
+          "start": [7, 2.5],
+          "end": [10, 4]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2864,11 +3052,11 @@
       {
         "text": "Siglo 20",
         "position": {
-          "start": [7, 10],
-          "end": [10, 11.5]
+          "start": [7, 9],
+          "end": [10, 10.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2876,11 +3064,11 @@
       {
         "text": "Siglo 19",
         "position": {
-          "start": [0.5, 8.5],
-          "end": [3.5, 10]
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2888,11 +3076,11 @@
       {
         "text": "Siglo 21",
         "position": {
-          "start": [0.5, 14],
-          "end": [3.5, 15.5]
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
         },
         "settings": { 
-          "fontSize": 18,
+          "fontSize": 16,
           "fontWeight": "normal",
           "fontFamily": "Poppins-Regular"
         }
@@ -2955,8 +3143,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 6],
-              "end": [9.5, 10]
+              "start": [7.5, 4],
+              "end": [9.5, 8]
             }
           },
           {
@@ -2964,8 +3152,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [7.5, 11.5],
-              "end": [9.5, 15.5]
+              "start": [7.5, 10.5],
+              "end": [9.5, 14.5]
             }
           },
           {
@@ -2973,8 +3161,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 10],
-              "end": [3, 14]
+              "start": [1, 8],
+              "end": [3, 12]
             }
           },
           {
@@ -2982,8 +3170,8 @@
             "name": "",
             "value": "",
             "position": {
-              "start": [1, 15.5],
-              "end": [3, 19.5]
+              "start": [1, 14.5],
+              "end": [3, 18.5]
             }
           }
         ]

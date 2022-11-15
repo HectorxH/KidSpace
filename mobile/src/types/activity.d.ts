@@ -109,6 +109,7 @@ export interface ITextBoxSettings {
 export interface IImages {
   name: string;
   position: IPosition;
+  resize?: 'contain' | 'cover' | 'stretch' | 'repeat' | 'center';
   settings?: IImagesSettings;
 }
 
@@ -118,6 +119,7 @@ export interface IImagesSettings {
   width?: string;
   alignSelf?: FlexAlignType | 'auto' | undefined;
   transform?: IImagesTransforms[];
+  borderRadius?: number;
 }
 
 export interface IImagesTransforms {
@@ -160,6 +162,7 @@ export interface IModels {
   rotation: Vec3;
   type?: string;
   image360?: string;
+  video360?: string;
   interactable?: string[];
   temperaturas?: string[];
   temperaturasModels?: string[];
@@ -185,6 +188,8 @@ export interface IImageTracker {
   target: string;
   display: string;
   displayType: 'image' | 'video' | '3dobject';
+  scale?: number[];
+  rotation?: number[];
 }
 
 export interface ITexts {
@@ -246,6 +251,7 @@ export interface IJumpCard {
   disableWhen: number[];
   // settings: IToggleButtonSetting;
   visible: boolean;
+  borderRadius?: boolean;
 }
 
 export interface ITextFieldQuestion {
@@ -265,6 +271,8 @@ export interface IDraggableItems {
   name: string;
   value: string;
   position: IPosition;
+  valuesList?: string[];
+  persistent?: boolean;
   top?: boolean;
   bottom?: boolean;
 }
@@ -286,6 +294,7 @@ export interface ILottie {
 
 export interface IActivityPage {
   background: string;
+  feedbackJose?: boolean;
   items?: IImages[] | never[];
   bubbles?: IImages[] | never[];
   textBoxes?: ITextBoxes[] | never[];
