@@ -68,6 +68,7 @@ const Objects3d = (props: Objects3dProps) => {
         setUpdateMaterial(false);
       }
       for (let i = 0; i < materials.length; i++) {
+        console.log(materials[i]);
         ViroMaterials.createMaterials(materials[i]);
       }
     }
@@ -130,9 +131,11 @@ const Objects3d = (props: Objects3dProps) => {
         if (
           modelProps[pageNumber][itemIndex].interactable[i] === 'temperatura'
         ) {
-          // setSelectedModelMaterials(
-          //   modelProps[pageNumber][itemIndex].ARMaterials,
-          // );
+          console.log('temperatura');
+          makeMaterials();
+          setSelectedModelMaterials(
+            modelProps[pageNumber][itemIndex].ARMaterials,
+          );
           setTemperaturaSelectorToggle(1);
         }
         if (

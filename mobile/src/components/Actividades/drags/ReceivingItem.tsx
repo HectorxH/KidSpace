@@ -4,6 +4,7 @@ import {IDraggable} from '../../../types/activity';
 import {ReactStateSetter} from '../../../types/others';
 import {RSize} from '../../../utils/responsive';
 import ReceivingBasurero from './ReceivingItems/ReceivingBasurero';
+import ReceivingCircleImage from './ReceivingItems/ReceivingCircleImage';
 import ReceivingCodeBlock from './ReceivingItems/ReceivingCodeBlock';
 import ReceivingColorCircle from './ReceivingItems/ReceivingColorCircle';
 import ReceivingImage from './ReceivingItems/ReceivingImage';
@@ -68,6 +69,22 @@ const ReceivingItem = (props: ReceivingItemProps) => {
       {draggable.receivingItems[itemNumber].type === 'rectangle' && (
         <View style={styles.overlay}>
           <ReceivingRectangle
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
+
+      {/* rectangle  */}
+      {draggable.receivingItems[itemNumber].type === 'circleImage' && (
+        <View style={styles.overlay}>
+          <ReceivingCircleImage
             pageNumber={pageNumber}
             dragNumber={dragNumber}
             itemNumber={itemNumber}

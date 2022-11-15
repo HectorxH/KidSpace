@@ -22,7 +22,6 @@ const ArmarDesarmar = (props: ArmarDesarmarProps) => {
   } = props.armarDesarmarParams;
   if (
     models3d[pageNumber].length === 0 ||
-    // models3d[pageNumber].length < activeModelIndex ||
     armarDesarmarToggle[0] === 0 ||
     toggleValues[pageNumber][0] === 1
   ) {

@@ -291,7 +291,7 @@ const images: {
     astronomia_2_16: require('./extras/astronomia2/16.png'),
     astronomia_2_17: require('./extras/astronomia2/17.png'),
     astronomia_2_18: require('./extras/astronomia2/18.png'),
-    Betelguese: require('./extras/astronomia2/betelguese.png'),
+    Betelgeuse: require('./extras/astronomia2/betelguese.png'),
     Rigel: require('./extras/astronomia2/rigel.png'),
     Sirius: require('./extras/astronomia2/sirius.png'),
     Sol: require('./extras/astronomia2/sol.png'),
