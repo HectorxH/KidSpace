@@ -107,7 +107,7 @@
         "nombre": "Tierra, Luna y Sol",
         "img":"portada_astr1",
         "title":"Historia de André",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "desc":"En esta actividad conocerás a André - un astrónomo, que se dedica al estudio del universo y movimiento de los cuerpos celestes. Junto con André, aprenderás sobre la Luna y el Sol, y los distintos fenómenos asociados con estos.",
         "coins":200,
         "estado":"estrellagris"
       },
@@ -117,7 +117,7 @@
         "nombre": "¿Qué vemos en el cielo nocturno?",
         "img":"portada_astr2",
         "title":"Historia de Laura",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "desc":"En esta actividad conocerás a Laura - una astrofísica, cuya responsabilidad es el estudio y la observación de los planetas y las estrellas, utilizando equipos especiales. Junto con Laura, aprenderás sobre el sistema solar y los planetas que lo componen. Además, aprenderás sobre el efecto de la temperatura sobre el color de planetas y estrellas.",
         "coins":350,
         "estado":"estrellagris"
       }
