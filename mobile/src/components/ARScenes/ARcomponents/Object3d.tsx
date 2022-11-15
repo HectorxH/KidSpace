@@ -29,6 +29,8 @@ interface Objects3dProps {
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
   rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
+  armarDesarmarToggle: [number, ReactStateSetter<number>];
+  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
   useChildrenAlt: [boolean[][][], ReactStateSetter<boolean[][][]>];
@@ -54,6 +56,8 @@ const Objects3d = (props: Objects3dProps) => {
   const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     props.materialSelectorToggle;
+  const setArmarDesarmarToggle = props.armarDesarmarToggle[1];
+  const setTemperaturaSelectorToggle = props.temperaturaSelectorToggle[1];
 
   function makeMaterials() {
     if (updateMaterial === true) {
@@ -114,6 +118,22 @@ const Objects3d = (props: Objects3dProps) => {
             modelProps[pageNumber][itemIndex].ARMaterials,
           );
           setMaterialSelectorToggle(1);
+        }
+        if (
+          modelProps[pageNumber][itemIndex].interactable[i] === 'armarDesarmar'
+        ) {
+          // setSelectedModelMaterials(
+          //   modelProps[pageNumber][itemIndex].ARMaterials,
+          // );
+          setArmarDesarmarToggle(1);
+        }
+        if (
+          modelProps[pageNumber][itemIndex].interactable[i] === 'temperatura'
+        ) {
+          // setSelectedModelMaterials(
+          //   modelProps[pageNumber][itemIndex].ARMaterials,
+          // );
+          setTemperaturaSelectorToggle(1);
         }
         if (
           modelProps[pageNumber][itemIndex].interactable[i] === 'auxiliar' &&

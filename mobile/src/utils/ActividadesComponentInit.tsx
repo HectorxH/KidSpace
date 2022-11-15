@@ -10,6 +10,7 @@ import {
   IActividadesComponentParams,
   IActividadesParams,
   IActNavigationParams,
+  IArmarDesarmarParams,
   IInventarioParams,
   ILottieComponentParams,
   IMarkerTrackerFeedbackParams,
@@ -95,6 +96,9 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   // vars texturas
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     useState<number>(0);
+  const [armarDesarmarToggle, setArmarDesarmarToggle] = useState<number>(0);
+  const [temperaturaSelectorToggle, setTemperaturaSelectorToggle] =
+    useState<number>(0);
   const [selectedModelMaterials, setSelectedModelMaterials] = useState<{
     materialOrder: string[];
     materialChoices: string[][];
@@ -139,6 +143,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       alt: typeof item.alt !== 'undefined' ? item.alt : '',
       modelType: typeof item.type !== 'undefined' ? item.type : 'object',
       modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
+      modelVideo360: typeof item.video360 !== 'undefined' ? item.video360 : '',
       resources: Models[item.model].resources,
       materials: Models[item.model].materials,
       type: Models[item.model].type,
@@ -226,6 +231,11 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     actividades.map(() => 0),
   );
 
+  const [joseMessage, setJoseMessage] = useState<string>(
+    '¡Arrastra cada residuo al basurero correcto!',
+  );
+  const [joseItem, setJoseItem] = useState<string>('JoseSmile');
+
   const ViroAppParams: IViroAppParams = {
     pageNumber: pageNumber,
     models: [...models],
@@ -240,6 +250,11 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     useChildrenAlt: [useChildrenAlt, setUseChildrenAlt],
     rotations: [rotations, setRotations],
     materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
+    armarDesarmarToggle: [armarDesarmarToggle, setArmarDesarmarToggle],
+    temperaturaSelectorToggle: [
+      temperaturaSelectorToggle,
+      setTemperaturaSelectorToggle,
+    ],
     setSelectedModelMaterials: setSelectedModelMaterials,
     modelMaterial: modelMaterial[0],
     setActiveModelIndex: setActiveModelIndex,
@@ -273,16 +288,16 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
-  const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
-    pageNumber: pageNumber,
-    materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
-    modelMaterial: modelMaterial,
-    selectedMaterial: selectedMaterial,
-    selectedModelMaterials: selectedModelMaterials,
-    activeModelIndex: activeModelIndex,
-    models3d: models3d,
-    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
-  };
+  // const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
+  //   pageNumber: pageNumber,
+  //   materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
+  //   modelMaterial: modelMaterial,
+  //   selectedMaterial: selectedMaterial,
+  //   selectedModelMaterials: selectedModelMaterials,
+  //   activeModelIndex: activeModelIndex,
+  //   models3d: models3d,
+  //   selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
+  // };
 
   const MarkerTrackerFeedbackParams: IMarkerTrackerFeedbackParams = {
     pageNumber: pageNumber,
@@ -315,6 +330,8 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],
     lotties: lotties,
+    joseItem: [joseItem, setJoseItem],
+    joseMessage: [joseMessage, setJoseMessage],
   };
 
   const ToggleButtonParams: IToggleButtonParams = {
@@ -373,6 +390,19 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     lotties: lotties,
   };
 
+  const ArmarDesarmarParams: IArmarDesarmarParams = {
+    pageNumber: pageNumber,
+    armarDesarmarToggle: [armarDesarmarToggle, setArmarDesarmarToggle],
+    modelMaterial: modelMaterial,
+    selectedMaterial: selectedMaterial,
+    selectedModelMaterials: selectedModelMaterials,
+    activeModelIndex: activeModelIndex,
+    models3d: models3d,
+    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
+    useAlt: [useAlt, setUseAlt],
+    toggleValues: toggleValues,
+  };
+
   const actividadComponentParams: IActividadesComponentParams = {
     pageNumber: pageNumber,
     actividades: actividades,
@@ -384,6 +414,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     actNavigationParams: ActNavigationParams,
     markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
     lottiesComponentParams: LottieComponentParams,
+    armarDesarmarParams: ArmarDesarmarParams,
   };
 
   return actividadComponentParams;

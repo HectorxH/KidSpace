@@ -434,6 +434,10 @@ export function getImageStyle(
           typeof newImageStyle.transform !== 'undefined'
             ? newImageStyle.transform
             : [],
+        borderRadius:
+          typeof newImageStyle.borderRadius !== 'undefined'
+            ? RSize(newImageStyle.borderRadius, 'w') * 100
+            : 0,
       },
     },
   });

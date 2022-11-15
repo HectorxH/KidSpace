@@ -194,6 +194,36 @@ const targets: ViroARTrackingTargetsMap = {
     physicalWidth: 0.3,
     type: 'Image',
   },
+  basureroAmarillo: {
+    source: Images.trackingTargets.basureroAmarillo,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroAzul: {
+    source: Images.trackingTargets.basureroAzul,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroCafe: {
+    source: Images.trackingTargets.basureroCafe,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroGris: {
+    source: Images.trackingTargets.basureroGris,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
+  basureroVerde: {
+    source: Images.trackingTargets.basureroVerde,
+    orientation: 'Up',
+    physicalWidth: 0.3,
+    type: 'Image',
+  },
 };
 
 ViroARTrackingTargets.createTargets(targets);

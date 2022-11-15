@@ -16,6 +16,8 @@ interface DraggableProps {
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   draggable: IDraggable[] | never[];
+  joseItem: [string, ReactStateSetter<string>];
+  joseMessage: [string, ReactStateSetter<string>];
 }
 
 const Draggable = (props: DraggableProps) => {
@@ -72,6 +74,8 @@ const Draggable = (props: DraggableProps) => {
                               receivingValues={props.receivingValues}
                               setResultColor={setResultColor}
                               draggable={draggable}
+                              joseItem={props.joseItem}
+                              joseMessage={props.joseMessage}
                             />
                           }
                         />

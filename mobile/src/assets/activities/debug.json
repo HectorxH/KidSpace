@@ -1,100 +1,18 @@
 [
   {
-    "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [11.5, 4.5],
-          "end": [19.5, 19.5]
-        }
-      }
-    ],
-    "texts": [
-        {
-          "text": "*:c*",
-          "position": {
-            "start": [12, 5],
-            "end": [19, 19]
-          }
-        }
-    ]
-  },
-  {
-    "AR": {
-      "start": true,
-      "models": [
-        {
-          "model": "caja_torta",
-          "scale": [0.2, 0.2, 0.2],
-          "rotation": [0, 0, 0]
-        }
-      ]
-    },
-    "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [2, 4],
-          "end": [16, 16]
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": "Test",
-        "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
-        }
-      }
-    ],
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#FF8A00",
           "buttonColorAlt": "#FF8A00",
-          "buttonIconNormal": "search",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": " Preguntas",
-          "buttonTextAlt": " Volver"
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Ejercicio",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end": [7, 3.5]
-        },
-        "value": true
-      }
-    ]
-  },
-  {
-    "AR": {
-      "start": true,
-      "models": [],
-      "trackerMessage": "Encuentra el material hecho de Arena",
-      "imageTrackers": [
-        {
-          "name": "Vidrio",
-          "target": "vidrio",
-          "display": "barras",
-          "displayType": "3dobject"
-        }
-      ]
-    },
-
-    "background": "",
-    "toggleButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#FF8A00",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "",
-          "buttonIconNormal": "",
-          "buttonTextAlt": "",
-          "buttonTextNormal": ""
-        },
-        "position" : {
-          "start": [0, 0],
-          "end": [0, 0]
+          "end":  [7, 3.5]
         },
         "value": false
       }
@@ -103,22 +21,158 @@
       {
         "settings": {
           "buttonColorAlt": "#BBBBBB",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Ver el poster"
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
-          "start": [1, 1],
-          "end": [7, 3.5]
+          "start": [13, 1],
+          "end": [19, 3.5]
         },
         "target": -1,
-        "require": [2],
-        "visible": true
+        "require": [0],
+        "visible": false
       }
-    ]
+    ],
+    "background": "",
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["basureroAzul", "basureroCafe", "basureroCafe", "basureroVerde", "basureroAmarillo", "basureroGris", "basureroAzul"],
+        "draggableItems": [
+          {
+            "type": "residuo",
+            "name": "residuo_1",
+            "value": "basureroAzul",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_2",
+            "value": "basureroCafe",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_3",
+            "value": "basureroCafe",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_4",
+            "value": "basureroVerde",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_5",
+            "value": "basureroAmarillo",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_6",
+            "value": "basureroGris",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_7",
+            "value": "basureroAzul",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroCafe",
+            "position": {
+              "start": [0.5, 15],
+              "end": [3.6, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroGris",
+            "position": {
+              "start": [3.7, 15],
+              "end": [6.8, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroAmarillo",
+            "position": {
+              "start": [6.9, 15],
+              "end": [10, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroAzul",
+            "position": {
+              "start": [10.1, 15],
+              "end": [13.2, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroVerde",
+            "position": {
+              "start": [13.3, 15],
+              "end": [16.4, 20]
+            }
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "name": "bg_reciclaje2",
+        "resize": "cover",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]  
+        }
+      },
+      {
+        "name": "bg_reciclaje3",
+        "resize": "cover",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]  
+        }
+      }
+    ],
+    "feedbackJose": true
   }
 ]
-
-

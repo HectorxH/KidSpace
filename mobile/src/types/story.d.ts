@@ -59,6 +59,8 @@ export interface IViroAppParams {
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
   rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
+  armarDesarmarToggle: [number, ReactStateSetter<number>];
+  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
   setActiveModelIndex: ReactStateSetter<number>;
   setSelectedModelMaterials: ReactStateSetter<{
@@ -95,6 +97,21 @@ export interface IMaterialSelectorParams {
   activeModelIndex: number;
   models3d: IModels[][];
   selectedPageOrder: [number, ReactStateSetter<number>];
+}
+export interface IArmarDesarmarParams {
+  pageNumber: number;
+  armarDesarmarToggle: [number, ReactStateSetter<number>];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  selectedModelMaterials: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+  activeModelIndex: number;
+  models3d: IModels[][];
+  selectedPageOrder: [number, ReactStateSetter<number>];
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
+  toggleValues: number[][];
 }
 
 export interface ITemperaturaSelectorParams {
@@ -142,6 +159,8 @@ export interface IStoryComponentParams {
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: string[][];
+  joseItem: [string, ReactStateSetter<string>];
+  joseMessage: [string, ReactStateSetter<string>];
 }
 
 export interface IToggleButtonParams {
@@ -200,6 +219,7 @@ export interface IActividadesComponentParams {
   viroAppParams: IViroAppParams;
   inventarioParams: IInventarioParams;
   materialSelectorParams: IMaterialSelectorParams;
+  armarDesarmarParams: IArmarDesarmarParams;
   storyComponentParams: IStoryComponentParams;
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;

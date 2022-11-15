@@ -37,7 +37,11 @@ const Items = ({images, resize, specialTexture}: ItemsProps) => {
                   style={imageStyles.settings}
                   // resizeMode="cover"
                   resizeMode={
-                    typeof resize !== 'undefined' ? resize : 'contain'
+                    typeof resize !== 'undefined'
+                      ? resize
+                      : typeof item.resize !== 'undefined'
+                      ? item.resize
+                      : 'contain'
                   }
                   source={
                     item.name !== '_diseño2_'
