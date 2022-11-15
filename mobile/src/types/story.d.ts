@@ -116,7 +116,7 @@ export interface IArmarDesarmarParams {
 
 export interface ITemperaturaSelectorParams {
   pageNumber: number;
-  materialSelectorToggle: [number, ReactStateSetter<number>];
+  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   selectedModelMaterials: {
@@ -126,6 +126,9 @@ export interface ITemperaturaSelectorParams {
   activeModelIndex: number;
   models3d: IModels[][];
   selectedPageOrder: [number, ReactStateSetter<number>];
+  temperaturasList: string[][][];
+  toggleValues: number[][];
+  nPlacedItems: number[];
 }
 
 export interface IMarkerTrackerFeedbackParams {
@@ -220,6 +223,7 @@ export interface IActividadesComponentParams {
   inventarioParams: IInventarioParams;
   materialSelectorParams: IMaterialSelectorParams;
   armarDesarmarParams: IArmarDesarmarParams;
+  temperaturaSelectorParams: ITemperaturaSelectorParams;
   storyComponentParams: IStoryComponentParams;
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;

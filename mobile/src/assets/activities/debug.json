@@ -1,5 +1,24 @@
 [
   {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "star",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "interactable": ["temperatura"],
+          "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
+          "ARMaterials": {
+            "materialOrder": ["Estrella"],
+            "materialChoices": [
+              ["betelgeuse", "sun", "sirius", "rigel"]
+            ]
+          }
+        }
+      ]
+    },
+    "background": "",
     "toggleButton": [
       {
         "settings": {
@@ -7,12 +26,12 @@
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
           "buttonIconNormal": "cube",
-          "buttonTextAlt": " Ejercicio",
+          "buttonTextAlt": " Preguntas",
           "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
-          "end":  [7, 3.5]
+          "end": [7, 3.5]
         },
         "value": false
       }
@@ -22,7 +41,7 @@
         "settings": {
           "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "cube",
+          "buttonIconAlt": "arrow-right",
           "buttonIconNormal": "arrow-right",
           "buttonTextAlt": " Avanzar",
           "buttonTextNormal": " Avanzar"
@@ -36,143 +55,145 @@
         "visible": false
       }
     ],
-    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Ordena las estrellas, de menor a mayor temperatura!",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [4.5, 6.5],
+          "end": [5.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [9.5, 6.5],
+          "end": [10.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [14.5, 6.5],
+          "end": [15.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      }
+    ],
     "draggable": [
       {
         "type": "order",
-        "answer": ["basureroAzul", "basureroCafe", "basureroCafe", "basureroVerde", "basureroAmarillo", "basureroGris", "basureroAzul"],
+        "answer": ["Betelgeuse", "Sol", "Sirius", "Rigel"],
         "draggableItems": [
           {
-            "type": "residuo",
-            "name": "residuo_1",
-            "value": "basureroAzul",
+            "type": "image",
+            "name": "Rigel",
+            "value": "Rigel",
             "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
+              "start": [3.25, 15.5],
+              "end": [6.25, 19.5]
             }
           },
           {
-            "type": "residuo",
-            "name": "residuo_2",
-            "value": "basureroCafe",
+            "type": "image",
+            "name": "Betelgeuse",
+            "value": "Betelgeuse",
             "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
+              "start": [6.75, 15.5],
+              "end": [9.75, 19.5]
             }
           },
           {
-            "type": "residuo",
-            "name": "residuo_3",
-            "value": "basureroCafe",
+            "type": "image",
+            "name": "Sol",
+            "value": "Sol",
             "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
+              "start": [10.25, 15.5],
+              "end": [13.25, 19.5]
             }
           },
           {
-            "type": "residuo",
-            "name": "residuo_4",
-            "value": "basureroVerde",
+            "type": "image",
+            "name": "Sirius",
+            "value": "Sirius",
             "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
-            }
-          },
-          {
-            "type": "residuo",
-            "name": "residuo_5",
-            "value": "basureroAmarillo",
-            "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
-            }
-          },
-          {
-            "type": "residuo",
-            "name": "residuo_6",
-            "value": "basureroGris",
-            "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
-            }
-          },
-          {
-            "type": "residuo",
-            "name": "residuo_7",
-            "value": "basureroAzul",
-            "position": {
-              "start": [7.5, 1],
-              "end": [12.5, 10]
+              "start": [13.75, 15.5],
+              "end": [16.75, 19.5]
             }
           }
         ],
         "receivingItems": [
           {
-            "type": "basurero",
+            "type": "circleImage",
             "name": "",
-            "value": "basureroCafe",
+            "value": "",
             "position": {
-              "start": [0.5, 15],
-              "end": [3.6, 20]
+              "start": [0.5, 6.5],
+              "end": [4.5, 12.5]
             }
           },
           {
-            "type": "basurero",
+            "type": "circleImage",
             "name": "",
-            "value": "basureroGris",
+            "value": "",
             "position": {
-              "start": [3.7, 15],
-              "end": [6.8, 20]
+              "start": [5.5, 6.5],
+              "end": [9.5, 12.5]
             }
           },
           {
-            "type": "basurero",
+            "type": "circleImage",
             "name": "",
-            "value": "basureroAmarillo",
+            "value": "",
             "position": {
-              "start": [6.9, 15],
-              "end": [10, 20]
+              "start": [10.5, 6.5],
+              "end": [14.5, 12.5]
             }
           },
           {
-            "type": "basurero",
+            "type": "circleImage",
             "name": "",
-            "value": "basureroAzul",
+            "value": "",
             "position": {
-              "start": [10.1, 15],
-              "end": [13.2, 20]
-            }
-          },
-          {
-            "type": "basurero",
-            "name": "",
-            "value": "basureroVerde",
-            "position": {
-              "start": [13.3, 15],
-              "end": [16.4, 20]
+              "start": [15.5, 6.5],
+              "end": [19.5, 12.5]
             }
           }
         ]
       }
-    ],
-    "items": [
-      {
-        "name": "bg_reciclaje2",
-        "resize": "cover",
-        "position": {
-          "start": [0, 0],
-          "end": [20, 20]  
-        }
-      },
-      {
-        "name": "bg_reciclaje3",
-        "resize": "cover",
-        "position": {
-          "start": [0, 0],
-          "end": [20, 20]  
-        }
-      }
-    ],
-    "feedbackJose": true
+    ]
   }
 ]

@@ -165,7 +165,6 @@ export interface IModels {
   video360?: string;
   interactable?: string[];
   temperaturas?: string[];
-  temperaturasModels?: string[];
   icon?: string;
   ARMaterials?: {
     materialOrder: string[];

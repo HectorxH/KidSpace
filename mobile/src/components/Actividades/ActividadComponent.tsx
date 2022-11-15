@@ -16,7 +16,7 @@ import Inventario from '../inventario/inventario';
 import MaterialSelector from './MaterialSelector';
 import {IActividadesComponentParams} from '../../types/story';
 import MarkerTrackerFeedback from './MarkerTrackerFeedback';
-// import TemperaturaSelector from './TemperaturaSelector';
+import TemperaturaSelector from './TemperaturaSelector';
 import ArmarDesarmar from './ArmarDesarmar';
 
 interface ActividadComponentProps {
@@ -32,6 +32,7 @@ const ActividadComponent = (props: ActividadComponentProps) => {
     inventarioParams,
     materialSelectorParams,
     armarDesarmarParams,
+    temperaturaSelectorParams,
     storyComponentParams,
     toggleButtonParams,
     actNavigationParams,
@@ -92,13 +93,13 @@ const ActividadComponent = (props: ActividadComponentProps) => {
               <ArmarDesarmar armarDesarmarParams={armarDesarmarParams} />
             </View>
           )}
-          {/* {useAR === true && (
+          {useAR === true && (
             <View style={styles.overlay}>
               <TemperaturaSelector
-                materialSelectorParams={materialSelectorParams}
+                temperaturaSelectorParams={temperaturaSelectorParams}
               />
             </View>
-          )} */}
+          )}
           {useAR === true && (
             <View style={styles.overlay}>
               <MarkerTrackerFeedback

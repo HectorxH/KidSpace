@@ -1,43 +1,53 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import MaterialSelectorComponent from './MaterialSelectorComponent';
-import {IMaterialSelectorParams} from '../../types/story';
+import {ITemperaturaSelectorParams} from '../../types/story';
+import TemperaturaSelectorComponent from './TemperaturaSelectorComponent';
 
-interface MaterialSelectorProps {
-  materialSelectorParams: IMaterialSelectorParams;
+interface TemperaturaSelectorProps {
+  temperaturaSelectorParams: ITemperaturaSelectorParams;
 }
 
-const MaterialSelector = (props: MaterialSelectorProps) => {
+const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
   const {
     pageNumber,
     activeModelIndex,
     models3d,
-    materialSelectorToggle,
+    temperaturaSelectorToggle,
     modelMaterial,
     selectedMaterial,
     selectedModelMaterials,
     selectedPageOrder,
-  } = props.materialSelectorParams;
+    temperaturasList,
+    toggleValues,
+    nPlacedItems,
+  } = props.temperaturaSelectorParams;
+  console.log(models3d[pageNumber].length);
+  console.log(models3d[pageNumber]);
+  console.log(activeModelIndex);
+  console.log(nPlacedItems[pageNumber]);
   if (
     models3d[pageNumber].length === 0 ||
+    nPlacedItems[pageNumber] === 0 ||
     models3d[pageNumber].length < activeModelIndex ||
     typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
-    materialSelectorToggle[0] === 0
+    temperaturaSelectorToggle[0] === 0 ||
+    toggleValues[pageNumber][0] === 1
   ) {
     return null;
   }
-  console.log('material selector');
+  console.log('temperatura selector');
   return (
     <View style={styles.container}>
       <View style={styles.overlay}>
-        <MaterialSelectorComponent
+        <TemperaturaSelectorComponent
           objectNumber={activeModelIndex}
-          materialSelectorToggle={materialSelectorToggle}
+          temperaturaSelectorToggle={temperaturaSelectorToggle}
           pageNumber={pageNumber}
           modelMaterial={modelMaterial}
           selectedMaterial={selectedMaterial}
           selectedModelMaterials={selectedModelMaterials}
           selectedPageOrder={selectedPageOrder}
+          temperaturasList={temperaturasList}
         />
       </View>
     </View>
@@ -58,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MaterialSelector;
+export default TemperaturaSelector;

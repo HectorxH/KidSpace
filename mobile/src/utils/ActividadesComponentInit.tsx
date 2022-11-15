@@ -63,6 +63,15 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       : [],
   );
 
+  const temperaturasList = actividades.map(actividadPage =>
+    typeof actividadPage.AR !== 'undefined' &&
+    typeof actividadPage.AR.models !== 'undefined'
+      ? actividadPage.AR.models.map(model =>
+          typeof model.temperaturas !== 'undefined' ? model.temperaturas : [],
+        )
+      : [[]],
+  );
+
   const imageTrackers = actividades.map(actividadPage =>
     typeof actividadPage.AR !== 'undefined' &&
     typeof actividadPage.AR.imageTrackers !== 'undefined'
@@ -288,17 +297,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
   };
 
-  // const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
-  //   pageNumber: pageNumber,
-  //   materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
-  //   modelMaterial: modelMaterial,
-  //   selectedMaterial: selectedMaterial,
-  //   selectedModelMaterials: selectedModelMaterials,
-  //   activeModelIndex: activeModelIndex,
-  //   models3d: models3d,
-  //   selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
-  // };
-
   const MarkerTrackerFeedbackParams: IMarkerTrackerFeedbackParams = {
     pageNumber: pageNumber,
     activeTrackerIndex: activeTrackerIndex,
@@ -403,6 +401,23 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     toggleValues: toggleValues,
   };
 
+  const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
+    pageNumber: pageNumber,
+    temperaturaSelectorToggle: [
+      temperaturaSelectorToggle,
+      setTemperaturaSelectorToggle,
+    ],
+    modelMaterial: modelMaterial,
+    selectedMaterial: selectedMaterial,
+    selectedModelMaterials: selectedModelMaterials,
+    activeModelIndex: activeModelIndex,
+    models3d: models3d,
+    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
+    temperaturasList: temperaturasList,
+    toggleValues: toggleValues,
+    nPlacedItems: nPlacedItems,
+  };
+
   const actividadComponentParams: IActividadesComponentParams = {
     pageNumber: pageNumber,
     actividades: actividades,
@@ -415,6 +430,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
     lottiesComponentParams: LottieComponentParams,
     armarDesarmarParams: ArmarDesarmarParams,
+    temperaturaSelectorParams: TemperaturaSelectorParams,
   };
 
   return actividadComponentParams;
