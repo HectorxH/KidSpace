@@ -3,11 +3,11 @@ import {View, StyleSheet} from 'react-native';
 import MaterialSelectorComponent from './MaterialSelectorComponent';
 import {IMaterialSelectorParams} from '../../types/story';
 
-interface TemperaturaSelectorProps {
+interface MaterialSelectorProps {
   materialSelectorParams: IMaterialSelectorParams;
 }
 
-const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
+const MaterialSelector = (props: MaterialSelectorProps) => {
   const {
     pageNumber,
     activeModelIndex,
@@ -21,11 +21,12 @@ const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
   if (
     models3d[pageNumber].length === 0 ||
     models3d[pageNumber].length < activeModelIndex ||
-    typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined'
+    typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
+    materialSelectorToggle[0] === 0
   ) {
     return null;
   }
-  console.log('temperatura selector');
+  console.log('material selector');
   return (
     <View style={styles.container}>
       <View style={styles.overlay}>
@@ -57,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TemperaturaSelector;
+export default MaterialSelector;

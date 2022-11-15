@@ -1162,10 +1162,9 @@
       "start": true,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1183,7 +1182,7 @@
     ],
     "texts": [
       {
-        "text": "Laura recién instalo un simulador de universo en su laboratorio",
+        "text": "Laura recién instaló un simulador de universo en su laboratorio",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1196,15 +1195,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1213,10 +1212,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1247,15 +1245,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1264,10 +1262,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1298,15 +1295,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1315,10 +1312,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1349,15 +1345,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1366,10 +1362,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1400,15 +1395,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1417,10 +1412,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.8, 0.8, 0.8],
-          "rotation": [0, 180, 0],
-          "icon": "estrella"
+          "rotation": [0, 180, 0]
         }
       ]
     },
@@ -1451,15 +1445,15 @@
           "buttonColorAlt": "#FF8A00",
           "buttonColorNormal": "#FF8A00",
           "buttonIconAlt": "search",
-          "buttonIconNormal": "cube",
+          "buttonIconNormal": "search",
           "buttonTextAlt": " Preguntas",
-          "buttonTextNormal": " Volver"
+          "buttonTextNormal": " Preguntas"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
         },
-        "value": false
+        "value": true
       }
     ]
   },
@@ -1468,10 +1462,9 @@
       "start": false,
       "models": [
         {
-          "model": "betelgeuse",
+          "model": "star",
           "scale": [0.6, 0.6, 0.6],
           "rotation": [0, 180, 0],
-          "icon": "estrella",
           "interactable": ["temperatura"],
           "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
           "temperaturasModels": ["betelgeuse", "sol", "sirius", "rigel"]

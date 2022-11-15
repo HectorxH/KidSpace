@@ -12,7 +12,7 @@ import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
 import {Text} from 'react-native-paper';
 
-interface TemperaturaSelectorComponentProps {
+interface MaterialSelectorComponentProps {
   materialSelectorToggle: [number, ReactStateSetter<number>];
   pageNumber: number;
   objectNumber: number;
@@ -25,9 +25,7 @@ interface TemperaturaSelectorComponentProps {
   selectedPageOrder: [number, ReactStateSetter<number>];
 }
 
-const TemperaturaSelectorComponent = (
-  props: TemperaturaSelectorComponentProps,
-) => {
+const MaterialSelectorComponent = (props: MaterialSelectorComponentProps) => {
   const {fontScale} = useWindowDimensions();
   const [selectedPageOrder, setSelectedPageOrder] = props.selectedPageOrder;
   function buttonPressed(v: string) {
@@ -294,4 +292,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TemperaturaSelectorComponent;
+export default MaterialSelectorComponent;

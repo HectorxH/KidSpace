@@ -1744,6 +1744,7 @@
         "require": [],
         "disableWhen": [],
         "visible": false,
+        "borderRadius": true,
         "items": [
           {
             "name": "solarTotal",
@@ -1964,6 +1965,7 @@
         "require": [],
         "disableWhen": [],
         "visible": false,
+        "borderRadius": true,
         "items": [
           {
             "name": "sombraLunar",
@@ -2184,6 +2186,7 @@
         "require": [],
         "disableWhen": [],
         "visible": false,
+        "borderRadius": true,
         "items": [
           {
             "name": "lunaRoja",
