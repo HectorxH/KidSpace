@@ -37,7 +37,6 @@ const LoginView = () => {
         { username, password, tipo },
       );
       login(res.data);
-      console.log(res);
       setCorrect(true);
       setError(false);
     } catch (e) {
@@ -84,9 +83,10 @@ const LoginView = () => {
               </Stack>
               <FormControl fullWidth>
                 <InputLabel id="select-label">Tipo de cuenta</InputLabel>
-                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange}>
+                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={tipo} onChange={handleTipoChange} sx={{ textAlign: 'start' }}>
                   <MenuItem value="profesor"><Typography>Profesor</Typography></MenuItem>
                   <MenuItem value="apoderado"><Typography>Apoderado</Typography></MenuItem>
+                  <MenuItem value="representante"><Typography>Representante</Typography></MenuItem>
                 </Select>
               </FormControl>
               <Stack spacing={2}>
@@ -113,55 +113,6 @@ const LoginView = () => {
       </Grid>
     </Grid>
   );
-
-  // return (
-  //   <div style={{ padding: 30 }}>
-  //     <Paper>
-  //       <Grid
-  //         container
-  //         spacing={3}
-  //         direction="column"
-  //         alignItems="center"
-  //         justifyContent="center"
-  //       >
-  //         <Grid item xs={12}>
-  //           <TextField label="Username" onChange={handleUsernameChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <TextField label="Password" type="password" onChange={handlePasswordChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <FormControlLabel
-  //             control={(
-  //               <Checkbox
-  //                 checked={checked}
-  //                 onChange={handleChange}
-  //                 inputProps={{ 'aria-label': 'primary checkbox' }}
-  //               />
-  //             )}
-  //             label="Keep me logged in"
-  //           />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <Button fullWidth onClick={handleClick}> Login </Button>
-  //           <Button fullWidth onClick={() => navigate('/registrar')}> Registrar </Button>
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           {correct && (
-  //             <Alert severity="success">
-  //               Sesión Iniciada
-  //             </Alert>
-  //           )}
-  //           {error && (
-  //             <Alert severity="error">
-  //               Usuario o Contraseña Incorrecta
-  //             </Alert>
-  //           )}
-  //         </Grid>
-  //       </Grid>
-  //     </Paper>
-  //   </div>
-  // );
 };
 
 export default LoginView;

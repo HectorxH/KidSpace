@@ -10,6 +10,9 @@ export default [
     price: '$ 17.990 / 6 Meses',
     color: '#F2C144',
     cantidad: 'Hasta 2 profesores',
+    url: 'https://sandbox.flow.cl/btn.php?token=a3nch0z',
+    // url: 'https://www.flow.cl/btn.php?token=eoksudx',
+    limite: 2,
   },
   {
     id: 1,
@@ -18,6 +21,9 @@ export default [
     price: '$ 29.990 / 6 Meses',
     color: '#5c9dec',
     cantidad: 'Hasta 5 profesores',
+    url: 'https://sandbox.flow.cl/btn.php?token=ueppeky',
+    // url: 'https://www.flow.cl/btn.php?token=einprk2',
+    limite: 5,
   },
   {
     id: 2,
@@ -26,5 +32,8 @@ export default [
     price: '$ 34.990 / 6 Meses',
     color: '#FF8A00',
     cantidad: 'Más de 5 profesores',
+    url: 'https://sandbox.flow.cl/btn.php?token=ctizoru',
+    // url: 'https://www.flow.cl/btn.php?token=yniwtbw',
+    limite: false,
   },
 ];

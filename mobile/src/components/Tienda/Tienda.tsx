@@ -115,7 +115,7 @@ const Tienda = ({navigation, route}: TiendaProps) => {
           onPress={() => navigation.goBack()}>
           {back}
         </Button>
-        <Text style={styles.title}> Tus Actividades:</Text>
+        <Text style={styles.title}> Tienda de peculiaridades</Text>
       </View>
       <View style={styles.cards}>
         <Card
@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: 'Poppins-Bold',
+    color: '#063D69',
     fontSize: Math.round(windowHeight * 0.06),
   },
   cards: {
