@@ -1,24 +1,29 @@
 import { Schema, Types, model } from 'mongoose';
 import { IProfesor } from './Profesor';
 
-export const PlanLimit = {
-  basic: 2,
-  pro: 5,
-  'pro+': 100,
-};
+export const PlanLimit = [2, 5, 100, 0];
 
 export interface IRepresentante {
   user: any,
-  plan: String,
+  plan: number,
   profesores: Types.Array<IProfesor>
+}
+
+function maxLen(this: IRepresentante, arr: any[]) {
+  return arr.length <= PlanLimit[this.plan];
 }
 
 export const representanteSchema = new Schema<IRepresentante>({
   user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
-  plan: String,
-  profesores: [{ type: Types.ObjectId, ref: 'Profesor', default: [] }],
+  plan: { type: Number, default: 3 },
+  profesores: [{
+    type: Types.ObjectId,
+    ref: 'Profesor',
+    default: [],
+    validate: maxLen,
+  }],
 });
 
 export default model<IRepresentante>('Representante', representanteSchema);

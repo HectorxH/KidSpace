@@ -1,6 +1,7 @@
 const paq1 : string = require('../assets/ok.png');
 const paq2 : string = require('../assets/highfive.png');
 const paq3 : string = require('../assets/rock.png');
+const paq0 : string = require('../assets/pipo_triste.png');
 
 export default [
   {
@@ -35,5 +36,14 @@ export default [
     url: 'https://sandbox.flow.cl/btn.php?token=ctizoru',
     // url: 'https://www.flow.cl/btn.php?token=yniwtbw',
     limite: false,
+  },
+  {
+    id: 3,
+    img: paq0,
+    title: 'NONE',
+    price: '$0',
+    color: '#000',
+    cantidad: 'Sin profesores',
+    limite: 0,
   },
 ];

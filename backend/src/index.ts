@@ -74,7 +74,7 @@ app.use((req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo, email, cursoId, estudianteId,
+      nombres, apellidos, tipo, email, cursoId, estudianteId, representanteUid,
     } = req.body;
     let { username, password } : {username: string, password: string} = req.body;
     if (_.some(req.body, _.isNil)) {
@@ -118,6 +118,19 @@ app.post('/register', async (req, res) => {
         }
       } while (user);
       console.log({ username, password });
+    } else if (tipo === 'profesor') {
+      password = crypto.randomBytes(8).toString('hex');
+      const name = `${nombres.split(' ')[0]}.${apellidos.split(' ')[0]}`;
+      let user;
+      username = `${name}`;
+      do {
+        // eslint-disable-next-line no-await-in-loop
+        user = await User.findOne({ username });
+        if (user) {
+          username = `${name}.${crypto.randomBytes(2).toString('hex')}`;
+        }
+      } while (user);
+      console.log({ username, password });
     }
 
     const hashedPass = await bcrypt.hash(password, 10);
@@ -127,9 +140,13 @@ app.post('/register', async (req, res) => {
     await user.save();
 
     if (user.tipo === 'profesor') {
-      const profesor = new Profesor({ user: user._id });
+      const profesor = new Profesor({ user: user._id, password });
+      await Representante.findOneAndUpdate(
+        { user: representanteUid },
+        { $addToSet: { profesores: profesor?._id } },
+      );
       await profesor.save();
-      return res.sendStatus(200);
+      return res.json({ profesor: await Profesor.findById(profesor?._id).populate('user') });
     } if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ user: user._id, curso: cursoId });
       await Curso.findByIdAndUpdate(cursoId, { $addToSet: { estudiantes: estudiante?._id } });

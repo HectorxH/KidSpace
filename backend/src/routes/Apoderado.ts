@@ -14,7 +14,7 @@ dotenv.config();
 
 const router = express.Router();
 
-const emailTemplate = readFileSync(path.join(__dirname, '../../assets/email/index.html')).toString();
+const emailTemplate = readFileSync(path.join(__dirname, '../../assets/email/apoderado.html')).toString();
 const estudianteEmail = '<li>{0}</li>';
 
 const transporter = nodemailer.createTransport({
@@ -88,7 +88,7 @@ router.delete('/:id', async (req, res) => {
         // eslint-disable-next-line no-await-in-loop
         await Estudiante.findByIdAndUpdate(
           estudianteId,
-          { $pull: { estudiantes: [id] } },
+          { $pull: { estudiantes: id } },
         );
       }
     }

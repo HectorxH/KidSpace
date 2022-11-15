@@ -12,21 +12,16 @@ import axios from 'axios';
 import SinActividades from '../../components/SinActividades';
 import { IEstudiante, IEstudiantes } from '../../types/estudiantes';
 import { useAuth } from '../../hooks/useAuth';
-
-interface IProfesores {
-  _id: string,
-  nombres: string,
-  apellidos: string,
-  email: string,
-}
+import { IProfesor } from '../../types/profesores';
 
 interface EditarButtonParams {
-  profesor: IProfesores,
+  profesor: IProfesor,
   eliminarAsignacion: Function,
 }
 
 const EliminarButton = ({ profesor, eliminarAsignacion }
   :EditarButtonParams) => {
+  console.log(profesor);
   const [openDialog, setOpenDialog] = React.useState(false);
 
   const handleCloseDialog = () => {
@@ -77,7 +72,7 @@ const EliminarButton = ({ profesor, eliminarAsignacion }
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            ¿Desea eliminar a {profesor.nombres} {profesor.apellidos}?
+            ¿Desea eliminar a {profesor.user.nombres} {profesor.user.apellidos}?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -120,7 +115,7 @@ const EliminarButton = ({ profesor, eliminarAsignacion }
 };
 
 interface ICursoTableParams {
-  rows: IProfesores[],
+  rows: IProfesor[],
   updateProfesores: Function
 }
 
@@ -129,8 +124,17 @@ const ProfesoresTable = (
 ) => {
   const navigate = useNavigate();
   const { logout } = useAuth();
-  const eliminarAsignacion = async (estudiante: IEstudiante) => {
-    //
+  const eliminarAsignacion = async (profesor: IProfesor) => {
+    try {
+      const res = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/Profesor/${profesor._id}`);
+      updateProfesores();
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+      if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
+        logout();
+      }
+    }
   };
   const cols: GridColDef[] = [
     {
@@ -138,21 +142,21 @@ const ProfesoresTable = (
       flex: 1,
       minWidth: 200,
       headerName: 'Apellidos',
-      renderCell: ({ row }) => row.apellidos,
+      renderCell: ({ row }) => row.user.apellidos,
     },
     {
       field: 'nombres',
       flex: 1,
       minWidth: 200,
       headerName: 'Nombres',
-      renderCell: ({ row }) => row.nombres,
+      renderCell: ({ row }) => row.user.nombres,
     },
     {
       field: 'email',
       flex: 1,
       minWidth: 300,
       headerName: 'Email',
-      renderCell: ({ row }) => row.email,
+      renderCell: ({ row }) => row.user.email,
     },
     {
       field: 'accion',
