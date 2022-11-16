@@ -14,7 +14,7 @@ import {
   InputLabel,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 import { IUser } from '../types/user';
 import logo from '../assets/logo-horizontal.png';
@@ -85,7 +85,9 @@ const LoginView = () => {
           <form onSubmit={handleClick}>
             <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
               <Stack alignItems="center">
-                <img src={logo} alt="Logo Kidspace" width="60%" />
+                <Link to="/">
+                  <img src={logo} alt="Logo Kidspace" width="60%" />
+                </Link>
                 <Typography variant="h5">Iniciar sesion</Typography>
               </Stack>
               <FormControl fullWidth>

@@ -117,7 +117,7 @@ const ResponsiveAppBar = () => {
                   color: '#FFFFFF',
                 },
               }}
-              href="registro/0"
+              href="registro"
             >
               <Typography sx={{
                 color: '#FFF',
@@ -168,7 +168,7 @@ const LandingView = () => {
                 },
                 maxWidth: 150,
               }}
-              href="registro/0"
+              href="registro"
             >
               <Typography sx={{
                 color: '#FFF',
@@ -304,7 +304,7 @@ const LandingView = () => {
                   {paquete.cantidad}
                 </Typography>
                 <Button
-                  href={`registro/${paquete.id}`}
+                  href="registro"
                   // onClick={() => {
                   //   window.open(paquete.url, '_self');
                   // }}

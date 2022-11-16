@@ -9,7 +9,7 @@ import {
   Stack,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
 
 const RegistroView = () => {
@@ -76,7 +76,9 @@ const RegistroView = () => {
         <form onSubmit={handleClick}>
           <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
             <Stack alignItems="center">
-              <img src={logo} alt="Logo Kidspace" width="75%" />
+              <Link to="/">
+                <img src={logo} alt="Logo Kidspace" width="60%" />
+              </Link>
               <Typography variant="h5">Registrar</Typography>
             </Stack>
             <Stack spacing={2}>
