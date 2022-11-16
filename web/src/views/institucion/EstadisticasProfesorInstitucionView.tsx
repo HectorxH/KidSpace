@@ -182,7 +182,7 @@ const EstadisticasProfesorInstitucionView = () => {
       setCountCorrectas(res.data.countCorrectas);
       res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/%curso`, { dateRange });
       setActividadesCurso(res.data.actividadesCurso);
-      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas//profesor/${profesorId}/historialDocente`, { dateRange });
+      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/historialDocente`, { dateRange });
       setHistorial(res.data.historial);
     } catch (e) {
       console.log(e);
