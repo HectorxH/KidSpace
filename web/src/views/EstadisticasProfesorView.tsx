@@ -135,7 +135,8 @@ const makeCorrectasData = (data: ICountCorrectas) => {
 };
 
 const EstadisticasProfesorView = (institucion: IInstitucion) => {
-  const { cursoId } = useParams();
+  const { cursoId, startDate, endDate } = useParams();
+  if (!cursoId || !startDate || !endDate) return <NotFoundView />;
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
@@ -146,19 +147,34 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
 
   const { logout } = useAuth();
   const getData = async () => {
+    let res;
     try {
-      let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`); // ${cursoId}`);
+      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
       setCurso(res.data.curso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/tiempo`);
-      setTiempoData(res.data.tiempo);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`);
-      setCountCorrectas(res.data.countCorrectas);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%curso`);
-      setActividadesCurso(res.data.actividadesCurso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%individual`);
-      setActividadesIndividual(res.data.actividadesIndividual);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/rank`);
-      setRank(res.data.rank);
+      if (institucion) {
+        const dateRange = [startDate, endDate];
+        res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/tiempo`, { dateRange });
+        setTiempoData(res.data.tiempo);
+        res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`, { dateRange });
+        setCountCorrectas(res.data.countCorrectas);
+        res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%curso`, { dateRange });
+        setActividadesCurso(res.data.actividadesCurso);
+        res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%individual`, { dateRange });
+        setActividadesIndividual(res.data.actividadesIndividual);
+        res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/rank`, { dateRange });
+        setRank(res.data.rank);
+      } else {
+        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/tiempo`);
+        setTiempoData(res.data.tiempo);
+        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/countCorrectasQuiz`);
+        setCountCorrectas(res.data.countCorrectas);
+        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%curso`);
+        setActividadesCurso(res.data.actividadesCurso);
+        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%individual`);
+        setActividadesIndividual(res.data.actividadesIndividual);
+        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/rank`);
+        setRank(res.data.rank);
+      }
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
