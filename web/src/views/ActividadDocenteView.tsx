@@ -142,8 +142,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['Gráficos', 'Una tabla'],
   Diseños: ['Función', 'Textura'],
   Materiales: ['Norte', 'Material'],
-  Reciclaje: ['placeholder', 'placeholder'],
-  'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
+  Reciclaje: ['Inorgánicas', 'Reutilizar'],
+  'Soluciones Tecnológicas': ['Necesidad', 'Evolución'],
 };
 
 const ActividadDocenteView = () => {

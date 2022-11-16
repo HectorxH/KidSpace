@@ -16,8 +16,6 @@ import 'react-date-range/dist/theme/default.css';
 import { addDays } from 'date-fns';
 import locale from 'date-fns/locale/es';
 import axios from 'axios';
-import { ICursos } from '../../types/cursos';
-import NotFoundView from '../NotFoundView';
 import '../../App.css';
 import { useAuth } from '../../hooks/useAuth';
 import { IProfesor } from '../../types/profesores';
@@ -33,7 +31,9 @@ const EstadisticasInstitucionView = () => {
       key: 'selection',
     },
   ]);
-
+  console.log(state[0].startDate);
+  console.log((state[0].startDate).getTime());
+  console.log(new Date((state[0].startDate).getTime()));
   const { user, logout } = useAuth();
   const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(false);
@@ -47,6 +47,8 @@ const EstadisticasInstitucionView = () => {
     setProfesorIdx(event.target.value);
     setIsDisabledCurso(false);
   };
+
+  const stateToSimpleObject = (s: any) => ([s[0].startDate.getTime(), s[0].endDate.getTime()]);
 
   const changeDate = (item: any) => {
     setState(item);
@@ -74,14 +76,14 @@ const EstadisticasInstitucionView = () => {
   const handleReporte = () => {
     if (profesores === undefined || profesorIdx === undefined || cursoIdx === undefined) return;
     if (cursoIdx === -1) {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${(state[0].startDate).getTime()}/${(state[0].endDate).getTime()}`);
     } else {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}/${(state[0].startDate).getTime()}/${(state[0].endDate).getTime()}`);
     }
   };
 
   const reporteActivo = () => {
-    if (dateSelected && profesorIdx !== undefined) {
+    if (dateSelected && profesorIdx !== undefined && cursoIdx !== undefined) {
       return false;
     }
     return true;

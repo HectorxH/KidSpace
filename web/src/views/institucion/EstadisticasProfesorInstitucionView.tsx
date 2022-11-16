@@ -159,7 +159,8 @@ interface IHistorial {
 }
 
 const EstadisticasProfesorInstitucionView = () => {
-  const { profesorId } = useParams();
+  const { profesorId, startDate, endDate } = useParams();
+  if (!profesorId || !startDate || !endDate) return <NotFoundView />;
   const [profesor, setProfesor] = useState<IProfesor>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
@@ -171,16 +172,17 @@ const EstadisticasProfesorInstitucionView = () => {
 
   const { logout } = useAuth();
   const getData = async () => {
+    const dateRange = [new Date(Number(startDate)), new Date(Number(endDate))];
     try {
       let res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/${profesorId}`);
       setProfesor(res.data.profesor);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/tiempo`);
+      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/tiempo`, { dateRange });
       setTiempoData(res.data.tiempo);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/countCorrectasQuiz`);
+      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/countCorrectasQuiz`, { dateRange });
       setCountCorrectas(res.data.countCorrectas);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/%curso`);
+      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/%curso`, { dateRange });
       setActividadesCurso(res.data.actividadesCurso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas//profesor/${profesorId}/historialDocente`);
+      res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/historialDocente`, { dateRange });
       setHistorial(res.data.historial);
     } catch (e) {
       console.log(e);
