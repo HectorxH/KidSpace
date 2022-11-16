@@ -178,6 +178,7 @@ export interface IAR {
   start: boolean;
   imageTrackers?: IImageTracker[];
   trackerMessage?: string;
+  trackerFeedback?: string;
   hideInventory?: boolean;
   models?: IModels[];
 }

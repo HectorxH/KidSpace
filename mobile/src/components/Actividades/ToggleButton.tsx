@@ -18,8 +18,8 @@ const ToggleButton = (props: ToggleButtonProps) => {
     models3d,
     models,
     hideInventory,
-    activeTracker,
-    imageTrackers,
+    // activeTracker,
+    // imageTrackers,
   } = props.toggleButtonParams;
   if (toggleButtons[pageNumber].length === 0) {
     return null;
