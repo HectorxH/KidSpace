@@ -38,7 +38,7 @@ const EstadisticasInstitucionView = () => {
   const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(false);
   const [profesorIdx, setProfesorIdx] = useState<number>(0);
-  const [cursoIdx, setCursoIdx] = useState<number>(0);
+  const [cursoIdx, setCursoIdx] = useState<number>();
   const [isDisabledCurso, setIsDisabledCurso] = useState(true);
   const [dateSelected, setDateSelected] = useState(false);
   const navigate = useNavigate();
