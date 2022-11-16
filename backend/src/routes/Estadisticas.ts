@@ -19,7 +19,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
 router.post('/profesor/:id/historialDocente', async (req, res) => {
   try {
     const { id } = req.params;
-    const historial = await DocenteLog.find({ profesor: id });
+    const historial = await DocenteLog.find({ profesor: id }).populate('curso');
+    console.log(historial);
     if (historial) {
       res.json({ historial });
     } else {
@@ -225,7 +226,6 @@ router.post('/profesor/:id/%curso', async (req, res) => {
     const nEstudiantes = _.reduce(
       profesor?.cursos,
       (prev, curr) => prev + curr.estudiantes.length,
-
       0,
     );
 

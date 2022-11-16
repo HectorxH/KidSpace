@@ -32,6 +32,11 @@ const HistorialIntitucionTable = (
       field: 'curso.nombre',
       headerName: 'Curso',
       width: 200,
+      renderCell: (({ row }) => (
+        <div>
+          {row.curso.nombre}
+        </div>
+      )),
     },
     {
       field: 'createdAt',
