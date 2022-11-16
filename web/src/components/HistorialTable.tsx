@@ -19,24 +19,26 @@ const HistorialTable = (
     {
       field: 'actividad',
       headerName: 'Actividad',
-      width: 400,
+      minWidth: 400,
+      flex: 1,
     },
     {
       field: 'tipo',
       headerName: 'Tipo de Actividad',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       renderCell: ({ row }) => {
         if (row.tipo === 'clase') {
           return 'Docente';
         }
-        // if (row.tipo === 'individual') {
         return 'Individual';
       },
     },
     {
       field: 'fecha',
       headerName: 'Fecha',
-      width: 200,
+      minWidth: 200,
+      flex: 1,
       renderCell: (({ row }) => (
         <div>
           {moment(row.fecha).format('DD/MM/YYYY')}
