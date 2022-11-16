@@ -4,7 +4,7 @@ import {
   Card,
   Stack, Theme, Typography, Grid,
 } from '@mui/material';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import {
   Chart as ChartJS, ArcElement, Tooltip, Legend, CategoryScale,
@@ -16,15 +16,14 @@ import {
 } from 'chart.js';
 import { Doughnut, Bar } from 'react-chartjs-2';
 import _ from 'lodash';
-import NotFoundView from './NotFoundView';
-import '../App.css';
-import ActividadDocenteTable from '../components/ActividadDocenteTable';
-import ActividadIndividualTable from '../components/ActividadIndividualTable';
-import RankingTable from '../components/RankingTable';
-import { ICurso } from '../types/cursos';
-import { useAuth } from '../hooks/useAuth';
-import CargaView from './LoadingView';
-import { IEstudiante } from '../types/estudiantes';
+import NotFoundView from '../NotFoundView';
+import '../../App.css';
+import ActividadDocenteTable from '../../components/ActividadDocenteTable';
+import HistorialIntitucionTable from './HistorialInstitucionTable';
+import CursosInstitucionTable from './CursosInstitucionTable';
+import { ICurso } from '../../types/cursos';
+import { useAuth } from '../../hooks/useAuth';
+import CargaView from '../LoadingView';
 
 interface ITiempoData {
   [key: string]: number
@@ -36,15 +35,6 @@ interface ICountCorrectas {
 
 interface IActividades {
   [key: string]: number
-}
-
-interface IRank {
-  estudiante: IEstudiante,
-  cantidad: number
-}
-
-interface IInstitucion {
-  institucion: boolean
 }
 
 ChartJS.register(
@@ -106,6 +96,48 @@ const makeTiempoData = (data: ITiempoData) => {
   };
 };
 
+const mockHistorial = [
+  {
+    _id: '1',
+    actividad: 'Diagramas',
+    curso: '6 - A',
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+  {
+    _id: '2',
+    actividad: 'Diagramass',
+    curso: '6 - B',
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+  {
+    _id: '3',
+    actividad: 'Diagramasss',
+    curso: '6 - C',
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+];
+
+const mockCursos = [
+  {
+    _id: '1',
+    nombre: '6 - A',
+    cantidad: 40,
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+  {
+    _id: '2',
+    nombre: '6 - B',
+    cantidad: 44,
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+  {
+    _id: '3',
+    nombre: '6 - C',
+    cantidad: 30,
+    fecha: new Date('2022-10-13T00:42:11.000+00:00'),
+  },
+];
+
 const makeCorrectasData = (data: ICountCorrectas) => {
   const counts = _.reduce(Object.values(data), (a, b) => ({
     Correctas: a.Correctas + (b.Correctas || 0),
@@ -134,15 +166,20 @@ const makeCorrectasData = (data: ICountCorrectas) => {
   };
 };
 
-const EstadisticasProfesorView = (institucion: IInstitucion) => {
-  const { cursoId } = useParams();
+interface IInstitucion {
+  institucion: boolean,
+}
+
+const EstadisticasProfesorInstitucionView = () => {
+  // const { cursoId } = useParams();
+  const cursoId = '63475e4c11ba100d7ce87d07';
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
   const [actividadesCurso, setActividadesCurso] = useState<IActividades>();
-  const [actividadesIndividual, setActividadesIndividual] = useState<IActividades>();
-  const [rank, setRank] = useState<IRank[]>();
   const [loading, setLoading] = useState(true);
+
+  const institucion = { institucion: true } as IInstitucion;
 
   const { logout } = useAuth();
   const getData = async () => {
@@ -155,10 +192,6 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
       setCountCorrectas(res.data.countCorrectas);
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%curso`);
       setActividadesCurso(res.data.actividadesCurso);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/%individual`);
-      setActividadesIndividual(res.data.actividadesIndividual);
-      res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/rank`);
-      setRank(res.data.rank);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response?.status === 401) {
@@ -185,7 +218,7 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
 
   if (loading) return (<CargaView />);
   if (!curso || !tiempoData || !countCorrectas
-    || !actividadesCurso || !actividadesIndividual || !rank) return (<NotFoundView />);
+    || !actividadesCurso) return (<NotFoundView />);
   return (
     <Stack>
       <Box sx={{
@@ -193,13 +226,26 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
       }}
       >
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-          <b>Estadísticas del curso: </b>
-          {curso.nombre}
+          <b>Estadísticas del profesor: </b>
+          INSERTAR NOMBRE AAAAAAAAAAAAAAAA
         </Typography>
       </Box>
       <Stack sx={{ px: 5, py: 1, m: 3 }}>
         <Typography variant="h5">
-          Actividades en la sala de clases (docentes)
+          Cursos
+        </Typography>
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
+          }}
+          >
+            <CursosInstitucionTable rows={mockCursos} />
+          </Stack>
+        </Stack>
+      </Stack>
+      <Stack sx={{ px: 5, py: 1, m: 3 }}>
+        <Typography variant="h5">
+          Actividades en la sala de clases de todos los cursos
         </Typography>
         <Grid
           container
@@ -235,30 +281,21 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
             <ActividadDocenteTable rowsData={actividadesCurso} institucion={institucion} />
           </Stack>
         </Stack>
-        <Typography variant="h5" sx={{ alignSelf: 'center' }}>
-          Actividades Individuales
+      </Stack>
+      <Stack sx={{ px: 5, py: 1, m: 3 }}>
+        <Typography variant="h5">
+          Historial de actividades
         </Typography>
         <Stack direction="row" sx={{ justifyContent: 'center' }}>
           <Stack sx={{
             maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
           }}
           >
-            <ActividadIndividualTable rowsData={actividadesIndividual} institucion={institucion} />
-          </Stack>
-        </Stack>
-        <Typography variant="h5" sx={{ alignSelf: 'center' }}>
-          Ranking de Estudiantes
-        </Typography>
-        <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          <Stack sx={{
-            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
-          }}
-          >
-            <RankingTable rowsData={rank} institucion={institucion} />
+            <HistorialIntitucionTable rows={mockHistorial} />
           </Stack>
         </Stack>
       </Stack>
     </Stack>
   );
 };
-export default EstadisticasProfesorView;
+export default EstadisticasProfesorInstitucionView;
