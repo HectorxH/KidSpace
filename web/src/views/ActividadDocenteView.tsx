@@ -142,7 +142,7 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['Gráficos', 'Una tabla'],
   Diseños: ['Función', 'Textura'],
   Materiales: ['Norte', 'Material'],
-  Reciclaje: ['Inorgánicas', 'Reutilizar'],
+  Reciclaje: ['Inorgánicos', 'Reutilizar'],
   'Soluciones Tecnológicas': ['Necesidad', 'Evolución'],
 };
 
