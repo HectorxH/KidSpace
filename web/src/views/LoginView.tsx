@@ -14,14 +14,11 @@ import {
   InputLabel,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { IUser } from '../types/user';
 import logo from '../assets/logo-horizontal.png';
 
 const LoginView = () => {
-  const params = useParams();
-  const { planId } = params;
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
   const [tipo, setTipo] = useState('profesor');
@@ -33,15 +30,17 @@ const LoginView = () => {
 
   const handleClick = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    let res;
     try {
-      const res = await axios.post<any, {data: IUser}>(
+      res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/login`,
         { username, password, tipo },
       );
-      if (planId) {
-        login(res.data, Number(planId));
+      if (tipo === 'representante') {
+        login(res.data.user, res.data.plan);
+      } else {
+        login(res.data);
       }
-      login(res.data);
       setCorrect(true);
       setError(false);
     } catch (e) {
@@ -83,7 +82,9 @@ const LoginView = () => {
           <form onSubmit={handleClick}>
             <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
               <Stack alignItems="center">
-                <img src={logo} alt="Logo Kidspace" width="60%" />
+                <Link to="/">
+                  <img src={logo} alt="Logo Kidspace" width="60%" />
+                </Link>
                 <Typography variant="h5">Iniciar sesion</Typography>
               </Stack>
               <FormControl fullWidth>
@@ -112,10 +113,7 @@ const LoginView = () => {
                 <Button type="submit" variant="contained">Iniciar sesion</Button>
                 <Button
                   variant="outlined"
-                  onClick={() => {
-                    if (planId) navigate(`/registro/${planId}`);
-                    else navigate('/registro');
-                  }}
+                  onClick={() => navigate('/registro')}
                 >Registrar
                 </Button>
               </Stack>

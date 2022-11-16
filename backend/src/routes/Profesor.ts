@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const profesor = await Profesor.findById(id).populate('user');
+    const profesor = await Profesor.findById(id).populate(['user', 'cursos']);
     if (profesor) {
       res.json({ profesor });
     } else {

@@ -4,18 +4,19 @@ import React, {
 import { useNavigate } from 'react-router-dom';
 import { IUser } from '../types/user';
 import useLocalStorage from './useLocalStorage';
-import paquetes from '../mock/paquetes';
 
 interface IAuthContext {
   user: IUser | null,
+  plan: number | null,
   // eslint-disable-next-line no-unused-vars
   login: (data: IUser, plan?: number) => void,
   logout: () => void,
-  navigateToDefault: () => void
+  navigateToDefault: () => void,
 }
 
 const AuthContext = createContext<IAuthContext>({
   user: null,
+  plan: null,
   // eslint-disable-next-line no-unused-vars
   login: (data: IUser, plan?: number) => {},
   logout: () => {},
@@ -25,6 +26,7 @@ const AuthContext = createContext<IAuthContext>({
 export const AuthProvider = ({ children }:{children: any}) => {
   const [user, setUser] = useLocalStorage<IUser>('user', null);
   const navigate = useNavigate();
+  const [plan, setPlan] = useLocalStorage<number>('plan', null);
   const userRef = useRef(user);
 
   const navigateToDefault = () => {
@@ -32,18 +34,18 @@ export const AuthProvider = ({ children }:{children: any}) => {
       navigate('/pupilo');
     } else if (userRef.current?.tipo === 'profesor') {
       navigate('/panel');
-    } else if (userRef.current?.tipo === 'representante') {
+    } else if (userRef.current?.tipo === 'representante' && plan !== 3) {
       navigate('/profesores');
+    } else if (userRef.current?.tipo === 'representante') {
+      navigate('/paquetes');
     }
   };
 
   // call this function when you want to authenticate the user
-  const login = (data: IUser, plan?: number) => {
-    if (!plan) {
-      setUser(data, navigateToDefault);
-    } else {
-      setUser(data, () => window.open(paquetes[plan].url, '_self'));
-    }
+  const login = (data: IUser, selectedPlan?: number) => {
+    userRef.current = data;
+    setUser(data, navigateToDefault);
+    if (selectedPlan) setPlan(selectedPlan);
   };
 
   // call this function to sign out logged in user
@@ -55,6 +57,7 @@ export const AuthProvider = ({ children }:{children: any}) => {
   const value = useMemo(
     () => ({
       user,
+      plan,
       login,
       logout,
       navigateToDefault,

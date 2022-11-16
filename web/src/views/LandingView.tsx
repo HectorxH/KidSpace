@@ -168,7 +168,7 @@ const LandingView = () => {
                 },
                 maxWidth: 150,
               }}
-              href="login"
+              href="registro"
             >
               <Typography sx={{
                 color: '#FFF',
@@ -203,40 +203,45 @@ const LandingView = () => {
           sx={{ flexWrap: 'wrap', justifyContent: 'center' }}
         >
           {features.map((feature, id) => (
-            <Card sx={{
-              padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1, background: feature.background,
-            }}
-            >
-              <Stack
+            // eslint-disable-next-line react/no-array-index-key
+            <div key={id}>
+              <Card
                 sx={{
-                  height: 70,
-                  width: 70,
-                  borderRadius: 100,
-                  background: feature.color,
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1, background: feature.background,
                 }}
               >
-                <FontAwesomeIcon
-                  icon={[faGamepad, faVrCardboard, faFaceSmile][id]}
-                  style={{
-                    color: '#FFFFFF',
-                    height: 30,
+                <Stack
+                  sx={{
+                    height: 70,
+                    width: 70,
+                    borderRadius: 100,
+                    background: feature.color,
+                    justifyContent: 'center',
+                    alignItems: 'center',
                   }}
-                />
-              </Stack>
-              <Typography
-                align="center"
-                sx={{
-                  color: '#000', margin: 1, alignSelf: 'center', fontSize: 18,
-                }}
-              >
-                <b>{feature.title}</b>
-              </Typography>
-              <Typography align="center" sx={{ color: '#000', alignSelf: 'center' }}>
-                {feature.desc}
-              </Typography>
-            </Card>
+                >
+                  <FontAwesomeIcon
+                    icon={[faGamepad, faVrCardboard, faFaceSmile][id]}
+                    style={{
+                      color: '#FFFFFF',
+                      height: 30,
+                    }}
+                  />
+                </Stack>
+                <Typography
+                  align="center"
+                  sx={{
+                    color: '#000', margin: 1, alignSelf: 'center', fontSize: 18,
+                  }}
+                >
+                  <b>{feature.title}</b>
+                </Typography>
+                <Typography align="center" sx={{ color: '#000', alignSelf: 'center' }}>
+                  {feature.desc}
+                </Typography>
+              </Card>
+
+            </div>
           ))}
         </Stack>
         <Stack
@@ -253,7 +258,7 @@ const LandingView = () => {
               <b>Elige un plan</b>
             </Typography>
             <Typography sx={{ color: '#000' }} align="center">
-              Encuenta la mejor suscripción acorde de las
+              Encuentra la mejor suscripción acorde de las
               necesidadesde tu institución educacional.
               Obten acceso a la plataforma web y sistema de
               estadìsticas y generaciòn de reportes.
@@ -270,9 +275,11 @@ const LandingView = () => {
               return null;
             }
             return (
-              <Card sx={{
-                padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1,
-              }}
+              <Card
+                key={paquete.id}
+                sx={{
+                  padding: 3, borderRadius: 5, alignItems: 'center', minWidth: 230, width: 300, margin: 1,
+                }}
               >
                 <Box
                   component="img"
@@ -297,7 +304,7 @@ const LandingView = () => {
                   {paquete.cantidad}
                 </Typography>
                 <Button
-                  href={`login/${paquete.id}`}
+                  href="registro"
                   // onClick={() => {
                   //   window.open(paquete.url, '_self');
                   // }}

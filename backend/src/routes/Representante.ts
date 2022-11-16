@@ -6,11 +6,35 @@ dotenv.config();
 
 const router = express.Router();
 
+router.get('/profesores', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const representante = await Representante.findOne({ user })
+      .populate({ path: 'profesores', populate: [{ path: 'user' }, { path: 'cursos' }] });
+    res.json({ profesores: representante?.profesores });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/plan', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const representante = await Representante.findOne({ user });
+    res.json({ plan: representante?.plan });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.post('/plan', async (req, res) => {
   try {
     const user = req.user?._id;
     const { plan } = req.body;
     await Representante.findOneAndUpdate({ user }, { plan });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

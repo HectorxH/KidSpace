@@ -7,24 +7,16 @@ import {
   Alert,
   Typography,
   Stack,
-  FormControl,
-  MenuItem,
-  Select,
-  InputLabel,
-  SelectChangeEvent,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
 
 const RegistroView = () => {
-  const params = useParams();
-  const { planId } = params;
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [username, setUsername] = useState({});
   const [password, setPassword] = useState({});
-  const [plan, setPlan] = useState(`${planId}`);
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
 
@@ -42,11 +34,7 @@ const RegistroView = () => {
       console.log(res);
       setCorrect(true);
       setError(false);
-      if (plan) {
-        setTimeout(() => navigate(`/login/${plan}`), 1500);
-      } else {
-        setTimeout(() => navigate('/login'), 1500);
-      }
+      setTimeout(() => navigate('/login'), 1500);
     } catch (e) {
       setCorrect(false);
       setError(true);
@@ -70,10 +58,6 @@ const RegistroView = () => {
     setPassword(event.target.value);
   };
 
-  const handlePlanChange = (event: SelectChangeEvent<string>) => {
-    setPlan(event.target.value);
-  };
-
   return (
     <Grid
       container
@@ -92,18 +76,12 @@ const RegistroView = () => {
         <form onSubmit={handleClick}>
           <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
             <Stack alignItems="center">
-              <img src={logo} alt="Logo Kidspace" width="75%" />
+              <Link to="/">
+                <img src={logo} alt="Logo Kidspace" width="60%" />
+              </Link>
               <Typography variant="h5">Registrar</Typography>
             </Stack>
             <Stack spacing={2}>
-              <FormControl fullWidth>
-                <InputLabel id="select-label">Tipo de cuenta</InputLabel>
-                <Select required labelId="select-label" id="select" label="Tipo de cuenta" value={plan} onChange={handlePlanChange}>
-                  <MenuItem value={0}><Typography>Basic</Typography></MenuItem>
-                  <MenuItem value={1}><Typography>Pro</Typography></MenuItem>
-                  <MenuItem value={2}><Typography>Pro+</Typography></MenuItem>
-                </Select>
-              </FormControl>
               <TextField required label="Nombres" onChange={handleNombresChange} />
               <TextField required label="Apellidos" onChange={handleApellidosChange} />
               <TextField required label="Nombre de usuario" onChange={handleUsernameChange} />
@@ -123,10 +101,7 @@ const RegistroView = () => {
               <Button variant="contained" type="submit">Registrar</Button>
               <Button
                 variant="outlined"
-                onClick={() => {
-                  if (plan) navigate(`/login/${plan}`);
-                  else navigate('/login');
-                }}
+                onClick={() => navigate('/login')}
               >Iniciar sesion
               </Button>
             </Stack>
@@ -135,48 +110,6 @@ const RegistroView = () => {
       </Paper>
     </Grid>
   );
-
-  // return (
-  //   <div style={{ padding: 30 }}>
-  //     <Paper>
-  //       <Grid
-  //         container
-  //         spacing={3}
-  //         direction="column"
-  //         alignItems="center"
-  //         justifyContent="center"
-  //       >
-  //         <Grid item xs={12}>
-  //           <TextField label="Nombres" onChange={handleNombresChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <TextField label="Apellidos" onChange={handleApellidosChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <TextField label="Nombre de usuario" onChange={handleUsernameChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <TextField label="Contraseña" type="password" onChange={handlePasswordChange} />
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           <Button fullWidth onClick={handleClick}> Registrar </Button>
-  //         </Grid>
-  //         <Grid item xs={12}>
-  //           {correct && (
-  //             <Alert severity="success">
-  //               Usuario registrado
-  //             </Alert>
-  //           )}
-  //           {error && (
-  //             <Alert severity="error">
-  //               Datos invalidos
-  //             </Alert>
-  //           )}
-  //         </Grid>
-  //       </Grid>
-  //     </Paper>
-  //   </div>
-  // );
 };
 
 export default RegistroView;

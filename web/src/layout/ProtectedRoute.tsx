@@ -10,6 +10,7 @@ interface IProtectedRouteProps {
   noProfesor?: boolean
   noApoderado?: boolean
   noRepresentante?: boolean
+  hasPlan?: boolean
 }
 
 const ProtectedRoute = ({
@@ -18,12 +19,17 @@ const ProtectedRoute = ({
   noProfesor = false,
   noApoderado = false,
   noRepresentante = false,
+  hasPlan = false,
 } : IProtectedRouteProps) => {
-  const { user, navigateToDefault } = useAuth();
+  const { user, plan, navigateToDefault } = useAuth();
   const [lodaing, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(plan, hasPlan);
+    if (user?.tipo === 'representante' && hasPlan && plan === 3) {
+      navigate('/paquetes');
+    }
     if (loggedout && user) {
       navigateToDefault();
     } else if (loggedin && !user) {

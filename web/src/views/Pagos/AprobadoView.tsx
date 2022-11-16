@@ -15,11 +15,14 @@ import { useAuth } from '../../hooks/useAuth';
 const Aprobado = () => {
   const { planId } = useParams();
 
-  const { logout } = useAuth();
+  const {
+    user, login, logout,
+  } = useAuth();
 
   const handleClick = async () => {
     try {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Representante/plan`, { plan: planId });
+      login(user!, Number(planId));
       console.log(res);
     } catch (e) {
       console.log(e);

@@ -200,7 +200,13 @@ app.post(
       const { tipo } = req.body;
       const user = await User.findOne({ username: req.body.username });
       if (!user) throw Error('El usuario no existe');
-      if (tipo === user.tipo) return res.json(user);
+      if (tipo === user.tipo) {
+        if (tipo === 'representante') {
+          const repr = await Representante.findOne({ user: user._id });
+          return res.json({ user, plan: repr?.plan });
+        }
+        return res.json(user);
+      }
       throw Error('Tipo de usuario invalido');
     } catch (e) {
       req.session.destroy(() => {});

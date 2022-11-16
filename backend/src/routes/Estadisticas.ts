@@ -3,6 +3,8 @@ import _ from 'lodash';
 import Estudiante, { IEstudiante } from '../models/Estudiante';
 import ActividadLog, { IActividadLog } from '../models/ActividadLog';
 import Curso from '../models/Curso';
+import Profesor from '../models/Profesor';
+import DocenteLog from '../models/DocenteLog';
 
 const router = express.Router();
 
@@ -13,6 +15,21 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Reciclaje: ['placeholder', 'placeholder'],
   'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
 };
+
+router.get('/profesor/:id/historialDocente', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const historial = await DocenteLog.find({ profesor: id });
+    if (historial) {
+      res.json({ historial });
+    } else {
+      res.json({ historial: [] });
+    }
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
 
 router.get('/curso/:id/individual/:actividad/resultados', async (req, res) => {
   try {
@@ -99,6 +116,23 @@ router.get('/curso/:id/docente/:actividad', async (req, res) => {
   }
 });
 
+router.get('/profesor/:id/tiempo', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id);
+    const logs = await ActividadLog.find({ curso: { $in: profesor?.cursos } });
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const avergeTimeByActividad = _.mapValues(
+      logsByActividad,
+      (o) => _.meanBy(o, (x) => Number(x.duracion)),
+    );
+    res.json({ tiempo: avergeTimeByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/curso/:id/tiempo', async (req, res) => {
   try {
     const { id } = req.params;
@@ -109,6 +143,36 @@ router.get('/curso/:id/tiempo', async (req, res) => {
       (o) => _.meanBy(o, (x) => Number(x.duracion)),
     );
     res.json({ tiempo: avergeTimeByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/profesor/:id/countCorrectasQuiz', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id);
+    const logs = await ActividadLog.find({ curso: { $in: profesor?.cursos }, tipo: 'clase' });
+    const respuestas = _.map(logs, (o) => ({
+      actividad: o.actividad,
+      respuestas: _.map(o.quizFinal, 'respuesta'),
+    }));
+    const byActividad = _.groupBy(respuestas, 'actividad');
+    const respuestasByActividad = _.mapValues(byActividad, (oArray) => _.map(oArray, 'respuestas'));
+    const correctas = _.mapValues(
+      respuestasByActividad,
+      // eslint-disable-next-line no-shadow
+      (v, k) => _.flatMap(v, (respuestas) => ([
+        respuestas[0] === RespuestasCorrectas[k][0] ? 'Correctas' : 'Incorrectas',
+        respuestas[1] === RespuestasCorrectas[k][1] ? 'Correctas' : 'Incorrectas',
+      ])),
+    );
+    const countCorrectas = _.mapValues(
+      correctas,
+      (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
+    );
+    res.json({ countCorrectas });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
@@ -138,6 +202,26 @@ router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
       (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
     );
     res.json({ countCorrectas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/profesor/:id/%curso', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id).populate('cursos');
+    const nEstudiantes = _.reduce(profesor?.cursos, (prev, curr) => prev + curr.length, 0);
+    const logs = await ActividadLog.find({ curso: { $in: profesor }, tipo: 'clase' });
+
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));
+    const uniqueEstudiantesByActividad = _.mapValues(
+      estudiantesByActividad,
+      (o) => o.length / nEstudiantes,
+    );
+    res.json({ actividadesCurso: uniqueEstudiantesByActividad });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
