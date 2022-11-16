@@ -94,11 +94,11 @@ export function getNombreActividad(actividad: string) {
   switch (actividad) {
     case 'diagramas':
       return 'Diagramas';
-    case 'tecnologia':
-      return 'Soluciones tecnológicas';
+    case 'tecnologicas':
+      return 'Soluciones Tecnológicas';
     case 'materiales':
       return 'Materiales';
-    case 'reciclaje':
+    case 'reciclajes':
       return 'Reciclaje';
     case 'diseños':
       return 'Diseños';
