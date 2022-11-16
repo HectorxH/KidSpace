@@ -26,6 +26,10 @@ const ProtectedRoute = ({
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(plan, hasPlan);
+    if (user?.tipo === 'representante' && hasPlan && plan === 3) {
+      navigate('/paquetes');
+    }
     if (loggedout && user) {
       navigateToDefault();
     } else if (loggedin && !user) {
@@ -35,9 +39,6 @@ const ProtectedRoute = ({
     || (noApoderado && user?.tipo === 'apoderado')
     || (noRepresentante && user?.tipo === 'representante'))) {
       navigateToDefault();
-    }
-    if (user?.tipo === 'representante' && hasPlan && plan !== 3) {
-      navigate('/TEST');
     }
     setLoading(false);
   }, []);

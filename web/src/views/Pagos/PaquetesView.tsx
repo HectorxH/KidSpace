@@ -73,7 +73,7 @@ const PaquetesView = () => (
                 {paquete.cantidad}
               </Typography>
               <Button
-                href={`registro/${paquete.id}`}
+                href={paquete.url}
                 sx={{
                   backgroundColor: '#FF8A00',
                   borderRadius: 4,

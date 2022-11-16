@@ -34,8 +34,10 @@ export const AuthProvider = ({ children }:{children: any}) => {
       navigate('/pupilo');
     } else if (userRef.current?.tipo === 'profesor') {
       navigate('/panel');
-    } else if (userRef.current?.tipo === 'representante') {
+    } else if (userRef.current?.tipo === 'representante' && plan !== 3) {
       navigate('/profesores');
+    } else if (userRef.current?.tipo === 'representante') {
+      navigate('/paquetes');
     }
   };
 

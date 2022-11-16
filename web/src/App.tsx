@@ -101,6 +101,8 @@ const App = () => (
               <Route path="/registro" element={<RegistroView />} />
               <Route path="/aprobado/:planId" element={<Aprobado />} />
               <Route path="/rechazado" element={<Rechazado />} />
+            </Route>
+            <Route element={<ProtectedRoute noProfesor noApoderado />}>
               <Route path="/paquetes" element={<PaquetesView />} />
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
@@ -121,9 +123,6 @@ const App = () => (
                   <Route path="/actividades/unidad/:nunidad" element={<UnidadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
-                  <Route path="/profesores" element={<ProfesoresView />} />
-                  <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
-                  <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
                 </Route>
                 <Route element={<ProtectedRoute noProfesor noRepresentante />}>
                   <Route path="/pupilo" element={<PupilosView />} />
