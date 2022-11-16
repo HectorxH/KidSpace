@@ -134,8 +134,8 @@ const App = () => (
                   <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
                   <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
                   <Route path="/estadisticas" element={<EstadisticasInstitucionView />} />
-                  <Route path="/estadisticas/:profesorId" element={<EstadisticasProfesorInstitucionView />} />
-                  <Route path="/estadisticas/:profesorId/:cursoId" element={<EstadisticasProfesorView institucion />} />
+                  <Route path="/estadisticas/:profesorId/:nfechaInicial/:nfechaFin" element={<EstadisticasProfesorInstitucionView />} />
+                  <Route path="/estadisticas/:profesorId/:cursoId/:nfechaInicial/:nfechaFin" element={<EstadisticasProfesorView institucion />} />
                 </Route>
                 <Route path="/" element={<RedirectHomeRoute />} />
                 <Route path="/*" element={<NotFoundView />} />

@@ -98,27 +98,6 @@ const makeTiempoData = (data: ITiempoData) => {
   };
 };
 
-// const mockHistorial = [
-//   {
-//     _id: '1',
-//     actividad: 'Diagramas',
-//     curso: '6 - A',
-//     fecha: new Date('2022-10-13T00:42:11.000+00:00'),
-//   },
-//   {
-//     _id: '2',
-//     actividad: 'Diagramass',
-//     curso: '6 - B',
-//     fecha: new Date('2022-10-13T00:42:11.000+00:00'),
-//   },
-//   {
-//     _id: '3',
-//     actividad: 'Diagramasss',
-//     curso: '6 - C',
-//     fecha: new Date('2022-10-13T00:42:11.000+00:00'),
-//   },
-// ];
-
 const makeCorrectasData = (data: ICountCorrectas) => {
   const counts = _.reduce(Object.values(data), (a, b) => ({
     Correctas: a.Correctas + (b.Correctas || 0),
@@ -160,6 +139,8 @@ interface IHistorial {
 
 const EstadisticasProfesorInstitucionView = () => {
   const { profesorId } = useParams();
+  const { nfechaInicial, nfechaFina } = useParams();
+  console.log(nfechaInicial, nfechaFina);
   const [profesor, setProfesor] = useState<IProfesor>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();

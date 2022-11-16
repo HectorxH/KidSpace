@@ -33,7 +33,9 @@ const EstadisticasInstitucionView = () => {
       key: 'selection',
     },
   ]);
-
+  console.log(state[0].startDate);
+  console.log((state[0].startDate).getTime());
+  console.log(new Date((state[0].startDate).getTime()));
   const { user, logout } = useAuth();
   const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(false);
@@ -74,9 +76,9 @@ const EstadisticasInstitucionView = () => {
   const handleReporte = () => {
     if (profesores === undefined || profesorIdx === undefined || cursoIdx === undefined) return;
     if (cursoIdx === -1) {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${(state[0].startDate).getTime()}/${(state[0].endDate).getTime()}`);
     } else {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}/${(state[0].startDate).getTime()}/${(state[0].endDate).getTime()}`);
     }
   };
 
