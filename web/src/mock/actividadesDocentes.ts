@@ -36,28 +36,6 @@ export default [
     steam: [0, '#B878EA', '#FF8A00', 0, 0],
     preguntas: [
       {
-        enunciado: 'Los desechos _______ son aquellos que demoran años en desaparecer.',
-        alternativas: ['Orgánicos', 'Inorgánicos', 'Vegetales'],
-        respuestaCorrecta: 'Inorgánicos',
-        data: [2, 12, 5],
-      },
-      {
-        enunciado: 'Las tres “R” son reducir, ______ y reciclar.',
-        alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
-        respuestaCorrecta: 'Rehacer',
-        data: [2, 12, 5],
-      },
-    ],
-  },
-  {
-    id: 2,
-    img: unidad3ImgMateriales,
-    unidad: 'Unidad 3',
-    actividad: 'Materiales',
-    estado: 'Completada',
-    steam: ['#5C9DEC', 0, '#FF8A00', 0, 0],
-    preguntas: [
-      {
         enunciado: 'Cada objeto tecnológico resuelve por lo menos una _______',
         alternativas: ['Solución', 'Necesidad', 'Parte'],
         respuestaCorrecta: 'Necesidad',
@@ -72,12 +50,12 @@ export default [
     ],
   },
   {
-    id: 3,
-    img: unidad2ImgReciclaje,
-    unidad: 'Unidad 2',
-    actividad: 'Reciclaje',
-    estado: 'Sin completar',
-    steam: ['#5C9DEC', 0, '#FF8A00', '#F3C550', 0],
+    id: 2,
+    img: unidad3ImgMateriales,
+    unidad: 'Unidad 3',
+    actividad: 'Materiales',
+    estado: 'Completada',
+    steam: ['#5C9DEC', 0, '#FF8A00', 0, 0],
     preguntas: [
       {
         enunciado: 'Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.',
@@ -89,6 +67,28 @@ export default [
         enunciado: 'Después de procesar la materia prima, obtenemos el _____.',
         alternativas: ['Lote', 'Producto', 'Material'],
         respuestaCorrecta: 'Material',
+        data: [2, 12, 5],
+      },
+    ],
+  },
+  {
+    id: 3,
+    img: unidad2ImgReciclaje,
+    unidad: 'Unidad 2',
+    actividad: 'Reciclaje',
+    estado: 'Sin completar',
+    steam: ['#5C9DEC', 0, '#FF8A00', '#F3C550', 0],
+    preguntas: [
+      {
+        enunciado: 'Los desechos _______ son aquellos que demoran años en desaparecer.',
+        alternativas: ['Orgánicos', 'Inorgánicos', 'Vegetales'],
+        respuestaCorrecta: 'Inorgánicos',
+        data: [2, 12, 5],
+      },
+      {
+        enunciado: 'Las tres “R” son reducir, ______ y reciclar.',
+        alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
+        respuestaCorrecta: 'Rehacer',
         data: [2, 12, 5],
       },
     ],
