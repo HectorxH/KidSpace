@@ -25,7 +25,7 @@ export default [
       {
         nactividad: 4,
         actividad: 'Actividad',
-        titulo: 'Soluciones tecnologicas',
+        titulo: 'Soluciones Tecnológicas',
         descripcion: 'En esta actividad vas a conocer a Alec, que se dedica al diseño industrial. Junto con Alec, podrás armar y desarmar diversos objetos, para aprender sobre sus partes y las funciones que estas brindan. Además, aprenderás a detectar las problemáticas y las necesidades que resuelven distintos objetos técnicos que te rodean.',
         path: '/actividades/unidad/2/actividad/4',
       },

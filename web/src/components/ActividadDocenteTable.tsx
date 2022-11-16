@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
   Button, Theme, Typography,
@@ -9,11 +10,12 @@ import _ from 'lodash';
 
 const actividades = [
   'Diagramas',
-  'Soluciones tecnologicas',
+  'Soluciones Tecnológicas',
   'Materiales',
   'Reciclaje',
   'Diseños',
 ];
+
 interface IActividades {
   [key: string]: number
 }

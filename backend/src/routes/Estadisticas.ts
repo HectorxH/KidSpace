@@ -19,7 +19,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
 router.post('/profesor/:id/historialDocente', async (req, res) => {
   try {
     const { id } = req.params;
-    const historial = await DocenteLog.find({ profesor: id });
+    const historial = await DocenteLog.find({ profesor: id }).populate('curso');
+    console.log(historial);
     if (historial) {
       res.json({ historial });
     } else {
@@ -222,9 +223,14 @@ router.post('/profesor/:id/%curso', async (req, res) => {
     const { id } = req.params;
     const { dateRange } = req.body;
     const profesor = await Profesor.findById(id).populate('cursos');
-    const nEstudiantes = _.reduce(profesor?.cursos, (prev, curr) => prev + curr.length, 0);
+    const nEstudiantes = _.reduce(
+      profesor?.cursos,
+      (prev, curr) => prev + curr.estudiantes.length,
+      0,
+    );
+
     const logs = await ActividadLog.find({
-      curso: { $in: profesor },
+      curso: { $in: profesor?.cursos },
       tipo: 'clase',
       fecha: { $gte: dateRange[0], $lt: dateRange[1] },
     });

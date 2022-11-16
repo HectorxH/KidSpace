@@ -15,7 +15,6 @@ interface ITableParams {
 const CursosIntitucionTable = (
   { rows }: ITableParams,
 ) => {
-  console.log(rows);
   const cols: GridColDef[] = [
     {
       field: 'curso',
