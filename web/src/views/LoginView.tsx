@@ -16,7 +16,6 @@ import {
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import { IUser } from '../types/user';
 import logo from '../assets/logo-horizontal.png';
 
 const LoginView = () => {
@@ -33,14 +32,12 @@ const LoginView = () => {
     event.preventDefault();
     let res;
     try {
-      res = await axios.post<any, {data: IUser}>(
+      res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/login`,
         { username, password, tipo },
       );
-      if (res.data.tipo === 'representante') {
-        const { data } = res;
-        res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Representante/plan`);
-        login(data, res.data.plan);
+      if (tipo === 'representante') {
+        login(res.data.user, res.data.plan);
       } else {
         login(res.data);
       }
