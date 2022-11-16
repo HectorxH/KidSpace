@@ -360,13 +360,15 @@ const EstadisticasApoderadoView = () => {
         </Grid>
       </Stack>
       <Stack sx={{
-        px: 5, maxWidth: 850, marginTop: 5, marginBottom: 5,
+        px: 5, maxWidth: 1000, marginTop: 5, marginBottom: 5,
       }}
       >
         <Typography variant="h4">
           Historial de actividades
         </Typography>
-        <HistorialTable rows={historial} />
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <HistorialTable rows={historial} />
+        </Stack>
       </Stack>
     </Stack>
   );

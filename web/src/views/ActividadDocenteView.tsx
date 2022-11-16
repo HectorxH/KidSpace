@@ -154,6 +154,7 @@ const ActividadDocenteView = () => {
   const [loading, setLoading] = useState(true);
 
   const { actividad, cursoId } = useParams();
+  console.log(actividad);
   if (!actividad) return <NotFoundView />;
   const respuestasCorrectas = RespuestasCorrectas[actividad];
   const actividadData = _.find(actividadesDocentes, { actividad });
