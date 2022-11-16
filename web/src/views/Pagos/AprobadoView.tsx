@@ -22,7 +22,7 @@ const Aprobado = () => {
   const handleClick = async () => {
     try {
       const res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Representante/plan`, { plan: planId });
-      login(user, planId);
+      login(user!, Number(planId));
       console.log(res);
     } catch (e) {
       console.log(e);
