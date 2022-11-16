@@ -80,15 +80,15 @@ export default [
     steam: ['#5C9DEC', 0, '#FF8A00', '#F3C550', 0],
     preguntas: [
       {
-        enunciado: 'Los minerales se obtienen en su gran mayoria en la zona _____ de Chile.',
-        alternativas: ['Centro', 'Norte', 'Austral'],
-        respuestaCorrecta: 'Norte',
+        enunciado: 'Los desechos _______ son aquellos que demoran años en desaparecer.',
+        alternativas: ['Orgánicos', 'Inorgánicos', 'Vegetales'],
+        respuestaCorrecta: 'Inorgánicos',
         data: [2, 12, 5],
       },
       {
-        enunciado: 'Después de procesar la materia prima, obtenemos el _____.',
-        alternativas: ['Lote', 'Producto', 'Material'],
-        respuestaCorrecta: 'Material',
+        enunciado: 'Las tres “R” son reducir, ______ y reciclar.',
+        alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
+        respuestaCorrecta: 'Rehacer',
         data: [2, 12, 5],
       },
     ],
