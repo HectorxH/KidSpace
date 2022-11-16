@@ -2,19 +2,19 @@ import {ImageSourcePropType} from 'react-native';
 
 const images: {[key: string]: {[key: string]: ImageSourcePropType}} = {
   portadaAct1: {
-    uri: require('../diagramas.jpg'),
+    uri: require('../diagramas.png'),
   },
   portadaAct2: {
-    uri: require('../materiales.jpg'),
+    uri: require('../materiales.png'),
   },
   portadaAct3: {
-    uri: require('../diseños.jpg'),
+    uri: require('../diseños.png'),
   },
   portadaAct4: {
-    uri: require('../soluciones.jpg'),
+    uri: require('../soluciones.png'),
   },
   portadaAct5: {
-    uri: require('../reciclaje.jpg'),
+    uri: require('../reciclaje.png'),
   },
   actNoDisponible: {
     uri: require('../actNoDisponible.png'),
