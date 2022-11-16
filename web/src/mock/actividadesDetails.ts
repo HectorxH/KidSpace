@@ -98,7 +98,7 @@ export default [
     id: 4,
     nunidad: 2,
     nactividad: 4,
-    titulo: 'Actividad: Soluciones Técnologicas',
+    titulo: 'Actividad: Soluciones Tecnológicas',
     nombreActividad: 'materiales',
     descripcion: 'En esta actividad vas a conocer a Alec, que se dedica al diseño industrial. Junto con Alec, podrás armar y desarmar diversos objetos, para aprender sobre sus partes y las funciones que estas brindan. Además, aprenderás a detectar las problemáticas y las necesidades que resuelven distintos objetos técnicos que te rodean.',
     portada: portadaAct4Global,
