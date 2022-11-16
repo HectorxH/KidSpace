@@ -20,6 +20,7 @@ export interface IModelProps {
   alt: string;
   modelType: string;
   modelImage360: string;
+  modelVideo360: string;
   resources: ImageSourcePropType[];
   materials: ViroMaterialDict | undefined;
   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';

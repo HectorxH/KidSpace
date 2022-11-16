@@ -1,0 +1,2265 @@
+[
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "André es un *astrónomo*.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las personas que se dedican a la astronomía estudian el universo,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "investigan las estrellas, los planetas, y las galaxias.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_1",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "André desde chico amaba leer sobre el sistema solar, y por eso decidió ser astrónomo.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El Sistema Solar está formado por el Sol y 8 planetas que giran alrededor de él.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El Sol es una estrella ubicada en el centro de nuestro Sistema Solar.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_3",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una estrella es un cuerpo de gran masa que se caracteriza por emitir luz propia.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_3",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Gracias al sol recibimos la luz y el calor necesario para nuestras vidas.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_4",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La Luna, en cambio, no es una estrella.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_5",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es un satélite natural de la Tierra que refleja la luz del Sol.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La Luna se mueve con un movimiento de traslación en torno a la Tierra",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y demora 28 días en completar un ciclo lunar.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Según la posición en que se encuentren la Tierra, la Luna y el Sol",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "se podrá observar que las zonas iluminadas de la Luna cambian",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "por lo que se dice que la Luna tiene distintas fases.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podemos decir que la Luna tiene, por lo menos, 4 fases.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La primera de estas es Luna Nueva.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_8",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En esta fase, el Sol ilumina la cara oculta de la Luna.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_8",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la fase de Luna Creciente, el Sol ilumina la parte lateral de la Luna",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "formando una letra “C”. La parte iluminada aumenta día a día.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la fase de Luna Llena, el sol ilumina la cara visible de la Luna.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_10",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Durante esta fase podemos ver la luna completa.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_10",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En la fase de Luna Menguante, el sol ilumina la cara lateral de la Luna",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_11",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "formando una letra “D”. La parte iluminada disminuye día a día",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_11",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "hasta volver a la fase de Luna Nueva.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_8",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "André te invita a hacer un ejercicio para practicar lo aprendido sobre la Luna.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "texts": [
+      {
+        "text": "¡Empareja correctamente la imagen con su definición!",
+        "position": {
+          "start": [0.5, 4],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontWeight": "bold",
+          "fontSize": 20,
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0.5, 1],
+          "end": [2, 3.5]
+        },
+        "target": 25,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 27,
+        "require": [26],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Luna llena", "Luna nueva", "Luna menguante", "Luna creciente"],
+        "draggableItems": [
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "Luna menguante",
+            "position": {
+              "start": [0.5, 15.5],
+              "end": [4.875, 19.5]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "Luna llena",
+            "position": {
+              "start": [5.375, 15.5],
+              "end": [9.75, 19.5]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "Luna nueva",
+            "position": {
+              "start": [10.25, 15.5],
+              "end": [14.625, 19.5]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "Luna creciente",
+            "position": {
+              "start": [15.125, 15.5],
+              "end": [19.5, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0.5, 10.95],
+              "end": [4.875, 15]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.375, 10.95],
+              "end": [9.75, 15]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [10.25, 10.95],
+              "end": [14.625, 15]
+            }
+          },
+          {
+            "type": "moonBlock",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.125, 10.95],
+              "end": [19.5, 15]
+            }
+          }
+        ]
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "llena",
+        "position": {
+          "start": [0.5, 6.75],
+          "end": [4.875, 10.75]
+        }
+      },
+      {
+        "name": "nueva",
+        "position": {
+          "start": [5.375, 6.75],
+          "end": [9.75, 10.75]
+        }
+      },
+      {
+        "name": "menguante",
+        "position": {
+          "start": [10.25, 6.75],
+          "end": [14.625, 10.75]
+        }
+      },
+      {
+        "name": "creciente",
+        "position": {
+          "start": [15.125, 6.75],
+          "end": [19.5, 10.75]
+        }
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [4.875, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [2.275, 10.95],
+          "end": [3.1, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [5.375, 6.5],
+          "end": [9.75, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [7.15, 10.95],
+          "end": [7.975, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10.25, 6.5],
+          "end": [14.625, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [12.025, 10.95],
+          "end": [12.85, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [15.125, 6.5],
+          "end": [19.5, 11]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderRadius": 10,
+          "borderColor": "#063D69"
+        }
+      },
+      {
+        "position": {
+          "start": [16.9, 10.95],
+          "end": [17.725, 12]
+        },
+        "settings": {
+          "backgroundColor": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#063D69",
+          "borderTopColor": "#FFFFFF",
+          "borderRadius": 0
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La Tierra y la Luna están en constante movimiento.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Debido a esto, pueden adquirir posiciones relativas que produzcan algún efecto.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSad",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Uno de los efectos visibles más populares son los eclipses.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Existen dos tipos de eclipses - eclipse de Luna y eclipse de Sol.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_12",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cada eclipse se genera con una alineación específica de la Tierra, la Luna y el Sol.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_13",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El eclipse de Sol se produce cuando su luz es bloqueada por la presencia de la Luna.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuál es la alineación para observar el eclipse solar desde la Tierra?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_14",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["La Luna debe estar entre el Sol y la Tierra"],
+        "answers": [
+          {
+            "text": "La Tierra debe estar entre la Luna y el Sol",
+            "position": {
+              "start": [1.5, 10.5],
+              "end": [11.5, 13]
+            }
+          },
+          {
+            "text": "El Sol debe estar entre la Tierra y la Luna",
+            "position": {
+              "start": [1.5, 13.5],
+              "end": [11.5, 16]
+            }
+          },
+          {
+            "text": "La Luna debe estar entre el Sol y la Tierra",
+            "position": {
+              "start": [1.5, 16.5],
+              "end": [11.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Cuando la Luna se sitúa entre el Sol y la Tierra, tapa la luz solar.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_15",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esto genera una zona de sombra sobre la superficie de la Tierra.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_15",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se dice que un eclipse solar es total, cuando la Luna cubre totalmente el Sol.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_16",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El eclipse solar parcial ocurre cuando la Luna no cubre el Sol en su totalidad.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_17",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El otro tipo de eclipse es un eclipse lunar.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuál es la alineación para observar el eclipse lunar desde la Tierra?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_14",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["La Tierra debe estar entre el Sol y la Luna"],
+        "answers": [
+          {
+            "text": "La Tierra debe estar entre el Sol y la Luna",
+            "position": {
+              "start": [1.5, 10.5],
+              "end": [11.5, 13]
+            }
+          },
+          {
+            "text": "El Sol debe estar entre la Tierra y la Luna",
+            "position": {
+              "start": [1.5, 13.5],
+              "end": [11.5, 16]
+            }
+          },
+          {
+            "text": "La Luna debe estar entre el Sol y la Tierra",
+            "position": {
+              "start": [1.5, 16.5],
+              "end": [11.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así es. La Luna se esconde del Sol.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Durante el eclipse lunar, la Luna adquiere una tonalidad rojiza.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "astronomia_1_18",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los cielos de Chile son conocidos por permitir observar el universo.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "André te invita a revisar si te acuerdas bien de los tipos de eclipses.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxesDragChecking": [
+      {
+        "position": {
+          "start": [7.5, 8],
+          "end": [19.5, 12.5]
+        },
+        "settings": {
+          "borderRadius": 10
+        },
+        "requirements": [44]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Completa la palabra",
+        "position": {
+          "start": [8, 5],
+          "end": [19, 7.5]
+        },
+        "settings": {
+          "fontWeight": "bold",
+          "fontSize": 20,
+          "textAlign": "left",
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0.5, 1],
+          "end": [2, 3.5]
+        },
+        "target": 43,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 45,
+        "require": [44],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["T", "O", "T", "A", "L"],
+        "draggableItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "T",
+            "position": {
+              "start": [8, 14.5],
+              "end": [9.2, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "T",
+            "position": {
+              "start": [10.45, 14.5],
+              "end": [11.65, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "O",
+            "position": {
+              "start": [12.9, 14.5],
+              "end": [14.1, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "L",
+            "position": {
+              "start": [15.35, 14.5],
+              "end": [16.55, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "A",
+            "position": {
+              "start": [17.8, 14.5],
+              "end": [19, 17]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [8, 9],
+              "end": [9.2, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [10.45, 9],
+              "end": [11.65, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [12.9, 9],
+              "end": [14.1, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.35, 9],
+              "end": [16.55, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [17.8, 9],
+              "end": [19, 11.5]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpCard": [
+      {
+        "position": {
+          "start": [0.5, 6],
+          "end": [6.5, 18.5]
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "borderRadius": true,
+        "items": [
+          {
+            "name": "solarTotal",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿Qué tipo de eclipse solar es?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxesDragChecking": [
+      {
+        "position": {
+          "start": [7.5, 8],
+          "end": [19.5, 12.5]
+        },
+        "settings": {
+          "borderRadius": 10
+        },
+        "requirements": [45]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Completa la palabra",
+        "position": {
+          "start": [8, 5],
+          "end": [19, 7.5]
+        },
+        "settings": {
+          "fontWeight": "bold",
+          "fontSize": 20,
+          "textAlign": "left",
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0.5, 1],
+          "end": [2, 3.5]
+        },
+        "target": 44,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 46,
+        "require": [45],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["S", "O", "M", "B", "R", "A"],
+        "draggableItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "S",
+            "position": {
+              "start": [8, 14.5],
+              "end": [9.2, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "R",
+            "position": {
+              "start": [9.96, 14.5],
+              "end": [11.16, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "A",
+            "position": {
+              "start": [11.92, 14.5],
+              "end": [13.12, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "B",
+            "position": {
+              "start": [13.88, 14.5],
+              "end": [15.08, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "O",
+            "position": {
+              "start": [15.84, 14.5],
+              "end": [17.04, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "M",
+            "position": {
+              "start": [17.8, 14.5],
+              "end": [19, 17]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [8, 9],
+              "end": [9.2, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.96, 9],
+              "end": [11.16, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.92, 9],
+              "end": [13.12, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [13.88, 9],
+              "end": [15.08, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.84, 9],
+              "end": [17.04, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [17.8, 9],
+              "end": [19, 11.5]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpCard": [
+      {
+        "position": {
+          "start": [0.5, 6],
+          "end": [6.5, 18.5]
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "borderRadius": true,
+        "items": [
+          {
+            "name": "sombraLunar",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿Qué genera un eclipse solar sobre la Tierra?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxesDragChecking": [
+      {
+        "position": {
+          "start": [7.5, 8],
+          "end": [19.5, 12.5]
+        },
+        "settings": {
+          "borderRadius": 10
+        },
+        "requirements": [46]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Completa la palabra",
+        "position": {
+          "start": [8, 5],
+          "end": [19, 7.5]
+        },
+        "settings": {
+          "fontWeight": "bold",
+          "fontSize": 20,
+          "textAlign": "left",
+          "elevation": 11
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#EC87C0",
+          "buttonColorNormal": "#EC87C0",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-left",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0.5, 1],
+          "end": [2, 3.5]
+        },
+        "target": 45,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [15, 1],
+          "end": [19.5, 3.5]
+        },
+        "target": 47,
+        "require": [46],
+        "visible": false
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["R", "O", "J", "I", "Z", "O"],
+        "draggableItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "R",
+            "position": {
+              "start": [8, 14.5],
+              "end": [9.2, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "J",
+            "position": {
+              "start": [9.96, 14.5],
+              "end": [11.16, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "O",
+            "position": {
+              "start": [11.92, 14.5],
+              "end": [13.12, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "Z",
+            "position": {
+              "start": [13.88, 14.5],
+              "end": [15.08, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "O",
+            "position": {
+              "start": [15.84, 14.5],
+              "end": [17.04, 17]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "I",
+            "position": {
+              "start": [17.8, 14.5],
+              "end": [19, 17]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [8, 9],
+              "end": [9.2, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.96, 9],
+              "end": [11.16, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [11.92, 9],
+              "end": [13.12, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [13.88, 9],
+              "end": [15.08, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.84, 9],
+              "end": [17.04, 11.5]
+            }
+          },
+          {
+            "type": "letter",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [17.8, 9],
+              "end": [19, 11.5]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpCard": [
+      {
+        "position": {
+          "start": [0.5, 6],
+          "end": [6.5, 18.5]
+        },
+        "target": -1,
+        "require": [],
+        "disableWhen": [],
+        "visible": false,
+        "borderRadius": true,
+        "items": [
+          {
+            "name": "lunaRoja",
+            "position" : {
+              "start": [0, 0],
+              "end": [20, 15.5]
+            }
+          }
+        ],
+        "texts": [
+          {
+            "text": "¿De qué tono es la Luna durante un eclipse lunar?",
+            "position" : {
+              "start": [0, 16],
+              "end": [20, 20]
+            },
+            "settings": { 
+              "fontSize": 14,
+              "elevation": 21,
+              "fontWeight": "normal",
+              "fontFamily": "Poppins-Regular"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_astronomia1",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente trabajo! André espera que podrás usar tus nuevos observando el cielo.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AndreHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "position" : {
+          "start": [10.5, 13.5],
+          "end": [16.5, 16.5]
+        },
+        "target": -1,
+        "require": [],
+        "visible": false
+      }
+    ]
+  }
+]

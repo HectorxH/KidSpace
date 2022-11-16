@@ -44,6 +44,10 @@ const ARMainComponent = (props: ARMainComponentProps) => {
   const [updateMaterial, setUpdateMaterial] = viroProps.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     viroProps.materialSelectorToggle;
+  const [armarDesarmarToggle, setArmarDesarmarToggle] =
+    viroProps.armarDesarmarToggle;
+  const [temperaturaSelectorToggle, setTemperaturaSelectorToggle] =
+    viroProps.temperaturaSelectorToggle;
   const [transforms, setTransforms] = viroProps.transforms;
   const [rotations, setRotations] = viroProps.rotations;
   const [, setTracking] = useState(false);
@@ -104,6 +108,14 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                   materialSelectorToggle,
                   setMaterialSelectorToggle,
                 ]}
+                armarDesarmarToggle={[
+                  armarDesarmarToggle,
+                  setArmarDesarmarToggle,
+                ]}
+                temperaturaSelectorToggle={[
+                  temperaturaSelectorToggle,
+                  setTemperaturaSelectorToggle,
+                ]}
                 setSelectedModelMaterials={setSelectedModelMaterials}
                 modelMaterial={modelMaterial[pageNumber]}
                 updateMaterial={[updateMaterial, setUpdateMaterial]}
@@ -114,7 +126,7 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 pageNumber={pageNumber}
                 models3d={models3d[pageNumber]}
                 modelProps={modelProps}
-                modelChildrenProps={modelChildrenProps}
+                // modelChildrenProps={modelChildrenProps}
                 itemNumber={itemNumber}
                 modelIndex={modelIndex}
                 positions={positions[pageNumber]}

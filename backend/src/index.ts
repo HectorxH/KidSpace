@@ -13,6 +13,7 @@ import EstudianteRouter from './routes/Estudiante';
 import ApoderadoRouter from './routes/Apoderado';
 import ActivityRouter from './routes/Activity';
 import EstadisticasRouter from './routes/Estadisticas';
+import RepresentanteRouter from './routes/Representante';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
@@ -20,6 +21,7 @@ import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
 import Apoderado from './models/Apoderado';
 import Curso from './models/Curso';
+import Representante from './models/Representante';
 
 // Agrega la funcion .format como en python
 if (!String.prototype.format) {
@@ -72,7 +74,7 @@ app.use((req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo, email, cursoId, estudianteId,
+      nombres, apellidos, tipo, email, cursoId, estudianteId, representanteUid,
     } = req.body;
     let { username, password } : {username: string, password: string} = req.body;
     if (_.some(req.body, _.isNil)) {
@@ -116,18 +118,35 @@ app.post('/register', async (req, res) => {
         }
       } while (user);
       console.log({ username, password });
+    } else if (tipo === 'profesor') {
+      password = crypto.randomBytes(8).toString('hex');
+      const name = `${nombres.split(' ')[0]}.${apellidos.split(' ')[0]}`;
+      let user;
+      username = `${name}`;
+      do {
+        // eslint-disable-next-line no-await-in-loop
+        user = await User.findOne({ username });
+        if (user) {
+          username = `${name}.${crypto.randomBytes(2).toString('hex')}`;
+        }
+      } while (user);
+      console.log({ username, password });
     }
 
     const hashedPass = await bcrypt.hash(password, 10);
-    const user = new User({
+    const user : any = new User({
       nombres, apellidos, username, password: hashedPass, tipo, email,
     });
     await user.save();
 
     if (user.tipo === 'profesor') {
-      const profesor = new Profesor({ user: user._id });
+      const profesor = new Profesor({ user: user._id, password });
+      await Representante.findOneAndUpdate(
+        { user: representanteUid },
+        { $addToSet: { profesores: profesor?._id } },
+      );
       await profesor.save();
-      return res.sendStatus(200);
+      return res.json({ profesor: await Profesor.findById(profesor?._id).populate('user') });
     } if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ user: user._id, curso: cursoId });
       await Curso.findByIdAndUpdate(cursoId, { $addToSet: { estudiantes: estudiante?._id } });
@@ -145,6 +164,10 @@ app.post('/register', async (req, res) => {
         { $addToSet: { estudiantes: estudianteId } },
       );
       return res.json({ apoderado: await Apoderado.findById(apoderado?._id).populate('user') });
+    } if (user.tipo === 'representante') {
+      const representante = new Representante({ user: user._id });
+      await representante.save();
+      return res.sendStatus(200);
     }
     return res.sendStatus(200);
   } catch (e) {
@@ -201,6 +224,7 @@ app.use('/Profesor', checkAuth, ProfesorRouter);
 app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
+app.use('/Representante', checkAuth, RepresentanteRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
 app.use('/Estadisticas', checkAuth, EstadisticasRouter);
 

@@ -1,100 +1,37 @@
 [
   {
-    "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [11.5, 4.5],
-          "end": [19.5, 19.5]
-        }
-      }
-    ],
-    "texts": [
-        {
-          "text": "*:c*",
-          "position": {
-            "start": [12, 5],
-            "end": [19, 19]
-          }
-        }
-    ]
-  },
-  {
     "AR": {
-      "start": true,
+      "start": false,
       "models": [
         {
-          "model": "caja_torta",
-          "scale": [0.2, 0.2, 0.2],
-          "rotation": [0, 0, 0]
+          "model": "star",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "interactable": ["temperatura"],
+          "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
+          "ARMaterials": {
+            "materialOrder": ["Estrella"],
+            "materialChoices": [
+              ["betelgeuse", "sun", "sirius", "rigel"]
+            ]
+          }
         }
       ]
     },
     "background": "",
-    "textBoxes": [
-      {
-        "position": {
-          "start": [2, 4],
-          "end": [16, 16]
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": "Test",
-        "position": {
-          "start": [3, 4.5],
-          "end": [15, 15.5]
-        }
-      }
-    ],
     "toggleButton": [
       {
         "settings": {
-          "buttonColorNormal": "#FF8A00",
           "buttonColorAlt": "#FF8A00",
-          "buttonIconNormal": "search",
-          "buttonIconAlt": "cube",
-          "buttonTextNormal": " Preguntas",
-          "buttonTextAlt": " Volver"
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
         "position" : {
           "start": [1, 1],
           "end": [7, 3.5]
-        },
-        "value": true
-      }
-    ]
-  },
-  {
-    "AR": {
-      "start": true,
-      "models": [],
-      "trackerMessage": "Encuentra el material hecho de Arena",
-      "imageTrackers": [
-        {
-          "name": "Vidrio",
-          "target": "vidrio",
-          "display": "barras",
-          "displayType": "3dobject"
-        }
-      ]
-    },
-
-    "background": "",
-    "toggleButton": [
-      {
-        "settings": {
-          "buttonColorAlt": "#FF8A00",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "",
-          "buttonIconNormal": "",
-          "buttonTextAlt": "",
-          "buttonTextNormal": ""
-        },
-        "position" : {
-          "start": [0, 0],
-          "end": [0, 0]
         },
         "value": false
       }
@@ -103,22 +40,160 @@
       {
         "settings": {
           "buttonColorAlt": "#BBBBBB",
-          "buttonColorNormal": "#FF8A00",
-          "buttonIconAlt": "search",
-          "buttonIconNormal": "eye",
-          "buttonTextAlt": " Ver el poster",
-          "buttonTextNormal": " Ver el poster"
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
-          "start": [1, 1],
-          "end": [7, 3.5]
+          "start": [13, 1],
+          "end": [19, 3.5]
         },
         "target": -1,
-        "require": [2],
-        "visible": true
+        "require": [0],
+        "visible": false
+      }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Ordena las estrellas, de menor a mayor temperatura!",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [4.5, 6.5],
+          "end": [5.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [9.5, 6.5],
+          "end": [10.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [14.5, 6.5],
+          "end": [15.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Betelgeuse", "Sol", "Sirius", "Rigel"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "Rigel",
+            "value": "Rigel",
+            "position": {
+              "start": [3.25, 15.5],
+              "end": [6.25, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Betelgeuse",
+            "value": "Betelgeuse",
+            "position": {
+              "start": [6.75, 15.5],
+              "end": [9.75, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Sol",
+            "value": "Sol",
+            "position": {
+              "start": [10.25, 15.5],
+              "end": [13.25, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Sirius",
+            "value": "Sirius",
+            "position": {
+              "start": [13.75, 15.5],
+              "end": [16.75, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0.5, 6.5],
+              "end": [4.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 6.5],
+              "end": [9.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [10.5, 6.5],
+              "end": [14.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.5, 6.5],
+              "end": [19.5, 12.5]
+            }
+          }
+        ]
       }
     ]
   }
 ]
-
-

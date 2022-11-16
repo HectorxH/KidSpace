@@ -19,11 +19,11 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import PieChartIcon from '@mui/icons-material/PieChart';
 import {
-  NavLink, Link, useMatch, useNavigate,
+  NavLink, useMatch, useNavigate,
 } from 'react-router-dom';
 import { Theme } from '@mui/material/styles';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import { Menu, MenuItem } from '@mui/material';
+import { Button, Menu, MenuItem } from '@mui/material';
 import axios from 'axios';
 import _ from 'lodash';
 import { useAuth } from '../hooks/useAuth';
@@ -39,7 +39,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
-  const { user, logout } = useAuth();
+  const { user, logout, navigateToDefault } = useAuth();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -88,7 +88,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <GroupIcon />,
       paths: ['/profesores'],
       restricted: true,
-      tipo: ['profesor'], //
+      tipo: ['representante'], //
       visible: true,
     },
     {
@@ -106,13 +106,13 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
 
   const drawer = (
     <>
-      <Link to="/">
+      <Button onClick={navigateToDefault}>
         <img
           src={logo}
           alt="KidSpace logo"
           width={drawerWidth - 10}
         />
-      </Link>
+      </Button>
       <Divider />
       <List sx={{
         // selected and (selected + hover) states

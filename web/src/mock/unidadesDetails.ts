@@ -33,7 +33,7 @@ export default [
         nactividad: 5,
         actividad: 'Actividad',
         titulo: 'Reciclaje',
-        descripcion: 'Lorem Ipsum',
+        descripcion: 'En esta actividad vas a conocer a José, que se dedica a la ingeniería ambiental. Junto con José, aprenderás sobre el concepto de degradación de desechos, como también de la importancia del reciclaje. Además, aprenderás sobre los puntos limpios y cómo se reciclan los desechos en Chile.',
         path: '/actividades/unidad/2/actividad/5',
       },
     ],

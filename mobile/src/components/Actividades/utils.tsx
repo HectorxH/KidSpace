@@ -259,6 +259,34 @@ export function checkAnswers(
   return respuestasCorrectas === cantidadRespuestas;
 }
 
+export function checkDragAnswers(
+  requirements: number[],
+  userDragAnswer: string[][][],
+  rightDragAnswer: string[][][],
+) {
+  // return true;
+
+  var respuestasCorrectas = requirements
+    .map(n =>
+      userDragAnswer[n].map((draggableItems, draggableNumber) =>
+        draggableItems
+          .map((userAnswer, anserNumber) =>
+            userAnswer === rightDragAnswer[n][draggableNumber][anserNumber]
+              ? [1]
+              : [0],
+          )
+          .reduce((x, y) => Number(x) + Number(y), 0),
+      ),
+    )
+    .reduce((x, y) => Number(x) + Number(y), 0);
+
+  var cantidadRespuestas = requirements
+    .map(n => rightDragAnswer[n].map(draggableItems => draggableItems.length))
+    .reduce((x, y) => Number(x) + Number(y), 0);
+
+  return respuestasCorrectas === cantidadRespuestas;
+}
+
 interface BaseTextProps {
   elevation: number;
   fontSize: number;
@@ -406,6 +434,10 @@ export function getImageStyle(
           typeof newImageStyle.transform !== 'undefined'
             ? newImageStyle.transform
             : [],
+        borderRadius:
+          typeof newImageStyle.borderRadius !== 'undefined'
+            ? RSize(newImageStyle.borderRadius, 'w') * 100
+            : 0,
       },
     },
   });

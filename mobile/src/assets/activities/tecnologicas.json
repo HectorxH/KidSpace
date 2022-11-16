@@ -1,0 +1,3398 @@
+[
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Alec se dedica al *diseñado industrial*.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Aplica su talento gráfico para resolver diversos problemas,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "diseñando nuevos productos y soluciones.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para ello, un aspecto importante de su vida es la observación.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Comprendiendo la complejidad de un problema,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Alec crea una solución tecnológica para este.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una solución tecnológica es un proceso en el que se analiza un objeto,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_2",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "y se crea una solución a alguno de los problemas identificados en este.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_3",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una forma de analizar un objeto es “la mirada hacia las partes”.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Esto se conoce como el análisis estructural.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_4",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Nos interesa observar componentes de un producto tecnológico,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_4",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "para comprender cómo estas se relacionan.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_4",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cada una de las partes de un objeto tiene alguna función.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Se entiende por funciones los distintos usos que puede prestar el objeto.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, ¿qué partes tiene una tetera?",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_5",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El mango, que permite sujetar la tetera.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El cuerpo, que permite almacenar agua caliente.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_7",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El cuello, que permite que el agua y el vapor salgan por este.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_8",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, cada parte del objeto tiene su función propia.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Alec te invita a analizar algunos objetos más para entrenar tu ojo.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "martilloArmado",
+          "scale": [0.4, 0.4, 0.4],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "La observación estructural toma en cuenta la funcionalidad de cada parte de un objeto.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "martilloArmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En tu inventario podrás encontrar un objeto. Una vez que lo coloques en tu pantalla",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "martilloArmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "podrás desarmarlo para analizar sus partes estructurales y sus funciones.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "martilloArmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [0, 180, 0],
+          "icon": "martillo"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Confirma tus observaciones respondiendo las preguntas disponibles en la esquina superior izquierda",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "martilloArmado",
+          "alt": "martilloDesarmado",
+          "scale": [0.8, 0.8, 0.8],
+          "rotation": [90, 180, 0],
+          "icon": "martillo",
+          "interactable": ["armarDesarmar"]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "martilloAR",
+        "position": {
+          "start": [0.5, 11.5],
+          "end": [6, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Completa los recuadros con las palabras correspondientes",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [1, 6.5],
+          "end": [5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [10, 6.5],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [1, 9],
+          "end": [5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:1}}",
+        "position": {
+          "start": [10, 9],
+          "end": [11.5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [5, 14],
+          "end": [9, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:2}}",
+        "position": {
+          "start": [14, 14],
+          "end": [15.5, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [5, 16.5],
+          "end": [9, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:3}}",
+        "position": {
+          "start": [14, 16.5],
+          "end": [15.5, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Cabeza", "Clavar", "Mango", "Sujetar"],
+        "draggableItems": [
+          {
+            "type": "rectangle",
+            "name": "Sujetar",
+            "value": "Sujetar",
+            "position": {
+              "start": [15, 6.5],
+              "end": [19, 8.5]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Cabeza",
+            "value": "Cabeza",
+            "position": {
+              "start": [15, 9],
+              "end": [19, 11]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Mango",
+            "value": "Mango",
+            "position": {
+              "start": [15, 11.5],
+              "end": [19, 13.5]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Clavar",
+            "value": "Clavar",
+            "position": {
+              "start": [15, 14],
+              "end": [19, 16]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 6.5],
+              "end": [9.5, 8.5]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 9],
+              "end": [9.5, 11]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.5, 14],
+              "end": [13.5, 16]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [13.5, 18.5]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 25,
+        "require": [24],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "skateArmado",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "icon": "skate"
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Alec te deja otro objeto a analizar.",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorNormal": "#FF8A00",
+          "buttonColorAlt": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextNormal": " Preguntas",
+          "buttonTextAlt": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "skateArmado",
+          "alt": "skateDesarmado",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [0, 90, 0],
+          "icon": "skate",
+          "interactable": ["armarDesarmar"]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "skateAR",
+        "position": {
+          "start": [0.5, 11.5],
+          "end": [6, 19.5]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Completa los recuadros con las palabras correspondientes",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": {
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [1, 6.5],
+          "end": [5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [10, 6.5],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [1, 9],
+          "end": [5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:1}}",
+        "position": {
+          "start": [10, 9],
+          "end": [11.5, 11]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Nombre de la parte:",
+        "position": {
+          "start": [5, 14],
+          "end": [9, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:2}}",
+        "position": {
+          "start": [14, 14],
+          "end": [15.5, 16]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Funcionalidad:",
+        "position": {
+          "start": [5, 16.5],
+          "end": [9, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:3}}",
+        "position": {
+          "start": [14, 16.5],
+          "end": [15.5, 18.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Base", "Soportar", "Ruedas", "Deslizar"],
+        "draggableItems": [
+          {
+            "type": "rectangle",
+            "name": "Base",
+            "value": "Base",
+            "position": {
+              "start": [15, 6.5],
+              "end": [19, 8.5]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Deslizar",
+            "value": "Deslizar",
+            "position": {
+              "start": [15, 9],
+              "end": [19, 11]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Soportar",
+            "value": "Soportar",
+            "position": {
+              "start": [15, 11.5],
+              "end": [19, 13.5]
+            }
+          },
+          {
+            "type": "rectangle",
+            "name": "Ruedas",
+            "value": "Ruedas",
+            "position": {
+              "start": [15, 14],
+              "end": [19, 16]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 6.5],
+              "end": [9.5, 8.5]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 9],
+              "end": [9.5, 11]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.5, 14],
+              "end": [13.5, 16]
+            }
+          },
+          {
+            "type": "rectangleText",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [9.5, 16.5],
+              "end": [13.5, 18.5]
+            }
+          }
+        ]
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 27,
+        "require": [26],
+        "visible": false
+      }
+    ]
+  },
+
+
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cada objeto tecnológico resuelve algún tipo de necesidad.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Desde el inicio hemos estado resolviendo nuestras necesidades,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "usando las cosas que tenemos a mano.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, hemos ido construyendo viviendas, creando vestimentas…",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_10",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En otras palabras, la tecnología permite resolver problemas.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y cada objeto tecnológico resuelve una o más necesidades.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, ¿cuál problema resuelve una ampolleta?",
+        "position": {
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_11",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Falta de iluminación"],
+        "answers": [
+          {
+            "text": "Falta de iluminación",
+            "position": {
+              "start": [8.5, 10.5],
+              "end": [18.5, 13]
+            }
+          },
+          {
+            "text": "Ambiente frío",
+            "position": {
+              "start": [8.5, 13.5],
+              "end": [18.5, 16]
+            }
+          },
+          {
+            "text": "Falta de seguridad",
+            "position": {
+              "start": [8.5, 16.5],
+              "end": [18.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! Las ampolletas fueron creadas para iluminar nuestros espacios.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_12",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 2],
+          "end": [12, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y ¿cuál problema crees que resuelva una peineta?",
+        "position": {
+          "start": [1.5, 2.5],
+          "end": [11.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_13",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Pelo enredado"],
+        "answers": [
+          {
+            "text": "Pelo sucio",
+            "position": {
+              "start": [1.5, 10.5],
+              "end": [11.5, 13]
+            }
+          },
+          {
+            "text": "Pelo enredado",
+            "position": {
+              "start": [1.5, 13.5],
+              "end": [11.5, 16]
+            }
+          },
+          {
+            "text": "Caída de pelo",
+            "position": {
+              "start": [1.5, 16.5],
+              "end": [11.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así es, usamos la peineta cuando tenemos enredado el pelo.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_3",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "No es díficil imaginar cómo se ve una ampolleta o una peineta.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Pero estos objetos no siempre han existido y no siempre han tenido la forma que tienen en la actualidad.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecQuestion",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cada objeto tecnológico pasa por una evolución.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_14",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En cada paso de evolución, el objeto mejora y se hace más moderno.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_14",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, antes de usar la ampolleta, usábamos antorchas.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_15",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estas consistían en pedazos de madera con un extremo envuelto en material inflamable.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_15",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Después, en vez de antorchas, empezamos a usar las lámparas de aceite.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_16",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Recién en siglo 19 se introduce la ampolleta tal como la conocemos.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecQuestion",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Su diseño ha sido perfeccionado durante los años,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_17",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "dando origen a las ampolletas LED más modernas.",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "tecnologicas_17",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Así, los objetos tecnológicos siguen evolucionando para satisfacer nuestras necesidades.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Alec te invita a aprender más sobre la evolución de la tecnología.",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando *las tarjetas* podrás aprender sobre la evolución de distintos objetos",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Tu misión consiste en encontrar un tarjeta con el *objeto tecnológico* que aparecerá en la pantalla",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Después tendrás que encontrar su par que corresponde a la *necesidad que resuelve el objeto*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Une las tarjetas. Si el *par formado es correcto* podrás ver un video sobre la evolución del objeto.",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Para verificar lo aprendido, responda las preguntas dando click en el botón de la *esquina superior izquierda*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Empecemos! Encuentra la tarjeta con *una cámara fotográfica* y la tarjeta con *el problema que esta resuelve*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¿Cuál problema resuelve una cámara fotográfica?",
+      "imageTrackers": [
+        {
+          "name": "Camara",
+          "target": "camaraMomento",
+          "display": "camara",
+          "displayType": "video"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 56,
+        "require": [55],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10, 4],
+          "end": [19, 10.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Completa la línea de tiempo para la cámara fotográfica!",
+        "position": {
+          "start": [10.5, 4.5],
+          "end": [18.5, 10]
+        },
+        "settings": { 
+          "fontSize": 20,
+          "elevation": 11,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 16",
+        "position": {
+          "start": [7, 2.5],
+          "end": [10, 4]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 20",
+        "position": {
+          "start": [7, 9],
+          "end": [10, 10.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 19",
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 21",
+        "position": {
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "noChile",
+        "position": {
+          "start": [4, 4],
+          "end": [6.5, 19.5]
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["camara4", "camara2", "camara1", "camara3"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "camara2",
+            "value": "camara2",
+            "position": {
+              "start": [12.75, 11],
+              "end": [14.75, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "camara3",
+            "value": "camara3",
+            "position": {
+              "start": [15.25, 11],
+              "end": [18.25, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "camara1",
+            "value": "camara1",
+            "position": {
+              "start": [12.75, 15.5],
+              "end": [14.75, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "camara4",
+            "value": "camara4",
+            "position": {
+              "start": [15.25, 15.5],
+              "end": [18.25, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 4],
+              "end": [9.5, 8]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 10.5],
+              "end": [9.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 8],
+              "end": [3, 12]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 14.5],
+              "end": [3, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora necesitas encontrar la tarjeta con el *teléfono* y su par con *el problema que este resuelve*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¿Cuál problema resuelve un teléfono?",
+      "imageTrackers": [
+        {
+          "name": "Telefono",
+          "target": "telefonoDistancia",
+          "display": "telefono",
+          "displayType": "video"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 58,
+        "require": [57],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10, 4],
+          "end": [19, 10.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Completa la línea de tiempo para el teléfono!",
+        "position": {
+          "start": [10.5, 4.5],
+          "end": [18.5, 10]
+        },
+        "settings": { 
+          "fontSize": 20,
+          "elevation": 11,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "1876",
+        "position": {
+          "start": [7, 1],
+          "end": [10, 2.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "1934",
+        "position": {
+          "start": [7, 7.5],
+          "end": [10, 9]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "2008",
+        "position": {
+          "start": [7, 14],
+          "end": [10, 15.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "1920",
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "1980",
+        "position": {
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "noChile",
+        "position": {
+          "start": [4, 4],
+          "end": [6.5, 19.5]
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["phone1", "phone3", "phone5", "phone2", "phone4"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "phone4",
+            "value": "phone4",
+            "position": {
+              "start": [11, 11],
+              "end": [13, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "phone5",
+            "value": "phone5",
+            "position": {
+              "start": [14, 11],
+              "end": [16, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "phone3",
+            "value": "phone3",
+            "position": {
+              "start": [17, 11],
+              "end": [19, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "phone2",
+            "value": "phone2",
+            "position": {
+              "start": [12.75, 15.5],
+              "end": [14.75, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "phone1",
+            "value": "phone1",
+            "position": {
+              "start": [15.25, 15.5],
+              "end": [18.25, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 2.5],
+              "end": [9.5, 6.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 9],
+              "end": [9.5, 13]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 15.5],
+              "end": [9.5, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 8],
+              "end": [3, 12]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 14.5],
+              "end": [3, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! El último par que tienes que formar corresponde a *una plancha* y *el problema que esta resuelve*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Preguntas"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¿Cuál problema resuelve una plancha?",
+      "imageTrackers": [
+        {
+          "name": "Plancha",
+          "target": "planchaRopa",
+          "display": "plancha",
+          "displayType": "video"
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 60,
+        "require": [59],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      },
+      {
+        "position": {
+          "start": [10, 4],
+          "end": [19, 10.5]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "elevation": 10
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Completa la línea de tiempo para la plancha!",
+        "position": {
+          "start": [10.5, 4.5],
+          "end": [18.5, 10]
+        },
+        "settings": { 
+          "fontSize": 20,
+          "elevation": 11,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 17",
+        "position": {
+          "start": [7, 2.5],
+          "end": [10, 4]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 20",
+        "position": {
+          "start": [7, 9],
+          "end": [10, 10.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 19",
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [3.5, 8]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Siglo 21",
+        "position": {
+          "start": [0.5, 13],
+          "end": [3.5, 14.5]
+        },
+        "settings": { 
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "noChile",
+        "position": {
+          "start": [4, 4],
+          "end": [6.5, 19.5]
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["plancha1", "plancha3", "plancha2", "plancha4"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "plancha1",
+            "value": "plancha1",
+            "position": {
+              "start": [12.75, 11],
+              "end": [14.75, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "plancha4",
+            "value": "plancha4",
+            "position": {
+              "start": [15.25, 11],
+              "end": [18.25, 15]
+            }
+          },
+          {
+            "type": "image",
+            "name": "plancha3",
+            "value": "plancha3",
+            "position": {
+              "start": [12.75, 15.5],
+              "end": [14.75, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "plancha2",
+            "value": "plancha2",
+            "position": {
+              "start": [15.25, 15.5],
+              "end": [18.25, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 4],
+              "end": [9.5, 8]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7.5, 10.5],
+              "end": [9.5, 14.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 8],
+              "end": [3, 12]
+            }
+          },
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [1, 14.5],
+              "end": [3, 18.5]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+
+
+  {
+    "background": "bg_tecnologicas",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Super! Ahora puedes crear tus propias soluciones tecnológicas. Para finalizar debes responder el siguiente quiz",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "AlecHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Responder el quiz",
+          "buttonTextNormal": "Responder el quiz"
+        },
+        "position" : {
+          "start": [10.5, 14.5],
+          "end": [16.5, 17.5]
+        },
+        "target": 61,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 20,
+          "color": "white",
+          "elevation": 21
+        },
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 19,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "Cada objeto tecnológico resuelve por lo menos una _______",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 17,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 19,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "El proceso en que un objeto se mejora y cambia en el tiempo se llama _____",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 17,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "pregunta": "Cada objeto tecnológico resuelve por lo menos una _______",
+        "answers": [
+          {
+            "text": "Solución",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "Necesidad",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "Parte",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "pregunta": "El proceso en que un objeto se mejora y cambia en el tiempo se llama _____",
+        "answers": [
+          {
+            "text": "Evolución",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "Cambio",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "Mutación",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [61],
+        "visible": false
+      }
+    ]
+  }
+
+]

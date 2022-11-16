@@ -4,6 +4,9 @@ import {IReceivingItems} from '../../../types/activity';
 import DraggableRectangle from './DraggableItems/DraggableRectangle';
 import DraggableCodeBlock from './DraggableItems/DraggableCodeBlock';
 import DraggableImage from './DraggableItems/DraggableImage';
+import DraggableMoonBlock from './DraggableItems/DraggableMoonBlock';
+import DraggableLetter from './DraggableItems/DraggableLetter';
+import DraggableResiduo from './DraggableItems/DraggableResiduo';
 
 interface DraggableItemProps {
   item: IReceivingItems;
@@ -17,7 +20,8 @@ const DraggableItem = (props: DraggableItemProps) => {
   if (
     props.isDragItemPicked[props.pageNumber][props.dragNumber][
       props.itemNumber
-    ] === true
+    ] === true &&
+    props.item.type !== 'letter'
   ) {
     return null;
   }
@@ -25,6 +29,13 @@ const DraggableItem = (props: DraggableItemProps) => {
     <View style={styles.container}>
       {props.item.type === 'image' && (
         <DraggableImage
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
+      )}
+      {props.item.type === 'residuo' && (
+        <DraggableResiduo
           item={props.item}
           dragNumber={props.dragNumber}
           itemNumber={props.itemNumber}
@@ -43,6 +54,26 @@ const DraggableItem = (props: DraggableItemProps) => {
           pageNumber={props.pageNumber} // receivingNames={}
           dragNumber={props.dragNumber}
           itemNumber={props.itemNumber}
+        />
+      )}
+      {props.item.type === 'moonBlock' && (
+        <DraggableMoonBlock
+          item={props.item}
+          pageNumber={props.pageNumber} // receivingNames={}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+        />
+      )}
+      {props.item.type === 'letter' && (
+        <DraggableLetter
+          item={props.item}
+          dragNumber={props.dragNumber}
+          itemNumber={props.itemNumber}
+          isPicked={
+            props.isDragItemPicked[props.pageNumber][props.dragNumber][
+              props.itemNumber
+            ]
+          }
         />
       )}
     </View>
