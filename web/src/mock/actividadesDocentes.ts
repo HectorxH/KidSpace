@@ -88,7 +88,7 @@ export default [
       {
         enunciado: 'Las tres “R” son reducir, ______ y reciclar.',
         alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
-        respuestaCorrecta: 'Rehacer',
+        respuestaCorrecta: 'Reutilizar',
         data: [2, 12, 5],
       },
     ],
