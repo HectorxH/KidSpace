@@ -6,16 +6,10 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import SinActividades from '../../components/SinActividades';
-
-interface ICursosTable {
-  _id: string;
-  nombre: string;
-  cantidad: number;
-  fecha: Date;
-}
+import { ICurso } from '../../types/cursos';
 
 interface ITableParams {
-  rows: ICursosTable[],
+  rows: ICurso[],
 }
 
 const CursosIntitucionTable = (
@@ -33,7 +27,7 @@ const CursosIntitucionTable = (
       field: 'estudiantes',
       headerName: 'Estudiantes',
       width: 200,
-      renderCell: ({ row }) => row.cantidad,
+      renderCell: ({ row }) => row.estudiantes.length,
     },
     {
       field: 'fecha',
@@ -41,7 +35,7 @@ const CursosIntitucionTable = (
       width: 200,
       renderCell: (({ row }) => (
         <div>
-          {moment(row.fecha).format('DD/MM/YYYY')}
+          {moment(row.createdAt).format('DD/MM/YYYY')}
         </div>
       )),
     },

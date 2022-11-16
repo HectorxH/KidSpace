@@ -6,12 +6,13 @@ import React from 'react';
 import moment from 'moment-timezone';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import SinActividades from '../../components/SinActividades';
+import { ICurso } from '../../types/cursos';
 
 interface IHistorial {
   _id: string,
   actividad: string,
-  curso: string,
-  fecha: Date,
+  curso: ICurso,
+  createdAt: string,
 }
 
 interface ITableParams {
@@ -29,12 +30,12 @@ const HistorialIntitucionTable = (
       width: 400,
     },
     {
-      field: 'curso',
+      field: 'curso.nombre',
       headerName: 'Curso',
       width: 200,
     },
     {
-      field: 'fecha',
+      field: 'createdAt',
       headerName: 'Fecha',
       width: 200,
       renderCell: (({ row }) => (

@@ -2,6 +2,7 @@ import express from 'express';
 import Pusher from 'pusher';
 import dotenv from 'dotenv-safe';
 import Profesor from '../models/Profesor';
+import DocenteLog from '../models/DocenteLog';
 
 dotenv.config();
 
@@ -30,6 +31,12 @@ router.post('/message', async (req, res) => {
         curso: req.body.curso,
       });
       console.log('ok');
+      const log = new DocenteLog({
+        actividad: req.body.msg.titulo,
+        curso: req.body.curso,
+        profesor: profesor._id,
+      });
+      await log.save();
       res.sendStatus(200);
     } else {
       throw Error('Tipo de usuario invalido');

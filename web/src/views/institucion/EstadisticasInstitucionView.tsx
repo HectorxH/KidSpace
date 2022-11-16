@@ -20,24 +20,12 @@ import { ICursos } from '../../types/cursos';
 import NotFoundView from '../NotFoundView';
 import '../../App.css';
 import { useAuth } from '../../hooks/useAuth';
+import { IProfesor } from '../../types/profesores';
+import CargaView from '../LoadingView';
 
 const img = require('../../assets/institucion.png');
 
-const profesores = [
-  {
-    _id: '63475e1711ba100d7ce87ca3',
-    nombre: 'Profe 1',
-  },
-  {
-    _id: '2',
-    nombre: 'Profe 2',
-  },
-];
-
 const EstadisticasInstitucionView = () => {
-  const user = {
-    _id: 'sdfs54df6', nombres: 'nombre', apellidos: 'apellidos', institucion: 'Institucion', plan: 2,
-  };
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -46,18 +34,17 @@ const EstadisticasInstitucionView = () => {
     },
   ]);
 
-  const { logout } = useAuth();
-
-  const [cursos, setCursos] = useState<ICursos>([]);
+  const { user, logout } = useAuth();
+  const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(false);
-  const [profesor, setProfesor] = useState('');
-  const [curso, setCurso] = useState('');
+  const [profesorIdx, setProfesorIdx] = useState<number>(0);
+  const [cursoIdx, setCursoIdx] = useState<number>(0);
   const [isDisabledCurso, setIsDisabledCurso] = useState(true);
   const [dateSelected, setDateSelected] = useState(false);
   const navigate = useNavigate();
 
   const changeProfesor = (event: any) => {
-    setProfesor(event.target.value);
+    setProfesorIdx(event.target.value);
     setIsDisabledCurso(false);
   };
 
@@ -66,37 +53,41 @@ const EstadisticasInstitucionView = () => {
     setDateSelected(true);
   };
 
-  const updateCursos = async () => {
+  const getData = async () => {
     try {
-      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso`);
-      setCursos(res.data.cursos);
-      console.log(res);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Representante/profesores`);
+      setProfesores(res.data.profesores);
+      console.log(res.data.profesores);
     } catch (e) {
       console.log(e);
       if (axios.isAxiosError(e) && e.response && e.response.status === 401) {
         logout();
       }
     }
+    setLoading(false);
   };
 
   useEffect(() => {
-    if (cursos.length === 0) updateCursos();
-    setLoading(false);
+    if (!profesores) getData();
   }, []);
 
-  const handleReporte = () => (
-    curso === ''
-      ? navigate(`/estadisticas/${profesor}`)
-      : navigate(`/estadisticas/${profesor}/${curso}`)
-  );
+  const handleReporte = () => {
+    if (profesores === undefined || profesorIdx === undefined || cursoIdx === undefined) return;
+    if (cursoIdx === -1) {
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}`);
+    } else {
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}`);
+    }
+  };
 
   const reporteActivo = () => {
-    if (dateSelected && profesor !== '') {
+    if (dateSelected && profesorIdx !== undefined) {
       return false;
     }
     return true;
   };
 
+  if (loading) return <CargaView />;
   return (
     <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
       <Stack
@@ -172,8 +163,8 @@ const EstadisticasInstitucionView = () => {
                     onChange={(e) => changeProfesor(e)}
                     required
                   >
-                    {profesores?.map((p) => (
-                      <MenuItem key={p._id} value={p._id}>{p.nombre}</MenuItem>
+                    {profesores?.map((p, idx) => (
+                      <MenuItem key={p._id} value={idx}>{p.user.nombres}</MenuItem>
                     ))}
                   </TextField>
                 </Grid>
@@ -195,12 +186,15 @@ const EstadisticasInstitucionView = () => {
                     label="Curso"
                     defaultValue=""
                     disabled={isDisabledCurso}
-                    onChange={(e) => setCurso(e.target.value)}
+                    onChange={(e) => setCursoIdx(Number(e.target.value))}
                   >
-                    <MenuItem key={0} value="">Ninguno</MenuItem>
-                    {cursos?.map((c) => (
-                      <MenuItem key={c._id} value={c._id}>{c.nombre}</MenuItem>
-                    ))}
+                    <MenuItem key={0} value={-1}>Todos los cursos</MenuItem>
+                    {
+                      (profesores !== undefined)
+                      && profesores[profesorIdx].cursos.map((c, idx) => (
+                        <MenuItem key={c._id} value={idx}>{c.nombre}</MenuItem>
+                      ))
+                    }
                   </TextField>
                 </Grid>
               </Grid>
