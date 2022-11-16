@@ -33,12 +33,12 @@ const ToggleButton = (props: ToggleButtonProps) => {
   ) {
     return null;
   }
-  if (
-    imageTrackers[pageNumber].length !== 0 &&
-    activeTracker[pageNumber] === ''
-  ) {
-    return null;
-  }
+  // if (
+  //   imageTrackers[pageNumber].length !== 0 &&
+  //   activeTracker[pageNumber] === ''
+  // ) {
+  //   return null;
+  // }
 
   const toggle = (index: number) => {
     let tgValues = [...toggleQuestions[0]];
