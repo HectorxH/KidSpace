@@ -62,11 +62,11 @@ export function getSteam(actividad: string) {
   switch (actividad) {
     case 'diagramas':
       return [0, 1, 0, 0, 1];
-    case 'tecnologia':
+    case 'tecnologicas':
       return [0, 1, 1, 0, 0];
     case 'materiales':
       return [1, 0, 1, 0, 0];
-    case 'reciclaje':
+    case 'reciclajes':
       return [1, 0, 1, 1, 0];
     case 'diseños':
       return [0, 0, 1, 1, 0];
@@ -125,9 +125,9 @@ export function getNombreActividad(actividad: string) {
 export function getTipoActividad(actividad: string) {
   const actividadesClase: string[] = [
     'diagramas',
-    'tecnologia',
+    'tecnologicas',
     'materiales',
-    'reciclaje',
+    'reciclajes',
     'diseños',
   ];
   if (actividadesClase.includes(actividad)) {
@@ -138,7 +138,7 @@ export function getTipoActividad(actividad: string) {
 
 export function getNombreUnidad(actividad: string) {
   const unidad1: string[] = ['diagramas'];
-  const unidad2: string[] = ['tecnologia', 'reciclaje'];
+  const unidad2: string[] = ['tecnologicas', 'reciclajes'];
   const unidad3: string[] = ['materiales', 'diseños'];
 
   if (unidad1.includes(actividad)) {
