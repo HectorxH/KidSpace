@@ -138,6 +138,27 @@ router.post('/profesor/:id/tiempo', async (req, res) => {
   }
 });
 
+router.post('/curso/:id/tiempo', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dateRange } = req.body;
+    const logs = await ActividadLog.find({
+      curso: id,
+      tipo: 'clase',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const avergeTimeByActividad = _.mapValues(
+      logsByActividad,
+      (o) => _.meanBy(o, (x) => Number(x.duracion)),
+    );
+    res.json({ tiempo: avergeTimeByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/curso/:id/tiempo', async (req, res) => {
   try {
     const { id } = req.params;
@@ -161,6 +182,40 @@ router.post('/profesor/:id/countCorrectasQuiz', async (req, res) => {
     const profesor = await Profesor.findById(id);
     const logs = await ActividadLog.find({
       curso: { $in: profesor?.cursos },
+      tipo: 'clase',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
+    const respuestas = _.map(logs, (o) => ({
+      actividad: o.actividad,
+      respuestas: _.map(o.quizFinal, 'respuesta'),
+    }));
+    const byActividad = _.groupBy(respuestas, 'actividad');
+    const respuestasByActividad = _.mapValues(byActividad, (oArray) => _.map(oArray, 'respuestas'));
+    const correctas = _.mapValues(
+      respuestasByActividad,
+      // eslint-disable-next-line no-shadow
+      (v, k) => _.flatMap(v, (respuestas) => ([
+        respuestas[0] === RespuestasCorrectas[k][0] ? 'Correctas' : 'Incorrectas',
+        respuestas[1] === RespuestasCorrectas[k][1] ? 'Correctas' : 'Incorrectas',
+      ])),
+    );
+    const countCorrectas = _.mapValues(
+      correctas,
+      (o) => _.mapValues(_.groupBy(o, _.identity), (x) => x.length),
+    );
+    res.json({ countCorrectas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/curso/:id/countCorrectasQuiz', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dateRange } = req.body;
+    const logs = await ActividadLog.find({
+      curso: id,
       tipo: 'clase',
       fecha: { $gte: dateRange[0], $lt: dateRange[1] },
     });
@@ -248,6 +303,31 @@ router.post('/profesor/:id/%curso', async (req, res) => {
   }
 });
 
+router.post('/curso/:id/%curso', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dateRange } = req.body;
+    const curso = await Curso.findById(id);
+    const nEstudiantes = curso?.estudiantes?.length || 0;
+    const logs = await ActividadLog.find({
+      curso: id,
+      tipo: 'clase',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
+
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));
+    const uniqueEstudiantesByActividad = _.mapValues(
+      estudiantesByActividad,
+      (o) => o.length / nEstudiantes,
+    );
+    res.json({ actividadesCurso: uniqueEstudiantesByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/curso/:id/%curso', async (req, res) => {
   try {
     const { id } = req.params;
@@ -268,6 +348,31 @@ router.get('/curso/:id/%curso', async (req, res) => {
   }
 });
 
+router.post('/curso/:id/%individual', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dateRange } = req.body;
+    const curso = await Curso.findById(id);
+    const nEstudiantes = curso?.estudiantes?.length || 0;
+    const logs = await ActividadLog.find({
+      curso: id,
+      tipo: 'individual',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
+
+    const logsByActividad = _.groupBy(logs, 'actividad');
+    const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));
+    const uniqueEstudiantesByActividad = _.mapValues(
+      estudiantesByActividad,
+      (o) => o.length / nEstudiantes,
+    );
+    res.json({ actividadesIndividual: uniqueEstudiantesByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.get('/curso/:id/%individual', async (req, res) => {
   try {
     const { id } = req.params;
@@ -282,6 +387,29 @@ router.get('/curso/:id/%individual', async (req, res) => {
       (o) => o.length / nEstudiantes,
     );
     res.json({ actividadesIndividual: uniqueEstudiantesByActividad });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/curso/:id/rank', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dateRange } = req.body;
+    const curso = await Curso.findById(id).populate({ path: 'estudiantes', populate: { path: 'user' } });
+    if (!curso) throw Error('El curso no existe');
+    const { estudiantes } = curso;
+    const rankPromise = _.map(estudiantes, async (estudiante) => ({
+      estudiante,
+      cantidad: await ActividadLog.countDocuments({
+        estudiante: estudiante._id,
+        fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+
+      }),
+    }));
+    const rank = await Promise.all(rankPromise);
+    res.json({ rank });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
