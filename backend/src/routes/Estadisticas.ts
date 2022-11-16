@@ -12,11 +12,11 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['Gráficos', 'Una tabla'],
   Diseños: ['Función', 'Textura'],
   Materiales: ['Norte', 'Material'],
-  Reciclaje: ['placeholder', 'placeholder'],
-  'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
+  Reciclaje: ['Inorgánicas', 'Reutilizar'],
+  'Soluciones Tecnológicas': ['Necesidad', 'Evolución'],
 };
 
-router.get('/profesor/:id/historialDocente', async (req, res) => {
+router.post('/profesor/:id/historialDocente', async (req, res) => {
   try {
     const { id } = req.params;
     const historial = await DocenteLog.find({ profesor: id });
@@ -116,11 +116,15 @@ router.get('/curso/:id/docente/:actividad', async (req, res) => {
   }
 });
 
-router.get('/profesor/:id/tiempo', async (req, res) => {
+router.post('/profesor/:id/tiempo', async (req, res) => {
   try {
     const { id } = req.params;
+    const { dateRange } = req.body;
     const profesor = await Profesor.findById(id);
-    const logs = await ActividadLog.find({ curso: { $in: profesor?.cursos } });
+    const logs = await ActividadLog.find({
+      curso: { $in: profesor?.cursos },
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
     const logsByActividad = _.groupBy(logs, 'actividad');
     const avergeTimeByActividad = _.mapValues(
       logsByActividad,
@@ -149,11 +153,16 @@ router.get('/curso/:id/tiempo', async (req, res) => {
   }
 });
 
-router.get('/profesor/:id/countCorrectasQuiz', async (req, res) => {
+router.post('/profesor/:id/countCorrectasQuiz', async (req, res) => {
   try {
     const { id } = req.params;
+    const { dateRange } = req.body;
     const profesor = await Profesor.findById(id);
-    const logs = await ActividadLog.find({ curso: { $in: profesor?.cursos }, tipo: 'clase' });
+    const logs = await ActividadLog.find({
+      curso: { $in: profesor?.cursos },
+      tipo: 'clase',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
     const respuestas = _.map(logs, (o) => ({
       actividad: o.actividad,
       respuestas: _.map(o.quizFinal, 'respuesta'),
@@ -208,12 +217,17 @@ router.get('/curso/:id/countCorrectasQuiz', async (req, res) => {
   }
 });
 
-router.get('/profesor/:id/%curso', async (req, res) => {
+router.post('/profesor/:id/%curso', async (req, res) => {
   try {
     const { id } = req.params;
+    const { dateRange } = req.body;
     const profesor = await Profesor.findById(id).populate('cursos');
     const nEstudiantes = _.reduce(profesor?.cursos, (prev, curr) => prev + curr.length, 0);
-    const logs = await ActividadLog.find({ curso: { $in: profesor }, tipo: 'clase' });
+    const logs = await ActividadLog.find({
+      curso: { $in: profesor },
+      tipo: 'clase',
+      fecha: { $gte: dateRange[0], $lt: dateRange[1] },
+    });
 
     const logsByActividad = _.groupBy(logs, 'actividad');
     const estudiantesByActividad = _.mapValues(logsByActividad, (o) => _.uniqWith(_.map(o, 'estudiante'), _.isEqual));

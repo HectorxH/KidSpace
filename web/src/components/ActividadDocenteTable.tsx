@@ -9,9 +9,9 @@ import _ from 'lodash';
 
 const actividades = [
   'Diagramas',
-  // 'Soluciones tecnologicas',
+  'Soluciones tecnologicas',
   'Materiales',
-  // 'Reciclaje',
+  'Reciclaje',
   'Diseños',
 ];
 interface IActividades {

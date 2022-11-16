@@ -16,8 +16,6 @@ import 'react-date-range/dist/theme/default.css';
 import { addDays } from 'date-fns';
 import locale from 'date-fns/locale/es';
 import axios from 'axios';
-import { ICursos } from '../../types/cursos';
-import NotFoundView from '../NotFoundView';
 import '../../App.css';
 import { useAuth } from '../../hooks/useAuth';
 import { IProfesor } from '../../types/profesores';
@@ -48,6 +46,8 @@ const EstadisticasInstitucionView = () => {
     setIsDisabledCurso(false);
   };
 
+  const stateToSimpleObject = (s: any) => ([s[0].startDate.getTime(), s[0].endDate.getTime()]);
+
   const changeDate = (item: any) => {
     setState(item);
     setDateSelected(true);
@@ -74,14 +74,14 @@ const EstadisticasInstitucionView = () => {
   const handleReporte = () => {
     if (profesores === undefined || profesorIdx === undefined || cursoIdx === undefined) return;
     if (cursoIdx === -1) {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${stateToSimpleObject(state)[0]}/${stateToSimpleObject(state)[1]}`);
     } else {
-      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}`);
+      navigate(`/estadisticas/${profesores[profesorIdx]._id}/${profesores[profesorIdx].cursos[cursoIdx]._id}/${stateToSimpleObject(state)[0]}/${stateToSimpleObject(state)[1]}`);
     }
   };
 
   const reporteActivo = () => {
-    if (dateSelected && profesorIdx !== undefined) {
+    if (dateSelected && profesorIdx !== undefined && cursoIdx !== undefined) {
       return false;
     }
     return true;

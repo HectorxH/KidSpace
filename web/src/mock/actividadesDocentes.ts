@@ -37,14 +37,14 @@ export default [
     preguntas: [
       {
         enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        alternativas: ['Solución', 'Necesidad', 'Parte'],
+        respuestaCorrecta: 'Necesidad',
         data: [2, 12, 5],
       },
       {
         enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        alternativas: ['Evolución', 'Cambio', 'Mutación'],
+        respuestaCorrecta: 'Evolución',
         data: [2, 12, 5],
       },
     ],
@@ -81,14 +81,14 @@ export default [
     preguntas: [
       {
         enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        alternativas: ['Orgánicos', 'Inorgánicos', 'Vegetales'],
+        respuestaCorrecta: 'Inorgánicos',
         data: [2, 12, 5],
       },
       {
         enunciado: 'Placeholder',
-        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
-        respuestaCorrecta: 'Placeholder',
+        alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
+        respuestaCorrecta: 'Reutilizar',
         data: [2, 12, 5],
       },
     ],
