@@ -15,7 +15,7 @@ import { useAuth } from '../../hooks/useAuth';
 const Aprobado = () => {
   const { planId } = useParams();
 
-  const { logout } = useAuth();
+  const { logout, navigateToDefault } = useAuth();
 
   const handleClick = async () => {
     try {
@@ -27,6 +27,7 @@ const Aprobado = () => {
         logout();
       }
     }
+    navigateToDefault();
   };
 
   return (

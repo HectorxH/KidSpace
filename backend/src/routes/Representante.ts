@@ -22,6 +22,7 @@ router.post('/plan', async (req, res) => {
     const user = req.user?._id;
     const { plan } = req.body;
     await Representante.findOneAndUpdate({ user }, { plan });
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

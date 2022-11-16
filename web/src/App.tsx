@@ -99,11 +99,11 @@ const App = () => (
               <Route path="/" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
-              <Route path="/aprobado/:planId" element={<Aprobado />} />
-              <Route path="/rechazado" element={<Rechazado />} />
             </Route>
             <Route element={<ProtectedRoute loggedin noProfesor noApoderado />}>
               <Route path="/paquetes" element={<PaquetesView />} />
+              <Route path="/aprobado/:planId" element={<Aprobado />} />
+              <Route path="/rechazado" element={<Rechazado />} />
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<Layout />}>
