@@ -27,77 +27,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-router.get('/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const profesor = await Profesor.findById(id).populate(['user', 'cursos']);
-    if (profesor) {
-      res.json({ profesor });
-    } else {
-      res.send(500);
-    }
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { nombres, apellidos, email } = req.body;
-    const profesor = await Profesor.findById(id);
-    await User.findByIdAndUpdate(profesor?.user, { $set: { nombres, apellidos, email } });
-    if (profesor) {
-      profesor.populate('user');
-      res.json({ profesor });
-    } else {
-      res.send(500);
-    }
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.post('/:id/sendCredentials', async (req, res) => {
-  try {
-    const { id } = req.params;
-    const profesor = await Profesor.findById(id).populate('user');
-
-    await transporter.sendMail({
-      from: 'Kidspace.cl',
-      to: profesor?.user.email,
-      subject: 'Credenciales de acceso Kidspace', // Subject
-      html: emailTemplate.format(profesor?.user.username, profesor?.password),
-      attachments: [{
-        filename: 'image-1.png',
-        path: path.join(__dirname, '../../assets/email/images/image-1.png'),
-        cid: 'templateEmailImage@Kidspace',
-      }],
-    });
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
-router.delete('/:id', async (req, res) => {
-  try {
-    const user = req.user?._id;
-    const { id } = req.params;
-    const profesor = await Profesor.findById(id);
-    await Representante.findOneAndUpdate({ user }, { $pull: { profesores: id } });
-    await User.findByIdAndDelete(profesor?.user);
-    await Profesor.findByIdAndDelete(id);
-    res.sendStatus(200);
-  } catch (e) {
-    console.log(e);
-    res.sendStatus(500);
-  }
-});
-
 router.get('/favoritas', async (req, res) => {
   try {
     const user = req.user?._id;
@@ -172,6 +101,77 @@ router.post('/planificadas', async (req, res) => {
 
     const profesor = await Profesor.findOne({ user });
     res.json({ favoritas: profesor?.planificadas });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id).populate(['user', 'cursos']);
+    if (profesor) {
+      res.json({ profesor });
+    } else {
+      res.sendStatus(500);
+    }
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { nombres, apellidos, email } = req.body;
+    const profesor = await Profesor.findById(id);
+    await User.findByIdAndUpdate(profesor?.user, { $set: { nombres, apellidos, email } });
+    if (profesor) {
+      profesor.populate('user');
+      res.json({ profesor });
+    } else {
+      res.sendStatus(500);
+    }
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.post('/:id/sendCredentials', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id).populate('user');
+
+    await transporter.sendMail({
+      from: 'Kidspace.cl',
+      to: profesor?.user.email,
+      subject: 'Credenciales de acceso Kidspace', // Subject
+      html: emailTemplate.format(profesor?.user.username, profesor?.password),
+      attachments: [{
+        filename: 'image-1.png',
+        path: path.join(__dirname, '../../assets/email/images/image-1.png'),
+        cid: 'templateEmailImage@Kidspace',
+      }],
+    });
+    res.sendStatus(200);
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const { id } = req.params;
+    const profesor = await Profesor.findById(id);
+    await Representante.findOneAndUpdate({ user }, { $pull: { profesores: id } });
+    await User.findByIdAndDelete(profesor?.user);
+    await Profesor.findByIdAndDelete(id);
+    res.sendStatus(200);
   } catch (e) {
     console.log(e);
     res.sendStatus(500);
