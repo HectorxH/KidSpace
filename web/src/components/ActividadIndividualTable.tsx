@@ -36,7 +36,7 @@ const ActividadIndividualTable = (
   { rowsData, institucion }: ITableParams,
 ) => {
   let hideColumn = false;
-  if (institucion) {
+  if (institucion.institucion) {
     hideColumn = true;
   }
   const navigate = useNavigate();
