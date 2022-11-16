@@ -16,7 +16,7 @@ const Aprobado = () => {
   const { planId } = useParams();
 
   const {
-    user, login, logout, navigateToDefault,
+    user, login, logout,
   } = useAuth();
 
   const handleClick = async () => {
@@ -30,7 +30,6 @@ const Aprobado = () => {
         logout();
       }
     }
-    navigateToDefault();
   };
 
   return (
