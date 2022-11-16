@@ -359,15 +359,17 @@ const EstadisticasApoderadoView = () => {
           }))}
         </Grid>
       </Stack>
-      <Stack sx={{
-        px: 5, maxWidth: 1000, marginTop: 5, marginBottom: 5,
-      }}
-      >
-        <Typography variant="h4">
-          Historial de actividades
-        </Typography>
-        <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          <HistorialTable rows={historial} />
+      <Typography variant="h4" sx={{ px: 5 }}>
+        Historial de actividades
+      </Typography>
+      <Stack direction="row" sx={{ justifyContent: 'center' }}>
+        <Stack sx={{
+          px: 5, marginTop: 5, marginBottom: 5, maxWidth: 1000, width: 1,
+        }}
+        >
+          <Stack direction="row" sx={{ justifyContent: 'center' }}>
+            <HistorialTable rows={historial} />
+          </Stack>
         </Stack>
       </Stack>
     </Stack>

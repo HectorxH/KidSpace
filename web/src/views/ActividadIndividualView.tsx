@@ -211,11 +211,16 @@ const ActividadIndividualView = () => {
           </Card>
         </Grid>
       </Grid>
-      <Stack sx={{ px: 5, py: 4, maxWidth: 840 }}>
-        <ActividadIndividualAlumnosTable
-          rows={resultados}
-          estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
-        />
+      <Stack direction="row" sx={{ justifyContent: 'center' }}>
+        <Stack sx={{
+          px: 5, py: 4, maxWidth: 840, width: 1,
+        }}
+        >
+          <ActividadIndividualAlumnosTable
+            rows={resultados}
+            estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
+          />
+        </Stack>
       </Stack>
     </Stack>
   );
