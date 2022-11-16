@@ -136,7 +136,7 @@ const makeCorrectasData = (data: ICountCorrectas) => {
 
 const EstadisticasProfesorView = (institucion: IInstitucion) => {
   const { cursoId, startDate, endDate } = useParams();
-  if (!cursoId || !startDate || !endDate) return <NotFoundView />;
+  if (!cursoId) return <NotFoundView />;
   const [curso, setCurso] = useState<ICurso>();
   const [tiempoData, setTiempoData] = useState<ITiempoData>();
   const [countCorrectas, setCountCorrectas] = useState<ICountCorrectas>();
@@ -151,7 +151,7 @@ const EstadisticasProfesorView = (institucion: IInstitucion) => {
     try {
       res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Curso/${cursoId}`);
       setCurso(res.data.curso);
-      if (institucion) {
+      if (institucion && startDate && endDate) {
         const dateRange = [startDate, endDate];
         res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/curso/${cursoId}/tiempo`, { dateRange });
         setTiempoData(res.data.tiempo);
