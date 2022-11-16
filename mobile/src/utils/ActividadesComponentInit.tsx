@@ -233,6 +233,13 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       : '',
   );
 
+  const trackerFeedbacks = actividades.map(actividadPage =>
+    typeof actividadPage.AR !== 'undefined' &&
+    typeof actividadPage.AR.trackerFeedback !== 'undefined'
+      ? actividadPage.AR.trackerFeedback
+      : '',
+  );
+
   const [activeTracker, setActiveTracker] = useState<string[]>(
     actividades.map(() => ''),
   );
@@ -311,6 +318,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     toggleDefaultValue: toggleDefaultValue,
     toggleValues: toggleValues,
     trackerMessages: trackerMessages,
+    trackerFeedbacks: trackerFeedbacks,
   };
 
   const StoryComponentParams: IStoryComponentParams = {

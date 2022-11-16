@@ -2361,6 +2361,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¿Cuál problema resuelve una cámara fotográfica?",
+      "trackerFeedback": "¡Exacto! Se resuelve el problema de comunicarse a distancia",
       "imageTrackers": [
         {
           "name": "Camara",
@@ -2639,6 +2640,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¿Cuál problema resuelve un teléfono?",
+      "trackerFeedback": "¡Exacto! Se resuelve el problema de capturar el momento",
       "imageTrackers": [
         {
           "name": "Telefono",
@@ -2947,6 +2949,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¿Cuál problema resuelve una plancha?",
+      "trackerFeedback": "¡Exacto! Se resuelve el problema de ropa arrugada",
       "imageTrackers": [
         {
           "name": "Plancha",

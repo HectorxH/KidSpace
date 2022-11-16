@@ -149,6 +149,7 @@ export interface IMarkerTrackerFeedbackParams {
   toggleDefaultValue: boolean[];
   toggleValues: number[][];
   trackerMessages: string[];
+  trackerFeedbacks: string[];
 }
 
 export interface IStoryComponentParams {

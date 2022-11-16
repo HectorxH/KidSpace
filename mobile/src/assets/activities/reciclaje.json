@@ -2675,6 +2675,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¡Escanea la tarjeta de color azul!",
+      "trackerFeedback": "¡Exacto! ese basurero es para papeles",
       "imageTrackers": [
         {
           "name": "Basurero Azul",
@@ -2773,6 +2774,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¡Escanea la tarjeta de color café!",
+      "trackerFeedback": "¡Exacto! ese basurero es para deshechos orgánicos",
       "imageTrackers": [
         {
           "name": "Basurero Café",
@@ -2871,6 +2873,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¡Escanea la tarjeta de color amarillo!",
+      "trackerFeedback": "¡Exacto! ese basurero es para plásticos",
       "imageTrackers": [
         {
           "name": "Basurero Amarillo",
@@ -2969,6 +2972,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¡Escanea la tarjeta de color verde!",
+      "trackerFeedback": "¡Exacto! ese basurero es para vidrios",
       "imageTrackers": [
         {
           "name": "Basurero Verde",
@@ -3069,6 +3073,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¡Escanea la tarjeta de color gris!",
+      "trackerFeedback": "¡Exacto! ese basurero es para latas",
       "imageTrackers": [
         {
           "name": "Basurero Gris",
