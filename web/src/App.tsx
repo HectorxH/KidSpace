@@ -43,6 +43,7 @@ import AgregarProfesorView from './views/institucion/AgregarProfesorView';
 import { AuthProvider } from './hooks/useAuth';
 import Aprobado from './views/Pagos/AprobadoView';
 import Rechazado from './views/Pagos/RechazadoView';
+import PaquetesView from './views/Pagos/PaquetesView';
 import RedirectHomeRoute from './layout/RedirectHomeRoute';
 
 axios.defaults.withCredentials = true;
@@ -102,6 +103,7 @@ const App = () => (
               <Route path="/registro/:planId" element={<RegistroView />} />
               <Route path="/aprobado/:planId" element={<Aprobado />} />
               <Route path="/rechazado" element={<Rechazado />} />
+              <Route path="/paquetes" element={<PaquetesView />} />
             </Route>
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<Layout />}>
