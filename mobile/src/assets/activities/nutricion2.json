@@ -20,7 +20,7 @@
     ],
     "texts": [
       {
-        "text": "Carlos es *nutriólogo*.",
+        "text": "Carlos es *nutriólogo*",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -49,7 +49,7 @@
     ],
     "texts": [
       {
-        "text": "La  nutriología se encarga de tratar las enfermedades asociadas a la nutrición.",
+        "text": "La  nutriología se encarga de tratar las enfermedades asociadas a la nutrición",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -107,7 +107,7 @@
     ],
     "texts": [
       {
-        "text": "y recomendar el mejor plan de acción.",
+        "text": "y recomendar el mejor plan de acción",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -136,7 +136,7 @@
     ],
     "texts": [
       {
-        "text": "En nutrición existe una herramienta especial, conocida como *pirámide nutricional*.",
+        "text": "En nutrición existe una herramienta especial, conocida como *pirámide nutricional*",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -165,7 +165,7 @@
     ],
     "texts": [
       {
-        "text": "Carlos recomienda aprenderla bien para crear una dieta sana y nutritiva.",
+        "text": "Carlos recomienda aprenderla bien para crear una dieta sana y nutritiva",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -203,7 +203,7 @@
     ],
     "texts": [
       {
-        "text": "La forma de la pirámide indica las cantidades que deberíamos consumir de cada alimento.",
+        "text": "La forma de la pirámide indica las cantidades que deberíamos consumir de cada alimento",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -232,7 +232,7 @@
     ],
     "texts": [
       {
-        "text": "La pirámide se divide, además, en varios niveles.",
+        "text": "La pirámide se divide, además, en varios niveles",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -261,7 +261,7 @@
     ],
     "texts": [
       {
-        "text": "En el primer nivel están los alimentos ricos en hidratos de carbono complejo, como los cereales.",
+        "text": "En el primer nivel están los alimentos ricos en hidratos de carbono complejo, como los cereales",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -290,7 +290,7 @@
     ],
     "texts": [
       {
-        "text": "En el segundo nivel encontramos frutas, verduras y hortalizas.",
+        "text": "En el segundo nivel encontramos frutas, verduras y hortalizas",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -319,7 +319,7 @@
     ],
     "texts": [
       {
-        "text": "Se recomienda consumir fruta fresca entre tres o cuatro veces al día.",
+        "text": "Se recomienda consumir fruta fresca entre tres o cuatro veces al día",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -348,7 +348,7 @@
     ],
     "texts": [
       {
-        "text": "En el tercer nivel se incluyen alimentos altos en proteínas, como carnes, pescados, y legumbres.",
+        "text": "En el tercer nivel se incluyen alimentos altos en proteínas, como carnes, pescados, y legumbres",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -377,7 +377,7 @@
     ],
     "texts": [
       {
-        "text": "En el nivel superior se ubica la comida chatarra, como los dulces o las gaseosas.",
+        "text": "En el nivel superior se ubica la comida chatarra, como los dulces o las gaseosas",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -406,7 +406,7 @@
     ],
     "texts": [
       {
-        "text": "Observa la cúspide de la pirámide. Es muy chica.",
+        "text": "Observa la cúspide de la pirámide. Es muy chica",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -435,7 +435,7 @@
     ],
     "texts": [
       {
-        "text": "Su tamaño indica que se deben consumir cantidades muy bajas de los alimentos ubicados en este nivel.",
+        "text": "Su tamaño indica que se deben consumir cantidades muy bajas de los alimentos ubicados en este nivel",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -464,7 +464,7 @@
     ],
     "texts": [
       {
-        "text": "Golosinas y comida rápida en exceso incrementan el riesgo de distintas enfermedades.",
+        "text": "Golosinas y comida rápida en exceso incrementan el riesgo de distintas enfermedades",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -493,7 +493,7 @@
     ],
     "texts": [
       {
-        "text": "Esto se debe a los altos niveles de azúcar y grasas saturadas que poseen este tipo de alimentos.",
+        "text": "Esto se debe a los altos niveles de azúcar y grasas saturadas que poseen este tipo de alimentos",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -554,7 +554,7 @@
     ],
     "texts": [
       {
-        "text": "Esto equivale aproximadamente a 25 gramos de azúcar.",
+        "text": "Esto equivale aproximadamente a 25 gramos de azúcar",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -583,7 +583,7 @@
     ],
     "texts": [
       {
-        "text": "Podemos visualizar la cantidad de azúcar que podemos consumir usando cubitos.",
+        "text": "Podemos visualizar la cantidad de azúcar que podemos consumir usando cubitos",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -707,7 +707,7 @@
     ],
     "texts": [
       {
-        "text": "No todo el azúcar que consumimos es visible.",
+        "text": "No todo el azúcar que consumimos es visible",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -823,7 +823,7 @@
     ],
     "texts": [
       {
-        "text": "tenemos que leer con cuidado la etiqueta de este.",
+        "text": "tenemos que leer con cuidado la etiqueta de este",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -852,7 +852,7 @@
     ],
     "texts": [
       {
-        "text": "Observa la siguiente etiqueta con información nutricional.",
+        "text": "Observa la siguiente etiqueta con información nutricional",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -995,7 +995,7 @@
     ],
     "texts": [
       {
-        "text": "Así, no siempre es obvio que un alimento puede ser dañino para la salud.",
+        "text": "Así, no siempre es obvio que un alimento puede ser dañino para la salud",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1024,7 +1024,7 @@
     ],
     "texts": [
       {
-        "text": "Carlos te invita a analizar algunos alimentos, para ver cuánta azúcar tienen.",
+        "text": "Carlos te invita a analizar algunos alimentos, para ver cuánta azúcar tienen",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1060,7 +1060,7 @@
     ],
     "texts": [
       {
-        "text": "Puedes evitar los alimentos altos en azúcar a la hora de comprar en supermercado.",
+        "text": "Puedes evitar los alimentos altos en azúcar a la hora de comprar en supermercado",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1160,7 +1160,7 @@
     ],
     "texts": [
       {
-        "text": "y analizar *cuánta azucar tiene por porción*.  Si es demasiada, debes *evitar* consumir este alimento.",
+        "text": "y analizar *cuánta azucar tiene por porción*.  Si es demasiada, debes *evitar* consumir este alimento",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1260,7 +1260,7 @@
     ],
     "texts": [
       {
-        "text": "Si tocas el botón en la *esquina superior izquierda* de la pantalla, podrás registrar tu respuesta.",
+        "text": "Si tocas el botón en la *esquina superior izquierda* de la pantalla, podrás registrar tu respuesta",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1310,7 +1310,7 @@
     ],
     "texts": [
       {
-        "text": "Cuando termines de responder las preguntas, podrás avanzar al siguiente alimento.",
+        "text": "Cuando termines de responder las preguntas, podrás avanzar al siguiente alimento",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1726,7 +1726,7 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente! Carlos te tiene el último desafío para practicar.",
+        "text": "¡Excelente! Carlos te tiene el último desafío para practicar",
         "position": {
           "start": [4, 5.5],
           "end": [16, 16.5]
@@ -1930,7 +1930,7 @@
     ],
     "texts": [
       {
-        "text": "¡Genial! Carlos está seguro de que ahora podrás elegir los mejores alimentos para tu dieta.",
+        "text": "¡Genial! Carlos está seguro de que ahora podrás elegir los mejores alimentos para tu dieta",
         "position": {
           "start": [7.5, 2.5],
           "end": [18.5, 15]

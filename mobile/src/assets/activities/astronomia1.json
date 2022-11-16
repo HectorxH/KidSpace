@@ -11,7 +11,7 @@
     ],
     "texts": [
       {
-        "text": "André es un *astrónomo*.",
+        "text": "André es un *astrónomo*",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -69,7 +69,7 @@
     ],
     "texts": [
       {
-        "text": "investigan las estrellas, los planetas, y las galaxias.",
+        "text": "investigan las estrellas, los planetas, y las galaxias",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -98,7 +98,7 @@
     ],
     "texts": [
       {
-        "text": "André desde chico amaba leer sobre el sistema solar, y por eso decidió ser astrónomo.",
+        "text": "André desde chico amaba leer sobre el sistema solar, y por eso decidió ser astrónomo",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -127,7 +127,7 @@
     ],
     "texts": [
       {
-        "text": "El Sistema Solar está formado por el Sol y 8 planetas que giran alrededor de él.",
+        "text": "El Sistema Solar está formado por el Sol y 8 planetas que giran alrededor de él",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -156,7 +156,7 @@
     ],
     "texts": [
       {
-        "text": "El Sol es una estrella ubicada en el centro de nuestro Sistema Solar.",
+        "text": "El Sol es una estrella ubicada en el centro de nuestro Sistema Solar",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -185,7 +185,7 @@
     ],
     "texts": [
       {
-        "text": "Una estrella es un cuerpo de gran masa que se caracteriza por emitir luz propia.",
+        "text": "Una estrella es un cuerpo de gran masa que se caracteriza por emitir luz propia",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -214,7 +214,7 @@
     ],
     "texts": [
       {
-        "text": "Gracias al sol recibimos la luz y el calor necesario para nuestras vidas.",
+        "text": "Gracias al sol recibimos la luz y el calor necesario para nuestras vidas",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -243,7 +243,7 @@
     ],
     "texts": [
       {
-        "text": "La Luna, en cambio, no es una estrella.",
+        "text": "La Luna, en cambio, no es una estrella",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -272,7 +272,7 @@
     ],
     "texts": [
       {
-        "text": "Es un satélite natural de la Tierra que refleja la luz del Sol.",
+        "text": "Es un satélite natural de la Tierra que refleja la luz del Sol",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -330,7 +330,7 @@
     ],
     "texts": [
       {
-        "text": "y demora 28 días en completar un ciclo lunar.",
+        "text": "y demora 28 días en completar un ciclo lunar",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -417,7 +417,7 @@
     ],
     "texts": [
       {
-        "text": "por lo que se dice que la Luna tiene distintas fases.",
+        "text": "por lo que se dice que la Luna tiene distintas fases",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -446,7 +446,7 @@
     ],
     "texts": [
       {
-        "text": "Podemos decir que la Luna tiene, por lo menos, 4 fases.",
+        "text": "Podemos decir que la Luna tiene, por lo menos, 4 fases",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -475,7 +475,7 @@
     ],
     "texts": [
       {
-        "text": "La primera de estas es Luna Nueva.",
+        "text": "La primera de estas es Luna Nueva",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -504,7 +504,7 @@
     ],
     "texts": [
       {
-        "text": "En esta fase, el Sol ilumina la cara oculta de la Luna.",
+        "text": "En esta fase, el Sol ilumina la cara oculta de la Luna",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -562,7 +562,7 @@
     ],
     "texts": [
       {
-        "text": "formando una letra “C”. La parte iluminada aumenta día a día.",
+        "text": "formando una letra “C”. La parte iluminada aumenta día a día",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -591,7 +591,7 @@
     ],
     "texts": [
       {
-        "text": "En la fase de Luna Llena, el sol ilumina la cara visible de la Luna.",
+        "text": "En la fase de Luna Llena, el sol ilumina la cara visible de la Luna",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -620,7 +620,7 @@
     ],
     "texts": [
       {
-        "text": "Durante esta fase podemos ver la luna completa.",
+        "text": "Durante esta fase podemos ver la luna completa",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -707,7 +707,7 @@
     ],
     "texts": [
       {
-        "text": "hasta volver a la fase de Luna Nueva.",
+        "text": "hasta volver a la fase de Luna Nueva",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -736,7 +736,7 @@
     ],
     "texts": [
       {
-        "text": "André te invita a hacer un ejercicio para practicar lo aprendido sobre la Luna.",
+        "text": "André te invita a hacer un ejercicio para practicar lo aprendido sobre la Luna",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1032,7 +1032,7 @@
     ],
     "texts": [
       {
-        "text": "La Tierra y la Luna están en constante movimiento.",
+        "text": "La Tierra y la Luna están en constante movimiento",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1061,7 +1061,7 @@
     ],
     "texts": [
       {
-        "text": "Debido a esto, pueden adquirir posiciones relativas que produzcan algún efecto.",
+        "text": "Debido a esto, pueden adquirir posiciones relativas que produzcan algún efecto",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1090,7 +1090,7 @@
     ],
     "texts": [
       {
-        "text": "Uno de los efectos visibles más populares son los eclipses.",
+        "text": "Uno de los efectos visibles más populares son los eclipses",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1119,7 +1119,7 @@
     ],
     "texts": [
       {
-        "text": "Existen dos tipos de eclipses - eclipse de Luna y eclipse de Sol.",
+        "text": "Existen dos tipos de eclipses - eclipse de Luna y eclipse de Sol",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1148,7 +1148,7 @@
     ],
     "texts": [
       {
-        "text": "Cada eclipse se genera con una alineación específica de la Tierra, la Luna y el Sol.",
+        "text": "Cada eclipse se genera con una alineación específica de la Tierra, la Luna y el Sol",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1177,7 +1177,7 @@
     ],
     "texts": [
       {
-        "text": "El eclipse de Sol se produce cuando su luz es bloqueada por la presencia de la Luna.",
+        "text": "El eclipse de Sol se produce cuando su luz es bloqueada por la presencia de la Luna",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1263,7 +1263,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Cuando la Luna se sitúa entre el Sol y la Tierra, tapa la luz solar.",
+        "text": "¡Muy bien! Cuando la Luna se sitúa entre el Sol y la Tierra, tapa la luz solar",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1292,7 +1292,7 @@
     ],
     "texts": [
       {
-        "text": "Esto genera una zona de sombra sobre la superficie de la Tierra.",
+        "text": "Esto genera una zona de sombra sobre la superficie de la Tierra",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1321,7 +1321,7 @@
     ],
     "texts": [
       {
-        "text": "Se dice que un eclipse solar es total, cuando la Luna cubre totalmente el Sol.",
+        "text": "Se dice que un eclipse solar es total, cuando la Luna cubre totalmente el Sol",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1350,7 +1350,7 @@
     ],
     "texts": [
       {
-        "text": "El eclipse solar parcial ocurre cuando la Luna no cubre el Sol en su totalidad.",
+        "text": "El eclipse solar parcial ocurre cuando la Luna no cubre el Sol en su totalidad",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1379,7 +1379,7 @@
     ],
     "texts": [
       {
-        "text": "El otro tipo de eclipse es un eclipse lunar.",
+        "text": "El otro tipo de eclipse es un eclipse lunar",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1465,7 +1465,7 @@
     ],
     "texts": [
       {
-        "text": "Así es. La Luna se esconde del Sol.",
+        "text": "Así es. La Luna se esconde del Sol",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1494,7 +1494,7 @@
     ],
     "texts": [
       {
-        "text": "Durante el eclipse lunar, la Luna adquiere una tonalidad rojiza.",
+        "text": "Durante el eclipse lunar, la Luna adquiere una tonalidad rojiza",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1523,7 +1523,7 @@
     ],
     "texts": [
       {
-        "text": "Los cielos de Chile son conocidos por permitir observar el universo.",
+        "text": "Los cielos de Chile son conocidos por permitir observar el universo",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1552,7 +1552,7 @@
     ],
     "texts": [
       {
-        "text": "André te invita a revisar si te acuerdas bien de los tipos de eclipses.",
+        "text": "André te invita a revisar si te acuerdas bien de los tipos de eclipses",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -2226,7 +2226,7 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente trabajo! André espera que podrás usar tus nuevos observando el cielo.",
+        "text": "¡Excelente trabajo! André espera que podrás usar tus nuevos observando el cielo",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]

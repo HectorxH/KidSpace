@@ -88,7 +88,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <GroupIcon />,
       paths: ['/profesores'],
       restricted: true,
-      tipo: ['representante'], //
+      tipo: ['representante'],
       visible: true,
     },
     {
@@ -97,7 +97,7 @@ const ResponsiveDrawer = ({ drawerWidth, children } : DrawerProps) => {
       icon: <PieChartIcon />,
       paths: ['/estadisticas'],
       restricted: true,
-      tipo: ['profesor', 'representante'], //
+      tipo: ['representante'],
       visible: true,
     },
   ];

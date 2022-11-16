@@ -11,7 +11,7 @@
     ],
     "texts": [
       {
-        "text": "Alec se dedica al *diseñado industrial*.",
+        "text": "Alec se dedica al *diseñado industrial*",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -69,7 +69,7 @@
     ],
     "texts": [
       {
-        "text": "diseñando nuevos productos y soluciones.",
+        "text": "diseñando nuevos productos y soluciones",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -98,7 +98,7 @@
     ],
     "texts": [
       {
-        "text": "Para ello, un aspecto importante de su vida es la observación.",
+        "text": "Para ello, un aspecto importante de su vida es la observación",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -156,7 +156,7 @@
     ],
     "texts": [
       {
-        "text": "Alec crea una solución tecnológica para este.",
+        "text": "Alec crea una solución tecnológica para este",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -214,7 +214,7 @@
     ],
     "texts": [
       {
-        "text": "y se crea una solución a alguno de los problemas identificados en este.",
+        "text": "y se crea una solución a alguno de los problemas identificados en este",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -243,7 +243,7 @@
     ],
     "texts": [
       {
-        "text": "Una forma de analizar un objeto es “la mirada hacia las partes”.",
+        "text": "Una forma de analizar un objeto es “la mirada hacia las partes”",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -272,7 +272,7 @@
     ],
     "texts": [
       {
-        "text": "Esto se conoce como el análisis estructural.",
+        "text": "Esto se conoce como el análisis estructural",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -330,7 +330,7 @@
     ],
     "texts": [
       {
-        "text": "para comprender cómo estas se relacionan.",
+        "text": "para comprender cómo estas se relacionan",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -359,7 +359,7 @@
     ],
     "texts": [
       {
-        "text": "Cada una de las partes de un objeto tiene alguna función.",
+        "text": "Cada una de las partes de un objeto tiene alguna función",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -388,7 +388,7 @@
     ],
     "texts": [
       {
-        "text": "Se entiende por funciones los distintos usos que puede prestar el objeto.",
+        "text": "Se entiende por funciones los distintos usos que puede prestar el objeto",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -446,7 +446,7 @@
     ],
     "texts": [
       {
-        "text": "El mango, que permite sujetar la tetera.",
+        "text": "El mango, que permite sujetar la tetera",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -475,7 +475,7 @@
     ],
     "texts": [
       {
-        "text": "El cuerpo, que permite almacenar agua caliente.",
+        "text": "El cuerpo, que permite almacenar agua caliente",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -504,7 +504,7 @@
     ],
     "texts": [
       {
-        "text": "El cuello, que permite que el agua y el vapor salgan por este.",
+        "text": "El cuello, que permite que el agua y el vapor salgan por este",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -533,7 +533,7 @@
     ],
     "texts": [
       {
-        "text": "Así, cada parte del objeto tiene su función propia.",
+        "text": "Así, cada parte del objeto tiene su función propia",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -562,7 +562,7 @@
     ],
     "texts": [
       {
-        "text": "Alec te invita a analizar algunos objetos más para entrenar tu ojo.",
+        "text": "Alec te invita a analizar algunos objetos más para entrenar tu ojo",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -588,7 +588,7 @@
       "models": [
         {
           "model": "martilloArmado",
-          "scale": [0.4, 0.4, 0.4],
+          "scale": [0.3, 0.3, 0.3],
           "rotation": [0, 180, 0],
           "icon": "martillo"
         }
@@ -608,7 +608,7 @@
     ],
     "texts": [
       {
-        "text": "La observación estructural toma en cuenta la funcionalidad de cada parte de un objeto.",
+        "text": "La observación estructural toma en cuenta la funcionalidad de cada parte de un objeto",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -710,7 +710,7 @@
     ],
     "texts": [
       {
-        "text": "podrás desarmarlo para analizar sus partes estructurales y sus funciones.",
+        "text": "podrás desarmarlo para analizar sus partes estructurales y sus funciones",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -795,7 +795,7 @@
         {
           "model": "martilloArmado",
           "alt": "martilloDesarmado",
-          "scale": [0.8, 0.8, 0.8],
+          "scale": [0.7, 0.7, 0.7],
           "rotation": [90, 180, 0],
           "icon": "martillo",
           "interactable": ["armarDesarmar"]
@@ -1090,7 +1090,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Alec te deja otro objeto a analizar.",
+        "text": "¡Muy bien! Alec te deja otro objeto a analizar",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1404,7 +1404,7 @@
     ],
     "texts": [
       {
-        "text": "Cada objeto tecnológico resuelve algún tipo de necesidad.",
+        "text": "Cada objeto tecnológico resuelve algún tipo de necesidad",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1462,7 +1462,7 @@
     ],
     "texts": [
       {
-        "text": "usando las cosas que tenemos a mano.",
+        "text": "usando las cosas que tenemos a mano",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1520,7 +1520,7 @@
     ],
     "texts": [
       {
-        "text": "En otras palabras, la tecnología permite resolver problemas.",
+        "text": "En otras palabras, la tecnología permite resolver problemas",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1549,7 +1549,7 @@
     ],
     "texts": [
       {
-        "text": "Y cada objeto tecnológico resuelve una o más necesidades.",
+        "text": "Y cada objeto tecnológico resuelve una o más necesidades",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1635,7 +1635,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Las ampolletas fueron creadas para iluminar nuestros espacios.",
+        "text": "¡Muy bien! Las ampolletas fueron creadas para iluminar nuestros espacios",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1721,7 +1721,7 @@
     ],
     "texts": [
       {
-        "text": "Así es, usamos la peineta cuando tenemos enredado el pelo.",
+        "text": "Así es, usamos la peineta cuando tenemos enredado el pelo",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1750,7 +1750,7 @@
     ],
     "texts": [
       {
-        "text": "No es díficil imaginar cómo se ve una ampolleta o una peineta.",
+        "text": "No es díficil imaginar cómo se ve una ampolleta o una peineta",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1779,7 +1779,7 @@
     ],
     "texts": [
       {
-        "text": "Pero estos objetos no siempre han existido y no siempre han tenido la forma que tienen en la actualidad.",
+        "text": "Pero estos objetos no siempre han existido y no siempre han tenido la forma que tienen en la actualidad",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1808,7 +1808,7 @@
     ],
     "texts": [
       {
-        "text": "Cada objeto tecnológico pasa por una evolución.",
+        "text": "Cada objeto tecnológico pasa por una evolución",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1837,7 +1837,7 @@
     ],
     "texts": [
       {
-        "text": "En cada paso de evolución, el objeto mejora y se hace más moderno.",
+        "text": "En cada paso de evolución, el objeto mejora y se hace más moderno",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1866,7 +1866,7 @@
     ],
     "texts": [
       {
-        "text": "Así, antes de usar la ampolleta, usábamos antorchas.",
+        "text": "Así, antes de usar la ampolleta, usábamos antorchas",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1895,7 +1895,7 @@
     ],
     "texts": [
       {
-        "text": "Estas consistían en pedazos de madera con un extremo envuelto en material inflamable.",
+        "text": "Estas consistían en pedazos de madera con un extremo envuelto en material inflamable",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1924,7 +1924,7 @@
     ],
     "texts": [
       {
-        "text": "Después, en vez de antorchas, empezamos a usar las lámparas de aceite.",
+        "text": "Después, en vez de antorchas, empezamos a usar las lámparas de aceite",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1953,7 +1953,7 @@
     ],
     "texts": [
       {
-        "text": "Recién en siglo 19 se introduce la ampolleta tal como la conocemos.",
+        "text": "Recién en siglo 19 se introduce la ampolleta tal como la conocemos",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -2011,7 +2011,7 @@
     ],
     "texts": [
       {
-        "text": "dando origen a las ampolletas LED más modernas.",
+        "text": "dando origen a las ampolletas LED más modernas",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -2040,7 +2040,7 @@
     ],
     "texts": [
       {
-        "text": "Así, los objetos tecnológicos siguen evolucionando para satisfacer nuestras necesidades.",
+        "text": "Así, los objetos tecnológicos siguen evolucionando para satisfacer nuestras necesidades",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -2069,7 +2069,7 @@
     ],
     "texts": [
       {
-        "text": "Alec te invita a aprender más sobre la evolución de la tecnología.",
+        "text": "Alec te invita a aprender más sobre la evolución de la tecnología",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -2240,7 +2240,7 @@
     ],
     "texts": [
       {
-        "text": "Une las tarjetas. Si el *par formado es correcto* podrás ver un video sobre la evolución del objeto.",
+        "text": "Une las tarjetas. Si el *par formado es correcto* podrás ver un video sobre la evolución del objeto",
         "position": {
           "start": [4, 5.5],
           "end": [16, 16.5]

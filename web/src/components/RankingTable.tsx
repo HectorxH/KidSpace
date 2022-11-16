@@ -31,7 +31,7 @@ const RankingTable = (
   { rowsData, institucion }: ITableParams,
 ) => {
   let hideColumn = false;
-  if (institucion) {
+  if (institucion.institucion) {
     hideColumn = true;
   }
   rowsData.sort((a, b) => b.cantidad - a.cantidad);
