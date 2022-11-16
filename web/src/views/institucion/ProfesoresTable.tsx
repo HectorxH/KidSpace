@@ -21,7 +21,6 @@ interface EditarButtonParams {
 
 const EliminarButton = ({ profesor, eliminarAsignacion }
   :EditarButtonParams) => {
-  console.log(profesor);
   const [openDialog, setOpenDialog] = React.useState(false);
 
   const handleCloseDialog = () => {

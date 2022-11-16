@@ -224,7 +224,7 @@ router.post('/profesor/:id/%curso', async (req, res) => {
     const profesor = await Profesor.findById(id).populate('cursos');
     const nEstudiantes = _.reduce(profesor?.cursos, (prev, curr) => prev + curr.length, 0);
     const logs = await ActividadLog.find({
-      curso: { $in: profesor },
+      curso: { $in: profesor?.cursos },
       tipo: 'clase',
       fecha: { $gte: dateRange[0], $lt: dateRange[1] },
     });
