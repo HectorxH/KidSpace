@@ -136,6 +136,65 @@ const Models: {
     type: 'GLB',
     resources: [],
   },
+  organico: {
+    model: require('./reciclaje/organico/organic.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroAzul: {
+    model: require('./reciclaje/basurero-azul.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroAmarillo: {
+    model: require('./reciclaje/basurero-amarillo.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroCafe: {
+    model: require('./reciclaje/basurero-cafe.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroGris: {
+    model: require('./reciclaje/basurero-gris.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  basureroVerde: {
+    model: require('./reciclaje/basurero-verde.glb'),
+    type: 'GLB',
+    resources: [],
+  },
+  star: {
+    model: require('./astronomia2/estrella/star.obj'),
+    type: 'OBJ',
+    resources: [],
+    materialsOrder: ['Estrella'],
+    materialChoices: [['betelgeuse', 'rigel', 'sirius', 'sun']],
+    materials: {
+      default: {
+        lightingModel: 'PBR',
+        diffuseTexture: require('../../assets/3d/astronomia2/estrella/betelgeuse.png'),
+      },
+      betelgeuse: {
+        lightingModel: 'PBR',
+        diffuseTexture: require('../../assets/3d/astronomia2/estrella/betelgeuse.png'),
+      },
+      rigel: {
+        lightingModel: 'PBR',
+        diffuseTexture: require('../../assets/3d/astronomia2/estrella/rigel.png'),
+      },
+      sirius: {
+        lightingModel: 'PBR',
+        diffuseTexture: require('../../assets/3d/astronomia2/estrella/sirius.png'),
+      },
+      sun: {
+        lightingModel: 'PBR',
+        diffuseTexture: require('../../assets/3d/astronomia2/estrella/sun.png'),
+      },
+    },
+  },
   caja_torta: {
     model: require('./diseño2/caja_torta/caja-torta.obj'),
     resources: [],

@@ -3,12 +3,15 @@ import {StyleSheet, View} from 'react-native';
 import {IDraggable} from '../../../types/activity';
 import {ReactStateSetter} from '../../../types/others';
 import {RSize} from '../../../utils/responsive';
+import ReceivingBasurero from './ReceivingItems/ReceivingBasurero';
+import ReceivingCircleImage from './ReceivingItems/ReceivingCircleImage';
 import ReceivingCodeBlock from './ReceivingItems/ReceivingCodeBlock';
 import ReceivingColorCircle from './ReceivingItems/ReceivingColorCircle';
 import ReceivingImage from './ReceivingItems/ReceivingImage';
 import ReceivingLetter from './ReceivingItems/ReceivingLetter';
 import ReceivingMoonBlock from './ReceivingItems/ReceivingMoonBlock';
 import ReceivingRectangle from './ReceivingItems/ReceivingRectangle';
+import ReceivingRectangleText from './ReceivingItems/ReceivingRectangleText';
 
 interface ReceivingItemProps {
   pageNumber: number;
@@ -22,6 +25,8 @@ interface ReceivingItemProps {
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   setResultColor: ReactStateSetter<string>;
   draggable: IDraggable;
+  joseItem: [string, ReactStateSetter<string>];
+  joseMessage: [string, ReactStateSetter<string>];
 }
 
 const ReceivingItem = (props: ReceivingItemProps) => {
@@ -64,6 +69,38 @@ const ReceivingItem = (props: ReceivingItemProps) => {
       {draggable.receivingItems[itemNumber].type === 'rectangle' && (
         <View style={styles.overlay}>
           <ReceivingRectangle
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
+
+      {/* rectangle  */}
+      {draggable.receivingItems[itemNumber].type === 'circleImage' && (
+        <View style={styles.overlay}>
+          <ReceivingCircleImage
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
+
+      {/* rectangle Text */}
+      {draggable.receivingItems[itemNumber].type === 'rectangleText' && (
+        <View style={styles.overlay}>
+          <ReceivingRectangleText
             pageNumber={pageNumber}
             dragNumber={dragNumber}
             itemNumber={itemNumber}
@@ -120,6 +157,25 @@ const ReceivingItem = (props: ReceivingItemProps) => {
             receivingValues={props.receivingValues}
             pickedDragAnswersIndex={props.pickedDragAnswersIndex}
             isDragItemPicked={props.isDragItemPicked}
+          />
+        </View>
+      )}
+
+      {/* Basurero  */}
+      {draggable.receivingItems[itemNumber].type === 'basurero' && (
+        <View style={styles.overlay}>
+          <ReceivingBasurero
+            pageNumber={pageNumber}
+            dragNumber={dragNumber}
+            itemNumber={itemNumber}
+            draggable={draggable}
+            userDragAnswers={props.userDragAnswers}
+            receivingValues={props.receivingValues}
+            pickedDragAnswers={props.pickedDragAnswers}
+            pickedDragAnswersIndex={props.pickedDragAnswersIndex}
+            isDragItemPicked={props.isDragItemPicked}
+            joseItem={props.joseItem}
+            joseMessage={props.joseMessage}
           />
         </View>
       )}

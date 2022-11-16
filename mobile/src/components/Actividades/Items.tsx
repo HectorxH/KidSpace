@@ -4,17 +4,22 @@ import Images from '../../assets/images/images';
 import Layout from '../Utils/Layout';
 import {IImages} from '../../types/activity';
 import {getImageStyle} from './utils';
+import {RSize} from '../../utils/responsive';
 
 interface ItemsProps {
   images: IImages[] | never[];
   resize?: 'contain' | 'cover' | 'stretch' | 'repeat' | 'center';
   specialTexture: string;
+  borderRadius?: boolean;
 }
 
-const Items = ({images, resize, specialTexture}: ItemsProps) => {
+const Items = ({images, resize, specialTexture, borderRadius}: ItemsProps) => {
   if (typeof images === 'undefined' || images.length === 0) {
     return null;
   }
+  const borderRadiusBoolean =
+    typeof borderRadius !== 'undefined' ? true : false;
+
   return (
     <View style={styles.container}>
       {images.map((item: IImages) => {
@@ -32,19 +37,28 @@ const Items = ({images, resize, specialTexture}: ItemsProps) => {
             <Layout
               position={item.position}
               ObjectView={
-                <Image
-                  // style={styles.image}
-                  style={imageStyles.settings}
-                  // resizeMode="cover"
-                  resizeMode={
-                    typeof resize !== 'undefined' ? resize : 'contain'
-                  }
-                  source={
-                    item.name !== '_diseño2_'
-                      ? Images.items[item.name]
-                      : Images.items[specialTexture]
-                  }
-                />
+                <View
+                  style={[
+                    borderRadiusBoolean === true ? styles.imageBorder : {},
+                  ]}>
+                  <Image
+                    // style={styles.image}
+                    style={imageStyles.settings}
+                    // resizeMode="cover"
+                    resizeMode={
+                      typeof resize !== 'undefined'
+                        ? resize
+                        : typeof item.resize !== 'undefined'
+                        ? item.resize
+                        : 'contain'
+                    }
+                    source={
+                      item.name !== '_diseño2_'
+                        ? Images.items[item.name]
+                        : Images.items[specialTexture]
+                    }
+                  />
+                </View>
               }
             />
           </View>
@@ -71,6 +85,11 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     opacity: 1,
+  },
+  imageBorder: {
+    overflow: 'hidden',
+    borderTopStartRadius: RSize(0.05, 'h'),
+    borderTopEndRadius: RSize(0.05, 'h'),
   },
 });
 

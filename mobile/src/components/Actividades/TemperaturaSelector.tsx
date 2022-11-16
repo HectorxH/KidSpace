@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import MaterialSelectorComponent from './MaterialSelectorComponent';
-import {IMaterialSelectorParams} from '../../types/story';
+import {ITemperaturaSelectorParams} from '../../types/story';
+import TemperaturaSelectorComponent from './TemperaturaSelectorComponent';
 
 interface TemperaturaSelectorProps {
-  materialSelectorParams: IMaterialSelectorParams;
+  temperaturaSelectorParams: ITemperaturaSelectorParams;
 }
 
 const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
@@ -12,16 +12,22 @@ const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
     pageNumber,
     activeModelIndex,
     models3d,
-    materialSelectorToggle,
+    temperaturaSelectorToggle,
     modelMaterial,
     selectedMaterial,
     selectedModelMaterials,
     selectedPageOrder,
-  } = props.materialSelectorParams;
+    temperaturasList,
+    toggleValues,
+    nPlacedItems,
+  } = props.temperaturaSelectorParams;
   if (
     models3d[pageNumber].length === 0 ||
+    nPlacedItems[pageNumber] === 0 ||
     models3d[pageNumber].length < activeModelIndex ||
-    typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined'
+    typeof models3d[pageNumber][activeModelIndex].ARMaterials === 'undefined' ||
+    temperaturaSelectorToggle[0] === 0 ||
+    toggleValues[pageNumber][0] === 1
   ) {
     return null;
   }
@@ -29,14 +35,15 @@ const TemperaturaSelector = (props: TemperaturaSelectorProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.overlay}>
-        <MaterialSelectorComponent
+        <TemperaturaSelectorComponent
           objectNumber={activeModelIndex}
-          materialSelectorToggle={materialSelectorToggle}
+          temperaturaSelectorToggle={temperaturaSelectorToggle}
           pageNumber={pageNumber}
           modelMaterial={modelMaterial}
           selectedMaterial={selectedMaterial}
           selectedModelMaterials={selectedModelMaterials}
           selectedPageOrder={selectedPageOrder}
+          temperaturasList={temperaturasList}
         />
       </View>
     </View>

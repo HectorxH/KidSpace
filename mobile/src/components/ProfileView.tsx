@@ -102,6 +102,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
           <Button
             color="#FF8A00"
             mode="contained"
+            uppercase={false}
             style={{
               marginLeft: RSize(0.03, 'w'),
               marginRight: RSize(0.03, 'w'),
@@ -170,6 +171,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
+    fontFamily: 'Poppins-SemiBold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

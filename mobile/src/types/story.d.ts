@@ -59,6 +59,8 @@ export interface IViroAppParams {
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
   rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
+  armarDesarmarToggle: [number, ReactStateSetter<number>];
+  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
   setActiveModelIndex: ReactStateSetter<number>;
   setSelectedModelMaterials: ReactStateSetter<{
@@ -77,10 +79,19 @@ export interface IInventarioParams {
   positions: [Vec3[][], ReactStateSetter<Vec3[][]>];
   placedItems: [number[][], ReactStateSetter<number[][]>];
   nPlacedItems: [number[], ReactStateSetter<number[]>];
-  setMaterialSelectorToggle: ReactStateSetter<number>;
   hideInventory: boolean[];
   toggleDefaultValue: boolean[];
   toggleValues: number[][];
+
+  modelProps: IModelProps[][];
+  updateMaterial: [boolean, ReactStateSetter<boolean>];
+  setSelectedModelMaterials: ReactStateSetter<{
+    materialOrder: string[];
+    materialChoices: string[][];
+  }>;
+  setMaterialSelectorToggle: ReactStateSetter<number>;
+  setArmarDesarmarToggle: ReactStateSetter<number>;
+  setTemperaturaSelectorToggle: ReactStateSetter<number>;
 }
 
 export interface IMaterialSelectorParams {
@@ -96,10 +107,9 @@ export interface IMaterialSelectorParams {
   models3d: IModels[][];
   selectedPageOrder: [number, ReactStateSetter<number>];
 }
-
-export interface ITemperaturaSelectorParams {
+export interface IArmarDesarmarParams {
   pageNumber: number;
-  materialSelectorToggle: [number, ReactStateSetter<number>];
+  armarDesarmarToggle: [number, ReactStateSetter<number>];
   modelMaterial: [string[][], ReactStateSetter<string[][]>];
   selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
   selectedModelMaterials: {
@@ -109,6 +119,26 @@ export interface ITemperaturaSelectorParams {
   activeModelIndex: number;
   models3d: IModels[][];
   selectedPageOrder: [number, ReactStateSetter<number>];
+  useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
+  toggleValues: number[][];
+  nPlacedItems: number[];
+}
+
+export interface ITemperaturaSelectorParams {
+  pageNumber: number;
+  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
+  modelMaterial: [string[][], ReactStateSetter<string[][]>];
+  selectedMaterial: [string[][][], ReactStateSetter<string[][][]>];
+  selectedModelMaterials: {
+    materialOrder: string[];
+    materialChoices: string[][];
+  };
+  activeModelIndex: number;
+  models3d: IModels[][];
+  selectedPageOrder: [number, ReactStateSetter<number>];
+  temperaturasList: string[][][];
+  toggleValues: number[][];
+  nPlacedItems: number[];
 }
 
 export interface IMarkerTrackerFeedbackParams {
@@ -142,6 +172,8 @@ export interface IStoryComponentParams {
   userAnswersQuiz: [number[][], ReactStateSetter<number[][]>];
   pickedAnswersQuiz: [number[][][], ReactStateSetter<number[][][]>];
   modelMaterial: string[][];
+  joseItem: [string, ReactStateSetter<string>];
+  joseMessage: [string, ReactStateSetter<string>];
 }
 
 export interface IToggleButtonParams {
@@ -200,6 +232,8 @@ export interface IActividadesComponentParams {
   viroAppParams: IViroAppParams;
   inventarioParams: IInventarioParams;
   materialSelectorParams: IMaterialSelectorParams;
+  armarDesarmarParams: IArmarDesarmarParams;
+  temperaturaSelectorParams: ITemperaturaSelectorParams;
   storyComponentParams: IStoryComponentParams;
   toggleButtonParams: IToggleButtonParams;
   actNavigationParams: IActNavigationParams;
