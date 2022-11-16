@@ -6,6 +6,17 @@ dotenv.config();
 
 const router = express.Router();
 
+router.get('/plan', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const representante = await Representante.findOne({ user });
+    res.json({ plan: representante?.plan });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
 router.post('/plan', async (req, res) => {
   try {
     const user = req.user?._id;

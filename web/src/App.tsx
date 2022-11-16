@@ -97,9 +97,7 @@ const App = () => (
             <Route element={<ProtectedRoute loggedout />}>
               <Route path="/" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
-              <Route path="/registro" element={<LoginView />} />
-              <Route path="/login/:planId" element={<LoginView />} />
-              <Route path="/registro/:planId" element={<RegistroView />} />
+              <Route path="/registro" element={<RegistroView />} />
               <Route path="/aprobado/:planId" element={<Aprobado />} />
               <Route path="/rechazado" element={<Rechazado />} />
             </Route>
@@ -129,7 +127,7 @@ const App = () => (
                   <Route path="/pupilo" element={<PupilosView />} />
                   <Route path="/pupilo/:pupiloId/estadisticas" element={<EstadisticasApoderadoView />} />
                 </Route>
-                <Route element={<ProtectedRoute noProfesor noApoderado />}>
+                <Route element={<ProtectedRoute noProfesor noApoderado hasPlan />}>
                   <Route path="/profesores" element={<ProfesoresView />} />
                   <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
                   <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />

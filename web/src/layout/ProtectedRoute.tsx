@@ -10,6 +10,7 @@ interface IProtectedRouteProps {
   noProfesor?: boolean
   noApoderado?: boolean
   noRepresentante?: boolean
+  hasPlan?: boolean
 }
 
 const ProtectedRoute = ({
@@ -18,8 +19,9 @@ const ProtectedRoute = ({
   noProfesor = false,
   noApoderado = false,
   noRepresentante = false,
+  hasPlan = false,
 } : IProtectedRouteProps) => {
-  const { user, navigateToDefault } = useAuth();
+  const { user, plan, navigateToDefault } = useAuth();
   const [lodaing, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -33,6 +35,9 @@ const ProtectedRoute = ({
     || (noApoderado && user?.tipo === 'apoderado')
     || (noRepresentante && user?.tipo === 'representante'))) {
       navigateToDefault();
+    }
+    if (user?.tipo === 'representante' && hasPlan && plan !== 3) {
+      navigate('/TEST');
     }
     setLoading(false);
   }, []);

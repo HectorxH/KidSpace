@@ -16,7 +16,6 @@ import {
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
-import { useAuth } from '../hooks/useAuth';
 
 const RegistroView = () => {
   const params = useParams();
@@ -28,10 +27,6 @@ const RegistroView = () => {
   const [plan, setPlan] = useState(`${planId}`);
   const [correct, setCorrect] = useState(false);
   const [error, setError] = useState(false);
-
-  const { setBuyPlan } = useAuth();
-
-  if (planId) { setBuyPlan(Number(planId)); }
 
   const navigate = useNavigate();
 
@@ -47,11 +42,7 @@ const RegistroView = () => {
       console.log(res);
       setCorrect(true);
       setError(false);
-      if (plan) {
-        setTimeout(() => navigate(`/login/${plan}`), 1500);
-      } else {
-        setTimeout(() => navigate('/login'), 1500);
-      }
+      setTimeout(() => navigate('/login'), 1500);
     } catch (e) {
       setCorrect(false);
       setError(true);
@@ -128,10 +119,7 @@ const RegistroView = () => {
               <Button variant="contained" type="submit">Registrar</Button>
               <Button
                 variant="outlined"
-                onClick={() => {
-                  if (plan) navigate(`/login/${plan}`);
-                  else navigate('/login');
-                }}
+                onClick={() => navigate('/login')}
               >Iniciar sesion
               </Button>
             </Stack>
