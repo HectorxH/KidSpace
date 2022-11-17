@@ -24,6 +24,7 @@ const img = require('../../assets/institucion.png');
 
 const ProfesoresView = () => {
   const params = useParams();
+  const { user } = useAuth();
   const [profesores, setProfesores] = useState<IProfesor[]>();
   const [loading, setLoading] = useState(true);
   const [disabledButton, setDisabledButton] = useState(false);
@@ -67,7 +68,7 @@ const ProfesoresView = () => {
       >
         <Stack direction="column" spacing={2} sx={{ margin: 2, width: 4 / 5 }}>
           <Typography display="block" variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
-            <b>Hola, {representante.user.nombres} {representante.user.apellidos}</b>
+            <b>Hola, {user?.nombres} {user?.apellidos}</b>
           </Typography>
           <Typography display="block" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
             <b>¡Te damos la bienvenida al sistema de estadísticas de Kidspace!</b>
