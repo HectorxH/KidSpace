@@ -27,6 +27,14 @@ import CargaView from '../LoadingView';
 import { IProfesor } from '../../types/profesores';
 import { ICurso } from '../../types/cursos';
 
+const listaActividadesDocentes = [
+  'Materiales',
+  'Diagramas',
+  'Soluciones Tecnológicas',
+  'Reciclaje',
+  'Diseños',
+];
+
 interface ITiempoData {
   [key: string]: number
 }
@@ -72,8 +80,9 @@ const quicesOptions = {
 };
 
 const makeTiempoData = (data: ITiempoData) => {
-  const x = Object.keys(data);
-  const y = Object.values(data);
+  const filteredData = _.pick(data, listaActividadesDocentes);
+  const x = Object.keys(filteredData);
+  const y = Object.values(filteredData);
   if (x.length > 0) {
     return {
       labels: x,
@@ -182,7 +191,6 @@ const EstadisticasProfesorInstitucionView = () => {
       setCountCorrectas(res.data.countCorrectas);
       res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/%curso`, { dateRange });
       setActividadesCurso(res.data.actividadesCurso);
-      console.log(res.data.actividadesCurso);
       res = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/Estadisticas/profesor/${profesorId}/historialDocente`, { dateRange });
       setHistorial(res.data.historial);
     } catch (e) {
