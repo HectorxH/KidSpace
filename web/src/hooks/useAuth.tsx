@@ -7,18 +7,16 @@ import useLocalStorage from './useLocalStorage';
 
 interface IAuthContext {
   user: IUser | null,
-  plan: number | null,
   // eslint-disable-next-line no-unused-vars
-  login: (data: IUser, plan?: number) => void,
+  login: (data: IUser) => void,
   logout: () => void,
   navigateToDefault: () => void,
 }
 
 const AuthContext = createContext<IAuthContext>({
   user: null,
-  plan: null,
   // eslint-disable-next-line no-unused-vars
-  login: (data: IUser, plan?: number) => {},
+  login: (data: IUser) => {},
   logout: () => {},
   navigateToDefault: () => {},
 });
@@ -26,7 +24,6 @@ const AuthContext = createContext<IAuthContext>({
 export const AuthProvider = ({ children }:{children: any}) => {
   const [user, setUser] = useLocalStorage<IUser>('user', null);
   const navigate = useNavigate();
-  const [plan, setPlan] = useLocalStorage<number>('plan', null);
   const userRef = useRef(user);
 
   const navigateToDefault = () => {
@@ -34,18 +31,17 @@ export const AuthProvider = ({ children }:{children: any}) => {
       navigate('/pupilo');
     } else if (userRef.current?.tipo === 'profesor') {
       navigate('/panel');
-    } else if (userRef.current?.tipo === 'representante' && plan !== 3) {
-      navigate('/profesores');
-    } else if (userRef.current?.tipo === 'representante') {
+    } else if (userRef.current?.tipo === 'representante' && userRef.current?.plan === 3) {
       navigate('/paquetes');
+    } else if (userRef.current?.tipo === 'representante') {
+      navigate('/profesores');
     }
   };
 
   // call this function when you want to authenticate the user
-  const login = (data: IUser, selectedPlan?: number) => {
+  const login = (data: IUser) => {
     userRef.current = data;
     setUser(data, navigateToDefault);
-    if (selectedPlan) setPlan(selectedPlan);
   };
 
   // call this function to sign out logged in user
@@ -57,7 +53,6 @@ export const AuthProvider = ({ children }:{children: any}) => {
   const value = useMemo(
     () => ({
       user,
-      plan,
       login,
       logout,
       navigateToDefault,

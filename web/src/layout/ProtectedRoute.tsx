@@ -21,13 +21,12 @@ const ProtectedRoute = ({
   noRepresentante = false,
   hasPlan = false,
 } : IProtectedRouteProps) => {
-  const { user, plan, navigateToDefault } = useAuth();
+  const { user, navigateToDefault } = useAuth();
   const [lodaing, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(plan, hasPlan);
-    if (user?.tipo === 'representante' && hasPlan && plan === 3) {
+    if (user?.tipo === 'representante' && hasPlan && user.plan === 3) {
       navigate('/paquetes');
     }
     if (loggedout && user) {
