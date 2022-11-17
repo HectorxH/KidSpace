@@ -2361,7 +2361,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¿Cuál problema resuelve una cámara fotográfica?",
-      "trackerFeedback": "¡Exacto! Se resuelve el problema de comunicarse a distancia",
+      "trackerFeedback": "¡Exacto! Se resuelve el problema de capturar el momento",
       "imageTrackers": [
         {
           "name": "Camara",
@@ -2640,7 +2640,7 @@
       "start": true,
       "models": [],
       "trackerMessage": "¿Cuál problema resuelve un teléfono?",
-      "trackerFeedback": "¡Exacto! Se resuelve el problema de capturar el momento",
+      "trackerFeedback": "¡Exacto! Se resuelve el problema de comunicarse a distancia",
       "imageTrackers": [
         {
           "name": "Telefono",
