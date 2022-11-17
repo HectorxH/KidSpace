@@ -37,11 +37,14 @@ const ProfesoresView = () => {
   const getData = async () => {
     try {
       const res = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Representante`);
+      const newCantidad = res.data.representante.profesores.length;
       setRepresentante(res.data.representante);
       setProfesores(res.data.representante.profesores);
-      setCantidad(res.data.representante.profesores.length);
-      if (cantidad === 0) {
+      setCantidad(newCantidad);
+      if (Number(paquetes[res.data.representante.plan].limite) - newCantidad <= 0) {
         setDisabledButton(true);
+      } else {
+        setDisabledButton(false);
       }
       setLoading(false);
     } catch (e) {
@@ -53,7 +56,7 @@ const ProfesoresView = () => {
   };
 
   useEffect(() => {
-    if (!profesores) getData();
+    getData();
   }, []);
 
   if (loading) return (<Box />);
