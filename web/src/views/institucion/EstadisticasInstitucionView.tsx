@@ -165,7 +165,8 @@ const EstadisticasInstitucionView = () => {
                     onChange={(e) => changeProfesor(e)}
                     required
                   >
-                    {profesores?.map((p, idx) => (
+                    { (profesores)
+                    && profesores?.map((p, idx) => (
                       <MenuItem key={p._id} value={idx}>{p.user.nombres}</MenuItem>
                     ))}
                   </TextField>
@@ -186,13 +187,13 @@ const EstadisticasInstitucionView = () => {
                     id="select-curso"
                     sx={{ minWidth: '270px' }}
                     label="Curso"
-                    defaultValue=""
                     disabled={isDisabledCurso}
                     onChange={(e) => setCursoIdx(Number(e.target.value))}
                   >
                     <MenuItem key={0} value={-1}>Todos los cursos</MenuItem>
                     {
-                      (profesores !== undefined)
+                      // eslint-disable-next-line max-len
+                      (profesores !== undefined) && (profesores.length !== 0) && (profesorIdx !== undefined)
                       && profesores[profesorIdx].cursos.map((c, idx) => (
                         <MenuItem key={c._id} value={idx}>{c.nombre}</MenuItem>
                       ))
