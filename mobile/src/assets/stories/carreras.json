@@ -11,6 +11,7 @@
       {
         "carrera":"Carrera: Informática",
         "actividad":"informatica1",
+        "nombre": "Informática y algoritmos en nuestra vida",
         "img":"portada_inf1",
         "title":"Historia de Naty",
         "desc":"En esta actividad conocerás a Naty, que se dedica a la informática. Junto con Naty, aprenderás algunos de los conceptos básicos relacionados con los algoritmos en tu vida real y también en la computación. Además, ¡escribirás tu primer programa!",
@@ -20,6 +21,7 @@
       {
         "carrera":"Carrera: Informática",
         "actividad":"informatica2",
+        "nombre": "¿Qué es un computador?",
         "img":"portada_inf2",
         "title":"Historia de Abel",
         "desc":"En esta actividad conocerás a Abel – un técnico que ofrece servicio de ajuste y arreglo de los computadores. Junto con Abel te vas a introducir al mundo de software y hardware, explorando de qué se compone tu computador. Podrás además ayudarle a Abel a rellenar un informe técnico de cambio de ciertas piezas de un computador.",
@@ -40,6 +42,7 @@
       {
         "carrera":"Carrera: Diseño",
         "actividad":"diseño1",
+        "nombre": "Teoría de colores",
         "img":"portada_dis2",
         "title":"Historia de Noah",
         "desc":"En esta actividad conocerás a Noah - un artista que se dedica a pintura. Junto con Noah, aprenderás los conceptos claves en la pintura, como la rueda de color, colores primarios y secundarios, cálidos y fríos.  Además, ¡podrás ayudarle a pintar su nueva obra!",
@@ -49,6 +52,7 @@
       {
         "carrera":"Carrera: Diseño",
         "actividad":"diseño2",
+        "nombre": "Diseño gráfico en nuestro alrededor",
         "img":"portada_dis1",
         "title":"Historia de Layla",
         "desc":"En esta actividad conocerás a Layla - una diseñadora gráfica. Junto con Layla podrás aprender sobra la importancia de los distintos elementos que componen el diseño de todos los objetos que te rodean. Verás algunas reglas de diseño y podrás aplicarlas, diseñando tu propia caja para repostería.",
@@ -69,6 +73,7 @@
       {
         "carrera":"Carrera: Nutrición",
         "actividad":"nutricion1",
+        "nombre": "Interpretando etiquetas de los alimentos",
         "img":"portada_nut1",
         "title":"Historia de Sofia",
         "desc":"En esta actividad conocerás a Sofía - una nutricionista. Junto con ella, aprenderás a leer y analizar las etiquetas de distintos alimentos que sueles consumir a diario. Además, adentrarás en el mundo de nutrición, aprendiendo cómo en nutrición se evalúa el estado de tu salud, usando tan solo la altura y el peso.",
@@ -78,6 +83,7 @@
       {
         "carrera":"Carrera: Nutrición",
         "actividad":"nutricion2",
+        "nombre": "Analizando nuestra dieta",
         "img":"portada_nut2",
         "title":"Historia de Carlos",
         "desc":"En esta actividad conocerás a Carlos - un nutriólogo, que se encarga a ayudar a sus pacientes a controlar sus dietas para mejorar el estado de su salud. Junto con Carlos, aprenderás sobre la pirámide alimenticia. Además, verás como detectar la azúcar invisible en los alimentos que consumes, para evitar problemas de salud y mantener el balance en tu nutrición.",
@@ -98,18 +104,20 @@
       {
         "carrera":"Carrera: Astronomía",
         "actividad":"astronomia1",
+        "nombre": "Tierra, Luna y Sol",
         "img":"portada_astr1",
         "title":"Historia de André",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "desc":"En esta actividad conocerás a André - un astrónomo, que se dedica al estudio del universo y movimiento de los cuerpos celestes. Junto con André, aprenderás sobre la Luna y el Sol, y los distintos fenómenos asociados con estos.",
         "coins":200,
         "estado":"estrellagris"
       },
       {
         "carrera":"Carrera: Astronomía",
         "actividad":"astronomia2",
+        "nombre": "¿Qué vemos en el cielo nocturno?",
         "img":"portada_astr2",
         "title":"Historia de Laura",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "desc":"En esta actividad conocerás a Laura - una astrofísica, cuya responsabilidad es el estudio y la observación de los planetas y las estrellas, utilizando equipos especiales. Junto con Laura, aprenderás sobre el sistema solar y los planetas que lo componen. Además, aprenderás sobre el efecto de la temperatura sobre el color de planetas y estrellas.",
         "coins":350,
         "estado":"estrellagris"
       }

@@ -1,167 +1,199 @@
 [
   {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "star",
+          "scale": [0.6, 0.6, 0.6],
+          "rotation": [0, 180, 0],
+          "interactable": ["temperatura"],
+          "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
+          "ARMaterials": {
+            "materialOrder": ["Estrella"],
+            "materialChoices": [
+              ["betelgeuse", "sun", "sirius", "rigel"]
+            ]
+          }
+        }
+      ]
+    },
     "background": "",
-    "textBoxes": [
+    "toggleButton": [
       {
-        "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": {      
-          "backgroundColor": "#EE93C6",
-          "borderWidth": 0,
-          "borderRadius": 0,
-          "elevation": 20
-        }
-      }
-    ],
-    "texts": [
-      {
-        "text": " Quiz Final ",
-        "position": {
-          "start": [0, 0],
-          "end": [20, 3]
-        },
-        "settings": { 
-          "fontSize": 20,
-          "color": "white",
-          "elevation": 21
-        }
-      },
-      {
-        "text": "1. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 4],
-          "end": [19, 5.5]
-        },
         "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "El software Excel permite crear tablas y ______",
-        "position": {
-          "start": [1, 5.5],
-          "end": [19, 7]
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Preguntas",
+          "buttonTextNormal": " Volver"
         },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "2. Seleccione la opción correcta",
-        "position": {
-          "start": [1, 10],
-          "end": [19, 11.5]
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
         },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 19,
-          "fontWeight": "bold",
-          "fontFamily": "Poppins-Bold",
-          "color": "#063D69"
-        }
-      },
-      {
-        "text": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-        "position": {
-          "start": [1, 11.5],
-          "end": [19, 13]
-        },
-        "settings": {
-          "textAlign": "left",
-          "fontSize": 17,
-          "fontWeight": "normal",
-          "fontFamily": "Poppins-Regular",
-          "color": "#063D69"
-        }
-      }
-    ],
-    "quiz": [
-      {
-        "pregunta": "El software Excel permite crear tablas y ______",
-        "answers": [
-          {
-            "text": "Imágenes",
-            "position": {
-              "start": [2, 7.3],
-              "end": [6, 9.8]
-            }
-          },
-          {
-            "text": "Gráficos",
-            "position": {
-              "start": [8, 7.3],
-              "end": [12, 9.8]
-            }
-          },
-          {
-            "text": "Celdas",
-            "position": {
-              "start": [14, 7.3],
-              "end": [18, 9.8]
-            }
-          }
-        ]
-      },
-      {
-          "pregunta": "Para elaborar un gráfico, debemos usar valores guardados en ______",
-          "answers": [
-          {
-            "text": "Una lista",
-            "position": {
-              "start": [2, 13.3],
-              "end": [6, 15.8]
-            }
-          },
-          {
-            "text": "Una celda",
-            "position": {
-              "start": [8, 13.3],
-              "end": [12, 15.8]
-            }
-          },
-          {
-            "text": "Una tabla",
-            "position": {
-              "start": [14, 13.3],
-              "end": [18, 15.8]
-            }
-          }
-        ]
+        "value": false
       }
     ],
     "jumpButton": [
       {
         "settings": {
-          "buttonColorAlt": "#D9D9D9",
+          "buttonColorAlt": "#BBBBBB",
           "buttonColorNormal": "#A1C96A",
-          "buttonIconAlt": "",
-          "buttonIconNormal": "",
-          "buttonTextAlt": "Terminar",
-          "buttonTextNormal": "Terminar"
-        },
-        "style": {
-
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
         },
         "position" : {
-          "start": [7, 16.5],
-          "end": [13, 19.5]
+          "start": [13, 1],
+          "end": [19, 3.5]
         },
         "target": -1,
         "require": [0],
         "visible": false
       }
+    ],
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderWidth": 0,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Ordena las estrellas, de menor a mayor temperatura!",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [4.5, 6.5],
+          "end": [5.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [9.5, 6.5],
+          "end": [10.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      },
+      {
+        "text": "<",
+        "position": {
+          "start": [14.5, 6.5],
+          "end": [15.5, 12.5]
+        },
+        "settings": { 
+          "fontSize": 18,
+          "elevation": 11
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["Betelgeuse", "Sol", "Sirius", "Rigel"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "Rigel",
+            "value": "Rigel",
+            "position": {
+              "start": [3.25, 15.5],
+              "end": [6.25, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Betelgeuse",
+            "value": "Betelgeuse",
+            "position": {
+              "start": [6.75, 15.5],
+              "end": [9.75, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Sol",
+            "value": "Sol",
+            "position": {
+              "start": [10.25, 15.5],
+              "end": [13.25, 19.5]
+            }
+          },
+          {
+            "type": "image",
+            "name": "Sirius",
+            "value": "Sirius",
+            "position": {
+              "start": [13.75, 15.5],
+              "end": [16.75, 19.5]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [0.5, 6.5],
+              "end": [4.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [5.5, 6.5],
+              "end": [9.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [10.5, 6.5],
+              "end": [14.5, 12.5]
+            }
+          },
+          {
+            "type": "circleImage",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [15.5, 6.5],
+              "end": [19.5, 12.5]
+            }
+          }
+        ]
+      }
     ]
   }
 ]
-
-

@@ -170,20 +170,22 @@ const EstadisticasApoderadoView = () => {
   if (!pupilo || !steamStats || !timeline
     || !actividadesI || !actividadesC || !historial) { return <NotFoundView />; }
   return (
-    <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-      <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
+    <Stack>
+      <Box sx={{
+        backgroundColor: '#F2C144', px: 4, py: 2, pb: 2,
+      }}
+      >
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
           <b>Estadísticas por pupilo</b>
         </Typography>
       </Box>
-      <Stack
-        direction={{ xs: 'column', md: 'row' }}
+      <Grid
+        container
         spacing={2}
-        sx={{
-          height: { sx: '100%', md: '50vh' }, width: '100%', px: 5, justifyContent: 'space-between',
-        }}
+        justifyContent="center"
+        sx={{ minHeight: 300, px: 5, marginTop: 3 }}
       >
-        <Grid item sx={{ height: '100%', width: 2 / 6 }}>
+        <Grid item xs={12} sm={12} md={5}>
           <Card sx={{
             borderRadius: 5, px: 3, pt: 3, alignItems: 'center', height: '100%',
           }}
@@ -191,7 +193,7 @@ const EstadisticasApoderadoView = () => {
             <CardMedia
               component="img"
               sx={{
-                width: '60%', borderRadius: 100, maxWidth: '20vh',
+                borderRadius: 100, maxWidth: '20vh',
               }}
               image={imgStudent}
             />
@@ -208,13 +210,13 @@ const EstadisticasApoderadoView = () => {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item sx={{ height: '100%', width: 4 / 6 }}>
+        <Grid item xs={12} sm={12} md={7}>
           <Card sx={{ borderRadius: 5, p: 3, height: '100%' }}>
             <Doughnut data={makeDataDona(steamStats)} options={options} />
           </Card>
         </Grid>
-      </Stack>
-      <Box sx={{ px: 5 }}>
+      </Grid>
+      <Box sx={{ px: 5, marginTop: 3, marginBottom: 3 }}>
         <Card sx={{
           padding: 4, width: 1, borderRadius: 5, px: 5,
         }}
@@ -257,55 +259,67 @@ const EstadisticasApoderadoView = () => {
           STEAM es un enfoque educativo, que incluye ciencia, tecnología, ingeniería y matemáticas.
           Cada actividad se enfoca en uno o más áreas STEAM.
         </Typography>
-        <Stack direction="column" spacing={2}>
-          {(actividades.map((row) => {
-            const completada = actividadesC[row.name] > 0;
-            return (
-              <Card key={row.id} sx={{ borderRadius: 5, p: 3 }}>
-                <Stack direction="row" spacing={2} sx={{ alignContent: 'center', width: '100%' }}>
-                  <CardMedia
-                    component="img"
-                    sx={{
-                      height: 100, width: 100, borderRadius: 100,
+      </Stack>
+      <Stack direction="column" spacing={2} sx={{ px: 5 }}>
+        {(actividades.map((row) => {
+          const completada = actividadesC[row.name] > 0;
+          return (
+            <Card key={row.id} sx={{ borderRadius: 5, p: 3 }}>
+              <Grid
+                container
+                spacing={0}
+                justifyContent="center"
+              >
+                <Grid item xs={12} sm={8} md={6}>
+                  <Stack direction="row" spacing={2} sx={{ alignContent: 'center', width: '100%' }}>
+                    <CardMedia
+                      component="img"
+                      sx={{
+                        height: 100, width: 100, borderRadius: 100,
+                      }}
+                      image={row.img}
+                    />
+                    <CardContent sx={{
+                      display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignSelf: 'center',
                     }}
-                    image={row.img}
-                  />
-                  <CardContent sx={{
-                    display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center', alignSelf: 'center',
-                  }}
-                  >
-                    <Typography>{row.title}</Typography>
-                    <Typography sx={{ color: completada ? '#A1C96A' : '#EA6A6A' }}>{completada ? 'Completada' : 'Sin completar'}</Typography>
-                  </CardContent>
+                    >
+                      <Typography>{row.title}</Typography>
+                      <Typography sx={{ color: completada ? '#A1C96A' : '#EA6A6A' }}>{completada ? 'Completada' : 'Sin completar'}</Typography>
+                    </CardContent>
+                  </Stack>
+                </Grid>
+                <Grid item xs={12} sm={8} md={6}>
                   <Stack
                     direction="row"
-                    style={{ marginLeft: 'auto' }}
+                    spacing={1}
                     sx={{ justifyContent: 'center', alignItems: 'center' }}
                   >
                     {(letras.map((letra, id) => (
                       <Typography
                         key={`${pupilo._id}-${letra}`}
                         sx={{
-                          color: row.steam[id] !== 0 ? colores[id] : '#B5B5B5', fontSize: 50, margin: 0.5,
+                          color: row.steam[id] !== 0 ? colores[id] : '#B5B5B5', fontSize: 50,
                         }}
                       ><b>{letra}</b>
                       </Typography>
                     )))}
                   </Stack>
-                </Stack>
-              </Card>
-            );
-          })
+                </Grid>
+              </Grid>
+            </Card>
+          );
+        })
           )}
-        </Stack>
         <Typography variant="h4">
           Actividades Individuales
         </Typography>
-        <Grid container>
+      </Stack>
+      <Stack sx={{ marginTop: 5, marginBottom: 5 }}>
+        <Grid container spacing={1} sx={{ px: 5 }}>
           {(actividadesIndividuales.map((act) => {
             const completada = actividadesI[act.title] > 0;
             return (
-              <Grid key={`${pupilo._id}-${act.id}`} item xs={4} p={1}>
+              <Grid key={`${pupilo._id}-${act.id}`} item xs={12} sm={9} md={4}>
                 <Card key={act.id} sx={{ borderRadius: 5, height: '100%' }}>
                   <CardMedia
                     component="img"
@@ -323,6 +337,7 @@ const EstadisticasApoderadoView = () => {
                     <Divider style={{ width: '100%', alignSelf: 'center', marginTop: 15 }} />
                     <Stack
                       direction="row"
+                      spacing={1}
                       sx={{
                         width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
                       }}
@@ -331,7 +346,7 @@ const EstadisticasApoderadoView = () => {
                         <Typography
                           key={`${pupilo._id}-${letra}`}
                           sx={{
-                            color: act.steam[i] !== 0 ? colores[i] : '#B5B5B5', fontSize: 50, margin: 0.5,
+                            color: act.steam[i] !== 0 ? colores[i] : '#B5B5B5', fontSize: 50,
                           }}
                         ><b>{letra}</b>
                         </Typography>
@@ -343,10 +358,19 @@ const EstadisticasApoderadoView = () => {
             );
           }))}
         </Grid>
-        <Typography variant="h4">
-          Historial de actividades
-        </Typography>
-        <HistorialTable rows={historial} />
+      </Stack>
+      <Typography variant="h4" sx={{ px: 5 }}>
+        Historial de actividades
+      </Typography>
+      <Stack direction="row" sx={{ justifyContent: 'center' }}>
+        <Stack sx={{
+          px: 5, marginTop: 5, marginBottom: 5, maxWidth: 1000, width: 1,
+        }}
+        >
+          <Stack direction="row" sx={{ justifyContent: 'center' }}>
+            <HistorialTable rows={historial} />
+          </Stack>
+        </Stack>
       </Stack>
     </Stack>
   );

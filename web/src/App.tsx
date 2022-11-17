@@ -15,6 +15,7 @@ import { esES as coreesES } from '@mui/material/locale';
 import axios from 'axios';
 import Layout from './layout/Layout';
 import NotFoundView from './views/NotFoundView';
+import LandingView from './views/LandingView';
 import ActividadesPorUnidadesView from './views/ActividadesPorUnidadesView';
 import UnidadView from './views/UnidadView';
 import DescripcionActividadView from './views/DescipcionActividadView';
@@ -34,8 +35,16 @@ import ActividadIndividualView from './views/ActividadIndividualView';
 import ActividadDocenteView from './views/ActividadDocenteView';
 import EditarEstudianteView from './views/EditarEstudianteView';
 import ProtectedRoute from './layout/ProtectedRoute';
+
+import ProfesoresView from './views/institucion/ProfesoresView';
+import EstadisticasInstitucionView from './views/institucion/EstadisticasInstitucionView';
+import AgregarProfesorView from './views/institucion/AgregarProfesorView';
+import EstadisticasProfesorInstitucionView from './views/institucion/EstadisticasProfesorInstitucionView';
+
 import { AuthProvider } from './hooks/useAuth';
-import LoadingView from './views/LoadingView';
+import Aprobado from './views/Pagos/AprobadoView';
+import Rechazado from './views/Pagos/RechazadoView';
+import PaquetesView from './views/Pagos/PaquetesView';
 import RedirectHomeRoute from './layout/RedirectHomeRoute';
 
 axios.defaults.withCredentials = true;
@@ -87,14 +96,19 @@ const App = () => (
       <ThemeProvider theme={theme}>
         <AuthProvider>
           <Routes>
-            <Route path="/loading" element={<LoadingView />} />
             <Route element={<ProtectedRoute loggedout />}>
+              <Route path="/" element={<LandingView />} />
               <Route path="/login" element={<LoginView />} />
               <Route path="/registro" element={<RegistroView />} />
             </Route>
+            <Route element={<ProtectedRoute loggedin noProfesor noApoderado />}>
+              <Route path="/paquetes" element={<PaquetesView />} />
+              <Route path="/aprobado/:planId" element={<Aprobado />} />
+              <Route path="/rechazado" element={<Rechazado />} />
+            </Route>
             <Route element={<ProtectedRoute loggedin />}>
               <Route element={<Layout />}>
-                <Route element={<ProtectedRoute noApoderado />}>
+                <Route element={<ProtectedRoute noApoderado noRepresentante />}>
                   <Route path="/panel" element={<PanelControlView />} />
                   <Route path="/cursos" element={<CursosView />} />
                   <Route path="/cursos/:cursoId/:estudianteId" element={<EditarEstudianteView />} />
@@ -102,7 +116,7 @@ const App = () => (
                   <Route path="/cursos/:cursoId" element={<ParticipantesView />} />
                   <Route path="/cursos/:cursoId/editar" element={<EditarCursoView />} />
                   <Route path="/cursos/:cursoId/qr" element={<QRView />} />
-                  <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView />} />
+                  <Route path="/cursos/:cursoId/estadisticas" element={<EstadisticasProfesorView institucion={false} />} />
                   <Route path="/cursos/:cursoId/estadisticas/actividadDocente/:actividad" element={<ActividadDocenteView />} />
                   <Route path="/cursos/:cursoId/estadisticas/actividadIndividual/:actividad" element={<ActividadIndividualView />} />
                   <Route path="/cursos/:cursoId/estadisticas/estadisticasEstudiante/:pupiloId" element={<EstadisticasApoderadoView />} />
@@ -111,9 +125,17 @@ const App = () => (
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad" element={<DescripcionActividadView />} />
                   <Route path="/actividades/unidad/:nunidad/actividad/:nactividad/asignar" element={<AsignarView />} />
                 </Route>
-                <Route element={<ProtectedRoute noProfesor />}>
+                <Route element={<ProtectedRoute noProfesor noRepresentante />}>
                   <Route path="/pupilo" element={<PupilosView />} />
                   <Route path="/pupilo/:pupiloId/estadisticas" element={<EstadisticasApoderadoView />} />
+                </Route>
+                <Route element={<ProtectedRoute noProfesor noApoderado hasPlan />}>
+                  <Route path="/profesores" element={<ProfesoresView />} />
+                  <Route path="/profesores/agregar" element={<AgregarProfesorView />} />
+                  <Route path="/profesores/:profesorId/editar" element={<AgregarProfesorView />} />
+                  <Route path="/estadisticas" element={<EstadisticasInstitucionView />} />
+                  <Route path="/estadisticas/:profesorId/:startDate/:endDate" element={<EstadisticasProfesorInstitucionView />} />
+                  <Route path="/estadisticas/:profesorId/:cursoId/:startDate/:endDate" element={<EstadisticasProfesorView institucion />} />
                 </Route>
                 <Route path="/" element={<RedirectHomeRoute />} />
                 <Route path="/*" element={<NotFoundView />} />

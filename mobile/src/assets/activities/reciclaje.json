@@ -1,0 +1,3483 @@
+[
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "José se dedica a la *ingeniería ambiental* porque le preocupa la naturaleza",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y esta ha ido empeorando en los últimos años",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseQuestion",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Nosotros utilizamos muchos objetos y recursos diariamente,",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "generando lo que denominamos como basura",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_1",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos desechos normalmente se dejan en lugares especiales,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "como basureros o vertederos, pero no todos respetan estas reglas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_2",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Es por esto que se genera contaminación, afectando nuestro planeta",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_3",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Si dejas una botella de plástico en la naturaleza, esta permanecerá ahí durante siglos",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_4",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Mientras que una manzana caída desaparecerá después de unas semanas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_5",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Por qué ocurre esto?",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseQuestion",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El proceso en que un objeto cualquiera se descompone se conoce como degradación",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El tiempo de degradación depende del tipo de deshecho",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_6",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los residuos pueden ser orgánicos e inorgánicos",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los desechos que menos tardan en descomponerse son los orgánicos",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Estos corresponden a objetos de origen animal o vegetal",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_7",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, la piel del plátano tarda solo 10 días en descomponerse",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_8",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los desechos inorgánicos son aquellos creados por humanos, como plástico y vidrio",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_9",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las botellas de plástico tardan de 100 a 1.000 años en descomponerse",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_10",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por esto, no debemos arrojar residuos en el lugar en el que nos encontremos,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseQuestion",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "ya que pueden tardar mucho en degradarse y descomponerse",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseQuestion",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "José te invita a estudiar más sobre los residuos",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Usando un poco de magia, José dejó 3 portales que te llevarán a algunas comunas de Santiago",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podrás encontrarlos en tu inventario. Coloca un portal en el espacio y camina hacia este",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El portal funciona como una puerta. Podrás salir del portal y entrar a este libremente",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una vez dentro, observa tu alrededor y la contaminación, generada por la basura",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "José necesita aprobar algunos reportes que recibió ultimamente, ¡y necesita tu ayuda!",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [2, 5],
+          "end": [16, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Observa con cuidado el entorno, y revisa los reportes disponibles en *la esquina superior izquierda*",
+        "position": {
+          "start": [3, 5.5],
+          "end": [15, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Reportes"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+
+  {
+    "AR": {
+      "start": false,
+      "models": [
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "maipu",
+          "image360": "maipu",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "renca",
+          "image360": "renca",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        },
+        {
+          "model": "portal_window_frame",
+          "type": "portal",
+          "icon": "sanbernardo",
+          "image360": "sanbernardo",
+          "scale": [0.5, 0.5, 0.5],
+          "rotation": [0, 0, 0]
+        }
+      ]
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [12, 19.5]
+        },
+        "settings": {
+          "borderWidth": 1,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Verdadero o Falso? Utiliza el sello correcto para aprobar o rechazar el reporte",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 18
+        }
+      },
+      {
+        "text": "Valentín Moyano",
+        "position": {
+          "start": [2.5, 7],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "@moyanov",
+        "position": {
+          "start": [2.5, 8.5],
+          "end": [11.5, 10]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Hoy pasé por la Renca y estaba muy sucio. ¿No saben que no se puede botar botellas y bolsas de plástico? ¡Demoran siglos en desaparecer!",
+        "position": {
+          "start": [1, 10.5],
+          "end": [11.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Estado de aprobación",
+        "position": {
+          "start": [6.5, 15],
+          "end": [11.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [5.7, 15],
+          "end": [6.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["stickerVerdadero"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "stampVerdadero",
+            "persistent": true,
+            "value": "stickerVerdadero",
+            "position": {
+              "start": [12.5, 7],
+              "end": [19.5, 12.75]
+            }
+          },
+          {
+            "type": "image",
+            "name": "stampFalso",
+            "persistent": true,
+            "value": "stickerFalso",
+            "position": {
+              "start": [12.5, 13.25],
+              "end": [19.5, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7, 16.5],
+              "end": [11, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "emoji_1",
+        "position": {
+          "start": [0.75, 6.75],
+          "end": [2.25, 10.25]  
+        },
+        "settings": {
+          "borderRadius": 20
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Reportes",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 28,
+        "require": [27],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": []
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [12, 19.5]
+        },
+        "settings": {
+          "borderWidth": 1,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Verdadero o Falso? Utiliza el sello correcto para aprobar o rechazar el reporte",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 18
+        }
+      },
+      {
+        "text": "Cristina Lobos",
+        "position": {
+          "start": [2.5, 7],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "@criswoof",
+        "position": {
+          "start": [2.5, 8.5],
+          "end": [11.5, 10]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Vivo en Maipu, y la verdad es que la gente bota la basura donde sea. ¡Se deben usar los basureros especiales! No es tan complicado :(",
+        "position": {
+          "start": [1, 10.5],
+          "end": [11.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Estado de aprobación",
+        "position": {
+          "start": [6.5, 15],
+          "end": [11.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [5.7, 15],
+          "end": [6.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["stickerVerdadero"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "stampVerdadero",
+            "persistent": true,
+            "value": "stickerVerdadero",
+            "position": {
+              "start": [12.5, 7],
+              "end": [19.5, 12.75]
+            }
+          },
+          {
+            "type": "image",
+            "name": "stampFalso",
+            "persistent": true,
+            "value": "stickerFalso",
+            "position": {
+              "start": [12.5, 13.25],
+              "end": [19.5, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7, 16.5],
+              "end": [11, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "emoji_3",
+        "position": {
+          "start": [0.75, 6.75],
+          "end": [2.25, 10.25]  
+        },
+        "settings": {
+          "borderRadius": 20
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Reportes",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": true
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "target": 27,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 29,
+        "require": [28],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": false,
+      "models": []
+    },
+
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]
+        },
+        "settings": {
+          "borderRadius": 0,
+          "borderWidth": 0
+        }
+      },
+      {
+        "position": {
+          "start": [0.5, 6.5],
+          "end": [12, 19.5]
+        },
+        "settings": {
+          "borderWidth": 1,
+          "borderRadius": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Verdadero o Falso? Utiliza el sello correcto para aprobar o rechazar el reporte",
+        "position": {
+          "start": [0.5, 4.5],
+          "end": [19.5, 6.5]
+        },
+        "settings": {
+          "fontSize": 18
+        }
+      },
+      {
+        "text": "Pablo Schmidt",
+        "position": {
+          "start": [2.5, 7],
+          "end": [11.5, 8.5]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "@pablocuchufli",
+        "position": {
+          "start": [2.5, 8.5],
+          "end": [11.5, 10]
+        },
+        "settings": {
+          "fontSize": 13,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Mi amigo el otro día me retó por botar una botella en la calle. ¿Qué tiene? Si total se degradan en unos días, no entiendo",
+        "position": {
+          "start": [1, 10.5],
+          "end": [11.5, 14.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "textAlign": "left",
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "Estado de aprobación",
+        "position": {
+          "start": [6.5, 15],
+          "end": [11.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 15,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      },
+      {
+        "text": "{{iconDragCheck:0}}",
+        "position": {
+          "start": [5.7, 15],
+          "end": [6.5, 16.5]
+        },
+        "settings": {
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular"
+        }
+      }
+    ],
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["stickerFalso"],
+        "draggableItems": [
+          {
+            "type": "image",
+            "name": "stampVerdadero",
+            "persistent": true,
+            "value": "stickerVerdadero",
+            "position": {
+              "start": [12.5, 7],
+              "end": [19.5, 12.75]
+            }
+          },
+          {
+            "type": "image",
+            "name": "stampFalso",
+            "persistent": true,
+            "value": "stickerFalso",
+            "position": {
+              "start": [12.5, 13.25],
+              "end": [19.5, 19]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "image",
+            "name": "",
+            "value": "",
+            "position": {
+              "start": [7, 16.5],
+              "end": [11, 19]
+            }
+          }
+        ]
+      }
+    ],
+    "bubbles": [
+      {
+        "name": "emoji_2",
+        "position": {
+          "start": [0.75, 6.75],
+          "end": [2.25, 10.25]  
+        },
+        "settings": {
+          "borderRadius": 20
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Reportes",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [0, 0],
+          "end": [0, 0]
+        },
+        "value": true
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end": [7, 3.5]
+        },
+        "target": 28,
+        "require": [],
+        "visible": false
+      },
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "arrow-right",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 30,
+        "require": [29],
+        "visible": false
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "José les recomienda a todos sus amigos practicar el reciclaje",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "El reciclaje es un hábito que ayuda al medioambiente",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Corresponde a recuperar aquellos productos que normalmente terminan en la basura",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_11",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Todos y todas debemos practicar la regla de las 3 “R” - reducir, reutilizar y reciclar",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Reducir significa dejar de consumir más productos de lo que necesitamos",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_12",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuál de las opciones crees que corresponde a reducir?",
+        "position": {
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Comprar a granel"],
+        "answers": [
+          {
+            "text": "Comprar en supermercado",
+            "position": {
+              "start": [8.5, 10.5],
+              "end": [18.5, 13]
+            }
+          },
+          {
+            "text": "Comprar a granel",
+            "position": {
+              "start": [8.5, 13.5],
+              "end": [18.5, 16]
+            }
+          },
+          {
+            "text": "Comprar por Internet",
+            "position": {
+              "start": [8.5, 16.5],
+              "end": [18.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Así es! Comprando a granel evitamos usar los empaques de plástico",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_13",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Reutilizar residuos significa encontrar un nuevo uso a los objetos",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Por ejemplo, podemos usar botellas plásticas como maceteros para las plantas",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_14",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Otra forma de reutilización son los envases retornables",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_15",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Las industrias tienen la responsabilidad de recuperar los envases generados",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_15",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Finalmente, reciclar significa usar el residuo como nueva materia prima",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 2],
+          "end": [19, 14]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¿Cuál opción corresponde a reciclaje?",
+        "position": {
+          "start": [8.5, 2.5],
+          "end": [18.5, 10]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "alternativas": [
+      {
+        "rightAnswer": ["Hacer nuevas botellas de botellas usadas"],
+        "answers": [
+          {
+            "text": "No usar botellas",
+            "position": {
+              "start": [8.5, 10.5],
+              "end": [18.5, 13]
+            }
+          },
+          {
+            "text": "Hacer maceteros de botellas usadas",
+            "position": {
+              "start": [8.5, 13.5],
+              "end": [18.5, 16]
+            }
+          },
+          {
+            "text": "Hacer nuevas botellas de botellas usadas",
+            "position": {
+              "start": [8.5, 16.5],
+              "end": [18.5, 19]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Muy bien! De las botellas viejas de vidrio podemos hacer nuevos envases,",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_16",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "fundiendo el vidrio original",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_16",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podemos reciclar nuestros residuos en los denominados puntos limpios",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_17",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En los puntos limpios podrás encontrar basureros de diversos colores",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_17",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Cada color indica el tipo de residuos que debe colocarse en este basurero",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_17",
+        "position": {
+          "start": [12.5, 0.5],
+          "end": [19.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En Chile, los basureros azules se usan para reciclar papel y cartón",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_18",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Los basureros grises se usan para reciclar latas",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_19",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En los basureros verdes se reciben las botellas de vidrio",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "reciclaje_20",
+        "position": {
+          "start": [0.5, 0.5],
+          "end": [7.5, 19.5]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "En realidad, hay un espectro de colores aprobado por el *Ministerio del Medioambiente*",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseSmile",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [1, 4],
+          "end": [12, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡José te invita a aprender sobre todos ellos en la siguiente actividad!",
+        "position": {
+          "start": [1.5, 4.5],
+          "end": [11.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [12.5, 3],
+          "end": [19.5, 20]  
+        }
+      }
+    ]
+  },
+
+
+
+
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Ahora usando *las tarjetas* podrás aprender sobre distintos colores de basureros que se usan en Chile",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Ejercicio"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Y qué deshechos se colocan en cada uno. Tienes a tu disposición tarjetas de distintos colores",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Ejercicio"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Escanea cada tarjeta con tu celular, para ver qué tipo de desechos debes colocar en el basurero de la tarjeta",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Ejercicio"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Una vez que revises todas las tarjetas, tienes la misión de ayudar a José a reciclar algunos residuos",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Ejercicio"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Podrás acceder al ejercicio, presionando el botón *en la esquina superior izquierda*",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconNormal": "search",
+          "buttonIconAlt": "cube",
+          "buttonTextAlt": " Volver",
+          "buttonTextNormal": " Ejercicio"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+  
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Encuentra la tarjeta de *color azul* ¿Qué tipos de desechos puedes dejar en este basurero?",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconNormal": "arrow-right",
+          "buttonIconAlt": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+  
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¡Escanea la tarjeta de color azul!",
+      "trackerFeedback": "¡Exacto! ese basurero es para papeles",
+      "imageTrackers": [
+        {
+          "name": "Basurero Azul",
+          "target": "basureroAzul",
+          "display": "basureroAzul",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end":  [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "target": 60,
+        "require": [],
+        "visible": true
+      }
+    ],
+    "background": ""
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Encuentra la tarjeta de *color café* ¿Qué tipos de desechos puedes dejar en este basurero?",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconNormal": "arrow-right",
+          "buttonIconAlt": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¡Escanea la tarjeta de color café!",
+      "trackerFeedback": "¡Exacto! ese basurero es para deshechos orgánicos",
+      "imageTrackers": [
+        {
+          "name": "Basurero Café",
+          "target": "basureroCafe",
+          "display": "basureroCafe",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end":  [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "target": 62,
+        "require": [],
+        "visible": true
+      }
+    ],
+    "background": ""
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Encuentra la tarjeta de *color amarillo* ¿Qué tipos de desechos puedes dejar en este basurero?",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconNormal": "arrow-right",
+          "buttonIconAlt": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¡Escanea la tarjeta de color amarillo!",
+      "trackerFeedback": "¡Exacto! ese basurero es para plásticos",
+      "imageTrackers": [
+        {
+          "name": "Basurero Amarillo",
+          "target": "basureroAmarillo",
+          "display": "basureroAmarillo",
+          "displayType": "3dobject",
+          "scale": [0.2, 0.2, 0.2],
+          "rotation": [90, 180, 90]
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end":  [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "target": 64,
+        "require": [],
+        "visible": true
+      }
+    ],
+    "background": ""
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Encuentra la tarjeta de *color verde* ¿Qué tipos de desechos puedes dejar en este basurero?",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconNormal": "arrow-right",
+          "buttonIconAlt": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¡Escanea la tarjeta de color verde!",
+      "trackerFeedback": "¡Exacto! ese basurero es para vidrios",
+      "imageTrackers": [
+        {
+          "name": "Basurero Verde",
+          "target": "basureroVerde",
+          "display": "basureroVerde",
+          "displayType": "3dobject",
+          "scale": [0.25, 0.25, 0.25],
+          "rotation": [90, 180, 90]
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "",
+          "buttonTextNormal": ""
+        },
+        "position" : {
+          "start": [0, 0],
+          "end":  [0, 0]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "target": 66,
+        "require": [],
+        "visible": true
+      }
+    ],
+    "background": ""
+  },
+  {
+    "AR": {
+      "start": true,
+      "models": []
+    },
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [3, 5],
+          "end": [17, 17]
+        },
+        "settings": {
+          "borderWidth": 0
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Encuentra la tarjeta de *color gris* ¿Qué tipos de desechos puedes dejar en este basurero?",
+        "position": {
+          "start": [4, 5.5],
+          "end": [16, 16.5]
+        }
+      }
+    ],
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#A1C96A",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconNormal": "arrow-right",
+          "buttonIconAlt": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": true
+      }
+    ]
+  },
+
+
+  {
+    "AR": {
+      "start": true,
+      "models": [],
+      "trackerMessage": "¡Escanea la tarjeta de color gris!",
+      "trackerFeedback": "¡Exacto! ese basurero es para latas",
+      "imageTrackers": [
+        {
+          "name": "Basurero Gris",
+          "target": "basureroGris",
+          "display": "basureroGris",
+          "displayType": "3dobject",
+          "scale": [0.12, 0.12, 0.12],
+          "rotation": [90, 180, 270]
+        }
+      ]
+    },
+    "toggleButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "search",
+          "buttonIconNormal": "cube",
+          "buttonTextAlt": " Ejercicio",
+          "buttonTextNormal": " Volver"
+        },
+        "position" : {
+          "start": [1, 1],
+          "end":  [7, 3.5]
+        },
+        "value": false
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#BBBBBB",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "cube",
+          "buttonIconNormal": "arrow-right",
+          "buttonTextAlt": " Avanzar",
+          "buttonTextNormal": " Avanzar"
+        },
+        "position" : {
+          "start": [13, 1],
+          "end": [19, 3.5]
+        },
+        "target": 68,
+        "require": [67],
+        "visible": false
+      }
+    ],
+    "background": "",
+    "draggable": [
+      {
+        "type": "order",
+        "answer": ["basureroAzul", "basureroCafe", "basureroCafe", "basureroVerde", "basureroAmarillo", "basureroGris", "basureroAzul"],
+        "draggableItems": [
+          {
+            "type": "residuo",
+            "name": "residuo_1",
+            "value": "basureroAzul",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_2",
+            "value": "basureroCafe",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_3",
+            "value": "basureroCafe",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_4",
+            "value": "basureroVerde",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_5",
+            "value": "basureroAmarillo",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_6",
+            "value": "basureroGris",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          },
+          {
+            "type": "residuo",
+            "name": "residuo_7",
+            "value": "basureroAzul",
+            "position": {
+              "start": [7.5, 1],
+              "end": [12.5, 10]
+            }
+          }
+        ],
+        "receivingItems": [
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroCafe",
+            "position": {
+              "start": [0.5, 15],
+              "end": [3.6, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroGris",
+            "position": {
+              "start": [3.7, 15],
+              "end": [6.8, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroAmarillo",
+            "position": {
+              "start": [6.9, 15],
+              "end": [10, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroAzul",
+            "position": {
+              "start": [10.1, 15],
+              "end": [13.2, 20]
+            }
+          },
+          {
+            "type": "basurero",
+            "name": "",
+            "value": "basureroVerde",
+            "position": {
+              "start": [13.3, 15],
+              "end": [16.4, 20]
+            }
+          }
+        ]
+      }
+    ],
+    "items": [
+      {
+        "name": "bg_reciclaje2",
+        "resize": "cover",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 20]  
+        }
+      }
+    ],
+    "feedbackJose": true
+  },
+
+
+
+
+
+
+
+  {
+    "background": "bg_reciclaje",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [8, 4],
+          "end": [19, 16]
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "¡Excelente! José espera que ahora entiendas la importancia de  las 3 “R”",
+        "position": {
+          "start": [8.5, 4.5],
+          "end": [18.5, 15.5]
+        }
+      }
+    ],
+    "items": [
+      {
+        "name": "JoseHappy",
+        "position": {
+          "start": [0.5, 3],
+          "end": [7.5, 20]  
+        }
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#FF8A00",
+          "buttonColorNormal": "#FF8A00",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Responder el quiz",
+          "buttonTextNormal": "Responder el quiz"
+        },
+        "position" : {
+          "start": [10.5, 14.5],
+          "end": [16.5, 17.5]
+        },
+        "target": 69,
+        "require": [],
+        "visible": false
+      }
+    ]
+  },
+  {
+    "background": "",
+    "textBoxes": [
+      {
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": {      
+          "backgroundColor": "#EE93C6",
+          "borderWidth": 0,
+          "borderRadius": 0,
+          "elevation": 20
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": " Quiz Final ",
+        "position": {
+          "start": [0, 0],
+          "end": [20, 3]
+        },
+        "settings": { 
+          "fontSize": 21,
+          "color": "white",
+          "elevation": 21
+        },
+        "leftIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        },
+        "rightIcon": {
+          "name": "star",
+          "size": 0.035,
+          "color": "white"
+        }
+      },
+      {
+        "text": "1. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 4],
+          "end": [19, 5.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 19,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "Los desechos _______ son aquellos que demoran años en desaparecer",
+        "position": {
+          "start": [1, 5.5],
+          "end": [19, 7]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "2. Seleccione la opción correcta",
+        "position": {
+          "start": [1, 10],
+          "end": [19, 11.5]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 19,
+          "fontWeight": "bold",
+          "fontFamily": "Poppins-Bold",
+          "color": "#063D69"
+        }
+      },
+      {
+        "text": "Las tres “R” son reducir, ______ y reciclar",
+        "position": {
+          "start": [1, 11.5],
+          "end": [19, 13]
+        },
+        "settings": {
+          "textAlign": "left",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "fontFamily": "Poppins-Regular",
+          "color": "#063D69"
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "pregunta": "Los desechos _______ son aquellos que demoran años en desaparecer",
+        "answers": [
+          {
+            "text": "Orgánicos",
+            "position": {
+              "start": [2, 7.3],
+              "end": [6, 9.8]
+            }
+          },
+          {
+            "text": "Inorgánicos",
+            "position": {
+              "start": [8, 7.3],
+              "end": [12, 9.8]
+            }
+          },
+          {
+            "text": "Vegetales",
+            "position": {
+              "start": [14, 7.3],
+              "end": [18, 9.8]
+            }
+          }
+        ]
+      },
+      {
+        "pregunta": "Las tres “R” son reducir, ______ y reciclar",
+        "answers": [
+          {
+            "text": "Reutilizar",
+            "position": {
+              "start": [2, 13.3],
+              "end": [6, 15.8]
+            }
+          },
+          {
+            "text": "Rehacer",
+            "position": {
+              "start": [8, 13.3],
+              "end": [12, 15.8]
+            }
+          },
+          {
+            "text": "Reducir",
+            "position": {
+              "start": [14, 13.3],
+              "end": [18, 15.8]
+            }
+          }
+        ]
+      }
+    ],
+    "jumpButton": [
+      {
+        "settings": {
+          "buttonColorAlt": "#D9D9D9",
+          "buttonColorNormal": "#A1C96A",
+          "buttonIconAlt": "",
+          "buttonIconNormal": "",
+          "buttonTextAlt": "Terminar",
+          "buttonTextNormal": "Terminar"
+        },
+        "style": {
+
+        },
+        "position" : {
+          "start": [7, 16.5],
+          "end": [13, 19.5]
+        },
+        "target": -1,
+        "require": [69],
+        "visible": false
+      }
+    ]
+  }
+]

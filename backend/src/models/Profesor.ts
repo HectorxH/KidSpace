@@ -15,6 +15,7 @@ export interface IPlanificada {
 
 export interface IProfesor {
   user: any,
+  password: String,
   favoritas?: Types.Array<IFavorita>,
   planificadas?: Types.Array<IPlanificada>,
   cursos?: Types.Array<ICurso>,
@@ -25,6 +26,7 @@ export const profesorSchema = new Schema<IProfesor>({
   user: {
     type: Types.ObjectId, ref: 'User', unique: true, index: true,
   },
+  password: String,
   favoritas: {
     type: [{ nunidad: Number, nactividad: Number, titulo: String }],
     default: [],

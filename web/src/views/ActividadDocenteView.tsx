@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Card,
+  Card, Grid,
   CardMedia, Stack, Theme, Typography, Divider,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
@@ -142,8 +142,8 @@ const RespuestasCorrectas: {[key: string]: string[]} = {
   Diagramas: ['Gráficos', 'Una tabla'],
   Diseños: ['Función', 'Textura'],
   Materiales: ['Norte', 'Material'],
-  Reciclaje: ['placeholder', 'placeholder'],
-  'Soluciones Tecnológicas': ['placeholder', 'placeholder'],
+  Reciclaje: ['Inorgánicos', 'Reutilizar'],
+  'Soluciones Tecnológicas': ['Necesidad', 'Evolución'],
 };
 
 const ActividadDocenteView = () => {
@@ -154,6 +154,7 @@ const ActividadDocenteView = () => {
   const [loading, setLoading] = useState(true);
 
   const { actividad, cursoId } = useParams();
+  console.log(actividad);
   if (!actividad) return <NotFoundView />;
   const respuestasCorrectas = RespuestasCorrectas[actividad];
   const actividadData = _.find(actividadesDocentes, { actividad });
@@ -192,110 +193,136 @@ const ActividadDocenteView = () => {
     return <NotFoundView />;
   }
   return (
-    <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
-      <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
+    <Stack>
+      <Box sx={{
+        backgroundColor: '#F2C144', px: 4, py: 2, pb: 2,
+      }}
+      >
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
           <b>Estadísticas por actividad docente</b>
         </Typography>
       </Box>
-      <Stack
-        direction="row"
-        spacing={3}
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
         sx={{
-          px: 5, justifyContent: 'center', alingContent: 'center',
+          marginBottom: 3, minHeight: 300, px: 4, py: 2,
         }}
       >
-        <Card sx={{
-          width: 3 / 6, borderRadius: 5, alignItems: 'center', height: '50vh',
-        }}
-        >
-          <CardMedia
-            component="img"
-            sx={{ height: '30vh' }}
-            image={actividadData.img}
-          />
-          <Typography>
-            Nombre: {actividadData.actividad}
-          </Typography>
-          <Typography>
-            Estado:
-            <Typography display="inline" sx={{ fontSize: '15px', color: nLogs > 0 ? '#A1C96A' : '#EA6A6A' }}>
-              {nLogs > 0 ? ' Completada' : ' Sin Completar' }
-            </Typography>
-          </Typography>
-          <Divider style={{ width: '90%', alignSelf: 'center' }} />
-          <Stack
-            direction="row"
-            sx={{
-              width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
-            }}
+        <Grid item xs={12} sm={12} md={6}>
+          <Card sx={{
+            borderRadius: 5, alignItems: 'center', height: '100%',
+          }}
           >
+            <CardMedia
+              component="img"
+              sx={{ height: '30vh' }}
+              image={actividadData.img}
+            />
+            <Typography>
+              Nombre: {actividadData.actividad}
+            </Typography>
+            <Typography>
+              Estado:
+              <Typography display="inline" sx={{ fontSize: '15px', color: nLogs > 0 ? '#A1C96A' : '#EA6A6A' }}>
+                {nLogs > 0 ? ' Completada' : ' Sin Completar' }
+              </Typography>
+            </Typography>
+            <Divider style={{ width: '90%', alignSelf: 'center' }} />
             <Stack
               direction="row"
               sx={{
-                width: 2 / 5, justifyContent: 'center', alignItems: 'center', alignSelf: 'right',
+                width: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center',
               }}
             >
-              {(letras.map((letra, id) => (
-                <Typography
-                  sx={{
-                    color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
-                  }}
-                ><b>{letra}</b>
-                </Typography>
-              )))}
+              <Stack
+                direction="row"
+                sx={{
+                  width: 2 / 5, justifyContent: 'center', alignItems: 'center', alignSelf: 'right',
+                }}
+              >
+                {(letras.map((letra, id) => (
+                  <Typography
+                    sx={{
+                      color: actividadData.steam[id] !== 0 ? colores[id] : '#B5B5B5', alignSelf: 'Right', fontSize: 40, margin: 0.5,
+                    }}
+                  ><b>{letra}</b>
+                  </Typography>
+                )))}
+              </Stack>
             </Stack>
-          </Stack>
-        </Card>
-        <Card sx={{
-          padding: 1, width: 3 / 6, borderRadius: 5, height: '50vh',
-        }}
-        >
-          <Doughnut data={makeGlobalData(counts, curso)} options={options[0]} />
-        </Card>
-      </Stack>
-      <Stack spacing={2} sx={{ px: 5 }}>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <Card sx={{
+            padding: 1, borderRadius: 5, height: '100%',
+          }}
+          >
+            <Doughnut data={makeGlobalData(counts, curso)} options={options[0]} />
+          </Card>
+        </Grid>
+      </Grid>
+      <Stack spacing={2} sx={{ px: 4, py: 4 }}>
         <Typography variant="h5">
           Preguntas del Quiz
         </Typography>
         {(actividadData.preguntas.map((pregunta, id) => (
-          <Stack direction="row" spacing={2}>
-            <Card sx={{
-              width: 1.2 / 2, borderRadius: 5, backgroundColor: '#F1F3F8',
+          <Grid
+            container
+            spacing={2}
+            justifyContent="center"
+            sx={{
+              marginBottom: 3, minHeight: 300,
             }}
-            >
-              <Stack sx={{ m: 3 }}>
-                <Typography variant="h6">
-                  <b>Pregunta {id + 1}</b>
-                </Typography>
-                <Typography>
-                  {pregunta.enunciado}
-                  {pregunta.alternativas.map((alt) => {
-                    if (respuestasCorrectas[id] === alt) {
-                      return (
-                        <Stack direction="row">
-                          <li>{alt}</li> <CheckIcon sx={{ color: '#A1C96A', marginX: 1 }} />
-                        </Stack>
-                      );
-                    }
-                    return (<li>{alt}</li>);
-                  })}
-                </Typography>
-              </Stack>
-            </Card>
-            <Card sx={{ width: 0.8 / 2, borderRadius: 5 }}>
-              <Pie data={makeSingleData(counts, curso, id)} options={options[id + 1]} />
-            </Card>
-          </Stack>
+          >
+            <Grid item xs={12} sm={12} md={7}>
+              <Card sx={{
+                borderRadius: 5, backgroundColor: '#F1F3F8', height: '100%',
+              }}
+              >
+                <Stack sx={{ m: 3 }}>
+                  <Typography variant="h6">
+                    <b>Pregunta {id + 1}</b>
+                  </Typography>
+                  <Typography>
+                    {pregunta.enunciado}
+                    {pregunta.alternativas.map((alt) => {
+                      if (respuestasCorrectas[id] === alt) {
+                        return (
+                          <Stack direction="row">
+                            <li>{alt}</li> <CheckIcon sx={{ color: '#A1C96A', marginX: 1 }} />
+                          </Stack>
+                        );
+                      }
+                      return (<li>{alt}</li>);
+                    })}
+                  </Typography>
+                </Stack>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={12} md={5}>
+              <Card sx={{ borderRadius: 5, height: '100%' }}>
+                <Pie data={makeSingleData(counts, curso, id)} options={options[id + 1]} />
+              </Card>
+            </Grid>
+          </Grid>
         )))}
         <Typography variant="h5">
           Resultados del Quiz
         </Typography>
-        <ResultadosQuizTable
-          rows={resultados}
-          correctas={respuestasCorrectas}
-          estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
-        />
+        <Stack direction="row" sx={{ justifyContent: 'center' }}>
+          <Stack sx={{
+            maxWidth: 950, marginTop: 3, marginBottom: 3, width: 1,
+          }}
+          >
+            <ResultadosQuizTable
+              rows={resultados}
+              correctas={respuestasCorrectas}
+              estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
+            />
+          </Stack>
+        </Stack>
       </Stack>
     </Stack>
   );

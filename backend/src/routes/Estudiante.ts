@@ -1,5 +1,6 @@
 /* eslint-disable camelcase */
 import express from 'express';
+import _ from 'lodash';
 import ActividadLog from '../models/ActividadLog';
 import Apoderado from '../models/Apoderado';
 import Curso from '../models/Curso';
@@ -91,6 +92,26 @@ router.get('/actividades', async (req, res) => {
       actividadesIndividuales: estudiante?.actividadesIndividuales,
       actividadesClase: estudiante?.actividadesClase,
     });
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500);
+  }
+});
+
+router.get('/compas', async (req, res) => {
+  try {
+    const user = req.user?._id;
+    const est = await Estudiante.findOne({ user });
+    const curso = await Curso.findById(est?.curso).populate({ path: 'estudiantes', populate: { path: 'user' } });
+    const estudiantes = curso?.estudiantes;
+    if (!curso || !estudiantes) throw Error('Curso invalido');
+    const compas = _.map(estudiantes, (estudiante) => ({
+      nombres: estudiante.user.nombres,
+      apellidos: estudiante.user.apellidos,
+      personaje: estudiante.personaje,
+      actividadesIndividuales: estudiante.actividadesIndividuales,
+    }));
+    res.json({ compas });
   } catch (e) {
     console.log(e);
     res.sendStatus(500);

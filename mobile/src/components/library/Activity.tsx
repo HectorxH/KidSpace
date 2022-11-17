@@ -51,7 +51,6 @@ const Activity = ({navigation, route}: ActivityProps) => {
                     completadas: completadas,
                   })
                 }>
-                {/* onPress={() => console.log('Pressed')}> */}
                 <Text style={styles.subtitle}>¡Iniciar!</Text>
               </Button>
             </View>

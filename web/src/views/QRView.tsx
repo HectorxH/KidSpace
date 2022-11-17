@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   Box,
-  Card,
+  Card, Grid,
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
@@ -70,49 +70,51 @@ const QRView = () => {
           image={img}
         />
       </Stack>
-      <Stack
-        direction={{ xs: 'column', sm: 'row' }}
-        alignItems="center"
-        spacing={5}
-        justifyContent="space-between"
-        sx={{ p: 4 }}
+      <Grid
+        container
+        spacing={0}
+        justifyContent="center"
       >
-        <Stack sx={{ width: 2 / 4, margin: 4 }}>
-          <Typography variant="h4" sx={{ marginBottom: 3 }}>
-            Modo de uso:
-          </Typography>{' '}
-          <Typography display="block" sx={{ marginBottom: 2 }}>
-            Proyecte el código en la pantalla o imprima el
-            código para entregarlo a cada estudiante.
-          </Typography>
-          <Typography display="block" sx={{ marginBottom: 2 }}>
-            Una vez que la aplicación reconozca el código,
-            el o la estudiante podrá rellenar sus datos y estos
-            serán automáticamente agregados a la lista del
-            curso.
-          </Typography>
-          <Typography display="block" sx={{ marginBottom: 2 }}>
-            Estos datos posteriormente pueden ser editados
-            por el o la docente con acceso al curso.
-          </Typography>
-        </Stack>
-        <Stack sx={{ width: 2 / 4, justifyContent: 'center' }}>
-          <Card sx={{
-            alignItems: 'center', justifyContent: 'center', borderRadius: '20px', paddingBottom: 5, paddingTop: 5, width: 400,
-          }}
-          >
-            <Qr curso={curso} />
-            <CardMedia
-              component="img"
-              sx={{ width: '50%' }}
-              image={logoKidspace}
-            />
-            <Typography variant="h5">
-              ¡Únete al curso {curso.nombre}!
+        <Grid item xs={12} sm={12} md={6}>
+          <Stack justifyContent="center" spacing={3} sx={{ height: '100%', p: 4, ml: 4 }}>
+            <Typography variant="h4" sx={{ marginBottom: 3 }}>
+              <b>Modo de uso:</b>
+            </Typography>{' '}
+            <Typography display="block" sx={{ marginBottom: 2 }}>
+              Proyecte el código en la pantalla o imprima el
+              código para entregarlo a cada estudiante.
             </Typography>
-          </Card>
-        </Stack>
-      </Stack>
+            <Typography display="block" sx={{ marginBottom: 2 }}>
+              Una vez que la aplicación reconozca el código,
+              el o la estudiante podrá rellenar sus datos y estos
+              serán automáticamente agregados a la lista del
+              curso.
+            </Typography>
+            <Typography display="block" sx={{ marginBottom: 2 }}>
+              Estos datos posteriormente pueden ser editados
+              por el o la docente con acceso al curso.
+            </Typography>
+          </Stack>
+        </Grid>
+        <Grid item xs={12} sm={12} md={6}>
+          <Stack justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
+            <Card sx={{
+              alignItems: 'center', justifyContent: 'center', borderRadius: 5, paddingLeft: 8, paddingRight: 8,
+            }}
+            >
+              <Qr curso={curso} />
+              <CardMedia
+                component="img"
+                sx={{ height: '25%' }}
+                image={logoKidspace}
+              />
+              <Typography variant="h5">
+                ¡Únete al curso {curso.nombre}!
+              </Typography>
+            </Card>
+          </Stack>
+        </Grid>
+      </Grid>
     </Stack>
   );
 };

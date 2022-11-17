@@ -18,14 +18,22 @@ interface IRow {
     cantidad: number
 }
 
+interface IInstitucion {
+  institucion: boolean
+}
+
 interface ITableParams {
   rowsData: IRow[],
-  // updateEstudiantes: Function
+  institucion: IInstitucion,
 }
 
 const RankingTable = (
-  { rowsData }: ITableParams,
+  { rowsData, institucion }: ITableParams,
 ) => {
+  let hideColumn = false;
+  if (institucion.institucion) {
+    hideColumn = true;
+  }
   rowsData.sort((a, b) => b.cantidad - a.cantidad);
   const rows = _.map(rowsData, (data, idx) => ({ ...data, lugar: idx + 1 }));
 
@@ -37,6 +45,7 @@ const RankingTable = (
     {
       field: 'lugar',
       headerName: 'Lugar',
+      minWidth: 100,
       flex: 1,
       renderCell: ((params) => (
         <div>
@@ -53,21 +62,23 @@ const RankingTable = (
     {
       field: 'nombre',
       headerName: 'Nombre',
+      minWidth: 300,
       flex: 1,
       renderCell: (params) => `${params.row.estudiante.user.nombres} ${params.row.estudiante.user.apellidos}`,
     },
     {
       field: 'cantidad',
       headerName: 'Actividades completadas',
+      minWidth: 200,
       flex: 1,
     },
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      minWidth: 200,
+      flex: 1,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
+      hide: hideColumn,
       renderCell: (params) => (
         <div>
           <Button
@@ -88,12 +99,12 @@ const RankingTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: 1 }}>
       {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
         : (
           <DataGrid
             density="comfortable"
-            getRowHeight={() => 'auto'}
+            getRowHeight={() => 60}
             autoHeight
             hideFooter
             columns={cols}

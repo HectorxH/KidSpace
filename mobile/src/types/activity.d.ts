@@ -78,6 +78,12 @@ export interface ITextBoxes {
   settings?: ITextBoxSettings;
 }
 
+export interface ITextBoxesDragChecking {
+  position: IPosition;
+  requirements: number[];
+  settings?: ITextBoxSettings;
+}
+
 export interface ITextBoxSettings {
   backgroundColor?: string;
   borderRadius?: number;
@@ -90,11 +96,20 @@ export interface ITextBoxSettings {
   borderBottomRightRadius?: number;
   borderTopLeftRadius?: number;
   borderTopRightRadius?: number;
+  borderBottomWidth?: number;
+  borderTopWidth?: number;
+  borderLeftWidth?: number;
+  borderRightWidth?: number;
+  borderLeftColor?: string;
+  borderRightColor?: string;
+  borderTopColor?: string;
+  borderBottomColor?: string;
 }
 
 export interface IImages {
   name: string;
   position: IPosition;
+  resize?: 'contain' | 'cover' | 'stretch' | 'repeat' | 'center';
   settings?: IImagesSettings;
 }
 
@@ -104,6 +119,7 @@ export interface IImagesSettings {
   width?: string;
   alignSelf?: FlexAlignType | 'auto' | undefined;
   transform?: IImagesTransforms[];
+  borderRadius?: number;
 }
 
 export interface IImagesTransforms {
@@ -146,7 +162,9 @@ export interface IModels {
   rotation: Vec3;
   type?: string;
   image360?: string;
+  video360?: string;
   interactable?: string[];
+  temperaturas?: string[];
   icon?: string;
   ARMaterials?: {
     materialOrder: string[];
@@ -160,6 +178,7 @@ export interface IAR {
   start: boolean;
   imageTrackers?: IImageTracker[];
   trackerMessage?: string;
+  trackerFeedback?: string;
   hideInventory?: boolean;
   models?: IModels[];
 }
@@ -169,6 +188,8 @@ export interface IImageTracker {
   target: string;
   display: string;
   displayType: 'image' | 'video' | '3dobject';
+  scale?: number[];
+  rotation?: number[];
 }
 
 export interface ITexts {
@@ -230,6 +251,7 @@ export interface IJumpCard {
   disableWhen: number[];
   // settings: IToggleButtonSetting;
   visible: boolean;
+  borderRadius?: boolean;
 }
 
 export interface ITextFieldQuestion {
@@ -249,6 +271,8 @@ export interface IDraggableItems {
   name: string;
   value: string;
   position: IPosition;
+  valuesList?: string[];
+  persistent?: boolean;
   top?: boolean;
   bottom?: boolean;
 }
@@ -270,9 +294,11 @@ export interface ILottie {
 
 export interface IActivityPage {
   background: string;
+  feedbackJose?: boolean;
   items?: IImages[] | never[];
   bubbles?: IImages[] | never[];
   textBoxes?: ITextBoxes[] | never[];
+  textBoxesDragChecking?: ITextBoxesDragChecking[] | never[];
   texts?: ITexts[] | never[];
   textFieldQuestion?: ITextFieldQuestion[];
   alternativas?: IAlternativas[] | never[];

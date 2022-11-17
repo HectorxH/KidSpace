@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  Button, Theme, Box, Typography,
+  Button, Theme, Typography,
 } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -9,22 +10,32 @@ import _ from 'lodash';
 
 const actividades = [
   'Diagramas',
-  // 'Soluciones tecnologicas',
+  'Soluciones Tecnológicas',
   'Materiales',
-  // 'Reciclaje',
+  'Reciclaje',
   'Diseños',
 ];
+
 interface IActividades {
   [key: string]: number
 }
 
+interface IInstitucion {
+  institucion: boolean
+}
+
 interface ITableParams {
   rowsData: IActividades,
+  institucion: IInstitucion,
 }
 
 const ActividadDocenteTable = (
-  { rowsData }: ITableParams,
+  { rowsData, institucion }: ITableParams,
 ) => {
+  let hideColumn = false;
+  if (institucion.institucion) {
+    hideColumn = true;
+  }
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
     navigate(`actividadDocente/${encodeURIComponent(i)}`);
@@ -33,12 +44,14 @@ const ActividadDocenteTable = (
     {
       field: 'actividad',
       headerName: 'Actividad',
+      minWidth: 200,
       flex: 1,
       renderCell: (({ row }) => row),
     },
     {
       field: 'estado',
       headerName: 'Estado',
+      minWidth: 200,
       flex: 1,
       renderCell: ((params) => (
         <div>
@@ -51,6 +64,7 @@ const ActividadDocenteTable = (
     {
       field: 'porcentaje',
       headerName: '% del curso',
+      minWidth: 200,
       flex: 1,
       renderCell: ({ row }) => (
         <div>
@@ -61,10 +75,10 @@ const ActividadDocenteTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      minWidth: 200,
+      flex: 1,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
+      hide: hideColumn,
       renderCell: ({ row }) => (
         <div>
           <Button
@@ -85,19 +99,19 @@ const ActividadDocenteTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
-      <DataGrid
-        density="comfortable"
-        getRowHeight={() => 'auto'}
-        autoHeight
-        hideFooter
-        columns={cols}
-        rows={actividades}
-        getRowId={(row) => row}
-        disableSelectionOnClick
-        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
-      />
-    </Box>
+    <DataGrid
+      density="comfortable"
+      getRowHeight={() => 60}
+      autoHeight
+      hideFooter
+      columns={cols}
+      rows={actividades}
+      getRowId={(row) => row}
+      disableSelectionOnClick
+      sx={{
+        borderRadius: 5, paddingLeft: 3, paddingRight: 3,
+      }}
+    />
   );
 };
 

@@ -6,6 +6,7 @@ import {IDraggable} from '../../types/activity';
 import ReceivingItem from './drags/ReceivingItem';
 import DraggableItem from './drags/DraggableItem';
 import Layout from '../Utils/Layout';
+import ImageFeedback from './drags/ImageFeedback';
 
 interface DraggableProps {
   pageNumber: number;
@@ -16,6 +17,8 @@ interface DraggableProps {
   receivingNames: [string[][][], ReactStateSetter<string[][][]>];
   receivingValues: [string[][][], ReactStateSetter<string[][][]>];
   draggable: IDraggable[] | never[];
+  joseItem: [string, ReactStateSetter<string>];
+  joseMessage: [string, ReactStateSetter<string>];
 }
 
 const Draggable = (props: DraggableProps) => {
@@ -47,34 +50,69 @@ const Draggable = (props: DraggableProps) => {
                       <View
                         style={styles.overlay}
                         key={item.value + dragNumber + item.name + itemNumber}>
-                        <Layout
-                          position={{
-                            start: item.position.start,
-                            end: [
-                              item.position.end[0],
-                              item.type === 'codeBlock'
-                                ? item.position.end[1] + flapH
-                                : item.position.end[1],
-                            ],
-                          }}
-                          ObjectView={
-                            <ReceivingItem
-                              dragNumber={dragNumber}
-                              pageNumber={props.pageNumber}
-                              itemNumber={itemNumber}
-                              userDragAnswers={props.userDragAnswers}
-                              pickedDragAnswers={props.pickedDragAnswers}
-                              pickedDragAnswersIndex={
-                                props.pickedDragAnswersIndex
+                        <View style={styles.overlay}>
+                          <Layout
+                            position={{
+                              start: item.position.start,
+                              end: [
+                                item.position.end[0],
+                                item.type === 'codeBlock'
+                                  ? item.position.end[1] + flapH
+                                  : item.position.end[1],
+                              ],
+                            }}
+                            ObjectView={
+                              <ReceivingItem
+                                dragNumber={dragNumber}
+                                pageNumber={props.pageNumber}
+                                itemNumber={itemNumber}
+                                userDragAnswers={props.userDragAnswers}
+                                pickedDragAnswers={props.pickedDragAnswers}
+                                pickedDragAnswersIndex={
+                                  props.pickedDragAnswersIndex
+                                }
+                                isDragItemPicked={props.isDragItemPicked}
+                                receivingNames={props.receivingNames}
+                                receivingValues={props.receivingValues}
+                                setResultColor={setResultColor}
+                                draggable={draggable}
+                                joseItem={props.joseItem}
+                                joseMessage={props.joseMessage}
+                              />
+                            }
+                          />
+                        </View>
+                        {draggable.receivingItems[itemNumber].type ===
+                          'circleImage' && (
+                          <View style={styles.overlay}>
+                            <Layout
+                              position={{
+                                start: [
+                                  item.position.start[0],
+                                  item.position.end[1],
+                                ],
+                                end: [
+                                  item.position.end[0],
+                                  item.position.end[1] + 2.5,
+                                ],
+                              }}
+                              ObjectView={
+                                <ImageFeedback
+                                  dragNumber={dragNumber}
+                                  pageNumber={props.pageNumber}
+                                  itemNumber={itemNumber}
+                                  userDragAnswers={props.userDragAnswers}
+                                  pickedDragAnswers={props.pickedDragAnswers}
+                                  pickedDragAnswersIndex={
+                                    props.pickedDragAnswersIndex
+                                  }
+                                  isDragItemPicked={props.isDragItemPicked}
+                                  draggable={draggable}
+                                />
                               }
-                              isDragItemPicked={props.isDragItemPicked}
-                              receivingNames={props.receivingNames}
-                              receivingValues={props.receivingValues}
-                              setResultColor={setResultColor}
-                              draggable={draggable}
                             />
-                          }
-                        />
+                          </View>
+                        )}
                       </View>
                     );
                   })}

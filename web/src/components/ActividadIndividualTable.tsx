@@ -1,7 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import {
   Button, Theme,
-  Box,
   Typography,
 } from '@mui/material';
 import React from 'react';
@@ -24,13 +23,22 @@ interface IActividades {
   [key: string]: number
 }
 
+interface IInstitucion {
+  institucion: boolean
+}
+
 interface ITableParams {
   rowsData: IActividades
+  institucion: IInstitucion
 }
 
 const ActividadIndividualTable = (
-  { rowsData }: ITableParams,
+  { rowsData, institucion }: ITableParams,
 ) => {
+  let hideColumn = false;
+  if (institucion.institucion) {
+    hideColumn = true;
+  }
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
     navigate(`actividadIndividual/${encodeURIComponent(i)}`);
@@ -39,12 +47,14 @@ const ActividadIndividualTable = (
     {
       field: 'actividad',
       headerName: 'Nombre',
-      flex: 1.5,
+      minWidth: 400,
+      flex: 1,
       renderCell: (params) => params.row,
     },
     {
       field: 'porcentaje',
       headerName: '% del curso',
+      minWidth: 200,
       flex: 1,
       renderCell: (params) => (
         <div>
@@ -55,10 +65,10 @@ const ActividadIndividualTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      width: 210,
+      minWidth: 200,
+      flex: 1,
       sortable: false,
-      align: 'center',
-      headerAlign: 'center',
+      hide: hideColumn,
       renderCell: (params) => (
         <div>
           <Button
@@ -79,19 +89,17 @@ const ActividadIndividualTable = (
     },
   ];
   return (
-    <Box sx={{ width: '100%' }}>
-      <DataGrid
-        density="comfortable"
-        getRowHeight={() => 'auto'}
-        autoHeight
-        hideFooter
-        columns={cols}
-        rows={actividades}
-        getRowId={(row: any) => row}
-        disableSelectionOnClick
-        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
-      />
-    </Box>
+    <DataGrid
+      density="comfortable"
+      getRowHeight={() => 60}
+      autoHeight
+      hideFooter
+      columns={cols}
+      rows={actividades}
+      getRowId={(row: any) => row}
+      disableSelectionOnClick
+      sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
+    />
   );
 };
 
