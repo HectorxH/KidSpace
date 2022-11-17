@@ -167,7 +167,6 @@ app.post('/register', async (req, res) => {
     } if (user.tipo === 'representante') {
       const representante = new Representante({ user: user._id });
       await representante.save();
-      return res.sendStatus(200);
     }
     return res.sendStatus(200);
   } catch (e) {
@@ -191,8 +190,7 @@ app.post(
         return res.status(401).json({ message: info.message });
       }
       req.user = user;
-      req.login(user, next);
-      return next();
+      return req.login(user, next);
     })(req, res, next);
   },
   async (req, res) => {
@@ -209,10 +207,10 @@ app.post(
       }
       throw Error('Tipo de usuario invalido');
     } catch (e) {
-      req.session.destroy(() => {});
-      req.logout(() => {});
       console.log(e);
-      return res.sendStatus(500);
+      return req.session.destroy(() => {
+        req.logout(() => res.sendStatus(500));
+      });
     }
   },
 );
@@ -220,9 +218,7 @@ app.post(
 app.delete('/logout', checkAuth, (req, res, next) => {
   req.logOut((err) => {
     if (err) return next(err);
-    req.session.destroy(() => {});
-    req.logout(() => {});
-    return res.sendStatus(200);
+    return req.session.destroy(() => { req.logout(() => res.sendStatus(200)); });
   });
 });
 
