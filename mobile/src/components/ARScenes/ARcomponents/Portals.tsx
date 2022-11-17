@@ -4,10 +4,8 @@ import {
   ViroPortal,
   Viro360Image,
   Viro3DObject,
-  Viro360Video,
 } from '@viro-community/react-viro';
 import Images from '../../../assets/images/images';
-import Videos from '../../../assets/videos/videos';
 import {IModels, Vec3} from '../../../types/activity';
 import {ReactStateSetter} from '../../../types/others';
 import {IModelProps, TSelectedMaterial} from './utils';
@@ -16,7 +14,7 @@ import {ImageSourcePropType} from 'react-native';
 interface PortalsProps {
   models3d: IModels[];
   modelProps: IModelProps[][];
-  // modelChildrenProps: IModelProps[][][];
+  modelChildrenProps: IModelProps[][][];
   pageNumber: number;
   itemNumber: number;
   modelIndex: number;
@@ -72,26 +70,13 @@ const Portals = (props: PortalsProps) => {
           }
         />
       </ViroPortal>
-      {props.modelProps[props.pageNumber][props.itemNumber].modelImage360 !==
-        '' && (
-        <Viro360Image
-          source={
-            Images.images360[
-              props.modelProps[props.pageNumber][props.itemNumber].modelImage360
-            ]
-          }
-        />
-      )}
-      {props.modelProps[props.pageNumber][props.itemNumber].modelVideo360 !==
-        '' && (
-        <Viro360Video
-          source={
-            Videos.videos360[
-              props.modelProps[props.pageNumber][props.itemNumber].modelVideo360
-            ]
-          }
-        />
-      )}
+      <Viro360Image
+        source={
+          Images.images360[
+            props.modelProps[props.pageNumber][props.itemNumber].modelImage360
+          ]
+        }
+      />
     </ViroPortalScene>
   );
 };

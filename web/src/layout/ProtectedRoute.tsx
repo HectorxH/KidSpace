@@ -9,8 +9,6 @@ interface IProtectedRouteProps {
   loggedout?: boolean
   noProfesor?: boolean
   noApoderado?: boolean
-  noRepresentante?: boolean
-  hasPlan?: boolean
 }
 
 const ProtectedRoute = ({
@@ -18,31 +16,25 @@ const ProtectedRoute = ({
   loggedout = false,
   noProfesor = false,
   noApoderado = false,
-  noRepresentante = false,
-  hasPlan = false,
 } : IProtectedRouteProps) => {
-  const { user, navigateToDefault } = useAuth();
+  const { user } = useAuth();
   const [lodaing, setLoading] = useState(true);
+  const [allowed, setAllowed] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user?.tipo === 'representante' && hasPlan && user.plan === 3) {
-      navigate('/paquetes');
-    }
-    if (loggedout && user) {
-      navigateToDefault();
-    } else if (loggedin && !user) {
+    if (((loggedout && user) || (loggedin && !user))) {
       // user is not authentprofileicated
       navigate('/login');
-    } else if (((noProfesor && user?.tipo === 'profesor')
-    || (noApoderado && user?.tipo === 'apoderado')
-    || (noRepresentante && user?.tipo === 'representante'))) {
-      navigateToDefault();
+    }
+    if (((noProfesor && user?.tipo === 'profesor') || (noApoderado && user?.tipo === 'apoderado'))) {
+      setAllowed(false);
     }
     setLoading(false);
   }, []);
 
   if (lodaing) return <LoadingView />;
+  if (!allowed) return (null);
   return <Outlet />;
 };
 

@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
-
-type CallbackFunction = ()=>void;
+import { useState } from 'react';
 
 export default function useLocalStorage<T>(keyName: string, defaultValue: T|null)
 // eslint-disable-next-line no-unused-vars
-: [T | null, (newValue: T | null, newCallback?:CallbackFunction) => void] {
+: [T | null, (newValue: T | null) => void] {
   const [storedValue, setStoredValue] = useState<T|null>(() => {
     try {
       const value = window.localStorage.getItem(keyName);
@@ -17,20 +15,13 @@ export default function useLocalStorage<T>(keyName: string, defaultValue: T|null
       return defaultValue;
     }
   });
-
-  const [callback, setCallback] = useState<CallbackFunction>(() => () => {});
-
-  const setValue = (newValue: T|null, newCallback:CallbackFunction = () => {}) => {
+  const setValue = (newValue: T|null) => {
     try {
       window.localStorage.setItem(keyName, JSON.stringify(newValue));
     } catch (e) {
       console.log(e);
     }
     setStoredValue(newValue);
-    setCallback(() => newCallback);
   };
-
-  useEffect(callback, [callback]);
-
   return [storedValue, setValue];
 }

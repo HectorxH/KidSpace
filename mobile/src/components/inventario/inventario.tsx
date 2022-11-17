@@ -1,4 +1,4 @@
-import {ViroARSceneNavigator, ViroMaterials} from '@viro-community/react-viro';
+import {ViroARSceneNavigator} from '@viro-community/react-viro';
 import React from 'react';
 import {
   View,
@@ -25,21 +25,15 @@ const Inventario = (props: InventarioProps) => {
     pageNumber,
     models3d,
     setMaterialSelectorToggle,
-    setArmarDesarmarToggle,
-    setTemperaturaSelectorToggle,
-    setSelectedModelMaterials,
     hideInventory,
     toggleDefaultValue,
     toggleValues,
-    modelProps,
   } = props.inventarioParams;
   const sceneNav = props.sceneNav;
   const [placedItems, setPlacedItems] = props.inventarioParams.placedItems;
   const [nPlacedItems, setNPlacedItems] = props.inventarioParams.nPlacedItems;
   const [positions, setPositions] = props.inventarioParams.positions;
   const [models, setModels] = props.inventarioParams.models;
-  const [updateMaterial, setUpdateMaterial] =
-    props.inventarioParams.updateMaterial;
 
   const visible =
     !(
@@ -52,23 +46,6 @@ const Inventario = (props: InventarioProps) => {
 
   function modelHandler(index: number) {
     updatePosition();
-
-    if (modelProps[pageNumber][index].interactable[0] === 'temperatura') {
-      console.log('temperatura');
-      makeMaterials();
-      setSelectedModelMaterials(modelProps[pageNumber][index].ARMaterials);
-      setTemperaturaSelectorToggle(1);
-    }
-
-    if (modelProps[pageNumber][index].interactable[0] === 'materials') {
-      makeMaterials();
-      setSelectedModelMaterials(modelProps[pageNumber][index].ARMaterials);
-      setMaterialSelectorToggle(1);
-    }
-    if (modelProps[pageNumber][index].interactable[0] === 'armarDesarmar') {
-      setArmarDesarmarToggle(1);
-    }
-
     let newPlacedItems = [...placedItems];
     let newNPlacedItems = [...nPlacedItems];
     let newModels = [...models];
@@ -98,8 +75,6 @@ const Inventario = (props: InventarioProps) => {
     setModels(newModels);
     setPositions(newPositions);
     setMaterialSelectorToggle(0);
-    setArmarDesarmarToggle(0);
-    setTemperaturaSelectorToggle(0);
   }
 
   function updatePosition() {
@@ -112,21 +87,6 @@ const Inventario = (props: InventarioProps) => {
       })
       .catch(console.log);
     // setPositions([...positions, [0, 0, -1]]);
-  }
-
-  function makeMaterials() {
-    if (updateMaterial === true) {
-      let materials = modelProps[pageNumber].map(model =>
-        typeof model.materials !== 'undefined' ? model.materials : {},
-      );
-      if (materials.length > 0) {
-        setUpdateMaterial(false);
-      }
-      for (let i = 0; i < materials.length; i++) {
-        console.log(materials[i]);
-        ViroMaterials.createMaterials(materials[i]);
-      }
-    }
   }
 
   if (!visible) {

@@ -221,10 +221,7 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
         </Animated.View>
       )}
       <Animated.View style={[styles.buttonView, {opacity: fadeAnimBut}]}>
-        <Button
-          onPress={handleEndRecompensa}
-          uppercase={false}
-          style={styles.button}>
+        <Button onPress={handleEndRecompensa} style={styles.button}>
           <Text style={styles.buttonText}>Entendido</Text>
         </Button>
       </Animated.View>
@@ -300,7 +297,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#A1C96A',
   },
   buttonText: {
-    fontFamily: 'Poppins-Bold',
     color: 'white',
   },
 });

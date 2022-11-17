@@ -11,7 +11,7 @@
     ],
     "texts": [
       {
-        "text": "Naty es una *Ingeniera en Informática*",
+        "text": "Naty es una *Ingeniera en Informática*.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -40,7 +40,7 @@
     ],
     "texts": [
       {
-        "text": "La informática es una ciencia que estudia los métodos para procesar y transmitir datos digitales",
+        "text": "La informática es una ciencia que estudia los métodos para procesar y transmitir datos digitales.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -69,7 +69,7 @@
     ],
     "texts": [
       {
-        "text": "Esto incluye también diseñar y programar distintas aplicaciones",
+        "text": "Esto incluye también diseñar y programar distintas aplicaciones.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -127,7 +127,7 @@
     ],
     "texts": [
       {
-        "text": "Cada día, Naty tiene que resolver diversos problemas de programación",
+        "text": "Cada día, Naty tiene que resolver diversos problemas de programación.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -185,7 +185,7 @@
     ],
     "texts": [
       {
-        "text": "Programamos la fiesta de cumpleaños para que cuando se corte la torta hayan llegado los invitados",
+        "text": "Programamos la fiesta de cumpleaños para que cuando se corte la torta hayan llegado los invitados.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -214,7 +214,7 @@
     ],
     "texts": [
       {
-        "text": "Programamos la agenda para tener todo organizado y que no se nos solapen las citas",
+        "text": "Programamos la agenda para tener todo organizado y que no se nos solapen las citas.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -243,7 +243,7 @@
     ],
     "texts": [
       {
-        "text": "Para resolver cada uno de estos problemas, usamos los algoritmos",
+        "text": "Para resolver cada uno de estos problemas, usamos los algoritmos.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -272,7 +272,7 @@
     ],
     "texts": [
       {
-        "text": "Un algoritmo es crear,  paso a paso, de forma ordenada, una solución para una cierta tarea",
+        "text": "Un algoritmo es crear,  paso a paso, de forma ordenada, una solución para una cierta tarea.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -301,7 +301,7 @@
     ],
     "texts": [
       {
-        "text": "Puede sonar complicado pero en realidad vivimos realizando algoritmos",
+        "text": "Puede sonar complicado pero en realidad vivimos realizando algoritmos.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -330,7 +330,7 @@
     ],
     "texts": [
       {
-        "text": "Todas las actividades y rutinas de nuestra vida son algoritmos",
+        "text": "Todas las actividades y rutinas de nuestra vida son algoritmos.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -359,7 +359,7 @@
     ],
     "texts": [
       {
-        "text": "Algunos son sencillos y otros sumamente complejos pero todos son algoritmos",
+        "text": "Algunos son sencillos y otros sumamente complejos pero todos son algoritmos.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -591,7 +591,7 @@
     ],
     "texts": [
       {
-        "text": "Nota que construimos una secuencia de pasos ordenados para resolver el problema",
+        "text": "Nota que construimos una secuencia de pasos ordenados para resolver el problema.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -665,7 +665,7 @@
         }
       },
       {
-        "text": "1",
+        "text": "1.",
         "position": {
           "start": [12, 4.5],
           "end": [13, 6.5]
@@ -676,7 +676,7 @@
         }
       },
       {
-        "text": "2",
+        "text": "2.",
         "position": {
           "start": [12, 7],
           "end": [13, 9]
@@ -687,7 +687,7 @@
         }
       },
       {
-        "text": "3",
+        "text": "3.",
         "position": {
           "start": [12, 9.5],
           "end": [13, 11.5]
@@ -698,7 +698,7 @@
         }
       },
       {
-        "text": "4",
+        "text": "4.",
         "position": {
           "start": [12, 12],
           "end": [13, 14]
@@ -709,7 +709,7 @@
         }
       },
       {
-        "text": "5",
+        "text": "5.",
         "position": {
           "start": [12, 14.5],
           "end": [13, 16.4]
@@ -720,7 +720,7 @@
         }
       },
       {
-        "text": "6",
+        "text": "6.",
         "position": {
           "start": [12, 17],
           "end": [13, 19]
@@ -898,7 +898,7 @@
     ],
     "texts": [
       {
-        "text": "Para programar, Naty utiliza su computador",
+        "text": "Para programar, Naty utiliza su computador.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -927,7 +927,7 @@
     ],
     "texts": [
       {
-        "text": "Ya sabes que los programas son instrucciones ordenadas",
+        "text": "Ya sabes que los programas son instrucciones ordenadas.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1001,7 +1001,7 @@
     ],
     "texts": [
       {
-        "text": "Para esto existen los lenguajes de programación",
+        "text": "Para esto existen los lenguajes de programación.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1030,7 +1030,7 @@
     ],
     "texts": [
       {
-        "text": "Son como español que hablamos, pero hecho para hablar con los computadores",
+        "text": "Son como español que hablamos, pero hecho para hablar con los computadores.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1059,7 +1059,7 @@
     ],
     "texts": [
       {
-        "text": "Uno de los lenguajes para computadores usa los bloques con instrucciones",
+        "text": "Uno de los lenguajes para computadores usa los bloques con instrucciones.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1088,7 +1088,7 @@
     ],
     "texts": [
       {
-        "text": "Cada programa se vuelve en un gran puzzle compuesto de piezas",
+        "text": "Cada programa se vuelve en un gran puzzle compuesto de piezas.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1117,7 +1117,7 @@
     ],
     "texts": [
       {
-        "text": "Cada pieza corresponde a una instrucción específica",
+        "text": "Cada pieza corresponde a una instrucción específica.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1146,7 +1146,7 @@
     ],
     "texts": [
       {
-        "text": "Por ejemplo, este bloque corresponde a “decir hola”",
+        "text": "Por ejemplo, este bloque corresponde a “decir hola”.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1262,7 +1262,7 @@
     ],
     "texts": [
       {
-        "text": "Nuestro computador ejecuta las instrucciones en orden de arriba hacia abajo",
+        "text": "Nuestro computador ejecuta las instrucciones en orden de arriba hacia abajo.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1291,7 +1291,7 @@
     ],
     "texts": [
       {
-        "text": "Este programa nos permite saludar primero diciendo hola, y después, saludando con la mano",
+        "text": "Este programa nos permite saludar primero diciendo hola, y después, saludando con la mano.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1320,7 +1320,7 @@
     ],
     "texts": [
       {
-        "text": "Conoce a Ignacio. Es una tortuga a la que le encanta explorar y comer manzanas",
+        "text": "Conoce a Ignacio. Es una tortuga a la que le encanta explorar y comer manzanas.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1349,7 +1349,7 @@
     ],
     "texts": [
       {
-        "text": "Naty te propone la siguiente tarea. Tienes que ayudar a Ignacio a comer una manzana",
+        "text": "Naty te propone la siguiente tarea. Tienes que ayudar a Ignacio a comer una manzana.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1378,7 +1378,7 @@
     ],
     "texts": [
       {
-        "text": "Para esto, tienes 3 bloques de instrucciones",
+        "text": "Para esto, tienes 3 bloques de instrucciones.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1464,7 +1464,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Sigamos aprendiendo",
+        "text": "¡Muy bien! Sigamos aprendiendo.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1493,7 +1493,7 @@
     ],
     "texts": [
       {
-        "text": "Imagina que ahora Ignacio quiere saludar a su amigo Alberto",
+        "text": "Imagina que ahora Ignacio quiere saludar a su amigo Alberto.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1579,7 +1579,7 @@
     ],
     "texts": [
       {
-        "text": "¡Super! Así es como funciona el lenguaje de programación de bloques",
+        "text": "¡Super! Así es como funciona el lenguaje de programación de bloques.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1608,7 +1608,7 @@
     ],
     "texts": [
       {
-        "text": "Naty te deja la tarea de ayudar una última vez a la tortuga Ignacio",
+        "text": "Naty te deja la tarea de ayudar una última vez a la tortuga Ignacio.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -2111,7 +2111,7 @@
     ],
     "texts": [
       {
-        "text": "¡Excelente trabajo! Naty espera que te haya gustado programar",
+        "text": "¡Excelente trabajo! Naty espera que te haya gustado programar.",
         "position": {
           "start": [9.5, 4.5],
           "end": [18.5, 15.5]

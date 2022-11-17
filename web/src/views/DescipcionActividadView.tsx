@@ -80,9 +80,10 @@ const DescripcionActividadView = () => {
 
   if (typeof params.nunidad === 'undefined') return <NotFoundView />;
   if (typeof params.nactividad === 'undefined') return <NotFoundView />;
+
   const nunidad = Number(params.nunidad);
   const nactividad = Number(params.nactividad);
-  console.log(nactividad);
+
   const isFav = async () => {
     try {
       const res: IFavoritasRes = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/Profesor/favoritas`);

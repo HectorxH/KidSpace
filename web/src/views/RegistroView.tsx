@@ -9,7 +9,7 @@ import {
   Stack,
 } from '@mui/material';
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo-horizontal.png';
 
 const RegistroView = () => {
@@ -28,13 +28,13 @@ const RegistroView = () => {
       const res = await axios.post(
         `${process.env.REACT_APP_BACKEND_URL}/register`,
         {
-          nombres, apellidos, username, password, tipo: 'representante',
+          nombres, apellidos, username, password, tipo: 'profesor',
         },
       );
       console.log(res);
       setCorrect(true);
       setError(false);
-      setTimeout(() => navigate('/login'), 1500);
+      setTimeout(() => { navigate('/login'); }, 1500);
     } catch (e) {
       setCorrect(false);
       setError(true);
@@ -76,9 +76,7 @@ const RegistroView = () => {
         <form onSubmit={handleClick}>
           <Stack spacing={4} sx={{ justifyContent: 'space-between' }}>
             <Stack alignItems="center">
-              <Link to="/">
-                <img src={logo} alt="Logo Kidspace" width="60%" />
-              </Link>
+              <img src={logo} alt="Logo Kidspace" width="75%" />
               <Typography variant="h5">Registrar</Typography>
             </Stack>
             <Stack spacing={2}>
@@ -99,17 +97,55 @@ const RegistroView = () => {
             )}
             <Stack spacing={1}>
               <Button variant="contained" type="submit">Registrar</Button>
-              <Button
-                variant="outlined"
-                onClick={() => navigate('/login')}
-              >Iniciar sesion
-              </Button>
+              <Button variant="outlined" onClick={() => navigate('/login')}>Iniciar sesion</Button>
             </Stack>
           </Stack>
         </form>
       </Paper>
     </Grid>
   );
+
+  // return (
+  //   <div style={{ padding: 30 }}>
+  //     <Paper>
+  //       <Grid
+  //         container
+  //         spacing={3}
+  //         direction="column"
+  //         alignItems="center"
+  //         justifyContent="center"
+  //       >
+  //         <Grid item xs={12}>
+  //           <TextField label="Nombres" onChange={handleNombresChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <TextField label="Apellidos" onChange={handleApellidosChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <TextField label="Nombre de usuario" onChange={handleUsernameChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <TextField label="Contraseña" type="password" onChange={handlePasswordChange} />
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           <Button fullWidth onClick={handleClick}> Registrar </Button>
+  //         </Grid>
+  //         <Grid item xs={12}>
+  //           {correct && (
+  //             <Alert severity="success">
+  //               Usuario registrado
+  //             </Alert>
+  //           )}
+  //           {error && (
+  //             <Alert severity="error">
+  //               Datos invalidos
+  //             </Alert>
+  //           )}
+  //         </Grid>
+  //       </Grid>
+  //     </Paper>
+  //   </div>
+  // );
 };
 
 export default RegistroView;

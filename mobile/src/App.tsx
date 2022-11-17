@@ -16,7 +16,6 @@ import NoAvailableActivities from './components/library/NoAvailableActivities';
 import Activity from './components/library/Activity';
 import Carrera from './components/library/Carrera';
 import Story from './components/library/Story';
-import CompanerosView from './components/library/CompanerosView';
 import Recompensas from './components/Recompensas/Recompensas';
 import DynamicTable from './components/Tables/DynamicTable';
 import Qr from './components/QR/Qr';
@@ -87,11 +86,6 @@ const App = () => {
           <Stack.Screen
             name="Carrera"
             component={Carrera}
-            options={{headerShown: false}}
-          />
-          <Stack.Screen
-            name="CompanerosView"
-            component={CompanerosView}
             options={{headerShown: false}}
           />
           <Stack.Screen

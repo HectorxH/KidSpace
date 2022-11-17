@@ -13,7 +13,6 @@ import EstudianteRouter from './routes/Estudiante';
 import ApoderadoRouter from './routes/Apoderado';
 import ActivityRouter from './routes/Activity';
 import EstadisticasRouter from './routes/Estadisticas';
-import RepresentanteRouter from './routes/Representante';
 import initPassport from './passport-config';
 import { checkAuth, checkNotAuth } from './auths';
 import User from './models/User';
@@ -21,7 +20,6 @@ import Profesor from './models/Profesor';
 import Estudiante from './models/Estudiante';
 import Apoderado from './models/Apoderado';
 import Curso from './models/Curso';
-import Representante from './models/Representante';
 
 // Agrega la funcion .format como en python
 if (!String.prototype.format) {
@@ -74,7 +72,7 @@ app.use((req, res, next) => {
 app.post('/register', async (req, res) => {
   try {
     const {
-      nombres, apellidos, tipo, email, cursoId, estudianteId, representanteUid,
+      nombres, apellidos, tipo, email, cursoId, estudianteId,
     } = req.body;
     let { username, password } : {username: string, password: string} = req.body;
     if (_.some(req.body, _.isNil)) {
@@ -118,35 +116,18 @@ app.post('/register', async (req, res) => {
         }
       } while (user);
       console.log({ username, password });
-    } else if (tipo === 'profesor') {
-      password = crypto.randomBytes(8).toString('hex');
-      const name = `${nombres.split(' ')[0]}.${apellidos.split(' ')[0]}`;
-      let user;
-      username = `${name}`;
-      do {
-        // eslint-disable-next-line no-await-in-loop
-        user = await User.findOne({ username });
-        if (user) {
-          username = `${name}.${crypto.randomBytes(2).toString('hex')}`;
-        }
-      } while (user);
-      console.log({ username, password });
     }
 
     const hashedPass = await bcrypt.hash(password, 10);
-    const user : any = new User({
+    const user = new User({
       nombres, apellidos, username, password: hashedPass, tipo, email,
     });
     await user.save();
 
     if (user.tipo === 'profesor') {
-      const profesor = new Profesor({ user: user._id, password });
-      await Representante.findOneAndUpdate(
-        { user: representanteUid },
-        { $addToSet: { profesores: profesor?._id } },
-      );
+      const profesor = new Profesor({ user: user._id });
       await profesor.save();
-      return res.json({ profesor: await Profesor.findById(profesor?._id).populate('user') });
+      return res.sendStatus(200);
     } if (user.tipo === 'estudiante') {
       const estudiante = new Estudiante({ user: user._id, curso: cursoId });
       await Curso.findByIdAndUpdate(cursoId, { $addToSet: { estudiantes: estudiante?._id } });
@@ -164,9 +145,6 @@ app.post('/register', async (req, res) => {
         { $addToSet: { estudiantes: estudianteId } },
       );
       return res.json({ apoderado: await Apoderado.findById(apoderado?._id).populate('user') });
-    } if (user.tipo === 'representante') {
-      const representante = new Representante({ user: user._id });
-      await representante.save();
     }
     return res.sendStatus(200);
   } catch (e) {
@@ -190,7 +168,8 @@ app.post(
         return res.status(401).json({ message: info.message });
       }
       req.user = user;
-      return req.login(user, next);
+      req.login(user, next);
+      return next();
     })(req, res, next);
   },
   async (req, res) => {
@@ -198,19 +177,13 @@ app.post(
       const { tipo } = req.body;
       const user = await User.findOne({ username: req.body.username });
       if (!user) throw Error('El usuario no existe');
-      if (tipo === user.tipo) {
-        if (tipo === 'representante') {
-          const repr = await Representante.findOne({ user: user._id });
-          return res.json({ user, plan: repr?.plan });
-        }
-        return res.json(user);
-      }
+      if (tipo === user.tipo) return res.json(user);
       throw Error('Tipo de usuario invalido');
     } catch (e) {
+      req.session.destroy(() => {});
+      req.logout(() => {});
       console.log(e);
-      return req.session.destroy(() => {
-        req.logout(() => res.sendStatus(500));
-      });
+      return res.sendStatus(500);
     }
   },
 );
@@ -218,7 +191,9 @@ app.post(
 app.delete('/logout', checkAuth, (req, res, next) => {
   req.logOut((err) => {
     if (err) return next(err);
-    return req.session.destroy(() => { req.logout(() => res.sendStatus(200)); });
+    req.session.destroy(() => {});
+    req.logout(() => {});
+    return res.sendStatus(200);
   });
 });
 
@@ -226,7 +201,6 @@ app.use('/Profesor', checkAuth, ProfesorRouter);
 app.use('/Curso', checkAuth, CursoRouter);
 app.use('/Estudiante', checkAuth, EstudianteRouter);
 app.use('/Apoderado', checkAuth, ApoderadoRouter);
-app.use('/Representante', checkAuth, RepresentanteRouter);
 app.use('/Activity', checkAuth, ActivityRouter);
 app.use('/Estadisticas', checkAuth, EstadisticasRouter);
 

@@ -5,18 +5,12 @@ import {
   ViroARImageMarker,
   ViroImage,
   ViroVideo,
-  Viro3DObject,
 } from '@viro-community/react-viro';
 import Images from '../../../assets/images/images';
 import {IImageTracker} from '../../../types/activity';
 import videos from '../../../assets/videos/videos';
 import {ViroARTrackingTargetsMap} from '@viro-community/react-viro/dist/components/AR/ViroARTrackingTargets';
 import {ReactStateSetter} from '../../../types/others';
-import Models from '../../../assets/3d/models';
-import {
-  ViroRotation,
-  ViroScale,
-} from '@viro-community/react-viro/dist/components/Types/ViroUtils';
 
 interface DesafioIntroductorioSceneARProps {
   imageTracker: IImageTracker;
@@ -35,15 +29,7 @@ const DesafioIntroductorioSceneAR = (
     props.markerTrackingState;
   const [activeTracker, setActiveTracker] = props.activeTracker;
   const [activeTrackerIndex, setActiveTrackerIndex] = props.activeTrackerIndex;
-  const scale =
-    typeof imageTracker.scale !== 'undefined' ? imageTracker.scale : [1, 1, 1];
-  const rotation =
-    typeof imageTracker.rotation !== 'undefined'
-      ? imageTracker.rotation
-      : [0, 0, 0];
 
-  // const scale = [0.3, 0.3, 0.3];
-  // const rotation = [-90, 180, 90];
   return (
     <ViroARImageMarker
       target={imageTracker.target}
@@ -71,7 +57,7 @@ const DesafioIntroductorioSceneAR = (
           setActiveTrackerIndex(newActiveTrackerIndex);
         }
       }}>
-      <ViroNode scale={scale as ViroScale} rotation={rotation as ViroRotation}>
+      <ViroNode>
         {imageTracker.displayType === 'image' && (
           <ViroImage
             height={0.5}
@@ -98,16 +84,7 @@ const DesafioIntroductorioSceneAR = (
 
         {/* NOTE quizás implementar algun dia, pero va a desordenar
          todo con tanto parametro, igual seria choro */}
-        {imageTracker.displayType === '3dobject' && (
-          <Viro3DObject
-            source={Models[imageTracker.display].model}
-            type={Models[imageTracker.display].type}
-            resources={Models[imageTracker.display].resources}
-            position={[0, 0, 0]}
-            onDrag={() => {}}
-            dragType={'FixedToWorld'}
-          />
-        )}
+        {/* {imageTracker.displayType === '3dobject'} */}
       </ViroNode>
     </ViroARImageMarker>
   );
@@ -172,66 +149,6 @@ const targets: ViroARTrackingTargetsMap = {
   },
   vidrio: {
     source: Images.trackingTargets.vidrio,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  camaraMomento: {
-    source: Images.trackingTargets.camaraMomento,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  cucharaComer: {
-    source: Images.trackingTargets.cucharaComer,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  libroInformacion: {
-    source: Images.trackingTargets.libroInformacion,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  planchaRopa: {
-    source: Images.trackingTargets.planchaRopa,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  telefonoDistancia: {
-    source: Images.trackingTargets.telefonoDistancia,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  basureroAmarillo: {
-    source: Images.trackingTargets.basureroAmarillo,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  basureroAzul: {
-    source: Images.trackingTargets.basureroAzul,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  basureroCafe: {
-    source: Images.trackingTargets.basureroCafe,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  basureroGris: {
-    source: Images.trackingTargets.basureroGris,
-    orientation: 'Up',
-    physicalWidth: 0.3,
-    type: 'Image',
-  },
-  basureroVerde: {
-    source: Images.trackingTargets.basureroVerde,
     orientation: 'Up',
     physicalWidth: 0.3,
     type: 'Image',

@@ -20,7 +20,7 @@
     ],
     "texts": [
       {
-        "text": "Sofía es una *nutricionista*",
+        "text": "Sofía es una *nutricionista*.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -58,7 +58,7 @@
     ],
     "texts": [
       {
-        "text": "Su carrera se enfoca en la prevención de problemas de salud relacionados con la nutrición",
+        "text": "Su carrera se enfoca en la prevención de problemas de salud relacionados con la nutrición.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -125,7 +125,7 @@
     ],
     "texts": [
       {
-        "text": "sobre cómo elegir la comida saludable",
+        "text": "sobre cómo elegir la comida saludable.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -154,7 +154,7 @@
     ],
     "texts": [
       {
-        "text": "Y para esto es importante saber leer las etiquetas de los alimentos",
+        "text": "Y para esto es importante saber leer las etiquetas de los alimentos.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -212,7 +212,7 @@
     ],
     "texts": [
       {
-        "text": "y cantidad de porciones",
+        "text": "y cantidad de porciones.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -241,7 +241,7 @@
     ],
     "texts": [
       {
-        "text": "Si consumes más calorías de las que usa tu cuerpo, podrás aumentar de peso",
+        "text": "Si consumes más calorías de las que usa tu cuerpo, podrás aumentar de peso.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -270,7 +270,7 @@
     ],
     "texts": [
       {
-        "text": "En una etiqueta podrás encontrar los macronutrientes: la proteína, la grasa y los carbohidratos",
+        "text": "En una etiqueta podrás encontrar los macronutrientes: la proteína, la grasa y los carbohidratos.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -328,7 +328,7 @@
     ],
     "texts": [
       {
-        "text": "y *27,5 gramos de carbohidratos* en cada porción",
+        "text": "y *27,5 gramos de carbohidratos* en cada porción.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -386,7 +386,7 @@
     ],
     "texts": [
       {
-        "text": "pero el exceso de cualquiera de los tres puede causar daños a tu salud",
+        "text": "pero el exceso de cualquiera de los tres puede causar daños a tu salud.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -444,7 +444,7 @@
     ],
     "texts": [
       {
-        "text": "estos tendrán un sello negro",
+        "text": "estos tendrán un sello negro.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -473,7 +473,7 @@
     ],
     "texts": [
       {
-        "text": " Se recomienda disminuir o incluso excluir estos alimentos de tu dieta",
+        "text": " Se recomienda disminuir o incluso excluir estos alimentos de tu dieta.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -502,7 +502,7 @@
     ],
     "texts": [
       {
-        "text": "Sofía te propone analizar un par de alimentos y ver qué dicen sus etiquetas",
+        "text": "Sofía te propone analizar un par de alimentos y ver qué dicen sus etiquetas.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -866,7 +866,7 @@
     ],
     "texts": [
       {
-        "text": "tiene el gran trabajo de medir y evaluar su estado de salud",
+        "text": "tiene el gran trabajo de medir y evaluar su estado de salud.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -904,7 +904,7 @@
     ],
     "texts": [
       {
-        "text": "Por ejemplo, el *peso* es un indicador del estado de salud de una persona",
+        "text": "Por ejemplo, el *peso* es un indicador del estado de salud de una persona.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -933,7 +933,7 @@
     ],
     "texts": [
       {
-        "text": "Pero con tan solo peso resulta difícil hacer una evaluación precisa",
+        "text": "Pero con tan solo peso resulta difícil hacer una evaluación precisa.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -971,7 +971,7 @@
     ],
     "texts": [
       {
-        "text": "Para una persona de 1,9m y una de 1,6m *no será lo mismo* tener un peso de 90kg",
+        "text": "Para una persona de 1,9m y una de 1,6m *no será lo mismo* tener un peso de 90kg.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -1000,7 +1000,7 @@
     ],
     "texts": [
       {
-        "text": "Es por esto que los y las nutricionistas suelen medir *la estatura* de sus pacientes",
+        "text": "Es por esto que los y las nutricionistas suelen medir *la estatura* de sus pacientes.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -1020,7 +1020,7 @@
     ],
     "texts": [
       {
-        "text": "Existe una métrica, que relaciona la estatura con el peso. Esta se conoce como *IMC - Índice de Masa Corporal*",
+        "text": "Existe una métrica, que relaciona la estatura con el peso. Esta se conoce como *IMC - Índice de Masa Corporal*.",
         "position": {
           "start": [3.5, 3.5],
           "end": [16.5, 16.5]
@@ -1049,7 +1049,7 @@
     ],
     "texts": [
       {
-        "text": "Generalmente se utiliza para analizar la población adulta",
+        "text": "Generalmente se utiliza para analizar la población adulta.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -1078,7 +1078,7 @@
     ],
     "texts": [
       {
-        "text": "El IMC es una métrica simple y se resume con un diagrama",
+        "text": "El IMC es una métrica simple y se resume con un diagrama.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1116,7 +1116,7 @@
     ],
     "texts": [
       {
-        "text": "Los números de la escala corresponden al valor de IMC calculado",
+        "text": "Los números de la escala corresponden al valor de IMC calculado.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1145,7 +1145,7 @@
     ],
     "texts": [
       {
-        "text": "Por ejemplo, si el IMC de una persona *es menor a 18* entonces el peso de esa persona está por debajo de lo recomendado",
+        "text": "Por ejemplo, si el IMC de una persona *es menor a 18* entonces el peso de esa persona está por debajo de lo recomendado.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1174,7 +1174,7 @@
     ],
     "texts": [
       {
-        "text": "Si el IMC *es mayor a 25*, estamos ante el peso elevado o el sobrepeso",
+        "text": "Si el IMC *es mayor a 25*, estamos ante el peso elevado o el sobrepeso.",
         "position": {
           "start": [9, 5],
           "end": [17, 15]
@@ -1203,7 +1203,7 @@
     ],
     "texts": [
       {
-        "text": "La forma de calcular el IMC no varía en función del sexo ni de la edad de una persona",
+        "text": "La forma de calcular el IMC no varía en función del sexo ni de la edad de una persona.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -1232,7 +1232,7 @@
     ],
     "texts": [
       {
-        "text": "La fórmula del IMC es *el peso en kg dividido por el cuadrado de la altura* en metros",
+        "text": "La fórmula del IMC es *el peso en kg dividido por el cuadrado de la altura* en metros.",
         "position": {
           "start": [3, 5],
           "end": [11, 15]
@@ -2301,7 +2301,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien Sofía espera que te haya gustado ayudarle en su labor de nutricionista",
+        "text": "¡Muy bien Sofía espera que te haya gustado ayudarle en su labor de nutricionista.",
         "position": {
           "start": [1.5, 2.5],
           "end": [12.5, 15]

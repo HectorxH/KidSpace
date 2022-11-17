@@ -29,8 +29,6 @@ interface Objects3dProps {
   transforms: [ITransform[][], ReactStateSetter<ITransform[][]>];
   rotations: [number[][], ReactStateSetter<number[][]>];
   materialSelectorToggle: [number, ReactStateSetter<number>];
-  armarDesarmarToggle: [number, ReactStateSetter<number>];
-  temperaturaSelectorToggle: [number, ReactStateSetter<number>];
   updateMaterial: [boolean, ReactStateSetter<boolean>];
   useAlt: [boolean[][], ReactStateSetter<boolean[][]>];
   useChildrenAlt: [boolean[][][], ReactStateSetter<boolean[][][]>];
@@ -46,34 +44,30 @@ const Objects3d = (props: Objects3dProps) => {
     modelIndex,
     positions,
     modelMaterial,
-    // setSelectedModelMaterials,
+    setSelectedModelMaterials,
   } = props;
 
   const [transforms, setTransforms] = props.transforms;
   const [useAlt, setUseAlt] = props.useAlt;
   const [useChildrenAlt, setUseChildrenAlt] = props.useChildrenAlt;
 
-  // const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
+  const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     props.materialSelectorToggle;
-  // const setArmarDesarmarToggle = props.armarDesarmarToggle[1];
-  // const setTemperaturaSelectorToggle = props.temperaturaSelectorToggle[1];
 
-  // function makeMaterials() {
-  //   if (updateMaterial === true) {
-  //     let materials = modelProps[pageNumber].map(model =>
-  //       typeof model.materials !== 'undefined' ? model.materials : {},
-  //     );
-  //     if (materials.length > 0) {
-  //       setUpdateMaterial(false);
-  //     }
-  //     for (let i = 0; i < materials.length; i++) {
-  //       console.log(materials[i]);
-  //       ViroMaterials.createMaterials(materials[i]);
-  //     }
-  //   }
-  // }
-
+  function makeMaterials() {
+    if (updateMaterial === true) {
+      let materials = modelProps[pageNumber].map(model =>
+        typeof model.materials !== 'undefined' ? model.materials : {},
+      );
+      if (materials.length > 0) {
+        setUpdateMaterial(false);
+      }
+      for (let i = 0; i < materials.length; i++) {
+        ViroMaterials.createMaterials(materials[i]);
+      }
+    }
+  }
   function updateRotation(
     index: number,
     rotateState: number,
@@ -114,31 +108,13 @@ const Objects3d = (props: Objects3dProps) => {
         i < modelProps[pageNumber][itemIndex].interactable.length;
         i++
       ) {
-        // if (modelProps[pageNumber][itemIndex].interactable[i] === 'materials') {
-        //   makeMaterials();
-        //   setSelectedModelMaterials(
-        //     modelProps[pageNumber][itemIndex].ARMaterials,
-        //   );
-        //   setMaterialSelectorToggle(1);
-        // }
-        // if (
-        //   modelProps[pageNumber][itemIndex].interactable[i] === 'armarDesarmar'
-        // ) {
-        //   // setSelectedModelMaterials(
-        //   //   modelProps[pageNumber][itemIndex].ARMaterials,
-        //   // );
-        //   setArmarDesarmarToggle(1);
-        // }
-        // if (
-        //   modelProps[pageNumber][itemIndex].interactable[i] === 'temperatura'
-        // ) {
-        //   console.log('temperatura');
-        //   makeMaterials();
-        //   setSelectedModelMaterials(
-        //     modelProps[pageNumber][itemIndex].ARMaterials,
-        //   );
-        //   setTemperaturaSelectorToggle(1);
-        // }
+        if (modelProps[pageNumber][itemIndex].interactable[i] === 'materials') {
+          makeMaterials();
+          setSelectedModelMaterials(
+            modelProps[pageNumber][itemIndex].ARMaterials,
+          );
+          setMaterialSelectorToggle(1);
+        }
         if (
           modelProps[pageNumber][itemIndex].interactable[i] === 'auxiliar' &&
           modelProps[pageNumber][itemIndex].alt !== ''

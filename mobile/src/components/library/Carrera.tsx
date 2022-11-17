@@ -30,7 +30,6 @@ const nombreActividades = {
 
 const Carrera = ({navigation, route}: CarreraProps) => {
   const {carrera, curso, userName, userLastName, completadas} = route.params;
-  console.log(carrera.stories[1].nombre);
   const back = <Icon name="arrow-left-bold" size={20} color="#FFFFFF" />;
 
   const checkCompletada = (nombre: string) => {
@@ -49,8 +48,8 @@ const Carrera = ({navigation, route}: CarreraProps) => {
   };
 
   return (
-    <>
-      <View style={{flexDirection: 'row'}}>
+    <View style={styles.container}>
+      <View style={{flex: 1.2}}>
         <View style={styles.view}>
           <Button
             color="#EC87C0"
@@ -59,103 +58,68 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             {back}
           </Button>
         </View>
+        <View style={styles.viewText}>
+          <Text style={styles.title}>{carrera.title}</Text>
+          <ScrollView style={styles.scrollView}>
+            <Text style={styles.paragraph}>{carrera.desc2}</Text>
+          </ScrollView>
+        </View>
+      </View>
+      {carrera.stories.map((story, index) => (
         <View
+          key={index}
           style={{
             flex: 1,
-            marginTop: RSize(0.01),
-            marginHorizontal: RSize(0.01),
-            flexDirection: 'row-reverse',
+            marginRight: RSize(0.03, 'h'),
+            justifyContent: 'center',
           }}>
-          <Button
-            color="#FF8A01"
-            mode="contained"
-            uppercase={false}
-            icon={() => (
-              <Icon name="emoticon-happy" color="#FFF" size={RSize(0.04)} />
-            )}
+          <TouchableHighlight
+            underlayColor={'#F6F6F6'}
+            style={{
+              borderRadius: 20,
+            }}
             onPress={() =>
-              navigation.navigate('CompanerosView', {
-                datos: {
-                  carrera: carrera.title,
-                  nombre1: carrera.stories[0].nombre,
-                  nombre2: carrera.stories[1].nombre,
-                },
+              navigation.navigate('Story', {
+                Info: story,
+                curso: curso,
+                userName: userName,
+                userLastName: userLastName,
+                completadas: completadas,
               })
             }>
-            <Text style={styles.textButton}>Compañeros</Text>
-          </Button>
-        </View>
-      </View>
-      <View style={styles.container}>
-        <View style={{flex: 1.2}}>
-          <View style={styles.viewText}>
-            <Text style={styles.title}>{carrera.title}</Text>
-            <ScrollView style={styles.scrollView}>
-              <Text style={styles.paragraph}>{carrera.desc2}</Text>
-            </ScrollView>
-          </View>
-        </View>
-        {carrera.stories.map((story, index) => (
-          <View
-            key={index}
-            style={{
-              flex: 1,
-              marginRight: RSize(0.03, 'h'),
-              justifyContent: 'center',
-            }}>
-            <TouchableHighlight
-              underlayColor={'#F6F6F6'}
+            <Card
               style={{
                 borderRadius: 20,
-              }}
-              onPress={() =>
-                navigation.navigate('Story', {
-                  Info: story,
-                  curso: curso,
-                  userName: userName,
-                  userLastName: userLastName,
-                  completadas: completadas,
-                })
-              }>
-              <Card
+                backgroundColor: 'white',
+              }}>
+              <View
                 style={{
-                  borderRadius: 20,
-                  backgroundColor: 'white',
+                  flex: 1,
+                  alignItems: 'center',
+                  alignContent: 'center',
+                  elevation: 5,
                 }}>
-                <View
+                <Image
+                  source={mapImages[`${checkCompletada(story.actividad)}`].uri}
                   style={{
-                    flex: 1,
-                    alignItems: 'center',
-                    alignContent: 'center',
-                    elevation: 5,
-                  }}>
-                  <Image
-                    source={
-                      mapImages[`${checkCompletada(story.actividad)}`].uri
-                    }
-                    style={{
-                      marginTop: RSize(0.01, 'h'),
-                      width: RSize(0.06, 'h'),
-                      height: RSize(0.06, 'h'),
-                    }}
-                  />
-                </View>
-                <Card.Cover
-                  source={imagesPersonajes[`${story.img}`].uri}
-                  style={{
-                    height: RSize(0.6, 'h'),
-                    borderRadius: 20,
-                    marginTop: RSize(0.03, 'h'),
-                    marginHorizontal: RSize(0.03, 'h'),
+                    width: RSize(0.06, 'h'),
+                    height: RSize(0.06, 'h'),
                   }}
                 />
-                <Text style={styles.title2}>{story.title}</Text>
-              </Card>
-            </TouchableHighlight>
-          </View>
-        ))}
-      </View>
-    </>
+              </View>
+              <Card.Cover
+                source={imagesPersonajes[`${story.img}`].uri}
+                style={{
+                  height: RSize(0.63, 'h'),
+                  marginTop: RSize(0.045, 'h'),
+                }}
+              />
+              <Text style={styles.title2}>{story.title}</Text>
+            </Card>
+          </TouchableHighlight>
+        </View>
+      ))}
+    </View>
   );
 };
 
@@ -165,12 +129,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   view: {
+    flexDirection: 'row',
     margin: RSize(0.01),
   },
   viewText: {
     flexDirection: 'column',
     margin: RSize(0.01),
-    marginBottom: RSize(0.05),
+    marginBottom: RSize(0.14),
   },
   title: {
     marginLeft: RSize(0.015),
@@ -179,6 +144,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   title2: {
+    margin: RSize(0.01),
     fontFamily: 'Poppins-Bold',
     fontSize: RSize(0.03),
     textAlign: 'center',
@@ -194,12 +160,6 @@ const styles = StyleSheet.create({
   scrollView: {
     marginHorizontal: RSize(0.01),
     marginVertical: RSize(0.01),
-  },
-  textButton: {
-    textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
-    color: '#ffffff',
-    fontSize: RSize(0.02),
   },
 });
 

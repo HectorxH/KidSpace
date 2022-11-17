@@ -30,13 +30,13 @@ const ActividadIndividualAlumnosTable = (
     {
       field: 'nombre',
       headerName: 'Nombre',
-      width: 300,
+      flex: 1,
       renderCell: ({ row }) => row,
     },
     {
       field: 'estado',
       headerName: 'Estado',
-      width: 200,
+      flex: 1,
       renderCell: (({ row }) => (
         <div>
           <Typography sx={{ fontSize: '15px', color: rows[row] ? '#A1C96A' : '#EA6A6A' }}>
@@ -48,7 +48,7 @@ const ActividadIndividualAlumnosTable = (
     {
       field: 'duracion',
       headerName: 'Tiempo',
-      width: 200,
+      flex: 1,
       renderCell: ({ row }) => (rows[row] ? `${_.round(Number(rows[row].duracion))} s` : '-'),
     },
   ];

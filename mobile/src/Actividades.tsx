@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, StyleSheet, StatusBar, BackHandler} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import {ActividadesProps} from './types/navigation';
 import ActividadComponent from './components/Actividades/ActividadComponent';
 import ActividadesParams from './utils/ActividadesInit';
 import {IActividadesComponentParams} from './types/story';
-import {useFocusEffect} from '@react-navigation/native';
 
 const Actividades = ({navigation, route}: ActividadesProps) => {
   const nombreActividad = route.params.actividad;
@@ -23,19 +22,6 @@ const Actividades = ({navigation, route}: ActividadesProps) => {
       cantMonedas,
       completadas,
     );
-
-  useFocusEffect(
-    React.useCallback(() => {
-      const onBackPress = () => {
-        return true;
-      };
-
-      BackHandler.addEventListener('hardwareBackPress', onBackPress);
-
-      return () =>
-        BackHandler.removeEventListener('hardwareBackPress', onBackPress);
-    }, []),
-  );
 
   return (
     <View style={styles.container}>

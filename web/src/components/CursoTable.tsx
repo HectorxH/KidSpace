@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-underscore-dangle */
 import {
-  Button, Theme,
-  TableCell, TableRow, Stack,
+  TableContainer, Button, Table, TableBody, Theme,
+  TableCell, TableHead, TableRow, Stack, Card,
   Typography, Dialog, DialogActions, DialogContent,
-  DialogContentText, DialogTitle, Box,
+  DialogContentText, DialogTitle,
 } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import axios from 'axios';
 import SinActividades from './SinActividades';
 import { IEstudiante, IEstudiantes } from '../types/estudiantes';
@@ -118,6 +116,61 @@ const EliminarButton = ({ estudiante, eliminarAsignacion }
   );
 };
 
+const Row = ({ row, eliminarAsignacion }:RowParams) => {
+  const {
+    _id, user, curso,
+  } = row;
+  const { nombres, apellidos } = user;
+  const navigate = useNavigate();
+
+  const handleEditClick = () => {
+    navigate(`/cursos/${curso}/${_id}`);
+  };
+
+  return (
+    <TableRow
+      sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+    >
+      <TableCell
+        sx={{ cursor: 'pointer', '&:hover': { bgcolor: 'WhiteSmoke' } }}
+        component="th"
+        scope="row"
+      >
+        {apellidos}
+      </TableCell>
+      <TableCell>{nombres}</TableCell>
+      <TableCell>
+        <Stack direction="row">
+          <EliminarButton
+            estudiante={row}
+            eliminarAsignacion={eliminarAsignacion}
+          />
+          <Button
+            variant="contained"
+            onClick={handleEditClick}
+            sx={{
+              marginLeft: '1vw',
+              backgroundColor: '#5C9DEC',
+              color: '#FFFFFF',
+              '&:hover': {
+                backgroundColor: '#c0d5ed',
+                color: '#FFFFFF',
+              },
+            }}
+          >
+            <Typography
+              variant="button"
+              color={(theme: Theme) => theme.palette.info.contrastText}
+            >
+              Editar
+            </Typography>
+          </Button>
+        </Stack>
+      </TableCell>
+    </TableRow>
+  );
+};
+
 interface ICursoTableParams {
   rows: IEstudiantes,
   updateEstudiantes: Function
@@ -126,8 +179,6 @@ interface ICursoTableParams {
 const CursoTable = (
   { rows, updateEstudiantes }: ICursoTableParams,
 ) => {
-  const navigate = useNavigate();
-  console.log(rows);
   const { logout } = useAuth();
   const eliminarAsignacion = async (estudiante: IEstudiante) => {
     try {
@@ -141,80 +192,43 @@ const CursoTable = (
       }
     }
   };
-  const cols: GridColDef[] = [
-    {
-      field: 'apellidos',
-      width: 250,
-      headerName: 'Apellidos',
-      renderCell: ({ row }) => row.user.apellidos,
-    },
-    {
-      field: 'nombres',
-      width: 250,
-      headerName: 'Nombres',
-      renderCell: ({ row }) => row.user.nombres,
-    },
-    {
-      field: 'accion',
-      headerName: 'Acción',
-      width: 300,
-      sortable: false,
-      renderCell: ({ row }) => {
-        const handleEditClick = (curso: string, _id: string) => {
-          navigate(`/cursos/${curso}/${_id}`);
-        };
-        return (
-          <div>
-            <Stack direction="row">
-              <EliminarButton
-                estudiante={row}
+
+  return (
+
+    <TableContainer
+      component={Card}
+      elevation={4}
+      sx={{ borderRadius: '20px' }}
+    >
+      <Table
+        sx={{ overflowX: 'scroll' }}
+        aria-label="simple table"
+      >
+        <TableHead>
+          <TableRow>
+            <TableCell>Apellidos</TableCell>
+            <TableCell>Nombres</TableCell>
+            <TableCell>Acción</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody sx={{ justifyContent: 'center' }}>
+          {(rows.length === 0
+            ? ''
+            : rows.map((row) => (
+              <Row
+                key={row._id}
+                row={row}
                 eliminarAsignacion={eliminarAsignacion}
               />
-              <Button
-                variant="contained"
-                onClick={() => handleEditClick(row.curso, row._id)}
-                sx={{
-                  marginLeft: '1vw',
-                  backgroundColor: '#5C9DEC',
-                  color: '#FFFFFF',
-                  '&:hover': {
-                    backgroundColor: '#c0d5ed',
-                    color: '#FFFFFF',
-                  },
-                }}
-              >
-                <Typography
-                  variant="button"
-                  color={(theme: Theme) => theme.palette.info.contrastText}
-                >
-                  Editar
-                </Typography>
-              </Button>
-            </Stack>
-          </div>
-        );
-      },
-    },
-  ];
-  return (
-    <Box sx={{ width: '100%' }}>
-      {(rows.length === 0) ? <SinActividades mainmsg="Sin participantes." submsg="Cuande hayan participantes, estos aparecerán aquí." />
-        : (
-          <DataGrid
-            density="comfortable"
-            getRowHeight={() => 60}
-            autoHeight
-            hideFooter
-            columns={cols}
-            rows={rows}
-            getRowId={(row) => row._id}
-            disableSelectionOnClick
-            sx={{
-              borderRadius: 5, paddingLeft: 3, paddingRight: 3,
-            }}
-          />
-        )}
-    </Box>
+            ))
+          )}
+        </TableBody>
+      </Table>
+      {(rows.length === 0)
+        ? <SinActividades mainmsg="Sin participantes." submsg="Cuande añada participantes, estos aparecerán aquí." />
+        : ''}
+    </TableContainer>
+
   );
 };
 

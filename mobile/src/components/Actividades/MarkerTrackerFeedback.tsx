@@ -18,7 +18,6 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
     toggleDefaultValue,
     toggleValues,
     trackerMessages,
-    trackerFeedbacks,
   } = props.markerTrackerFeedbackParams;
   if (markerTrackingState[pageNumber].length === 0) {
     return null;
@@ -33,9 +32,7 @@ const MarkerTrackerFeedback = (props: MarkerTrackerFeedbackProps) => {
   const displayMessage =
     markerTrackingState[pageNumber][activeTrackerIndex[pageNumber]] ===
     'tracking'
-      ? trackerFeedbacks[pageNumber] === ''
-        ? `¡Muy bien! ${activeTracker[pageNumber]} es la tarjeta correcta`
-        : trackerFeedbacks[pageNumber]
+      ? `¡Muy bien! ${activeTracker[pageNumber]} es la tarjeta correcta`
       : 'Apunta con la cámara a la tarjeta correcta';
   // 'lastKnownPose'
   return (

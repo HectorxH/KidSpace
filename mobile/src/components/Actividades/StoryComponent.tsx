@@ -12,8 +12,6 @@ import {IStoryComponentParams} from '../../types/story';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {DraxProvider} from 'react-native-drax';
 import LottieComponent from './LottieComponent';
-import TextBoxesDragChecking from './TextBoxesDragChecking';
-import FeedbackJose from './FeedbackJose';
 
 interface StoryComponentProps {
   storyComponentParams: IStoryComponentParams;
@@ -36,13 +34,10 @@ const StoryComponent = (props: StoryComponentProps) => {
     isDragItemPicked,
     userInputAnswers,
     userDragAnswers,
-    rightDragAnswers,
     pickedDragAnswers,
     pickedDragAnswersIndex,
     receivingNames,
     receivingValues,
-    joseItem,
-    joseMessage,
   } = props.storyComponentParams;
 
   const pagina = story[pageNumber];
@@ -50,19 +45,12 @@ const StoryComponent = (props: StoryComponentProps) => {
   const bubbles = typeof pagina.bubbles !== 'undefined' ? pagina.bubbles : [];
   const textBoxes =
     typeof pagina.textBoxes !== 'undefined' ? pagina.textBoxes : [];
-  const textBoxesDragChecking =
-    typeof pagina.textBoxesDragChecking !== 'undefined'
-      ? pagina.textBoxesDragChecking
-      : [];
-
   const texts = typeof pagina.texts !== 'undefined' ? pagina.texts : [];
 
   const alternativas =
     typeof pagina.alternativas !== 'undefined' ? pagina.alternativas : [];
 
   const quiz = typeof pagina.quiz !== 'undefined' ? pagina.quiz : [];
-  const feedbackJose =
-    typeof pagina.feedbackJose !== 'undefined' ? pagina.feedbackJose : false;
 
   const alternativasDropdown =
     typeof pagina.alternativasDropdown !== 'undefined'
@@ -100,14 +88,6 @@ const StoryComponent = (props: StoryComponentProps) => {
           <View style={styles.overlay}>
             <TextBoxes boxes={textBoxes} />
           </View>
-          {/* Cuadros de texto para checking de drag */}
-          <View style={styles.overlay}>
-            <TextBoxesDragChecking
-              boxes={textBoxesDragChecking}
-              userDragAnswers={userDragAnswers[0]}
-              rightDragAnswers={rightDragAnswers}
-            />
-          </View>
           {/* Textos */}
           <View style={styles.overlay}>
             <Texts
@@ -127,14 +107,6 @@ const StoryComponent = (props: StoryComponentProps) => {
               specialTexture={
                 pageNumber > 1 ? modelMaterial[pageNumber - 2][0] : ''
               }
-            />
-          </View>
-          {/* Burbujas / otras imagenes que vayan sobre el cuadro de texto */}
-          <View style={styles.overlay}>
-            <FeedbackJose
-              joseItem={joseItem[0]}
-              joseMessage={joseMessage[0]}
-              feedbackJose={feedbackJose}
             />
           </View>
           {/* Preguntas / Alternativas */}
@@ -177,8 +149,6 @@ const StoryComponent = (props: StoryComponentProps) => {
               receivingNames={receivingNames}
               receivingValues={receivingValues}
               draggable={dragQuestions}
-              joseItem={joseItem}
-              joseMessage={joseMessage}
             />
           </View>
           <View style={styles.overlay}>

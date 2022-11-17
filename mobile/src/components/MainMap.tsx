@@ -234,7 +234,6 @@ const MainMap = ({navigation}: MainMapProps) => {
                   style={styles.buttonModal}
                   color="#FF8A01"
                   mode="contained"
-                  uppercase={false}
                   onPress={() => HandleCarrera({unidadCarrera})}>
                   <Text style={styles.textModalButton}>Acceder</Text>
                 </Button>
@@ -311,7 +310,6 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#EC87C0"
               mode="contained"
-              uppercase={false}
               icon={() => (
                 <Icon
                   name="account"
@@ -340,7 +338,6 @@ const MainMap = ({navigation}: MainMapProps) => {
               style={styles.button}
               color="#A0C96A"
               mode="contained"
-              uppercase={false}
               icon={() => (
                 <Icon
                   name="store"
@@ -367,7 +364,6 @@ const MainMap = ({navigation}: MainMapProps) => {
                 style={styles.button3}
                 compact={true}
                 color="#F2C045"
-                uppercase={false}
                 mode="contained"
                 icon={() => (
                   <Icon
@@ -412,7 +408,6 @@ const styles = StyleSheet.create({
   },
   textModalButton: {
     textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },
@@ -502,7 +497,6 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     marginLeft: 10,
-    fontFamily: 'Poppins-Bold',
     fontSize: RSize(0.04, 'h'),
     textAlign: 'center',
     color: '#ffffff',

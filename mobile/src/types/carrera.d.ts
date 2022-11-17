@@ -16,16 +16,9 @@ export interface ICarrera {
 export interface IInfo {
   carrera: string;
   actividad: actividadNombre;
-  nombre: string;
   img: string;
   title: string;
   desc: string;
   coins: number;
   estado: string;
-}
-
-export interface ICarreraNombre {
-  carrera: string;
-  nombre1: string;
-  nombre2: string;
 }

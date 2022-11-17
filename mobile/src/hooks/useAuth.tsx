@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {IUser} from '../types/user';
 import {NavigationContext} from '@react-navigation/core';
@@ -12,7 +6,7 @@ import Config from 'react-native-config';
 import _ from 'lodash';
 import request, {ResponseError} from 'superagent';
 
-let initialInstance = request.agent();
+let instance = request.agent();
 
 type Agent = request.SuperAgentStatic & request.Request;
 
@@ -34,15 +28,13 @@ const AuthContext = createContext<IAuthContext>({
   logout: async () => {},
   refresh: async () => {},
   deleteAccount: async () => {},
-  instance: initialInstance,
+  instance: instance,
 });
 
 export const AuthProvider = ({children}: {children: any}) => {
   const [user, setUser] = useState<IUser | null>(null);
   const [curso, setCurso] = useState<string>('');
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [instance, setInstance] = useState<Agent>(initialInstance);
-  const [moveInicio, setMoveInicio] = useState(false);
+  const [inst, setInstance] = useState<Agent>(instance);
 
   const navigation = useContext(NavigationContext);
 
@@ -69,8 +61,8 @@ export const AuthProvider = ({children}: {children: any}) => {
   };
 
   useEffect(() => {
-    // instance = request.agent();
-    // setInstance(instance);
+    instance = request.agent();
+    setInstance(instance);
     if (!user) {
       getUser();
     }
@@ -80,14 +72,7 @@ export const AuthProvider = ({children}: {children: any}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    if (moveInicio) {
-      navigation?.navigate('InicioView');
-      setMoveInicio(false);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, curso]);
-
+  // call this function when you want to authenticate the user
   const login = async (data: IUser | null) => {
     try {
       await AsyncStorage.setItem('@user', JSON.stringify(data));
@@ -124,6 +109,7 @@ export const AuthProvider = ({children}: {children: any}) => {
       setUser(null);
       setCurso('');
       console.log('Account deleted!');
+      navigation?.navigate('InicioView');
     } catch (e) {
       console.log(e);
     }
@@ -131,8 +117,8 @@ export const AuthProvider = ({children}: {children: any}) => {
 
   const refresh = async () => {
     try {
-      // instance = request.agent();
-      // setInstance(instance);
+      instance = request.agent();
+      setInstance(instance);
       await logout();
       const res = await instance
         .post(`${Config.REACT_APP_BACKEND_URL}/login`)
@@ -163,28 +149,25 @@ export const AuthProvider = ({children}: {children: any}) => {
     }
   };
 
-  const value = useMemo(
-    () => ({
-      user,
-      curso,
-      login,
-      logout,
-      refresh,
-      deleteAccount,
-      instance,
-    }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [user, curso, instance],
-  );
-  // const value = {
-  //   user,
-  //   curso,
-  //   login,
-  //   logout,
-  //   refresh,
-  //   deleteAccount,
-  //   instance,
-  // };
+  // const value = useMemo(
+  //   () => ({
+  //     user,
+  //     login,
+  //     logout,
+  //     refresh,
+  //   }),
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  //   [],
+  // );
+  const value = {
+    user,
+    curso,
+    login,
+    logout,
+    refresh,
+    deleteAccount,
+    instance: inst,
+  };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 

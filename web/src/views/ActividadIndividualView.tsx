@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Card,
-  CardMedia, Stack, Theme, Typography, Divider, Grid,
+  CardMedia, Stack, Theme, Typography, Divider,
 } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -122,26 +122,22 @@ const ActividadIndividualView = () => {
     return <NotFoundView />;
   }
   return (
-    <Stack>
-      <Box sx={{
-        backgroundColor: '#F2C144', px: 4, py: 2, pb: 2,
-      }}
-      >
+    <Stack direction="column" spacing={2} sx={{ pb: 4 }}>
+      <Box sx={{ backgroundColor: '#F2C144', px: 4, py: 2 }}>
         <Typography variant="h4" sx={{ color: (theme: Theme) => theme.palette.primary.contrastText }}>
           <b>Estadísticas por actividad individual</b>
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={2}
-        justifyContent="center"
+      <Stack
+        direction="row"
+        spacing={3}
         sx={{
-          px: 5, minHeight: 350, marginTop: 3, marginBottom: 3,
+          px: 5, justifyContent: 'center', height: '25em', alingContent: 'center',
         }}
       >
-        <Grid item xs={12} sm={12} md={6}>
+        <Stack direction="column" spacing={1} sx={{ width: 0.6 }}>
           <Card sx={{
-            width: 1, borderRadius: 5, alignItems: 'center', height: '75%',
+            width: 1, borderRadius: 5, alignItems: 'center', height: '100%',
           }}
           >
             <CardMedia
@@ -178,9 +174,8 @@ const ActividadIndividualView = () => {
               </Stack>
             </Stack>
           </Card>
-          <Stack sx={{ height: '5%' }} />
           <Card sx={{
-            padding: 2, borderRadius: 5, alignItems: 'center', height: '20%',
+            padding: 2, borderRadius: 5, alignItems: 'center',
           }}
           >
             <Stack
@@ -201,26 +196,20 @@ const ActividadIndividualView = () => {
               </Typography>
             </Stack>
           </Card>
-        </Grid>
-        <Grid item xs={12} sm={12} md={6}>
-          <Card sx={{
-            padding: 1, borderRadius: 5, height: '100%',
-          }}
-          >
-            <Doughnut data={makeGlobalData(completadas, curso)} options={options} />
-          </Card>
-        </Grid>
-      </Grid>
-      <Stack direction="row" sx={{ justifyContent: 'center' }}>
-        <Stack sx={{
-          px: 5, py: 4, maxWidth: 840, width: 1,
+
+        </Stack>
+        <Card sx={{
+          padding: 1, width: 0.6, borderRadius: 5,
         }}
         >
-          <ActividadIndividualAlumnosTable
-            rows={resultados}
-            estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
-          />
-        </Stack>
+          <Doughnut data={makeGlobalData(completadas, curso)} options={options} />
+        </Card>
+      </Stack>
+      <Stack sx={{ px: 5, py: 2 }}>
+        <ActividadIndividualAlumnosTable
+          rows={resultados}
+          estudiantes={_.map(curso.estudiantes, (estudiante) => `${estudiante.user.nombres} ${estudiante.user.apellidos}`)}
+        />
       </Stack>
     </Stack>
   );

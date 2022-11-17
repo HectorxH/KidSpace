@@ -11,7 +11,7 @@
     ],
     "texts": [
       {
-        "text": "Abel se dedica al *servicio técnico de computadores*",
+        "text": "Abel se dedica al *servicio técnico de computadores*.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -69,7 +69,7 @@
     ],
     "texts": [
       {
-        "text": "y también, saber cómo arreglar las partes físicas de un computador",
+        "text": "y también, saber cómo arreglar las partes físicas de un computador.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -156,7 +156,7 @@
     ],
     "texts": [
       {
-        "text": "Los computadoras se inventaron para realizar trabajos de manera fácil, organizada y rápida",
+        "text": "Los computadoras se inventaron para realizar trabajos de manera fácil, organizada y rápida.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -243,7 +243,7 @@
     ],
     "texts": [
       {
-        "text": "Aunque quizá no lo sepas, ya has utilizado mucho software",
+        "text": "Aunque quizá no lo sepas, ya has utilizado mucho software.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -281,7 +281,7 @@
     ],
     "texts": [
       {
-        "text": "Por software entendemos un conjunto de instrucciones que le damos al computador",
+        "text": "Por software entendemos un conjunto de instrucciones que le damos al computador.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -397,7 +397,7 @@
     ],
     "texts": [
       {
-        "text": "un conjunto de dispositivos físicos sin utilidad alguna",
+        "text": "un conjunto de dispositivos físicos sin utilidad alguna.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -426,7 +426,7 @@
     ],
     "texts": [
       {
-        "text": "Estos dispositivos físicos se conocen como hardware",
+        "text": "Estos dispositivos físicos se conocen como hardware.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -455,7 +455,7 @@
     ],
     "texts": [
       {
-        "text": "El hardware de un computador es todas aquellas partes físicas que podemos ver y tocar",
+        "text": "El hardware de un computador es todas aquellas partes físicas que podemos ver y tocar.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -484,7 +484,7 @@
     ],
     "texts": [
       {
-        "text": "Por ejemplo, el monitor y los parlantes son hardware externo",
+        "text": "Por ejemplo, el monitor y los parlantes son hardware externo.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -542,7 +542,7 @@
     ],
     "texts": [
       {
-        "text": " y otras están fuera",
+        "text": " y otras están fuera.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -571,7 +571,7 @@
     ],
     "texts": [
       {
-        "text": "Las partes externas son aquellas con las cuales podemos interactuar para usar el computador",
+        "text": "Las partes externas son aquellas con las cuales podemos interactuar para usar el computador.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -600,7 +600,7 @@
     ],
     "texts": [
       {
-        "text": "Existen muchos componentes externos del computador",
+        "text": "Existen muchos componentes externos del computador.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -772,7 +772,7 @@
     ],
     "texts": [
       {
-        "text": "¡Muy bien! Así es, el mouse o el ratón es la parte externa del computador",
+        "text": "¡Muy bien! Así es, el mouse o el ratón es la parte externa del computador.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -801,7 +801,7 @@
     ],
     "texts": [
       {
-        "text": "Somos nosotros que interactuamos constantemente con este",
+        "text": "Somos nosotros que interactuamos constantemente con este.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -859,7 +859,7 @@
     ],
     "texts": [
       {
-        "text": "ya que estos se encuentran dentro de nuestro computador",
+        "text": "ya que estos se encuentran dentro de nuestro computador.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -917,7 +917,7 @@
     ],
     "texts": [
       {
-        "text": "CPU es las sigla en inglés para Unidad Central de Procesamiento",
+        "text": "CPU es las sigla en inglés para Unidad Central de Procesamiento.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -975,7 +975,7 @@
     ],
     "texts": [
       {
-        "text": "Esta permite que el computador interactúe con todas las aplicaciones y programas",
+        "text": "Esta permite que el computador interactúe con todas las aplicaciones y programas.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1062,7 +1062,7 @@
     ],
     "texts": [
       {
-        "text": "que cada programa y aplicación utiliza mientras son usados",
+        "text": "que cada programa y aplicación utiliza mientras son usados.",
         "position": {
           "start": [1.5, 4.5],
           "end": [11.5, 15.5]
@@ -1091,7 +1091,7 @@
     ],
     "texts": [
       {
-        "text": "Otra componente interna de un computador es el ventilador",
+        "text": "Otra componente interna de un computador es el ventilador.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]
@@ -1404,7 +1404,7 @@
     ],
     "texts": [
       {
-        "text": "que uno de sus clientes dejó ayer en su oficina de servicio técnico",
+        "text": "que uno de sus clientes dejó ayer en su oficina de servicio técnico.",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1491,7 +1491,7 @@
     ],
     "texts": [
       {
-        "text": "Aprovechando la instancia, Abel te ofrece estudiar *las 3 piezas de hardware* que va a cambiar",
+        "text": "Aprovechando la instancia, Abel te ofrece estudiar *las 3 piezas de hardware* que va a cambiar.",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1839,7 +1839,7 @@
     ],
     "texts": [
       {
-        "text": "que podrás encontrar en el botón de la esquina superior izquierda",
+        "text": "que podrás encontrar en el botón de la esquina superior izquierda.",
         "position": {
           "start": [3, 5.5],
           "end": [15, 16.5]
@@ -1946,7 +1946,7 @@
         }
       },
       {
-        "text": "Durante la inspección técnica, se realizó un cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento de datos. La segunda pieza fue {{dragRectangle}} {{iconDragCheck}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}} {{iconDragCheck}}, para mejorar el procesamiento de los gráficos",
+        "text": "Durante la inspección técnica, se realizó un cambio de un total de 3 piezas. La primera pieza fue {{dragRectangle}} {{iconDragCheck}}, para ayudar con el almacenamiento de datos. La segunda pieza fue {{dragRectangle}} {{iconDragCheck}}, ya que algunas teclas de la pieza anterior se encontraban rotas. Finalmente, se realizó el cambio de {{dragRectangle}} {{iconDragCheck}}, para mejorar el procesamiento de los gráficos.",
         "position": {
           "start": [5.5, 7.1],
           "end": [19, 18.5]
@@ -2071,7 +2071,7 @@
     ],
     "texts": [
       {
-        "text": "¡Super! Abel espera que hayas aprendido algo nuevo sobre  los computadores",
+        "text": "¡Super! Abel espera que hayas aprendido algo nuevo sobre  los computadores.",
         "position": {
           "start": [8.5, 4.5],
           "end": [18.5, 15.5]

@@ -36,15 +36,15 @@ export default [
     steam: [0, '#B878EA', '#FF8A00', 0, 0],
     preguntas: [
       {
-        enunciado: 'Cada objeto tecnológico resuelve por lo menos una _______',
-        alternativas: ['Solución', 'Necesidad', 'Parte'],
-        respuestaCorrecta: 'Necesidad',
+        enunciado: 'Placeholder',
+        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
+        respuestaCorrecta: 'Placeholder',
         data: [2, 12, 5],
       },
       {
-        enunciado: 'El proceso en que un objeto se mejora y cambia en el tiempo se llama _____',
-        alternativas: ['Evolución', 'Cambio', 'Mutación'],
-        respuestaCorrecta: 'Evolución',
+        enunciado: 'Placeholder',
+        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
+        respuestaCorrecta: 'Placeholder',
         data: [2, 12, 5],
       },
     ],
@@ -80,15 +80,15 @@ export default [
     steam: ['#5C9DEC', 0, '#FF8A00', '#F3C550', 0],
     preguntas: [
       {
-        enunciado: 'Los desechos _______ son aquellos que demoran años en desaparecer.',
-        alternativas: ['Orgánicos', 'Inorgánicos', 'Vegetales'],
-        respuestaCorrecta: 'Inorgánicos',
+        enunciado: 'Placeholder',
+        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
+        respuestaCorrecta: 'Placeholder',
         data: [2, 12, 5],
       },
       {
-        enunciado: 'Las tres “R” son reducir, ______ y reciclar.',
-        alternativas: ['Reutilizar', 'Rehacer', 'Reducir'],
-        respuestaCorrecta: 'Reutilizar',
+        enunciado: 'Placeholder',
+        alternativas: ['Placeholder', 'Placeholder', 'Placeholder'],
+        respuestaCorrecta: 'Placeholder',
         data: [2, 12, 5],
       },
     ],

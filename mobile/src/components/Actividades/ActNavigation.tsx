@@ -7,8 +7,6 @@ import JumpButton from './JumpButton';
 import JumpCard from './JumpCard';
 import _ from 'lodash';
 import {IActNavigationParams} from '../../types/story';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {RSize} from '../../utils/responsive';
 
 interface ActNavigationProps {
   actNavigationParams: IActNavigationParams;
@@ -184,20 +182,10 @@ const ActNavigation = (props: ActNavigationProps) => {
             {/* // Cuando es desafio se carga boton para togglear preguntas  */}
             {/* // Cuando es cuento o introduccion de desafio se usa navegacion con tap  */}
             <TouchableWithoutFeedback onPress={prevPageNumber}>
-              <View style={styles.containerLeft}>
-                {pageNumber !== 0 && (
-                  <View style={styles.viewIcon}>
-                    <Icon name={'arrow-left'} size={RSize(0.05, 'h')} />
-                  </View>
-                )}
-              </View>
+              <View style={styles.container} />
             </TouchableWithoutFeedback>
             <TouchableWithoutFeedback onPress={nextPageNumber}>
-              <View style={styles.containerRight}>
-                <View style={styles.viewIcon}>
-                  <Icon name={'arrow-right'} size={RSize(0.05, 'h')} />
-                </View>
-              </View>
+              <View style={styles.container} />
             </TouchableWithoutFeedback>
           </View>
         )}
@@ -250,28 +238,8 @@ const ActNavigation = (props: ActNavigationProps) => {
 };
 
 const styles = StyleSheet.create({
-  containerLeft: {
+  container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    marginHorizontal: RSize(0.02, 'h'),
-  },
-  containerRight: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'flex-end',
-    marginHorizontal: RSize(0.02, 'h'),
-  },
-  viewIcon: {
-    borderWidth: 1,
-    borderColor: '#000000',
-    borderRadius: 100,
-    backgroundColor: '#FFFFFF',
-    alignContent: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
-    height: RSize(0.06, 'h'),
-    width: RSize(0.06, 'h'),
   },
   overlay: {
     flex: 1,

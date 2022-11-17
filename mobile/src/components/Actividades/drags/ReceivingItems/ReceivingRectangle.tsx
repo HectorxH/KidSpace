@@ -51,14 +51,11 @@ const ReceivingRectangle = (props: ReceivingRectangleProps) => {
 
     // Valores para cambiar visualización del drag item que llegó a este bloque
     newPickedAnswersIndex[pageNumber][dragNumber][itemNumber] = payload;
-    if (typeof draggable.draggableItems[payload].persistent === 'undefined') {
-      newIsDragItemPicked[pageNumber][dragNumber][payload] = true;
-    }
+    newIsDragItemPicked[pageNumber][dragNumber][payload] = true;
 
     if (
       draggable.answer.includes(answer) &&
-      draggable.answer.length > itemNumber &&
-      draggable.answer[itemNumber] === answer
+      draggable.answer.indexOf(answer) === itemNumber
     ) {
       newPickedAnswers[pageNumber][dragNumber][itemNumber] = 2;
     }

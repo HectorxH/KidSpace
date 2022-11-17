@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import {
   Button, Theme,
+  Box,
   Typography,
 } from '@mui/material';
 import React from 'react';
@@ -23,22 +24,13 @@ interface IActividades {
   [key: string]: number
 }
 
-interface IInstitucion {
-  institucion: boolean
-}
-
 interface ITableParams {
   rowsData: IActividades
-  institucion: IInstitucion
 }
 
 const ActividadIndividualTable = (
-  { rowsData, institucion }: ITableParams,
+  { rowsData }: ITableParams,
 ) => {
-  let hideColumn = false;
-  if (institucion.institucion) {
-    hideColumn = true;
-  }
   const navigate = useNavigate();
   const handleVerStats = (i:string) => {
     navigate(`actividadIndividual/${encodeURIComponent(i)}`);
@@ -47,14 +39,12 @@ const ActividadIndividualTable = (
     {
       field: 'actividad',
       headerName: 'Nombre',
-      minWidth: 400,
-      flex: 1,
+      flex: 1.5,
       renderCell: (params) => params.row,
     },
     {
       field: 'porcentaje',
       headerName: '% del curso',
-      minWidth: 200,
       flex: 1,
       renderCell: (params) => (
         <div>
@@ -65,10 +55,10 @@ const ActividadIndividualTable = (
     {
       field: 'accion',
       headerName: 'Acción',
-      minWidth: 200,
-      flex: 1,
+      width: 210,
       sortable: false,
-      hide: hideColumn,
+      align: 'center',
+      headerAlign: 'center',
       renderCell: (params) => (
         <div>
           <Button
@@ -89,17 +79,19 @@ const ActividadIndividualTable = (
     },
   ];
   return (
-    <DataGrid
-      density="comfortable"
-      getRowHeight={() => 60}
-      autoHeight
-      hideFooter
-      columns={cols}
-      rows={actividades}
-      getRowId={(row: any) => row}
-      disableSelectionOnClick
-      sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
-    />
+    <Box sx={{ width: '100%' }}>
+      <DataGrid
+        density="comfortable"
+        getRowHeight={() => 'auto'}
+        autoHeight
+        hideFooter
+        columns={cols}
+        rows={actividades}
+        getRowId={(row: any) => row}
+        disableSelectionOnClick
+        sx={{ borderRadius: 5, paddingLeft: 3, paddingRight: 3 }}
+      />
+    </Box>
   );
 };
 

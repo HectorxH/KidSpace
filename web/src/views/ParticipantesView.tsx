@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import {
   Box,
   Button,
-  Card, Grid,
+  Card,
   CardMedia, Stack, Theme, Typography,
 } from '@mui/material';
 import QrCodeIcon from '@mui/icons-material/QrCode';
@@ -79,94 +79,85 @@ const ParticipantesView = () => {
           image={img}
         />
       </Stack>
-      <Grid
-        container
-        spacing={0}
-        justifyContent="right"
-        sx={{ px: 2 }}
+      <Stack
+        direction="row"
+        justifyContent="flex-end"
+        alignItems="center"
       >
-        <Grid item xs={12} sm={12} md={3} />
-        <Grid item xs={12} sm={12} md={6}>
+        <Box
+          sx={{
+            width: 2 / 4,
+          }}
+        >
           <Typography>
             Los y las estudiantes deben escanear el código
             QR dentro de la aplicación para unirse al curso.
           </Typography>
-        </Grid>
-        <Grid item xs={12} sm={12} md={3}>
-          <Stack direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
-            <Button
-              startIcon={<QrCodeIcon />}
-              sx={{
-                backgroundColor: (theme: Theme) => theme.palette.secondary.main,
-                width: 150,
-                color: '#FFFFFF',
-                '&:hover': {
-                  backgroundColor: '#ffbe82',
-                  color: '#FFFFFF',
-                },
-              }}
-              onClick={() => navigate(`/cursos/${cursoId}/qr`)}
-            >
-              Generar QR
-            </Button>
-          </Stack>
-        </Grid>
-      </Grid>
+        </Box>
+        <Button
+          startIcon={<QrCodeIcon />}
+          sx={{
+            marginRight: 2,
+            backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+            color: '#FFFFFF',
+            '&:hover': {
+              backgroundColor: '#ffbe82',
+              color: '#FFFFFF',
+            },
+          }}
+          onClick={() => navigate(`/cursos/${cursoId}/qr`)}
+        >
+          Generar QR
+        </Button>
+      </Stack>
       <Box sx={{ px: 4 }}>
-        <Typography variant="h4" sx={{ marginTop: 2 }}>
+        <Typography variant="h4" sx={{ my: 2 }}>
           Participantes
         </Typography>
-        <Stack direction="row" sx={{ justifyContent: 'center' }}>
-          <Stack sx={{
-            maxWidth: 850, marginTop: 3, marginBottom: 3, width: 1,
-          }}
-          >
-            <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
-          </Stack>
-        </Stack>
+        <CursoTable rows={curso.estudiantes} updateEstudiantes={getCurso} />
         <Card sx={{
           mt: 2, p: 3, backgroundColor: '#F1F3F8', borderRadius: 5,
         }}
         >
-          <Grid
-            container
-            spacing={2}
-            justifyContent="center"
-            sx={{ px: 1 }}
+          <Stack
+            direction="row"
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+            }}
           >
-            <Grid item xs={12} sm={12} md={8}>
-              <Stack direction="column" spacing={2}>
-                <Typography variant="h5">
-                  Reporte de las estadísticas de curso
-                </Typography>
-                <Typography>
-                  Genera un informe para ver el progreso de este curso, por cierta actividad o por área STEAM.
-                  También pordrás acceder a las estadísticas por cierta actividad o alumno de este curso.
-                </Typography>
-              </Stack>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4}>
-              <Stack direction="column" justifyContent="center" alignItems="center" sx={{ height: '100%' }}>
-                <Button
-                  startIcon={<PieChartIcon />}
-                  sx={{
-                    alignSelf: 'center',
-                    width: 200,
-                    textTransfrom: 'none',
-                    backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+            <Stack direction="column" spacing={2} sx={{ width: 5 / 7 }}>
+              <Typography variant="h5">
+                Reporte de las estadísticas de curso
+              </Typography>
+              <Typography>
+                Genera un informe para ver el progreso de este curso, por cierta actividad o por área STEAM.
+                También pordrás acceder a las estadísticas por cierta actividad o alumno de este curso.
+              </Typography>
+            </Stack>
+            <Stack sx={{
+              justifyContent: 'center', minWidth: 180, width: 2 / 7,
+            }}
+            >
+              <Button
+                startIcon={<PieChartIcon />}
+                sx={{
+                  alignSelf: 'center',
+                  minWidth: 150,
+                  maxHeight: 40,
+                  backgroundColor: (theme: Theme) => theme.palette.secondary.main,
+                  color: '#FFFFFF',
+                  '&:hover': {
+                    backgroundColor: '#ffbe82',
                     color: '#FFFFFF',
-                    '&:hover': {
-                      backgroundColor: '#ffbe82',
-                      color: '#FFFFFF',
-                    },
-                  }}
-                  onClick={() => navigate(`/cursos/${cursoId}/estadisticas`)}
-                >
-                  Generar reporte
-                </Button>
-              </Stack>
-            </Grid>
-          </Grid>
+                  },
+                }}
+                onClick={() => navigate(`/cursos/${cursoId}/estadisticas`)}
+              >
+                Generar reporte
+              </Button>
+            </Stack>
+          </Stack>
         </Card>
       </Box>
     </Stack>

@@ -30,12 +30,7 @@ const CardComponent = (props: CardComponentProps) => {
       }
       onPress={onPressFunction}>
       <View style={styles.overlay}>
-        <Items
-          images={jumpCard.items}
-          resize="cover"
-          specialTexture={''}
-          borderRadius={jumpCard.borderRadius}
-        />
+        <Items images={jumpCard.items} resize="cover" specialTexture={''} />
       </View>
       <View style={styles.overlay}>
         <Texts
@@ -56,17 +51,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    borderRadius: RSize(0.05, 'h'),
-    // borderBottomStartRadius: RSize(0.05, 'h'),
-    // borderBottomEndRadius: RSize(0.05, 'h'),
+    borderBottomStartRadius: RSize(0.05, 'h'),
+    borderBottomEndRadius: RSize(0.05, 'h'),
     elevation: 10,
   },
   containerDisabled: {
     flex: 1,
     backgroundColor: 'white',
-    borderRadius: RSize(0.05, 'h'),
-    // borderBottomStartRadius: RSize(0.05, 'h'),
-    // borderBottomEndRadius: RSize(0.05, 'h'),
+    borderBottomStartRadius: RSize(0.05, 'h'),
+    borderBottomEndRadius: RSize(0.05, 'h'),
     elevation: 10,
     opacity: 0.3,
   },

@@ -1,6 +1,6 @@
 # Blender v3.2.0 OBJ File: 'untitled.blend'
 # www.blender.org
-# mtllib caja-torta.mtl
+mtllib caja-torta.mtl
 o b_box:box_Mesh.002
 v 0.077519 0.956717 0.815588
 v 0.077595 0.960103 -0.254765
@@ -7429,8 +7429,8 @@ vn -0.0015 1.0000 0.0035
 vn 0.6447 0.7644 0.0025
 vn 0.6446 0.7645 0.0025
 vn -0.9981 -0.0622 -0.0003
-# usemtl box_mat_02
-# s 1
+usemtl box_mat_02
+s 1
 f 566/1/1 567/2/2 537/3/3 538/4/4
 f 528/5/5 529/6/6 575/7/7 576/8/8
 f 671/9/9 672/10/9 824/11/9 825/12/9

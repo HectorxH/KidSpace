@@ -47,87 +47,90 @@ const CursosView = () => {
       </Box>
       {!loading
         && (
-          <Stack sx={{ px: 1 }}>
-            <Grid
-              container
-              spacing={1}
-            >
-              {cursos.map(({
-                nombre, _id,
-              }) => (
-                <Grid item xs={12} sm={6} md={4}>
-                  <Card
-                    sx={{
-                      borderRadius: '20px', height: '100%', alignItems: 'center',
-                    }}
-                    className="MuiCard-root"
-                    key={_id}
-                  >
-                    <CardActionArea
-                      component={NavLink}
-                      to={`/cursos/${_id}`}
-                    >
-                      <CardMedia
-                        component="img"
-                        sx={{ height: '30vh' }}
-                        image={img}
-                      />
-                      <CardContent>
-                        <Typography variant="h5">
-                          Curso {nombre}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <Button
-                        component={NavLink}
-                        to={`/cursos/${_id}`}
-                        color="quaternary"
-                        variant="contained"
-                      >
-                        <Typography
-                          variant="button"
-                          sx={{
-                            color: (theme: Theme) => theme.palette.primary.contrastText,
-                          }}
-                        >
-                          Acceder
-                        </Typography>
-                      </Button>
-                    </CardActions>
-                  </Card>
-                </Grid>
-              ))}
-              <Grid item xs={12} sm={6} md={4}>
+          <Box
+            sx={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              margin: 5,
+              p: 1,
+              m: 1,
+            }}
+          >
+            {cursos.map(({
+              nombre, _id,
+            }) => (
+              <Grid>
                 <Card
                   sx={{
-                    borderRadius: '20px', height: '100%',
+                    borderRadius: '20px', alignItems: 'center', width: '25vw', minWidth: 250, margin: 1,
                   }}
                   className="MuiCard-root"
+                  key={_id}
                 >
                   <CardActionArea
                     component={NavLink}
-                    sx={{
-                      flex: 1,
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                    }}
-                    to="/cursos/agregar"
+                    to={`/cursos/${_id}`}
                   >
+                    <CardMedia
+                      component="img"
+                      sx={{ height: '30vh' }}
+                      image={img}
+                    />
                     <CardContent>
-                      <Typography display="block" align="center" style={{ color: '#BBBBBB' }}>
-                        <AddCircleIcon style={{ fontSize: 100 }} />
-                      </Typography>
-                      <Typography display="block" variant="h5" align="center" style={{ color: '#BBBBBB', justifyContent: 'center' }}>
-                        Agregar nuevo curso
+                      <Typography variant="h5">
+                        Curso {nombre}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
+                  <CardActions>
+                    <Button
+                      component={NavLink}
+                      to={`/cursos/${_id}`}
+                      color="quaternary"
+                      variant="contained"
+                    >
+                      <Typography
+                        variant="button"
+                        sx={{
+                          color: (theme: Theme) => theme.palette.primary.contrastText,
+                        }}
+                      >
+                        Acceder
+                      </Typography>
+                    </Button>
+                  </CardActions>
                 </Card>
               </Grid>
-            </Grid>
-          </Stack>
+            ))}
+            <Stack>
+              <Card
+                sx={{
+                  borderRadius: '20px', width: '25vw', minWidth: 250, height: '100%', margin: 1,
+                }}
+                className="MuiCard-root"
+              >
+                <CardActionArea
+                  component={NavLink}
+                  sx={{
+                    flex: 1,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                  to="/cursos/agregar"
+                >
+                  <CardContent>
+                    <Typography display="block" align="center" style={{ color: '#BBBBBB' }}>
+                      <AddCircleIcon style={{ fontSize: 100 }} />
+                    </Typography>
+                    <Typography display="block" variant="h5" align="center" style={{ color: '#BBBBBB', justifyContent: 'center' }}>
+                      Agregar nuevo curso
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Stack>
+          </Box>
         // </Stack>
         )}
     </Stack>

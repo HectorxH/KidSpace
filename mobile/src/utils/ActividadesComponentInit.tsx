@@ -10,13 +10,11 @@ import {
   IActividadesComponentParams,
   IActividadesParams,
   IActNavigationParams,
-  IArmarDesarmarParams,
   IInventarioParams,
   ILottieComponentParams,
   IMarkerTrackerFeedbackParams,
   IMaterialSelectorParams,
   IStoryComponentParams,
-  ITemperaturaSelectorParams,
   IToggleButtonParams,
   IViroAppParams,
 } from '../types/story';
@@ -63,15 +61,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       : [],
   );
 
-  const temperaturasList = actividades.map(actividadPage =>
-    typeof actividadPage.AR !== 'undefined' &&
-    typeof actividadPage.AR.models !== 'undefined'
-      ? actividadPage.AR.models.map(model =>
-          typeof model.temperaturas !== 'undefined' ? model.temperaturas : [],
-        )
-      : [[]],
-  );
-
   const imageTrackers = actividades.map(actividadPage =>
     typeof actividadPage.AR !== 'undefined' &&
     typeof actividadPage.AR.imageTrackers !== 'undefined'
@@ -104,9 +93,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   );
   // vars texturas
   const [materialSelectorToggle, setMaterialSelectorToggle] =
-    useState<number>(0);
-  const [armarDesarmarToggle, setArmarDesarmarToggle] = useState<number>(0);
-  const [temperaturaSelectorToggle, setTemperaturaSelectorToggle] =
     useState<number>(0);
   const [selectedModelMaterials, setSelectedModelMaterials] = useState<{
     materialOrder: string[];
@@ -152,7 +138,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       alt: typeof item.alt !== 'undefined' ? item.alt : '',
       modelType: typeof item.type !== 'undefined' ? item.type : 'object',
       modelImage360: typeof item.image360 !== 'undefined' ? item.image360 : '',
-      modelVideo360: typeof item.video360 !== 'undefined' ? item.video360 : '',
       resources: Models[item.model].resources,
       materials: Models[item.model].materials,
       type: Models[item.model].type,
@@ -233,24 +218,12 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       : '',
   );
 
-  const trackerFeedbacks = actividades.map(actividadPage =>
-    typeof actividadPage.AR !== 'undefined' &&
-    typeof actividadPage.AR.trackerFeedback !== 'undefined'
-      ? actividadPage.AR.trackerFeedback
-      : '',
-  );
-
   const [activeTracker, setActiveTracker] = useState<string[]>(
     actividades.map(() => ''),
   );
   const [activeTrackerIndex, setActiveTrackerIndex] = useState<number[]>(
     actividades.map(() => 0),
   );
-
-  const [joseMessage, setJoseMessage] = useState<string>(
-    '¡Arrastra cada residuo al basurero correcto!',
-  );
-  const [joseItem, setJoseItem] = useState<string>('JoseSmile');
 
   const ViroAppParams: IViroAppParams = {
     pageNumber: pageNumber,
@@ -266,11 +239,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     useChildrenAlt: [useChildrenAlt, setUseChildrenAlt],
     rotations: [rotations, setRotations],
     materialSelectorToggle: [materialSelectorToggle, setMaterialSelectorToggle],
-    armarDesarmarToggle: [armarDesarmarToggle, setArmarDesarmarToggle],
-    temperaturaSelectorToggle: [
-      temperaturaSelectorToggle,
-      setTemperaturaSelectorToggle,
-    ],
     setSelectedModelMaterials: setSelectedModelMaterials,
     modelMaterial: modelMaterial[0],
     setActiveModelIndex: setActiveModelIndex,
@@ -283,6 +251,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
   const InventarioParams: IInventarioParams = {
     pageNumber: pageNumber,
     models3d: models3d,
+    setMaterialSelectorToggle: setMaterialSelectorToggle,
     models: [models, setModels],
     positions: [positions, setPositions],
     placedItems: [placedItems, setPlacedItems],
@@ -290,13 +259,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     hideInventory: hideInventory,
     toggleDefaultValue: toggleDefaultValue,
     toggleValues: toggleValues,
-
-    modelProps: modelProps,
-    updateMaterial: [updateMaterial, setUpdateMaterial],
-    setSelectedModelMaterials: setSelectedModelMaterials,
-    setMaterialSelectorToggle: setMaterialSelectorToggle,
-    setArmarDesarmarToggle: setArmarDesarmarToggle,
-    setTemperaturaSelectorToggle: setTemperaturaSelectorToggle,
   };
 
   const MaterialSelectorParams: IMaterialSelectorParams = {
@@ -318,7 +280,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     toggleDefaultValue: toggleDefaultValue,
     toggleValues: toggleValues,
     trackerMessages: trackerMessages,
-    trackerFeedbacks: trackerFeedbacks,
   };
 
   const StoryComponentParams: IStoryComponentParams = {
@@ -333,7 +294,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswersDropdown: pickedAnswersDropdown,
     isDragItemPicked: isDragItemPicked,
     userDragAnswers: userDragAnswers,
-    rightDragAnswers: rightDragAnswers,
     receivingNames: receivingNames,
     receivingValues: receivingValues,
     pickedDragAnswers: pickedDragAnswers,
@@ -342,8 +302,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     pickedAnswersQuiz: pickedAnswersQuiz,
     modelMaterial: modelMaterial[0],
     lotties: lotties,
-    joseItem: [joseItem, setJoseItem],
-    joseMessage: [joseMessage, setJoseMessage],
   };
 
   const ToggleButtonParams: IToggleButtonParams = {
@@ -402,37 +360,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     lotties: lotties,
   };
 
-  const ArmarDesarmarParams: IArmarDesarmarParams = {
-    pageNumber: pageNumber,
-    armarDesarmarToggle: [armarDesarmarToggle, setArmarDesarmarToggle],
-    modelMaterial: modelMaterial,
-    selectedMaterial: selectedMaterial,
-    selectedModelMaterials: selectedModelMaterials,
-    activeModelIndex: activeModelIndex,
-    models3d: models3d,
-    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
-    useAlt: [useAlt, setUseAlt],
-    toggleValues: toggleValues,
-    nPlacedItems: nPlacedItems,
-  };
-
-  const TemperaturaSelectorParams: ITemperaturaSelectorParams = {
-    pageNumber: pageNumber,
-    temperaturaSelectorToggle: [
-      temperaturaSelectorToggle,
-      setTemperaturaSelectorToggle,
-    ],
-    modelMaterial: modelMaterial,
-    selectedMaterial: selectedMaterial,
-    selectedModelMaterials: selectedModelMaterials,
-    activeModelIndex: activeModelIndex,
-    models3d: models3d,
-    selectedPageOrder: [selectedPageOrder, setSelectedPageOrder],
-    temperaturasList: temperaturasList,
-    toggleValues: toggleValues,
-    nPlacedItems: nPlacedItems,
-  };
-
   const actividadComponentParams: IActividadesComponentParams = {
     pageNumber: pageNumber,
     actividades: actividades,
@@ -444,8 +371,6 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     actNavigationParams: ActNavigationParams,
     markerTrackerFeedbackParams: MarkerTrackerFeedbackParams,
     lottiesComponentParams: LottieComponentParams,
-    armarDesarmarParams: ArmarDesarmarParams,
-    temperaturaSelectorParams: TemperaturaSelectorParams,
   };
 
   return actividadComponentParams;

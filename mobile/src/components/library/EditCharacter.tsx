@@ -166,7 +166,6 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
                   style={styles.buttonModal}
                   color="#EC87C0"
                   mode="contained"
-                  uppercase={false}
                   onPress={() => navigation.goBack()}>
                   <Text style={styles.textModalButton}>Salir</Text>
                 </Button>
@@ -174,7 +173,6 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
                   style={styles.buttonModal}
                   color="#A1C96A"
                   mode="contained"
-                  uppercase={false}
                   onPress={() => setModalVisible(false)}>
                   <Text style={styles.textModalButton}>Volver al editor</Text>
                 </Button>
@@ -274,7 +272,6 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
         <Button
           color="#A1C96A"
           mode="contained"
-          uppercase={false}
           style={{
             margin: RSize(0.01, 'h'),
             alignSelf: 'center',
@@ -448,7 +445,6 @@ const styles = StyleSheet.create({
   },
   textButton: {
     textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },
@@ -484,7 +480,6 @@ const styles = StyleSheet.create({
   },
   textModalButton: {
     textAlign: 'center',
-    fontFamily: 'Poppins-Bold',
     color: '#ffffff',
     fontSize: RSize(0.02),
   },

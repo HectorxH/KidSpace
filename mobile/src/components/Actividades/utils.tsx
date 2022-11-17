@@ -62,11 +62,11 @@ export function getSteam(actividad: string) {
   switch (actividad) {
     case 'diagramas':
       return [0, 1, 0, 0, 1];
-    case 'tecnologicas':
+    case 'tecnologia':
       return [0, 1, 1, 0, 0];
     case 'materiales':
       return [1, 0, 1, 0, 0];
-    case 'reciclajes':
+    case 'reciclaje':
       return [1, 0, 1, 1, 0];
     case 'diseños':
       return [0, 0, 1, 1, 0];
@@ -94,11 +94,11 @@ export function getNombreActividad(actividad: string) {
   switch (actividad) {
     case 'diagramas':
       return 'Diagramas';
-    case 'tecnologicas':
-      return 'Soluciones Tecnológicas';
+    case 'tecnologia':
+      return 'Soluciones tecnológicas';
     case 'materiales':
       return 'Materiales';
-    case 'reciclajes':
+    case 'reciclaje':
       return 'Reciclaje';
     case 'diseños':
       return 'Diseños';
@@ -125,9 +125,9 @@ export function getNombreActividad(actividad: string) {
 export function getTipoActividad(actividad: string) {
   const actividadesClase: string[] = [
     'diagramas',
-    'tecnologicas',
+    'tecnologia',
     'materiales',
-    'reciclajes',
+    'reciclaje',
     'diseños',
   ];
   if (actividadesClase.includes(actividad)) {
@@ -138,7 +138,7 @@ export function getTipoActividad(actividad: string) {
 
 export function getNombreUnidad(actividad: string) {
   const unidad1: string[] = ['diagramas'];
-  const unidad2: string[] = ['tecnologicas', 'reciclajes'];
+  const unidad2: string[] = ['tecnologia', 'reciclaje'];
   const unidad3: string[] = ['materiales', 'diseños'];
 
   if (unidad1.includes(actividad)) {
@@ -255,34 +255,6 @@ export function checkAnswers(
           .reduce((x, y) => Number(x) + Number(y), 0),
       )
       .reduce((x, y) => Number(x) + Number(y), 0);
-
-  return respuestasCorrectas === cantidadRespuestas;
-}
-
-export function checkDragAnswers(
-  requirements: number[],
-  userDragAnswer: string[][][],
-  rightDragAnswer: string[][][],
-) {
-  // return true;
-
-  var respuestasCorrectas = requirements
-    .map(n =>
-      userDragAnswer[n].map((draggableItems, draggableNumber) =>
-        draggableItems
-          .map((userAnswer, anserNumber) =>
-            userAnswer === rightDragAnswer[n][draggableNumber][anserNumber]
-              ? [1]
-              : [0],
-          )
-          .reduce((x, y) => Number(x) + Number(y), 0),
-      ),
-    )
-    .reduce((x, y) => Number(x) + Number(y), 0);
-
-  var cantidadRespuestas = requirements
-    .map(n => rightDragAnswer[n].map(draggableItems => draggableItems.length))
-    .reduce((x, y) => Number(x) + Number(y), 0);
 
   return respuestasCorrectas === cantidadRespuestas;
 }
@@ -434,10 +406,6 @@ export function getImageStyle(
           typeof newImageStyle.transform !== 'undefined'
             ? newImageStyle.transform
             : [],
-        borderRadius:
-          typeof newImageStyle.borderRadius !== 'undefined'
-            ? RSize(newImageStyle.borderRadius, 'w') * 100
-            : 0,
       },
     },
   });

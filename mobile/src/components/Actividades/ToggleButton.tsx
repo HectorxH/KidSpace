@@ -18,8 +18,8 @@ const ToggleButton = (props: ToggleButtonProps) => {
     models3d,
     models,
     hideInventory,
-    // activeTracker,
-    // imageTrackers,
+    activeTracker,
+    imageTrackers,
   } = props.toggleButtonParams;
   if (toggleButtons[pageNumber].length === 0) {
     return null;
@@ -33,12 +33,12 @@ const ToggleButton = (props: ToggleButtonProps) => {
   ) {
     return null;
   }
-  // if (
-  //   imageTrackers[pageNumber].length !== 0 &&
-  //   activeTracker[pageNumber] === ''
-  // ) {
-  //   return null;
-  // }
+  if (
+    imageTrackers[pageNumber].length !== 0 &&
+    activeTracker[pageNumber] === ''
+  ) {
+    return null;
+  }
 
   const toggle = (index: number) => {
     let tgValues = [...toggleQuestions[0]];
