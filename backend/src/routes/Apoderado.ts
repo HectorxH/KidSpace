@@ -38,7 +38,7 @@ router.post('/:id', async (req, res) => {
       apoderado.populate('user');
       res.json({ apoderado });
     } else {
-      res.send(500);
+      res.sendStatus(500);
     }
   } catch (e) {
     console.log(e);
