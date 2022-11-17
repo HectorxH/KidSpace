@@ -6,4 +6,5 @@ export interface IUser {
   nombres: string,
   apellidos: string,
   email: string,
+  plan?: number,
 }

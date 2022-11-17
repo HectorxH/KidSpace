@@ -37,7 +37,7 @@ const LoginView = () => {
         { username, password, tipo },
       );
       if (tipo === 'representante') {
-        login(res.data.user, res.data.plan);
+        login({ ...res.data.user, plan: res.data.plan });
       } else {
         login(res.data);
       }
