@@ -332,6 +332,8 @@ const MainMap = ({navigation}: MainMapProps) => {
                     monedas: cantMonedas,
                   },
                   completadas,
+                  setMessage,
+                  setNotification,
                 })
               }>
               <Text style={styles.subtitle}>Perfil</Text>

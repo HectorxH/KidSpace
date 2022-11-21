@@ -29,6 +29,8 @@ export type RootStackParamList = {
   ProfileView: {
     Info: IProfile;
     completadas: ActividadesCompletadas;
+    setMessage?: React.Dispatch<React.SetStateAction<IActivity[]>>;
+    setNotification?: React.Dispatch<React.SetStateAction<string>>;
   };
   EditCharacter: {
     personaje: number[];

@@ -1,15 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useState} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableWithoutFeedback,
+} from 'react-native';
 import Config from 'react-native-config';
+// import {TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import {Button, Chip} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {images} from '../assets/imgs/handler/images';
 import {medallasImages} from '../assets/medallas/handler/medallasImages';
 import {useAuth} from '../hooks/useAuth';
+import {IActivity} from '../types/activity';
 import {ProfileProps} from '../types/navigation';
 import {RSize} from '../utils/responsive';
 import Character from './library/Character';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import pseudoMessage from './PseudoPusher/message/pseudoMessage';
+import _ from 'lodash';
 
 // const medallas = [1, 0, 1, 0, 1, 1, 1, 1];
 const medallas = [
@@ -24,7 +35,7 @@ const medallas = [
 ];
 
 const ProfileView = ({navigation, route}: ProfileProps) => {
-  const {Info, completadas} = route.params;
+  const {Info, completadas, setMessage, setNotification} = route.params;
   const [cursoNombre, setCursoNombre] = useState('');
   const [loading, setLoading] = useState(false);
   const [personaje, setPersonaje] = useState<number[]>([
@@ -55,6 +66,69 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
     } catch (e) {
       console.log('Error al cargar el personaje');
       console.log(JSON.stringify(e));
+    }
+  };
+
+  const onMedallaPress = async (id: number) => {
+    console.log('toque la medalla ' + id);
+    const actividad = _.find(pseudoMessage, {id});
+    let allMessages: IActivity[] = [];
+    let jsonAllMessages = await AsyncStorage.getItem('@message');
+
+    if (actividad === undefined && id !== 8) {
+      return null;
+    }
+
+    if (typeof actividad !== 'undefined' && id !== 8) {
+      //check if value previously stored
+      // console.log('actividad:', actividad);
+
+      allMessages =
+        jsonAllMessages !== null && jsonAllMessages !== 'null'
+          ? JSON.parse(jsonAllMessages)
+          : [];
+
+      console.log(allMessages, typeof allMessages);
+      console.log(curso);
+
+      allMessages.push(actividad);
+      allMessages = _.uniqWith(allMessages, _.isEqual);
+      jsonAllMessages = JSON.stringify(allMessages);
+
+      await AsyncStorage.setItem('@message', jsonAllMessages);
+
+      await AsyncStorage.setItem(
+        '@notification',
+        allMessages.length.toString(),
+      );
+
+      const m = await AsyncStorage.getItem('@message');
+      if (typeof setMessage !== 'undefined') {
+        setMessage(JSON.parse(m!));
+      }
+
+      let n = await AsyncStorage.getItem('@notification');
+      if (typeof setNotification !== 'undefined') {
+        setNotification(n!);
+      }
+    }
+    if (id === 8) {
+      await AsyncStorage.setItem('@message', JSON.stringify(allMessages));
+
+      await AsyncStorage.setItem(
+        '@notification',
+        allMessages.length.toString(),
+      );
+
+      const m = await AsyncStorage.getItem('@message');
+      if (typeof setMessage !== 'undefined') {
+        setMessage(JSON.parse(m!));
+      }
+
+      let n = await AsyncStorage.getItem('@notification');
+      if (typeof setNotification !== 'undefined') {
+        setNotification(n!);
+      }
     }
   };
 
@@ -133,16 +207,22 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
             justifyContent: 'center',
           }}>
           {medallas.map((medalla, id) => (
-            <Image
-              key={id}
-              style={[
-                styles.viewMedalla,
-                completadas[medalla] > 0
-                  ? styles.medallaColorGanada
-                  : styles.medallaColor,
-              ]}
-              source={medallasImages[`i${id}`].uri}
-            />
+            <TouchableWithoutFeedback
+              key={'medalla ' + id + medalla}
+              onPress={() => {
+                onMedallaPress(id + 1);
+              }}>
+              <Image
+                key={id}
+                style={[
+                  styles.viewMedalla,
+                  completadas[medalla] > 0
+                    ? styles.medallaColorGanada
+                    : styles.medallaColor,
+                ]}
+                source={medallasImages[`i${id}`].uri}
+              />
+            </TouchableWithoutFeedback>
           ))}
         </View>
       </View>
