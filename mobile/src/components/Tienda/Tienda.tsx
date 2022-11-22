@@ -110,6 +110,9 @@ const Tienda = ({navigation, route}: TiendaProps) => {
       />
       <View style={styles.view}>
         <Button
+          style={{
+            borderRadius: RSize(0.01, 'w'),
+          }}
           color="#EC87C0"
           mode="contained"
           onPress={() => navigation.goBack()}>

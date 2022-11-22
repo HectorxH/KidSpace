@@ -298,6 +298,7 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#A1C96A',
+    borderRadius: RSize(0.01, 'w'),
   },
   buttonText: {
     fontFamily: 'Poppins-Bold',

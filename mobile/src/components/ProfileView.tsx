@@ -146,6 +146,7 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
             <Button
               color="#EC87C0"
               mode="contained"
+              style={{borderRadius: RSize(0.01, 'w')}}
               onPress={() => navigation.goBack()}>
               {back}
             </Button>
@@ -181,7 +182,8 @@ const ProfileView = ({navigation, route}: ProfileProps) => {
               marginLeft: RSize(0.03, 'w'),
               marginRight: RSize(0.03, 'w'),
               marginTop: RSize(0.01, 'w'),
-              borderRadius: 10,
+              // borderRadius: 10,
+              borderRadius: RSize(0.01, 'w'),
             }}
             icon={() => (
               <Icon

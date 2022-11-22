@@ -13,6 +13,7 @@ const NoAvailableActivities = ({navigation}: {navigation: any}) => {
       <View style={styles.view}>
         <Button
           color="#EC87C0"
+          style={{borderRadius: RSize(0.01, 'w')}}
           mode="contained"
           onPress={() => navigation.goBack()}>
           {back}

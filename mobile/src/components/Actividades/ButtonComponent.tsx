@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {ButtonSetting} from '../../types/activity';
-// import {RSize} from '../../utils/responsive';
+import {RSize} from '../../utils/responsive';
 
 interface ButtonComponentProps {
   onPressFunction(): void;
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   buttonStyle: {
-    borderRadius: 10,
-    // borderRadius: RSize(0.05, 'h'),
+    // borderRadius: 10,
+    borderRadius: RSize(0.01, 'w'),
     justifyContent: 'center',
 
     height: '100%',

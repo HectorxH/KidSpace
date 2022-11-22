@@ -4,6 +4,7 @@ import {Button} from 'react-native-paper';
 import ActivityCard from './ActivityCard';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {AvailableActivitiesProps} from '../../types/navigation';
+import {RSize} from '../../utils/responsive';
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -17,6 +18,7 @@ const AvailableActivities = ({navigation, route}: AvailableActivitiesProps) => {
         <Button
           color="#EC87C0"
           mode="contained"
+          style={{borderRadius: RSize(0.01, 'w')}}
           onPress={() => navigation.goBack()}>
           {back}
         </Button>

@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     color: '#063D69',
   },
   button: {
-    borderRadius: 5,
+    // borderRadius: 5,
+    borderRadius: RSize(0.01, 'w'),
     width: RSize(0.6, 'h'),
     alignSelf: 'center',
   },

@@ -147,6 +147,7 @@ const CompanerosView = ({navigation, route}: CompaneroProps) => {
           <Button
             color="#EC87C0"
             mode="contained"
+            style={{borderRadius: RSize(0.01, 'w')}}
             onPress={() => navigation.goBack()}>
             {back}
           </Button>

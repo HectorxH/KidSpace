@@ -173,7 +173,10 @@ const TiendaItems = ({navigation, route}: TiendaItemsProps) => {
               <Button
                 color="#EC87C0"
                 mode="contained"
-                style={{height: RSize(0.1, 'h')}}
+                style={{
+                  height: RSize(0.1, 'h'),
+                  borderRadius: RSize(0.01, 'w'),
+                }}
                 onPress={() => {
                   navigation.navigate('Tienda', {
                     setCantMonedas: route.params.setCantMonedas,
@@ -467,7 +470,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonModal: {
-    borderRadius: 10,
+    // borderRadius: 10,
+    borderRadius: RSize(0.01, 'w'),
     maxHeight: RSize(0.05, 'w'),
     marginTop: RSize(0.05, 'h'),
     marginRight: RSize(0.02, 'h'),

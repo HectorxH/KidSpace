@@ -310,7 +310,11 @@ const MainMap = ({navigation}: MainMapProps) => {
             <Button
               style={[
                 styles.button,
-                {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+                {
+                  borderRadius: RSize(0.01, 'w'),
+                  borderBottomLeftRadius: 0,
+                  borderBottomRightRadius: 0,
+                },
               ]}
               color="#EC87C0"
               mode="contained"
@@ -344,7 +348,11 @@ const MainMap = ({navigation}: MainMapProps) => {
             <Button
               style={[
                 styles.button,
-                {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+                {
+                  borderRadius: RSize(0.01, 'w'),
+                  borderBottomLeftRadius: 0,
+                  borderBottomRightRadius: 0,
+                },
               ]}
               color="#A0C96A"
               mode="contained"
@@ -374,7 +382,11 @@ const MainMap = ({navigation}: MainMapProps) => {
               <Button
                 style={[
                   styles.button3,
-                  {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+                  {
+                    borderRadius: RSize(0.01, 'w'),
+                    borderBottomLeftRadius: 0,
+                    borderBottomRightRadius: 0,
+                  },
                 ]}
                 compact={true}
                 color="#F2C045"
@@ -449,7 +461,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonModal: {
-    borderRadius: 10,
+    borderRadius: RSize(0.01, 'w'),
+    // borderRadius: 10,
     marginTop: RSize(0.05, 'h'),
     height: RSize(0.1, 'h'),
     width: RSize(0.38, 'h'),

@@ -96,7 +96,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    borderRadius: 10,
+    // borderRadius: 10,
+    borderRadius: RSize(0.01, 'w'),
   },
   buttonText: {
     fontFamily: 'Poppins-Regular',

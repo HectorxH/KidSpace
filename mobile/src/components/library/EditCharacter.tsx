@@ -190,7 +190,11 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           marginLeft: RSize(0.01),
         }}>
         <View style={styles.view}>
-          <Button color="#EC87C0" mode="contained" onPress={() => handleBack()}>
+          <Button
+            style={{borderRadius: RSize(0.01, 'w')}}
+            color="#EC87C0"
+            mode="contained"
+            onPress={() => handleBack()}>
             {back}
           </Button>
         </View>
@@ -278,7 +282,8 @@ const EditCharacter = ({navigation, route}: EditCharacterProps) => {
           style={{
             margin: RSize(0.01, 'h'),
             alignSelf: 'center',
-            borderRadius: 10,
+            // borderRadius: 10,
+            borderRadius: RSize(0.01, 'w'),
           }}
           icon={() => (
             <Icon name="content-save" size={RSize(0.06, 'h')} color="#FFFFFF" />
@@ -510,7 +515,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   buttonModal: {
-    borderRadius: 10,
+    // borderRadius: 10,
+    borderRadius: RSize(0.01, 'w'),
     marginTop: RSize(0.05, 'h'),
     marginRight: RSize(0.02, 'h'),
     marginLeft: RSize(0.02, 'h'),

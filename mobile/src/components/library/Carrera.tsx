@@ -55,6 +55,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
           <Button
             color="#EC87C0"
             mode="contained"
+            style={{borderRadius: RSize(0.01, 'w')}}
             onPress={() => navigation.goBack()}>
             {back}
           </Button>
@@ -70,6 +71,7 @@ const Carrera = ({navigation, route}: CarreraProps) => {
             color="#FF8A01"
             mode="contained"
             uppercase={false}
+            style={{borderRadius: RSize(0.01, 'w')}}
             icon={() => (
               <Icon name="emoticon-happy" color="#FFF" size={RSize(0.04)} />
             )}

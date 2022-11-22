@@ -17,6 +17,7 @@ const Activity = ({navigation, route}: ActivityProps) => {
           <Button
             color="#EC87C0"
             mode="contained"
+            style={{borderRadius: RSize(0.01, 'w')}}
             onPress={() => navigation.goBack()}>
             {back}
           </Button>
@@ -35,7 +36,7 @@ const Activity = ({navigation, route}: ActivityProps) => {
             <Text style={styles.paragraph}>{activity.descripcion}</Text>
             <View style={styles.viewButton}>
               <Button
-                style={styles.button}
+                style={[styles.button, {borderRadius: RSize(0.01, 'w')}]}
                 icon={() => (
                   <Icon name="star" size={RSize(0.04)} color="#FFEA02" />
                 )}
