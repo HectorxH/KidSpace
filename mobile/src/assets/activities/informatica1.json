@@ -770,7 +770,7 @@
     "draggable": [
       {
         "type": "order",
-        "answer": ["Tomar el cepillo de dientes", "Abrir la llave del agua", "Colocar la pasta en el cepillo", "Cepillarse los dientes", "Enjuagarse la boca", "Cerrar la llave del agua"],
+        "answer": ["Tomar el cepillo de dientes", "Colocar la pasta en el cepillo", "Cepillarse los dientes", "Abrir la llave del agua", "Enjuagarse la boca", "Cerrar la llave del agua"],
         "draggableItems": [
           {
             "type": "rectangle",

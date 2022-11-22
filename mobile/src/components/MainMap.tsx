@@ -308,7 +308,10 @@ const MainMap = ({navigation}: MainMapProps) => {
           </ScrollView>
           <View style={styles.containerButtons}>
             <Button
-              style={styles.button}
+              style={[
+                styles.button,
+                {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+              ]}
               color="#EC87C0"
               mode="contained"
               uppercase={false}
@@ -339,7 +342,10 @@ const MainMap = ({navigation}: MainMapProps) => {
               <Text style={styles.subtitle}>Perfil</Text>
             </Button>
             <Button
-              style={styles.button}
+              style={[
+                styles.button,
+                {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+              ]}
               color="#A0C96A"
               mode="contained"
               uppercase={false}
@@ -366,7 +372,10 @@ const MainMap = ({navigation}: MainMapProps) => {
             <View style={styles.rightButtonView}>
               {loadNotification()}
               <Button
-                style={styles.button3}
+                style={[
+                  styles.button3,
+                  {borderBottomLeftRadius: 0, borderBottomRightRadius: 0},
+                ]}
                 compact={true}
                 color="#F2C045"
                 uppercase={false}

@@ -213,7 +213,7 @@ const Recompensas = ({navigation, route}: RecompensasProps) => {
                 style={styles.iconTrophy}
                 source={imagesRecompensa.trophy.uri}
               />
-              <Text style={styles.blackText}>
+              <Text style={[styles.blackText, {textAlignVertical: 'center'}]}>
                 {actividadesIndividuales[nombreActividad]}
               </Text>
             </View>
