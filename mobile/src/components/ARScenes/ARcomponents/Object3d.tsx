@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Viro3DObject,
   ViroMaterials,
@@ -56,6 +56,8 @@ const Objects3d = (props: Objects3dProps) => {
   // const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     props.materialSelectorToggle;
+
+  const [tempRot, setTempRot] = useState(0);
   // const setArmarDesarmarToggle = props.armarDesarmarToggle[1];
   // const setTemperaturaSelectorToggle = props.temperaturaSelectorToggle[1];
 
@@ -87,17 +89,20 @@ const Objects3d = (props: Objects3dProps) => {
     //const temp = transform[index].rotation.map(x => x - rotation / 50);
     // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
 
-    //Giro en eje y
-    transform[pageNumber][index].rotation = [
-      transform[pageNumber][index].rotation[0],
-      // rots[pageNumber][index],
-      (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
-      transform[pageNumber][index].rotation[2],
-    ];
+    if (rotateState !== 2) {
+      setTempRot(transform[pageNumber][index].rotation[1]);
+    }
+    if (rotateState === 2) {
+      //Giro en eje y
+      transform[pageNumber][index].rotation = [
+        transform[pageNumber][index].rotation[0],
+        (tempRot - rotation) % 360,
+        // (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
+        transform[pageNumber][index].rotation[2],
+      ];
+    }
 
-    // if (rotateState === 2) {
     setTransforms(transform);
-    // }
   }
   function onModelClick(itemIndex: number, type: string) {
     console.log('click');
