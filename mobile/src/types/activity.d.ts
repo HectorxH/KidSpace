@@ -160,6 +160,7 @@ export interface IModels {
   model: string;
   scale: Vec3;
   rotation: Vec3;
+  defaultTexture?: string;
   type?: string;
   image360?: string;
   video360?: string;

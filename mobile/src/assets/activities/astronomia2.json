@@ -1465,6 +1465,7 @@
           "model": "star",
           "scale": [0.6, 0.6, 0.6],
           "rotation": [0, 180, 0],
+          "defaultTexture": "betelgeuse",
           "interactable": ["temperatura"],
           "temperaturas": ["3.500 °C", "7.500 °C", "11.500 °C", "25.000 °C"],
           "ARMaterials": {

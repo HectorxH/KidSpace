@@ -54,8 +54,8 @@ const Objects3d = (props: Objects3dProps) => {
   const [useChildrenAlt, setUseChildrenAlt] = props.useChildrenAlt;
 
   // const [updateMaterial, setUpdateMaterial] = props.updateMaterial;
-  const [materialSelectorToggle, setMaterialSelectorToggle] =
-    props.materialSelectorToggle;
+  // const [materialSelectorToggle, setMaterialSelectorToggle] =
+  //   props.materialSelectorToggle;
 
   const [tempRot, setTempRot] = useState(0);
   // const setArmarDesarmarToggle = props.armarDesarmarToggle[1];
@@ -96,8 +96,8 @@ const Objects3d = (props: Objects3dProps) => {
       //Giro en eje y
       transform[pageNumber][index].rotation = [
         transform[pageNumber][index].rotation[0],
-        (tempRot - rotation) % 360,
-        // (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
+        // (tempRot - rotation) % 360,
+        (transform[pageNumber][index].rotation[1] - rotation / 10) % 360,
         transform[pageNumber][index].rotation[2],
       ];
     }
@@ -107,13 +107,13 @@ const Objects3d = (props: Objects3dProps) => {
   function onModelClick(itemIndex: number, type: string) {
     console.log('click');
     if (type === 'main') {
-      if (
-        modelProps[pageNumber][itemIndex].interactable.length === 0 ||
-        materialSelectorToggle === 1
-      ) {
-        setMaterialSelectorToggle(0);
-        return;
-      }
+      // if (
+      //   modelProps[pageNumber][itemIndex].interactable.length === 0 ||
+      //   materialSelectorToggle === 1
+      // ) {
+      //   setMaterialSelectorToggle(0);
+      //   return;
+      // }
       for (
         let i = 0;
         i < modelProps[pageNumber][itemIndex].interactable.length;
@@ -192,7 +192,13 @@ const Objects3d = (props: Objects3dProps) => {
         }
         resources={modelProps[pageNumber][itemNumber].resources}
         type={modelProps[pageNumber][itemNumber].type}
-        materials={modelMaterial[modelIndex]}
+        materials={
+          modelMaterial[modelIndex] === 'default' &&
+          typeof modelProps[pageNumber][itemNumber].defaultTexture !==
+            'undefined'
+            ? modelProps[pageNumber][itemNumber].defaultTexture
+            : modelMaterial[modelIndex]
+        }
         // position={positions[modelIndex]}
         position={[0, 0, 0]}
         scale={transforms[pageNumber][itemNumber].scale}

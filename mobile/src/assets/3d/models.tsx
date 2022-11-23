@@ -173,10 +173,6 @@ const Models: {
     materialsOrder: ['Estrella'],
     materialChoices: [['betelgeuse', 'rigel', 'sirius', 'sun']],
     materials: {
-      default: {
-        lightingModel: 'PBR',
-        diffuseTexture: require('../../assets/3d/astronomia2/estrella/betelgeuse.png'),
-      },
       betelgeuse: {
         lightingModel: 'PBR',
         diffuseTexture: require('../../assets/3d/astronomia2/estrella/betelgeuse.png'),

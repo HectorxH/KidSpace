@@ -23,6 +23,7 @@ export interface IModelProps {
   modelVideo360: string;
   resources: ImageSourcePropType[];
   materials: ViroMaterialDict | undefined;
+  defaultTexture: string | undefined;
   type: 'GLB' | 'VRX' | 'OBJ' | 'GLTF';
   interactable: string[];
   ARMaterials: {

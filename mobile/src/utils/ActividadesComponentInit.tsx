@@ -155,6 +155,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
       modelVideo360: typeof item.video360 !== 'undefined' ? item.video360 : '',
       resources: Models[item.model].resources,
       materials: Models[item.model].materials,
+      defaultTexture: item.defaultTexture,
       type: Models[item.model].type,
       interactable:
         typeof item.interactable !== 'undefined' ? item.interactable : [],
