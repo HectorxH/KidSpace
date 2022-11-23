@@ -39,6 +39,7 @@ const ARMainComponent = (props: ARMainComponentProps) => {
     markerTrackingState,
     activeTracker,
     activeTrackerIndex,
+    displayPortalItem,
   } = viroProps;
 
   const [updateMaterial, setUpdateMaterial] = viroProps.updateMaterial;
@@ -141,6 +142,7 @@ const ARMainComponent = (props: ARMainComponentProps) => {
                 setSelectedModelMaterials={setSelectedModelMaterials}
                 modelMaterial={modelMaterial[pageNumber]}
                 updateMaterial={[updateMaterial, setUpdateMaterial]}
+                displayPortalItem={displayPortalItem}
               />
             )}
           </ViroNode>

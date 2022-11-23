@@ -102,6 +102,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
         : [],
     ),
   );
+  const [displayPortalItem, setDisplayPortalItem] = useState<boolean>(false);
   // vars texturas
   const [materialSelectorToggle, setMaterialSelectorToggle] =
     useState<number>(0);
@@ -279,6 +280,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     markerTrackingState: [markerTrackingState, setMarkerTrackingState],
     activeTracker: [activeTracker, setActiveTracker],
     activeTrackerIndex: [activeTrackerIndex, setActiveTrackerIndex],
+    displayPortalItem: displayPortalItem,
   };
 
   const InventarioParams: IInventarioParams = {
@@ -298,6 +300,7 @@ const ActividadesComponentParams = (actividadesParams: IActividadesParams) => {
     setMaterialSelectorToggle: setMaterialSelectorToggle,
     setArmarDesarmarToggle: setArmarDesarmarToggle,
     setTemperaturaSelectorToggle: setTemperaturaSelectorToggle,
+    setDisplayPortalItem: setDisplayPortalItem,
   };
 
   const MaterialSelectorParams: IMaterialSelectorParams = {

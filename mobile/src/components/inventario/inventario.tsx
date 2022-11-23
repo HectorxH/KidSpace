@@ -28,6 +28,7 @@ const Inventario = (props: InventarioProps) => {
     setArmarDesarmarToggle,
     setTemperaturaSelectorToggle,
     setSelectedModelMaterials,
+    setDisplayPortalItem,
     hideInventory,
     toggleDefaultValue,
     toggleValues,
@@ -51,7 +52,7 @@ const Inventario = (props: InventarioProps) => {
     hideInventory[pageNumber] === false;
 
   function modelHandler(index: number) {
-    updatePosition();
+    updatePosition(index);
 
     if (modelProps[pageNumber][index].interactable[0] === 'temperatura') {
       console.log('temperatura');
@@ -80,6 +81,7 @@ const Inventario = (props: InventarioProps) => {
     setPlacedItems(newPlacedItems);
     setNPlacedItems(newNPlacedItems);
     setModels(newModels);
+    setDisplayPortalItem(true);
   }
 
   function handlePickUp() {
@@ -100,17 +102,31 @@ const Inventario = (props: InventarioProps) => {
     setMaterialSelectorToggle(0);
     setArmarDesarmarToggle(0);
     setTemperaturaSelectorToggle(0);
+    setDisplayPortalItem(false);
   }
 
-  function updatePosition() {
-    sceneNav.current
-      ?._unproject([RSize(1, 'w'), RSize(1, 'h'), 0.05])
-      .then(({position}: {position: Vec3}) => {
-        let newPositions = [...positions];
-        newPositions[pageNumber].push(position);
-        setPositions(newPositions);
-      })
-      .catch(console.log);
+  function updatePosition(index: number) {
+    if (models3d[pageNumber][index].type === 'portal') {
+      sceneNav.current
+        ?._unproject([RSize(1, 'w'), RSize(1, 'h'), 0.05])
+        .then(({position}: {position: Vec3}) => {
+          let nposition = [...position] as Vec3;
+          nposition[2] = -0.6;
+          let newPositions = [...positions];
+          newPositions[pageNumber].push(nposition);
+          setPositions(newPositions);
+        })
+        .catch(console.log);
+    } else {
+      sceneNav.current
+        ?._unproject([RSize(1, 'w'), RSize(1, 'h'), 0.05])
+        .then(({position}: {position: Vec3}) => {
+          let newPositions = [...positions];
+          newPositions[pageNumber].push(position);
+          setPositions(newPositions);
+        })
+        .catch(console.log);
+    }
     // setPositions([...positions, [0, 0, -1]]);
   }
 

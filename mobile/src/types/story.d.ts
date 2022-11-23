@@ -70,6 +70,7 @@ export interface IViroAppParams {
   markerTrackingState: [string[][], ReactStateSetter<string[][]>];
   activeTracker: [string[], ReactStateSetter<string[]>];
   activeTrackerIndex: [number[], ReactStateSetter<number[]>];
+  displayPortalItem: boolean;
 }
 
 export interface IInventarioParams {
@@ -92,6 +93,7 @@ export interface IInventarioParams {
   setMaterialSelectorToggle: ReactStateSetter<number>;
   setArmarDesarmarToggle: ReactStateSetter<number>;
   setTemperaturaSelectorToggle: ReactStateSetter<number>;
+  setDisplayPortalItem: ReactStateSetter<boolean>;
 }
 
 export interface IMaterialSelectorParams {

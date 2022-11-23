@@ -88,7 +88,7 @@ const Objects3d = (props: Objects3dProps) => {
     // Giro en todos los ejes
     //const temp = transform[index].rotation.map(x => x - rotation / 50);
     // let temp2: Vec3 = [temp[0], temp[1], temp[2]];
-
+    console.log(tempRot);
     if (rotateState !== 2) {
       setTempRot(transform[pageNumber][index].rotation[1]);
     }
